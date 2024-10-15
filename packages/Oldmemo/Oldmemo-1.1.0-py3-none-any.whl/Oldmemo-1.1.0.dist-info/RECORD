@@ -1,0 +1,13 @@
+oldmemo/__init__.py,sha256=LxpK-ZVTZ9294ICvh7JHLgov9TXhqlzOCGe6S75BEqg,129
+oldmemo/etree.py,sha256=o5xXEIwMQ_cdj2yVI-fOvo2ezpRGyyqglRUsVSoRcHI,15316
+oldmemo/migrations.py,sha256=2ndgzKtUgcK-BeZR5-bBZ96hZorrauqPkcKvFEHsDgw,27394
+oldmemo/oldmemo.py,sha256=_d3WEO5uxG44sMMG_7TdfqGTpwUaMcb1yh4GnCLOqc4,59876
+oldmemo/oldmemo_pb2.py,sha256=YBWfy5pfWRFp3WiYc2PmaKd5hZM-bh3WlTfyU8qO2Go,1365
+oldmemo/project.py,sha256=YLCen7e8jZ-dR9jUebIID7R5QtUhHTAxQvaRyscu5Gw,505
+oldmemo/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+oldmemo/version.py,sha256=QNbBlSnz_UWnOFyD8EXdczrVUkyXlyPDISRofFmjSn8,176
+Oldmemo-1.1.0.dist-info/LICENSE,sha256=DZak_2itbUtvHzD3E7GNUYSRK6jdOJ-GqncQ2weavLA,34523
+Oldmemo-1.1.0.dist-info/METADATA,sha256=0nq22-SWeyPHVCFrZK4uK-n9qJp3HuZ5xf6NPFxP5CM,3890
+Oldmemo-1.1.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+Oldmemo-1.1.0.dist-info/top_level.txt,sha256=xWIJSZuuyCkp-m-75wFcvwVr43LhiJKNyizCO6iQrSc,8
+Oldmemo-1.1.0.dist-info/RECORD,,
