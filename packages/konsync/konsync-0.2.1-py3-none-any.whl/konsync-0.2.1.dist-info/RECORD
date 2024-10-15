@@ -1,0 +1,13 @@
+konsync/__init__.py,sha256=yyZ4BeT9P3OZk6W3RyEiNhomCIEWYaDr7Gx2xg-HVk8,114
+konsync/__main__.py,sha256=E0GCO9ih3jC-sRKNtWQnI4GlXL6UbTd06BQUG43f0cg,3052
+konsync/conf_kde.taml,sha256=wp8WOWSSOw-g8VclE6mOxexaL5GqTgz2Sepj1CdY07U,3256
+konsync/conf_other.taml,sha256=QP4fOS_OnVYI80ioc4BL8EBIDZycLBakrNf6qeCxSNc,2626
+konsync/consts.py,sha256=0pf-DPAib_H-QJ8_TY4dp-ETJxCLBp4VcAOSaekf8JU,318
+konsync/funcs.py,sha256=l3nsmKd_5MaQigZjkXH7yziVOC5Em_gfyneiT4FajaY,8891
+konsync/parse.py,sha256=ixJb2mDSebUDSn4Vh5LK7j8POdGDkPGaW7vyxKPIx_M,2985
+konsync-0.2.1.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+konsync-0.2.1.dist-info/METADATA,sha256=XTxPtLAAMKFf8gw64cOMC0M94NAUaD40BawTW1VV-yY,4027
+konsync-0.2.1.dist-info/WHEEL,sha256=GV9aMThwP_4oNCtvEC2ec3qUYutgWeAzklro_0m4WJQ,91
+konsync-0.2.1.dist-info/entry_points.txt,sha256=K3xEm8OFP_RCwn8IZBivrduV6hanoHwNi1aYZfsHfGk,50
+konsync-0.2.1.dist-info/top_level.txt,sha256=a1Wpe6VMJ_pg9aGF5wEj2zPm8FWFk9Dt8X2sN4rOabE,8
+konsync-0.2.1.dist-info/RECORD,,

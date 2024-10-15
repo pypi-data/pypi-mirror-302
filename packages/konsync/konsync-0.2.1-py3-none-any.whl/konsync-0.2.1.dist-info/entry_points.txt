@@ -1,0 +1,2 @@
+[console_scripts]
+konsync = konsync.__main__:main
