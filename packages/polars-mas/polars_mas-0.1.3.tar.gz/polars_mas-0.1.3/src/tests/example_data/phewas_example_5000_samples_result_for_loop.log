@@ -1,0 +1,26 @@
+ 14-10-2024 -> 20:25 | WARNING | Categorical column race is not binary. LazyFrame will be loaded to create dummy variables.
+ 14-10-2024 -> 20:26 | WARNING | Dropping constant columns sex for dependent 603.1.
+ 14-10-2024 -> 20:26 | WARNING | Too few cases or controls for 620.1: 17 cases - 2321 controls. Skipping analysis.
+ 14-10-2024 -> 20:27 | WARNING | Too few cases or controls for 649: 18 cases - 2417 controls. Skipping analysis.
+ 14-10-2024 -> 20:27 | WARNING | Too few cases or controls for 306.1: 19 cases - 1529 controls. Skipping analysis.
+ 14-10-2024 -> 20:27 | WARNING | Too few cases or controls for 1008: 1 cases - 4999 controls. Skipping analysis.
+ 14-10-2024 -> 20:28 | WARNING | Too few cases or controls for 1011: 1 cases - 4999 controls. Skipping analysis.
+ 14-10-2024 -> 20:28 | WARNING | Too few cases or controls for 614.32: 19 cases - 2187 controls. Skipping analysis.
+ 14-10-2024 -> 20:29 | WARNING | Too few cases or controls for 626.8: 18 cases - 2018 controls. Skipping analysis.
+ 14-10-2024 -> 20:30 | WARNING | Too few cases or controls for 915: 5 cases - 4995 controls. Skipping analysis.
+ 14-10-2024 -> 20:30 | WARNING | Too few cases or controls for 220: 19 cases - 1988 controls. Skipping analysis.
+ 14-10-2024 -> 20:30 | WARNING | Too few cases or controls for 627.1: 19 cases - 2018 controls. Skipping analysis.
+ 14-10-2024 -> 20:31 | WARNING | Too few cases or controls for 610.2: 19 cases - 1993 controls. Skipping analysis.
+ 14-10-2024 -> 20:31 | WARNING | Too few cases or controls for 615: 17 cases - 2187 controls. Skipping analysis.
+ 14-10-2024 -> 20:31 | WARNING | Too few cases or controls for 643.1: 17 cases - 2449 controls. Skipping analysis.
+ 14-10-2024 -> 20:33 | WARNING | Too few cases or controls for 610.8: 17 cases - 1993 controls. Skipping analysis.
+ 14-10-2024 -> 20:34 | WARNING | Too few cases or controls for 602.3: 18 cases - 2106 controls. Skipping analysis.
+ 14-10-2024 -> 20:35 | WARNING | Too few cases or controls for 627.22: 18 cases - 2018 controls. Skipping analysis.
+ 14-10-2024 -> 20:36 | WARNING | Too few cases or controls for 617: 2 cases - 2491 controls. Skipping analysis.
+ 14-10-2024 -> 20:36 | WARNING | Too few cases or controls for 614.53: 19 cases - 2187 controls. Skipping analysis.
+ 14-10-2024 -> 20:39 | WARNING | Too few cases or controls for 652: 0 cases - 2493 controls. Skipping analysis.
+ 14-10-2024 -> 20:40 | WARNING | Too few cases or controls for 610.1: 13 cases - 1993 controls. Skipping analysis.
+ 14-10-2024 -> 20:40 | WARNING | Too few cases or controls for 625.1: 18 cases - 2324 controls. Skipping analysis.
+ 14-10-2024 -> 20:41 | WARNING | Too few cases or controls for 647: 19 cases - 2416 controls. Skipping analysis.
+ 14-10-2024 -> 20:41 | WARNING | Too few cases or controls for 1010: 3 cases - 4997 controls. Skipping analysis.
+ 14-10-2024 -> 20:42 | INFO | Time taken for serial: 997.0146470069885

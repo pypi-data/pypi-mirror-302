@@ -1,0 +1,14 @@
+ 14-10-2024 -> 21:12 | INFO | 1837 columns found in input file.
+ 14-10-2024 -> 21:12 | WARNING | Categorical column race is not binary. LazyFrame will be loaded to create dummy variables.
+ 14-10-2024 -> 21:13 | WARNING | Dropping constant columns sex for dependent 605.
+ 14-10-2024 -> 21:13 | WARNING | Dropping constant columns sex for dependent 624.2.
+ 14-10-2024 -> 21:14 | WARNING | Too few cases or controls for 651: 15 cases - 49984 controls. Skipping analysis.
+ 14-10-2024 -> 21:14 | WARNING | Too few cases or controls for 1006: 2 cases - 99998 controls. Skipping analysis.
+ 14-10-2024 -> 21:17 | WARNING | Too few cases or controls for 1011: 13 cases - 99986 controls. Skipping analysis.
+ 14-10-2024 -> 21:17 | WARNING | Too few cases or controls for 617: 17 cases - 49983 controls. Skipping analysis.
+ 14-10-2024 -> 21:17 | WARNING | Too few cases or controls for 1012: 7 cases - 99993 controls. Skipping analysis.
+ 14-10-2024 -> 21:18 | WARNING | Too few cases or controls for 652: 11 cases - 49988 controls. Skipping analysis.
+ 14-10-2024 -> 21:18 | WARNING | Too few cases or controls for 1015: 19 cases - 99981 controls. Skipping analysis.
+ 14-10-2024 -> 21:20 | WARNING | Too few cases or controls for 773: 16 cases - 99981 controls. Skipping analysis.
+ 14-10-2024 -> 21:20 | WARNING | Too few cases or controls for 1010: 17 cases - 99981 controls. Skipping analysis.
+ 14-10-2024 -> 21:22 | INFO | Time taken for group_by: 571.0131254196167

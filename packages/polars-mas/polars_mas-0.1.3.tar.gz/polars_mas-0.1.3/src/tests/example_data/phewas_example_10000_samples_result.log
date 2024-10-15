@@ -1,0 +1,42 @@
+ 14-10-2024 -> 20:51 | INFO | 1834 columns found in input file.
+ 14-10-2024 -> 20:51 | WARNING | Categorical column race is not binary. LazyFrame will be loaded to create dummy variables.
+ 14-10-2024 -> 20:51 | INFO | Time taken for group_by: 4.744529724121094e-05
+ 14-10-2024 -> 20:51 | WARNING | Dropping constant columns sex for dependent 604.3.
+ 14-10-2024 -> 20:52 | WARNING | Too few cases or controls for 1008: 5 cases - 9995 controls. Skipping analysis.
+ 14-10-2024 -> 20:52 | WARNING | Too few cases or controls for 1011: 2 cases - 9998 controls. Skipping analysis.
+ 14-10-2024 -> 20:52 | WARNING | Too few cases or controls for 652: 2 cases - 5053 controls. Skipping analysis.
+ 14-10-2024 -> 20:52 | WARNING | Too few cases or controls for 617: 6 cases - 5049 controls. Skipping analysis.
+ 14-10-2024 -> 20:52 | WARNING | Too few cases or controls for 1015: 3 cases - 9997 controls. Skipping analysis.
+ 14-10-2024 -> 20:52 | WARNING | Too few cases or controls for 651: 0 cases - 5055 controls. Skipping analysis.
+ 14-10-2024 -> 20:52 | WARNING | Too few cases or controls for 773: 6 cases - 9994 controls. Skipping analysis.
+ 14-10-2024 -> 20:52 | WARNING | Too few cases or controls for 873: 7 cases - 9993 controls. Skipping analysis.
+ 14-10-2024 -> 20:53 | WARNING | Too few cases or controls for 1009: 3 cases - 9997 controls. Skipping analysis.
+ 14-10-2024 -> 20:53 | WARNING | Too few cases or controls for 915: 2 cases - 9998 controls. Skipping analysis.
+ 14-10-2024 -> 20:53 | INFO | 1834 columns found in input file.
+ 14-10-2024 -> 20:53 | WARNING | Categorical column race is not binary. LazyFrame will be loaded to create dummy variables.
+ 14-10-2024 -> 20:53 | INFO | Time taken for group_by: 4.601478576660156e-05
+ 14-10-2024 -> 20:53 | WARNING | Dropping constant columns sex for dependent 620.1.
+ 14-10-2024 -> 20:53 | WARNING | Too few cases or controls for 651: 0 cases - 5055 controls. Skipping analysis.
+ 14-10-2024 -> 20:53 | WARNING | Too few cases or controls for 652: 2 cases - 5053 controls. Skipping analysis.
+ 14-10-2024 -> 20:54 | WARNING | Too few cases or controls for 1015: 3 cases - 9997 controls. Skipping analysis.
+ 14-10-2024 -> 20:54 | WARNING | Too few cases or controls for 873: 7 cases - 9993 controls. Skipping analysis.
+ 14-10-2024 -> 20:54 | WARNING | Too few cases or controls for 915: 2 cases - 9998 controls. Skipping analysis.
+ 14-10-2024 -> 20:54 | WARNING | Too few cases or controls for 1009: 3 cases - 9997 controls. Skipping analysis.
+ 14-10-2024 -> 20:54 | WARNING | Too few cases or controls for 1011: 2 cases - 9998 controls. Skipping analysis.
+ 14-10-2024 -> 20:55 | WARNING | Too few cases or controls for 773: 6 cases - 9994 controls. Skipping analysis.
+ 14-10-2024 -> 20:55 | WARNING | Too few cases or controls for 617: 6 cases - 5049 controls. Skipping analysis.
+ 14-10-2024 -> 20:55 | WARNING | Too few cases or controls for 1008: 5 cases - 9995 controls. Skipping analysis.
+ 14-10-2024 -> 20:56 | INFO | 1834 columns found in input file.
+ 14-10-2024 -> 20:56 | WARNING | Categorical column race is not binary. LazyFrame will be loaded to create dummy variables.
+ 14-10-2024 -> 20:56 | WARNING | Dropping constant columns sex for dependent 617.
+ 14-10-2024 -> 20:56 | WARNING | Too few cases or controls for 617: 6 cases - 5049 controls. Skipping analysis.
+ 14-10-2024 -> 20:56 | WARNING | Too few cases or controls for 651: 0 cases - 5055 controls. Skipping analysis.
+ 14-10-2024 -> 20:56 | WARNING | Too few cases or controls for 1015: 3 cases - 9997 controls. Skipping analysis.
+ 14-10-2024 -> 20:56 | WARNING | Too few cases or controls for 1011: 2 cases - 9998 controls. Skipping analysis.
+ 14-10-2024 -> 20:56 | WARNING | Too few cases or controls for 1009: 3 cases - 9997 controls. Skipping analysis.
+ 14-10-2024 -> 20:57 | WARNING | Too few cases or controls for 773: 6 cases - 9994 controls. Skipping analysis.
+ 14-10-2024 -> 20:57 | WARNING | Too few cases or controls for 915: 2 cases - 9998 controls. Skipping analysis.
+ 14-10-2024 -> 20:57 | WARNING | Too few cases or controls for 873: 7 cases - 9993 controls. Skipping analysis.
+ 14-10-2024 -> 20:57 | WARNING | Too few cases or controls for 1008: 5 cases - 9995 controls. Skipping analysis.
+ 14-10-2024 -> 20:57 | WARNING | Too few cases or controls for 652: 2 cases - 5053 controls. Skipping analysis.
+ 14-10-2024 -> 20:58 | INFO | Time taken for group_by: 102.96260070800781

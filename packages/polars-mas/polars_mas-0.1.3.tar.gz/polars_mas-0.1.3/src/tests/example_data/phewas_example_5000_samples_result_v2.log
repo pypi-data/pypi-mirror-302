@@ -1,0 +1,181 @@
+ 14-10-2024 -> 22:05 | INFO | 1830 columns found in input file.
+ 14-10-2024 -> 22:05 | WARNING | Categorical column race is not binary. LazyFrame will be loaded to create dummy variables.
+ 14-10-2024 -> 22:05 | WARNING | Columns sex are constants. Dropping from 618.6 analysis.
+ 14-10-2024 -> 22:05 | WARNING | Columns sex are constants. Dropping from 258.1 analysis.
+ 14-10-2024 -> 22:05 | WARNING | Columns sex are constants. Dropping from 619.2 analysis.
+ 14-10-2024 -> 22:05 | WARNING | Columns sex are constants. Dropping from 614.33 analysis.
+ 14-10-2024 -> 22:05 | WARNING | Columns sex are constants. Dropping from 602 analysis.
+ 14-10-2024 -> 22:05 | WARNING | Columns sex are constants. Dropping from 626.21 analysis.
+ 14-10-2024 -> 22:05 | WARNING | Columns sex are constants. Dropping from 624.1 analysis.
+ 14-10-2024 -> 22:05 | WARNING | Columns sex are constants. Dropping from 652 analysis.
+ 14-10-2024 -> 22:05 | WARNING | Too few cases for 652: 0 cases - 2493 controls. Skipping analysis.
+ 14-10-2024 -> 22:05 | WARNING | Columns sex are constants. Dropping from 175 analysis.
+ 14-10-2024 -> 22:05 | WARNING | Columns sex are constants. Dropping from 602.3 analysis.
+ 14-10-2024 -> 22:05 | WARNING | Too few cases for 602.3: 18 cases - 2106 controls. Skipping analysis.
+ 14-10-2024 -> 22:05 | WARNING | Columns sex are constants. Dropping from 614.31 analysis.
+ 14-10-2024 -> 22:05 | WARNING | Columns sex are constants. Dropping from 623 analysis.
+ 14-10-2024 -> 22:05 | WARNING | Columns sex are constants. Dropping from 614.5 analysis.
+ 14-10-2024 -> 22:05 | WARNING | Columns sex are constants. Dropping from 182 analysis.
+ 14-10-2024 -> 22:05 | WARNING | Columns sex are constants. Dropping from 634.1 analysis.
+ 14-10-2024 -> 22:05 | WARNING | Columns sex are constants. Dropping from 642.1 analysis.
+ 14-10-2024 -> 22:05 | WARNING | Columns sex are constants. Dropping from 655.1 analysis.
+ 14-10-2024 -> 22:05 | WARNING | Columns sex are constants. Dropping from 622.2 analysis.
+ 14-10-2024 -> 22:05 | WARNING | Columns sex are constants. Dropping from 621 analysis.
+ 14-10-2024 -> 22:05 | WARNING | Columns sex are constants. Dropping from 649 analysis.
+ 14-10-2024 -> 22:05 | WARNING | Too few cases for 649: 18 cases - 2417 controls. Skipping analysis.
+ 14-10-2024 -> 22:05 | WARNING | Columns sex are constants. Dropping from 647 analysis.
+ 14-10-2024 -> 22:05 | WARNING | Too few cases for 647: 19 cases - 2416 controls. Skipping analysis.
+ 14-10-2024 -> 22:05 | WARNING | Columns sex are constants. Dropping from 619.5 analysis.
+ 14-10-2024 -> 22:05 | WARNING | Columns sex are constants. Dropping from 626.14 analysis.
+ 14-10-2024 -> 22:05 | WARNING | Columns sex are constants. Dropping from 636.1 analysis.
+ 14-10-2024 -> 22:05 | WARNING | Columns sex are constants. Dropping from 792 analysis.
+ 14-10-2024 -> 22:05 | WARNING | Columns sex are constants. Dropping from 626 analysis.
+ 14-10-2024 -> 22:05 | WARNING | Columns sex are constants. Dropping from 620 analysis.
+ 14-10-2024 -> 22:05 | WARNING | Columns sex are constants. Dropping from 636 analysis.
+ 14-10-2024 -> 22:05 | WARNING | Columns sex are constants. Dropping from 618.1 analysis.
+ 14-10-2024 -> 22:05 | WARNING | Columns sex are constants. Dropping from 603.1 analysis.
+ 14-10-2024 -> 22:05 | WARNING | Columns sex are constants. Dropping from 655 analysis.
+ 14-10-2024 -> 22:05 | WARNING | Columns sex are constants. Dropping from 627.4 analysis.
+ 14-10-2024 -> 22:05 | WARNING | Columns sex are constants. Dropping from 626.11 analysis.
+ 14-10-2024 -> 22:05 | WARNING | Columns sex are constants. Dropping from 624.2 analysis.
+ 14-10-2024 -> 22:05 | WARNING | Columns sex are constants. Dropping from 174.1 analysis.
+ 14-10-2024 -> 22:05 | WARNING | Columns sex are constants. Dropping from 628 analysis.
+ 14-10-2024 -> 22:05 | WARNING | Columns sex are constants. Dropping from 671 analysis.
+ 14-10-2024 -> 22:05 | WARNING | Columns sex are constants. Dropping from 600 analysis.
+ 14-10-2024 -> 22:05 | WARNING | Columns sex are constants. Dropping from 642 analysis.
+ 14-10-2024 -> 22:05 | WARNING | Columns sex are constants. Dropping from 610.2 analysis.
+ 14-10-2024 -> 22:05 | WARNING | Too few cases for 610.2: 19 cases - 1993 controls. Skipping analysis.
+ 14-10-2024 -> 22:05 | WARNING | Columns sex are constants. Dropping from 601.4 analysis.
+ 14-10-2024 -> 22:05 | WARNING | Columns sex are constants. Dropping from 615 analysis.
+ 14-10-2024 -> 22:05 | WARNING | Too few cases for 615: 17 cases - 2187 controls. Skipping analysis.
+ 14-10-2024 -> 22:05 | WARNING | Columns sex are constants. Dropping from 636.2 analysis.
+ 14-10-2024 -> 22:05 | WARNING | Columns sex are constants. Dropping from 626.2 analysis.
+ 14-10-2024 -> 22:05 | WARNING | Columns sex are constants. Dropping from 180.1 analysis.
+ 14-10-2024 -> 22:05 | WARNING | Columns sex are constants. Dropping from 647.3 analysis.
+ 14-10-2024 -> 22:05 | WARNING | Columns sex are constants. Dropping from 604.3 analysis.
+ 14-10-2024 -> 22:05 | WARNING | Columns sex are constants. Dropping from 609.1 analysis.
+ 14-10-2024 -> 22:05 | WARNING | Columns sex are constants. Dropping from 174.2 analysis.
+ 14-10-2024 -> 22:05 | WARNING | Columns sex are constants. Dropping from 610.8 analysis.
+ 14-10-2024 -> 22:05 | WARNING | Too few cases for 610.8: 17 cases - 1993 controls. Skipping analysis.
+ 14-10-2024 -> 22:05 | WARNING | Columns sex are constants. Dropping from 646 analysis.
+ 14-10-2024 -> 22:05 | WARNING | Columns sex are constants. Dropping from 609 analysis.
+ 14-10-2024 -> 22:05 | WARNING | Columns sex are constants. Dropping from 626.8 analysis.
+ 14-10-2024 -> 22:05 | WARNING | Too few cases for 626.8: 18 cases - 2018 controls. Skipping analysis.
+ 14-10-2024 -> 22:05 | WARNING | Columns sex are constants. Dropping from 218.1 analysis.
+ 14-10-2024 -> 22:05 | WARNING | Columns sex are constants. Dropping from 614.1 analysis.
+ 14-10-2024 -> 22:05 | WARNING | Columns sex are constants. Dropping from 619.1 analysis.
+ 14-10-2024 -> 22:05 | WARNING | Columns sex are constants. Dropping from 751.11 analysis.
+ 14-10-2024 -> 22:05 | WARNING | Columns sex are constants. Dropping from 647.1 analysis.
+ 14-10-2024 -> 22:05 | WARNING | Columns sex are constants. Dropping from 643.1 analysis.
+ 14-10-2024 -> 22:05 | WARNING | Too few cases for 643.1: 17 cases - 2449 controls. Skipping analysis.
+ 14-10-2024 -> 22:05 | WARNING | Columns sex are constants. Dropping from 306.1 analysis.
+ 14-10-2024 -> 22:05 | WARNING | Too few cases for 306.1: 19 cases - 1529 controls. Skipping analysis.
+ 14-10-2024 -> 22:05 | WARNING | Columns sex are constants. Dropping from 627 analysis.
+ 14-10-2024 -> 22:05 | WARNING | Columns sex are constants. Dropping from 626.4 analysis.
+ 14-10-2024 -> 22:05 | WARNING | Columns sex are constants. Dropping from 654.2 analysis.
+ 14-10-2024 -> 22:05 | WARNING | Columns sex are constants. Dropping from 674 analysis.
+ 14-10-2024 -> 22:05 | WARNING | Columns sex are constants. Dropping from 624 analysis.
+ 14-10-2024 -> 22:05 | WARNING | Columns sex are constants. Dropping from 601.8 analysis.
+ 14-10-2024 -> 22:05 | WARNING | Columns sex are constants. Dropping from 256.4 analysis.
+ 14-10-2024 -> 22:05 | WARNING | Columns sex are constants. Dropping from 627.5 analysis.
+ 14-10-2024 -> 22:05 | WARNING | Columns sex are constants. Dropping from 601.11 analysis.
+ 14-10-2024 -> 22:05 | WARNING | Columns sex are constants. Dropping from 792.1 analysis.
+ 14-10-2024 -> 22:05 | WARNING | Columns sex are constants. Dropping from 187.1 analysis.
+ 14-10-2024 -> 22:05 | WARNING | Columns sex are constants. Dropping from 635.2 analysis.
+ 14-10-2024 -> 22:05 | WARNING | Columns sex are constants. Dropping from 184.11 analysis.
+ 14-10-2024 -> 22:05 | WARNING | Columns sex are constants. Dropping from 635.3 analysis.
+ 14-10-2024 -> 22:05 | WARNING | Columns sex are constants. Dropping from 653 analysis.
+ 14-10-2024 -> 22:05 | WARNING | Columns sex are constants. Dropping from 222 analysis.
+ 14-10-2024 -> 22:06 | WARNING | Columns sex are constants. Dropping from 614.53 analysis.
+ 14-10-2024 -> 22:06 | WARNING | Too few cases for 614.53: 19 cases - 2187 controls. Skipping analysis.
+ 14-10-2024 -> 22:06 | WARNING | Columns sex are constants. Dropping from 627.1 analysis.
+ 14-10-2024 -> 22:06 | WARNING | Too few cases for 627.1: 19 cases - 2018 controls. Skipping analysis.
+ 14-10-2024 -> 22:06 | WARNING | Columns sex are constants. Dropping from 635 analysis.
+ 14-10-2024 -> 22:06 | WARNING | Columns sex are constants. Dropping from 619.3 analysis.
+ 14-10-2024 -> 22:06 | WARNING | Columns sex are constants. Dropping from 610.3 analysis.
+ 14-10-2024 -> 22:06 | WARNING | Columns sex are constants. Dropping from 620.1 analysis.
+ 14-10-2024 -> 22:06 | WARNING | Too few cases for 620.1: 17 cases - 2321 controls. Skipping analysis.
+ 14-10-2024 -> 22:06 | WARNING | Columns sex are constants. Dropping from 614.52 analysis.
+ 14-10-2024 -> 22:06 | WARNING | Columns sex are constants. Dropping from 626.13 analysis.
+ 14-10-2024 -> 22:06 | WARNING | Too few cases for 1008: 1 cases - 4999 controls. Skipping analysis.
+ 14-10-2024 -> 22:06 | WARNING | Columns sex are constants. Dropping from 220 analysis.
+ 14-10-2024 -> 22:06 | WARNING | Too few cases for 220: 19 cases - 1988 controls. Skipping analysis.
+ 14-10-2024 -> 22:06 | WARNING | Columns sex are constants. Dropping from 614.54 analysis.
+ 14-10-2024 -> 22:06 | WARNING | Columns sex are constants. Dropping from 187.2 analysis.
+ 14-10-2024 -> 22:06 | WARNING | Too few cases for 1011: 1 cases - 4999 controls. Skipping analysis.
+ 14-10-2024 -> 22:06 | WARNING | Columns sex are constants. Dropping from 614.3 analysis.
+ 14-10-2024 -> 22:06 | WARNING | Columns sex are constants. Dropping from 624.9 analysis.
+ 14-10-2024 -> 22:06 | WARNING | Columns sex are constants. Dropping from 627.3 analysis.
+ 14-10-2024 -> 22:06 | WARNING | Columns sex are constants. Dropping from 603 analysis.
+ 14-10-2024 -> 22:06 | WARNING | Columns sex are constants. Dropping from 604 analysis.
+ 14-10-2024 -> 22:06 | WARNING | Columns sex are constants. Dropping from 187 analysis.
+ 14-10-2024 -> 22:06 | WARNING | Columns sex are constants. Dropping from 604.1 analysis.
+ 14-10-2024 -> 22:06 | WARNING | Columns sex are constants. Dropping from 257 analysis.
+ 14-10-2024 -> 22:06 | WARNING | Columns sex are constants. Dropping from 180.3 analysis.
+ 14-10-2024 -> 22:06 | WARNING | Columns sex are constants. Dropping from 601.12 analysis.
+ 14-10-2024 -> 22:06 | WARNING | Columns sex are constants. Dropping from 627.2 analysis.
+ 14-10-2024 -> 22:06 | WARNING | Columns sex are constants. Dropping from 625 analysis.
+ 14-10-2024 -> 22:06 | WARNING | Columns sex are constants. Dropping from 625.1 analysis.
+ 14-10-2024 -> 22:06 | WARNING | Too few cases for 625.1: 18 cases - 2324 controls. Skipping analysis.
+ 14-10-2024 -> 22:06 | WARNING | Columns sex are constants. Dropping from 610.1 analysis.
+ 14-10-2024 -> 22:06 | WARNING | Too few cases for 610.1: 13 cases - 1993 controls. Skipping analysis.
+ 14-10-2024 -> 22:06 | WARNING | Columns sex are constants. Dropping from 601.3 analysis.
+ 14-10-2024 -> 22:06 | WARNING | Columns sex are constants. Dropping from 622.1 analysis.
+ 14-10-2024 -> 22:06 | WARNING | Columns sex are constants. Dropping from 610 analysis.
+ 14-10-2024 -> 22:06 | WARNING | Columns sex are constants. Dropping from 618.5 analysis.
+ 14-10-2024 -> 22:06 | WARNING | Columns sex are constants. Dropping from 614.32 analysis.
+ 14-10-2024 -> 22:06 | WARNING | Too few cases for 614.32: 19 cases - 2187 controls. Skipping analysis.
+ 14-10-2024 -> 22:06 | WARNING | Columns sex are constants. Dropping from 669 analysis.
+ 14-10-2024 -> 22:06 | WARNING | Columns sex are constants. Dropping from 184 analysis.
+ 14-10-2024 -> 22:06 | WARNING | Columns sex are constants. Dropping from 617 analysis.
+ 14-10-2024 -> 22:06 | WARNING | Too few cases for 617: 2 cases - 2491 controls. Skipping analysis.
+ 14-10-2024 -> 22:06 | WARNING | Columns sex are constants. Dropping from 221 analysis.
+ 14-10-2024 -> 22:06 | WARNING | Too few cases for 1010: 3 cases - 4997 controls. Skipping analysis.
+ 14-10-2024 -> 22:06 | WARNING | Columns sex are constants. Dropping from 218 analysis.
+ 14-10-2024 -> 22:06 | WARNING | Columns sex are constants. Dropping from 601.1 analysis.
+ 14-10-2024 -> 22:06 | WARNING | Columns sex are constants. Dropping from 184.2 analysis.
+ 14-10-2024 -> 22:06 | WARNING | Columns sex are constants. Dropping from 636.8 analysis.
+ 14-10-2024 -> 22:06 | WARNING | Columns sex are constants. Dropping from 187.8 analysis.
+ 14-10-2024 -> 22:06 | WARNING | Columns sex are constants. Dropping from 751.12 analysis.
+ 14-10-2024 -> 22:06 | WARNING | Columns sex are constants. Dropping from 644 analysis.
+ 14-10-2024 -> 22:06 | WARNING | Columns sex are constants. Dropping from 609.2 analysis.
+ 14-10-2024 -> 22:06 | WARNING | Columns sex are constants. Dropping from 627.21 analysis.
+ 14-10-2024 -> 22:06 | WARNING | Columns sex are constants. Dropping from 634.3 analysis.
+ 14-10-2024 -> 22:06 | WARNING | Columns sex are constants. Dropping from 622 analysis.
+ 14-10-2024 -> 22:06 | WARNING | Columns sex are constants. Dropping from 654 analysis.
+ 14-10-2024 -> 22:06 | WARNING | Columns sex are constants. Dropping from 626.1 analysis.
+ 14-10-2024 -> 22:06 | WARNING | Columns sex are constants. Dropping from 626.15 analysis.
+ 14-10-2024 -> 22:06 | WARNING | Columns sex are constants. Dropping from 605 analysis.
+ 14-10-2024 -> 22:06 | WARNING | Columns sex are constants. Dropping from 627.22 analysis.
+ 14-10-2024 -> 22:06 | WARNING | Too few cases for 627.22: 18 cases - 2018 controls. Skipping analysis.
+ 14-10-2024 -> 22:06 | WARNING | Columns sex are constants. Dropping from 604.2 analysis.
+ 14-10-2024 -> 22:06 | WARNING | Columns sex are constants. Dropping from 608 analysis.
+ 14-10-2024 -> 22:06 | WARNING | Columns sex are constants. Dropping from 636.3 analysis.
+ 14-10-2024 -> 22:06 | WARNING | Columns sex are constants. Dropping from 256 analysis.
+ 14-10-2024 -> 22:06 | WARNING | Columns sex are constants. Dropping from 676 analysis.
+ 14-10-2024 -> 22:06 | WARNING | Columns sex are constants. Dropping from 614.4 analysis.
+ 14-10-2024 -> 22:06 | WARNING | Columns sex are constants. Dropping from 619.4 analysis.
+ 14-10-2024 -> 22:06 | WARNING | Columns sex are constants. Dropping from 180 analysis.
+ 14-10-2024 -> 22:06 | WARNING | Columns sex are constants. Dropping from 626.12 analysis.
+ 14-10-2024 -> 22:06 | WARNING | Columns sex are constants. Dropping from 619 analysis.
+ 14-10-2024 -> 22:06 | WARNING | Columns sex are constants. Dropping from 796 analysis.
+ 14-10-2024 -> 22:06 | WARNING | Columns sex are constants. Dropping from 603.2 analysis.
+ 14-10-2024 -> 22:06 | WARNING | Columns sex are constants. Dropping from 174.11 analysis.
+ 14-10-2024 -> 22:06 | WARNING | Columns sex are constants. Dropping from 634 analysis.
+ 14-10-2024 -> 22:06 | WARNING | Columns sex are constants. Dropping from 643 analysis.
+ 14-10-2024 -> 22:06 | WARNING | Columns sex are constants. Dropping from 614.51 analysis.
+ 14-10-2024 -> 22:06 | WARNING | Columns sex are constants. Dropping from 654.1 analysis.
+ 14-10-2024 -> 22:06 | WARNING | Columns sex are constants. Dropping from 610.4 analysis.
+ 14-10-2024 -> 22:06 | WARNING | Columns sex are constants. Dropping from 257.1 analysis.
+ 14-10-2024 -> 22:06 | WARNING | Columns sex are constants. Dropping from 184.1 analysis.
+ 14-10-2024 -> 22:06 | WARNING | Columns sex are constants. Dropping from 614 analysis.
+ 14-10-2024 -> 22:06 | WARNING | Columns sex are constants. Dropping from 185 analysis.
+ 14-10-2024 -> 22:06 | WARNING | Columns sex are constants. Dropping from 286.3 analysis.
+ 14-10-2024 -> 22:06 | WARNING | Columns sex are constants. Dropping from 618 analysis.
+ 14-10-2024 -> 22:06 | WARNING | Too few cases for 915: 5 cases - 4995 controls. Skipping analysis.
+ 14-10-2024 -> 22:06 | WARNING | Columns sex are constants. Dropping from 649.1 analysis.
+ 14-10-2024 -> 22:06 | WARNING | Columns sex are constants. Dropping from 609.11 analysis.
+ 14-10-2024 -> 22:06 | WARNING | Columns sex are constants. Dropping from 601 analysis.
+ 14-10-2024 -> 22:06 | WARNING | Columns sex are constants. Dropping from 218.2 analysis.
+ 14-10-2024 -> 22:06 | WARNING | Columns sex are constants. Dropping from 618.2 analysis.
+ 14-10-2024 -> 22:06 | INFO | Time taken for group_by: 63.35389256477356
