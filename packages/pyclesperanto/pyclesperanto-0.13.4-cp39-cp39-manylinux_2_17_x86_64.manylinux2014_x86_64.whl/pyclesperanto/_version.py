@@ -1,0 +1,3 @@
+VERSION = "0.13.4"
+CLIC_VERSION = "0.13.4"
+COMMON_ALIAS = "cle"
