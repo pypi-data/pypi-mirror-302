@@ -1,0 +1,215 @@
+# Gerador de Prompts de Código Rápido 📝⚡️
+
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
+
+![Python](https://img.shields.io/badge/python-3.8%2B-blue.svg)
+
+![PyPI](https://img.shields.io/pypi/v/gerador-prompts.svg)
+
+![PyPI - Downloads](https://img.shields.io/pypi/dm/gerador-prompts.svg)
+
+![GitHub Stars](https://img.shields.io/github/stars/seu-usuario/gerador-prompts.svg?style=social&label=Stars)
+
+---
+
+**Gerador de Prompts de Código Rápido** é uma ferramenta poderosa que permite gerar prompts personalizados combinando o contexto do seu código Python com comandos específicos. Disponível tanto em **modo GUI** quanto em **modo CLI**, facilita a criação de prompts eficientes para diversas finalidades.
+
+---
+
+## Índice
+
+- [Descrição](#descrição)
+- [Funcionalidades](#funcionalidades)
+- [Instalação](#instalação)
+- [Uso](#uso)
+  - [Modo GUI (Interface Gráfica)](#modo-gui-interface-gráfica)
+  - [Modo CLI (Linha de Comando)](#modo-cli-linha-de-comando)
+- [Capturas de Tela](#capturas-de-tela)
+- [Contribuição](#contribuição)
+- [Licença](#licença)
+- [Contato](#contato)
+
+---
+
+## Descrição
+
+O **Gerador de Prompts de Código Rápido** é uma aplicação que analisa o seu projeto Python, gera um contexto detalhado em formato YAML e combina com comandos personalizados inseridos pelo usuário para criar prompts eficientes. Ideal para desenvolvedores que buscam automatizar a geração de prompts para ferramentas de IA, documentação ou outras finalidades.
+
+---
+
+## Funcionalidades
+
+- **Interface Gráfica Amigável** 🖥️: Utilize uma interface intuitiva para selecionar diretórios e inserir comandos.
+- **Modo CLI Interativo** 💻: Gere prompts diretamente pelo terminal com facilidade.
+- **Detecção Automática do Tema do Sistema** 🌗: Aplique temas claro ou escuro automaticamente conforme a preferência do seu sistema.
+- **Suporte a Múltiplas Gerações** 🔄: Crie quantos prompts precisar sem reiniciar a aplicação.
+- **Cópia Automática para a Área de Transferência** 📋: Após a geração, o prompt é automaticamente copiado para facilitar o uso imediato.
+- **Formatos de Saída Flexíveis** 📝: Gere prompts em formato YAML, combinando o contexto do código com comandos personalizados.
+
+---
+
+## Instalação
+
+### Pré-requisitos
+
+- **Python 3.8 ou superior** 🐍
+- **pip** (gerenciador de pacotes Python)
+
+### Instalação via `pip`
+
+```bash
+pip install gerador-prompts
+```
+
+Após a instalação, importe a classe `GetContext` e inicialize-a conforme necessário:
+
+```python
+from fastCodePrompts import GetContext
+
+getContext = GetContext(ui=True)
+```
+
+### Instalação Manual
+
+1. **Clone o repositório:**
+
+   ```bash
+   git clone https://github.com/seu-usuario/gerador-prompts.git
+   cd gerador-prompts
+   ```
+
+2. **Instale as dependências:**
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. **Instale o pacote:**
+
+   ```bash
+   python setup.py install
+   ```
+
+---
+
+## Uso
+
+O **Gerador de Prompts de Código Rápido** pode ser utilizado tanto via interface gráfica (**modo GUI**) quanto via linha de comando (**modo CLI**).
+
+### Modo GUI (Interface Gráfica)
+
+1. **Inicie a aplicação com a interface gráfica:**
+
+   ```bash
+   gerador-prompts --ui
+   ```
+
+2. **Passos na Interface Gráfica:**
+
+   - **Selecionar Diretório Raiz** 📂: Clique no botão "Procurar" para selecionar o diretório que contém seus arquivos Python.
+   
+   - **Inserir Comandos do Usuário** 📝: No campo "Comandos do Usuário", insira os comandos ou perguntas que deseja incluir no prompt.
+   
+   - **Gerar Prompt** 🚀: Clique no botão "Gerar Prompt" para criar o prompt. O prompt gerado será exibido na área de texto abaixo.
+   
+   - **Copiar para Área de Transferência** 📋: Após a geração, o prompt será automaticamente copiado para a área de transferência. Você também pode clicar no botão "Copiar para Área de Transferência" para copiar manualmente.
+   
+   - **Alternar Tema** 🌗: Use a caixa de seleção "Modo Escuro" para alternar entre os temas claro e escuro.
+
+3. **Gerar Múltiplos Prompts** 🔄: Para gerar outro prompt, basta alterar os campos conforme necessário e clicar novamente em "Gerar Prompt".
+
+### Modo CLI (Linha de Comando)
+
+1. **Inicie a aplicação no modo CLI:**
+
+   ```bash
+   gerador-prompts
+   ```
+
+2. **Passos no Modo CLI:**
+
+   - **Inserir Diretório Raiz** 📂: Quando solicitado, insira o caminho do diretório raiz que contém seus arquivos Python.
+
+   - **Inserir Comandos do Usuário** 📝: Insira os comandos desejados. Pressione `Enter` duas vezes para finalizar a entrada.
+
+   - **Cópia Automática** 📋: O prompt gerado será automaticamente copiado para a área de transferência.
+
+   - **Gerar Outro Prompt** 🔄: Após a geração, será perguntado se deseja gerar outro prompt:
+     - **Digite `s` para sim**: O processo reinicia, permitindo a entrada de novos parâmetros.
+     - **Digite `n` para não**: A aplicação encerra.
+
+3. **Exemplo de Uso no Modo CLI com Argumentos:**
+
+   ```bash
+   gerador-prompts --root "E:\projects\python\cnpjData\Nova pasta" --commands "from cnpjData import CNPJAPIClient\n\nErro ao fazer import."
+   ```
+
+4. **Exemplo de Uso no Modo CLI com Inputs via Prompts:**
+
+   ```bash
+   gerador-prompts
+   ```
+
+   **Interação Esperada:**
+
+   ```
+   Digite o caminho do diretório raiz contendo seus arquivos Python: E:\projects\python\cnpjData\Nova pasta
+   Digite seus comandos do usuário (pressione Enter duas vezes para finalizar):
+   from cnpjData import CNPJAPIClient
+
+   Erro ao fazer import.
+
+   ✅ Prompt copiado para a área de transferência! 🎉
+   Deseja gerar outro prompt? (s/n): s
+   Digite o caminho do diretório raiz contendo seus arquivos Python: [novo caminho]
+   Digite seus comandos do usuário (pressione Enter duas vezes para finalizar):
+   [novos comandos]
+
+   ✅ Prompt copiado para a área de transferência! 🎉
+   Deseja gerar outro prompt? (s/n): n
+   Encerrando a aplicação. Até mais! 👋
+   ```
+
+---
+
+## Capturas de Tela
+
+### Interface Gráfica
+
+![Screenshot GUI](screenshot.png)
+
+### Modo CLI
+
+![Screenshot CLI](screenshot1.png)
+
+---
+
+## Contribuição
+
+Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou pull requests para melhorias e correções.
+
+1. **Fork este repositório** 🔗
+2. **Crie uma branch** (`git checkout -b feature/nova-funcionalidade`)
+3. **Faça suas alterações** ✍️
+4. **Commit** (`git commit -m 'Adiciona nova funcionalidade'`)
+5. **Push** (`git push origin feature/nova-funcionalidade`)
+6. **Abra um Pull Request** 🚀
+
+---
+
+## Licença
+
+Este projeto está licenciado sob a [Licença MIT](LICENSE) - veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+---
+
+## Contato
+
+Desenvolvedor: **Seu Nome**  
+Email: [rebello.hiltonqueiroz@gmail.com](mailto:rebello.hiltonqueiroz@gmail.com)  
+GitHub: [@hqr90](https://github.com/hqr90/fastCodePrompts)  
+LinkedIn: [Seu LinkedIn](https://www.linkedin.com/in/hqr90/)
+
+---
+
+Feito por [hqr90](https://github.com/hqr90)
