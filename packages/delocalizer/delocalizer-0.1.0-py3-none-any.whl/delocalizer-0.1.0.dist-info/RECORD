@@ -1,0 +1,12 @@
+delocalizer/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+delocalizer/delocalizer.py,sha256=jqc6lJBfyQdA8pw7_8HwRUkg_LssDmpIVzqBI6-0kYA,7411
+delocalizer/main.py,sha256=9ezbPkCt4kqQHa0OnHDGvoZe8FvXNQ90T-AT2u587tE,1411
+delocalizer/md_subs.py,sha256=MH3ZTtGuQWRMIwlUcwVWiLIF9mD9kQo8dDswcT1R4Ps,778
+delocalizer/utils/grouping.py,sha256=ytaKRvf3ikBrWmHWr80EXN65btZpibKK15ldmBWtGEg,2725
+delocalizer/utils/honorifics.py,sha256=lU_kHV4zT1tZP_mYN676iI0nOT-fhAp1ymI48xR6HFw,7979
+delocalizer/utils/lambda_fetch.py,sha256=gj5-AvExYAyrDguVaKuSa8mwPH4_owedDD55YnS5nL4,899
+delocalizer-0.1.0.dist-info/LICENSE,sha256=ixuiBLtpoK3iv89l7ylKkg9rs2GzF9ukPH7ynZYzK5s,35148
+delocalizer-0.1.0.dist-info/METADATA,sha256=IoAvO9XkpgNHKHq0SwCEhtizWoCbOyDRIMgyTo3G3zE,1575
+delocalizer-0.1.0.dist-info/WHEEL,sha256=FMvqSimYX_P7y0a7UY-_Mc83r5zkBZsCYPm7Lr0Bsq4,88
+delocalizer-0.1.0.dist-info/entry_points.txt,sha256=BoLXXls8OI4O4lAk75xBhZEzTLF4R6hbbDJNptctzw4,53
+delocalizer-0.1.0.dist-info/RECORD,,
