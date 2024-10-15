@@ -1,0 +1,9 @@
+README.md
+setup.py
+Iga_Comp_Info/__init__.py
+Iga_Comp_Info/info.py
+Iga_Comp_Info.egg-info/PKG-INFO
+Iga_Comp_Info.egg-info/SOURCES.txt
+Iga_Comp_Info.egg-info/dependency_links.txt
+Iga_Comp_Info.egg-info/requires.txt
+Iga_Comp_Info.egg-info/top_level.txt
