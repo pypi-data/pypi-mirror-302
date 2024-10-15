@@ -1,0 +1,9 @@
+numpy
+open-clip-torch
+peft
+Pillow
+torch
+timm
+scipy
+torchvision
+transformers
