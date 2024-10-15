@@ -1,0 +1,7 @@
+numpy
+TCFile>=2024.10.1
+
+[testing]
+tox
+pytest
+pytest-cov
