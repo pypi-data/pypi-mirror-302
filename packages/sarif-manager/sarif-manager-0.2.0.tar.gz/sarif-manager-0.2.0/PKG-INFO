@@ -1,0 +1,68 @@
+Metadata-Version: 2.1
+Name: sarif-manager
+Version: 0.2.0
+Summary: Parse SARIF files for different providers.
+Home-page: https://github.com/nvsecurity/api-validator
+Author: Kinnaird McQuade
+Author-email: kinnaird@nightvision.net
+Keywords: sarif
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Requires-Dist: beautifulsoup4
+Requires-Dist: click
+Requires-Dist: click-option-group
+Requires-Dist: loguru
+Requires-Dist: markdown
+Requires-Dist: requests
+Requires-Dist: python-dotenv
+
+# SARIF Manager
+
+A simple CLI tool to parse SARIF files and output the results for different providers, like Azure DevOps, GitHub Actions, etc.
+
+Currently supported providers:
+- [x] Azure DevOps
+
+Roadmap:
+
+- [ ] GitHub Actions
+- [ ] GitLab CI/CD
+- [ ] Jenkins
+
+
+## Installation
+
+```bash
+pip install sarif-manager
+```
+
+## Usage
+
+```bash
+sarif-manager --help
+```
+
+## Example
+
+### Azure DevOps
+
+Write logs in a pipeline:
+
+```bash
+azure write-logs \
+    example.sarif \
+    --org nightvision1 \
+    --project temporary
+```
+
+Create work items:
+
+```bash
+sarif-manager azure create-work-items \
+    example.sarif \
+    --org nightvision1 \
+    --project temporary
+```
+
