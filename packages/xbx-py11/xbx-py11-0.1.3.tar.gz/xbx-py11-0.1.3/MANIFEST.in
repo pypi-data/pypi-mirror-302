@@ -1,0 +1,5 @@
+include xtquant/*
+include xtquant/xtbson/*
+include xtquant/xtbson/bson36/* 
+include xtquant/xtbson/bson37/*
+include xtquant/qmttools/*
