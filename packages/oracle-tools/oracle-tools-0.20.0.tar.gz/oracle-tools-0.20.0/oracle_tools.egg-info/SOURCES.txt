@@ -1,0 +1,8 @@
+README.md
+setup.py
+oracle-tools/__init__.py
+oracle-tools/main.py
+oracle_tools.egg-info/PKG-INFO
+oracle_tools.egg-info/SOURCES.txt
+oracle_tools.egg-info/dependency_links.txt
+oracle_tools.egg-info/top_level.txt
