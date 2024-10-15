@@ -1,0 +1,134 @@
+Metadata-Version: 2.1
+Name: cyberlang
+Version: 0.7.1
+Summary: A self-contained Cyber intepreter
+Author-email: David Kincaid <daelonsuzuka@gmail.com>
+License: MIT License
+        
+        Copyright (c) 2023 Daelon Suzuka
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Project-URL: Homepage, https://github.com/DaelonSuzuka/cyber-python
+Project-URL: Repository, https://github.com/DaelonSuzuka/cyber-python
+Project-URL: Issues, https://github.com/DaelonSuzuka/cyber-python/issues
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# cyberlang - batteries included python bindings for cyber
+
+[![license](https://img.shields.io/pypi/l/cyberlang.svg)](./LICENSE)
+[![pypi version](https://img.shields.io/pypi/v/cyberlang.svg)](https://pypi.org/project/cyberlang/)
+[![PyPI status](https://img.shields.io/pypi/status/cyberlang.svg)](https://github.com/qtstrap/qtstrap)
+[![discord](https://img.shields.io/discord/828041790711136274)](https://discord.gg/Ky8vNZJvAT)
+
+Built with cyberlang 0.3
+
+## Installation
+
+```
+pip install cyberlang
+```
+
+## Usage
+
+Simply create a CyberVM instance and evaluate a string:
+
+```py
+from cyber import CyberVM
+
+vm = CyberVM()
+vm.eval("print 'hello world!'")
+```
+
+Want to capture printed output? Override the `print` function from Cyber's `core` module with a binding.
+
+The decorator generates all the required wrappers and interfaces, and registers everything with Cyber's VM.
+
+```py
+from cyber import CyberVM
+
+vm = CyberVM()
+
+@vm.function('core.print')
+def _print(string: str):
+    print(string)
+
+vm.eval("print 'hello world!'")
+```
+
+Alternate techniques for creating callback functions:
+
+```py
+# if no module, assume core
+# same result as previous example
+# this creates function "print2" in the "core" module
+@cyber.function('print2')
+def _print2(string: str):
+    print(string)
+
+# if no module, assume core
+# if no function name, use existing function name
+# this creates function "test" in the "core" module
+@cyber.function
+def test():
+    print('core.test')
+```
+
+Or define multiple functions at once using this class-based syntax
+
+```py
+# "core" already exists, so add a() and b() to it
+class Core(cyber.module('core')):
+    def a(self):
+        print('core.test')
+    def b(self):
+        print('core.test2')
+
+# create "new_module" and add c() and d() to it
+@cyber.module('new_module')
+class Module:
+    def c(self):
+        print('new_module.test')
+    def d(self):
+        print('new_module.test2')
+
+# create module, implicitly named "NewModule" and add e() and f() to it
+@cyber.module
+class NewModule:
+    def e(self):
+        print('NewModule.test')
+    def f(self):
+        print('NewModule.test2')
+```
+
+# Supporters
+
+[fubar](https://github.com/fubark) - creator of the Cyber language
