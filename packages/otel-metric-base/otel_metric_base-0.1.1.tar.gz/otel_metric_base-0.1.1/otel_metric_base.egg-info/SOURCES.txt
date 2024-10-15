@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+otel_metric_base/__init__.py
+otel_metric_base/otel_metrics.py
+otel_metric_base.egg-info/PKG-INFO
+otel_metric_base.egg-info/SOURCES.txt
+otel_metric_base.egg-info/dependency_links.txt
+otel_metric_base.egg-info/requires.txt
+otel_metric_base.egg-info/top_level.txt
