@@ -1,0 +1,88 @@
+[tool.poetry]
+authors = ["Ticos Dev <hi@tiwater.com>"] 
+description = "Ticos Agent - Bridges humanoid robots to Ticos" 
+license = "MIT" 
+name = "ticos-agent" 
+packages = [
+  {include = "ticos_agent", from = "src"},
+] 
+readme = "README.md" 
+version = "0.5.2" # Keep the version from pyproject.toml as it's newer
+
+[project.urls]
+Homepage = "https://github.com/tiwater/ticos-agent"
+Issues = "https://github.com/tiwater/ticos-agent/issues"
+
+[tool.poetry.dependencies]
+opentelemetry-api = "^1.19.0"
+opentelemetry-exporter-otlp-proto-http = "^1.27.0"
+opentelemetry-sdk = "^1.19.0"
+psutil = "^6.0.0"
+python = "^3.10"
+pyyaml = "^6.0.2"
+requests = "^2.32.3"
+tomli = "^2.0.2"
+
+numpy = "^2.1.1"
+opencv-python = "^4.10.0.84"
+pyaudio = "^0.2.14"
+sounddevice = "^0.5.1"
+websockets = "^13.1"
+[tool.poetry.extras]
+yan = ["YanAPI"] # Make sure to specify the correct version if needed
+
+[tool.poetry.dev-dependencies]
+pre-commit = "^4.0.0"
+pytest = "^8.3.3"
+ruff = "^0.6.9"
+
+[tool.poetry.scripts]
+ticos = "ticos_agent.__main__:run_main"
+ticos-with-config = "ticos_agent.__main__:main --config"
+
+[build-system]
+build-backend = "poetry.core.masonry.api"
+requires = ["poetry-core>=1.0.0"]
+
+[tool.ruff]
+exclude = [
+  ".bzr",
+  ".direnv",
+  ".eggs",
+  ".git",
+  ".git-rewrite",
+  ".hg",
+  ".mypy_cache",
+  ".nox",
+  ".pants.d",
+  ".pytype",
+  ".ruff_cache",
+  ".svn",
+  ".tox",
+  ".venv",
+  "__pypackages__",
+  "_build",
+  "buck-out",
+  "build",
+  "dist",
+  "node_modules",
+  "venv",
+]
+fixable = ["A", "B", "C", "D", "E", "F", "I"]
+ignore = []
+line-length = 140
+select = ["E", "F", "I", "N"]
+
+[tool.ruff.mccabe]
+max-complexity = 10
+
+[tool.ruff.isort]
+known-first-party = ["ticos_server"]
+lines-after-imports = 2
+
+[tool.ruff.flake8-quotes]
+docstring-quotes = "double"
+inline-quotes = "single"
+
+[tool.ruff.pydocstyle]
+convention = "google"
