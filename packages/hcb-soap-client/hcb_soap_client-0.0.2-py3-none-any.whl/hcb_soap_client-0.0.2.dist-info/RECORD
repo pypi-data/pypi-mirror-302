@@ -1,0 +1,12 @@
+hcb_soap_client/__init__.py,sha256=BhJKRZTjokphVQlwQJJV0gKGRpmzJFIk88cRc52NPag,43
+hcb_soap_client/hcb_soap_client.py,sha256=stMoTAuYjRRGPpTkQ97WA54S1iLMe9bEXomYXarquEw,5353
+hcb_soap_client/s1100.py,sha256=l9UKVFPk9zTEhuLToCoKt4fr-nUqndjC9kip5cDwNYk,17984
+hcb_soap_client/s1157.py,sha256=Fc7kaMtA6bf6m8J8k3LfZ0rwhtrZyMp21B9M_tN06qY,27841
+hcb_soap_client/s1158.py,sha256=ttyZqs_or1wYB10dgfmxE6ohULemTFYDX0ZUFbbri8A,14869
+hcb_soap_client/setup.py,sha256=qyoyRwwP5nKRqxAiSK9FqIVs5CQfYH1_pp7jwJmK9K0,652
+test/__init__.py,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+test/test.py,sha256=jaZikyYLRm6-5-qYH30o-uXigDcUlFYiewG1aBw5UQM,630
+hcb_soap_client-0.0.2.dist-info/METADATA,sha256=9jNmDPR0cnaaKyJ3qkbFUc4SjJi0OgKF5LooguWUctE,502
+hcb_soap_client-0.0.2.dist-info/WHEEL,sha256=GV9aMThwP_4oNCtvEC2ec3qUYutgWeAzklro_0m4WJQ,91
+hcb_soap_client-0.0.2.dist-info/top_level.txt,sha256=yVz10kUJTNtL1bzWpFyBkkujE515Qpf0Dl9_Ud83WNM,21
+hcb_soap_client-0.0.2.dist-info/RECORD,,
