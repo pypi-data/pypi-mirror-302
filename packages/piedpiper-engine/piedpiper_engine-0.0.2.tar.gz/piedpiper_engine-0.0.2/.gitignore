@@ -1,0 +1,15 @@
+.venv
+dist
+.env
+__pycache__/*
+.pytest_cache/
+.ruff_cache/
+*.py[cod]
+bin/
+build/
+lib/
+lib64/
+parts/
+sdist/
+var/
+.installed.cfg
