@@ -1,0 +1,117 @@
+Metadata-Version: 2.1
+Name: fiddy
+Version: 0.0.2
+Summary: Finite difference methods
+Author-email: The fiddy developers <dilan.pathirana@uni-bonn.de>
+License: BSD 3-Clause License
+        
+        Copyright (c) 2022, fiddy developers
+        All rights reserved.
+        
+        Redistribution and use in source and binary forms, with or without
+        modification, are permitted provided that the following conditions are met:
+        
+        1. Redistributions of source code must retain the above copyright notice, this
+           list of conditions and the following disclaimer.
+        
+        2. Redistributions in binary form must reproduce the above copyright notice,
+           this list of conditions and the following disclaimer in the documentation
+           and/or other materials provided with the distribution.
+        
+        3. Neither the name of the copyright holder nor the names of its
+           contributors may be used to endorse or promote products derived from
+           this software without specific prior written permission.
+        
+        THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+        AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+        IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+        DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+        FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+        DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+        SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+        CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+        OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+        OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+        
+Project-URL: Homepage, https://github.com/icb-dcm/fiddy
+Project-URL: Documentation, https://fiddy.readthedocs.io
+Project-URL: Repository, https://github.com/icb-dcm/fiddy
+Project-URL: Bug Tracker, https://github.com/icb-dcm/fiddy/issues
+Keywords: finite difference,gradient check,difference quotient
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: joblib
+Requires-Dist: numpy
+Requires-Dist: pandas
+Provides-Extra: all
+Requires-Dist: amici; extra == "all"
+Requires-Dist: petab; extra == "all"
+Requires-Dist: notebook; extra == "all"
+Requires-Dist: scipy; extra == "all"
+Requires-Dist: pytest; extra == "all"
+Requires-Dist: scipy; extra == "all"
+Requires-Dist: sympy; extra == "all"
+Requires-Dist: more-itertools; extra == "all"
+Provides-Extra: doc
+Requires-Dist: docutils<0.19; extra == "doc"
+Requires-Dist: ipython; extra == "doc"
+Requires-Dist: mock; extra == "doc"
+Requires-Dist: nbconvert; extra == "doc"
+Requires-Dist: nbsphinx; extra == "doc"
+Requires-Dist: recommonmark>=0.7.1; extra == "doc"
+Requires-Dist: sphinx<8; extra == "doc"
+Requires-Dist: sphinx_rtd_theme; extra == "doc"
+Requires-Dist: sphinx-autodoc-typehints; extra == "doc"
+Requires-Dist: amici; extra == "doc"
+Requires-Dist: petab; extra == "doc"
+Provides-Extra: amici
+Requires-Dist: amici; extra == "amici"
+Requires-Dist: petab; extra == "amici"
+Provides-Extra: examples
+Requires-Dist: notebook; extra == "examples"
+Requires-Dist: scipy; extra == "examples"
+Provides-Extra: tests
+Requires-Dist: pytest; extra == "tests"
+Requires-Dist: scipy; extra == "tests"
+Requires-Dist: sympy; extra == "tests"
+Requires-Dist: more-itertools; extra == "tests"
+
+# fiddy
+
+[![Test suite](https://github.com/ICB-DCM/fiddy/actions/workflows/test_suite.yml/badge.svg)](https://github.com/ICB-DCM/fiddy/actions/workflows/test_suite.yml)
+[![PyPI](https://badge.fury.io/py/fiddy.svg)](https://badge.fury.io/py/fiddy)
+[![Documentation](https://readthedocs.org/projects/fiddy/badge/?version=latest)](https://fiddy.readthedocs.io)
+
+[Finite difference methods](https://en.wikipedia.org/wiki/Finite_difference),
+for applications including gradient computation and gradient checks.
+
+# Important notes
+
+The output of your function of interest should be a NumPy array. If your function is scalar-valued, change it to a NumPy array with:
+```python
+import numpy as np
+
+def function(input_value: float) -> np.ndarray:
+    scalar_output_value = old_function(input_value)
+    return np.array([scalar_output_value])
+```
+
+# Installation
+
+Currently under development, please install from source.
+```bash
+pip install -e .
+```
+
+Can also be installed from [PyPI](https://pypi.org/project/fiddy/)
+```bash
+pip install fiddy
+```
