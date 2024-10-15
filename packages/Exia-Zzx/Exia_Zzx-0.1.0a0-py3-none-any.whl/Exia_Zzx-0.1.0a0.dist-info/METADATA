@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: Exia-Zzx
+Version: 0.1.0a0
+Summary: used for Influx Connections
+Author-email: LockonZ <lockon_zhang@foxmail.com>
+Maintainer-email: LockonZ <lockon_zhang@foxmail.com>
+Project-URL: documentation, https://dev.lockon-zhang.xyz/docs/LockonTool/docs
+Project-URL: Changelog, https://dev.lockon-zhang.xyz/docs/LockonTool/change_log
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: lockon-toolkit >=1.0.4
+Requires-Dist: influxdb-client >=1.46.0
+Requires-Dist: xlrd
+Requires-Dist: openpyxl
+
