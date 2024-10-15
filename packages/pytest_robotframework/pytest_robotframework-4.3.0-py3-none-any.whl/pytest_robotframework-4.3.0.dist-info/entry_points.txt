@@ -1,0 +1,7 @@
+[console_scripts]
+
+[gui_scripts]
+
+[pytest11]
+robotframework = pytest_robotframework._internal.pytest.plugin
+
