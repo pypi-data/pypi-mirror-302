@@ -1,0 +1,217 @@
+Metadata-Version: 2.3
+Name: dike
+Version: 1.0.1
+Summary: Python asyncio tools for web service resilience.
+Project-URL: Homepage, https://github.com/chr1st1ank/dike
+Project-URL: Documentation, https://chr1st1ank.github.io/dike/
+Project-URL: Repository, https://github.com/chr1st1ank/dike.git
+Project-URL: Issues, https://github.com/chr1st1ank/dike/issues
+Author-email: Christian Krudewig <chr1st1ank@krudewig-online.de>
+License-Expression: Apache-2.0
+License-File: LICENSE
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Framework :: AsyncIO
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Python: <4.0,>=3.7.1
+Provides-Extra: dev
+Requires-Dist: bump2version~=1.0; extra == 'dev'
+Requires-Dist: docutils; (python_version == '3.9') and extra == 'dev'
+Requires-Dist: fastapi~=0.88; extra == 'dev'
+Requires-Dist: httpx~=0.23; extra == 'dev'
+Requires-Dist: invoke~=2.0.0; extra == 'dev'
+Requires-Dist: mkapi; extra == 'dev'
+Requires-Dist: mkdocs-autorefs; extra == 'dev'
+Requires-Dist: mkdocs-include-markdown-plugin; extra == 'dev'
+Requires-Dist: mkdocs~=1.4; extra == 'dev'
+Requires-Dist: numpy; extra == 'dev'
+Requires-Dist: phmdoctest~=1.2; extra == 'dev'
+Requires-Dist: pre-commit~=2.20; extra == 'dev'
+Requires-Dist: pytest-cov; extra == 'dev'
+Requires-Dist: pytest-parametrized~=1.4; extra == 'dev'
+Requires-Dist: pytest~=7.1; extra == 'dev'
+Requires-Dist: toml; extra == 'dev'
+Requires-Dist: tox; extra == 'dev'
+Requires-Dist: twine; extra == 'dev'
+Requires-Dist: uvicorn~=0.20; extra == 'dev'
+Requires-Dist: yamllint; extra == 'dev'
+Provides-Extra: doc
+Requires-Dist: mkapi~=1.0; extra == 'doc'
+Requires-Dist: mkdocs-autorefs; extra == 'doc'
+Requires-Dist: mkdocs-include-markdown-plugin~=4.0; (python_version == '3.9') and extra == 'doc'
+Requires-Dist: mkdocs~=1.4; extra == 'doc'
+Requires-Dist: pymdown-extensions~=9.7; extra == 'doc'
+Provides-Extra: test
+Requires-Dist: phmdoctest; extra == 'test'
+Requires-Dist: pytest; extra == 'test'
+Requires-Dist: pytest-cov; extra == 'test'
+Requires-Dist: xdoctest~=1.1; extra == 'test'
+Requires-Dist: yamllint; extra == 'test'
+Description-Content-Type: text/markdown
+
+# dike
+
+**Python asyncio tools for web service resilience**
+
+* Documentation: <https://chr1st1ank.github.io/dike/>
+
+[<img src="https://img.shields.io/pypi/v/dike.svg" alt="Release Status">](https://pypi.python.org/pypi/dike)
+[![GitHub license](https://img.shields.io/github/license/chr1st1ank/dike)](https://github.com/chr1st1ank/dike/blob/main/LICENSE)
+[<img src="https://github.com/chr1st1ank/dike/actions/workflows/test.yml/badge.svg?branch=main" alt="CI Status">](https://github.com/chr1st1ank/dike/actions)
+[![codecov](https://codecov.io/gh/chr1st1ank/dike/branch/main/graph/badge.svg?token=4oBkRHXbfa)](https://codecov.io/gh/chr1st1ank/dike)
+
+
+## Features
+
+### Retry decorator for asynchronous functions
+A very common task especially for network calls is an automatic retry with proper exception
+logging. There are good implementations like the [retry](https://pypi.org/project/retry/)
+package for classic functions. But dike provides a similar implementation for coroutine functions.
+This is available with the `@retry` decorator.
+
+Simplified example:
+```python
+import asyncio
+import datetime
+import logging
+import sys
+
+import dike
+
+
+@dike.retry(attempts=2, delay=datetime.timedelta(milliseconds=10), exception_types=RuntimeError)
+async def web_request():
+    raise RuntimeError("Request failed!")
+
+
+async def main():
+    response = await web_request()
+    print(response)
+
+logging.basicConfig(stream=sys.stdout)
+asyncio.run(main())
+```
+
+The output shows first a warning log message including the exception info (that's configurable).
+This is especially useful if you use structured logging.
+```
+# Log for first attempt:
+WARNING:dike:Caught exception RuntimeError('Request failed!'). Retrying in 0.01s ...
+Traceback (most recent call last):
+...
+RuntimeError: Request failed!
+```
+
+Then, the for the final failure the exception is propagated to the function caller:
+```
+Traceback (most recent call last):
+  ...
+RuntimeError: Request failed!
+
+Process finished with exit code 1
+```
+
+
+### Concurrency limiting for asynchronous functions
+The `@limit_jobs` decorator allows to limit the number of concurrent excecutions of a coroutine
+function. This can be useful for limiting queueing times or for limiting the load put
+onto backend services.
+
+Example with an external web request using the [httpx](https://github.com/encode/httpx) library:
+
+```python
+import asyncio
+import dike
+import httpx
+
+
+@dike.limit_jobs(limit=2)
+async def web_request():
+    """Sends a slow web request"""
+    async with httpx.AsyncClient() as client:
+        response = await client.get("https://httpbin.org/status/200?sleep=100")
+    return response
+
+
+async def main():
+    # Send three requests at the same time
+    call1 = web_request()
+    call2 = web_request()
+    call3 = web_request()
+    responses = await asyncio.gather(call1, call2, call3, return_exceptions=True)
+    # Print the responses
+    for r in responses:
+        print(r)
+
+
+asyncio.run(main())
+```
+
+The output shows that the first two requests succeed. The third one hits the concurrency limit and a TooManyCalls exception is returned:
+```
+<Response [200 OK]>
+<Response [200 OK]>
+Too many calls to function web_request! limit=2 exceeded
+```
+
+### Mini-batching for asynchronous function calls
+The `@batch` decorator groups function calls into batches and only calls the wrapped function
+with the aggregated input.
+
+This is useful if the function scales well with the size of the input arguments but you're
+getting the input data in smaller bits, e.g. as individual HTTP requests.
+
+The arguments can be batched together as a Python list or optionally also as numpy array.
+
+Example:
+
+```python
+import asyncio
+import dike
+
+
+@dike.batch(target_batch_size=3, max_waiting_time=10)
+async def add_args(arg1, arg2):
+    """Elementwise sum of the values in arg1 and arg2"""
+    print(f"arg1: {arg1}")
+    print(f"arg2: {arg2}")
+    return [a1 + a2 for a1, a2 in zip(arg1, arg2)]
+
+
+async def main():
+    result = await asyncio.gather(
+        add_args([0], [1]),
+        add_args([1], [1]),
+        add_args([2, 3], [1, 1]),
+    )
+
+    print(f"Result: {result}")
+
+
+asyncio.run(main())
+```
+
+Output:
+```
+arg1: [0, 1, 2, 3]
+arg2: [1, 1, 1, 1]
+Result: [[1], [2], [3, 4]]
+```
+
+## Installation
+Simply install from pypi. The library is pure Python without any dependencies other than the
+standard library.
+```
+pip install dike
+```

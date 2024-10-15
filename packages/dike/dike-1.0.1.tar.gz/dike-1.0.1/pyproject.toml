@@ -1,0 +1,70 @@
+[project]
+name = "dike"
+version = "1.0.1"
+description = "Python asyncio tools for web service resilience."
+authors = [
+    { name = "Christian Krudewig", email = "chr1st1ank@krudewig-online.de" },
+]
+readme = "README.md"
+license = "Apache-2.0"
+classifiers = [
+    'Development Status :: 5 - Production/Stable',
+    'Intended Audience :: Developers',
+    'License :: OSI Approved :: Apache Software License',
+    'Natural Language :: English',
+    'Programming Language :: Python',
+    'Programming Language :: Python :: 3',
+    'Programming Language :: Python :: 3.7',
+    'Programming Language :: Python :: 3.8',
+    'Programming Language :: Python :: 3.9',
+    'Programming Language :: Python :: 3.10',
+    'Programming Language :: Python :: 3.11',
+    'Programming Language :: Python :: 3.12',
+    'Programming Language :: Python :: 3.13',
+    'Operating System :: OS Independent',
+    'Framework :: AsyncIO',
+]
+requires-python = ">=3.7.1,<4.0"
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/chr1st1ank/dike"
+Documentation = "https://chr1st1ank.github.io/dike/"
+Repository = "https://github.com/chr1st1ank/dike.git"
+Issues = "https://github.com/chr1st1ank/dike/issues"
+
+[project.optional-dependencies]
+test = ["pytest", "phmdoctest", "pytest-cov", "yamllint", "xdoctest~=1.1"]
+dev = [
+    'docutils; python_version == "3.9"',
+    'bump2version ~= 1.0',
+    'fastapi ~= 0.88',
+    'httpx ~= 0.23',
+    'invoke ~= 2.0.0',
+    'mkapi',
+    'mkdocs ~= 1.4',
+    'mkdocs-autorefs',
+    'mkdocs-include-markdown-plugin',
+    'numpy',
+    'phmdoctest ~= 1.2',
+    'pre-commit ~= 2.20',
+    'pytest ~= 7.1',
+    'pytest-cov',
+    'pytest-parametrized ~= 1.4',
+    'toml',
+    'tox',
+    'twine',
+    'uvicorn ~= 0.20',
+    'yamllint',
+]
+doc = [
+    'pymdown-extensions ~= 9.7',
+    'mkdocs ~= 1.4',
+    'mkdocs-include-markdown-plugin ~= 4.0; python_version == "3.9"',
+    'mkapi ~= 1.0',
+    'mkdocs-autorefs',
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
