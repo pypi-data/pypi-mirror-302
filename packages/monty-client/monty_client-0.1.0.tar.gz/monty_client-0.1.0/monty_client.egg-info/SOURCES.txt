@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+setup.py
+monty_client.egg-info/PKG-INFO
+monty_client.egg-info/SOURCES.txt
+monty_client.egg-info/dependency_links.txt
+monty_client.egg-info/requires.txt
+monty_client.egg-info/top_level.txt

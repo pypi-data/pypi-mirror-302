@@ -1,0 +1,4 @@
+orjson
+xxhash
+asyncio
+typing
