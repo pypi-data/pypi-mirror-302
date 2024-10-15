@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: logwire
+Version: 0.1.0.dev1
+Summary: Remote logging managment system.
+Author: Scott Caratozzolo
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: httpx>=0.27.2
+Requires-Dist: python-worker>=2.2.4
+
+# LogWire
+
+Remote logging management system. Send application logs to be stored and queried in your DB.

@@ -1,0 +1,13 @@
+README.md
+pyproject.toml
+logwire/__init__.py
+logwire/handler.py
+logwire.egg-info/PKG-INFO
+logwire.egg-info/SOURCES.txt
+logwire.egg-info/dependency_links.txt
+logwire.egg-info/requires.txt
+logwire.egg-info/top_level.txt
+logwire/client/__init__.py
+logwire/client/apps.py
+logwire/client/logs.py
+logwire/client/workspaces.py
