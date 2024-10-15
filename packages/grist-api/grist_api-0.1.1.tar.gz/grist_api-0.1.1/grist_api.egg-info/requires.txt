@@ -1,0 +1,7 @@
+future
+requests
+
+[test]
+nose
+coverage
+vcrpy
