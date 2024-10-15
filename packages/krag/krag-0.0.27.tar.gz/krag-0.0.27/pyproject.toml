@@ -1,0 +1,32 @@
+[tool.poetry]
+name = "krag"
+version = "0.0.27"
+description = "A Python package for RAG performance evaluation"
+authors = ["Pandas-Studio <ontofinance@gmail.com>"]
+license = "MIT"
+readme = "README.md"  # README 파일의 경로
+keywords = ["RAG", "Recall", "MRR", "mAP", "NDCG"]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.14"
+cython = "^3.0.11"
+langchain = "^0.2.13"
+numpy = "^1.21"
+langchain-community = "^0.2.12"
+kiwipiepy = "^0.18.0"
+rank-bm25 = "^0.2.2"
+korouge-score = "^0.1.4"
+seaborn = "^0.13.2"
+
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.0"
+twine = "^5.1.1"
+python-dotenv = "1.0.0"
+ipykernel = "^6.29.5"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
