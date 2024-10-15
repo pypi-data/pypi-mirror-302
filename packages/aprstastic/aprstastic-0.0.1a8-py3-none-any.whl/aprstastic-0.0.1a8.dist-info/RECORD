@@ -1,0 +1,11 @@
+aprstastic/__about__.py,sha256=ipAIAwlZtpKowgJSVkOuK3Ogq-jClk3WSnj4-QtEaqI,134
+aprstastic/__init__.py,sha256=gn9hIpDTylMxj_sMIuLhcz1e0_lF9vLhkUZj3rmcv50,110
+aprstastic/__main__.py,sha256=_8HNdJWdR1R5t3RdGSVNNG8-g55FYte0qB1v3sl52eE,1452
+aprstastic/_aprs_client.py,sha256=J4bvBIpCk3-h0DSRZL0VGNwV8xg5OmdZspF6uMWcz10,3337
+aprstastic/_config.py,sha256=8aPhCUW-2uHIcnRJgzzYaCu1kdkR4GKGCJKuebkrJkw,3225
+aprstastic/_config_const.py,sha256=IB9t6zPffpRx9nEyIwev7dcowkQv4I8IAc7vy502Q9c,885
+aprstastic/_gateway.py,sha256=hg601IZcLFo_kjyAUhCmzkzVdZWY4s-cfuqfz4znYbg,14406
+aprstastic-0.0.1a8.dist-info/METADATA,sha256=Wg60GXR7oaa81kGCyc5lsoI_Noc6Y9NZuLI4ra__MIg,5716
+aprstastic-0.0.1a8.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+aprstastic-0.0.1a8.dist-info/licenses/LICENSE,sha256=vV2vhIx5d5r6LzC5bwlCFYOKHNPBYCKlEqeacwsEO7E,1069
+aprstastic-0.0.1a8.dist-info/RECORD,,
