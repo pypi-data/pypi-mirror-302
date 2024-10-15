@@ -1,0 +1,11 @@
+LICENCE
+MANIFEST.in
+README.md
+setup.py
+SimplePy2Exe.egg-info/PKG-INFO
+SimplePy2Exe.egg-info/SOURCES.txt
+SimplePy2Exe.egg-info/dependency_links.txt
+SimplePy2Exe.egg-info/requires.txt
+SimplePy2Exe.egg-info/top_level.txt
+py2exe/__init__.py
+py2exe/py2exe.py
