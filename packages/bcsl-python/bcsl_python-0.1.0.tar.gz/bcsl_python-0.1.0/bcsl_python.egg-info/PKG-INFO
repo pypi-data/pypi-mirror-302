@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: bcsl-python
+Version: 0.1.0
+Summary: Bootstrap-based Causal Structure Learning
+Home-page: https://github.com/albertbuchard/bcsl_python
+Author: Guo, Xianjie
+Author-email: albert.buchard@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE.md
+
+# BCSL Python
+
+Python port of the Bootstrap-based Causal Structure Learning Algorithm.
+
+## Reference
+G. Xiang, H. Wang, K. Yu, X. Guo, F. Cao and Y. Song, "Bootstrap-Based Layerwise Refining for Causal Structure Learning," in IEEE Transactions on Artificial Intelligence, vol. 5, no. 6, pp. 2708-2722, June 2024, doi: 10.1109/TAI.2023.3329786.
