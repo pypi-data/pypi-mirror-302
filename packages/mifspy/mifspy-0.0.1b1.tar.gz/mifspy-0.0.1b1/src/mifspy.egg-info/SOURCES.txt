@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+Makefile
+README.rst
+pyproject.toml
+src/examples.py
+src/mifs/__init__.py
+src/mifs/mi.py
+src/mifs/mifs.py
+src/mifs/setup.py
+src/mifs/version.py
+src/mifspy.egg-info/PKG-INFO
+src/mifspy.egg-info/SOURCES.txt
+src/mifspy.egg-info/dependency_links.txt
+src/mifspy.egg-info/requires.txt
+src/mifspy.egg-info/top_level.txt
