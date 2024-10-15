@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+SciPipe/__init__.py
+SciPipe/data_processing.py
+SciPipe.egg-info/PKG-INFO
+SciPipe.egg-info/SOURCES.txt
+SciPipe.egg-info/dependency_links.txt
+SciPipe.egg-info/requires.txt
+SciPipe.egg-info/top_level.txt
