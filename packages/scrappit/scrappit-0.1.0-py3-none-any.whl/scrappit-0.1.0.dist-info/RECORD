@@ -1,0 +1,8 @@
+scrappit/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+scrappit/api.py,sha256=tTsxTgDEkvAazW03MM3bFSN0b0YhyCz6nke6rZiWnlY,5708
+scrappit/dispatcher.py,sha256=p26WoCzTcC23ZmRR4yMhV74J1GPKZY5RsH_r0GBkdKI,2449
+scrappit/scheduler.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+scrappit-0.1.0.dist-info/METADATA,sha256=EWGMCnVqT21wKVWWl_IqgyM3zYwXwwwocHmF1puNuD0,737
+scrappit-0.1.0.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+scrappit-0.1.0.dist-info/licenses/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+scrappit-0.1.0.dist-info/RECORD,,
