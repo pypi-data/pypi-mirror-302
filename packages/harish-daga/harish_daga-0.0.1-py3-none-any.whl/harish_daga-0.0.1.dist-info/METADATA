@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: harish_daga
+Version: 0.0.1
+Summary: A simple module for testing
+Author: Harish Daga
+Author-email: theharishdaga@gmail.com
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3
+
