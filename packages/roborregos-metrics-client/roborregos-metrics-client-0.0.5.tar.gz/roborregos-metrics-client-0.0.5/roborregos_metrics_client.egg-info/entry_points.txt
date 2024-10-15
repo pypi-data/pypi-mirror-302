@@ -1,0 +1,4 @@
+[console_scripts]
+roborregos-metrics-sync = src.worker.worker:sync
+roborregos-metrics-worker = src.worker.worker:main
+
