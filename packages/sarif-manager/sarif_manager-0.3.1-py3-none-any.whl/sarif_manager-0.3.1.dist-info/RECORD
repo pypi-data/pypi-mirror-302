@@ -1,0 +1,17 @@
+sarif_manager/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sarif_manager/version.py,sha256=r4xAFihOf72W9TD-lpMi6ntWSTKTP2SlzKP1ytkjRbI,22
+sarif_manager/bin/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sarif_manager/bin/cli.py,sha256=LdDJePL9hX6ESwDQtdqcbHuL9qWB2zQrIGNMVRLGgis,550
+sarif_manager/bin/logger.py,sha256=ibXFceYEYV5fOtqluoRkZrej25PB7MsvAbK9Rgfesjs,2168
+sarif_manager/command/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sarif_manager/command/azure.py,sha256=t2tTZZLr1UogfGv_3tkUxkor-3-agCJAxliPdf5OVNk,1872
+sarif_manager/sarif/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sarif_manager/sarif/azure_sarif.py,sha256=5lwqYVEF76mE6e63GYcAEaB6pk5VfukJd4LTS0dp7i0,4123
+sarif_manager/sarif/azure_sarif_finding.py,sha256=MvbYzrBPMCN8397Rj6huFGhRK1M_JLW0kA2PYWOxboI,1763
+sarif_manager/sarif/azure_sarif_utils.py,sha256=PaTUJ9e5-UP4D2EvkhH0tRXYF_DYyGwPKb0tTnXjS0g,1973
+sarif_manager-0.3.1.dist-info/METADATA,sha256=uOFtVWriAWSYU1ggictSxQM-Pq88bQ-QXd4aqzEU1tc,1250
+sarif_manager-0.3.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+sarif_manager-0.3.1.dist-info/entry_points.txt,sha256=U2LBICPgsX1dCLshp2aOe43QFD4UhtvbTttXEMCvt6c,61
+sarif_manager-0.3.1.dist-info/top_level.txt,sha256=wNJ3Ga8EG8LPtTAOThoJCpdHcfxI1nSb8QluczMz460,14
+sarif_manager-0.3.1.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+sarif_manager-0.3.1.dist-info/RECORD,,
