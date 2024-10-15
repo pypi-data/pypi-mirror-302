@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+src/metadata_inspector/__init__.py
+src/metadata_inspector/_slk.py
+src/metadata_inspector/_version.py
+src/metadata_inspector.egg-info/PKG-INFO
+src/metadata_inspector.egg-info/SOURCES.txt
+src/metadata_inspector.egg-info/dependency_links.txt
+src/metadata_inspector.egg-info/entry_points.txt
+src/metadata_inspector.egg-info/requires.txt
+src/metadata_inspector.egg-info/top_level.txt
