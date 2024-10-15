@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: ovos-skill-confucius-quotes
+Version: 0.1.1a1
+Summary: basic info and quotes from confucius
+Home-page: https://github.com/OVOSHatchery/ovos-skill-confucius-quotes
+Author: OpenVoiceOS
+Author-email: jarbasai@mailfence.com
+License: Apache2.0
+Keywords: ovos skill plugin
+Platform: UNKNOWN
+Requires-Dist: ovos-workshop<2.0.0,>=0.0.15
+
+UNKNOWN
+
+
