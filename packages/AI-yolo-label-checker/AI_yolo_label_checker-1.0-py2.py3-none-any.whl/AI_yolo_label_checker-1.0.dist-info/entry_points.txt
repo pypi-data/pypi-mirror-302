@@ -1,0 +1,2 @@
+[console_scripts]
+AI_yolo_label_checker = AI_yolo_label_checker:runApp
