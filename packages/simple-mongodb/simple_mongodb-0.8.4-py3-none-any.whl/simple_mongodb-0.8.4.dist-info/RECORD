@@ -1,0 +1,11 @@
+simple_mongodb/__init__.py,sha256=JTKi11DhdzmBQbR2fiZJBdGEG8IS3-l5umttajrO3kI,204
+simple_mongodb/base_collection.py,sha256=z97nd7emXC4r3pUi7oKUS1yCFPEGF3M7HvbZ821pEoA,14754
+simple_mongodb/exceptions.py,sha256=d3vfmvah9PreauWJ96Vg7OAqidD2CrEUELqFDzHcIZ0,1920
+simple_mongodb/index.py,sha256=ZuxGr4mfoCyM_tkBrJB3rWsQLnVbPsABUDU2F9x3h7o,5051
+simple_mongodb/mongodb_client.py,sha256=w3cvJiylF-UKI_lGtgRII7R-_9Y7zQwtwf1IdkAdVrM,12445
+simple_mongodb/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+simple_mongodb-0.8.4.dist-info/LICENSE,sha256=fxz1qNP9zdPSu_-q5_aFn4mfOPytgsHxuLoRpgkf2n0,1072
+simple_mongodb-0.8.4.dist-info/METADATA,sha256=lM7sBPjFrLHUeO-PYuF8WVOFhrrGefiohDVXAr6nRH8,6622
+simple_mongodb-0.8.4.dist-info/WHEEL,sha256=GV9aMThwP_4oNCtvEC2ec3qUYutgWeAzklro_0m4WJQ,91
+simple_mongodb-0.8.4.dist-info/top_level.txt,sha256=Yw5tZJEG1jahFZFsDOzNiASakdEjKKHw0zPmbp6i5P8,15
+simple_mongodb-0.8.4.dist-info/RECORD,,
