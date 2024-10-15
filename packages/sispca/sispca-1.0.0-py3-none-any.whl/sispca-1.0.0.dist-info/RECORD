@@ -1,0 +1,11 @@
+docs/source/conf.py,sha256=-fnyk6wufdWX62Wr-qbIi64ivM1HZyV9uUvWzjGAtQA,959
+sispca/__init__.py,sha256=nvk586FmU7QC2JZrgqXR7EPtGzYYsUnwYGpQVdHHPj8,94
+sispca/data.py,sha256=BNUtZju3g8m789HBYnU7AkshXLB3nwCufRbo6x06Rg4,3858
+sispca/hcv_vi.py,sha256=09cMKv5v-3eC_bUNdN4SLOQEeKa57Zu_JtmD7PrurvE,19615
+sispca/model.py,sha256=llamE9UftBMZzzToPLHGPsw69iaXb3r1bqf_9NqTVIA,24811
+sispca/utils.py,sha256=Js5gpMUOt5WvVoYp9vznPdqwK0oPKQPbVIInu7BHVUw,3630
+sispca-1.0.0.dist-info/LICENSE,sha256=KV1BJ1OYScBm6klG97yPg0YjNm3yKs9M27rK1m6GNPE,1068
+sispca-1.0.0.dist-info/METADATA,sha256=VdOznjn0Zr40o4adRramOvs2YKABcLqjwqtPkqj3npo,3987
+sispca-1.0.0.dist-info/WHEEL,sha256=GV9aMThwP_4oNCtvEC2ec3qUYutgWeAzklro_0m4WJQ,91
+sispca-1.0.0.dist-info/top_level.txt,sha256=7Cjif6DuVqBV-lvsw1ZSYwytSuzFJcndcbZq1MiafWw,12
+sispca-1.0.0.dist-info/RECORD,,
