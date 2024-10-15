@@ -1,0 +1,81 @@
+Metadata-Version: 2.1
+Name: sandypackages
+Version: 1.1
+Summary: Data_Analyst_PKG
+Author: vishwanath
+Author-email: vishwa64@outlook.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+def mod(a, b):
+    """
+    Returns the modulus (remainder) of the division of `a` by `b`.
+
+    Parameters:
+    a (int, float): The dividend.
+    b (int, float): The divisor.
+
+    Returns:
+    int, float: The remainder when `a` is divided by `b`.
+
+    Example:
+    >>> mod(10, 3)
+    1
+    """
+    return a % b
+
+def floor(a, b):
+    """
+    Returns the floor division (integer division result) of `a` by `b`.
+
+    Parameters:
+    a (int, float): The dividend.
+    b (int, float): The divisor.
+
+    Returns:
+    int, float: The largest integer less than or equal to the division of `a` by `b`.
+
+    Example:
+    >>> floor(10, 3)
+    3
+    """
+    return a // b
+
+def exp(a, b):
+    """
+    Returns the result of raising `a` to the power of `b`.
+
+    Parameters:
+    a (int, float): The base number.
+    b (int, float): The exponent to raise `a` to.
+
+    Returns:
+    int, float: The result of `a` raised to the power of `b`.
+
+    Example:
+    >>> exp(2, 3)
+    8
+    """
+    return a ** b
+
+def mul(a, b):
+    """
+    Returns the result of multiplying `a` by `b`.
+
+    Parameters:
+    a (int, float): The first number.
+    b (int, float): The second number.
+
+    Returns:
+    int, float: The product of `a` and `b`.
+
+    Example:
+    >>> mul(3, 4)
+    12
+    """
+    return a * b
