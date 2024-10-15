@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+src/ferpy.egg-info/PKG-INFO
+src/ferpy.egg-info/SOURCES.txt
+src/ferpy.egg-info/dependency_links.txt
+src/ferpy.egg-info/top_level.txt
