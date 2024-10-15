@@ -1,0 +1,8 @@
+README.md
+setup.py
+tests/test.py
+tgdeal.egg-info/PKG-INFO
+tgdeal.egg-info/SOURCES.txt
+tgdeal.egg-info/dependency_links.txt
+tgdeal.egg-info/requires.txt
+tgdeal.egg-info/top_level.txt
