@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: online-store
+Version: 0.1.1
+Summary: An online store management package
+Author-email: Savva Serebriakov <savva@example.com>
+License: MIT
+Project-URL: Bug Tracker, https://github.com/savvaserebriakov/online-store/issues
+Project-URL: Documentation, https://example.com/online-store/docs
+Project-URL: Source Code, https://github.com/savvaserebriakov/online-store
+Keywords: online,store,ecommerce,management
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+Модуль для управления учётными записями клиентов, в котором можно:
+
+- добавлять новых клиентов,
+- обновлять информацию о них,
+- удалять клиентов и
+- находить их по идентификатору.
+
+
+Запусти проект из командной строки с помощью команды python3 -m online_store и проверь его работу

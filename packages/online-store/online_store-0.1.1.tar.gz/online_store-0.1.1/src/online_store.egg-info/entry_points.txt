@@ -1,0 +1,2 @@
+[console_scripts]
+online_store = online_store.__main__:main

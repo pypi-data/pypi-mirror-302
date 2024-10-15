@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "online-store"
+version = "0.1.1"
+description = "An online store management package"
+authors = [
+    {name = "Savva Serebriakov", email = "savva@example.com"}
+]
+license = {text = "MIT"}
+readme = "README.md"
+keywords = ["online", "store", "ecommerce", "management"]
+requires-python = ">=3.8"
+
+[project.scripts]
+online_store = "online_store.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[project.urls]
+"Bug Tracker" = "https://github.com/savvaserebriakov/online-store/issues"
+"Documentation" = "https://example.com/online-store/docs"
+"Source Code" = "https://github.com/savvaserebriakov/online-store"
