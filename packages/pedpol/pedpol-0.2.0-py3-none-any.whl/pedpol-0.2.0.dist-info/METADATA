@@ -1,0 +1,22 @@
+Metadata-Version: 2.3
+Name: pedpol
+Version: 0.2.0
+Summary: For wrangling animal pedigrees
+License-File: LICENSE
+Requires-Python: >=3.10
+Requires-Dist: polars>=0.20.31
+Description-Content-Type: text/markdown
+
+# PedPol
+
+PedPol is a python package for wrangling animal pedigrees
+ * Handles large pedigrees (tested for pedigrees with more than 30 million records)
+ * Flexible naming/type conventions for individual & parent Ids
+ * Pedigree can contain any other columns as desired
+ * Comprehensive testing of pedigree validity
+ * Tools to create valid pedigrees (null parents without their own record)
+ * Filtering based on relationships (parents, progeny, ancestors, descendants)
+ * Classify records by generations without birth date/year
+ * Recoding of pedigree Ids
+ * Uses Polars DataFrames to read, write, store and manipulate pedigrees
+ 
