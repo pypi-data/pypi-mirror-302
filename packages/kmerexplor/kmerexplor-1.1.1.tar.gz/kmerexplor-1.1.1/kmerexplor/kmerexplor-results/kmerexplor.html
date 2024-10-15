@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="lib/styles.css"/>
+  <title></title>
+</head>
+<body>
+
+<div id="Sidenav" class="sidenav" style="width:250px">
+  <a href="#" onclick="home()"><h1>KmerExploR</h1></a>
+  <div id=sidenav_items>    <div class="meta-category">Basic features</div>
+    <a href="#" onclick="chartjs(_Histones)">Poly A / Ribo D</a>
+    <a href="#" onclick="chartjs(_Orientation)">Orientation</a>
+    <a href="#" onclick="chartjs(_Gender)">Y chromosome</a>
+    <a href="#" onclick="chartjs(_Read_biases)">Read position biases</a>
+    <div class="meta-category">Contamination</div>
+    <a href="#" onclick="chartjs(_HeLa_HPV18)">HeLa</a>
+    <a href="#" onclick="chartjs(_Mycoplasma)">Mycoplasma</a>
+    <a href="#" onclick="chartjs(_Virus_genome)">Virus</a>
+    <a href="#" onclick="chartjs(_Specie)">Species</a>
+  </div>
+</div>
+
+<div id="main">
+  <div id="header">
+    <a href="#" id="hide-icon" onclick="hideElement()">&#9664</a>
+    <h1></h1>
+  </div>
+  <div id=content>
+    <div id=home_content></div>
+    <div id=chart_content></div>
+    <div id=desc_content></div>
+  </div>
+</div>
+
+<script type="text/javascript" src="lib/echarts.common.min.js"></script>
+<script type="text/javascript" src="lib/scripts.js"></script>
+<script> window.onload = home()</script>
+</body>
+</html>
