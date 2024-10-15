@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: mysql-connector-package
+Version: 0.1.0
+Summary: A simple MySQL connector using pymysql
+Home-page: https://github.com/Harishdaga/mysql-connector-package
+Author: Harish Daga
+Author-email: theharishdaga@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: pymysql
+Requires-Dist: json
+
+# MySQL Connector Package
+
+A simple Python package that connects to a MySQL database using pymysql.
+
+## Usage
+
+```python
+from my_connector.get_connection import GetConnection
+
+# Method 1: Direct credentials
+conn = GetConnection(host='localhost', user='root', password='password').get_mysql_conn()
+
+# Method 2: Load credentials from JSON file
+conn = GetConnection.get_connection_file('test.json').get_mysql_conn()
