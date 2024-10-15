@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: llm-predictive-router
+Version: 0.1
+Summary: A package to route chat requests between LLMs based on prompt classification
+Author: Csaba Kecskemeti - devquasar.com
+Requires-Python: >=3.7
+Requires-Dist: openai
+Requires-Dist: datasets
+Requires-Dist: transformers
+
