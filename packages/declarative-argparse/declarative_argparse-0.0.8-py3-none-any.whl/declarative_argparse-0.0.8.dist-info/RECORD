@@ -1,0 +1,13 @@
+declarative_argparse/__init__.py,sha256=UbvAhbG5hTCCkmUaFEGIcLJR_PBiLEmXpuyN0vwMrLM,6129
+declarative_argparse/options/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+declarative_argparse/options/abc.py,sha256=5G0XxWGg-oLx5y0OQTg6aFNnhoNFnSZLvqbvUw8JUo8,4385
+declarative_argparse/options/bool.py,sha256=enuBrgFeFxE4AT2BVIixT0J8MueNTaRI4T6dl0tk90U,662
+declarative_argparse/options/float.py,sha256=zg7av_TKVpYkHDCijTIPMR7MiP_3Yaw0vgW_JpECJbU,670
+declarative_argparse/options/int.py,sha256=U1-QARUi2XPXwEASaOCHc2CM5OpRfz11aT2BdFKHFew,654
+declarative_argparse/options/path.py,sha256=nTYPGjzECfTv_sKSw1KU0E10onG4AUpcYXdJNwmLtVM,2126
+declarative_argparse/options/stores.py,sha256=znQUffMH9kNbChKISg1Uv96dH1dxSaWkXOSbbi5u2aE,1020
+declarative_argparse/options/str.py,sha256=FXHgqdcgEw8xvemlfvRH_05VeI4FW063uzM3mq86fcE,654
+declarative_argparse-0.0.8.dist-info/LICENSE,sha256=4wA-0u6_Rq2ZAvvzE-8z3_j2b3dllKr8Bc2yQ4X866A,1072
+declarative_argparse-0.0.8.dist-info/METADATA,sha256=GQKePyi8UhGJa8w94SceEH0vKH6gmPEEB8sAliAjqqQ,1716
+declarative_argparse-0.0.8.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+declarative_argparse-0.0.8.dist-info/RECORD,,
