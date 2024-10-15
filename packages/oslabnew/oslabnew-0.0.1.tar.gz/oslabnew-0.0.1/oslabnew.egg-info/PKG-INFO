@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: oslabnew
+Version: 0.0.1
+Summary: A Python library with various useful OS code snippets.
+Home-page: https://github.com/mdimado/oslabnew
+Author: mdimado
+Author-email: mdimad005@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# cnslab
+
+`oslabnew` is a Python library for os lab.
+
+## Installation
+
+You can install `oslabnew` via pip:
+
+
+
+
+This README provides a brief overview of the library, installation instructions, usage examples, and information about the license.

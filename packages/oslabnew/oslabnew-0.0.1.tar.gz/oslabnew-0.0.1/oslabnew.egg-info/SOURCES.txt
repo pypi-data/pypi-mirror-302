@@ -1,0 +1,8 @@
+README.md
+setup.py
+oslabnew/__init__.py
+oslabnew/programs.py
+oslabnew.egg-info/PKG-INFO
+oslabnew.egg-info/SOURCES.txt
+oslabnew.egg-info/dependency_links.txt
+oslabnew.egg-info/top_level.txt
