@@ -1,0 +1,42 @@
+[project]
+version = '0.1.0a'
+name = "Exia-Zzx"
+
+dependencies = [
+    "lockon_toolkit>=1.0.4",
+    "influxdb-client>=1.46.0",
+    "xlrd",
+    "openpyxl"
+]
+requires-python = ">=3.7"
+
+authors = [
+  { name = "LockonZ", email = "lockon_zhang@foxmail.com" },
+]
+
+maintainers = [
+  { name = "LockonZ", email = "lockon_zhang@foxmail.com" },
+]
+
+description = "used for Influx Connections"
+
+readme = "README.md"
+
+classifiers = [
+          # How mature is this project? Common values are
+      #   3 - Alpha
+      #   4 - Beta
+      #   5 - Production/Stable
+    "Development Status :: 4 - Beta",
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+documentation = "https://dev.lockon-zhang.xyz/docs/LockonTool/docs"
+Changelog = "https://dev.lockon-zhang.xyz/docs/LockonTool/change_log"
+
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"

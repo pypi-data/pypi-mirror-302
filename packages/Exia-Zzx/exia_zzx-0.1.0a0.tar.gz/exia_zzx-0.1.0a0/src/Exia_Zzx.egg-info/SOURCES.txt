@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+pyproject.toml
+src/Exia/Cerebro.py
+src/Exia/__init__.py
+src/Exia/_tricks.py
+src/Exia/_version_params.py
+src/Exia/influx_conn.py
+src/Exia/api/__init__.py
+src/Exia/api/data_api.py
+src/Exia_Zzx.egg-info/PKG-INFO
+src/Exia_Zzx.egg-info/SOURCES.txt
+src/Exia_Zzx.egg-info/dependency_links.txt
+src/Exia_Zzx.egg-info/requires.txt
+src/Exia_Zzx.egg-info/top_level.txt

@@ -1,0 +1,4 @@
+lockon_toolkit>=1.0.4
+influxdb-client>=1.46.0
+xlrd
+openpyxl
