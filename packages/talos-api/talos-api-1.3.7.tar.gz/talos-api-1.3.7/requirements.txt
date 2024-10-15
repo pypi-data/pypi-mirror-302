@@ -1,0 +1,14 @@
+# The order of packages is significant, because pip processes them in the order
+# of appearance. Changing the order has an impact on the overall integration
+# process, which may cause wedges in the gate later.
+
+falcon==2.0.0
+six>=1.9.0
+# 1.4.0版本对循环relationship的dynamic relationship load处理有问题，退回1.3.x使用
+SQLAlchemy>=1.1.0,<1.4.0
+ipaddress; python_version<'3.3'
+mako
+requests
+limits
+celery<5.0.0
+dogpile.cache
