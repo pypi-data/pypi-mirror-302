@@ -1,0 +1,58 @@
+[build-system]
+# Specify the build system and dependencies required for building the project
+requires = ["hatchling", "versioningit"]
+build-backend = "hatchling.build"
+
+[project]
+# Define the project metadata
+name = "connectorctl"
+description = "Kafka Connector Management tool"
+authors = [{name = "GirishCodeAlchemy", email = "girishcodealchemy@gmail.com"}]
+requires-python = ">=3.8"
+readme = "README.md"
+license = {text = "MIT License"}
+include = ["pyproject.toml", "README.md", "LICENSE"]
+classifiers = [
+  "Intended Audience :: Developers",
+  "Topic :: Software Development :: Build Tools",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+]
+
+# List the project dependencies
+dependencies = [
+    "python-dotenv>=1.0.1",
+    "tabulate==0.9.0",
+    "requests==2.32.3",
+]
+
+# Specify dynamic versioning
+dynamic = ["version"]
+
+[project.optional-dependencies]
+# Define optional dependencies for the project
+docs = [
+]
+
+[tool.hatch.version]
+# Specify the versioning source tool
+source = "versioningit"
+
+[tool.versioningit.next-version]
+# Define the versioning method
+method = "smallest"
+
+
+[tool.versioningit.format]
+# Define the format for the versioningit tool
+distance = "{next_version}.dev{distance}"
+dirty = "{next_version}.dev{distance}"
+distance-dirty = "{next_version}.dev{distance}"
+
+[tool.hatch.metadata]
+# Specify dynamic metadata fields for Hatch
+dynamic = ["version"]
+
+[project.scripts]
+# Define the entry point for the CLI
+connectorctl = "connectorctl.cli:main"
