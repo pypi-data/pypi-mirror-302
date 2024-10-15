@@ -1,0 +1,3 @@
+[console_scripts]
+money-zip = nomina.money_zip:main
+nomina = nomina.nomina_cmd:main
