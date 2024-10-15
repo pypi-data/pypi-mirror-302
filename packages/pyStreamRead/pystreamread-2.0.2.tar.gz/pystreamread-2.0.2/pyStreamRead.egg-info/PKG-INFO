@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: pyStreamRead
+Version: 2.0.2
+Summary: video stream reading
+Author: rui.li
+Author-email: jiangsulirui@gmail.com
+License: MIT Licence
+Keywords: rtsp,rtmp,video,stream,python,video_stream
+Platform: any
+Requires-Dist: ffmpeg-python==0.2.0
+Requires-Dist: future==1.0.0
+Requires-Dist: numpy==1.24.4
+Requires-Dist: opencv-python==4.10.0.82
+
+video stream reading for rtsp or rtmp, not use opencv video capture but use ffmpeg

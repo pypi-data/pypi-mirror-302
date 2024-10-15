@@ -1,0 +1,11 @@
+setup.py
+pyStreamRead.egg-info/PKG-INFO
+pyStreamRead.egg-info/SOURCES.txt
+pyStreamRead.egg-info/dependency_links.txt
+pyStreamRead.egg-info/requires.txt
+pyStreamRead.egg-info/top_level.txt
+tests/test.py
+tests/test2.py
+video_stream/__init__.py
+video_stream/log.py
+video_stream/stream.py
