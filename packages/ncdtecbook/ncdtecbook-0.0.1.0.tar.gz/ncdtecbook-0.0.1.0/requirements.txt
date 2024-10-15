@@ -1,0 +1,10 @@
+jupyter-book
+matplotlib
+numpy
+ghp-import
+ipywidgets
+
+# packaging
+build
+twine
+hatchling
