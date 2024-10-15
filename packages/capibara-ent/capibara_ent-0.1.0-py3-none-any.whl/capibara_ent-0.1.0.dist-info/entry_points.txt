@@ -1,0 +1,3 @@
+[console_scripts]
+capibara-interact = capibara_model.scripts.interactive_session:main
+capibara-train = capibara_model.scripts.run_training:main
