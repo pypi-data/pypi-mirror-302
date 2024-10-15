@@ -1,0 +1,2 @@
+[console_scripts]
+loadtesting = loadtesting.main:main
