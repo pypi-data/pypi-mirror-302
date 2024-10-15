@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: roborregos-metrics-server
+Version: 0.0.1
+Summary: UNKNOWN
+Home-page: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: fastapi
+Requires-Dist: pydantic
+Requires-Dist: requests
+Requires-Dist: uvicorn
+
+UNKNOWN
+
