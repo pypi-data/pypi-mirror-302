@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: dagent_llm
+Version: 0.0.1
+Summary: A package for LLM operations.
+Author: Zhao Sheng
+Author-email: zhaosheng@nuaa.edu.cn
+License-File: LICENSE
+Requires-Dist: dsqlenv
+Requires-Dist: langchain-core
+Requires-Dist: langchain-openai
+
