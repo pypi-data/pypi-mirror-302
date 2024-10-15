@@ -1,0 +1,15 @@
+jellyplex/__init__.py,sha256=ff259-xGIaWr5sM2fQsrlbf_VIOr0iVCm1_uCGVsn1c,26
+jellyplex/cli.py,sha256=KAve-CjrVSKAHjH_jbANLzCSHrLZ6zbdomWCImAvq94,1340
+jellyplex/config.py,sha256=-SAcW8q-k0WWMQ_o8EswL4XkQoSyP4g3NnzC0j7lBPM,1740
+jellyplex/logging.py,sha256=tVA9vVjOwhYZQclqHnAx5G3Vxty3OvtkxTXVotX0XS4,873
+jellyplex/models.py,sha256=Y22CrveUrh7xtoB8_VECVMHA-2rI--9EwGzArg5-gMQ,176
+jellyplex/session.py,sha256=EPR2FYsmH3rXCJSKV7iAtCDsrpfDRj7BP-_BXrlbTZc,853
+jellyplex/tools/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+jellyplex/tools/sync_posters.py,sha256=cNOEW8YI_UEDvWLQYk8jE9XmrGoBg0yu22c39nsEwSY,330
+jellyplex/types.py,sha256=hbn5TnaF9V_N2rzZsjfbQBu_32aN2E8TjqifAg9NGRk,216
+jellyplex/utils.py,sha256=HhoVJ7bPZZm1HCrP2aADwzEKYWwxlgeSUhCTdl7W3c8,121
+jellyplex-0.1.0a0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+jellyplex-0.1.0a0.dist-info/METADATA,sha256=uud7fvgIPehk9FehQzSvQGX6-IXWIa-CsbP8Ild3J48,3154
+jellyplex-0.1.0a0.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+jellyplex-0.1.0a0.dist-info/entry_points.txt,sha256=tCWUHeph4ljx25eorq40TiFrNxKXc_sywbCkuD1Lr0U,48
+jellyplex-0.1.0a0.dist-info/RECORD,,
