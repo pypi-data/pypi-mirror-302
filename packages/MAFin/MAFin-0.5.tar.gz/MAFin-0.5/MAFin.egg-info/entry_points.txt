@@ -1,0 +1,3 @@
+[console_scripts]
+MAFin = mafin.mafin:main
+
