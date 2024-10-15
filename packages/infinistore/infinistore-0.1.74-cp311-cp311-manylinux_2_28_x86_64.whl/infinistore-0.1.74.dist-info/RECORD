@@ -1,0 +1,13 @@
+infinistore/test_infinistore.py,sha256=eINTxJw7Asy7uf-II5vhiqACcUSoxazvQPtO6lylKIc,3709
+infinistore/_infinistore.cpython-310-x86_64-linux-gnu.so,sha256=xn-f2dwMNVXzn6HWCG4kp6inRbblBiNtciqZRVbICtY,33349969
+infinistore/__init__.py,sha256=CqhdUw30y7Ni-6gQ0cxk_LEUD78_Y1Zi812sVFnuSq4,288
+infinistore/_infinistore.cpython-311-x86_64-linux-gnu.so,sha256=kK60EeuT1WGV5NswIFTnLUEL654gXjzj7GR4VPmIsTk,33419601
+infinistore/lib.py,sha256=oPsPqCgEBwVeYYWQv8yBTPeCTB1hdaQB90U5U_e2yuE,10415
+infinistore/server.py,sha256=8SvzyiHSN1nQ3Lwr30EmkMnEuc9QK3txVsMtYDMHZms,2544
+infinistore-0.1.74.dist-info/entry_points.txt,sha256=izYAAn4_ZhjO8FzEBQlbQfqyCp747kqBQYKG7odBBZ0,56
+infinistore-0.1.74.dist-info/RECORD,,
+infinistore-0.1.74.dist-info/METADATA,sha256=mdgUmn_CL4DZKifyzrtHUIEiKt-TCEnFqE78G5iqyCU,1166
+infinistore-0.1.74.dist-info/top_level.txt,sha256=KpdfFfSfAf80vc2bq4AhEK7h8mIm3_ETdRcZAx-vZFA,12
+infinistore-0.1.74.dist-info/WHEEL,sha256=da47F2xkzJkkx2ePR6jDMXUaw3EJ8RiozHF-3rPa9qA,113
+infinistore.libs/libcudart-9335f6a2.so.12,sha256=5GZgo1RCkzBmb3fOzcXWvOxDQsCBwreIxqvumdG9s0o,695009
+infinistore.libs/libuv-671cb6af.so.1.0.0,sha256=b4RLpLgzRTfywZoBRWy6cC3VOhD9y75kH47Jf3iJ804,228945
