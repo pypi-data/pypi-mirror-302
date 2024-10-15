@@ -1,0 +1,10 @@
+README.md
+setup.py
+analyze_id_package/__init__.py
+analyze_id_package/id_analyzer.py
+analyze_id_package.egg-info/PKG-INFO
+analyze_id_package.egg-info/SOURCES.txt
+analyze_id_package.egg-info/dependency_links.txt
+analyze_id_package.egg-info/requires.txt
+analyze_id_package.egg-info/top_level.txt
+tests/test_id_analyzer.py
