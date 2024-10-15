@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+src/policy_validator/__init__.py
+src/policy_validator/core.py
+src/policy_validator/logging_setup.py
+src/policy_validator.egg-info/PKG-INFO
+src/policy_validator.egg-info/SOURCES.txt
+src/policy_validator.egg-info/dependency_links.txt
+src/policy_validator.egg-info/requires.txt
+src/policy_validator.egg-info/top_level.txt
