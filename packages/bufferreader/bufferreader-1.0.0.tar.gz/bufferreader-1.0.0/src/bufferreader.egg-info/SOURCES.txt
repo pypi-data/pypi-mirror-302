@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+version.txt
+src/__init__.py
+src/bufferreader.py
+src/bufferreader.egg-info/PKG-INFO
+src/bufferreader.egg-info/SOURCES.txt
+src/bufferreader.egg-info/dependency_links.txt
+src/bufferreader.egg-info/requires.txt
+src/bufferreader.egg-info/top_level.txt
+tests/test_buffer_reader.py
