@@ -1,0 +1,10 @@
+logwire/__init__.py,sha256=RCcmpCI-ONdxBHEb2Cm4mmH2I75142h8kgFKKyF7TUE,28
+logwire/handler.py,sha256=XGw5GenNWkqy0q_z6uFhOhF1CP-rh1z4g-HU0eOBpzI,1329
+logwire/client/__init__.py,sha256=NjsTkKbsO4B5V98TAqqsy4xyMPS7dz-EDN5PqOuL7Wg,630
+logwire/client/apps.py,sha256=cXPQ9CW_WOIp84sb-ZKcBOlVLizWPVBSPEdfTSJo70U,722
+logwire/client/logs.py,sha256=22wyTiepxO1Q_OeYszJ0vkEn3GsrsGNrOS31ihznp0k,333
+logwire/client/workspaces.py,sha256=KVD6of6QwWCE4O_i1XP0l3fbYPhX9Toax722shBRRNM,694
+logwire-0.1.0.dev1.dist-info/METADATA,sha256=fXXr-Lt0yHlqMtOybd3o0NkbkR1Hg6HxTZvFN9oibfw,505
+logwire-0.1.0.dev1.dist-info/WHEEL,sha256=GV9aMThwP_4oNCtvEC2ec3qUYutgWeAzklro_0m4WJQ,91
+logwire-0.1.0.dev1.dist-info/top_level.txt,sha256=KQYrYr2N90MWwjh25UAMBld9iT4edvJmxhIQ52O2fCQ,8
+logwire-0.1.0.dev1.dist-info/RECORD,,
