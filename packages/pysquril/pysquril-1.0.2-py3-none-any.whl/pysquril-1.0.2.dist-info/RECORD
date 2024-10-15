@@ -1,0 +1,12 @@
+pysquril/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pysquril/backends.py,sha256=t6we_17ThaBHz2foL169H8KWAgMngqR28s-2KQFLLXw,38721
+pysquril/exc.py,sha256=ehbLAod3F0icuyXJBjdCeqHi6rvjIxx4-dEjVHykHXU,412
+pysquril/generator.py,sha256=4J8ihJJqH26j1YiPIoNDMfRWbuFqr1vE9N-RyHI-tfE,25460
+pysquril/interactive.py,sha256=jIFfYjq-J_fyBq1UDTW7LxpxQYNIFy4ufbafpBc0EDs,2423
+pysquril/parser.py,sha256=cFo99hZZoX-4I8M7UDyqKewSt7wT34aSih57lKPZRBg,15251
+pysquril/test_data.py,sha256=A85KzrLVBSj763plQV3syfLTMyImA-8Y2H8K374z1W8,2629
+pysquril/tests.py,sha256=t7OFgZXQIQQEjGuiEtgrsEMGxABHWMBoik0HHr0pCj4,35858
+pysquril/utils.py,sha256=4c21_NHM8cWKzS3GnDSXI69VB2NXXGqvOs0R_z-XZ5w,406
+pysquril-1.0.2.dist-info/METADATA,sha256=6PGxtCI-mcF5dzuUkJA728zGKTaSd8HDS3sP1hyJ1dI,4050
+pysquril-1.0.2.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+pysquril-1.0.2.dist-info/RECORD,,
