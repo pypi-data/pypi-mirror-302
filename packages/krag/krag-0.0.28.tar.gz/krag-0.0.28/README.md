@@ -1,0 +1,133 @@
+# Krag
+
+Krag는 RAG 시스템(Retrieval-Augmented Generation)을 평가하기 위해 설계된 Python 패키지입니다. Hit Rate, Recall, Precision, MRR(Mean Reciprocal Rank), MAP(Mean Average Precision), NDCG(Normalized Discounted Cumulative Gain) 등 다양한 평가 지표를 계산하는 도구를 제공합니다.
+
+## 설치 방법
+
+pip를 사용하여 Krag를 설치할 수 있습니다:
+
+```bash
+pip install krag
+```
+
+## 사용 예시
+
+다음은 Krag 패키지에서 제공하는 `KragDocument` 및 `OfflineRetrievalEvaluators` 클래스를 사용하는 간단한 예제입니다.
+
+```python
+from krag.document import KragDocument as Document
+from krag.evaluators import OfflineRetrievalEvaluators, AveragingMethod, MatchingCriteria
+
+# 각 쿼리에 대한 정답 문서 
+actual_docs = [
+    [Document(page_content="이것은 실제 문서의 내용입니다. 중요한 정보를 포함하고 있습니다."), 
+     Document(page_content="두 번째 실제 문서입니다. 추가적인 세부 사항이 있습니다.")],
+    [Document(page_content="다른 주제에 관한 실제 문서입니다. 새로운 개념을 소개합니다."), 
+     Document(page_content="네 번째 실제 문서로, 이전 개념을 확장합니다.")]
+]
+
+predicted_docs = [
+    [Document(page_content="이것은 예측된 문서의 내용입니다. 중요한 정보를 다루고 있습니다."), 
+     Document(page_content="두 번째 예측 문서는 추가 세부 정보를 제공합니다."),
+     Document(page_content="세 번째 예측 문서는 관련이 없을 수 있습니다.")],
+    [Document(page_content="다른 주제에 대한 예측 문서입니다. 새로운 아이디어를 제시합니다."), 
+     Document(page_content="이 예측 문서는 이전 개념을 더 자세히 설명합니다."), 
+     Document(page_content="마지막 예측 문서는 요약을 제공합니다.")]
+]
+
+# 평가도구 초기화 
+evaluator = OfflineRetrievalEvaluators(
+    actual_docs, 
+    predicted_docs, 
+    match_method="text",
+    averaging_method=AveragingMethod.BOTH,
+    matching_criteria=MatchingCriteria.PARTIAL
+)
+
+# 평가지표 계산 (k=2 예시)
+hit_rate = evaluator.calculate_hit_rate(k=2)
+mrr = evaluator.calculate_mrr(k=2)
+recall = evaluator.calculate_recall(k=2)
+precision = evaluator.calculate_precision(k=2)
+f1_score = evaluator.calculate_f1_score(k=2)
+map_score = evaluator.calculate_map(k=2)
+ndcg = evaluator.calculate_ndcg(k=2)
+
+# 결과 출력
+print(f"Hit Rate @2: {hit_rate}")
+print(f"MRR @2: {mrr}")
+print(f"Recall @2: {recall}")
+print(f"Precision @2: {precision}")
+print(f"F1 Score @2: {f1_score}")
+print(f"MAP @2: {map_score}")
+print(f"NDCG @2: {ndcg}")
+
+# 결과 시각화
+evaluator.visualize_results(k=2)
+```
+
+### 주요 기능
+
+1. **문서 매칭**:
+   - 평가자는 실제 문서와 예측된 문서를 매칭하기 위한 여러 가지 방법을 제공합니다. 여기에는 정확한 텍스트 매칭과 ROUGE 기반 매칭(`rouge1`, `rouge2`, `rougeL`)이 포함됩니다.
+
+2. **평가지표**:
+   - **Hit Rate (적중률)**: 예측된 문서 집합에서 실제 문서가 올바르게 식별된 비율을 측정합니다.
+   - **Recall**: 상위 k개의 예측에서 얼마나 많은 관련 문서가 포함되었는지를 평가합니다.
+   - **Precision**: 상위 k개의 예측의 정밀도를 평가합니다.
+   - **F1 Score**: Precision과 Recall의 조화 평균을 계산합니다.
+   - **MRR (Mean Reciprocal Rank, 평균 역순위)**: 첫 번째 관련 문서의 순위의 역수를 평균내어 계산합니다.  
+   - **MAP (Mean Average Precision)**: 상위 k위 안에 관련 문서가 등장하는 순위에서의 정밀도를 평균냅니다.    
+   - **NDCG (Normalized Discounted Cumulative Gain)**: 관련성 점수를 바탕으로 문서 순서를 고려하여 순위 품질을 평가합니다.
+
+3. **ROUGE 점수 매칭**:
+   - `RougeOfflineRetrievalEvaluators` 클래스는 기본 평가자 기능을 확장하여 ROUGE 점수(`rouge1`, `rouge2`, `rougeL`)를 사용한 매칭과 검색 품질 평가를 수행합니다.
+
+4. **결과 시각화**:
+   - `visualize_results` 메서드를 사용하여 평가 결과를 그래프로 시각화할 수 있습니다.
+
+#### ROUGE 매칭 사용 예제
+
+```python
+from krag.document import KragDocument as Document
+from krag.evaluators import RougeOfflineRetrievalEvaluators, AveragingMethod, MatchingCriteria
+
+# ROUGE 매칭을 사용한 평가도구 초기화 
+evaluator = RougeOfflineRetrievalEvaluators(
+    actual_docs, 
+    predicted_docs, 
+    match_method="rouge1",
+    averaging_method=AveragingMethod.BOTH,
+    matching_criteria=MatchingCriteria.PARTIAL,
+    threshold=0.5
+)
+
+# 평가지표 계산 (k=2 예시)
+hit_rate = evaluator.calculate_hit_rate(k=2)
+mrr = evaluator.calculate_mrr(k=2)
+recall = evaluator.calculate_recall(k=2)
+precision = evaluator.calculate_precision(k=2)
+f1_score = evaluator.calculate_f1_score(k=2)
+map_score = evaluator.calculate_map(k=2)
+ndcg = evaluator.calculate_ndcg(k=2)
+
+# 결과 출력
+print(f"ROUGE Hit Rate @2: {hit_rate}")
+print(f"ROUGE MRR @2: {mrr}")
+print(f"ROUGE Recall @2: {recall}")
+print(f"ROUGE Precision @2: {precision}")
+print(f"ROUGE F1 Score @2: {f1_score}")
+print(f"ROUGE MAP @2: {map_score}")
+print(f"ROUGE NDCG @2: {ndcg}")
+
+# 결과 시각화
+evaluator.visualize_results(k=2)
+```
+
+## 라이선스
+
+이 프로젝트는 MIT 라이선스 하에 있습니다 - 자세한 내용은 [MIT 라이선스](https://opensource.org/licenses/MIT)를 참조하세요.
+
+## 연락처
+
+질문이 있으시면 [이메일](mailto:ontofinances@gmail.com)로 연락 주시기 바랍니다.
