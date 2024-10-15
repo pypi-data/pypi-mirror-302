@@ -1,0 +1,566 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RhinoUI guid="d0647ba8-eee5-4c18-ab3e-03a95f119654" plug_in_guid="d0647ba8-eee5-4c18-ab3e-03a95f119654" major_ver="8" minor_ver="0" localize="False" default_language_id="1033">
+  <extend_rhino_menus />
+  <menus />
+  <tool_bar_groups>
+    <tool_bar_group guid="d0647ba8-eee5-4c18-ab3e-03a95f119654" dock_bar_guid32="d0647ba8-eee5-4c18-ab3e-03a95f119654" dock_bar_guid64="d0647ba8-eee5-4c18-ab3e-03a95f119654" active_tool_bar_group="d0647ba8-eee5-4c18-ab3e-03a95f119654" single_file="False" hide_single_tab="True">
+      <text><locale_1033>compas_wood</locale_1033></text>
+      <dock_bar_info visible="True"  floating="True" />
+      <tool_bar_group_item guid="d0647ba8-eee5-4c18-ab3e-03a95f119654" major_version="1" minor_version="1">
+        <text><locale_1033>compas_wood</locale_1033></text>
+        <tool_bar_id>d0647ba8-eee5-4c18-ab3e-03a95f119654</tool_bar_id>
+      </tool_bar_group_item>
+    </tool_bar_group>
+  </tool_bar_groups>
+  <tool_bars>
+    <tool_bar guid="d0647ba8-eee5-4c18-ab3e-03a95f119654" bitmap_id="d0647ba8-eee5-4c18-ab3e-03a95f119654" item_display_style="control_only">
+      <text><locale_1033>compas_wood</locale_1033></text>
+        <tool_bar_item guid="8fb84559-5aa0-4855-aaf0-f3de32459ba8"
+                       button_display_mode="control_only"
+                       button_style="normal">
+            <text><locale_1033>w_install</locale_1033></text>
+            <left_macro_id>8fb84559-5aa0-4855-aaf0-f3de32459ba8</left_macro_id>
+        </tool_bar_item>        <tool_bar_item guid="fdd596eb-3acd-49e8-a798-0a8a1a241af6"
+                       button_display_mode="control_only"
+                       button_style="normal">
+            <text><locale_1033>w_reset</locale_1033></text>
+            <left_macro_id>fdd596eb-3acd-49e8-a798-0a8a1a241af6</left_macro_id>
+        </tool_bar_item>        <tool_bar_item guid="d87fbab9-e8c6-4d29-babf-bac0f90991ff"
+                       button_display_mode="control_only"
+                       button_style="normal">
+            <text><locale_1033>w_dataset</locale_1033></text>
+            <left_macro_id>d87fbab9-e8c6-4d29-babf-bac0f90991ff</left_macro_id>
+        </tool_bar_item>        <tool_bar_item guid="7e7b21e6-987e-407e-8feb-209a97ae74a1"
+                       button_display_mode="control_only"
+                       button_style="normal">
+            <text><locale_1033>w_dataset_folded_plates</locale_1033></text>
+            <left_macro_id>7e7b21e6-987e-407e-8feb-209a97ae74a1</left_macro_id>
+        </tool_bar_item>        <tool_bar_item guid="96a8383f-a861-4e0b-8983-116601b8c75d"
+                       button_display_mode="control_only"
+                       button_style="normal">
+            <text><locale_1033>w_parameters</locale_1033></text>
+            <left_macro_id>96a8383f-a861-4e0b-8983-116601b8c75d</left_macro_id>
+        </tool_bar_item>        <tool_bar_item guid="c3fa9ccf-ee62-45b7-92e6-b30473390737"
+                       button_display_mode="control_only"
+                       button_style="normal">
+            <text><locale_1033>w_solver</locale_1033></text>
+            <left_macro_id>c3fa9ccf-ee62-45b7-92e6-b30473390737</left_macro_id>
+        </tool_bar_item>        <tool_bar_item guid="60c6091b-3dcb-410d-9006-b445ae46e291"
+                       button_display_mode="control_only"
+                       button_style="normal">
+            <text><locale_1033>w_dataset_closest_lines_insertion</locale_1033></text>
+            <left_macro_id>60c6091b-3dcb-410d-9006-b445ae46e291</left_macro_id>
+        </tool_bar_item>        <tool_bar_item guid="252f6e77-00b7-4e01-ad5b-707f1d972be5"
+                       button_display_mode="control_only"
+                       button_style="normal">
+            <text><locale_1033>w_dataset_closest_points_joints</locale_1033></text>
+            <left_macro_id>252f6e77-00b7-4e01-ad5b-707f1d972be5</left_macro_id>
+        </tool_bar_item>        <tool_bar_item guid="b12ba98d-f8a2-4dcd-942f-6a5f0e322887"
+                       button_display_mode="control_only"
+                       button_style="normal">
+            <text><locale_1033>w_loft_mesh</locale_1033></text>
+            <left_macro_id>b12ba98d-f8a2-4dcd-942f-6a5f0e322887</left_macro_id>
+        </tool_bar_item>        <tool_bar_item guid="e1ec40a4-76a2-4cdd-b559-834be929d323"
+                       button_display_mode="control_only"
+                       button_style="normal">
+            <text><locale_1033>w_loft_brep</locale_1033></text>
+            <left_macro_id>e1ec40a4-76a2-4cdd-b559-834be929d323</left_macro_id>
+        </tool_bar_item>        <tool_bar_item guid="b93f320a-df6f-4113-96f2-26001ea54fa0"
+                       button_display_mode="control_only"
+                       button_style="normal">
+            <text><locale_1033>w_dataset_annen</locale_1033></text>
+            <left_macro_id>b93f320a-df6f-4113-96f2-26001ea54fa0</left_macro_id>
+        </tool_bar_item>        <tool_bar_item guid="26025028-3700-4941-a959-a99d35679a68"
+                       button_display_mode="control_only"
+                       button_style="normal">
+            <text><locale_1033>w_dataset_cross_connectors</locale_1033></text>
+            <left_macro_id>26025028-3700-4941-a959-a99d35679a68</left_macro_id>
+        </tool_bar_item>        <tool_bar_item guid="e1582709-4c30-4546-b87a-1dd26c08f329"
+                       button_display_mode="control_only"
+                       button_style="normal">
+            <text><locale_1033>w_dataset_beam_volume</locale_1033></text>
+            <left_macro_id>e1582709-4c30-4546-b87a-1dd26c08f329</left_macro_id>
+        </tool_bar_item>
+    </tool_bar>
+  </tool_bars>
+  <macros>
+      <macro_item guid="8fb84559-5aa0-4855-aaf0-f3de32459ba8" bitmap_id="8fb84559-5aa0-4855-aaf0-f3de32459ba8">
+        <text><locale_1033>Macro.w_install</locale_1033></text>
+        <tooltip><locale_1033>w_install</locale_1033></tooltip>
+        <help_text><locale_1033>w_install</locale_1033></help_text>
+        <button_text><locale_1033>w_install</locale_1033></button_text>
+        <menu_text><locale_1033>w_install</locale_1033></menu_text>
+        <script>! _w_install</script>
+      </macro_item>      <macro_item guid="fdd596eb-3acd-49e8-a798-0a8a1a241af6" bitmap_id="fdd596eb-3acd-49e8-a798-0a8a1a241af6">
+        <text><locale_1033>Macro.w_reset</locale_1033></text>
+        <tooltip><locale_1033>w_reset</locale_1033></tooltip>
+        <help_text><locale_1033>w_reset</locale_1033></help_text>
+        <button_text><locale_1033>w_reset</locale_1033></button_text>
+        <menu_text><locale_1033>w_reset</locale_1033></menu_text>
+        <script>! _w_reset</script>
+      </macro_item>      <macro_item guid="d87fbab9-e8c6-4d29-babf-bac0f90991ff" bitmap_id="d87fbab9-e8c6-4d29-babf-bac0f90991ff">
+        <text><locale_1033>Macro.w_dataset</locale_1033></text>
+        <tooltip><locale_1033>w_dataset</locale_1033></tooltip>
+        <help_text><locale_1033>w_dataset</locale_1033></help_text>
+        <button_text><locale_1033>w_dataset</locale_1033></button_text>
+        <menu_text><locale_1033>w_dataset</locale_1033></menu_text>
+        <script>! _w_dataset</script>
+      </macro_item>      <macro_item guid="7e7b21e6-987e-407e-8feb-209a97ae74a1" bitmap_id="7e7b21e6-987e-407e-8feb-209a97ae74a1">
+        <text><locale_1033>Macro.w_dataset_folded_plates</locale_1033></text>
+        <tooltip><locale_1033>w_dataset_folded_plates</locale_1033></tooltip>
+        <help_text><locale_1033>w_dataset_folded_plates</locale_1033></help_text>
+        <button_text><locale_1033>w_dataset_folded_plates</locale_1033></button_text>
+        <menu_text><locale_1033>w_dataset_folded_plates</locale_1033></menu_text>
+        <script>! _w_dataset_folded_plates</script>
+      </macro_item>      <macro_item guid="96a8383f-a861-4e0b-8983-116601b8c75d" bitmap_id="96a8383f-a861-4e0b-8983-116601b8c75d">
+        <text><locale_1033>Macro.w_parameters</locale_1033></text>
+        <tooltip><locale_1033>w_parameters</locale_1033></tooltip>
+        <help_text><locale_1033>w_parameters</locale_1033></help_text>
+        <button_text><locale_1033>w_parameters</locale_1033></button_text>
+        <menu_text><locale_1033>w_parameters</locale_1033></menu_text>
+        <script>! _w_parameters</script>
+      </macro_item>      <macro_item guid="c3fa9ccf-ee62-45b7-92e6-b30473390737" bitmap_id="c3fa9ccf-ee62-45b7-92e6-b30473390737">
+        <text><locale_1033>Macro.w_solver</locale_1033></text>
+        <tooltip><locale_1033>w_solver</locale_1033></tooltip>
+        <help_text><locale_1033>w_solver</locale_1033></help_text>
+        <button_text><locale_1033>w_solver</locale_1033></button_text>
+        <menu_text><locale_1033>w_solver</locale_1033></menu_text>
+        <script>! _w_solver</script>
+      </macro_item>      <macro_item guid="60c6091b-3dcb-410d-9006-b445ae46e291" bitmap_id="60c6091b-3dcb-410d-9006-b445ae46e291">
+        <text><locale_1033>Macro.w_dataset_closest_lines_insertion</locale_1033></text>
+        <tooltip><locale_1033>w_dataset_closest_lines_insertion</locale_1033></tooltip>
+        <help_text><locale_1033>w_dataset_closest_lines_insertion</locale_1033></help_text>
+        <button_text><locale_1033>w_dataset_closest_lines_insertion</locale_1033></button_text>
+        <menu_text><locale_1033>w_dataset_closest_lines_insertion</locale_1033></menu_text>
+        <script>! _w_dataset_closest_lines_insertion</script>
+      </macro_item>      <macro_item guid="252f6e77-00b7-4e01-ad5b-707f1d972be5" bitmap_id="252f6e77-00b7-4e01-ad5b-707f1d972be5">
+        <text><locale_1033>Macro.w_dataset_closest_points_joints</locale_1033></text>
+        <tooltip><locale_1033>w_dataset_closest_points_joints</locale_1033></tooltip>
+        <help_text><locale_1033>w_dataset_closest_points_joints</locale_1033></help_text>
+        <button_text><locale_1033>w_dataset_closest_points_joints</locale_1033></button_text>
+        <menu_text><locale_1033>w_dataset_closest_points_joints</locale_1033></menu_text>
+        <script>! _w_dataset_closest_points_joints</script>
+      </macro_item>      <macro_item guid="b12ba98d-f8a2-4dcd-942f-6a5f0e322887" bitmap_id="b12ba98d-f8a2-4dcd-942f-6a5f0e322887">
+        <text><locale_1033>Macro.w_loft_mesh</locale_1033></text>
+        <tooltip><locale_1033>w_loft_mesh</locale_1033></tooltip>
+        <help_text><locale_1033>w_loft_mesh</locale_1033></help_text>
+        <button_text><locale_1033>w_loft_mesh</locale_1033></button_text>
+        <menu_text><locale_1033>w_loft_mesh</locale_1033></menu_text>
+        <script>! _w_loft_mesh</script>
+      </macro_item>      <macro_item guid="e1ec40a4-76a2-4cdd-b559-834be929d323" bitmap_id="e1ec40a4-76a2-4cdd-b559-834be929d323">
+        <text><locale_1033>Macro.w_loft_brep</locale_1033></text>
+        <tooltip><locale_1033>w_loft_brep</locale_1033></tooltip>
+        <help_text><locale_1033>w_loft_brep</locale_1033></help_text>
+        <button_text><locale_1033>w_loft_brep</locale_1033></button_text>
+        <menu_text><locale_1033>w_loft_brep</locale_1033></menu_text>
+        <script>! _w_loft_brep</script>
+      </macro_item>      <macro_item guid="b93f320a-df6f-4113-96f2-26001ea54fa0" bitmap_id="b93f320a-df6f-4113-96f2-26001ea54fa0">
+        <text><locale_1033>Macro.w_dataset_annen</locale_1033></text>
+        <tooltip><locale_1033>w_dataset_annen</locale_1033></tooltip>
+        <help_text><locale_1033>w_dataset_annen</locale_1033></help_text>
+        <button_text><locale_1033>w_dataset_annen</locale_1033></button_text>
+        <menu_text><locale_1033>w_dataset_annen</locale_1033></menu_text>
+        <script>! _w_dataset_annen</script>
+      </macro_item>      <macro_item guid="26025028-3700-4941-a959-a99d35679a68" bitmap_id="26025028-3700-4941-a959-a99d35679a68">
+        <text><locale_1033>Macro.w_dataset_cross_connectors</locale_1033></text>
+        <tooltip><locale_1033>w_dataset_cross_connectors</locale_1033></tooltip>
+        <help_text><locale_1033>w_dataset_cross_connectors</locale_1033></help_text>
+        <button_text><locale_1033>w_dataset_cross_connectors</locale_1033></button_text>
+        <menu_text><locale_1033>w_dataset_cross_connectors</locale_1033></menu_text>
+        <script>! _w_dataset_cross_connectors</script>
+      </macro_item>      <macro_item guid="e1582709-4c30-4546-b87a-1dd26c08f329" bitmap_id="e1582709-4c30-4546-b87a-1dd26c08f329">
+        <text><locale_1033>Macro.w_dataset_beam_volume</locale_1033></text>
+        <tooltip><locale_1033>w_dataset_beam_volume</locale_1033></tooltip>
+        <help_text><locale_1033>w_dataset_beam_volume</locale_1033></help_text>
+        <button_text><locale_1033>w_dataset_beam_volume</locale_1033></button_text>
+        <menu_text><locale_1033>w_dataset_beam_volume</locale_1033></menu_text>
+        <script>! _w_dataset_beam_volume</script>
+      </macro_item>
+  </macros>
+  <icons>
+      <icon guid="d0647ba8-eee5-4c18-ab3e-03a95f119654">
+        <light><svg width="48" height="48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0pt 0pt 48pt 48pt" fill-dark="#FFF" stroke-dark="none">
+  <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <defs xmlns="http://www.w3.org/2000/svg">
+      <style>
+      .cls-1 {
+        fill: #000;
+        stroke-width: 0px;
+      }
+    </style>
+    </defs>
+    <polygon class="cls-1" points="0 6.63 6.01 12.73 11.94 6.77 18.01 12.73 24 6.61 24 0 0 0 0 6.63" xmlns="http://www.w3.org/2000/svg" />
+    <polygon class="cls-1" points="0 12.74 6 18.72 12.07 12.78 18 18.71 24 12.73 24 24 0 24 0 12.74" xmlns="http://www.w3.org/2000/svg" />
+  </svg>
+</svg></light>
+        <dark></dark>
+      </icon>
+
+      <icon guid="8fb84559-5aa0-4855-aaf0-f3de32459ba8">
+        <light><svg width="48" height="48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0pt 0pt 48pt 48pt" fill-dark="#FFF" stroke-dark="none">
+  <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <defs xmlns="http://www.w3.org/2000/svg">
+      <style>
+      .cls-1 {
+        fill: none;
+        stroke: #231f20;
+        stroke-linecap: round;
+        stroke-miterlimit: 10;
+        stroke-width: 2px;
+      }
+
+      .cls-2 {
+        fill: #231f20;
+        stroke-width: 0px;
+      }
+    </style>
+    </defs>
+    <rect class="cls-1" x="2.33" y="9.62" width="19.62" height="6.08" rx="2.15" ry="2.15" xmlns="http://www.w3.org/2000/svg" />
+    <path class="cls-2" d="M5.31,10.06h8.36v5.2H5.31c-1.44,0-2.6-1.17-2.6-2.6h0c0-1.44,1.17-2.6,2.6-2.6Z" xmlns="http://www.w3.org/2000/svg" />
+  </svg>
+</svg></light>
+        <dark></dark>
+      </icon>
+
+      <icon guid="fdd596eb-3acd-49e8-a798-0a8a1a241af6">
+        <light><svg width="48" height="48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0pt 0pt 48pt 48pt" fill-dark="#FFF" stroke-dark="none">
+  <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <defs xmlns="http://www.w3.org/2000/svg">
+      <style>
+      .cls-1 {
+        fill: none;
+        stroke: #231f20;
+        stroke-linecap: round;
+        stroke-miterlimit: 10;
+        stroke-width: 2px;
+      }
+
+      .cls-2 {
+        fill: #231f20;
+        stroke-width: 0px;
+      }
+    </style>
+    </defs>
+    <path class="cls-1" d="M12,20.47c-4.23,0-7.67-3.43-7.67-7.67s3.43-7.67,7.67-7.67,7.67,3.43,7.67,7.67" xmlns="http://www.w3.org/2000/svg" />
+    <polygon class="cls-2" points="16.38 11.84 19.67 17.54 22.96 11.84 16.38 11.84" xmlns="http://www.w3.org/2000/svg" />
+  </svg>
+</svg></light>
+        <dark></dark>
+      </icon>
+
+      <icon guid="d87fbab9-e8c6-4d29-babf-bac0f90991ff">
+        <light><svg width="48" height="48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0pt 0pt 48pt 48pt" fill-dark="#FFF" stroke-dark="none">
+  <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <defs xmlns="http://www.w3.org/2000/svg">
+      <style>
+      .cls-1 {
+        fill: #000;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+    </style>
+    </defs>
+    <polygon class="cls-1" points="1.81 7.29 6.98 12.53 12.07 7.41 17.29 12.53 22.43 7.28 22.43 1.6 1.81 1.6 1.81 7.29" xmlns="http://www.w3.org/2000/svg" />
+  </svg>
+</svg></light>
+        <dark></dark>
+      </icon>
+
+      <icon guid="7e7b21e6-987e-407e-8feb-209a97ae74a1">
+        <light><svg width="48" height="48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0pt 0pt 48pt 48pt" fill-dark="#FFF" stroke-dark="none">
+  <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <defs xmlns="http://www.w3.org/2000/svg">
+      <style>
+      .cls-1 {
+        fill: #dbdbdb;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+    </style>
+    </defs>
+    <polygon class="cls-1" points="11.95 11.28 3.22 20.02 3.22 2.54 11.95 11.28 11.95 11.28" xmlns="http://www.w3.org/2000/svg" />
+    <polygon class="cls-1" points="12.02 11.28 20.75 2.54 20.75 20.02 12.02 11.28 12.02 11.28" xmlns="http://www.w3.org/2000/svg" />
+    <polygon class="cls-1" points="12.02 11.32 12.02 22.31 3.29 20.05 12.02 11.32 12.02 11.32" xmlns="http://www.w3.org/2000/svg" />
+    <polygon class="cls-1" points="12.02 11.24 3.29 2.51 11.95 4.77 12.02 11.24 12.02 11.24" xmlns="http://www.w3.org/2000/svg" />
+    <polygon class="cls-1" points="12.02 11.32 12.02 22.31 20.75 20.05 12.02 11.32 12.02 11.32" xmlns="http://www.w3.org/2000/svg" />
+    <polygon class="cls-1" points="12.02 11.24 20.75 2.51 12.09 4.77 12.02 11.24 12.02 11.24" xmlns="http://www.w3.org/2000/svg" />
+  </svg>
+</svg></light>
+        <dark></dark>
+      </icon>
+
+      <icon guid="96a8383f-a861-4e0b-8983-116601b8c75d">
+        <light><svg width="48" height="48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0pt 0pt 48pt 48pt" fill-dark="#FFF" stroke-dark="none">
+  <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <defs xmlns="http://www.w3.org/2000/svg">
+      <style>
+      .cls-1 {
+        fill: #000;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+    </style>
+    </defs>
+    <polygon class="cls-1" points="1.69 12.54 6.85 17.68 12.06 12.58 17.16 17.67 22.31 12.53 22.31 22.21 1.69 22.21 1.69 12.54" xmlns="http://www.w3.org/2000/svg" />
+  </svg>
+</svg></light>
+        <dark></dark>
+      </icon>
+
+      <icon guid="c3fa9ccf-ee62-45b7-92e6-b30473390737">
+        <light><svg width="48" height="48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0pt 0pt 48pt 48pt" fill-dark="#FFF" stroke-dark="none">
+  <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <defs xmlns="http://www.w3.org/2000/svg">
+      <style>
+      .cls-1 {
+        fill: #000;
+        stroke-width: 0px;
+      }
+    </style>
+    </defs>
+    <polygon class="cls-1" points="0 6.63 6.01 12.73 11.94 6.77 18.01 12.73 24 6.61 24 0 0 0 0 6.63" xmlns="http://www.w3.org/2000/svg" />
+    <polygon class="cls-1" points="0 12.74 6 18.72 12.07 12.78 18 18.71 24 12.73 24 24 0 24 0 12.74" xmlns="http://www.w3.org/2000/svg" />
+  </svg>
+</svg></light>
+        <dark></dark>
+      </icon>
+
+      <icon guid="60c6091b-3dcb-410d-9006-b445ae46e291">
+        <light><svg width="48" height="48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0pt 0pt 48pt 48pt" fill-dark="#FFF" stroke-dark="none">
+  <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <defs xmlns="http://www.w3.org/2000/svg">
+      <style>
+      .cls-1 {
+        fill: #000;
+        stroke-width: 0px;
+      }
+
+      .cls-2 {
+        fill: #dbdbdb;
+      }
+
+      .cls-2, .cls-3 {
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .cls-3 {
+        fill: none;
+        stroke-width: 2px;
+      }
+    </style>
+    </defs>
+    <line class="cls-3" x1="21.23" y1="7.42" x2="16.23" y2="7.42" xmlns="http://www.w3.org/2000/svg" />
+    <line class="cls-3" x1="7.73" y1="16.86" x2="2.73" y2="16.86" xmlns="http://www.w3.org/2000/svg" />
+    <rect class="cls-2" x="5.91" y="5.89" width="12.39" height="12.39" transform="translate(12.09 -5.02) rotate(45)" xmlns="http://www.w3.org/2000/svg" />
+    <circle class="cls-1" cx="15.64" cy="7.42" r="2.19" xmlns="http://www.w3.org/2000/svg" />
+    <circle class="cls-1" cx="8.11" cy="16.86" r="2.19" xmlns="http://www.w3.org/2000/svg" />
+  </svg>
+</svg></light>
+        <dark></dark>
+      </icon>
+
+      <icon guid="252f6e77-00b7-4e01-ad5b-707f1d972be5">
+        <light><svg width="48" height="48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0pt 0pt 48pt 48pt" fill-dark="#FFF" stroke-dark="none">
+  <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <defs xmlns="http://www.w3.org/2000/svg">
+      <style>
+      .cls-1 {
+        fill: #000;
+        stroke-width: 0px;
+      }
+
+      .cls-2 {
+        fill: #dbdbdb;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+    </style>
+    </defs>
+    <rect class="cls-2" x="5.81" y="5.89" width="12.39" height="12.39" transform="translate(12.06 -4.95) rotate(45)" xmlns="http://www.w3.org/2000/svg" />
+    <circle class="cls-1" cx="16.66" cy="7.42" r="2.19" xmlns="http://www.w3.org/2000/svg" />
+    <circle class="cls-1" cx="7.34" cy="7.42" r="2.19" xmlns="http://www.w3.org/2000/svg" />
+    <circle class="cls-1" cx="7.34" cy="16.86" r="2.19" xmlns="http://www.w3.org/2000/svg" />
+    <circle class="cls-1" cx="16.66" cy="16.86" r="2.19" xmlns="http://www.w3.org/2000/svg" />
+  </svg>
+</svg></light>
+        <dark></dark>
+      </icon>
+
+      <icon guid="b12ba98d-f8a2-4dcd-942f-6a5f0e322887">
+        <light><svg width="48" height="48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0pt 0pt 48pt 48pt" fill-dark="#FFF" stroke-dark="none">
+  <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <defs xmlns="http://www.w3.org/2000/svg">
+      <style>
+      .cls-1 {
+        opacity: .5;
+        stroke-width: 0px;
+      }
+
+      .cls-1, .cls-2 {
+        fill: #dbdbdb;
+      }
+
+      .cls-2, .cls-3, .cls-4 {
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .cls-2, .cls-4 {
+        stroke: #000;
+      }
+
+      .cls-3 {
+        stroke: #231f20;
+        stroke-width: 2px;
+      }
+
+      .cls-3, .cls-4 {
+        fill: none;
+      }
+    </style>
+    </defs>
+    <line class="cls-3" x1="17.41" y1="6.61" x2="13.19" y2="2.4" xmlns="http://www.w3.org/2000/svg" />
+    <line class="cls-3" x1="17.38" y1="6.63" x2="21.46" y2="2.42" xmlns="http://www.w3.org/2000/svg" />
+    <line class="cls-3" x1="13.24" y1="10.87" x2="13.24" y2="2.44" xmlns="http://www.w3.org/2000/svg" />
+    <line class="cls-3" x1="21.49" y1="10.93" x2="21.49" y2="2.5" xmlns="http://www.w3.org/2000/svg" />
+    <path class="cls-2" d="M18.64,16.61l-10.61-2.51L4.16,3.72l10.61,2.51,3.87,10.38ZM12.68,8.67l-4.04-.96,1.47,3.95,4.04.96-1.47-3.95Z" xmlns="http://www.w3.org/2000/svg" />
+    <polygon class="cls-1" points="16.37 22.93 12.34 12.97 1.84 10.14 4.35 4.24 14.31 6.77 18.36 17.4 16.37 22.93" xmlns="http://www.w3.org/2000/svg" />
+    <path class="cls-2" d="M16.38,22.9l-10.61-2.51L1.89,10.01l10.61,2.51,3.87,10.38ZM10.42,14.96l-4.04-.96,1.47,3.95,4.04.96-1.47-3.95Z" xmlns="http://www.w3.org/2000/svg" />
+    <line class="cls-4" x1="16.38" y1="22.9" x2="18.64" y2="16.61" xmlns="http://www.w3.org/2000/svg" />
+    <line class="cls-4" x1="1.89" y1="10.01" x2="4.16" y2="3.72" xmlns="http://www.w3.org/2000/svg" />
+    <line class="cls-4" x1="12.5" y1="12.52" x2="14.77" y2="6.23" xmlns="http://www.w3.org/2000/svg" />
+    <line class="cls-4" x1="7.85" y1="17.95" x2="8.94" y2="14.92" xmlns="http://www.w3.org/2000/svg" />
+  </svg>
+</svg></light>
+        <dark></dark>
+      </icon>
+
+      <icon guid="e1ec40a4-76a2-4cdd-b559-834be929d323">
+        <light><svg width="48" height="48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0pt 0pt 48pt 48pt" fill-dark="#FFF" stroke-dark="none">
+  <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <defs xmlns="http://www.w3.org/2000/svg">
+      <style>
+      .cls-1 {
+        opacity: .5;
+        stroke-width: 0px;
+      }
+
+      .cls-1, .cls-2 {
+        fill: #dbdbdb;
+      }
+
+      .cls-2, .cls-3, .cls-4 {
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .cls-3, .cls-4 {
+        fill: none;
+      }
+
+      .cls-4 {
+        stroke-width: 2px;
+      }
+    </style>
+    </defs>
+    <g xmlns="http://www.w3.org/2000/svg">
+      <line class="cls-4" x1="13.64" y1="5.86" x2="13.64" y2="2.8" />
+      <line class="cls-4" x1="19.35" y1="2.75" x2="13.66" y2="2.75" />
+      <line class="cls-4" x1="19.35" y1="2.75" x2="19.35" y2="7.02" />
+      <line class="cls-4" x1="21.87" y1="7.47" x2="15.55" y2="7.47" />
+      <line class="cls-4" x1="21.87" y1="7.47" x2="21.87" y2="11.74" />
+      <line class="cls-4" x1="21.87" y1="12.02" x2="17.12" y2="12.02" />
+    </g>
+    <path class="cls-2" d="M18.64,16.61l-10.61-2.51L4.16,3.72l10.61,2.51,3.87,10.38ZM12.68,8.67l-4.04-.96,1.47,3.95,4.04.96-1.47-3.95Z" xmlns="http://www.w3.org/2000/svg" />
+    <polygon class="cls-1" points="16.37 22.93 12.34 12.97 1.84 10.14 4.35 4.24 14.31 6.77 18.36 17.4 16.37 22.93" xmlns="http://www.w3.org/2000/svg" />
+    <path class="cls-2" d="M16.38,22.9l-10.61-2.51L1.89,10.01l10.61,2.51,3.87,10.38ZM10.42,14.96l-4.04-.96,1.47,3.95,4.04.96-1.47-3.95Z" xmlns="http://www.w3.org/2000/svg" />
+    <line class="cls-3" x1="16.38" y1="22.9" x2="18.64" y2="16.61" xmlns="http://www.w3.org/2000/svg" />
+    <line class="cls-3" x1="1.89" y1="10.01" x2="4.16" y2="3.72" xmlns="http://www.w3.org/2000/svg" />
+    <line class="cls-3" x1="12.5" y1="12.52" x2="14.77" y2="6.23" xmlns="http://www.w3.org/2000/svg" />
+    <line class="cls-3" x1="7.85" y1="17.95" x2="8.94" y2="14.92" xmlns="http://www.w3.org/2000/svg" />
+  </svg>
+</svg></light>
+        <dark></dark>
+      </icon>
+
+      <icon guid="b93f320a-df6f-4113-96f2-26001ea54fa0">
+        <light><svg width="48" height="48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0pt 0pt 48pt 48pt" fill-dark="#FFF" stroke-dark="none">
+  <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <defs xmlns="http://www.w3.org/2000/svg">
+      <style>
+      .cls-1 {
+        fill: #dbdbdb;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+    </style>
+    </defs>
+    <polygon class="cls-1" points="4.97 9.23 16.86 10.65 16.34 4.98 4.44 3.56 4.97 9.23" xmlns="http://www.w3.org/2000/svg" />
+    <polygon class="cls-1" points="9.64 18.51 21.51 19.93 16.95 10.91 5.08 9.49 9.64 18.51" xmlns="http://www.w3.org/2000/svg" />
+    <polygon class="cls-1" points="9.33 14.33 21.21 15.74 16.65 6.72 4.78 5.3 9.33 14.33" xmlns="http://www.w3.org/2000/svg" />
+    <polygon class="cls-1" points="8.97 12.6 9.54 20.44 4.98 11.42 4.42 3.58 8.97 12.6" xmlns="http://www.w3.org/2000/svg" />
+  </svg>
+</svg></light>
+        <dark></dark>
+      </icon>
+
+      <icon guid="26025028-3700-4941-a959-a99d35679a68">
+        <light><svg width="48" height="48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0pt 0pt 48pt 48pt" fill-dark="#FFF" stroke-dark="none">
+  <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <defs xmlns="http://www.w3.org/2000/svg">
+      <style>
+      .cls-1 {
+        fill: #dbdbdb;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+    </style>
+    </defs>
+    <rect class="cls-1" x="3.17" y="3.27" width="8.73" height="17.47" xmlns="http://www.w3.org/2000/svg" />
+    <rect class="cls-1" x="11.86" y="3.26" width="8.73" height="17.47" xmlns="http://www.w3.org/2000/svg" />
+    <polygon class="cls-1" points="7.41 10.94 16.39 17.36 16.39 12.28 7.41 5.87 7.41 10.94" xmlns="http://www.w3.org/2000/svg" />
+  </svg>
+</svg></light>
+        <dark></dark>
+      </icon>
+
+      <icon guid="e1582709-4c30-4546-b87a-1dd26c08f329">
+        <light><svg width="48" height="48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0pt 0pt 48pt 48pt" fill-dark="#FFF" stroke-dark="none">
+  <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <defs xmlns="http://www.w3.org/2000/svg">
+      <style>
+      .cls-1 {
+        fill: none;
+        stroke: #231f20;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-2 {
+        fill: #dbdbdb;
+        opacity: .75;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+    </style>
+    </defs>
+    <path class="cls-1" d="M.75,6.9c2.85.44,6.23.75,10.03.7,4.59-.06,8.58-.64,11.81-1.33" xmlns="http://www.w3.org/2000/svg" />
+    <path class="cls-1" d="M10.33,1.25c-.43,1.93-.8,4.81-.25,8.19,1.05,6.56,4.87,10.79,6.48,12.38" xmlns="http://www.w3.org/2000/svg" />
+    <polygon class="cls-2" points="19.07 18.98 12.3 22.34 6.32 10.89 15.02 10.89 19.07 18.98" xmlns="http://www.w3.org/2000/svg" />
+    <rect class="cls-2" x="3.84" y="3.46" width="14.26" height="7.42" xmlns="http://www.w3.org/2000/svg" />
+  </svg>
+</svg></light>
+        <dark></dark>
+      </icon>
+  </icons>
+  <bitmaps />
+</RhinoUI>
