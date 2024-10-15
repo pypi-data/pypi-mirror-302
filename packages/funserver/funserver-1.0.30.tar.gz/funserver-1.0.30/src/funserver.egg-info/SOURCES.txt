@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+src/funserver/__init__.py
+src/funserver/base.py
+src/funserver.egg-info/PKG-INFO
+src/funserver.egg-info/SOURCES.txt
+src/funserver.egg-info/dependency_links.txt
+src/funserver.egg-info/entry_points.txt
+src/funserver.egg-info/requires.txt
+src/funserver.egg-info/top_level.txt
+src/funserver/servers/__init__.py
+src/funserver/servers/funjupyter/config.py
+src/funserver/servers/funjupyter/run.py
