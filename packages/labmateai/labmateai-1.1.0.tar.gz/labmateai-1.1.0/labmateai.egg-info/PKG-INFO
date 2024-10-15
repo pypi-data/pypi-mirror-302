@@ -1,0 +1,164 @@
+Metadata-Version: 2.1
+Name: labmateai
+Version: 1.1.0
+Summary: An AI-powered recommendation system for laboratory tools and software.
+Home-page: https://github.com/RLTree/LabMateAI
+Author: Terry Noblin
+Author-email: tnoblin@health.ucsd.edu
+License: MIT
+Project-URL: Bug Reports, https://github.com/RLTree/LabMateAI/issues
+Project-URL: Source, https://github.com/RLTree/LabMateAI
+Keywords: AI,Recommendation System,Laboratory Tools,Scientific Software,Bioinformatics
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: networkx>=2.5
+Requires-Dist: numpy>=1.18.0
+Requires-Dist: prompt_toolkit>=3.0.0
+Requires-Dist: pandas>=1.5.3
+Requires-Dist: scikit-learn>=1.1.3
+Requires-Dist: matplotlib>=3.6.2
+Requires-Dist: flask>=2.2.2
+Requires-Dist: requests>=2.28.1
+Requires-Dist: scipy>=1.9.3
+Requires-Dist: jinja2>=3.1.2
+Requires-Dist: gunicorn>=20.1.0
+Requires-Dist: psycopg2>=2.9.0
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0.0; extra == "dev"
+Requires-Dist: pytest-cov>=3.0.0; extra == "dev"
+Requires-Dist: mock>=4.0.3; extra == "dev"
+Requires-Dist: flake8>=6.1.0; extra == "dev"
+Provides-Extra: docs
+Requires-Dist: sphinx>=4.0.0; extra == "docs"
+Requires-Dist: furo>=2021.8.14; extra == "docs"
+
+
+# LabMateAI
+
+**LabMateAI** is an AI-powered recommendation system designed to help researchers discover relevant laboratory tools and software for their scientific needs. Whether you're involved in bioinformatics, genomics, data visualization, or any other scientific domain, LabMateAI makes it easy to find the right resources with simple commands.
+
+## Table of Contents
+
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+  - [1. Tool Similarity Recommendations](#1-tool-similarity-recommendations)
+  - [2. Category-Based Recommendations](#2-category-based-recommendations)
+  - [3. Keyword-Based Search](#3-keyword-based-search)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
+
+---
+
+## Features
+
+- **Tool Similarity Recommendations**: Find tools similar to a specific tool you already use.
+- **Category-Based Recommendations**: Discover tools within a specific scientific category.
+- **Keyword-Based Search**: Search for tools based on keywords related to your research.
+
+---
+
+## Installation
+
+You can install LabMateAI using `pip`:
+
+```bash
+pip install labmateai
+```
+
+LabMateAI requires Python 3.8 or higher.
+
+---
+
+## Usage
+
+After installation, you can start using LabMateAI through the command line:
+
+```bash
+labmateai
+```
+
+This will launch the interactive command-line interface (CLI), where you can choose from the following options:
+
+### 1. Tool Similarity Recommendations
+
+Get recommendations for tools similar to a specific tool.
+
+**Steps**:
+
+1. Select **Recommend tools similar to a specific tool**.
+2. Enter the name of the tool (e.g., `BLAST`).
+3. Specify the number of recommendations you want.
+
+### 2. Category-Based Recommendations
+
+Discover tools within a specific scientific category.
+
+**Steps**:
+
+1. Select **Recommend tools in a specific category**.
+2. Enter the category name (e.g., `Genomics`).
+
+### 3. Keyword-Based Search
+
+Search for tools based on a keyword related to your research.
+
+**Steps**:
+
+1. Select **Search for tools by keyword**.
+2. Enter your keyword (e.g., `RNA`).
+
+---
+
+## Contributing
+
+Contributions are welcome!
+
+If you'd like to contribute to LabMateAI, please follow these steps:
+
+1. **Fork the repository** on GitHub.
+2. **Create a new branch** for your feature or bug fix:
+   ```bash
+   git checkout -b feature/your-feature-name
+   ```
+3. **Commit your changes** with clear messages:
+   ```bash
+   git commit -m "Add your clear and descriptive commit message"
+   ```
+4. **Push to your branch**:
+   ```bash
+   git push origin feature/your-feature-name
+   ```
+5. **Create a Pull Request** on GitHub, detailing your changes.
+
+Please refer to the [CONTRIBUTING.md](CONTRIBUTING.md) file for more detailed guidelines.
+
+---
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+## Contact
+
+For questions or support, please [contact us.](mailto:tnoblin@health.ucsd.edu).
+
+---
+
+**Disclaimer**: LabMateAI is an open-source project aimed at assisting researchers. While we strive to provide accurate and helpful recommendations, we do not endorse any specific tools or guarantee the suitability of tools for your specific needs.
+
+---
+
+## Acknowledgments
+
+We would like to thank all contributors and the open-source community for their support and valuable contributions to LabMateAI.
