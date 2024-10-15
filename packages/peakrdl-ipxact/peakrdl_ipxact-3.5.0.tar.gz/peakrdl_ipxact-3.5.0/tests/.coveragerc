@@ -1,0 +1,16 @@
+[run]
+#relative_files = True
+
+[paths]
+source =
+    ../src/peakrdl_ipxact/
+    */site-packages/*/peakrdl_ipxact
+    */site-packages/peakrdl_ipxact
+
+[report]
+exclude_lines =
+    pragma: no cover
+    raise RuntimeError
+    raise NotImplementedError
+    msg.fatal
+    msg.error
