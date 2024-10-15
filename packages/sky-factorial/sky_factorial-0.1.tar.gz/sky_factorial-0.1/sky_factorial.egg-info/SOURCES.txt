@@ -1,0 +1,8 @@
+README.md
+setup.py
+sky_factorial/__init__.py
+sky_factorial/main.py
+sky_factorial.egg-info/PKG-INFO
+sky_factorial.egg-info/SOURCES.txt
+sky_factorial.egg-info/dependency_links.txt
+sky_factorial.egg-info/top_level.txt
