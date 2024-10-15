@@ -1,0 +1,9 @@
+libro_flow/__init__.py,sha256=OYN21gNnUaAJfU5we0jD-Y5sCdLEDTH0cP02wD8kDLQ,639
+libro_flow/_version.py,sha256=xWxrlGxsD4EBDzmSpsE30Lb67sicF9g-maAEpwJDksI,46
+libro_flow/execution_handler.py,sha256=YqDb14r4OV2z-Zrm8l25zzLTMvCPonKXCuE4XjwUgyM,4877
+libro_flow/libro_client.py,sha256=fU83Y5cuTMS9-ZfYN0ZvXEGCbf5_BwfCvhVs2hned9Q,5845
+libro_flow/libro_execution.py,sha256=p-6leVE1XGRHV3P2eye0i-g9JPRseHd9az9-4IPnto4,4271
+libro_flow/libro_schema_form_widget.py,sha256=NWduZMi0LwKW2oJDZnCMO_BJosRim6NNk1ewl8tmay4,1743
+libro_flow-0.1.3.dist-info/METADATA,sha256=uDgnm8LzwDeoLRnxlCvYu8_38xTbZJRrsVXfq3HeQvg,424
+libro_flow-0.1.3.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+libro_flow-0.1.3.dist-info/RECORD,,
