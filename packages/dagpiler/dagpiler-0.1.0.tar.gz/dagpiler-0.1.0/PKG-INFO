@@ -1,0 +1,14 @@
+Metadata-Version: 2.3
+Name: dagpiler
+Version: 0.1.0
+Summary: Compile a DAG representation of a data processing pipeline from TOML files.
+Author-email: Mitchell Tillman <mtillman14@gmail.com>
+License-File: LICENSE
+Requires-Dist: mkdocs-awesome-pages-plugin
+Requires-Dist: mkdocs-git-revision-date-localized-plugin
+Requires-Dist: mkdocs-material
+Requires-Dist: mkdocstrings
+Requires-Dist: networkx
+Requires-Dist: pyyaml
+Requires-Dist: requests
+Requires-Dist: toml
