@@ -1,0 +1,2612 @@
+[
+    {
+        "name": "FastQC",
+        "category": "Genomics",
+        "features": ["Quality Control", "Sequencing", "Data Analysis"],
+        "cost": "Free",
+        "description": "A quality control tool for high throughput sequence data.",
+        "url": "https://www.bioinformatics.babraham.ac.uk/projects/fastqc/",
+        "language": "Java",
+        "platform": "Cross-platform (Windows, macOS, Linux)"
+    },
+    {
+        "name": "BLAST",
+        "category": "Bioinformatics",
+        "features": ["Sequence Alignment", "DNA", "Protein"],
+        "cost": "Free",
+        "description": "Basic Local Alignment Search Tool for comparing nucleotide or protein sequences.",
+        "url": "https://blast.ncbi.nlm.nih.gov/Blast.cgi",
+        "language": "C/C++",
+        "platform": "Cross-platform (Windows, macOS, Linux)"
+    },
+    {
+        "name": "HISAT2",
+        "category": "Genomics",
+        "features": ["RNA-Seq", "Alignment", "Transcriptomics"],
+        "cost": "Free",
+        "description": "A fast and sensitive alignment program for mapping RNA-seq reads.",
+        "url": "https://ccb.jhu.edu/software/hisat2/",
+        "language": "C++",
+        "platform": "Cross-platform (Windows, macOS, Linux)"
+    },
+    {
+        "name": "Cytoscape",
+        "category": "Network Analysis",
+        "features": ["Data Visualization", "Network Analysis", "Graphs"],
+        "cost": "Free",
+        "description": "An open-source platform for complex network analysis and visualization.",
+        "url": "https://cytoscape.org/",
+        "language": "Java",
+        "platform": "Cross-platform (Windows, macOS, Linux)"
+    },
+    {
+        "name": "FlowJo",
+        "category": "Flow Cytometry",
+        "features": ["Flow Cytometry", "Data Analysis", "Cell Sorting"],
+        "cost": "Paid",
+        "description": "A software application with an integrated environment for viewing and analyzing flow cytometric data.",
+        "url": "https://www.flowjo.com/",
+        "language": "N/A",
+        "platform": "Windows, macOS"
+    },
+    {
+        "name": "ImageJ",
+        "category": "Image Analysis",
+        "features": ["Image Processing", "Microscopy", "Quantification"],
+        "cost": "Free",
+        "description": "An open-source image processing program designed for scientific multidimensional images.",
+        "url": "https://imagej.nih.gov/ij/",
+        "language": "Java",
+        "platform": "Cross-platform (Windows, macOS, Linux)"
+    },
+    {
+        "name": "MATLAB",
+        "category": "Data Analysis",
+        "features": ["Mathematical Modeling", "Data Visualization", "Simulation"],
+        "cost": "Paid",
+        "description": "A programming and numeric computing platform used by engineers and scientists.",
+        "url": "https://www.mathworks.com/products/matlab.html",
+        "language": "MATLAB",
+        "platform": "Cross-platform (Windows, macOS, Linux)"
+    },
+    {
+        "name": "GraphPad Prism",
+        "category": "Statistics",
+        "features": ["Data Analysis", "Graphing", "Biostatistics"],
+        "cost": "Paid",
+        "description": "A software program combining scientific graphing, comprehensive curve fitting, and data organization.",
+        "url": "https://www.graphpad.com/scientific-software/prism/",
+        "language": "N/A",
+        "platform": "Windows, macOS"
+    },
+    {
+        "name": "RStudio",
+        "category": "Data Analysis",
+        "features": ["Statistical Computing", "Data Visualization", "Programming"],
+        "cost": "Free",
+        "description": "An integrated development environment for R, a programming language for statistical computing and graphics.",
+        "url": "https://www.rstudio.com/",
+        "language": "R",
+        "platform": "Cross-platform (Windows, macOS, Linux)"
+    },
+    {
+        "name": "GSEA",
+        "category": "Genomics",
+        "features": ["Gene Set Enrichment", "Transcriptomics", "Data Analysis"],
+        "cost": "Free",
+        "description": "A computational method that determines whether an a priori defined set of genes shows statistically significant differences.",
+        "url": "https://www.gsea-msigdb.org/gsea/index.jsp",
+        "language": "Java, R",
+        "platform": "Cross-platform (Windows, macOS, Linux)"
+    },
+    {
+        "name": "Galaxy",
+        "category": "Bioinformatics",
+        "features": ["Data Analysis", "Workflows", "Genome Assembly"],
+        "cost": "Free",
+        "description": "An open, web-based platform for accessible, reproducible, and transparent computational biomedical research.",
+        "url": "https://usegalaxy.org/",
+        "language": "Python, Perl",
+        "platform": "Web-based"
+    },
+    {
+        "name": "CellProfiler",
+        "category": "Image Analysis",
+        "features": ["Cell Imaging", "Quantification", "Microscopy"],
+        "cost": "Free",
+        "description": "An open-source software for measuring and analyzing cell images.",
+        "url": "https://cellprofiler.org/",
+        "language": "Python",
+        "platform": "Cross-platform (Windows, macOS, Linux)"
+    },
+    {
+        "name": "SPSS",
+        "category": "Statistics",
+        "features": ["Data Analysis", "Statistics", "Biostatistics"],
+        "cost": "Paid",
+        "description": "A powerful statistical software platform used for advanced statistical analysis.",
+        "url": "https://www.ibm.com/products/spss-statistics",
+        "language": "N/A",
+        "platform": "Cross-platform (Windows, macOS)"
+    },
+    {
+        "name": "MaxQuant",
+        "category": "Proteomics",
+        "features": ["Protein Quantification", "Mass Spectrometry", "Data Analysis"],
+        "cost": "Free",
+        "description": "A quantitative proteomics software package designed for analyzing large mass spectrometric data.",
+        "url": "https://www.maxquant.org/",
+        "language": "C#, .NET",
+        "platform": "Windows"
+    },
+    {
+        "name": "OpenMS",
+        "category": "Proteomics",
+        "features": ["Data Analysis", "Mass Spectrometry", "Protein Identification"],
+        "cost": "Free",
+        "description": "An open-source software C++ library for LC-MS data management and analyses.",
+        "url": "https://www.openms.de/",
+        "language": "C++",
+        "platform": "Cross-platform (Windows, macOS, Linux)"
+    },
+    {
+        "name": "Qlucore Omics Explorer",
+        "category": "Genomics",
+        "features": ["Data Analysis", "Visualization", "Genomics"],
+        "cost": "Paid",
+        "description": "Software for advanced data analysis and visualization in life science research.",
+        "url": "https://qlucore.com/",
+        "language": "C#",
+        "platform": "Windows"
+    },
+    {
+        "name": "QIIME 2",
+        "category": "Microbiomics",
+        "features": ["Data Analysis", "Microbiome", "Sequencing"],
+        "cost": "Free",
+        "description": "A next-generation microbiome bioinformatics platform that is extensible, free, and open source.",
+        "url": "https://qiime2.org/",
+        "language": "Python",
+        "platform": "Cross-platform (Windows, macOS, Linux)"
+    },
+    {
+        "name": "SRA Toolkit",
+        "category": "Genomics",
+        "features": ["Sequence Retrieval", "Data Analysis", "Sequencing"],
+        "cost": "Free",
+        "description": "A collection of tools and libraries for retrieving and formatting DNA sequence data.",
+        "url": "https://www.ncbi.nlm.nih.gov/sra/docs/toolkitsoft/",
+        "language": "C++",
+        "platform": "Cross-platform (Windows, macOS, Linux)"
+    },
+    {
+        "name": "Seurat",
+        "category": "Single-Cell Analysis",
+        "features": ["Data Analysis", "Single Cell", "Clustering", "Dimensionality Reduction"],
+        "cost": "Free",
+        "description": "An R toolkit for single-cell genomics, designed to explore cellular heterogeneity.",
+        "url": "https://satijalab.org/seurat/",
+        "language": "R",
+        "platform": "Cross-platform (Windows, macOS, Linux)"
+    },
+    {
+        "name": "TissueGnostics",
+        "category": "Image Analysis",
+        "features": ["Tissue Imaging", "Microscopy", "Quantification"],
+        "cost": "Paid",
+        "description": "Provides solutions for automated tissue image analysis.",
+        "url": "https://www.tissuegnostics.com/",
+        "language": "N/A",
+        "platform": "Windows"
+    },
+    {
+        "name": "AutoDock",
+        "category": "Molecular Modeling",
+        "features": ["Molecular Docking", "Protein-Ligand", "Drug Discovery"],
+        "cost": "Free",
+        "description": "A suite of automated docking tools designed to predict how small molecules bind to a receptor of known 3D structure.",
+        "url": "http://autodock.scripps.edu/",
+        "language": "C++",
+        "platform": "Cross-platform (Windows, macOS, Linux)"
+    },
+    {
+        "name": "PyMOL",
+        "category": "Structural Biology",
+        "features": ["3D Visualization", "Molecular Modeling", "Structural Analysis"],
+        "cost": "Paid",
+        "description": "A molecular visualization system with an open-source foundation, producing high-quality 3D images.",
+        "url": "https://pymol.org/2/",
+        "language": "Python",
+        "platform": "Cross-platform (Windows, macOS, Linux)"
+    },
+    {
+        "name": "DeepLabCut",
+        "category": "Neuroscience",
+        "features": ["Pose Estimation", "Behavioral Analysis", "Machine Learning"],
+        "cost": "Free",
+        "description": "An open-source toolbox for markerless pose estimation of animals using deep learning.",
+        "url": "http://www.mackenziemathislab.org/deeplabcut",
+        "language": "Python",
+        "platform": "Cross-platform (Windows, macOS, Linux)"
+    },
+    {
+        "name": "Igor Pro",
+        "category": "Data Analysis",
+        "features": ["Data Visualization", "Analysis", "Graphing"],
+        "cost": "Paid",
+        "description": "A software environment for experimentation with scientific and engineering data.",
+        "url": "https://www.wavemetrics.com/products/igorpro",
+        "language": "N/A",
+        "platform": "Windows, macOS"
+    },
+    {
+        "name": "Bioconductor",
+        "category": "Bioinformatics",
+        "features": ["Data Analysis", "Genomics", "R Packages"],
+        "cost": "Free",
+        "description": "An open-source project providing tools for the analysis and comprehension of high-throughput genomic data.",
+        "url": "https://www.bioconductor.org/",
+        "language": "R",
+        "platform": "Cross-platform (Windows, macOS, Linux)"
+    },
+    {
+        "name": "Bowtie",
+        "category": "Genomics",
+        "features": ["Sequence Alignment", "High-Throughput", "Genome Mapping"],
+        "cost": "Free",
+        "description": "An ultrafast, memory-efficient short read aligner for aligning sequencing reads to long reference sequences.",
+        "url": "http://bowtie-bio.sourceforge.net/index.shtml",
+        "language": "C++",
+        "platform": "Cross-platform (Windows, macOS, Linux)"
+    },
+    {
+        "name": "Cufflinks",
+        "category": "Genomics",
+        "features": ["Transcript Assembly", "RNA-Seq", "Differential Expression"],
+        "cost": "Free",
+        "description": "A program for transcriptome assembly and differential expression analysis of RNA-Seq data.",
+        "url": "http://cole-trapnell-lab.github.io/cufflinks/",
+        "language": "C++",
+        "platform": "Cross-platform (Windows, macOS, Linux)"
+    },
+    {
+        "name": "DESeq2",
+        "category": "Genomics",
+        "features": ["Differential Expression", "RNA-Seq", "Transcriptomics"],
+        "cost": "Free",
+        "description": "An R package to analyze count data from RNA-Seq experiments and test for differential expression.",
+        "url": "https://bioconductor.org/packages/release/bioc/html/DESeq2.html",
+        "language": "R",
+        "platform": "Cross-platform (Windows, macOS, Linux)"
+    },
+    {
+        "name": "IGV (Integrative Genomics Viewer)",
+        "category": "Genomics",
+        "features": ["Genome Browsing", "Data Visualization", "Variant Analysis"],
+        "cost": "Free",
+        "description": "A high-performance visualization tool for interactive exploration of large, integrated genomic datasets.",
+        "url": "http://software.broadinstitute.org/software/igv/",
+        "language": "Java",
+        "platform": "Cross-platform (Windows, macOS, Linux)"
+    },
+    {
+        "name": "MAFFT",
+        "category": "Bioinformatics",
+        "features": ["Multiple Sequence Alignment", "Phylogenetics", "Protein Analysis"],
+        "cost": "Free",
+        "description": "A multiple sequence alignment program for amino acid or nucleotide sequences.",
+        "url": "https://mafft.cbrc.jp/alignment/software/",
+        "language": "C++",
+        "platform": "Cross-platform (Windows, macOS, Linux)"
+    },
+    {
+        "name": "MEGA",
+        "category": "Evolutionary Biology",
+        "features": ["Phylogenetics", "Molecular Evolution", "Data Analysis"],
+        "cost": "Free",
+        "description": "Molecular Evolutionary Genetics Analysis software for comparative analysis of homologous sequences.",
+        "url": "https://www.megasoftware.net/",
+        "language": "N/A",
+        "platform": "Cross-platform (Windows, macOS, Linux)"
+    },
+    {
+        "name": "Mothur",
+        "category": "Microbiomics",
+        "features": ["Microbiome Analysis", "16S rRNA", "Community Analysis"],
+        "cost": "Free",
+        "description": "An open-source software package that enables processing of 16S rRNA gene sequences.",
+        "url": "https://mothur.org/",
+        "language": "C++",
+        "platform": "Cross-platform (Windows, macOS, Linux)"
+    },
+    {
+        "name": "NanoPlot",
+        "category": "Genomics",
+        "features": ["Data Visualization", "Nanopore Sequencing", "Quality Control"],
+        "cost": "Free",
+        "description": "A plotting tool for Oxford Nanopore sequencing data and associated QC files.",
+        "url": "https://github.com/wdecoster/NanoPlot",
+        "language": "Python",
+        "platform": "Cross-platform (Windows, macOS, Linux)"
+    },
+    {
+        "name": "PLINK",
+        "category": "Genomics",
+        "features": ["Genetic Association", "Data Analysis", "GWAS"],
+        "cost": "Free",
+        "description": "A toolset for whole-genome association analysis and population-based linkage analyses.",
+        "url": "https://www.cog-genomics.org/plink/",
+        "language": "C++",
+        "platform": "Cross-platform (Windows, macOS, Linux)"
+    },
+    {
+        "name": "Proteome Discoverer",
+        "category": "Proteomics",
+        "features": ["Mass Spectrometry", "Protein Identification", "Data Analysis"],
+        "cost": "Paid",
+        "description": "A comprehensive software suite for analyzing qualitative and quantitative proteomics data.",
+        "url": "https://www.thermofisher.com/order/catalog/product/IQLAAEGABSFADBMBQB",
+        "language": "N/A",
+        "platform": "Windows"
+    },
+    {
+        "name": "PyTorch",
+        "category": "Machine Learning",
+        "features": ["Deep Learning", "Neural Networks", "AI"],
+        "cost": "Free",
+        "description": "An open-source machine learning library based on the Torch library, used for applications such as computer vision and natural language processing.",
+        "url": "https://pytorch.org/",
+        "language": "C++, Python",
+        "platform": "Cross-platform (Windows, macOS, Linux)"
+    },
+    {
+        "name": "QIAGEN CLC Genomics Workbench",
+        "category": "Genomics",
+        "features": ["Data Analysis", "Bioinformatics", "Sequencing"],
+        "cost": "Paid",
+        "description": "A software suite for analyzing, visualizing, and interpreting omics data.",
+        "url": "https://digitalinsights.qiagen.com/partek-genomics-workbench/",
+        "language": "N/A",
+        "platform": "Cross-platform (Windows, macOS, Linux)"
+    },
+    {
+        "name": "Samtools",
+        "category": "Genomics",
+        "features": ["Sequence Alignment", "Variant Calling", "Data Analysis"],
+        "cost": "Free",
+        "description": "A suite of programs for interacting with high-throughput sequencing data, providing various utilities for manipulating alignments in the SAM format.",
+        "url": "http://www.htslib.org/",
+        "language": "C",
+        "platform": "Cross-platform (Windows, macOS, Linux)"
+    },
+    {
+        "name": "Scikit-learn",
+        "category": "Machine Learning",
+        "features": ["Data Analysis", "Machine Learning", "Data Mining"],
+        "cost": "Free",
+        "description": "A Python module for machine learning built on SciPy, providing simple and efficient tools for data mining and data analysis.",
+        "url": "https://scikit-learn.org/",
+        "language": "Python",
+        "platform": "Cross-platform (Windows, macOS, Linux)"
+    },
+    {
+        "name": "StringTie",
+        "category": "Genomics",
+        "features": ["RNA-Seq", "Transcript Assembly", "Expression Analysis"],
+        "cost": "Free",
+        "description": "A fast and highly efficient assembler of RNA-Seq alignments into potential transcripts.",
+        "url": "http://ccb.jhu.edu/software/stringtie/",
+        "language": "C++",
+        "platform": "Cross-platform (Windows, macOS, Linux)"
+    },
+    {
+        "name": "TopHat",
+        "category": "Genomics",
+        "features": ["RNA-Seq", "Splice Junction Mapping", "Transcriptomics"],
+        "cost": "Free",
+        "description": "A fast splice junction mapper for RNA-Seq reads that aligns RNA-Seq reads to mammalian-sized genomes.",
+        "url": "https://ccb.jhu.edu/software/tophat/index.shtml",
+        "language": "C++",
+        "platform": "Cross-platform (Windows, macOS, Linux)"
+    },
+    {
+        "name": "Trimmomatic",
+        "category": "Genomics",
+        "features": ["Quality Control", "Sequence Trimming", "Sequencing"],
+        "cost": "Free",
+        "description": "A flexible read trimming tool for Illumina NGS data to remove adapters and low-quality bases.",
+        "url": "http://www.usadellab.org/cms/?page=trimmomatic",
+        "language": "Java",
+        "platform": "Cross-platform (Windows, macOS, Linux)"
+    },
+    {
+        "name": "VELVET",
+        "category": "Genomics",
+        "features": ["Genome Assembly", "De Novo Assembly", "Sequence Alignment"],
+        "cost": "Free",
+        "description": "A set of algorithms optimized for short read sequencing data to assemble genomes.",
+        "url": "https://www.ebi.ac.uk/~zerbino/velvet/",
+        "language": "C++",
+        "platform": "Cross-platform (Windows, macOS, Linux)"
+    },
+    {
+        "name": "WaveSurfer",
+        "category": "Neuroscience",
+        "features": ["Electrophysiology", "Data Analysis", "Visualization"],
+        "cost": "Free",
+        "description": "A MATLAB software package for electrophysiological data acquisition and analysis.",
+        "url": "https://wavesurfer.janelia.org/",
+        "language": "MATLAB",
+        "platform": "Cross-platform (Windows, macOS, Linux)"
+    },
+    {
+        "name": "WebGestalt",
+        "category": "Bioinformatics",
+        "features": ["Gene Set Analysis", "Functional Analysis", "Pathway Analysis"],
+        "cost": "Free",
+        "description": "A functional enrichment analysis web tool, providing a way to identify biological functions related to a given gene list.",
+        "url": "http://www.webgestalt.org/",
+        "language": "JavaScript, Python",
+        "platform": "Web-based"
+    },
+    {
+        "name": "WEKA",
+        "category": "Machine Learning",
+        "features": ["Data Mining", "Machine Learning", "Data Analysis"],
+        "cost": "Free",
+        "description": "A collection of machine learning algorithms for data mining tasks, featuring tools for data pre-processing, classification, regression, clustering, and more.",
+        "url": "https://www.cs.waikato.ac.nz/ml/weka/",
+        "language": "Java",
+        "platform": "Cross-platform (Windows, macOS, Linux)"
+    },
+    {
+        "name": "XCMS",
+        "category": "Metabolomics",
+        "features": ["Data Analysis", "Metabolomics", "LC-MS"],
+        "cost": "Free",
+        "description": "A software platform for the analysis of LC/MS data including raw data processing and feature detection.",
+        "url": "https://bioconductor.org/packages/release/bioc/html/xcms.html",
+        "language": "R",
+        "platform": "Cross-platform (Windows, macOS, Linux)"
+    },
+    {
+        "name": "Zenodo",
+        "category": "Data Management",
+        "features": ["Data Archiving", "Research Data", "Open Science"],
+        "cost": "Free",
+        "description": "An open-access repository that enables researchers to share and preserve research outputs in any size, any format, and from any field of science.",
+        "url": "https://zenodo.org/",
+        "language": "N/A",
+        "platform": "Web-based"
+    },
+    {
+        "name": "Zotero",
+        "category": "Reference Management",
+        "features": ["Citation Management", "Bibliography", "Research Organization"],
+        "cost": "Free",
+        "description": "A free, easy-to-use tool to help you collect, organize, cite, and share research.",
+        "url": "https://www.zotero.org/",
+        "language": "JavaScript",
+        "platform": "Cross-platform (Windows, macOS, Linux)"
+    },
+    {
+        "name": "BioGRID",
+        "category": "Bioinformatics",
+        "features": ["Protein Interactions", "Genetic Interactions", "Data Repository"],
+        "cost": "Free",
+        "description": "A curated database of protein and genetic interactions.",
+        "url": "https://thebiogrid.org/",
+        "language": "N/A",
+        "platform": "Web-based"
+    },
+    {
+        "name": "Bowtie 2",
+        "category": "Genomics",
+        "features": ["Sequence Alignment", "Genome Mapping", "High-Throughput"],
+        "cost": "Free",
+        "description": "An ultrafast and memory-efficient tool for aligning sequencing reads to long reference sequences.",
+        "url": "http://bowtie-bio.sourceforge.net/bowtie2/index.shtml",
+        "language": "C++",
+        "platform": "Cross-platform (Windows, macOS, Linux)"
+    },
+    {
+        "name": "BWA",
+        "category": "Genomics",
+        "features": ["Sequence Alignment", "Genome Mapping", "Bioinformatics"],
+        "cost": "Free",
+        "description": "A software package for mapping low-divergent sequences against a large reference genome.",
+        "url": "http://bio-bwa.sourceforge.net/",
+        "language": "C",
+        "platform": "Cross-platform (Windows, macOS, Linux)"
+    },
+    {
+        "name": "CLUMPP",
+        "category": "Population Genetics",
+        "features": ["Clustering", "Data Analysis", "Genetic Structure"],
+        "cost": "Free",
+        "description": "A program that helps identify the optimal alignment of multiple population structure analyses.",
+        "url": "https://rosenberglab.stanford.edu/clumpp.html",
+        "language": "C++",
+        "platform": "Cross-platform (Windows, macOS, Linux)"
+    },
+    {
+        "name": "Circos",
+        "category": "Data Visualization",
+        "features": ["Genomic Data", "Circular Visualization", "Data Analysis"],
+        "cost": "Free",
+        "description": "A software package for visualizing data and information in a circular layout.",
+        "url": "http://circos.ca/",
+        "language": "Perl",
+        "platform": "Cross-platform (Windows, macOS, Linux)"
+    },
+    {
+        "name": "COBRA Toolbox",
+        "category": "Metabolic Engineering",
+        "features": ["Metabolic Modeling", "Systems Biology", "Data Analysis"],
+        "cost": "Free",
+        "description": "A MATLAB toolbox for generating genome-scale metabolic models.",
+        "url": "https://opencobra.github.io/cobratoolbox/stable/",
+        "language": "MATLAB",
+        "platform": "Cross-platform (Windows, macOS, Linux)"
+    },
+    {
+        "name": "CONCOCT",
+        "category": "Metagenomics",
+        "features": ["Clustering", "Data Analysis", "Binning"],
+        "cost": "Free",
+        "description": "A program for unsupervised binning of metagenomic contigs by clustering nucleotide composition and coverage.",
+        "url": "https://concoct.readthedocs.io/en/latest/",
+        "language": "Python",
+        "platform": "Cross-platform (Windows, macOS, Linux)"
+    },
+    {
+        "name": "CONSEL",
+        "category": "Phylogenetics",
+        "features": ["Hypothesis Testing", "Phylogenetic Analysis", "Data Analysis"],
+        "cost": "Free",
+        "description": "A program for assessing the confidence of phylogenetic tree selection.",
+        "url": "http://stat.sys.i.kyoto-u.ac.jp/prog/consel/",
+        "language": "Perl",
+        "platform": "Cross-platform (Windows, macOS, Linux)"
+    },
+    {
+        "name": "CUT&RUNTools",
+        "category": "Epigenetics",
+        "features": ["Chromatin Profiling", "Data Analysis", "Epigenomics"],
+        "cost": "Free",
+        "description": "A pipeline for analyzing CUT&RUN sequencing data for profiling chromatin.",
+        "url": "https://github.com/fl-yu/CUT-RUNTools-2.0",
+        "language": "Python",
+        "platform": "Cross-platform (Windows, macOS, Linux)"
+    },
+    {
+        "name": "DEAP",
+        "category": "Evolutionary Computing",
+        "features": ["Genetic Algorithms", "Data Analysis", "Optimization"],
+        "cost": "Free",
+        "description": "A novel evolutionary computation framework for rapid prototyping and testing of ideas.",
+        "url": "https://deap.readthedocs.io/en/master/",
+        "language": "Python",
+        "platform": "Cross-platform (Windows, macOS, Linux)"
+    },
+    {
+        "name": "DIAMOND",
+        "category": "Bioinformatics",
+        "features": ["Sequence Alignment", "Protein Search", "Metagenomics"],
+        "cost": "Free",
+        "description": "An ultra-fast protein alignment tool for large-scale metagenomic protein searches.",
+        "url": "https://github.com/bbuchfink/diamond",
+        "language": "C++",
+        "platform": "Cross-platform (Windows, macOS, Linux)"
+    },
+    {
+        "name": "DOGMA",
+        "category": "Genomics",
+        "features": ["Genome Annotation", "Mitochondrial Genome", "Data Analysis"],
+        "cost": "Free",
+        "description": "A web-based program for annotating mitochondrial and chloroplast genome sequences.",
+        "url": "http://dogma.ccbb.utexas.edu/",
+        "language": "Perl, Web-based",
+        "platform": "Cross-platform (Web-based)"
+    },
+    {
+        "name": "Edgar",
+        "category": "Metagenomics",
+        "features": ["Comparative Genomics", "Ortholog Analysis", "Phylogenetics"],
+        "cost": "Free",
+        "description": "A platform for the comparative analysis of genomes with a focus on ortholog identification.",
+        "url": "http://edgar.computational.bio/",
+        "language": "C++, Python",
+        "platform": "Cross-platform (Windows, macOS, Linux)"
+    },
+    {
+        "name": "EDGE Bioinformatics",
+        "category": "Genomics",
+        "features": ["Data Analysis", "Sequence Analysis", "Bioinformatics"],
+        "cost": "Free",
+        "description": "An open-source, user-friendly bioinformatics platform for various genomics and metagenomics analyses.",
+        "url": "https://bioinformatics.igs.umaryland.edu/edge/",
+        "language": "Python, Web-based",
+        "platform": "Cross-platform (Web-based)"
+    },
+    {
+        "name": "EIGENSOFT",
+        "category": "Population Genetics",
+        "features": ["Principal Component Analysis", "Population Structure", "Genetic Data"],
+        "cost": "Free",
+        "description": "A suite of programs for population genetics analyses using principal component analysis.",
+        "url": "https://github.com/DReichLab/EIG",
+        "language": "C++",
+        "platform": "Cross-platform (Windows, macOS, Linux)"
+    },
+    {
+        "name": "EMBOSS",
+        "category": "Bioinformatics",
+        "features": ["Sequence Analysis", "Data Analysis", "Molecular Biology"],
+        "cost": "Free",
+        "description": "A bioinformatics software package for the analysis of sequence data.",
+        "url": "http://emboss.open-bio.org/",
+        "language": "Perl, C++",
+        "platform": "Cross-platform (Windows, macOS, Linux)"
+    },
+    {
+        "name": "ENCoRE",
+        "category": "Epigenetics",
+        "features": ["ChIP-Seq Analysis", "Data Analysis", "Epigenomics"],
+        "cost": "Free",
+        "description": "A computational tool for analyzing enhancer RNAs using ChIP-Seq data.",
+        "url": "https://sourceforge.net/projects/encore-r/",
+        "language": "R",
+        "platform": "Cross-platform (Windows, macOS, Linux)"
+    },
+    {
+        "name": "EPIC",
+        "category": "Bioinformatics",
+        "features": ["Chromatin Analysis", "Peak Calling", "Epigenomics"],
+        "cost": "Free",
+        "description": "An algorithm for analyzing ChIP-seq data to identify regions of transcription factor binding.",
+        "url": "https://github.com/biocore-ntnu/epic",
+        "language": "C++",
+        "platform": "Cross-platform (Windows, macOS, Linux)"
+    },
+    {
+        "name": "Escher",
+        "category": "Metabolic Engineering",
+        "features": ["Data Visualization", "Metabolic Maps", "Systems Biology"],
+        "cost": "Free",
+        "description": "A web-based visualization tool for genome-scale metabolic maps.",
+        "url": "https://escher.github.io/",
+        "language": "JavaScript",
+        "platform": "Web-based"
+    },
+  {
+      "name": "FASTX-Toolkit",
+      "category": "Genomics",
+      "features": ["Sequence Preprocessing", "Data Analysis", "Next-Gen Sequencing"],
+      "cost": "Free",
+      "description": "A collection of command line tools for preprocessing short read sequences in FASTA/FASTQ format.",
+      "url": "http://hannonlab.cshl.edu/fastx_toolkit/",
+      "language": "C++",
+      "platform": "Cross-platform"
+  },
+  {
+      "name": "FELLA",
+      "category": "Metabolomics",
+      "features": ["Pathway Analysis", "Data Analysis", "Metabolic Networks"],
+      "cost": "Free",
+      "description": "An R package for enriched pathway analysis in metabolomics.",
+      "url": "https://bioconductor.org/packages/release/bioc/html/FELLA.html",
+      "language": "R",
+      "platform": "Cross-platform"
+  },
+  {
+      "name": "Fiji",
+      "category": "Image Analysis",
+      "features": ["Image Processing", "Microscopy", "Data Analysis"],
+      "cost": "Free",
+      "description": "A distribution of ImageJ focused on biological image analysis.",
+      "url": "https://fiji.sc/",
+      "language": "Java",
+      "platform": "Windows, macOS, Linux"
+  },
+  {
+      "name": "FLUXCAPACITOR",
+      "category": "Genomics",
+      "features": ["RNA-Seq", "Transcriptomics", "Expression Analysis"],
+      "cost": "Free",
+      "description": "A software for quantifying the abundance of alternatively spliced isoforms in RNA-Seq data.",
+      "url": "http://fluxcapacitor.sf.net/",
+      "language": "Python",
+      "platform": "Cross-platform"
+  },
+  {
+      "name": "GATK (Genome Analysis Toolkit)",
+      "category": "Genomics",
+      "features": ["Variant Discovery", "Genotyping", "Data Analysis"],
+      "cost": "Free",
+      "description": "A toolkit for variant discovery in high-throughput sequencing data.",
+      "url": "https://gatk.broadinstitute.org/",
+      "language": "Java",
+      "platform": "Cross-platform"
+  },
+  {
+      "name": "GeneMANIA",
+      "category": "Network Analysis",
+      "features": ["Gene Function", "Gene Networks", "Data Analysis"],
+      "cost": "Free",
+      "description": "A web-based tool for predicting the function of genes and gene sets using functional interaction networks.",
+      "url": "http://genemania.org/",
+      "language": "JavaScript",
+      "platform": "Web-based"
+  },
+  {
+      "name": "Geneious",
+      "category": "Bioinformatics",
+      "features": ["Sequence Analysis", "Molecular Biology", "Data Visualization"],
+      "cost": "Paid",
+      "description": "A software platform for the organization and analysis of molecular biology data.",
+      "url": "https://www.geneious.com/",
+      "language": "C++",
+      "platform": "Windows, macOS, Linux"
+  },
+  {
+      "name": "GEMMA",
+      "category": "Population Genetics",
+      "features": ["Genome-Wide Association", "Mixed Models", "Data Analysis"],
+      "cost": "Free",
+      "description": "A software tool for genome-wide association analysis using a linear mixed model.",
+      "url": "https://github.com/genetics-statistics/GEMMA",
+      "language": "C++",
+      "platform": "Cross-platform"
+  },
+  {
+      "name": "GEO2R",
+      "category": "Genomics",
+      "features": ["Gene Expression Analysis", "Microarray", "Data Analysis"],
+      "cost": "Free",
+      "description": "An online tool for comparing groups of samples in a GEO Series to identify differentially expressed genes.",
+      "url": "https://www.ncbi.nlm.nih.gov/geo/geo2r/",
+      "language": "Web-based",
+      "platform": "Web-based"
+  },
+  {
+      "name": "GROMACS",
+      "category": "Molecular Dynamics",
+      "features": ["Molecular Simulation", "Protein Dynamics", "Data Analysis"],
+      "cost": "Free",
+      "description": "A versatile package to perform molecular dynamics, i.e., simulate the Newtonian equations of motion for systems with hundreds to millions of particles.",
+      "url": "http://www.gromacs.org/",
+      "language": "C++",
+      "platform": "Windows, macOS, Linux"
+  },
+  {
+      "name": "GSEApy",
+      "category": "Genomics",
+      "features": ["Gene Set Enrichment", "Transcriptomics", "Data Analysis"],
+      "cost": "Free",
+      "description": "A Python package for gene set enrichment analysis.",
+      "url": "https://gseapy.readthedocs.io/en/latest/",
+      "language": "Python",
+      "platform": "Cross-platform"
+  },
+  {
+      "name": "HTSeq",
+      "category": "Genomics",
+      "features": ["RNA-Seq", "Data Analysis", "Transcriptomics"],
+      "cost": "Free",
+      "description": "A Python package for processing and analyzing high-throughput sequencing data.",
+      "url": "https://htseq.readthedocs.io/en/release_0.11.1/",
+      "language": "Python",
+      "platform": "Cross-platform"
+  },
+  {
+      "name": "Infernal",
+      "category": "Genomics",
+      "features": ["RNA Alignment", "Data Analysis", "Genome Annotation"],
+      "cost": "Free",
+      "description": "A software package for RNA homology search and alignment using covariance models.",
+      "url": "http://eddylab.org/infernal/",
+      "language": "C++",
+      "platform": "Cross-platform"
+  },
+  {
+      "name": "I-TASSER",
+      "category": "Structural Biology",
+      "features": ["Protein Structure Prediction", "Molecular Modeling", "Data Analysis"],
+      "cost": "Free",
+      "description": "A software suite for automated protein structure and function prediction.",
+      "url": "https://zhanglab.ccmb.med.umich.edu/I-TASSER/",
+      "language": "Java, C++",
+      "platform": "Cross-platform"
+  },
+  {
+      "name": "Jalview",
+      "category": "Bioinformatics",
+      "features": ["Multiple Sequence Alignment", "Data Visualization", "Phylogenetics"],
+      "cost": "Free",
+      "description": "A free program for multiple sequence alignment editing, visualization, and analysis.",
+      "url": "https://www.jalview.org/",
+      "language": "Java",
+      "platform": "Windows, macOS, Linux"
+  },
+  {
+      "name": "Kaiju",
+      "category": "Metagenomics",
+      "features": ["Taxonomic Classification", "Metagenomic Data", "Sequence Analysis"],
+      "cost": "Free",
+      "description": "A program for taxonomic classification of high-throughput metagenomic sequencing reads.",
+      "url": "https://kaiju.binf.ku.dk/",
+      "language": "C++",
+      "platform": "Cross-platform"
+  },
+  {
+      "name": "KBase",
+      "category": "Bioinformatics",
+      "features": ["Data Analysis", "Collaborative Research", "Systems Biology"],
+      "cost": "Free",
+      "description": "An open-source software and data science platform designed for collaborative, systems biology research.",
+      "url": "https://kbase.us/",
+      "language": "Python, JavaScript",
+      "platform": "Web-based"
+  },
+  {
+      "name": "Kraken",
+      "category": "Metagenomics",
+      "features": ["Taxonomic Classification", "Metagenomic Data", "Sequence Analysis"],
+      "cost": "Free",
+      "description": "An ultrafast and highly accurate program for assigning taxonomic labels to metagenomic DNA sequences.",
+      "url": "https://ccb.jhu.edu/software/kraken/",
+      "language": "C++",
+      "platform": "Cross-platform"
+  },
+  {
+      "name": "Liftover",
+      "category": "Genomics",
+      "features": ["Genome Mapping", "Data Conversion", "Bioinformatics"],
+      "cost": "Free",
+      "description": "A tool for converting coordinates between different genome assemblies.",
+      "url": "https://genome.ucsc.edu/cgi-bin/hgLiftOver",
+      "language": "C++",
+      "platform": "Cross-platform"
+  },
+  {
+      "name": "MAnorm",
+      "category": "Epigenomics",
+      "features": ["ChIP-Seq Analysis", "Differential Analysis", "Peak Calling"],
+      "cost": "Free",
+      "description": "A normalization and comparison tool for ChIP-seq datasets.",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3577362/",
+      "language": "Python",
+      "platform": "Cross-platform"
+  },
+  {
+      "name": "MAUVE",
+      "category": "Genomics",
+      "features": ["Genome Alignment", "Phylogenetics", "Comparative Genomics"],
+      "cost": "Free",
+      "description": "A software tool for the alignment of conserved genomic sequences and the discovery of rearrangements.",
+      "url": "http://darlinglab.org/mauve/mauve.html",
+      "language": "C++",
+      "platform": "Cross-platform"
+  },
+  {
+      "name": "MISO",
+      "category": "Genomics",
+      "features": ["RNA Splicing", "Alternative Splicing", "RNA-Seq"],
+      "cost": "Free",
+      "description": "A probabilistic framework for RNA-Seq analysis and quantification of alternative splicing events.",
+      "url": "https://miso.readthedocs.io/en/fastmiso/",
+      "language": "Python",
+      "platform": "Cross-platform"
+  },
+  {
+      "name": "Molecular Operating Environment (MOE)",
+      "category": "Molecular Modeling",
+      "features": ["Drug Discovery", "Molecular Dynamics", "Structure-Based Design"],
+      "cost": "Paid",
+      "description": "A comprehensive suite of tools for molecular modeling, simulation, and drug discovery.",
+      "url": "https://www.chemcomp.com/MOE-Molecular_Operating_Environment.htm",
+      "language": "C++",
+      "platform": "Windows, macOS, Linux"
+  },
+  {
+      "name": "MultiQC",
+      "category": "Genomics",
+      "features": ["Quality Control", "Data Visualization", "Next-Gen Sequencing"],
+      "cost": "Free",
+      "description": "A tool to aggregate bioinformatics results across many samples into a single report.",
+      "url": "https://multiqc.info/",
+      "language": "Python",
+      "platform": "Cross-platform"
+  },
+  {
+      "name": "NanoMod",
+      "category": "Genomics",
+      "features": ["Nanopore Sequencing", "Data Analysis", "Modification Detection"],
+      "cost": "Free",
+      "description": "A computational tool for identifying DNA modifications in nanopore sequencing data.",
+      "url": "https://nanomod.sourceforge.net/",
+      "language": "Python",
+      "platform": "Cross-platform"
+  },
+  {
+      "name": "ncRNA-Predict",
+      "category": "Genomics",
+      "features": ["Non-Coding RNA", "Genome Annotation", "Sequence Analysis"],
+      "cost": "Free",
+      "description": "A tool for predicting non-coding RNA genes in genomic sequences.",
+      "url": "https://github.com/bioinfo-core/ncRNA-Predict",
+      "language": "Python",
+      "platform": "Cross-platform"
+  },
+  {
+      "name": "ngs.plot",
+      "category": "Genomics",
+      "features": ["Data Visualization", "Next-Gen Sequencing", "Genomic Regions"],
+      "cost": "Free",
+      "description": "A tool for visualizing the enrichment of high-throughput sequencing signals.",
+      "url": "https://github.com/shenlab-sinai/ngsplot",
+      "language": "Perl",
+      "platform": "Cross-platform"
+  },
+  {
+      "name": "Nextstrain",
+      "category": "Genomics",
+      "features": ["Genomic Epidemiology", "Data Visualization", "Pathogen Genomics"],
+      "cost": "Free",
+      "description": "An open-source project to harness the scientific and public health potential of pathogen genome data.",
+      "url": "https://nextstrain.org/",
+      "language": "JavaScript, Python",
+      "platform": "Web-based"
+  },
+  {
+      "name": "OncoPrint",
+      "category": "Cancer Genomics",
+      "features": ["Data Visualization", "Genomic Alterations", "Mutation Analysis"],
+      "cost": "Free",
+      "description": "A tool for visualizing multiple genomic alterations in cancer research.",
+      "url": "https://www.cbioportal.org/oncoprinter",
+      "language": "JavaScript",
+      "platform": "Web-based"
+  },
+  {
+      "name": "Partek Flow",
+      "category": "Genomics",
+      "features": ["Data Analysis", "Next-Gen Sequencing", "Bioinformatics"],
+      "cost": "Paid",
+      "description": "A genomics analysis software designed to analyze next-generation sequencing data.",
+      "url": "https://www.partek.com/partek-flow/",
+      "language": "Java",
+      "platform": "Windows, macOS"
+  },
+  {
+      "name": "Picard",
+      "category": "Genomics",
+      "features": ["Sequence Alignment", "Data Analysis", "Variant Calling"],
+      "cost": "Free",
+      "description": "A set of command line tools for manipulating high-throughput sequencing (HTS) data and formats.",
+      "url": "http://broadinstitute.github.io/picard/",
+      "language": "Java",
+      "platform": "Cross-platform"
+  },
+  {
+      "name": "Plink2",
+      "category": "Population Genetics",
+      "features": ["Data Analysis", "Genome-Wide Association", "Genetic Data"],
+      "cost": "Free",
+      "description": "A toolset for whole-genome association and population-based linkage analyses.",
+      "url": "https://www.cog-genomics.org/plink/2.0/",
+      "language": "C++",
+      "platform": "Cross-platform"
+  },
+  {
+      "name": "Prokka",
+      "category": "Genomics",
+      "features": ["Genome Annotation", "Prokaryotic Genomes", "Bioinformatics"],
+      "cost": "Free",
+      "description": "A software tool for the rapid annotation of prokaryotic genomes.",
+      "url": "https://github.com/tseemann/prokka",
+      "language": "Perl, Python",
+      "platform": "Cross-platform"
+  },
+  {
+      "name": "PyRx",
+      "category": "Molecular Modeling",
+      "features": ["Virtual Screening", "Molecular Docking", "Drug Discovery"],
+      "cost": "Free",
+      "description": "A Virtual Screening software for Computational Drug Discovery that can be used to screen libraries of compounds against potential drug targets.",
+      "url": "https://pyrx.sourceforge.io/",
+      "language": "Python",
+      "platform": "Windows, macOS, Linux"
+  },
+  {
+      "name": "Raven",
+      "category": "Metabolic Engineering",
+      "features": ["Metabolic Modeling", "Data Analysis", "Systems Biology"],
+      "cost": "Free",
+      "description": "A MATLAB toolbox for generating genome-scale metabolic models.",
+      "url": "https://sysbiochalmers.github.io/RAVEN/",
+      "language": "MATLAB",
+      "platform": "Windows, macOS, Linux"
+  },
+  {
+      "name": "RSEM",
+      "category": "Genomics",
+      "features": ["RNA-Seq", "Expression Quantification", "Transcriptomics"],
+      "cost": "Free",
+      "description": "An RNA-Seq transcript quantification software that estimates gene and isoform expression levels.",
+      "url": "http://deweylab.biostat.wisc.edu/rsem/",
+      "language": "C++",
+      "platform": "Cross-platform"
+  },
+  {
+      "name": "SAMtools",
+      "category": "Genomics",
+      "features": ["Sequence Alignment", "Data Analysis", "Variant Calling"],
+      "cost": "Free",
+      "description": "A suite of programs for interacting with high-throughput sequencing data.",
+      "url": "http://www.htslib.org/",
+      "language": "C",
+      "platform": "Cross-platform"
+  },
+  {
+      "name": "SANSparallel",
+      "category": "Protein Analysis",
+      "features": ["Protein Domain Analysis", "Bioinformatics", "Sequence Analysis"],
+      "cost": "Free",
+      "description": "A software package for detecting protein domains and comparing their sequences.",
+      "url": "https://github.com/Tsjerk/SANSparallel",
+      "language": "C++",
+      "platform": "Cross-platform"
+  },
+  {
+      "name": "Shiny",
+      "category": "Data Visualization",
+      "features": ["Interactive Web Apps", "R Programming", "Data Analysis"],
+      "cost": "Free",
+      "description": "An R package that makes it easy to build interactive web apps straight from R.",
+      "url": "https://shiny.rstudio.com/",
+      "language": "R, JavaScript",
+      "platform": "Web-based"
+  },
+  {
+      "name": "SIFT",
+      "category": "Genomics",
+      "features": ["Variant Effect Prediction", "Protein Function", "Data Analysis"],
+      "cost": "Free",
+      "description": "A program that predicts whether an amino acid substitution affects protein function.",
+      "url": "https://sift.bii.a-star.edu.sg/",
+      "language": "Perl",
+      "platform": "Cross-platform"
+  },
+  {
+      "name": "SimBioNeT",
+      "category": "Bioinformatics",
+      "features": ["Data Analysis", "Metagenomics", "Pipeline"],
+      "cost": "Free",
+      "description": "A versatile bioinformatics pipeline for the analysis of microbiome and metagenomics data.",
+      "url": "https://sim-bio.net/",
+      "language": "Python",
+      "platform": "Cross-platform"
+  },
+  {
+      "name": "SPAdes",
+      "category": "Genomics",
+      "features": ["Genome Assembly", "Metagenomics", "Bioinformatics"],
+      "cost": "Free",
+      "description": "A genome assembler for single-cell and multi-cell bacterial datasets.",
+      "url": "https://cab.spbu.ru/software/spades/",
+      "language": "C++",
+      "platform": "Cross-platform"
+  },
+  {
+      "name": "STRING",
+      "category": "Network Analysis",
+      "features": ["Protein Interaction Networks", "Bioinformatics", "Data Analysis"],
+      "cost": "Free",
+      "description": "A database of known and predicted protein-protein interactions.",
+      "url": "https://string-db.org/",
+      "language": "JavaScript",
+      "platform": "Web-based"
+  },
+  {
+      "name": "T-COFFEE",
+      "category": "Bioinformatics",
+      "features": ["Multiple Sequence Alignment", "Phylogenetics", "Data Analysis"],
+      "cost": "Free",
+      "description": "A software package for computing, evaluating, and manipulating multiple alignments of DNA, RNA, protein sequences, and structures.",
+      "url": "http://tcoffee.crg.cat/",
+      "language": "C",
+      "platform": "Cross-platform"
+  },
+  {
+      "name": "Taverna",
+      "category": "Bioinformatics",
+      "features": ["Workflow Management", "Data Analysis", "Automation"],
+      "cost": "Free",
+      "description": "An open-source suite of tools for designing and executing scientific workflows.",
+      "url": "https://taverna.incubator.apache.org/",
+      "language": "Java",
+      "platform": "Cross-platform"
+  },
+  {
+      "name": "TreeView",
+      "category": "Data Visualization",
+      "features": ["Hierarchical Clustering", "Data Analysis", "Genomics"],
+      "cost": "Free",
+      "description": "A program that provides a way to visualize hierarchical clustering results.",
+      "url": "https://taxonomy.zoology.gla.ac.uk/rod/treeview.html",
+      "language": "C++",
+      "platform": "Windows, macOS, Linux"
+  },
+  {
+      "name": "Trinity",
+      "category": "Genomics",
+      "features": ["RNA-Seq", "De Novo Transcriptome Assembly", "Data Analysis"],
+      "cost": "Free",
+      "description": "A software package for de novo transcriptome assembly from RNA-Seq data.",
+      "url": "https://github.com/trinityrnaseq/trinityrnaseq",
+      "language": "Perl, C++",
+      "platform": "Cross-platform"
+  },
+  {
+      "name": "UCSC Genome Browser",
+      "category": "Genomics",
+      "features": ["Genome Browsing", "Data Visualization", "Annotation"],
+      "cost": "Free",
+      "description": "An online platform for viewing the human genome and other genomes.",
+      "url": "https://genome.ucsc.edu/",
+      "language": "JavaScript",
+      "platform": "Web-based"
+  },
+  {
+      "name": "VCFtools",
+      "category": "Genomics",
+      "features": ["Variant Analysis", "Data Analysis", "Bioinformatics"],
+      "cost": "Free",
+      "description": "A program package designed for working with VCF files, a format for storing genetic variation data.",
+      "url": "https://vcftools.github.io/",
+      "language": "C++",
+      "platform": "Cross-platform"
+  },
+  {
+      "name": "VEGA",
+      "category": "Chemoinformatics",
+      "features": ["Molecular Modeling", "Data Analysis", "Drug Design"],
+      "cost": "Free",
+      "description": "A comprehensive suite of molecular modeling tools for the analysis of chemical and biological data.",
+      "url": "https://www.ddl.unimi.it/vega/",
+      "language": "C++",
+      "platform": "Cross-platform"
+  },
+  {
+      "name": "VMD",
+      "category": "Molecular Visualization",
+      "features": ["3D Visualization", "Molecular Dynamics", "Bioinformatics"],
+      "cost": "Free",
+      "description": "A tool for displaying, animating, and analyzing large biomolecular systems using 3D graphics and built-in scripting.",
+      "url": "https://www.ks.uiuc.edu/Research/vmd/",
+      "language": "C++",
+      "platform": "Windows, macOS, Linux"
+  },
+  {
+      "name": "WHAM",
+      "category": "Genomics",
+      "features": ["Variant Calling", "Structural Variants", "Bioinformatics"],
+      "cost": "Free",
+      "description": "A software tool for calling structural variants in whole-genome sequencing data.",
+      "url": "https://github.com/jason-weirather/wham",
+      "language": "C++",
+      "platform": "Cross-platform"
+  },
+  {
+      "name": "X! Tandem",
+      "category": "Proteomics",
+      "features": ["Protein Identification", "Mass Spectrometry", "Data Analysis"],
+      "cost": "Free",
+      "description": "A program that matches tandem mass spectrometry data with protein sequences.",
+      "url": "https://www.thegpm.org/TANDEM/",
+      "language": "C++",
+      "platform": "Cross-platform"
+  },
+  {
+      "name": "ZEN Intensity Analysis",
+      "category": "Image Analysis",
+      "features": ["Microscopy", "Quantification", "Data Analysis"],
+      "cost": "Paid",
+      "description": "A software tool for analyzing fluorescence intensity in microscopic images.",
+      "url": "https://www.zeiss.com/microscopy/us/products/microscope-software/zen-intensity-analysis.html",
+      "language": "C++",
+      "platform": "Windows, macOS"
+  },
+  {
+      "name": "ZetaHunter",
+      "category": "Metagenomics",
+      "features": ["Species Identification", "Data Analysis", "Fungal Metagenomics"],
+      "cost": "Free",
+      "description": "A tool for identifying the fungal species present in high-throughput metagenomic data.",
+      "url": "https://github.com/zygolife/zetahunter",
+      "language": "Python",
+      "platform": "Cross-platform"
+  },
+  {
+      "name": "Cell Ranger",
+      "category": "Single-Cell Analysis",
+      "features": ["Data Processing", "Single Cell", "Transcriptomics"],
+      "cost": "Free",
+      "description": "A set of analysis pipelines for processing 10x Genomics single-cell gene expression data.",
+      "url": "https://support.10xgenomics.com/single-cell-gene-expression/software/pipelines/latest/what-is-cell-ranger",
+      "language": "C++",
+      "platform": "Linux"
+  },
+  {
+      "name": "Monocle",
+      "category": "Single-Cell Analysis",
+      "features": ["Trajectory Analysis", "Single Cell", "Transcriptomics"],
+      "cost": "Free",
+      "description": "An R toolkit for analyzing single-cell gene expression data to reconstruct cell trajectories.",
+      "url": "http://cole-trapnell-lab.github.io/monocle-release/",
+      "language": "R",
+      "platform": "Cross-platform"
+  },
+  {
+      "name": "TensorFlow",
+      "category": "Machine Learning",
+      "features": ["Deep Learning", "Neural Networks", "Data Analysis"],
+      "cost": "Free",
+      "description": "An open-source machine learning framework developed by Google for numerical computation and large-scale machine learning.",
+      "url": "https://www.tensorflow.org/",
+      "language": "C++, Python",
+      "platform": "Cross-platform"
+  },
+  {
+      "name": "Keras",
+      "category": "Machine Learning",
+      "features": ["Neural Networks", "Deep Learning", "Python"],
+      "cost": "Free",
+      "description": "An open-source neural-network library written in Python, capable of running on top of TensorFlow.",
+      "url": "https://keras.io/",
+      "language": "Python",
+      "platform": "Cross-platform"
+  },
+  {
+      "name": "NumPy",
+      "category": "Data Analysis",
+      "features": ["Numerical Computing", "Data Manipulation", "Mathematical Functions"],
+      "cost": "Free",
+      "description": "A fundamental package for scientific computing with Python.",
+      "url": "https://numpy.org/",
+      "language": "C, Python",
+      "platform": "Cross-platform"
+  },
+  {
+      "name": "SciPy",
+      "category": "Data Analysis",
+      "features": ["Scientific Computing", "Mathematical Algorithms", "Optimization"],
+      "cost": "Free",
+      "description": "An open-source Python library used for scientific and technical computing.",
+      "url": "https://www.scipy.org/",
+      "language": "Python",
+      "platform": "Cross-platform"
+  },
+  {
+      "name": "Pandas",
+      "category": "Data Analysis",
+      "features": ["Data Manipulation", "Data Structures", "Time Series"],
+      "cost": "Free",
+      "description": "An open-source data analysis and manipulation tool, built on top of the Python programming language.",
+      "url": "https://pandas.pydata.org/",
+      "language": "Python",
+      "platform": "Cross-platform"
+  },
+  {
+      "name": "Scikit-image",
+      "category": "Image Analysis",
+      "features": ["Image Processing", "Computer Vision", "Python"],
+      "cost": "Free",
+      "description": "An open-source image processing library for Python.",
+      "url": "https://scikit-image.org/",
+      "language": "Python",
+      "platform": "Cross-platform"
+  },
+  {
+      "name": "OpenCV",
+      "category": "Computer Vision",
+      "features": ["Image Processing", "Computer Vision", "Machine Learning"],
+      "cost": "Free",
+      "description": "An open-source computer vision and machine learning software library.",
+      "url": "https://opencv.org/",
+      "language": "C++, Python",
+      "platform": "Cross-platform"
+  },
+  {
+      "name": "KNIME",
+      "category": "Data Analytics",
+      "features": ["Data Mining", "Machine Learning", "Visual Workflows"],
+      "cost": "Free",
+      "description": "An open-source analytics platform for creating data science applications and services.",
+      "url": "https://www.knime.com/",
+      "language": "Java",
+      "platform": "Windows, macOS, Linux"
+  },
+  {
+      "name": "Kallisto",
+      "category": "Genomics",
+      "features": ["RNA-Seq", "Expression Quantification", "Transcriptomics"],
+      "cost": "Free",
+      "description": "An alignment-free method for quantifying abundances of transcripts from RNA-Seq data.",
+      "url": "https://pachterlab.github.io/kallisto/",
+      "language": "C++",
+      "platform": "Cross-platform"
+  },
+  {
+      "name": "Salmon",
+      "category": "Genomics",
+      "features": ["RNA-Seq", "Expression Quantification", "Transcriptomics"],
+      "cost": "Free",
+      "description": "A tool for quantifying transcript abundances from RNA-Seq data with lightweight algorithms.",
+      "url": "https://combine-lab.github.io/salmon/",
+      "language": "C++",
+      "platform": "Cross-platform"
+  },
+  {
+      "name": "edgeR",
+      "category": "Genomics",
+      "features": ["Differential Expression", "RNA-Seq", "Transcriptomics"],
+      "cost": "Free",
+      "description": "An R package for differential expression analysis of digital gene expression data.",
+      "url": "https://bioconductor.org/packages/release/bioc/html/edgeR.html",
+      "language": "R",
+      "platform": "Cross-platform"
+  },
+  {
+      "name": "STAR",
+      "category": "Genomics",
+      "features": ["RNA-Seq", "Sequence Alignment", "Transcriptomics"],
+      "cost": "Free",
+      "description": "An ultrafast universal RNA-Seq aligner.",
+      "url": "https://github.com/alexdobin/STAR",
+      "language": "C++",
+      "platform": "Cross-platform"
+  },
+  {
+      "name": "Minimap2",
+      "category": "Genomics",
+      "features": ["Sequence Alignment", "Long Reads", "Genome Mapping"],
+      "cost": "Free",
+      "description": "A versatile sequence alignment program that aligns DNA or mRNA sequences against a large reference database.",
+      "url": "https://github.com/lh3/minimap2",
+      "language": "C++",
+      "platform": "Cross-platform"
+  },
+  {
+      "name": "SnpEff",
+      "category": "Genomics",
+      "features": ["Variant Annotation", "Data Analysis", "Bioinformatics"],
+      "cost": "Free",
+      "description": "A genetic variant annotation and effect prediction toolbox.",
+      "url": "http://snpeff.sourceforge.net/SnpEff.html",
+      "language": "Java",
+      "platform": "Cross-platform"
+  },
+  {
+      "name": "BEDTools",
+      "category": "Genomics",
+      "features": ["Genomic Interval Manipulation", "Data Analysis", "Bioinformatics"],
+      "cost": "Free",
+      "description": "A powerful toolset for genome arithmetic, allowing manipulation of genomic features in BED, GFF/GTF, VCF formats.",
+      "url": "https://bedtools.readthedocs.io/",
+      "language": "C++",
+      "platform": "Cross-platform"
+  },
+  {
+      "name": "MACS2",
+      "category": "Genomics",
+      "features": ["ChIP-Seq", "Peak Calling", "Epigenomics"],
+      "cost": "Free",
+      "description": "Model-based Analysis of ChIP-Seq data to identify transcription factor binding sites.",
+      "url": "https://github.com/macs3-project/MACS",
+      "language": "C++",
+      "platform": "Cross-platform"
+  },
+  {
+      "name": "HMMER",
+      "category": "Bioinformatics",
+      "features": ["Sequence Alignment", "Protein Analysis", "Hidden Markov Models"],
+      "cost": "Free",
+      "description": "A software suite for sequence analysis using profile hidden Markov models.",
+      "url": "http://hmmer.org/",
+      "language": "C",
+      "platform": "Cross-platform"
+  },
+  {
+      "name": "Clustal Omega",
+      "category": "Bioinformatics",
+      "features": ["Multiple Sequence Alignment", "Protein Analysis", "Phylogenetics"],
+      "cost": "Free",
+      "description": "A fast and scalable tool for multiple sequence alignment of protein sequences.",
+      "url": "http://www.clustal.org/omega/",
+      "language": "C++",
+      "platform": "Cross-platform"
+  },
+  {
+      "name": "OrthoFinder",
+      "category": "Bioinformatics",
+      "features": ["Ortholog Identification", "Comparative Genomics", "Phylogenetics"],
+      "cost": "Free",
+      "description": "An accurate and fast orthology inference tool.",
+      "url": "https://davidemms.github.io/OrthoFinder/",
+      "language": "Python",
+      "platform": "Cross-platform"
+  },
+  {
+      "name": "BUSCO",
+      "category": "Genomics",
+      "features": ["Genome Assembly", "Quality Assessment", "Comparative Genomics"],
+      "cost": "Free",
+      "description": "Benchmarking Universal Single-Copy Orthologs: assessing genome assembly and annotation completeness.",
+      "url": "https://busco.ezlab.org/",
+      "language": "Python",
+      "platform": "Cross-platform"
+  },
+  {
+      "name": "SnpSift",
+      "category": "Genomics",
+      "features": ["Variant Annotation", "Data Analysis", "Bioinformatics"],
+      "cost": "Free",
+      "description": "A toolbox that allows filtering and manipulation of annotated SNPs in VCF format.",
+      "url": "http://snpeff.sourceforge.net/SnpSift.html",
+      "language": "Java",
+      "platform": "Cross-platform"
+  },
+  {
+      "name": "Artemis",
+      "category": "Genomics",
+      "features": ["Genome Browsing", "Annotation", "Visualization"],
+      "cost": "Free",
+      "description": "A genome browser and annotation tool that allows visualization of sequence features.",
+      "url": "https://www.sanger.ac.uk/tool/artemis/",
+      "language": "Java",
+      "platform": "Windows, macOS, Linux"
+  },
+  {
+      "name": "BEDOPS",
+      "category": "Genomics",
+      "features": ["Genomic Interval Manipulation", "Data Analysis", "Bioinformatics"],
+      "cost": "Free",
+      "description": "A fast, highly scalable, and easily-parallelizable genome analysis toolkit.",
+      "url": "https://bedops.readthedocs.io/",
+      "language": "C++",
+      "platform": "Cross-platform"
+  },
+  {
+      "name": "BCFtools",
+      "category": "Genomics",
+      "features": ["Variant Calling", "Data Analysis", "Bioinformatics"],
+      "cost": "Free",
+      "description": "Tools for manipulating VCF and BCF files, such as calling and filtering variants.",
+      "url": "http://www.htslib.org/doc/bcftools.html",
+      "language": "C",
+      "platform": "Cross-platform"
+  },
+  {
+      "name": "Biopython",
+      "category": "Bioinformatics",
+      "features": ["Programming", "Sequence Analysis", "Data Analysis"],
+      "cost": "Free",
+      "description": "A set of freely available tools for biological computation written in Python.",
+      "url": "https://biopython.org/",
+      "language": "Python",
+      "platform": "Cross-platform"
+  },
+  {
+      "name": "BioPerl",
+      "category": "Bioinformatics",
+      "features": ["Programming", "Sequence Analysis", "Data Analysis"],
+      "cost": "Free",
+      "description": "A collection of Perl modules that facilitate the development of Perl scripts for bioinformatics applications.",
+      "url": "https://bioperl.org/",
+      "language": "Perl",
+      "platform": "Cross-platform"
+  },
+  {
+      "name": "UCSF Chimera",
+      "category": "Structural Biology",
+      "features": ["3D Visualization", "Molecular Modeling", "Protein Structures"],
+      "cost": "Free",
+      "description": "An extensible molecular modeling system for interactive visualization and analysis.",
+      "url": "https://www.cgl.ucsf.edu/chimera/",
+      "language": "C++",
+      "platform": "Windows, macOS, Linux"
+  },
+  {
+      "name": "UCSF ChimeraX",
+      "category": "Structural Biology",
+      "features": ["3D Visualization", "Molecular Modeling", "Protein Structures"],
+      "cost": "Free",
+      "description": "The next-generation molecular visualization program from the UCSF Chimera team.",
+      "url": "https://www.cgl.ucsf.edu/chimerax/",
+      "language": "C++",
+      "platform": "Windows, macOS, Linux"
+  },
+  {
+      "name": "GCTA",
+      "category": "Genomics",
+      "features": ["Genome-Wide Association", "Heritability Estimation", "Genetic Data"],
+      "cost": "Free",
+      "description": "Genome-wide Complex Trait Analysis tool for estimating the proportion of phenotypic variance explained by all SNPs.",
+      "url": "http://cnsgenomics.com/software/gcta/",
+      "language": "C",
+      "platform": "Cross-platform"
+  },
+  {
+      "name": "MRtrix3",
+      "category": "Neuroimaging",
+      "features": ["Diffusion MRI", "Fiber Tractography", "Data Analysis"],
+      "cost": "Free",
+      "description": "A software package for the processing and visualization of diffusion MRI data.",
+      "url": "https://www.mrtrix.org/",
+      "language": "C++",
+      "platform": "Windows, macOS, Linux"
+  },
+  {
+      "name": "FreeSurfer",
+      "category": "Neuroimaging",
+      "features": ["MRI Analysis", "Cortical Reconstruction", "Functional MRI"],
+      "cost": "Free",
+      "description": "A software package for the analysis and visualization of structural and functional neuroimaging data.",
+      "url": "https://surfer.nmr.mgh.harvard.edu/",
+      "language": "C++",
+      "platform": "Windows, macOS, Linux"
+  },
+  {
+      "name": "FSL",
+      "category": "Neuroimaging",
+      "features": ["MRI Analysis", "Functional MRI", "Data Processing"],
+      "cost": "Free",
+      "description": "FMRIB Software Library: a comprehensive library of analysis tools for FMRI, MRI and DTI brain imaging data.",
+      "url": "https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/",
+      "language": "C++, Python",
+      "platform": "Windows, macOS, Linux"
+  },
+  {
+      "name": "SPM",
+      "category": "Neuroimaging",
+      "features": ["Statistical Analysis", "Functional MRI", "EEG/MEG"],
+      "cost": "Free",
+      "description": "Statistical Parametric Mapping: a software package designed for the analysis of brain imaging data sequences.",
+      "url": "https://www.fil.ion.ucl.ac.uk/spm/",
+      "language": "MATLAB",
+      "platform": "Windows, macOS, Linux"
+  },
+  {
+      "name": "ANTs",
+      "category": "Neuroimaging",
+      "features": ["Image Registration", "Segmentation", "MRI Analysis"],
+      "cost": "Free",
+      "description": "Advanced Normalization Tools: a software suite for processing and analysis of multidimensional images.",
+      "url": "http://stnava.github.io/ANTs/",
+      "language": "C++",
+      "platform": "Cross-platform"
+  },
+  {
+      "name": "Canu",
+      "category": "Genomics",
+      "features": ["Genome Assembly", "Long Reads", "Bioinformatics"],
+      "cost": "Free",
+      "description": "A genome assembler for high-noise single-molecule sequencing reads.",
+      "url": "https://canu.readthedocs.io/",
+      "language": "C++",
+      "platform": "Cross-platform"
+  },
+  {
+      "name": "Flye",
+      "category": "Genomics",
+      "features": ["Genome Assembly", "Long Reads", "Bioinformatics"],
+      "cost": "Free",
+      "description": "A de novo assembler for single molecule sequencing reads, such as those produced by PacBio and Oxford Nanopore Technologies.",
+      "url": "https://github.com/fenderglass/Flye",
+      "language": "C++",
+      "platform": "Cross-platform"
+  },
+  {
+      "name": "QUAST",
+      "category": "Genomics",
+      "features": ["Genome Assembly Evaluation", "Quality Assessment", "Bioinformatics"],
+      "cost": "Free",
+      "description": "Quality Assessment Tool for Genome Assemblies.",
+      "url": "http://quast.sourceforge.net/",
+      "language": "C++",
+      "platform": "Cross-platform"
+  },
+  {
+      "name": "SSPACE",
+      "category": "Genomics",
+      "features": ["Genome Assembly", "Scaffolding", "Bioinformatics"],
+      "cost": "Free for academic use",
+      "description": "A scaffolding tool for assembling draft genomes using paired-read data.",
+      "url": "https://baseclear.com/genomics/bioinformatics/basetools/SSPACE",
+      "language": "C++",
+      "platform": "Cross-platform"
+  },
+  {
+      "name": "SOAPdenovo2",
+      "category": "Genomics",
+      "features": ["Genome Assembly", "De Novo Assembly", "Bioinformatics"],
+      "cost": "Free",
+      "description": "A short-read assembly method that can build a de novo draft assembly for large genomes.",
+      "url": "https://github.com/aquaskyline/SOAPdenovo2",
+      "language": "C++",
+      "platform": "Cross-platform"
+  },
+  {
+      "name": "MrBayes",
+      "category": "Phylogenetics",
+      "features": ["Bayesian Inference", "Phylogenetic Analysis", "Molecular Evolution"],
+      "cost": "Free",
+      "description": "A program for Bayesian inference and model choice across a wide range of phylogenetic and evolutionary models.",
+      "url": "http://nbisweden.github.io/MrBayes/",
+      "language": "C++",
+      "platform": "Cross-platform"
+  },
+  {
+      "name": "RAxML",
+      "category": "Phylogenetics",
+      "features": ["Phylogenetic Analysis", "Maximum Likelihood", "Molecular Evolution"],
+      "cost": "Free",
+      "description": "Randomized Axelerated Maximum Likelihood: a program for sequential and parallel Maximum Likelihood-based inference of large phylogenetic trees.",
+      "url": "https://cme.h-its.org/exelixis/web/software/raxml/",
+      "language": "C++",
+      "platform": "Cross-platform"
+  },
+  {
+      "name": "IQ-TREE",
+      "category": "Phylogenetics",
+      "features": ["Phylogenetic Analysis", "Maximum Likelihood", "Molecular Evolution"],
+      "cost": "Free",
+      "description": "An efficient software for phylogenomic inference using maximum likelihood.",
+      "url": "http://www.iqtree.org/",
+      "language": "C++",
+      "platform": "Cross-platform"
+  },
+  {
+      "name": "OrthoMCL",
+      "category": "Bioinformatics",
+      "features": ["Ortholog Identification", "Comparative Genomics", "Clustering"],
+      "cost": "Free",
+      "description": "An algorithm for grouping orthologous protein sequences across multiple genomes.",
+      "url": "https://orthomcl.org/",
+      "language": "Perl, C++",
+      "platform": "Cross-platform"
+  },
+  {
+      "name": "ETE Toolkit",
+      "category": "Phylogenetics",
+      "features": ["Phylogenetic Tree Visualization", "Data Analysis", "Bioinformatics"],
+      "cost": "Free",
+      "description": "Environment for Tree Exploration: a Python programming toolkit for tree visualization and analysis.",
+      "url": "http://etetoolkit.org/",
+      "language": "Python",
+      "platform": "Cross-platform"
+  },
+  {
+      "name": "PHYLIP",
+      "category": "Phylogenetics",
+      "features": ["Phylogenetic Analysis", "Evolutionary Biology", "Data Analysis"],
+      "cost": "Free",
+      "description": "The PHYLogeny Inference Package: a free package of programs for inferring phylogenies.",
+      "url": "http://evolution.genetics.washington.edu/phylip.html",
+      "language": "C",
+      "platform": "Cross-platform"
+  },
+  {
+      "name": "HyPhy",
+      "category": "Phylogenetics",
+      "features": ["Molecular Evolution", "Selection Analysis", "Bioinformatics"],
+      "cost": "Free",
+      "description": "Hypothesis testing using phylogenies: an open-source software package for the analysis of genetic sequences using techniques in molecular evolution.",
+      "url": "http://www.hyphy.org/",
+      "language": "C++",
+      "platform": "Cross-platform"
+  },
+  {
+      "name": "Gblocks",
+      "category": "Phylogenetics",
+      "features": ["Sequence Alignment", "Data Filtering", "Bioinformatics"],
+      "cost": "Free",
+      "description": "A program that eliminates poorly aligned positions and divergent regions of an alignment.",
+      "url": "http://molevol.cmima.csic.es/castresana/Gblocks.html",
+      "language": "Perl",
+      "platform": "Cross-platform"
+  },
+  {
+      "name": "BEAST",
+      "category": "Phylogenetics",
+      "features": ["Bayesian Inference", "Molecular Dating", "Population Genetics"],
+      "cost": "Free",
+      "description": "Bayesian Evolutionary Analysis Sampling Trees: a software package for Bayesian analysis of molecular sequences using MCMC.",
+      "url": "http://beast.community/",
+      "language": "Java",
+      "platform": "Cross-platform"
+  },
+  {
+      "name": "NAMD",
+      "category": "Molecular Dynamics",
+      "features": ["Molecular Simulation", "Protein Dynamics", "High-Performance Computing"],
+      "cost": "Free",
+      "description": "A parallel molecular dynamics code designed for high-performance simulation of large biomolecular systems.",
+      "url": "https://www.ks.uiuc.edu/Research/namd/",
+      "language": "C++",
+      "platform": "Cross-platform"
+  },
+  {
+      "name": "LAMMPS",
+      "category": "Molecular Dynamics",
+      "features": ["Molecular Simulation", "Materials Modeling", "High-Performance Computing"],
+      "cost": "Free",
+      "description": "Large-scale Atomic/Molecular Massively Parallel Simulator: a classical molecular dynamics code.",
+      "url": "https://lammps.sandia.gov/",
+      "language": "C++",
+      "platform": "Cross-platform"
+  },
+  {
+      "name": "Molden",
+      "category": "Computational Chemistry",
+      "features": ["Molecular Visualization", "Quantum Chemistry", "Data Analysis"],
+      "cost": "Free",
+      "description": "A pre- and post-processing program of molecular and electronic structure.",
+      "url": "http://cheminf.cmbi.ru.nl/molden/",
+      "language": "C++",
+      "platform": "Cross-platform"
+  },
+  {
+      "name": "Open Babel",
+      "category": "Chemoinformatics",
+      "features": ["Chemical Format Conversion", "Data Analysis", "Molecular Modeling"],
+      "cost": "Free",
+      "description": "An open-source chemical toolbox designed to speak the many languages of chemical data.",
+      "url": "https://openbabel.org/",
+      "language": "C++",
+      "platform": "Cross-platform"
+  },
+  {
+      "name": "Bioconda",
+      "category": "Bioinformatics",
+      "features": ["Software Distribution", "Package Management", "Bioinformatics"],
+      "cost": "Free",
+      "description": "A channel for the conda package manager specializing in bioinformatics software.",
+      "url": "https://bioconda.github.io/",
+      "language": "N/A",
+      "platform": "Conda"
+  },
+  {
+      "name": "Miniconda",
+      "category": "Software Management",
+      "features": ["Package Management", "Environment Management", "Python Distribution"],
+      "cost": "Free",
+      "description": "A minimal installer for conda, a package manager and environment management system.",
+      "url": "https://docs.conda.io/en/latest/miniconda.html",
+      "language": "N/A",
+      "platform": "Windows, macOS, Linux"
+  },
+  {
+    "name": "Snakemake",
+    "category": "Workflow Management",
+    "features": ["Data Analysis", "Automation", "Reproducibility"],
+    "cost": "Free",
+    "description": "A workflow management system that enables scalable and reproducible data analyses.",
+    "url": "https://snakemake.readthedocs.io/",
+    "language": "Python",
+    "platform": "Cross-platform"
+  },
+  {
+    "name": "Nextflow",
+    "category": "Workflow Management",
+    "features": ["Data Analysis", "Automation", "Parallel Computing"],
+    "cost": "Free",
+    "description": "A data-driven workflow framework that enables scalable and reproducible scientific workflows.",
+    "url": "https://www.nextflow.io/",
+    "language": "Groovy",
+    "platform": "Cross-platform"
+  },
+  {
+    "name": "Common Workflow Language (CWL)",
+    "category": "Workflow Management",
+    "features": ["Data Analysis", "Automation", "Standardization"],
+    "cost": "Free",
+    "description": "A specification for describing analysis workflows and tools in a way that makes them portable and scalable.",
+    "url": "https://www.commonwl.org/",
+    "language": "YAML/JSON",
+    "platform": "Cross-platform"
+  },
+  {
+    "name": "Ensembl Variant Effect Predictor (VEP)",
+    "category": "Genomics",
+    "features": ["Variant Annotation", "Data Analysis", "Bioinformatics"],
+    "cost": "Free",
+    "description": "A tool for annotating and predicting the effects of genetic variants.",
+    "url": "https://www.ensembl.org/info/docs/tools/vep/index.html",
+    "language": "Perl",
+    "platform": "Cross-platform"
+  },
+  {
+    "name": "Reactome",
+    "category": "Bioinformatics",
+    "features": ["Pathway Analysis", "Data Visualization", "Functional Analysis"],
+    "cost": "Free",
+    "description": "An open-source, curated, and peer-reviewed pathway database.",
+    "url": "https://reactome.org/",
+    "language": "Python",
+    "platform": "Web-based"
+  },
+  {
+    "name": "DAVID",
+    "category": "Bioinformatics",
+    "features": ["Functional Annotation", "Gene Enrichment", "Data Analysis"],
+    "cost": "Free",
+    "description": "Database for Annotation, Visualization, and Integrated Discovery: a web tool for functional annotation of genes and proteins.",
+    "url": "https://david.ncifcrf.gov/",
+    "language": "N/A",
+    "platform": "Web-based"
+  },
+  {
+    "name": "KEGG",
+    "category": "Bioinformatics",
+    "features": ["Pathway Analysis", "Genomics", "Data Integration"],
+    "cost": "Free for academic use",
+    "description": "Kyoto Encyclopedia of Genes and Genomes: a resource for understanding high-level functions of biological systems.",
+    "url": "https://www.genome.jp/kegg/",
+    "language": "N/A",
+    "platform": "Web-based"
+  },
+  {
+    "name": "DeepVariant",
+    "category": "Genomics",
+    "features": ["Variant Calling", "Machine Learning", "Bioinformatics"],
+    "cost": "Free",
+    "description": "An analysis pipeline that uses a deep neural network to call genetic variants from next-generation DNA sequencing data.",
+    "url": "https://github.com/google/deepvariant",
+    "language": "Python, TensorFlow",
+    "platform": "Cross-platform"
+  },
+  {
+    "name": "VarScan",
+    "category": "Genomics",
+    "features": ["Variant Calling", "Somatic Mutation", "Bioinformatics"],
+    "cost": "Free",
+    "description": "A platform-independent tool for variant detection in massively parallel sequencing data.",
+    "url": "http://varscan.sourceforge.net/",
+    "language": "Java",
+    "platform": "Cross-platform"
+  },
+  {
+    "name": "FreeBayes",
+    "category": "Genomics",
+    "features": ["Variant Calling", "Population Genetics", "Bioinformatics"],
+    "cost": "Free",
+    "description": "A Bayesian genetic variant detector designed to find small polymorphisms.",
+    "url": "https://github.com/freebayes/freebayes",
+    "language": "C++",
+    "platform": "Cross-platform"
+  },
+  {
+    "name": "Gnuplot",
+    "category": "Data Visualization",
+    "features": ["Plotting", "Graphing", "Data Analysis"],
+    "cost": "Free",
+    "description": "A portable command-line driven graphing utility.",
+    "url": "http://www.gnuplot.info/",
+    "language": "C",
+    "platform": "Cross-platform"
+  },
+  {
+    "name": "SAS",
+    "category": "Statistics",
+    "features": ["Data Analysis", "Statistical Modeling", "Business Intelligence"],
+    "cost": "Paid",
+    "description": "A software suite developed for advanced analytics, multivariate analyses, business intelligence, data management, and predictive analytics.",
+    "url": "https://www.sas.com/",
+    "language": "Proprietary",
+    "platform": "Windows, Linux"
+  },
+  {
+    "name": "Mplus",
+    "category": "Statistics",
+    "features": ["Statistical Modeling", "Structural Equation Modeling", "Data Analysis"],
+    "cost": "Paid",
+    "description": "A statistical modeling program that provides researchers with a flexible tool to analyze their data.",
+    "url": "https://www.statmodel.com/",
+    "language": "Proprietary",
+    "platform": "Windows, macOS"
+  },
+  {
+    "name": "GNU Octave",
+    "category": "Data Analysis",
+    "features": ["Mathematical Modeling", "Numerical Computation", "Programming"],
+    "cost": "Free",
+    "description": "A high-level programming language, primarily intended for numerical computations.",
+    "url": "https://www.gnu.org/software/octave/",
+    "language": "C++, Fortran",
+    "platform": "Cross-platform"
+  },
+  {
+    "name": "Keras",
+    "category": "Machine Learning",
+    "features": ["Deep Learning", "Neural Networks", "Python"],
+    "cost": "Free",
+    "description": "An open-source neural-network library written in Python, capable of running on top of TensorFlow.",
+    "url": "https://keras.io/",
+    "language": "Python",
+    "platform": "Cross-platform"
+  },
+  {
+    "name": "TensorFlow",
+    "category": "Machine Learning",
+    "features": ["Deep Learning", "Neural Networks", "Data Analysis"],
+    "cost": "Free",
+    "description": "An end-to-end open-source platform for machine learning developed by Google.",
+    "url": "https://www.tensorflow.org/",
+    "language": "C++, Python",
+    "platform": "Cross-platform"
+  },
+  {
+    "name": "Apache Spark",
+    "category": "Big Data",
+    "features": ["Data Processing", "Cluster Computing", "Analytics"],
+    "cost": "Free",
+    "description": "An open-source distributed general-purpose cluster-computing framework.",
+    "url": "https://spark.apache.org/",
+    "language": "Scala, Java, Python, R",
+    "platform": "Cross-platform"
+  },
+  {
+    "name": "Apache Hadoop",
+    "category": "Big Data",
+    "features": ["Distributed Storage", "Data Processing", "Cluster Computing"],
+    "cost": "Free",
+    "description": "An open-source framework that allows for the distributed processing of large data sets across clusters of computers.",
+    "url": "https://hadoop.apache.org/",
+    "language": "Java",
+    "platform": "Cross-platform"
+  },
+  {
+    "name": "KNIME",
+    "category": "Data Analytics",
+    "features": ["Data Mining", "Machine Learning", "Visual Workflows"],
+    "cost": "Free",
+    "description": "An open-source analytics platform for creating data science applications and services.",
+    "url": "https://www.knime.com/",
+    "language": "Java",
+    "platform": "Cross-platform"
+  },
+  {
+    "name": "Orange",
+    "category": "Data Analysis",
+    "features": ["Data Mining", "Machine Learning", "Data Visualization"],
+    "cost": "Free",
+    "description": "An open-source data visualization, machine learning and data mining toolkit.",
+    "url": "https://orange.biolab.si/",
+    "language": "Python",
+    "platform": "Cross-platform"
+  },
+  {
+    "name": "RapidMiner",
+    "category": "Data Analysis",
+    "features": ["Data Mining", "Machine Learning", "Predictive Analytics"],
+    "cost": "Free and Paid versions",
+    "description": "A data science platform for teams that unites data prep, machine learning, and predictive model deployment.",
+    "url": "https://rapidminer.com/",
+    "language": "Java",
+    "platform": "Cross-platform"
+  },
+  {
+    "name": "Jupyter Notebook",
+    "category": "Programming",
+    "features": ["Interactive Computing", "Data Visualization", "Documentation"],
+    "cost": "Free",
+    "description": "An open-source web application that allows you to create and share documents that contain live code, equations, visualizations, and narrative text.",
+    "url": "https://jupyter.org/",
+    "language": "Python, Julia, R",
+    "platform": "Cross-platform"
+  },
+  {
+    "name": "Anaconda",
+    "category": "Software Distribution",
+    "features": ["Package Management", "Data Science", "Python Distribution"],
+    "cost": "Free",
+    "description": "A distribution of the Python and R programming languages for scientific computing.",
+    "url": "https://www.anaconda.com/",
+    "language": "Python",
+    "platform": "Cross-platform"
+  },
+  {
+    "name": "Docker",
+    "category": "DevOps",
+    "features": ["Containerization", "Deployment", "Virtualization"],
+    "cost": "Free and Paid versions",
+    "description": "A platform for developing, shipping, and running applications in containers.",
+    "url": "https://www.docker.com/",
+    "language": "Go",
+    "platform": "Cross-platform"
+  },
+  {
+    "name": "Singularity",
+    "category": "DevOps",
+    "features": ["Containerization", "High-Performance Computing", "Virtualization"],
+    "cost": "Free",
+    "description": "A container platform that leverages HPC resources for reproducible science.",
+    "url": "https://sylabs.io/singularity/",
+    "language": "C",
+    "platform": "Cross-platform"
+  },
+  {
+    "name": "Git",
+    "category": "Version Control",
+    "features": ["Source Code Management", "Collaboration", "Versioning"],
+    "cost": "Free",
+    "description": "A distributed version control system designed to handle everything from small to very large projects.",
+    "url": "https://git-scm.com/",
+    "language": "C",
+    "platform": "Cross-platform"
+  },
+  {
+    "name": "GitHub",
+    "category": "Version Control",
+    "features": ["Source Code Hosting", "Collaboration", "Issue Tracking"],
+    "cost": "Free and Paid versions",
+    "description": "A web-based hosting service for version control using Git.",
+    "url": "https://github.com/",
+    "language": "N/A",
+    "platform": "Web-based"
+  },
+  {
+    "name": "R",
+    "category": "Programming",
+    "features": ["Statistical Computing", "Data Analysis", "Graphics"],
+    "cost": "Free",
+    "description": "A programming language and free software environment for statistical computing and graphics.",
+    "url": "https://www.r-project.org/",
+    "language": "C, Fortran",
+    "platform": "Cross-platform"
+  },
+  {
+    "name": "Python",
+    "category": "Programming",
+    "features": ["General-Purpose", "Data Analysis", "Scripting"],
+    "cost": "Free",
+    "description": "A high-level, interpreted programming language with dynamic semantics.",
+    "url": "https://www.python.org/",
+    "language": "C",
+    "platform": "Cross-platform"
+  },
+  {
+    "name": "Julia",
+    "category": "Programming",
+    "features": ["High-Performance", "Numerical Computing", "Data Science"],
+    "cost": "Free",
+    "description": "A high-level, high-performance dynamic programming language for numerical computing.",
+    "url": "https://julialang.org/",
+    "language": "C, Fortran",
+    "platform": "Cross-platform"
+  },
+  {
+    "name": "Stata",
+    "category": "Statistics",
+    "features": ["Data Analysis", "Statistical Modeling", "Data Management"],
+    "cost": "Paid",
+    "description": "An integrated statistical software package that provides data analysis, data management, and graphics.",
+    "url": "https://www.stata.com/",
+    "language": "Proprietary",
+    "platform": "Windows, macOS, Linux"
+  },
+  {
+    "name": "Minitab",
+    "category": "Statistics",
+    "features": ["Data Analysis", "Statistical Modeling", "Quality Improvement"],
+    "cost": "Paid",
+    "description": "A statistics package developed for data analysis.",
+    "url": "https://www.minitab.com/",
+    "language": "Proprietary",
+    "platform": "Windows, macOS"
+  },
+  {
+    "name": "PAML",
+    "category": "Phylogenetics",
+    "features": ["Phylogenetic Analysis", "Molecular Evolution", "Selection Detection"],
+    "cost": "Free",
+    "description": "Phylogenetic Analysis by Maximum Likelihood, a package of programs for phylogenetic analyses of DNA or protein sequences using maximum likelihood.",
+    "url": "http://abacus.gene.ucl.ac.uk/software/paml.html",
+    "language": "C",
+    "platform": "Cross-platform (Windows, macOS, Linux)"
+  },
+  {
+    "name": "PhyloBayes",
+    "category": "Phylogenetics",
+    "features": ["Bayesian Inference", "Phylogenetic Analysis", "Molecular Evolution"],
+    "cost": "Free",
+    "description": "A software package for Bayesian phylogenetic reconstruction and model selection.",
+    "url": "http://www.phylobayes.com/",
+    "language": "C",
+    "platform": "Cross-platform (Windows, macOS, Linux)"
+},
+{
+    "name": "Gephi",
+    "category": "Network Analysis",
+    "features": ["Graph Visualization", "Data Exploration", "Network Analysis"],
+    "cost": "Free",
+    "description": "An open-source network analysis and visualization software package written in Java on the NetBeans platform.",
+    "url": "https://gephi.org/",
+    "language": "Java",
+    "platform": "Cross-platform (Windows, macOS, Linux)"
+},
+{
+    "name": "ggplot2",
+    "category": "Data Visualization",
+    "features": ["Data Visualization", "Statistical Graphics", "R Package"],
+    "cost": "Free",
+    "description": "A data visualization package for the statistical programming language R, based on the grammar of graphics.",
+    "url": "https://ggplot2.tidyverse.org/",
+    "language": "R",
+    "platform": "Cross-platform (Windows, macOS, Linux)"
+},
+{
+    "name": "Seaborn",
+    "category": "Data Visualization",
+    "features": ["Statistical Data Visualization", "Python", "Graphing"],
+    "cost": "Free",
+    "description": "A Python data visualization library based on matplotlib that provides a high-level interface for drawing attractive and informative statistical graphics.",
+    "url": "https://seaborn.pydata.org/",
+    "language": "Python",
+    "platform": "Cross-platform (Windows, macOS, Linux)"
+},
+{
+    "name": "Matplotlib",
+    "category": "Data Visualization",
+    "features": ["Plotting", "Graphing", "Data Visualization"],
+    "cost": "Free",
+    "description": "A comprehensive library for creating static, animated, and interactive visualizations in Python.",
+    "url": "https://matplotlib.org/",
+    "language": "Python",
+    "platform": "Cross-platform (Windows, macOS, Linux)"
+},
+{
+    "name": "PAML",
+    "category": "Phylogenetics",
+    "features": ["Phylogenetic Analysis", "Molecular Evolution", "Selection Detection"],
+    "cost": "Free",
+    "description": "Phylogenetic Analysis by Maximum Likelihood, a package of programs for phylogenetic analyses of DNA or protein sequences using maximum likelihood.",
+    "url": "http://abacus.gene.ucl.ac.uk/software/paml.html",
+    "language": "C",
+    "platform": "Cross-platform (Windows, macOS, Linux)"
+},
+{
+    "name": "Pandas",
+    "category": "Data Analysis",
+    "features": ["Data Manipulation", "Data Structures", "Time Series"],
+    "cost": "Free",
+    "description": "An open-source data analysis and manipulation tool, built on top of the Python programming language.",
+    "url": "https://pandas.pydata.org/",
+    "language": "Python",
+    "platform": "Cross-platform"
+},
+{
+    "name": "Scikit-learn",
+    "category": "Machine Learning",
+    "features": ["Data Mining", "Machine Learning", "Data Analysis"],
+    "cost": "Free",
+    "description": "A Python module for machine learning built on SciPy, providing simple and efficient tools for data mining and data analysis.",
+    "url": "https://scikit-learn.org/",
+    "language": "Python",
+    "platform": "Cross-platform (Windows, macOS, Linux)"
+},
+{
+    "name": "Shiny",
+    "category": "Data Visualization",
+    "features": ["Interactive Web Apps", "R Programming", "Data Analysis"],
+    "cost": "Free",
+    "description": "An R package that makes it easy to build interactive web applications straight from R.",
+    "url": "https://shiny.rstudio.com/",
+    "language": "R, JavaScript",
+    "platform": "Web-based"
+},
+{
+    "name": "Seaborn",
+    "category": "Data Visualization",
+    "features": ["Statistical Data Visualization", "Python", "Graphing"],
+    "cost": "Free",
+    "description": "A Python data visualization library based on matplotlib that provides a high-level interface for drawing attractive and informative statistical graphics.",
+    "url": "https://seaborn.pydata.org/",
+    "language": "Python",
+    "platform": "Cross-platform (Windows, macOS, Linux)"
+},
+{
+    "name": "TensorBoard",
+    "category": "Machine Learning",
+    "features": ["Visualization", "TensorFlow Integration", "Model Monitoring"],
+    "cost": "Free",
+    "description": "A suite of web applications for inspecting and understanding your TensorFlow runs and graphs.",
+    "url": "https://www.tensorflow.org/tensorboard",
+    "language": "Python",
+    "platform": "Web-based"
+},
+{
+    "name": "LightGBM",
+    "category": "Machine Learning",
+    "features": ["Gradient Boosting", "Classification", "Regression"],
+    "cost": "Free",
+    "description": "A gradient boosting framework that uses tree-based learning algorithms, designed to be distributed and efficient.",
+    "url": "https://lightgbm.readthedocs.io/en/latest/",
+    "language": "C++, Python",
+    "platform": "Cross-platform (Windows, macOS, Linux)"
+},
+{
+    "name": "XGBoost",
+    "category": "Machine Learning",
+    "features": ["Gradient Boosting", "Classification", "Regression"],
+    "cost": "Free",
+    "description": "An optimized distributed gradient boosting library designed to be highly efficient, flexible, and portable.",
+    "url": "https://xgboost.readthedocs.io/en/latest/",
+    "language": "C++, Python, R, Java",
+    "platform": "Cross-platform (Windows, macOS, Linux)"
+},
+{
+    "name": "Plotly",
+    "category": "Data Visualization",
+    "features": ["Interactive Graphs", "Web-based Visualization", "Python/R Integration"],
+    "cost": "Free and Paid versions",
+    "description": "A graphing library for making interactive, publication-quality graphs online.",
+    "url": "https://plotly.com/",
+    "language": "Python, R, JavaScript",
+    "platform": "Web-based"
+},
+{
+    "name": "Bioconductor",
+    "category": "Bioinformatics",
+    "features": ["Data Analysis", "Genomic Data", "R Packages"],
+    "cost": "Free",
+    "description": "An open-source project providing tools for the analysis and comprehension of high-throughput genomic data.",
+    "url": "https://www.bioconductor.org/",
+    "language": "R",
+    "platform": "Cross-platform (Windows, macOS, Linux)"
+},
+{
+    "name": "Matplotlib",
+    "category": "Data Visualization",
+    "features": ["Plotting", "Graphing", "Data Visualization"],
+    "cost": "Free",
+    "description": "A comprehensive library for creating static, animated, and interactive visualizations in Python.",
+    "url": "https://matplotlib.org/",
+    "language": "Python",
+    "platform": "Cross-platform (Windows, macOS, Linux)"
+},
+{
+    "name": "Shiny",
+    "category": "Data Visualization",
+    "features": ["Interactive Web Apps", "R Programming", "Data Analysis"],
+    "cost": "Free",
+    "description": "An R package that makes it easy to build interactive web applications straight from R.",
+    "url": "https://shiny.rstudio.com/",
+    "language": "R, JavaScript",
+    "platform": "Web-based"
+},
+{
+    "name": "Scikit-learn",
+    "category": "Machine Learning",
+    "features": ["Data Mining", "Machine Learning", "Data Analysis"],
+    "cost": "Free",
+    "description": "A Python module for machine learning built on SciPy, providing simple and efficient tools for data mining and data analysis.",
+    "url": "https://scikit-learn.org/",
+    "language": "Python",
+    "platform": "Cross-platform (Windows, macOS, Linux)"
+},
+{
+    "name": "LightGBM",
+    "category": "Machine Learning",
+    "features": ["Gradient Boosting", "Classification", "Regression"],
+    "cost": "Free",
+    "description": "A gradient boosting framework that uses tree-based learning algorithms, designed to be distributed and efficient.",
+    "url": "https://lightgbm.readthedocs.io/en/latest/",
+    "language": "C++, Python",
+    "platform": "Cross-platform (Windows, macOS, Linux)"
+},
+{
+    "name": "XGBoost",
+    "category": "Machine Learning",
+    "features": ["Gradient Boosting", "Classification", "Regression"],
+    "cost": "Free",
+    "description": "An optimized distributed gradient boosting library designed to be highly efficient, flexible, and portable.",
+    "url": "https://xgboost.readthedocs.io/en/latest/",
+    "language": "C++, Python, R, Java",
+    "platform": "Cross-platform (Windows, macOS, Linux)"
+},
+{
+    "name": "Plotly",
+    "category": "Data Visualization",
+    "features": ["Interactive Graphs", "Web-based Visualization", "Python/R Integration"],
+    "cost": "Free and Paid versions",
+    "description": "A graphing library for making interactive, publication-quality graphs online.",
+    "url": "https://plotly.com/",
+    "language": "Python, R, JavaScript",
+    "platform": "Web-based"
+},
+{
+    "name": "PCAtools",
+    "category": "Data Analysis",
+    "features": ["Principal Component Analysis", "Data Visualization", "R Package"],
+    "cost": "Free",
+    "description": "An R package for performing and visualizing principal component analysis.",
+    "url": "https://bioconductor.org/packages/release/bioc/html/PCAtools.html",
+    "language": "R",
+    "platform": "Cross-platform (Windows, macOS, Linux)"
+},
+{
+    "name": "ELKI",
+    "category": "Data Mining",
+    "features": ["Clustering", "Outlier Detection", "Data Analysis"],
+    "cost": "Free",
+    "description": "A data mining software framework written in Java, focused on unsupervised methods in cluster analysis and outlier detection.",
+    "url": "https://elki-project.github.io/",
+    "language": "Java",
+    "platform": "Cross-platform (Windows, macOS, Linux)"
+},
+{
+    "name": "Datawrapper",
+    "category": "Data Visualization",
+    "features": ["Charting", "Data Visualization", "Web-based"],
+    "cost": "Free and Paid versions",
+    "description": "A user-friendly tool for creating charts, maps, and tables.",
+    "url": "https://www.datawrapper.de/",
+    "language": "JavaScript",
+    "platform": "Web-based"
+},
+{
+    "name": "Seurat",
+    "category": "Single-Cell Analysis",
+    "features": ["Data Analysis", "Single Cell", "Clustering", "Dimensionality Reduction"],
+    "cost": "Free",
+    "description": "An R toolkit for single-cell genomics, designed to explore cellular heterogeneity.",
+    "url": "https://satijalab.org/seurat/",
+    "language": "R",
+    "platform": "Cross-platform (Windows, macOS, Linux)"
+},
+{
+    "name": "Scanpy",
+    "category": "Single-Cell Analysis",
+    "features": ["Data Analysis", "Single Cell", "Transcriptomics"],
+    "cost": "Free",
+    "description": "A scalable toolkit for analyzing single-cell gene expression data.",
+    "url": "https://scanpy.readthedocs.io/",
+    "language": "Python",
+    "platform": "Cross-platform (Windows, macOS, Linux)"
+},
+{
+    "name": "Monocle",
+    "category": "Single-Cell Analysis",
+    "features": ["Trajectory Analysis", "Single Cell", "Transcriptomics"],
+    "cost": "Free",
+    "description": "An R toolkit for analyzing single-cell gene expression data to reconstruct cell trajectories.",
+    "url": "http://cole-trapnell-lab.github.io/monocle-release/",
+    "language": "R",
+    "platform": "Cross-platform (Windows, macOS, Linux)"
+},
+{
+    "name": "Phyloseq",
+    "category": "Metagenomics",
+    "features": ["Microbiome Analysis", "Data Visualization", "Statistical Analysis"],
+    "cost": "Free",
+    "description": "An R package for the analysis of high-throughput microbiome census data.",
+    "url": "https://joey711.github.io/phyloseq/",
+    "language": "R",
+    "platform": "Cross-platform (Windows, macOS, Linux)"
+},
+{
+    "name": "DESeq2",
+    "category": "Genomics",
+    "features": ["Differential Expression", "RNA-Seq", "Transcriptomics"],
+    "cost": "Free",
+    "description": "An R package for differential gene expression analysis based on the negative binomial distribution.",
+    "url": "https://bioconductor.org/packages/release/bioc/html/DESeq2.html",
+    "language": "R",
+    "platform": "Cross-platform (Windows, macOS, Linux)"
+},
+{
+    "name": "GenomeScope",
+    "category": "Genomics",
+    "features": ["Genome Size Estimation", "K-mer Analysis", "Data Visualization"],
+    "cost": "Free",
+    "description": "A tool for estimating genome size and heterozygosity from k-mer frequency data.",
+    "url": "http://qb.cshl.edu/genomescope/",
+    "language": "R",
+    "platform": "Cross-platform (Windows, macOS, Linux)"
+},
+{
+    "name": "MAFtools",
+    "category": "Genomics",
+    "features": ["Variant Annotation", "Data Visualization", "Mutation Analysis"],
+    "cost": "Free",
+    "description": "An R package for comprehensive analysis and visualization of cancer genomics data in the MAF format.",
+    "url": "https://maftools.bioconductor.org/",
+    "language": "R",
+    "platform": "Cross-platform (Windows, macOS, Linux)"
+},
+{
+    "name": "BiocParallel",
+    "category": "Bioinformatics",
+    "features": ["Parallel Computing", "Data Analysis", "R Package"],
+    "cost": "Free",
+    "description": "An R package that provides a common interface for parallel evaluation of expressions.",
+    "url": "https://bioconductor.org/packages/release/bioc/html/BiocParallel.html",
+    "language": "R",
+    "platform": "Cross-platform (Windows, macOS, Linux)"
+},
+{
+    "name": "Genome Browser (Ensembl)",
+    "category": "Genomics",
+    "features": ["Genome Visualization", "Data Integration", "Annotation"],
+    "cost": "Free",
+    "description": "An online platform for viewing and analyzing genomic data for a wide range of species.",
+    "url": "https://www.ensembl.org/index.html",
+    "language": "Web-based",
+    "platform": "Web-based"
+},
+{
+    "name": "Artemis Comparison Tool (ACT)",
+    "category": "Genomics",
+    "features": ["Genome Comparison", "Data Visualization", "Sequence Alignment"],
+    "cost": "Free",
+    "description": "A genome comparison tool that allows the comparison of two genomes by sequence similarity.",
+    "url": "https://www.sanger.ac.uk/tool/artemis-comparison-tool-act/",
+    "language": "Java",
+    "platform": "Cross-platform (Windows, macOS, Linux)"
+},
+{
+    "name": "FastTree",
+    "category": "Phylogenetics",
+    "features": ["Phylogenetic Tree Construction", "Approximate Maximum Likelihood", "Large Datasets"],
+    "cost": "Free",
+    "description": "A program to infer approximately-maximum-likelihood phylogenetic trees from alignments of nucleotide or protein sequences.",
+    "url": "http://www.microbesonline.org/fasttree/",
+    "language": "C",
+    "platform": "Cross-platform (Windows, macOS, Linux)"
+},
+{
+    "name": "IQ-TREE 2",
+    "category": "Phylogenetics",
+    "features": ["Phylogenetic Analysis", "Maximum Likelihood", "Model Selection"],
+    "cost": "Free",
+    "description": "An advanced version of IQ-TREE with new features for phylogenomic inference using maximum likelihood.",
+    "url": "http://www.iqtree.org/",
+    "language": "C++",
+    "platform": "Cross-platform (Windows, macOS, Linux)"
+},
+{
+    "name": "Trinity",
+    "category": "Genomics",
+    "features": ["RNA-Seq", "De Novo Transcriptome Assembly", "Data Analysis"],
+    "cost": "Free",
+    "description": "A software package for de novo transcriptome assembly from RNA-Seq data.",
+    "url": "https://github.com/trinityrnaseq/trinityrnaseq",
+    "language": "Perl, C++",
+    "platform": "Cross-platform (Windows, macOS, Linux)"
+},
+{
+    "name": "Flye",
+    "category": "Genomics",
+    "features": ["Genome Assembly", "Long Reads", "Bioinformatics"],
+    "cost": "Free",
+    "description": "A de novo assembler for single molecule sequencing reads, such as those produced by PacBio and Oxford Nanopore Technologies.",
+    "url": "https://github.com/fenderglass/Flye",
+    "language": "C++",
+    "platform": "Cross-platform (Windows, macOS, Linux)"
+},
+{
+    "name": "PANTHER",
+    "category": "Bioinformatics",
+    "features": ["Gene Ontology", "Functional Classification", "Data Analysis"],
+    "cost": "Free",
+    "description": "A database and toolkit for the classification of genes and proteins by their functions using published scientific evidence and evolutionary relationships.",
+    "url": "http://www.pantherdb.org/",
+    "language": "Web-based",
+    "platform": "Web-based"
+},
+{
+    "name": "BioRender",
+    "category": "Data Visualization",
+    "features": ["Scientific Illustration", "Diagram Creation", "Web-based"],
+    "cost": "Free and Paid versions",
+    "description": "A web-based tool for creating professional scientific figures and diagrams.",
+    "url": "https://biorender.com/",
+    "language": "Web-based",
+    "platform": "Web-based"
+},
+{
+    "name": "Biocontainers",
+    "category": "Bioinformatics",
+    "features": ["Containerization", "Reproducibility", "Software Distribution"],
+    "cost": "Free",
+    "description": "A collection of container images for bioinformatics software, ensuring reproducibility and ease of deployment.",
+    "url": "https://biocontainers.pro/",
+    "language": "N/A",
+    "platform": "Containerized (Docker, Singularity)"
+},
+{
+    "name": "Bioconductor Project",
+    "category": "Bioinformatics",
+    "features": ["Genomic Data Analysis", "R Packages", "Statistical Computing"],
+    "cost": "Free",
+    "description": "An open-source project providing tools for the analysis and comprehension of high-throughput genomic data.",
+    "url": "https://www.bioconductor.org/",
+    "language": "R",
+    "platform": "Cross-platform (Windows, macOS, Linux)"
+},
+{
+    "name": "Cytoscape.js",
+    "category": "Network Analysis",
+    "features": ["Graph Visualization", "Interactive Networks", "JavaScript"],
+    "cost": "Free",
+    "description": "A graph theory library for visualization and analysis, built on JavaScript.",
+    "url": "https://js.cytoscape.org/",
+    "language": "JavaScript",
+    "platform": "Web-based"
+},
+{
+    "name": "GraphPad Prism",
+    "category": "Statistics",
+    "features": ["Data Analysis", "Graphing", "Biostatistics"],
+    "cost": "Paid",
+    "description": "A software program combining scientific graphing, comprehensive curve fitting, and data organization.",
+    "url": "https://www.graphpad.com/scientific-software/prism/",
+    "language": "N/A",
+    "platform": "Windows, macOS"
+},
+{
+    "name": "Mothur",
+    "category": "Microbiomics",
+    "features": ["Microbiome Analysis", "16S rRNA", "Community Analysis"],
+    "cost": "Free",
+    "description": "An open-source software package that enables processing of 16S rRNA gene sequences.",
+    "url": "https://mothur.org/",
+    "language": "C++",
+    "platform": "Cross-platform (Windows, macOS, Linux)"
+},
+{
+    "name": "BiocManager",
+    "category": "Bioinformatics",
+    "features": ["Package Management", "R Packages", "Software Installation"],
+    "cost": "Free",
+    "description": "An R package for installing and managing Bioconductor packages.",
+    "url": "https://bioconductor.org/install/",
+    "language": "R",
+    "platform": "Cross-platform (Windows, macOS, Linux)"
+},
+{
+    "name": "BiocParallel",
+    "category": "Bioinformatics",
+    "features": ["Parallel Computing", "Data Analysis", "R Package"],
+    "cost": "Free",
+    "description": "An R package that provides a common interface for parallel evaluation of expressions.",
+    "url": "https://bioconductor.org/packages/release/bioc/html/BiocParallel.html",
+    "language": "R",
+    "platform": "Cross-platform (Windows, macOS, Linux)"
+},
+{
+  "name": "GenomicsToolX",
+  "category": "Genomics",
+  "features": ["Feature1", "Feature2"],
+  "cost": "Free",
+  "description": "Description of GenomicsToolX.",
+  "url": "https://genomicstoolx.example.com/",
+  "language": "Python",
+  "platform": "Cross-platform (Windows, macOS, Linux)"
+},
+{
+  "name": "RNAAnalyzer",
+  "category": "RNA",
+  "features": ["FeatureA", "FeatureB"],
+  "cost": "Free",
+  "description": "Description of RNAAnalyzer.",
+  "url": "https://rnaanalyzer.example.com/",
+  "language": "R",
+  "platform": "Cross-platform (Windows, macOS, Linux)"
+}
+]
