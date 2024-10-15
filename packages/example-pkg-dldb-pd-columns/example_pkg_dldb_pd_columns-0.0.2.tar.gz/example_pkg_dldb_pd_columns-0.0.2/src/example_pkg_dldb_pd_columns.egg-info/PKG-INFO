@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: example-pkg-dldb-pd-columns
+Version: 0.0.2
+Summary: dldbcosmos sample lib
+Home-page: https://github.com/dldbcosmos/python-tutorials
+Author: yakilee
+Author-email: yakilee@gmail.com
+Project-URL: Bug Tracker, https://github.com/dldbcosmos/python-tutorials/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: license.txt
+
+#Exmaple of pandas columns
+
+ - this is sample of pandas columns
