@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "skyagent-python"
+version = "0.1.0"
+description = "a tool to manage LAE agent"
+authors = ["jerry zhang <jerry.zhang@peopleaviation.net>"]
+readme = "README.md"
+packages = [{include = "skyagent"}] 
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pytest = "^8.3.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
