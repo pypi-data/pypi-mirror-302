@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: pg_mongodb
+Version: 1.0.0
+Summary: python game: mongodb
+Author: baozilaji@gmail.com
+Requires-Python: >=3.9
+Requires-Dist: pg-environment >=0
+Requires-Dist: motor ==3.4.0
+

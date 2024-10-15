@@ -1,0 +1,7 @@
+pg_mongodb/__init__.py,sha256=sR1JEtFTQp_Er2s1FT1OzyA_1fMcibxaEJlPv4BB-KA,60
+pg_mongodb/define.py,sha256=IgqpcAJ_aex11skXztrbA12Z6-mFsqpvXSWU13zo-eE,213
+pg_mongodb/mongo.py,sha256=BtjKd-OheldK_FLz23Q8a3A6TUQZOHmh6xVAcjp8U2A,892
+pg_mongodb-1.0.0.dist-info/METADATA,sha256=kLQ4c4Sna7c3W92Dye-d8MeXMkx4NHwQHFdT8ZXC3N8,199
+pg_mongodb-1.0.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+pg_mongodb-1.0.0.dist-info/top_level.txt,sha256=ljbcjvrmQVUOEjBrRUmwRtlXjumK2H-XJCr-UKY1YDo,11
+pg_mongodb-1.0.0.dist-info/RECORD,,
