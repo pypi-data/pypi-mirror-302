@@ -1,0 +1,8 @@
+dike/__init__.py,sha256=R69FKeUCNCYxSHyH-BbQr8RQOwonLgBWkQaDllRZ4YY,795
+dike/_batch.py,sha256=RInQvpwuerxSlsdrmf0tE-6w9BJkRY1eTa_CCi6Wsm8,10890
+dike/_limit_jobs.py,sha256=lG7ivFAFenZu-JF4m7KrqqwyC-q2j6r2mp8PUjuYSXU,2852
+dike/_retry.py,sha256=G068otkc-qeM9Xk-vTSYNgfx62I3CXBOLkWe1tOCww4,3678
+dike-1.0.1.dist-info/METADATA,sha256=ktYd3zcJDL37fU07HVJ79lO49aEBq4Q3RINEyzpZW14,7092
+dike-1.0.1.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+dike-1.0.1.dist-info/licenses/LICENSE,sha256=DVQuDIgE45qn836wDaWnYhSdxoLXgpRRKH4RuTjpRZQ,10174
+dike-1.0.1.dist-info/RECORD,,
