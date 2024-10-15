@@ -1,0 +1,30 @@
+from setuptools import setup
+
+with open("README.md", "r") as fh:
+    long_description = fh.read()
+
+setup(
+    name='pycallibri_ecg',
+    version='1.0.2',
+    py_modules=['callibri_ecg.callibri_ecg_lib'],
+    packages=['callibri_ecg'],
+    url='https://gitlab.com/neurosdk2/neurosamples/-/tree/main/python',
+    license='MIT',
+    author='Brainbit Inc.',
+    author_email='support@brainbit.com',
+    description='Python wrapper for CallibriECG library',
+    long_description=long_description,
+    long_description_content_type='text/markdown',
+    include_package_data=True,
+    package_data={"callibri_ecg": ['libs\\win\\callibri_utils-x64.dll',
+                               'libs\\win\\callibri_utils-x86.dll',
+                               'libs\\macos\\libCallibriUtils.dylib']},
+    classifiers=[
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: Microsoft :: Windows",
+        "Operating System :: MacOS",
+        "Intended Audience :: Developers",
+    ],
+    python_requires='>=3.7',
+)
