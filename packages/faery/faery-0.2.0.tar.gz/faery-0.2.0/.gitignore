@@ -1,0 +1,7 @@
+.venv
+.pytest_cache
+target
+__pycache__
+.vscode
+*.so
+tests/data_generated
