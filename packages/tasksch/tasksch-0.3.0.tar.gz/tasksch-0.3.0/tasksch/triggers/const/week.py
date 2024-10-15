@@ -1,0 +1,5 @@
+FIRST = 0x01  # 1
+SECOND = 0x02  # 2
+THIRD = 0x04  # 4
+FOURTH = 0x08  # 8
+LAST = 0x10  # 16

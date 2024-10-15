@@ -1,0 +1,2 @@
+class TaskSchdError(Exception):
+    pass
