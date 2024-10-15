@@ -1,0 +1,12 @@
+twomemo/__init__.py,sha256=OptWwFMAYgrRZO5ovVes_UkskjiV1amVnOydKAI7nLM,129
+twomemo/etree.py,sha256=31gize1XLhBmWyROF9Zw-Qmhx-ulZYSMiG3VWrs_DDc,11507
+twomemo/project.py,sha256=cRDnJcBpkIdA_LkszYExlnjx7PIqDSk07ojrtZqUziU,467
+twomemo/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+twomemo/twomemo.py,sha256=3EzYDnIj1a7KXXO9FgWfOmrVGvuzoiCBZvUzEprMZUo,51614
+twomemo/twomemo_pb2.py,sha256=tclbwp5I0qvFoR2sBquy2lCbrx1bbatOH3yLJWytg4s,1577
+twomemo/version.py,sha256=QNbBlSnz_UWnOFyD8EXdczrVUkyXlyPDISRofFmjSn8,176
+Twomemo-1.1.0.dist-info/LICENSE,sha256=CVByuSP1V_UBhBJMi8MIQ5-wGG8i5B6GeIXZFf-h9vM,1081
+Twomemo-1.1.0.dist-info/METADATA,sha256=0v20XCNwS9uhkukcKESHEnKY7KodJ9YCtHWATAE_E9M,3498
+Twomemo-1.1.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+Twomemo-1.1.0.dist-info/top_level.txt,sha256=0jcQhujQ6V7zpF11hCZl8AyIvw1JhYHCBwqnfcjEfe0,8
+Twomemo-1.1.0.dist-info/RECORD,,
