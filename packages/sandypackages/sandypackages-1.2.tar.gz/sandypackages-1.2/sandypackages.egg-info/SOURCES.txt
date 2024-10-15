@@ -1,0 +1,11 @@
+LICENSE
+setup.py
+sandypackages/__init__.py
+sandypackages/deepu.py
+sandypackages/jaya.py
+sandypackages/kiran.py
+sandypackages/shaan.py
+sandypackages.egg-info/PKG-INFO
+sandypackages.egg-info/SOURCES.txt
+sandypackages.egg-info/dependency_links.txt
+sandypackages.egg-info/top_level.txt
