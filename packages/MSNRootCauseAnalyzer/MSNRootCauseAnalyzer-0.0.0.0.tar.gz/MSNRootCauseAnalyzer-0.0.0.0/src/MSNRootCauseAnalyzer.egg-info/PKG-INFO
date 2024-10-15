@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: MSNRootCauseAnalyzer
+Version: 0.0.0.0
+Summary: A Python library for root cause analysis algorithms
+Author: MSN CSDATA
+Author-email: yankunwang@microsoft.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# MSNRootCauseAnalyzer
+
+MSNRootCauseAnalyzer is a Python library for performing root cause analysis.
+
+## Installation
+
+```bash
+pip install MSNRootCauseAnalyzer
+```
+
+## Usage
+```python
+from root_cause_analyzer import get_analyzer
+
+analyzer = get_analyzer('adtributor')
+result = analyzer.analyze(data={})
+print(result)
+``` 
