@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: matcha_tts_package
+Version: 0.0.2
+Summary: matcha-tts package by xp
+Author-email: xp <1426813058@qq.com>
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/x-rst
+Requires-Dist: Cython
+
+!!!!! Warning: Provided unofficially and for author use only !!!!!   
