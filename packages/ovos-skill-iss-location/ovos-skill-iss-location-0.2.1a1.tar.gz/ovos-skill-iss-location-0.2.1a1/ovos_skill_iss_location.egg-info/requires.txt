@@ -1,0 +1,6 @@
+matplotlib
+basemap
+pillow
+requests
+skyfield
+ovos_workshop<2.0.0,>=0.0.12
