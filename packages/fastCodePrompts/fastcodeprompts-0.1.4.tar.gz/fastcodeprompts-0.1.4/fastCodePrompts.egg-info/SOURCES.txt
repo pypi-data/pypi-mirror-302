@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+fastCodePrompts/__init__.py
+fastCodePrompts/fastCodePrompts.py
+fastCodePrompts.egg-info/PKG-INFO
+fastCodePrompts.egg-info/SOURCES.txt
+fastCodePrompts.egg-info/dependency_links.txt
+fastCodePrompts.egg-info/requires.txt
+fastCodePrompts.egg-info/top_level.txt
