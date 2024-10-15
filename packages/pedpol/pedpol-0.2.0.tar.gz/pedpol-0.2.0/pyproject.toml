@@ -1,0 +1,21 @@
+[project]
+name = "pedpol"
+version = "0.2.0"
+description = "For wrangling animal pedigrees"
+dependencies = ["polars>=0.20.31"]
+readme = "README.md"
+requires-python = ">= 3.10"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv]
+managed = true
+dev-dependencies = ["ruff>=0.3.0", "pytest", "ipykernel>=6.29.4", "numpy>=2.0.0"]
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/pedpol"]
