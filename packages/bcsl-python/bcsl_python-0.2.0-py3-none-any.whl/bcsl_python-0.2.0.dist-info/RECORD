@@ -1,0 +1,11 @@
+bcsl/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bcsl/bcsl.py,sha256=sPqVSypqYwSU7riWzRdVVVyFUVWNvjECsOuzYHn5hdg,16037
+bcsl/hill_climber.py,sha256=q7U-GlgG87mp9m8sByXm0aqCyFTSr8ghaaaVjlWOdN4,2029
+bcsl/scores/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bcsl/scores/bdeu.py,sha256=RnH4Wg5nRziMIIJasjZXoa__dzYlxK41Z331n9lvZZ8,6183
+bcsl/scores/gaussian_bic.py,sha256=KGu67btToJXvecII0p8rLYrinUrTKdXQsMIjFLwmZP8,5234
+bcsl_python-0.2.0.dist-info/LICENSE.md,sha256=BUrf-Av1uzdFtlJH_v815zKQ6V6Gt8-cagUAn61K5EI,174
+bcsl_python-0.2.0.dist-info/METADATA,sha256=je7TNaf4aqQ4DTwvLjZq3CLBXba0Hyh0Ai7ZVylyLjQ,2171
+bcsl_python-0.2.0.dist-info/WHEEL,sha256=ZL1lC_LiPDNRgDnOl2taCMc83aPEUZgHHv2h-LDgdiM,92
+bcsl_python-0.2.0.dist-info/top_level.txt,sha256=IYcpDznYB3iS8KZcU3lp89V1NUZexall2w2ERkTaLco,5
+bcsl_python-0.2.0.dist-info/RECORD,,
