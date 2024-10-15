@@ -1,0 +1,15 @@
+streamlit_monaco_code_editor/__init__.py,sha256=IirYxy0Z3rkrxJZz7zvWYeQw4gRxdE_rz1yfdEylhqs,2661
+streamlit_monaco_code_editor/example.py,sha256=iJxHnL9Ec3ZFQjuR8DoFwa4voOkZc-hRiR9n9yZYVK4,1441
+streamlit_monaco_code_editor/test.py,sha256=-M-MdqKTYIK8JI6gpKkTl7p3LvBBZ-5KvWeVlHQdmco,1626
+streamlit_monaco_code_editor/version.py,sha256=ooMqGH4k7kNcmaUSh6Lw3nB0dWmu0nRfo7HcfjrxBiM,40
+streamlit_monaco_code_editor/frontend/build/asset-manifest.json,sha256=zGjbmVr-7G0i2JdMBhk2brzI6JCVsArqYO6J2D7waEE,221
+streamlit_monaco_code_editor/frontend/build/bootstrap.min.css,sha256=hTwg6axJ8dAPmGVJmYTrsQS3JhKWA0skJ-td54UbEOk,197459
+streamlit_monaco_code_editor/frontend/build/index.html,sha256=jH6MMl2EotwFNB2yjJBrYHYa51HvGEcDez367i-TbRY,492
+streamlit_monaco_code_editor/frontend/build/static/js/main.73a431e4.js,sha256=g833vlZ9NsxwFyPMT28dJeF3ZNDAOY7qwXT5_TtloA8,331441
+streamlit_monaco_code_editor/frontend/build/static/js/main.73a431e4.js.LICENSE.txt,sha256=cmjEMovgjlkZ-Bs7b5rRQ8FsJtL1F77Y3YkM2E9yfUs,1293
+streamlit_monaco_code_editor/frontend/build/static/js/main.73a431e4.js.map,sha256=MgBUSoxkVXuqUtAvWrOgrhbIQVG-aVjvB2duC6Me6gA,1307203
+streamlit_monaco_code_editor-0.0.1.dist-info/LICENSE.txt,sha256=7EI8xVBu6h_7_JlVw-yPhhOZlpY9hP8wal7kHtqKT_E,1074
+streamlit_monaco_code_editor-0.0.1.dist-info/METADATA,sha256=uKn9Ke5dXWn0ndn1ojB2MyDMTjHFreiXL1QMm4eT6OY,1113
+streamlit_monaco_code_editor-0.0.1.dist-info/WHEEL,sha256=GV9aMThwP_4oNCtvEC2ec3qUYutgWeAzklro_0m4WJQ,91
+streamlit_monaco_code_editor-0.0.1.dist-info/top_level.txt,sha256=ofHdTE_X3yt012aGtX4U111mk-oUFAh_ghXoOnZ8JGM,29
+streamlit_monaco_code_editor-0.0.1.dist-info/RECORD,,
