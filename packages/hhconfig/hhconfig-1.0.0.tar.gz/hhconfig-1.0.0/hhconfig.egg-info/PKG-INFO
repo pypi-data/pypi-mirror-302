@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: hhconfig
+Version: 1.0.0
+Summary: Hay Hoist Config Tool
+Author-email: Nathan Fraser <ndf-zz@6-v.org>
+License: MIT
+Project-URL: homepage, https://github.com/ndf-zz/remootio-adapter/util/hhconfig
+Keywords: serial,tk
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Win32 (MS Windows)
+Classifier: Environment :: X11 Applications
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Hay Hoist Configuration Tool
+
+![screenshot](hhconfig.png "hhconfig screenshot")
+
+
