@@ -1,0 +1,5 @@
+llama_index/vector_stores/oracledb/__init__.py,sha256=31DoFwpPa_OdRFKTQQydwFwsWvNyN93YhI1eiM0HaCU,127
+llama_index/vector_stores/oracledb/base.py,sha256=QTsbflx4_HSBKR4WCIuclYsR-xwRJqpE71A6JDSK5hQ,22682
+llama_index_vector_stores_oracledb-0.1.4.dist-info/METADATA,sha256=E2AimoDfzehMBGX_HPXRU1dsGVMixF02vJ5fO7O2wPE,5304
+llama_index_vector_stores_oracledb-0.1.4.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+llama_index_vector_stores_oracledb-0.1.4.dist-info/RECORD,,
