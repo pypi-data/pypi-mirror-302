@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: nicegui-admin
+Version: 0.1.0
+Summary: A admin Panel besed on NiceGUI.
+Author-Email: Julius Koenig <info@bastelquartier.de>
+License: GPL-3.0
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+
+# nicegui-admin
