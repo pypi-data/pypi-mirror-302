@@ -1,0 +1,8 @@
+setup.py
+model_bucket.egg-info/PKG-INFO
+model_bucket.egg-info/SOURCES.txt
+model_bucket.egg-info/dependency_links.txt
+model_bucket.egg-info/requires.txt
+model_bucket.egg-info/top_level.txt
+modelbucket/__init__.py
+modelbucket/modelbucket.py
