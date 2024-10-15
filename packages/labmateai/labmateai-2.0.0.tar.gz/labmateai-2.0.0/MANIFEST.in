@@ -1,0 +1,3 @@
+include README.md
+recursive-include labmateai *.py
+recursive-include labmateai/data *.json
