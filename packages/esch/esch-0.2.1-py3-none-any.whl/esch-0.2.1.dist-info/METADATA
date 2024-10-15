@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: esch
+Version: 0.2.1
+Summary: esch (v.) : to turn matricies into high quality svg (animations)
+Author: Noah Syrkis
+Author-email: noah@syrkis.com
+Requires-Python: >=3.11,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: svgwrite (>=1.4.3,<2.0.0)
+Requires-Dist: tqdm (>=4.66.5,<5.0.0)
+Description-Content-Type: text/markdown
+
+## Usage as cli
+
+Run esch with your Typst file as an argument:
+
+```bash
+npx @syrkis/esch your-file.typ
+```
+
+## Usage as a library
+
+```python
+import esch
+import numpy as np
+
+x = np.random.rand((100, 10, 10))
+dwg = esch.hinton(x)
+x.saveas('hinton.svg')
+```
+
