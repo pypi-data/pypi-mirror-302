@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "frontpy"
+version = "0.1.6"
+description = "FrontPy is a Python package designed for the detection and analysis of atmospheric fronts. It computes thermal front parameters (TFP) using wet-bulb temperature at 850 hPa to identify cold and warm fronts. The package also includes visualization capabilities, allowing users to plot identified fronts over GOES-16 satellite imagery."
+keywords = ["fronts", "tfp", "thermal front parameter", "meteorology"]
+authors = [
+    { name = "Marcelo Souza", email = "marcelo.rodriso@gmail.com" }
+]
+readme = "README.md"
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "License :: OSI Approved :: Apache Software License",
+  "Programming Language :: Python :: 3",
+]
+requires-python = ">=3.9.15"
+dependencies = [
+    "aiobotocore==2.15.2",
+    "boto3==1.35.36",
+    "cartopy>=0.23.0",
+    "gdal==3.3.3",
+    "geopandas>=1.0.1",
+    "goes2go>=2024.7.0",
+    "ipython>=8.12.3",
+    "matplotlib>=3.9.2",
+    "metpy>=1.6.3",
+    "netcdf4>=1.6.0",
+    "numpy>=1.26.4",
+    "pandas>=2.2.3",
+    "typer",
+    "psutil>=5.9.0",
+    "scipy>=1.13.1",
+    "shapely>=2.0.6",
+    "siphon>=0.9",
+    "s3transfer==0.10.3",
+    "xarray>=2024.7.0"
+]
+
+[project.scripts]
+fronts = "frontpy.cli:main_cli"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+frontpy = ["resources/*.cpt"]
