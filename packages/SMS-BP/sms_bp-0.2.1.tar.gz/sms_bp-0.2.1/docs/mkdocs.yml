@@ -1,0 +1,57 @@
+site_name: SMS_BP_Docs
+repo_url: https://github.com/joemans3/SMS_BP
+nav:
+  - Home: 
+    - 'Hello and Install': index.md
+  - User Guide: 
+    - 'Starter Guide': User_Guide_MD.md
+    - 'sim_config Documentation': sim_config.md
+  - API Reference:
+    - Boundary Conditions: boundary_conditions_reference.md
+    - Condensate Movement: condensate_movement_reference.md
+    - Config Schema: config_schema_reference.md
+    - Decorators: decorators_reference.md
+    - Errors: errors_reference.md
+    - fbm_BP: fbm_BP_reference.md
+    - JSON Validator Converter: json_validator_converter_reference.md
+    - Probability Functions: probability_functions_reference.md
+    - Run Cell Simulation: run_cell_simulation_reference.md
+    - Simulate Cell: simulate_cell_reference.md
+    - Simulate Foci: simulate_foci_reference.md
+  - About:
+    - 'License': license.md
+
+theme: 
+  name: material
+  palette:
+    primary: green
+    scheme: slate
+  icon:
+    repo: fontawesome/brands/git-alt
+  features:
+    - navigation.footer
+    - search.suggest
+  font:
+    text: 'Roboto'
+    code: 'Roboto Mono'
+
+markdown_extensions:
+  - pymdownx.arithmatex:
+      generic: true
+  - toc:
+      permalink: "#"
+      baselevel: 2
+      separator: "_"
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          options:
+            show_signature: true
+            show_root_full_path: false
+            show_source: true
