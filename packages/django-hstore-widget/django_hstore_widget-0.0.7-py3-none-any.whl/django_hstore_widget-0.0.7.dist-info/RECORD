@@ -1,0 +1,13 @@
+django_hstore_widget/__init__.py,sha256=kmfHpHo2YhSrigutlRQs8qXIR8nEm-D-c8lScQQN64M,22
+django_hstore_widget/forms.py,sha256=UW5RqEXx2SL0OeTeyuEBHlViFjRut2N7RiMu9JNz4EE,282
+django_hstore_widget/static/admin/js/django_hstore_widget/django-hstore-widget.esm.js,sha256=mAMYL2-NN7yphg87ko6CF9JUDnRXJmb-zMiWBO2cYEA,460
+django_hstore_widget/static/admin/js/django_hstore_widget/index.esm.js,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_hstore_widget/static/admin/js/django_hstore_widget/p-0f50db55.js,sha256=Yri3FGbb4Zsd_uYPPdq2moZrtudFVF5nu5HEJeEF6mE,11703
+django_hstore_widget/static/admin/js/django_hstore_widget/p-19f93e37.entry.js,sha256=wtbulFIkwEBSe0gUFaM5YLLEUNgAPFnVYYx7YMew76E,4546
+django_hstore_widget/static/admin/js/django_hstore_widget/p-e1255160.js,sha256=3fU2f0NzrAvuvX2jU5tOY00b5DQJwgITL9hrdSG6Bw0,29
+django_hstore_widget/templates/django_hstore_widget.html,sha256=QCtHWIBfSJxYX-FCb5rlFU7tmzFr3fnTlMES-Hyjrkg,230
+django_hstore_widget/widgets.py,sha256=5PFv3_-Hwz_qAbh80Al3TrW3GlDMUhjE6HJz8zzvAwU,1143
+django_hstore_widget-0.0.7.dist-info/LICENSE,sha256=fO9d4b8MK32hcaX6Ut0E33X-FEp_aEdg794iE5VKiEQ,1071
+django_hstore_widget-0.0.7.dist-info/METADATA,sha256=cSqj-iIFufQjDzvj2dPl8okgljtjYjoXSCbljCoNi1E,2338
+django_hstore_widget-0.0.7.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+django_hstore_widget-0.0.7.dist-info/RECORD,,
