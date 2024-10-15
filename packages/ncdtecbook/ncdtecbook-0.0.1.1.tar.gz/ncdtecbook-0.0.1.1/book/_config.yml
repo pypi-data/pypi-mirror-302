@@ -1,0 +1,47 @@
+# Book settings
+# more at https://jupyterbook.org/customize/config.html
+title                     : National Center for the Distinguished, Tec Book
+author                    : Tec Teachers
+copyright                 : "2024"
+logo                      : logo.png
+exclude_patterns          : ["force"]
+
+# Execution settings
+# more at https://jupyterbook.org/content/execute.html
+execute:
+  execute_notebooks       : "force"
+  cache                   : "force"
+
+# Define the name of the latex output file for PDF builds
+latex:
+  latex_documents:
+    targetname            : book.tex
+
+bibtex_bibfiles:
+  - references.bib
+
+# Github repo
+repository:
+  url                     : https://github.com/suhelhammoud/ncd-tec-book
+  path_to_book            : book 
+  branch                  : main
+
+
+# HTML-specific settings
+# See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
+html:
+  favicon                 : "images/favicon.png"
+  navbar_number_sections  : false 
+  use_edit_page_button    : true
+  use_repository_button   : true
+  use_issues_button       : true
+  extra_navbar            : <a href="http://ncd.sy/">NCD</a> 
+  extra_footer            : "" 
+  google_analytics_id     : ""
+  home_page_in_navbar     : true
+  baseurl                 : "https://www.tomasbeuzen.com/python-programming-for-data-science/"  # The base URL where your book will be hosted. Used for creating image previews and social links. e.g.: https://mypage.com/mybook/
+  use_multitoc_numbering  : false # restart chapter numbering between parts
+  
+# Open in google colab
+launch_buttons:
+  colab_url               : "https://colab.research.google.com"
