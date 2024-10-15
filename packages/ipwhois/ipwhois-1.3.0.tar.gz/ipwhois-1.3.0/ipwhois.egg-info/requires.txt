@@ -1,0 +1,5 @@
+dnspython
+defusedxml
+
+[:python_version < "3.3"]
+ipaddr==2.2.0
