@@ -1,0 +1,13 @@
+matplotlib
+nibabel
+nilearn
+numpy
+pandas
+plotly
+scipy
+seaborn
+TotalSegmentator
+pygments
+jupyter-client
+
+[gpu]
