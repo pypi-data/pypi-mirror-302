@@ -1,0 +1,11 @@
+CHANGELOG.rst,sha256=YednrK6kZsJaRSYoQwO_USn6um7wYrmqwh1z_sruGeg,2687
+taxonomyresolver/__init__.py,sha256=nDfg3GhDw8JebFUWCg8tTwknhT5eK54zDzuxOHnBYPk,322
+taxonomyresolver/cli.py,sha256=jrxZthdeZH-5Wg8Gb4rgMTQB5OXwlMzCMCoIl_2hkvk,12750
+taxonomyresolver/library.py,sha256=wzVEIUmu2AJmZOStU_bLVaLX3hwnNapQdh7SSuRjK0Y,1792
+taxonomyresolver/tree.py,sha256=LNQsQ7GOmkEMQ3pSsL97Rry1yKBo4tgRanLkWff1l0M,11831
+taxonomyresolver/utils.py,sha256=qcMTvEgkE9jcHAUKDNu5uvhkBN0r0e4FFhZyKvVT5xY,6235
+taxonomy_resolver-1.0.0.dist-info/LICENSE,sha256=lZrqPrSnf_MtG68IUYnSbuDMHmA-JgFSIOEdr44P7ck,11367
+taxonomy_resolver-1.0.0.dist-info/METADATA,sha256=Pyg5l5ubVEqZm0p6T8zlMqUhPJf5jjsli_KGamO30Mw,15104
+taxonomy_resolver-1.0.0.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+taxonomy_resolver-1.0.0.dist-info/entry_points.txt,sha256=ZVrUauS99aKNBtmqu4XoDn0rjjFwefz0Wa8aZ1lTC8I,62
+taxonomy_resolver-1.0.0.dist-info/RECORD,,

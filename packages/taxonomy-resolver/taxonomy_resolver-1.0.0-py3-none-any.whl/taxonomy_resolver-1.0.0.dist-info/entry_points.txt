@@ -1,0 +1,3 @@
+[console_scripts]
+taxonomy-resolver=taxonomyresolver.cli:cli
+
