@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: s3zipda
+Version: 0.1.0
+Summary: Functionality to access data stored inside zip files, either locally or in S3
+License: MIT
+Author: Eetu Mäkelä
+Author-email: eetu.makela@helsinki.fi
+Requires-Python: >=3.10,<4
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: hscifsspecutil (>=0.1.1,<0.2.0)
+Requires-Dist: morefs[asynclocalfs] (>=0.2.2,<0.3.0)
+Requires-Dist: pyyaml (>=6.0.2,<7.0.0)
+Requires-Dist: s3fs (>=2024.9.0,<2025.0.0)
+Requires-Dist: stream-unzip (>=0.0.95,<0.0.96)
+Description-Content-Type: text/markdown
+
+
