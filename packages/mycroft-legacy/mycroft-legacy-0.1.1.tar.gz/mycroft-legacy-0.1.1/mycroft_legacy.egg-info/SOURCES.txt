@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+mycroft/__init__.py
+mycroft/version.py
+mycroft/skills/__init__.py
+mycroft/skills/common_play_skill.py
+mycroft_legacy.egg-info/PKG-INFO
+mycroft_legacy.egg-info/SOURCES.txt
+mycroft_legacy.egg-info/dependency_links.txt
+mycroft_legacy.egg-info/requires.txt
+mycroft_legacy.egg-info/top_level.txt
+mycroft_legacy.egg-info/zip-safe
