@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "py-mmtx-client"
+version = "0.1.0"
+description = "Python client for media-mtx API"
+authors = ["Tobias Kurze <it@t-kurze.de>"]
+readme = "README.md"
+license = "GPL"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+requests = "^2.32.3"
+loguru = "^0.7.2"
+python-dotenv = "^1.0.1"
+pydantic = "^2.9.2"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+filterwarnings = [
+    'ignore:configuration option "asyncio_default_fixture_loop_scope" is unset',
+]
