@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: learnsaxs
+Version: 0.0.3
+Home-page: https://github.com/freesemt/learnsaxs
+Author: Masatsuyo Takahashi
+Author-email: freesemt@gmail.com
+License: MIT
+Keywords: learn saxs
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+
