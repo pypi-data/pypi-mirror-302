@@ -1,0 +1,31 @@
+name: linting
+
+on: [push]
+
+jobs:
+  linting:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Python 3.10
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.10"
+      - name: Install uv
+        run: |
+          curl -LsSf https://astral.sh/uv/install.sh | sh
+      - name: Install package
+        run: |
+          uv pip install --system --no-deps .
+      - name: Install dev requirements
+        run: |
+          uv pip install --system -r dev-requirements.txt
+      - name: ruff
+        run: |
+          ruff pynxtools_raman tests
+      - name: ruff formatting
+        run: |
+          ruff format --check pynxtools_raman tests
+      - name: mypy
+        run: |
+          mypy pynxtools_raman tests

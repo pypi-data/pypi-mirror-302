@@ -1,0 +1,2 @@
+[pynxtools.reader]
+raman = pynxtools_raman.reader:RamanReader
