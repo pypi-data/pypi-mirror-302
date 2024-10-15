@@ -1,0 +1,6 @@
+websocket-client==1.7.0
+requests==2.31.0
+pngquant==1.0.7
+pillow==10.2.0
+zopflipng==1.1.1
+pillow-avif-plugin==1.4.3
