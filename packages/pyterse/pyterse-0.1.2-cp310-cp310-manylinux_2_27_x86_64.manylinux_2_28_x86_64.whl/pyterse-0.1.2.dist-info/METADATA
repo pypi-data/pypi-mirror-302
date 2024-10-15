@@ -1,0 +1,101 @@
+Metadata-Version: 2.1
+Name: pyterse
+Version: 0.1.2
+Summary: A Python interface for the TRPX compression algorithm
+Author-Email: Senik Matinyan <matinyan.senik@gmail.com>
+License: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: <=3.12,>=3.9
+Description-Content-Type: text/markdown
+
+
+
+# Pyterse
+Python package of TERSE/PROLIX diffraction and  cryo-EM data compression algorithm
+
+
+> The pyterse python package uses the c++ TERSE/PROLIX(TRPX) compression algorithm scheme (https://github.com/senikm/trpx) and adds python binders to it's main class.
+
+---
+
+> Before you consider pyterse
+- Your data is signed or unsigned integral type.
+- Your data is grayscale.
+- Preferably has high dynamic range.
+
+
+
+## How to install the package
+
+> Create a virtual environment
+
+```bash
+conda create -n pyterse python pip numpy pillow 
+``` 
+
+> Install the package
+
+```python
+pip install pyterse 
+```
+---
+
+
+### Testing the functionality of the library
+
+#### Basic commands
+
+- **Create terse object**: 
+```python
+from pyterse import Terse
+
+# Constructor 1
+terse = Terse() 
+
+# Constuctor 2
+ terse = Terse(data) #nD NumPy array or slice from an array
+
+ # Constuctor 3
+ terse = Terse(data,  data.size, block_size) #Provide the frame size and the costum block size: default is 12
+ - Example:
+terse = Terse(data,  512* 512, 12)
+```
+
+- **Add additional entry to Terse object**:
+ ```python
+ terse.push_back(data) #The NumPy array or slice from a nD array should correspond to existing set shape (terse.shape).
+```
+
+- **Save compressed data to a file**:
+ ```python
+ terse.save('filename.trpx')
+```
+
+- **Load compressed data from a file**:
+ ```python
+ loaded_terse = Terse.load('filename.trpx')
+```
+
+- **Decompress the data**:
+ ```python
+ decompressed_frame = loaded_terse.prolix()
+```
+
+- **Decompress a specific entry**:
+ ```python
+ decompressed_frame = loaded_terse.prolix(n)
+ # You can check the number of entries by terse.number_of_entries()
+```
+
+- **Add and retrieve metadata to the terse object**:
+ ```python
+terse.set_attribute('distance', '487.0')
+terse.get_attribute('distance')
+terse.get_attributes() #Retrieves all set atributes
+```
