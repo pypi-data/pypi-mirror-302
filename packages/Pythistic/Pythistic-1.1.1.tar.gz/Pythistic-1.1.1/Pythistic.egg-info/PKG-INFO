@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: Pythistic
+Version: 1.1.1
+Summary: A Python library for statistical data processing
+Home-page: https://github.com/brotherzhafif/Pythistic
+Author: BrotherZhafif
+Author-email: bangz1504@gmail.com
+License: MIT
+Description: # Python Statistic Program 
+        > My Statistic Tools made with Python 
+        
+        ### Features
+        - Frequency Table
+        - Descriptive Statistics
+        - Display Chart
+        - Data Transformation
+        
+        ### Required
+        - Matplotlib
+        - Matplotlib_Venn
+        - Numpy
+        - Tabulate
+        - Pandas
+        - Scipy
+        
+        ### Structure
+        - Program Structure
+        
+              + Main.py                [ Main Control file ]
+              + FrequencyTable.py      [ Frequency Table Module ]
+              + Chart.py               [ Chart Display Module ]
+              + Transform.py           [ Data Transformation Module ]
+        
+        ### How to Use
+        - For detailed Documentation, please visit [Pythistic Wiki](https://github.com/brotherzhafif/Pythistic/wiki)
+        
+        ### Author
+            BrotherZhafif
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown

@@ -1,0 +1,6 @@
+matplotlib
+matplotlib-venn
+numpy
+pandas
+scipy
+tabulate
