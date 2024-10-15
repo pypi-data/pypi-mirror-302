@@ -1,0 +1,8 @@
+altgraph
+packaging
+pefile
+pillow
+pyinstaller
+pyinstaller-hooks-contrib
+PyQt5
+pywin32-ctypes
