@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: mecab
+Version: 0.996.5
+Summary: MeCab binding for many OSs (Windows, macOS, and Linux)
+Home-page: https://github.com/ikegami-yukino/mecab/tree/master/mecab/python
+Author: Yukino Ikegami
+Author-email: yknikgm@gmail.com
+License: BSD, GPL or LGPL
+
+Unofficial MeCab binding Python module for many OSs (Windows, macOS, and Linux)
+
+
