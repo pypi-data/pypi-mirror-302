@@ -1,0 +1,9 @@
+README.md
+setup.py
+my_connector/__init__.py
+my_connector/get_connection.py
+mysql_connector_package.egg-info/PKG-INFO
+mysql_connector_package.egg-info/SOURCES.txt
+mysql_connector_package.egg-info/dependency_links.txt
+mysql_connector_package.egg-info/requires.txt
+mysql_connector_package.egg-info/top_level.txt
