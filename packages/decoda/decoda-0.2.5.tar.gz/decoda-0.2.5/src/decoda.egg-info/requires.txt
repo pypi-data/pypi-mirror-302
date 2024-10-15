@@ -1,0 +1,5 @@
+attrs
+pretty_j1939
+xlrd2
+pandas
+openpyxl
