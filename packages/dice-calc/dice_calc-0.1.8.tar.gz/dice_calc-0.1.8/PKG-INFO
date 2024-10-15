@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: dice_calc
+Version: 0.1.8
+Summary: Advanced Calculator for Dice
+Author: Ar-Kareem
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# PythonDice
+This is a recreation of the language and capabilities of anydice.com using the python language
+
+This project is still in very early development. (project started October 2024)
+
+# Example Package
+
+This is a simple example package. You can use
+[GitHub-flavored Markdown](https://guides.github.com/features/mastering-markdown/)
+to write your content.
+
+```
+git status
+git add
+git commit
+```
