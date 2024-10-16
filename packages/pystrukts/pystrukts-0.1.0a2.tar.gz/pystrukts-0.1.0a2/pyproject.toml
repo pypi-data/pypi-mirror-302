@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=42", "wheel", "setuptools_scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pystrukts"
+description = "Advanced data structures for Python."
+keywords = ["data structures", "structures", "tree", "graph", "list", "heap", "trie", "union find", "pystrukts"]
+readme = "README.md"
+requires-python = ">=3.8"
+dynamic = ["version"]
+license = { file = "LICENSE" }
+classifiers = [
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+dependencies = [
+]
+
+authors = [
+    { name = "Rubén Pérez Mercado", email = "rubenpermerc@gmail.com" }
+]
+
+[project.urls]
+Repository = "https://github.com/rubenperezm/pystrukts"
+Issues = "https://github.com/rubenperezm/pystrukts/issues"
+Changelog = "https://github.com/rubenperezm/pystrukts/blob/main/CHANGELOG.md"
+
+[tool.setuptools_scm]
+write_to = "pystrukts/_version.py"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=6.0",
+    "pylint",
+]
