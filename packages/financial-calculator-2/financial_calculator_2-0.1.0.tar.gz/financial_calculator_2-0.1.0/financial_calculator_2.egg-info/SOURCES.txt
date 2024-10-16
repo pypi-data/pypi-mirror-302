@@ -1,0 +1,7 @@
+README.md
+pyproject.toml
+financial_calculator_2.egg-info/PKG-INFO
+financial_calculator_2.egg-info/SOURCES.txt
+financial_calculator_2.egg-info/dependency_links.txt
+financial_calculator_2.egg-info/requires.txt
+financial_calculator_2.egg-info/top_level.txt
