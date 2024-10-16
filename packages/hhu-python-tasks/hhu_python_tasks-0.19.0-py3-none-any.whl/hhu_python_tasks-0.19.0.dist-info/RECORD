@@ -1,0 +1,11 @@
+hhu_python_tasks/VERSION,sha256=yKCyYK4Z6_US66eKP9Hwhzx5BVT20-0R8PoEVI9aoOU,6
+hhu_python_tasks/__init__.py,sha256=yCBM_Tcu5F95y3RO0FZbyNSGcWEVpUb0hHfAcZuKa7k,7
+hhu_python_tasks/project_tasks.py,sha256=bMmnf1XY7G97VjAuf5E6R79wxfYs7rQDGS05qwDEqvE,12114
+hhu_python_tasks/pyinfra_setup.py,sha256=NhfTAQoCy5U_WrxFvfWqF8xZWbka-b1JL6zbeaUPBec,3626
+hhu_python_tasks/structure.py,sha256=L2HplSSNGpHdJP50BzEvnPJJJZp25A06Rbg825zBGg8,5318
+hhu_python_tasks/tasks.py,sha256=EGOTmhjAXoOF0XAeyP4_7HtjNq8yBmp5PRi6cd1r0UA,11210
+hhu_python_tasks/utils.py,sha256=LaSE25k8jjSrJM5Wla0PSUXpJWc82DVyDYrWQoqVaXg,6752
+hhu_python_tasks-0.19.0.dist-info/METADATA,sha256=ipSTzFxFX9y1NQUDiO5CFbAdL0FNPsIRMCJb2rx0BUM,1231
+hhu_python_tasks-0.19.0.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+hhu_python_tasks-0.19.0.dist-info/licenses/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+hhu_python_tasks-0.19.0.dist-info/RECORD,,
