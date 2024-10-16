@@ -1,0 +1,55 @@
+Metadata-Version: 2.1
+Name: capibara-ent
+Version: 0.1.6
+Summary: Capibara: A Flexible Multimodal AI Library
+Home-page: https://github.com/Anachroni/capibara
+Author: Marco Durán
+Author-email: marco@anachroni.com
+Keywords: ai nlp machine-learning deep-learning language-models ethics
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: tensorflow>=2.5.0
+Requires-Dist: docker
+Requires-Dist: nltk
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: torch>=1.8.0
+Requires-Dist: torch-xla
+Requires-Dist: jax
+Requires-Dist: wandb
+Requires-Dist: tensorflow-hub
+
+
+    Capibara is a powerful and flexible multimodal AI library designed to facilitate the development,
+    training, and deployment of advanced language models. It offers a comprehensive suite of tools
+    for natural language processing, including:
+
+    - Customizable model architectures with support for various layer configurations
+    - Synthetic embedding generation for enhanced text representation
+    - Ethical content filtering to ensure responsible AI output
+    - Integrated training pipeline with support for TPUs
+    - Inference capabilities for deployed models
+    - CLI tool for easy model management and experimentation
+
+    Key features:
+    - Modular design for easy extension and customization
+    - Built-in support for popular deep learning frameworks like TensorFlow and PyTorch
+    - Integration with Weights & Biases for experiment tracking and visualization
+    - Docker support for containerized deployment
+    - Hyperparameter optimization tools for model tuning
+
+    Capibara is ideal for researchers, data scientists, and AI engineers looking to push the
+    boundaries of natural language processing while maintaining ethical standards and
+    operational efficiency.
+    
