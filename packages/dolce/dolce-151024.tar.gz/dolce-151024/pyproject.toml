@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "dolce"
+version = "151024"
+authors = [
+  { name="Amir Teymuri", email="amtework@gmail.com" },
+]
+license = { file = "LICENSE" }
+description = "Algorithmic composition utilities"
+readme = "README.md"
+requires-python = ">=3.5"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU Affero General Public License v3",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    'python-rtmidi', 'MIDIUtil', 'mido', 'numpy'
+]
+
+[project.urls]
+"Homepage" = "https://codeberg.org/dolce/src.git"

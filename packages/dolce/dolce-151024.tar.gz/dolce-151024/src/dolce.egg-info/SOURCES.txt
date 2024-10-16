@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+src/dolce/__init__.py
+src/dolce/cfg.py
+src/dolce/err.py
+src/dolce/reader.py
+src/dolce/realtime.py
+src/dolce/utils.py
+src/dolce/version.py
+src/dolce/writer.py
+src/dolce.egg-info/PKG-INFO
+src/dolce.egg-info/SOURCES.txt
+src/dolce.egg-info/dependency_links.txt
+src/dolce.egg-info/requires.txt
+src/dolce.egg-info/top_level.txt
