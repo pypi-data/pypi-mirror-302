@@ -1,0 +1,7 @@
+setup.py
+pydeobf/__init__.py
+pydeobf/pydeobf.py
+pydeobf.egg-info/PKG-INFO
+pydeobf.egg-info/SOURCES.txt
+pydeobf.egg-info/dependency_links.txt
+pydeobf.egg-info/top_level.txt
