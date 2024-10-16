@@ -1,0 +1,2 @@
+[console_scripts]
+radifox-qa = radifox.qa.run:run

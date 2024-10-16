@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=61.0", 'tomli;python_version<"3.11"']
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "radifox-qa"
+dynamic = ["version"]
+description = "A quality assurance webapp for the RADIFOX framework."
+readme = "README.md"
+requires-python = ">=3.7"
+license = {text = "Apache-2.0"}
+authors = [
+    {name = "JH-MIPC", email = "jhmipc@jh.edu"},
+]
+urls = { "Homepage" = "https://github.com/jh-mipc/radifox-qa" }
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "flask",
+    "gunicorn",
+    "pyyaml",
+    "radifox>=2.1.0",
+]
+
+[project.scripts]
+radifox-qa = "radifox.qa.run:run"
+
+[tool.setuptools.packages.find]
+include = ["radifox.*"]
+
+[tool.setuptools.package-data]
+"radifox.qa" = ["templates/*.html"]
+
+[miniver]
+package_path = "radifox/qa"
