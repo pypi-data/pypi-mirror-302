@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+src/__init__.py
+src/main.py
+src/maker.py
+src/repo.py
+src/runcmd.py
+src/template.py
+src/okuldaogrenilen.egg-info/PKG-INFO
+src/okuldaogrenilen.egg-info/SOURCES.txt
+src/okuldaogrenilen.egg-info/dependency_links.txt
+src/okuldaogrenilen.egg-info/entry_points.txt
+src/okuldaogrenilen.egg-info/requires.txt
+src/okuldaogrenilen.egg-info/top_level.txt
