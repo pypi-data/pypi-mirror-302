@@ -1,0 +1,12 @@
+paces_calc/__init__.py,sha256=4ZDn6mg8wKbLCHpBYS_X6txSz4uV7SM9k5STexYoToU,798
+paces_calc/pace.1,sha256=HpaPQ_KwZpVnXYyOwEtzbOQ4ley_N5kqkBlUTfpaJ3o,2112
+paces_calc/pace.py,sha256=tS9xlKc3qvVmcXpU1knvhfldPULpgoolEZyOkf5r8vU,3078
+paces_calc/pace_formatter.py,sha256=v-uDYQplWsN9KkIv9fjpR9p8nbbRLzeyeQloRgYUGRI,3078
+paces_calc/pace_gui.py,sha256=GOU-9Fs4k_zzr4OdNS4_UPenSyEeV2tPyY-CD-t2g20,229
+paces_calc/pace_math.py,sha256=XhukXxTdza08knOMey2sqYiE5e9v3Ur3EWre6ZEGTQc,2775
+paces_calc-0.9.0.dist-info/LICENSE,sha256=OQ2BtBnlvjalWxabCi09JYy64abbt0h6o64eg9NEbbA,1072
+paces_calc-0.9.0.dist-info/METADATA,sha256=vLVdnsPcs2bAIhSdo9weCzr4jEREP1sU5zdi1P0hy8k,4866
+paces_calc-0.9.0.dist-info/WHEEL,sha256=GV9aMThwP_4oNCtvEC2ec3qUYutgWeAzklro_0m4WJQ,91
+paces_calc-0.9.0.dist-info/entry_points.txt,sha256=_0o5F6nWNrcpuj8bcf3YvLBoAxkI2TwrgnIjKu0SghM,46
+paces_calc-0.9.0.dist-info/top_level.txt,sha256=CFR2woJTTkTm-tydn1UcYKFO4QWanCZBrH5aexsqAv0,11
+paces_calc-0.9.0.dist-info/RECORD,,
