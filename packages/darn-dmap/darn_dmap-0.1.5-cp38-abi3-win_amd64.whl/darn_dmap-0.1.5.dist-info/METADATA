@@ -1,0 +1,14 @@
+Metadata-Version: 2.3
+Name: darn-dmap
+Version: 0.1.5
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Rust
+Requires-Dist: numpy <3
+Author: Remington Rohel
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+
+# Dmap
+
+Rust tools for SuperDARN DMAP file format operations.
+
