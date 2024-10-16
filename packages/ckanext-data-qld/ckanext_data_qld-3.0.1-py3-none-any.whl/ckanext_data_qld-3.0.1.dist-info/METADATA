@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: ckanext-data-qld
+Version: 3.0.1
+Summary: Custom extension for Data QLD
+Home-page: https://github.com/qld-gov-au/ckanext-data-qld
+Author: Queensland Government and Salsa Digital
+Author-email: 
+License: AGPL
+Keywords: CKAN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)
+Classifier: Programming Language :: Python :: 2.7
+License-File: LICENSE
+
