@@ -1,0 +1,15 @@
+regex
+
+[all]
+torch==1.13
+bnlp-toolkit
+transformers[sentencepiece]==4.28.0
+datasets
+gdown
+cython
+pyhocon
+numpy
+segtok
+
+[lemma]
+bnlp-toolkit
