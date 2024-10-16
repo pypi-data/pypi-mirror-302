@@ -1,0 +1,31 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+
+parts:
+  - caption: Level 10, Term 1
+    chapters:
+    - file: 1-information-technology/001-it
+      title: Information Technology
+      sections:
+      - file: 1-information-technology/002-computer-architecture
+        title: Computer Architecture
+      - file: 1-information-technology/003-operating-systems
+        title: Operating Systems
+  # - caption: Level 10, Term 2
+
+  - caption: Level 11, Term 1
+    numbered: false
+    chapters:
+      - file: 1-information-technology/100-queues-and-stacks
+        title: Queue and Stack Data Structure
+
+      - file: 1-information-technology/101-graphs
+
+  # - caption: Level 11, Term 2
+
+  # - caption: Level 12, Term 1
+
+  # - caption: Level 12, Term 2

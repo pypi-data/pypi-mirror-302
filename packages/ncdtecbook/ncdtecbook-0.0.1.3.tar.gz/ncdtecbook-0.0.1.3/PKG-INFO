@@ -1,0 +1,47 @@
+Metadata-Version: 2.3
+Name: ncdtecbook
+Version: 0.0.1.3
+Summary: NCD-TEC Book examples
+Project-URL: Homepage, https://github.com/suhelhammoud/ncd-tec-book
+Project-URL: Issues, https://github.com/suhelhammoud/ncd-tec-book/issues
+Author-email: Suhel Hammoud <suhel.hammoud@gmail.com>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# ncd-tec-book
+
+
+
+[ncd-teck-book](https://suhelhammoud.github.io/ncd-tec-book)
+
+
+### Example Package
+
+### build using hatchling
+```bash
+python -m build
+# or
+hatchling build
+```
+
+### publish using twine
+```bash
+python -m build
+twine upload dist/*
+```
+
+### publish to testpypi
+```bash
+python -m build
+twine upload --repository testpypi dist/*
+```
+
+### installing pypi library from testpypi
+```
+pip install -i https://test.pypi.org/simple/ ncdtecbook
+```
+
