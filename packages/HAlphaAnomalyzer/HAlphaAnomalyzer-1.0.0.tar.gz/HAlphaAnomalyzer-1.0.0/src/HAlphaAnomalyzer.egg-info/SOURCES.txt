@@ -1,0 +1,15 @@
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/HAlphaAnomalyzer/__init__.py
+src/HAlphaAnomalyzer/_anova_analysis.py
+src/HAlphaAnomalyzer/_cell_average_calculator.py
+src/HAlphaAnomalyzer/_cell_range_calculator.py
+src/HAlphaAnomalyzer/anomalyzer.py
+src/HAlphaAnomalyzer.egg-info/PKG-INFO
+src/HAlphaAnomalyzer.egg-info/SOURCES.txt
+src/HAlphaAnomalyzer.egg-info/dependency_links.txt
+src/HAlphaAnomalyzer.egg-info/not-zip-safe
+src/HAlphaAnomalyzer.egg-info/requires.txt
+src/HAlphaAnomalyzer.egg-info/top_level.txt
