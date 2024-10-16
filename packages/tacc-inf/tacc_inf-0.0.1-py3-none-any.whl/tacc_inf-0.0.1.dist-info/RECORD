@@ -1,0 +1,15 @@
+tacc_inf/README.md,sha256=ITtiJTBv0XREAYdiW0AyQHzuPpPD9kHe5bBdTje6_Eg,500
+tacc_inf/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tacc_inf/cli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tacc_inf/cli/_cli.py,sha256=LYG0JInp0JOVSGjHryUfBJ5t9OUWi5UkHXdpakBZ0fo,9115
+tacc_inf/cli/_utils.py,sha256=2KYQCoF4PgdXadbLXw43G87igEMCC1HpNcZ-SMEXtEY,4035
+tacc_inf/find_port.sh,sha256=bGQ6LYSFVSsfDIGatrSg5YvddbZfaPL0R-Bjo4KYD6I,1088
+tacc_inf/launch_server.sh,sha256=-XfUFlsYQ00m0laloHvpph2XBjgIse2LNI0mX3SFfCM,4551
+tacc_inf/models/README.md,sha256=7Vz-AMValcic5Mpi9i5FshhRUV9K8nwSnItN4O1TSvI,8124
+tacc_inf/models/models.csv,sha256=A8vZRfI8pHbnK6xmAV3BuBQmSGJ1V5w8IwSKvyGPADM,4873
+tacc_inf/multinode_vllm.slurm,sha256=ffCEyo2pyrd0Lv22kLIiFcQmc_K2Fnn1qEY2Uzv2o3Y,3946
+tacc_inf/vllm.slurm,sha256=E3cNjoIfjG1IiTx8CC44x9NCJBT1JyCb_0w9NLGzKH8,1680
+tacc_inf-0.0.1.dist-info/METADATA,sha256=2DAsUUBF0gzqidpU57QK1BGHpLpaTWzo833DX7g64DM,13312
+tacc_inf-0.0.1.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+tacc_inf-0.0.1.dist-info/entry_points.txt,sha256=UY3I148akxL6takxNmfF8jCez3nmbkjKNGFHAZYiIls,50
+tacc_inf-0.0.1.dist-info/RECORD,,

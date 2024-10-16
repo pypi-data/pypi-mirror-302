@@ -1,0 +1,3 @@
+[console_scripts]
+tacc-inf=tacc_inf.cli._cli:cli
+
