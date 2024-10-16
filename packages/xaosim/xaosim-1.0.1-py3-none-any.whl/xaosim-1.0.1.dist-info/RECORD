@@ -1,0 +1,16 @@
+xaosim/DM.py,sha256=RSl4Uro_rNe6e2dB8prAq5PrFKTQTNh6ZrKXCduKmn4,20482
+xaosim/QtMain.py,sha256=-n1uD7Gyk_0AoIm2EbstvB5rIRWOFJq9h1Ndi7YXRng,8886
+xaosim/__init__.py,sha256=uFOCqKhv7MxEQmUEy1kJ9geOtBO0fiNuXpAPUuOwGIc,630
+xaosim/atmosphere.py,sha256=JUfotvuABa_Gxw52MNLlGlMA7W16fS3d6A5L7RPukv4,11504
+xaosim/camera.py,sha256=6Wc0VOAL3gz5CqBOEZDSQukLxJwdfWEJlixg9F7KG8o,29638
+xaosim/instrument.py,sha256=9SDNFz2pKYbDqFQwlxUcEw49k0Bp-h0_Cp-JfN1ClO4,30297
+xaosim/pupil.py,sha256=nO9z88_WtCo2hhAwo43Mw1_WCZXuOgCgpzKkpCi-vWc,42984
+xaosim/scexao_shmlib.py,sha256=47Zw_c4Nm2avQD0SByDIEi5uq22zz4qZMSKHD_vavYg,5100
+xaosim/sft.py,sha256=nINUY3nrhrcud1p2O7WSl6kwTeJQUXubfIJfQHKHUlU,2514
+xaosim/shmlib.py,sha256=YwlIY-inRwByPG3E-Q7AWiCEZA-iuKNarE3wqU1TyiY,26565
+xaosim/wavefront.py,sha256=vuuJoAiRp1nAMFRXYJBZlfjTmVzCkjKLfMKvp-IArTk,10962
+xaosim/zernike.py,sha256=-AlaTiYAgqq0llJWm7HlcWkBzEVti2Xt1N4mFOT-1fk,7283
+xaosim-1.0.1.dist-info/METADATA,sha256=nULTUCgc-c0n5ufMlpuBTC_t2DXeJ2U6Y8M7YtXyduU,622
+xaosim-1.0.1.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+xaosim-1.0.1.dist-info/licenses/LICENSE.txt,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+xaosim-1.0.1.dist-info/RECORD,,
