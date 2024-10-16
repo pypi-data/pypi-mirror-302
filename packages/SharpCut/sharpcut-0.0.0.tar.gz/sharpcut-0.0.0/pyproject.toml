@@ -1,0 +1,7 @@
+[project]
+name = "SharpCut"
+authors = [
+    {name = "The #Cut Research Group", email = "sharp-cut@kth.se"},
+]
+version = "0.0.0"
+description = "Coming soon"

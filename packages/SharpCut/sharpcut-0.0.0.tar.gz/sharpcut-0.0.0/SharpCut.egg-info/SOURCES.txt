@@ -1,0 +1,6 @@
+pyproject.toml
+SharpCut.egg-info/PKG-INFO
+SharpCut.egg-info/SOURCES.txt
+SharpCut.egg-info/dependency_links.txt
+SharpCut.egg-info/top_level.txt
+sharpcut/__init__.py
