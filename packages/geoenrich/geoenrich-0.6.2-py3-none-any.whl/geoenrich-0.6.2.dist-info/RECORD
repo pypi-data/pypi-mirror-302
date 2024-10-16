@@ -1,0 +1,14 @@
+geoenrich/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+geoenrich/credentials_example.py,sha256=sdQNLunD0N_fIBbsBX2RjvHIill_xpbbumqtNeXj8A4,703
+geoenrich/dataloader.py,sha256=kvSxx_cJ5hlM-p_ViUAJIxC7r6s_PrPoz423gc2IJqE,10204
+geoenrich/enrichment.py,sha256=72Me_DibFhyn41V-hzB1jGVhSOgIV16sUwMYBw2fglM,44696
+geoenrich/exports.py,sha256=yxpOJvpIa7EFqWrIs6mQKzgG6YTFjM8Quc3MdfepWzI,30300
+geoenrich/satellite.py,sha256=exrXaIsCBHFcubGlHVG3QVKmG-oK5aEb8Hl5U0TYHoM,21525
+geoenrich/data/AcDigitifera.zip,sha256=KWsTLl9Vim2Z9-XLLzfO_BkhKkqUDyPM1di44pIEbaY,354142
+geoenrich/data/areas.csv,sha256=5JTyCsw9Ijs4SdLJnOxp5bCk4pM8MoVQT9Ql1b22tBM,204
+geoenrich/data/catalog.csv,sha256=Z0DBKBqqw5W4nxOdpObd1ZcE0eaWyjOzlj-IPqYhNGA,4320
+geoenrich-0.6.2.dist-info/LICENSE,sha256=5X8cMguM-HmKfS_4Om-eBqM6A1hfbgZf6pfx2G24QFI,35150
+geoenrich-0.6.2.dist-info/METADATA,sha256=M3jOX7by_68d2huDxzOV9OcVjOP33-9GTIfF2bEX45c,5237
+geoenrich-0.6.2.dist-info/WHEEL,sha256=GV9aMThwP_4oNCtvEC2ec3qUYutgWeAzklro_0m4WJQ,91
+geoenrich-0.6.2.dist-info/top_level.txt,sha256=Bbll24Hb9vItLfkfRgU7v8I5n97krBVzxe4dnTWmePc,10
+geoenrich-0.6.2.dist-info/RECORD,,
