@@ -1,0 +1,106 @@
+from __future__ import annotations
+
+from typing import TYPE_CHECKING
+
+import numpy as np
+
+if TYPE_CHECKING:
+    from structured_array.expression import Expr
+    from structured_array.typing import IntoExpr
+    from pandas.core.interchange.dataframe_protocol import DtypeKind
+
+
+def into_expr(value: IntoExpr) -> Expr:
+    from structured_array.expression import Expr, SelectExpr
+
+    if isinstance(value, str):
+        return Expr(SelectExpr([value]))
+    elif isinstance(value, Expr):
+        return value
+    else:
+        raise TypeError(f"Expected str or Expr, got {type(value)}")
+
+
+def into_expr_multi(
+    *exprs: IntoExpr,
+    **named_exprs: IntoExpr,
+) -> list[Expr]:
+    if len(exprs) == 1:
+        if not isinstance(exprs[0], str) and hasattr(exprs[0], "__iter__"):
+            exprs = exprs[0]
+    named = [into_expr(col).alias(name) for name, col in named_exprs.items()]
+    return [into_expr(col) for col in exprs] + named
+
+
+def basic_dtype(d: np.dtype) -> np.dtype:
+    if d.names is None:
+        return d
+    if len(d.descr) > 1:
+        raise ValueError(f"More than one field in dtype: {d!r}")
+    return np.dtype(d.descr[0][1])
+
+
+class ColumnCaster:
+    def __repr__(self) -> str:  # pragma: no cover
+        return f"{self.__class__.__name__}()"
+
+    def cast(self, arr: np.ndarray) -> np.ndarray:
+        return arr
+
+    def uncast(self, arr: np.ndarray) -> np.ndarray:
+        return arr
+
+
+class NamedColumnCaster(ColumnCaster):
+    def __init__(self, name: str, dtype) -> None:
+        self.name = name
+        self.dtype = dtype
+
+    def __repr__(self) -> str:  # pragma: no cover
+        return f"{self.__class__.__name__}(name={self.name!r}, dtype={self.dtype!r})"
+
+    def cast(self, arr: np.ndarray) -> np.ndarray:
+        return arr[self.name]
+
+    def uncast(self, arr: np.ndarray) -> np.ndarray:
+        dtype = arr.dtype if self.dtype is None else self.dtype
+        return asarray_maybe_nd(arr, self.name, dtype)
+
+
+def asarray_maybe_nd(arr: np.ndarray, name: str, dtype=None) -> np.ndarray:
+    if arr.ndim < 2:
+        out = np.asarray(arr, dtype=[(name, dtype, ())])
+    else:
+        out = np.empty(arr.shape[0], dtype=[(name, dtype, arr.shape[1:])])
+        out[name] = arr
+    return out
+
+
+def caster(arr: np.ndarray, dtype=None) -> ColumnCaster:
+    if arr.dtype.names is None:
+        return ColumnCaster()
+    return NamedColumnCaster(arr.dtype.names[0], dtype)
+
+
+def unstructure(arr: np.ndarray | np.generic) -> np.ndarray:
+    """Convert a structured array to a regular array."""
+    if not isinstance(arr, np.ndarray) or arr.dtype.names is None:
+        return arr
+    return caster(arr).cast(arr)
+
+
+_DTYPE_KINDS = {
+    0: "i",
+    1: "u",
+    2: "f",
+    20: "b",
+    21: "S",
+    22: "M",
+    23: "O",
+}
+
+
+def dtype_kind_to_dtype(kind: tuple[DtypeKind, int, str, str]) -> np.dtype:
+    _kind = _DTYPE_KINDS[kind[0].value]
+    _byte = kind[1] // 8
+    return np.dtype(f"{_kind}{_byte}")
