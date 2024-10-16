@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "mindcontrol-client"
+version = "0.0.0"
+description = "Mind Control Python client"
+authors = ["Sasha Koss <koss@nocorp.me>"]
+license = "UNLICENSED"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
