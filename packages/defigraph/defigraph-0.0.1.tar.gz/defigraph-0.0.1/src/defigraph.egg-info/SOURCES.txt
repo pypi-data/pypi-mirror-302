@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+src/defigraph/Edge.py
+src/defigraph/Edge_test.py
+src/defigraph/Graph.py
+src/defigraph/Graph_test.py
+src/defigraph/Pool.py
+src/defigraph/Vertex.py
+src/defigraph/Vertex_test.py
+src/defigraph/__init__.py
+src/defigraph.egg-info/PKG-INFO
+src/defigraph.egg-info/SOURCES.txt
+src/defigraph.egg-info/dependency_links.txt
+src/defigraph.egg-info/top_level.txt
