@@ -1,0 +1,6 @@
+numpy
+scipy
+torch>=2.0.1
+tqdm
+transformers
+typing_extensions
