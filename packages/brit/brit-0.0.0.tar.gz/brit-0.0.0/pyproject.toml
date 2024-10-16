@@ -1,0 +1,7 @@
+[project]
+name = "brit"
+authors = [
+    {name = "Brit Insurance", email = "itsecurity@britinsurance.com"},
+]
+version = "0.0.0"
+description = ""
