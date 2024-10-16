@@ -1,0 +1,17 @@
+jupyter_shared_drive_ui/__init__.py,sha256=7FxnYk-rKKyOyI2h5ijqHugtGgpgszDIDzYr1WHbYqQ,400
+jupyter_shared_drive_ui-0.1.8.data/data/share/jupyter/labextensions/@jupyter/shared-drive-extension/package.json,sha256=G-sSkSkVr_dUSoqQ1Nlniru5wZZKx6xuoYEoivFaDZM,3695
+jupyter_shared_drive_ui-0.1.8.data/data/share/jupyter/labextensions/@jupyter/shared-drive-extension/schemas/@jupyter/shared-drive-extension/package.json.orig,sha256=jOlg7l_S6eChovgstwasz1XBp5voHZNHHHBUUhLK748,3553
+jupyter_shared_drive_ui-0.1.8.data/data/share/jupyter/labextensions/@jupyter/shared-drive-extension/schemas/@jupyter/shared-drive-extension/shared-link.json,sha256=eCmdtxqkHOSJ1WUAOn1E8GJUx8GN6cykQN-bGjDPH0k,333
+jupyter_shared_drive_ui-0.1.8.data/data/share/jupyter/labextensions/@jupyter/shared-drive-extension/schemas/@jupyter/shared-drive-extension/user-menu-bar.json,sha256=jdkwzwUK2SPYdU92LR5Qqcb3ajY8zrxf_5eHVC1w1TY,268
+jupyter_shared_drive_ui-0.1.8.data/data/share/jupyter/labextensions/@jupyter/shared-drive-extension/static/15.e8065d6ad665c16ece4c.js,sha256=6AZdatZlwW7OTNK2jOjCY1VNjHz_TJos6O5pBp_UD1o,8561
+jupyter_shared_drive_ui-0.1.8.data/data/share/jupyter/labextensions/@jupyter/shared-drive-extension/static/575.a47392798a980d639e62.js,sha256=pHOSeYqYDWOeYtDsiUQ2f6rwoDgPl8oy0_EJ00bZutU,3228
+jupyter_shared_drive_ui-0.1.8.data/data/share/jupyter/labextensions/@jupyter/shared-drive-extension/static/762.da9f44ae5aad424a0636.js,sha256=2p9ErlqtQkoGNu_cRxAF9lLu4K5jjm7X-m9TSzx2LKI,1687
+jupyter_shared_drive_ui-0.1.8.data/data/share/jupyter/labextensions/@jupyter/shared-drive-extension/static/953.c615731c83eb3255781b.js,sha256=xhVzHIPrMlV4G84qClfWkqCwdhz6990wXT8LrHP0kdk,6766
+jupyter_shared_drive_ui-0.1.8.data/data/share/jupyter/labextensions/@jupyter/shared-drive-extension/static/remoteEntry.ebe73ba7c8e65c1f728b.js,sha256=6-c7p8jmXB9yi7Ga5WeXe6YGAUeCUmyigYIy3e0MLjw,7956
+jupyter_shared_drive_ui-0.1.8.data/data/share/jupyter/labextensions/@jupyter/shared-drive-extension/static/style.js,sha256=jS6Ow3F_fmUvMmqzUy-xBJHoEKHojVFh2seFaPNoexI,174
+jupyter_shared_drive_ui-0.1.8.data/data/share/jupyter/labextensions/@jupyter/shared-drive-extension/static/third-party-licenses.json,sha256=ztJ2JJU8V9fhJcZz-42wdeNUPZVpl05E8efEn9jRKng,5104
+jupyter_shared_drive_ui-0.1.8.data/data/share/jupyter/labextensions/@jupyter/shared-drive-extension/install.json,sha256=yw_XZcDmshcH886Tgk7xjwXJaqC-5xMCh8i6J1OULzg,207
+jupyter_shared_drive_ui-0.1.8.dist-info/METADATA,sha256=ozIVtQUIAGjNb9B95EMfr13iR_cCik2QDn0h7uXBsUg,4699
+jupyter_shared_drive_ui-0.1.8.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+jupyter_shared_drive_ui-0.1.8.dist-info/licenses/LICENSE,sha256=mhO0ZW9EiWOPg0dUgB-lNbJ0CGwRmTdbeAg_se1SOnY,2833
+jupyter_shared_drive_ui-0.1.8.dist-info/RECORD,,
