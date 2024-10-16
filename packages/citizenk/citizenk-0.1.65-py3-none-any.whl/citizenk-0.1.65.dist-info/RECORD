@@ -1,0 +1,11 @@
+citizenk/__init__.py,sha256=GLIId8PHaFPew_KX7YxRNMuKqNrS0w8USqhOhAYOnHM,569
+citizenk/agent.py,sha256=iz6QkK7cie05TYzCNIw0U7yos_c5xuHzYDilz-nvH6E,11787
+citizenk/citizenk.py,sha256=NPo5Quqv10w_VvgHmqWN38yXt388Lcjgd70dj55mWqc,29550
+citizenk/kafka_adapter.py,sha256=Y8oiehGIkdHfVvDQXUTNnS0xcYc3r5582wOG9E3-uV4,27723
+citizenk/murmur2.py,sha256=qnEffBxIUYMAiQmxhfk-S92wWIQGKYY_od-IbBVZscE,1715
+citizenk/tasks.py,sha256=AUxz_-Bzqp4jNmKDparuFELrgFrMIeziUts-cED7MOM,5195
+citizenk/topic.py,sha256=fzoSliWDW3QJZqVc0kN6i_LMvCHs6Zln71dGQ_GCKMs,14598
+citizenk/utils.py,sha256=P74R6w3nTSl5OdYrP7Sl5f-SEjiPCL6NHZ3zWzgBpbI,517
+citizenk-0.1.65.dist-info/METADATA,sha256=ez2Nnc1sENtC4eym-frIfmYn_38nsvgdSFCcLDz7bYs,26066
+citizenk-0.1.65.dist-info/WHEEL,sha256=7Z8_27uaHI_UZAc4Uox4PpBhQ9Y5_modZXWMxtUi4NU,88
+citizenk-0.1.65.dist-info/RECORD,,
