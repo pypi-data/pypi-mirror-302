@@ -1,0 +1,15 @@
+pargraph/__init__.py,sha256=Wb4TZJgC9vrrSNkse7ySDSrgxbgE701Mh1BAIgAAP3o,306
+pargraph/about.py,sha256=jhHEJFZWhkQDemoZMomBYq-RNrKXknYzUaeIU9A6XsI,22
+pargraph/engine/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pargraph/engine/engine.py,sha256=itn_csyUZjx1IbM6KVBb5p-zPpAm-Dgq3T8dUnDEJqE,8627
+pargraph/graph/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pargraph/graph/annotation.py,sha256=ehd9BVFbl3bSGAu99f5KHa8870QLu6ag8TvXYT3ilOE,2105
+pargraph/graph/decorators.py,sha256=dBOlqvGgn4qxIE-EtJ2VJfh5M65NR2L-uWbiGwzoY-Y,17233
+pargraph/graph/objects.py,sha256=Khcx5I5Gu5ZznPbLtGB2mNxczDtO3fUjheYLQE3TVLs,38357
+pargraph/utility/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pargraph/utility/graphlib_graphblas.py,sha256=lrPNkadztlLU5ou3UGC1c8Ke8zH47V6fRjnoi8c1Zk8,6552
+pargraph-0.8.4.dist-info/LICENSE,sha256=xudC0jta6OXJkSHiLzzQQU50HIwSo0G97exO280dtR8,11345
+pargraph-0.8.4.dist-info/METADATA,sha256=d6GyOS4ltlJ6iPDQVt919HVwQ0dqsrtBw1QMCg_klOU,8536
+pargraph-0.8.4.dist-info/WHEEL,sha256=GV9aMThwP_4oNCtvEC2ec3qUYutgWeAzklro_0m4WJQ,91
+pargraph-0.8.4.dist-info/top_level.txt,sha256=0v8aHrJMN-hHdGYN09w2yFKWInJcyAQNjz1LI4pCrAo,9
+pargraph-0.8.4.dist-info/RECORD,,
