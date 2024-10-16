@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+hsc_to_lci/__init__.py
+hsc_to_lci/converter.py
+hsc_to_lci/utils.py
+hsc_to_lci.egg-info/PKG-INFO
+hsc_to_lci.egg-info/SOURCES.txt
+hsc_to_lci.egg-info/dependency_links.txt
+hsc_to_lci.egg-info/requires.txt
+hsc_to_lci.egg-info/top_level.txt
