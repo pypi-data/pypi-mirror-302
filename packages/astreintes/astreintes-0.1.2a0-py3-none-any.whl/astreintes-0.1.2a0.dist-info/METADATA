@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: astreintes
+Version: 0.1.2a0
+Summary: Default template for PDM package
+Author-Email: Olivier Winter <olivier.winter@hotmail.fr>
+License: MIT
+Requires-Python: >=3.10
+Requires-Dist: gspread
+Requires-Dist: ipython
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: pydantic
+Description-Content-Type: text/markdown
+
+# astreintes
+
+Calcul de rotations d'astreintes.
