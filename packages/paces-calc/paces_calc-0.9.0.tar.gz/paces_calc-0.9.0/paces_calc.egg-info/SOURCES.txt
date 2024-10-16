@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+pypiREADME.md
+pyproject.toml
+paces_calc/__init__.py
+paces_calc/pace.1
+paces_calc/pace.py
+paces_calc/pace_formatter.py
+paces_calc/pace_gui.py
+paces_calc/pace_math.py
+paces_calc.egg-info/PKG-INFO
+paces_calc.egg-info/SOURCES.txt
+paces_calc.egg-info/dependency_links.txt
+paces_calc.egg-info/entry_points.txt
+paces_calc.egg-info/requires.txt
+paces_calc.egg-info/top_level.txt

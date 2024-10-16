@@ -1,0 +1,8 @@
+include LICENSE
+include pypiREADME.md
+include paces_calc/pace.1
+
+exclude paces_calc/__pycache__/*
+exclude test/*
+exclude *.pyc
+exclude .pypirc

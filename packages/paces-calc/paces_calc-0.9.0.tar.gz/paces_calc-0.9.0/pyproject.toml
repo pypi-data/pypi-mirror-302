@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "paces_calc"
+authors = [{name = "Vladimir Herdman", email = "vovaherdman@gmail.com"}]
+license = {text = "MIT"}
+description = "pace to different distances converter"
+readme = "pypiREADME.md"
+version = "0.9.0"
+keywords = ["pace", "distance", "conversion", "command line"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "License :: OSI Approved :: MIT License",
+]
+requires-python = ">=3.9"
+
+dependencies = [
+"customtkinter>=5.2.2"
+]
+
+[project.urls]
+homepage = "https://github.com/Vladimir-Herdman/Pace-Calculator.git"
+repository = "https://github.com/Vladimir-Herdman/Pace-Calculator.git"
+
+[project.scripts]
+pace = "paces_calc.pace:main"
+
+[tool.setuptools]
+packages = ["paces_calc"]
