@@ -1,0 +1,12 @@
+salomos/__init__.py,sha256=Uv3YToeLS-uV5pBdbgCStl0KqhGoDev0EgsURWJcvLE,163
+salomos/db_manager.py,sha256=tONX-CZLgT0VmNFnft-Md9RVQgyzjez_EHk8cqdub4A,1406
+salomos/dsl_processor.py,sha256=gGBDax1Z6sEn6llOc72IH0atqFhYzyDKolRZArH0PAE,5014
+salomos/example_function.py,sha256=bA99gDtQ4K6hBZXB1TWEbRMSD1RgR_SY2C8nrldh2ys,45
+salomos/example_module.py,sha256=QYQcDttlg4k8zhlknGw65Jtv9ZmpciHwCMMxX51WnIc,286
+salomos/salomos.py,sha256=G6G6U-YqGt6VkFHO6bM4DmN0RG1SdDgNOlX8x-iCpZk,1605
+salomos-0.1.9.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+salomos-0.1.9.dist-info/METADATA,sha256=kR0FAgI1RYRwJYH02z0rQ0l8FxUdaq_8Zjw4qo1eEEY,3612
+salomos-0.1.9.dist-info/WHEEL,sha256=GV9aMThwP_4oNCtvEC2ec3qUYutgWeAzklro_0m4WJQ,91
+salomos-0.1.9.dist-info/entry_points.txt,sha256=p-BoT6Lmf6yKvX4T_yBazani4VglasvYFw9HgVE43SA,55
+salomos-0.1.9.dist-info/top_level.txt,sha256=bPQSHSadho05daKAijCDVxLfjm0rkWr2HSlDcFPNMrM,8
+salomos-0.1.9.dist-info/RECORD,,
