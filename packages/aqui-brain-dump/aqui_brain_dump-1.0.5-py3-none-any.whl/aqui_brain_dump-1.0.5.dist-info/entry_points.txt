@@ -1,0 +1,2 @@
+[console_scripts]
+realpython = aqui_brain_dump.__main__:main
