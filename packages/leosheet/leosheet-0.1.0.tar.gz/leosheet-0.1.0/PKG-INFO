@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: leosheet
+Version: 0.1.0
+Summary: Python SDK for Google Sheet Interaction
+Home-page: https://github.com/leoxiang66/leosheet
+Author: Tao Xiang
+Author-email: xiang.tao@outlook.de
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# leosheet
+ Python SDK for Google Sheet Interaction
+
+
