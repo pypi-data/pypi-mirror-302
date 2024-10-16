@@ -1,0 +1,11 @@
+importmap/__init__.py,sha256=e_FVwVR6cIHZ3tr27P5ZX-XmAzpJ5KPnufBE_fQO2so,96
+importmap/apps.py,sha256=y8BOR2LjEI0XjoG-oMaSnltJl9Z-jqnD2am1akJhv_M,315
+importmap/base.py,sha256=qMGf98NlEj87kJ2qMJyZiwA3EzGb65K_jL6FWYmPl9E,2184
+importmap/context_processors.py,sha256=niQoqmf2-7rmOPLsBiGomAYkwTiXlGf2Se2a3BNP9Q4,96
+importmap/templatetags/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+importmap/templatetags/importmap.py,sha256=4xa0eMPpb_d4OJdgor_qVuuaShyb2AxPDzdFFzyAgvs,2910
+dj_importmap-0.0.2.dist-info/LICENSE,sha256=KD3eYve4qpxhmZpdNmemNOE85eXBGwfPruScH_8JPYk,35125
+dj_importmap-0.0.2.dist-info/METADATA,sha256=UEog-VgLRXP4jUHQiGijJZzHmZ0Jbr5nZtqef_njUkM,45710
+dj_importmap-0.0.2.dist-info/WHEEL,sha256=GV9aMThwP_4oNCtvEC2ec3qUYutgWeAzklro_0m4WJQ,91
+dj_importmap-0.0.2.dist-info/top_level.txt,sha256=TaQtab2TnKnhCDzvWEIXENk-jqHVRzBeCSFoit-09BU,10
+dj_importmap-0.0.2.dist-info/RECORD,,
