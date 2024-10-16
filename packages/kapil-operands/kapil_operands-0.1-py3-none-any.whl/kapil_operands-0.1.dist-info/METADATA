@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: kapil_operands
+Version: 0.1
+Summary: This package related to 2 operands are same or not by using conditional statement concepts
+Author: Saral Kumar Kaviti
+Author-email: saralkumar28@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+
