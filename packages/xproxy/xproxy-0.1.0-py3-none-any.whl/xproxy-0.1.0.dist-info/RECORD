@@ -1,0 +1,9 @@
+xproxy/__init__.py,sha256=evsDmJMQ6T01nl0QboUlc7WX01cHCK-iEBMWee7OSqg,35
+xproxy/manager/__init__.py,sha256=hxyNmy_ePENUBxfnPMkz9_6_mHy5ZsHHSElVVK4XZnc,172
+xproxy/manager/base.py,sha256=15vM-N6hQyMg4wO2OUk7ukLuakfMfby5k-Q0chzmEcA,9359
+xproxy/manager/duomi.py,sha256=dvXYdkQrwSe4W9N7kOh0TMhkke6WYIojyvYa68mo_ok,1033
+xproxy/server.py,sha256=k2YRHB1QgKBJjluj4-oSZTCxHdzHhnItkp_j6SGxHIg,3858
+xproxy-0.1.0.dist-info/LICENSE,sha256=o6IOCM6e82pFYoFZ0RCKsCuYAl6slIZI1MmD_43SdYg,1062
+xproxy-0.1.0.dist-info/METADATA,sha256=VnNgq1sfE4fT6VARFen0SLnza2XmfShHqvt8y5U4zE0,2419
+xproxy-0.1.0.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+xproxy-0.1.0.dist-info/RECORD,,
