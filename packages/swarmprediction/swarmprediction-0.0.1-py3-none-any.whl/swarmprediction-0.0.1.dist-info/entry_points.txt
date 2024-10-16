@@ -1,0 +1,2 @@
+[console_scripts]
+swarmprediction = swarmprediction.__main__:main
