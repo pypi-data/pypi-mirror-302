@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: pipeteer
+Version: 0.3.0
+Summary: Simple, explicit durable execution framework.
+Author-email: Marcel Claramunt <marcel@marcelc.uk>
+Project-URL: repo, https://github.com/marciclabas/pipeteer.git
+Project-URL: docs, https://marciclabas.github.io/pipeteer/
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: haskellian
+Requires-Dist: zmq
+Requires-Dist: sqlmodel
+Requires-Dist: pydantic
+Requires-Dist: dslog
+
+# Pipeteer
+
+> package_description
