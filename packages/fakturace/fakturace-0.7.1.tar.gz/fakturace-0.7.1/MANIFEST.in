@@ -1,0 +1,6 @@
+include *.rst
+include *.md
+include *.py
+include *.txt
+include *.toml
+include *.yaml
