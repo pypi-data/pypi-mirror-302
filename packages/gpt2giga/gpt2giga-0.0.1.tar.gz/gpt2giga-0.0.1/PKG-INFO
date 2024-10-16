@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: gpt2giga
+Version: 0.0.1
+Summary: 
+License: MIT
+Author: Konstantin Krestnikov
+Author-email: rai220@gmail.com
+Requires-Python: >=3.12,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: aiohttp (>=3.10.10,<4.0.0)
+Requires-Dist: asyncio (>=3.4.3,<4.0.0)
+Requires-Dist: gigachat (>=0.1.35,<0.2.0)
+Requires-Dist: openai (>=1.51.2,<2.0.0)
+Requires-Dist: python-dotenv (>=1.0.1,<2.0.0)
+Description-Content-Type: text/markdown
+
+# Gpt2Giga
+OpenAI 2 GigaChat converter
+
