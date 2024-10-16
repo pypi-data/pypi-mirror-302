@@ -1,0 +1,10 @@
+src/__init__.py,sha256=T5nQQd5mTIsGEnfowlD5MuLdHbdhHlwQxFdURd_QcWU,127
+src/file_converter.py,sha256=T9-F2WMXszEEwUnv-2vJotoMCT5sNR5xFH5O3lCU5io,4038
+src/identity_generator.py,sha256=fzAB_YOeM3vpB3YFuQ0MRqrWH4RkKTY85QH1YhXwLAU,6153
+src/main.py,sha256=h7nY9RT__woaG3u3mg984ytc2JCgRQQ3_PPaeVllkGU,10872
+identityforge-0.1.dist-info/LICENSE,sha256=6Z3UsxEUZQfD0KiHyhLlA4f-ZEyKqobLUAtQwGgGJUM,18
+identityforge-0.1.dist-info/METADATA,sha256=Kv-cSISrNVuxEwTlUhVpnIYr2WU-98G7BYwhtTY6Rjs,5147
+identityforge-0.1.dist-info/WHEEL,sha256=GV9aMThwP_4oNCtvEC2ec3qUYutgWeAzklro_0m4WJQ,91
+identityforge-0.1.dist-info/entry_points.txt,sha256=IXOMbhg4J4KDu0AyHJKVh2CGTiAyvGBtzCIIsnrR-6c,68
+identityforge-0.1.dist-info/top_level.txt,sha256=74rtVfumQlgAPzR5_2CgYN24MB0XARCg0t-gzk6gTrM,4
+identityforge-0.1.dist-info/RECORD,,
