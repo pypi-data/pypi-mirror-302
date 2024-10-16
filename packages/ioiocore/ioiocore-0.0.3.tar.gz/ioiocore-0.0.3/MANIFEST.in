@@ -1,0 +1,1 @@
+include *.md *.pdf LICENSE .\\ioiocore\\requirements.txt CHANGELOG
