@@ -1,0 +1,11 @@
+README.md
+poetry.lock
+pyproject.toml
+src/kitsuyui.animal.egg-info/PKG-INFO
+src/kitsuyui.animal.egg-info/SOURCES.txt
+src/kitsuyui.animal.egg-info/dependency_links.txt
+src/kitsuyui.animal.egg-info/top_level.txt
+src/kitsuyui/animal/__init__.py
+src/kitsuyui/animal/_version.py
+src/kitsuyui/animal/py.typed
+tests/test_basis.py
