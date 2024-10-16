@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: cerberus-etl
+Version: 0.0.1
+Summary: A utility ETL library for internal development at NUDA
+Author: Gabriel Deglmann Kasten
+Author-email: gabriel.kasten@unimedsc.coop.br
+Keywords: python,ETL,data pipeline,data stream,Unimed SC,NUDA
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: pandas
+Requires-Dist: oracledb
+Requires-Dist: requests
+
+cerberuslib is a robust ETL library designed for the NUDA team at Unimed SC. 
+This library provides essential utilities for data extraction, transformation, and loading processes, 
+streamlining workflows and enhancing data management capabilities.
