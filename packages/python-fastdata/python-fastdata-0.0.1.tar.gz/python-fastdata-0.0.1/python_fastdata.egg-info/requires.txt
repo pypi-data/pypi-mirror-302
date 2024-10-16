@@ -1,0 +1,10 @@
+claudette
+fastcore
+ratelimit
+tqdm
+
+[dev]
+black
+datasets
+ipykernel
+nbdev
