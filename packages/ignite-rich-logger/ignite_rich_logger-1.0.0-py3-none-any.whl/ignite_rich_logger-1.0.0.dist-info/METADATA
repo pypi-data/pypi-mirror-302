@@ -1,0 +1,52 @@
+Metadata-Version: 2.1
+Name: ignite-rich-logger
+Version: 1.0.0
+Summary: A logger that displays a progress bar and metrics using the Rich library
+Home-page: https://github.com/jonghwanhyeon/ignite-rich-logger
+Author: Jonghwan Hyeon
+Author-email: jonghwanhyeon93@gmail.com
+License: BSD
+Keywords: pytorch,ignite,logger,progress
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: typing-extensions
+Provides-Extra: dev
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: black ; extra == 'dev'
+Requires-Dist: griffe-generics ; extra == 'dev'
+Requires-Dist: griffe-modernized-annotations ; extra == 'dev'
+Requires-Dist: mkdocs ; extra == 'dev'
+Requires-Dist: mkdocs-material ; extra == 'dev'
+Requires-Dist: mkdocstrings[python] ; extra == 'dev'
+Requires-Dist: mypy ; extra == 'dev'
+Requires-Dist: rich ; extra == 'dev'
+Requires-Dist: ruff ; extra == 'dev'
+Provides-Extra: docs
+Requires-Dist: black ; extra == 'docs'
+Requires-Dist: griffe-generics ; extra == 'docs'
+Requires-Dist: griffe-modernized-annotations ; extra == 'docs'
+Requires-Dist: mkdocs ; extra == 'docs'
+Requires-Dist: mkdocs-material ; extra == 'docs'
+Requires-Dist: mkdocstrings[python] ; extra == 'docs'
+Provides-Extra: tests
+Requires-Dist: pytest ; extra == 'tests'
+
+# ignite-rich-logger
+![Build status](https://github.com/jonghwanhyeon/ignite-rich-logger/actions/workflows/publish.yml/badge.svg)
+
+A logger that displays a progress bar and metrics using the Rich library
+
+[![Demonstration](https://asciinema.org/a/681227.svg)](https://asciinema.org/a/681227)
+
+## Install
+To install **ignite-rich-logger**, simply use pip:
+
+```console
+$ pip install ignite-rich-logger
+```
