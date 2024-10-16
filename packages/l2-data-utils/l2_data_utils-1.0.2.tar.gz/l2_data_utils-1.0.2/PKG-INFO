@@ -1,0 +1,5 @@
+Metadata-Version: 2.1
+Name: l2_data_utils
+Version: 1.0.2
+Requires-Dist: pyspark
+Requires-Dist: delta-spark
