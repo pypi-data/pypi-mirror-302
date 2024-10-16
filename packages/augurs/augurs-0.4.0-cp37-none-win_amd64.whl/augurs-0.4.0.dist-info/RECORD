@@ -1,0 +1,9 @@
+augurs-0.4.0.dist-info/METADATA,sha256=n20xQXe2u5AxejSeJT9P5N_zf6tWIFhhkQYxbtPVzJ4,2472
+augurs-0.4.0.dist-info/WHEEL,sha256=63VgZXK0f8RhHdD8opp0CXa9Nkhpa78v9XUgiMy-jzY,94
+augurs-0.4.0.dist-info/licenses/LICENSE-APACHE,sha256=YMk6MfSQN1qt9kCYt18QcVAQN5VBAh4AJhBF14AGEdM,11050
+augurs-0.4.0.dist-info/licenses/LICENSE-MIT,sha256=0Uc_f3WzcIv5PZPdk6aPbU1FVSrGZ5ulRIA6puFr0QM,1074
+augurs/__init__.py,sha256=vsb8MNUQlADD_3dQs8Lp0HtmXL-F0j5zt1ZAVKnZ8Ew,107
+augurs/__init__.pyi,sha256=Qgs6oom2zPpXzDuHqwXHG0veLl7yFimtgND7zLLKvG8,3401
+augurs/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+augurs/augurs.pyd,sha256=xvgRYMFwcGsahkdJkOKg5JDTfy9p7OJ9laVAkabG7kw,809472
+augurs-0.4.0.dist-info/RECORD,,
