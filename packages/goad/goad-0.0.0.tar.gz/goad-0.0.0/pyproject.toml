@@ -1,0 +1,5 @@
+[project]
+name = "goad"
+authors = [{name = "Mayfly", email = "mayfly277@gmail.com"}]
+version = "0.0.0"
+description = "Coming soon"

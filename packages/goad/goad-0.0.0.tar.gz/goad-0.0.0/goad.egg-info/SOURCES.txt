@@ -1,0 +1,6 @@
+pyproject.toml
+goad/__init__.py
+goad.egg-info/PKG-INFO
+goad.egg-info/SOURCES.txt
+goad.egg-info/dependency_links.txt
+goad.egg-info/top_level.txt
