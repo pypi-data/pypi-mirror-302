@@ -1,0 +1,12 @@
+[run]
+source = tests
+branch = True
+
+[report]
+omit = tests
+
+[html]
+directory = coverage_html_report
+
+[xml]
+output = coverage.xml

@@ -1,0 +1,15 @@
+# Changes here will be overwritten by Copier; NEVER EDIT MANUALLY
+_commit: v4.2.6
+_src_path: https://github.com/jupyterlab/extension-template
+author_email: contact@qbraid.com
+author_name: qBraid Development Team
+has_binder: false
+has_settings: false
+kind: server
+labextension_name: '@qbraid/jupyter-environment-manager'
+project_short_description: JupyterLab extension for managing execution environments,
+    packages, and kernels.
+python_name: jupyter_environment_manager
+repository: https://github.com/qBraid/lab-environment-manager.git
+test: true
+
