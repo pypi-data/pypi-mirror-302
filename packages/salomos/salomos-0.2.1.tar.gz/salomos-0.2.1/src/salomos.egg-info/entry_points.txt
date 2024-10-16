@@ -1,0 +1,2 @@
+[console_scripts]
+salomos = salomos.dsl_processor:main
