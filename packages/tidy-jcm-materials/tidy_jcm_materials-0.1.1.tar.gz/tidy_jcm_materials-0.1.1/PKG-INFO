@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: tidy_jcm_materials
+Version: 0.1.1
+Summary: Converts materials from tidy3d database to JCMwave compatible pole residue format
+Keywords: python
+Author-email: Jan David Fischbach <mail@jan-dav.id>
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Operating System :: OS Independent
+Requires-Dist: tidy3d
+Requires-Dist: numpy
+Requires-Dist: pre-commit ; extra == "dev"
+Requires-Dist: pytest ; extra == "dev"
+Requires-Dist: pytest-cov ; extra == "dev"
+Requires-Dist: towncrier ; extra == "dev"
+Requires-Dist: tbump ; extra == "dev"
+Requires-Dist: jupytext ; extra == "docs"
+Requires-Dist: matplotlib ; extra == "docs"
+Requires-Dist: jupyter-book==1.0.3 ; extra == "docs"
+Provides-Extra: dev
+Provides-Extra: docs
+
+# tidy_jcm_materials 0.1.1
+
+Converts materials from tidy3d database to JCMwave compatible pole residue format
+
+## Usage
+
+## Installation
+
+`make install`
+
