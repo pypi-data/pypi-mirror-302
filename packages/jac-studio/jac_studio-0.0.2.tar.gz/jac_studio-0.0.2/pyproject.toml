@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "jac-studio"
+version = "0.0.2"
+description = "This Jac plugin provides a visualization of a Jac-cloud MongoDB instance."
+authors = ["TrueSelph Inc. <admin@trueselph.com>"]
+license = "MIT"
+keywords = ["jac", "jaclang", "jaseci", "visualization", "graph"]
+homepage = "https://trueselph.com"
+
+[tool.poetry.dependencies]
+python = "^3.12.0"
+jaclang = "~0.7.24"
+jac-cloud = "~0.1.5"
+
+[tool.poetry.plugins.jac]
+studio = "jac_studio.cli:JacCmd"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
