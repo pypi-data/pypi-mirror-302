@@ -1,0 +1,3 @@
+frozendict>=2.4.6
+networkx>=3.2.1
+polars
