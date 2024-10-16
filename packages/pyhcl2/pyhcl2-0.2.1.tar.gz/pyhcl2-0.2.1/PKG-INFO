@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: pyhcl2
+Version: 0.2.1
+Summary: 
+License: MIT
+Author: RISQ Capital
+Author-email: dev@risqcapital.com
+Requires-Python: >=3.10,<4
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: lark (>=1.1.9,<2.0.0)
+Requires-Dist: networkx (>=3.3,<4.0)
+Requires-Dist: pydantic (>=2.7.2,<3.0.0)
+Requires-Dist: termcolor (>=2.4.0,<3.0.0)
+Project-URL: Bug Tracker, https://github.com/risqcapital/pyhcl2/issues
+Project-URL: Repository, https://github.com/risqcapital/pyhcl2
+Description-Content-Type: text/markdown
+
+# pyhcl2
+
+A HCL2 parser based work by [NiklasRosenstein](https://github.com/NiklasRosenstein/python-hcl2-ast) and [Amplify Education](https://github.com/amplify-education/python-hcl2) released under the MIT license.
