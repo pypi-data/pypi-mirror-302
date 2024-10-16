@@ -1,0 +1,5 @@
+[console_scripts]
+fh_tailwind_setup = fh_tailwind.core:setup_tailwind
+
+[nbdev]
+fh_tailwind = fh_tailwind._modidx:d
