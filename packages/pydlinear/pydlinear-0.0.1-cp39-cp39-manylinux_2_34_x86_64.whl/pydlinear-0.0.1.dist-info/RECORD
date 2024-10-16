@@ -1,0 +1,10 @@
+pydlinear/__init__.py,sha256=5UHskTDKtQIGbiHJDWxzzPqp6ztZsy6w_4MVzJX3PaY,183
+pydlinear/__init__.pyi,sha256=F0Co6BQyC3p3ynA5BsME8sTqb1yWELkUyj23c7HCorI,1643
+pydlinear/__main__.py,sha256=7lBdpZN9XGu4J20GFcJ5QoZSNZMxsLVq5X3oehX0m7Y,750
+pydlinear/_pydlinear.pyi,sha256=p29r5fwEYpC6h_AaZBTv5TtJ8NjeujtuxJPzuAyemsE,28698
+pydlinear/_pydlinear.so,sha256=yPQseze0GpdN0P9XfX-QUaGFdynZVOdrPl_bN6kry1w,14962480
+pydlinear/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pydlinear-0.0.1.dist-info/WHEEL,sha256=BvGTokrn7lV0RFlDkFVvAdyXlmMq_nHZ3ywZysisjTg,111
+pydlinear-0.0.1.dist-info/METADATA,sha256=r4QJDGRazYbU2-k2_B7Kd2uw9-FLx8eYOfFGhsPPi4w,2834
+pydlinear-0.0.1.dist-info/entry_points.txt,sha256=zWe-G3fW9yUhqyQ8BKQXVGIF3gHL4jEIDM_VC6hFBQY,53
+pydlinear-0.0.1.dist-info/RECORD,,
