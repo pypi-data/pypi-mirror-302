@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "TravelAlerts_sbubiloctech"
+version = "0.1.0"
+authors = [
+  { name="Sunil Baliga (Ubiloc Technologies LLC)", email="technical_sb@ubiloctech.com" },
+]
+maintainers = [
+  { name="Sunil Baliga (Ubiloc Technologies LLC)", email="technical_sb@ubiloctech.com" },
+]
+
+description = "Package to read, analyze and classify travel advisories by country on the U.S. State Department website"
+readme = "README.md"
+requires-python = ">=3.9"
+
+classifiers = [
+    "Programming Language :: Python :: 3.9",
+    "Operating System :: OS Independent",
+    "Development Status :: 2 - Pre-Alpha",
+    "Topic :: Games/Entertainment :: Simulation"
+]
+license = {file = "LICENSE"}
+
+keywords = ["advisories", "scraping", "parsing", "U.S. State Department", "classification", "analysis"]
+
+dependencies = [
+    "nltk >= 3.8.1",
+    "requests >= 2.31.0",
+    "beautifulsoup4 >= 4.12.3",
+    "numpy >= 1.26.0",
+    "pandas >= 2.1.1",
+    "asyncio >= 3.4.3",
+    "aiohttp >= 3.10.5",
+    "tqdm >= 4.66.5",
+    "pytest >= 8.3.2"
+]
+
+[project.urls]
+Repositories = "https://github.com/sbubiloctech/travelalerts"
+
+
+

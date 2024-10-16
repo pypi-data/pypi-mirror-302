@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+src/TravelAlerts_sbubiloctech/AnalyzeTravelAlerts.py
+src/TravelAlerts_sbubiloctech/TravelAlert.py
+src/TravelAlerts_sbubiloctech/TravelAlertClassifier.py
+src/TravelAlerts_sbubiloctech/TravelAlertsAnalysis.py
+src/TravelAlerts_sbubiloctech/__init__.py
+src/TravelAlerts_sbubiloctech.egg-info/PKG-INFO
+src/TravelAlerts_sbubiloctech.egg-info/SOURCES.txt
+src/TravelAlerts_sbubiloctech.egg-info/dependency_links.txt
+src/TravelAlerts_sbubiloctech.egg-info/requires.txt
+src/TravelAlerts_sbubiloctech.egg-info/top_level.txt
+tests/testfile.py
