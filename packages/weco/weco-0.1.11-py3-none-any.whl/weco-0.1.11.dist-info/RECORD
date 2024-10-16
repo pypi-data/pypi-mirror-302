@@ -1,0 +1,10 @@
+weco/__init__.py,sha256=qiKpnrm6t0n0bpAtXEKJO1Yz2xYXnJJRZBWt-cH7DdU,168
+weco/client.py,sha256=QbVCmOODYCdJ0-71Verefc7bvsixYxkRHgWCK_IuXfQ,23513
+weco/constants.py,sha256=Qc-OsdFhSLKSBnqDXca3bPaHVwdCSNJ6-WxYdPjj2Os,248
+weco/functional.py,sha256=1P1PEIMaMOF1oyxHPtC8Bykz1TsrDhPb8pHAxCvBLVE,7898
+weco/utils.py,sha256=UUSw6ocqWdlSmIXVcH66DAL4NuLU2rFOyviD8aTWsv0,4371
+weco-0.1.11.dist-info/LICENSE,sha256=NvpxfBuSajszAczWBGKxhHe4gsvil1H63zmu8xXZdL0,1064
+weco-0.1.11.dist-info/METADATA,sha256=8S4fYEz7tqBHxOHXTBWqtTB2ToD5N7qaPrYEZUYFveQ,6128
+weco-0.1.11.dist-info/WHEEL,sha256=GV9aMThwP_4oNCtvEC2ec3qUYutgWeAzklro_0m4WJQ,91
+weco-0.1.11.dist-info/top_level.txt,sha256=F0N7v6e2zBSlsorFv-arAq2yDxQbzX3KVO8GxYhPUeE,5
+weco-0.1.11.dist-info/RECORD,,
