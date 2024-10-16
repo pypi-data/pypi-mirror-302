@@ -1,0 +1,11 @@
+# Include the README file
+include README.md
+
+# Include all JSON, DB, and TXT files from the 'quantsumore/configuration' directory
+recursive-include quantsumore/configuration *.json *.db *.txt
+
+# Include all ICO and PNG files from the 'quantsumore/gui/assets' directory
+recursive-include quantsumore/gui/assets *.ico *.png
+
+# Include the license file
+include LICENSE
