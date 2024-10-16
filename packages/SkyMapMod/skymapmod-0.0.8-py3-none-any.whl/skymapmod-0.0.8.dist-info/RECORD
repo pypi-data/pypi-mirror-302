@@ -1,0 +1,9 @@
+SkyMapMod/__init__.py,sha256=HK4o-T2lk-bT0fPc_I4v64qDJNv9dxo_Hv9ZHnY79OI,126
+SkyMapMod/airglow.py,sha256=zTjR5etdAFkkmz7Nm6Zt6fB9_CDTUYFu2tAJgqesxRo,2062
+SkyMapMod/airglow_spectrum.py,sha256=a3-_BmtyYyZ2L-4h0Kl3sP0thbn7rSzFAqk4fjnvMkw,127283
+SkyMapMod/modtran_default_kp_transparency.py,sha256=0n90EsZ4RDxswasUgf11JZIWYWeKPqi7lk4e2mXLUyA,78301
+SkyMapMod/zodiac.py,sha256=wNN6sNDqOp6P3dK3QeTJ6rWp4LCxQUqfDZSEIuXtN0s,5517
+skymapmod-0.0.8.dist-info/METADATA,sha256=zK_fteqMG-Da8Pkn_el0nE8VTAn509Qgix4BUdv4ZJM,446
+skymapmod-0.0.8.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+skymapmod-0.0.8.dist-info/licenses/LICENSE,sha256=eShhW1a77wkzEW9UASG0IaNNaJ3vnxmpcxp8tXh5WCA,1045
+skymapmod-0.0.8.dist-info/RECORD,,
