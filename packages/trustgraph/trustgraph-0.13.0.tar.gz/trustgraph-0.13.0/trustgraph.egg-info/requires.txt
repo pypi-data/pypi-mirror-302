@@ -1,0 +1,7 @@
+trustgraph-base<0.14,>=0.13
+trustgraph-bedrock<0.14,>=0.13
+trustgraph-cli<0.14,>=0.13
+trustgraph-embeddings-hf<0.14,>=0.13
+trustgraph-flow<0.14,>=0.13
+trustgraph-parquet<0.14,>=0.13
+trustgraph-vertexai<0.14,>=0.13
