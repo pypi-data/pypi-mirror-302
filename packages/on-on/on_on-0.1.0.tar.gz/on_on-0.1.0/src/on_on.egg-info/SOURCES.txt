@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+src/__init__.py
+src/main.py
+src/maker.py
+src/repo.py
+src/runcmd.py
+src/template.py
+src/on_on.egg-info/PKG-INFO
+src/on_on.egg-info/SOURCES.txt
+src/on_on.egg-info/dependency_links.txt
+src/on_on.egg-info/entry_points.txt
+src/on_on.egg-info/requires.txt
+src/on_on.egg-info/top_level.txt
