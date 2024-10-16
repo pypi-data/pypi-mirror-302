@@ -1,0 +1,65 @@
+[workspace]
+members = ["crates/*"]
+resolver = "2"
+
+[workspace.package]
+license = "MIT OR Apache-2.0"
+authors = [
+  "Ben Sully <ben.sully@grafana.com",
+]
+documentation = "https://docs.rs/crate/augurs"
+repository = "https://github.com/grafana/augurs"
+version = "0.4.0"
+edition = "2021"
+keywords = [
+  "analysis",
+  "forecasting",
+  "outlier-detection",
+  "time-series",
+]
+
+[workspace.dependencies]
+augurs = { path = "crates/augurs" }
+augurs-changepoint = { version = "0.4.0", path = "crates/augurs-changepoint" }
+augurs-clustering = { version = "0.4.0", path = "crates/augurs-clustering" }
+augurs-core = { version = "0.4.0", path = "crates/augurs-core" }
+augurs-dtw = { version = "0.4.0", path = "crates/augurs-dtw" }
+augurs-ets = { version = "0.4.0", path = "crates/augurs-ets" }
+augurs-forecaster = { version = "0.4.0", path = "crates/augurs-forecaster" }
+augurs-mstl = { version = "0.4.0", path = "crates/augurs-mstl" }
+augurs-outlier = { version = "0.4.0", path = "crates/augurs-outlier" }
+augurs-prophet = { version = "0.4.0", path = "crates/augurs-prophet" }
+augurs-seasons = { version = "0.4.0", path = "crates/augurs-seasons" }
+augurs-testing = { path = "crates/augurs-testing" }
+
+anyhow = "1.0.89"
+bytemuck = "1.18.0"
+chrono = "0.4.38"
+distrs = "0.2.1"
+itertools = "0.13.0"
+num-traits = "0.2.19"
+rand = "0.8.5"
+roots = "0.0.8"
+serde = { version = "1.0.166", features = ["derive"] }
+statrs = "0.17.1"
+serde_json = "1.0.128"
+thiserror = "1.0.40"
+tinyvec = "1.6.0"
+tracing = "0.1.40"
+tracing-subscriber = "0.3.18"
+
+assert_approx_eq = "1.1.0"
+criterion = "0.5.1"
+iai = "0.1.1"
+pprof = { version = "0.13.0", features = ["criterion", "frame-pointer", "prost-codec"] }
+pretty_assertions = "1.4.1"
+
+# See https://nnethercote.github.io/perf-book/build-configuration.html
+# for more information on why we're using these settings.
+[profile.release]
+codegen-units = 1
+lto = false
+
+[profile.profiling]
+inherits = "release"
+debug = true
