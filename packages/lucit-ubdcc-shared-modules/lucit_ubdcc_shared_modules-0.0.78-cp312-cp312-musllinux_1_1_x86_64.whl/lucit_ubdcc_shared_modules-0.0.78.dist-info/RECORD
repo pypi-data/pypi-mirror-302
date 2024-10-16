@@ -1,0 +1,12 @@
+lucit_ubdcc_shared_modules-0.0.78.dist-info/top_level.txt,sha256=Ejs7NyG0reWRi_ObtUp9vmrQ_PtySLmch-IaQbNja3w,27
+lucit_ubdcc_shared_modules-0.0.78.dist-info/RECORD,,
+lucit_ubdcc_shared_modules-0.0.78.dist-info/METADATA,sha256=Om-cOmvXpZPoVe9Q1_tXWbG-pGRM2T6U6gse4jymg0A,7997
+lucit_ubdcc_shared_modules-0.0.78.dist-info/WHEEL,sha256=_JZ_W_t5ib06d3eJziLFhfZkx9PRgL23NfsfQlg0OMg,112
+lucit_ubdcc_shared_modules/ServiceBase.cpython-312-x86_64-linux-musl.so,sha256=zMJk4DnSr35UghDvm5oV2A_xS7rqSTubN6REtH-41Qw,959792
+lucit_ubdcc_shared_modules/App.cpython-312-x86_64-linux-musl.so,sha256=4gBd7GWaRp6AGMNUGjmLxdPh6h5coon6Bs_taI31A8M,3768696
+lucit_ubdcc_shared_modules/RestEndpointsBase.cpython-312-x86_64-linux-musl.so,sha256=GRfk2Tsa-VnQDsSATK-QeKBdoxipHwtcjXMdCqVXBz0,1384736
+lucit_ubdcc_shared_modules/RestServer.cpython-312-x86_64-linux-musl.so,sha256=5asUF4tJlvCPimeYH9Ju8SxPvp_A9V0UnyLyu94X2EU,619256
+lucit_ubdcc_shared_modules/__init__.cpython-312-x86_64-linux-musl.so,sha256=F-pCacw5hTgt3kic_4SR5TrHe1d3zZwq72AdPduUvX8,84584
+lucit_ubdcc_shared_modules/Database.cpython-312-x86_64-linux-musl.so,sha256=WuhfZWxCDwYFs2mlG-vkRUbaUjhzelHUvWX0x68s0PY,3229496
+lucit_ubdcc_shared_modules/LicensingManager.cpython-312-x86_64-linux-musl.so,sha256=XM9NaHBO4PlDSLxtcU_Sq5eHG_NjiLtboVlsBkfNlGo,2338680
+lucit_ubdcc_shared_modules/LicensingExceptions.cpython-312-x86_64-linux-musl.so,sha256=jHGpyys45BtE5Ulnm3SFTBHAOnVlrBr6r0Lj6Lm-WDw,106096
