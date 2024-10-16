@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.py
+new_logicsdk/__init__.py
+new_logicsdk/data_masking.py
+new_logicsdk/main.py
+new_logicsdk/structredExtraction.py
+new_logicsdk/summarizer.py
+new_logicsdk.egg-info/PKG-INFO
+new_logicsdk.egg-info/SOURCES.txt
+new_logicsdk.egg-info/dependency_links.txt
+new_logicsdk.egg-info/requires.txt
+new_logicsdk.egg-info/top_level.txt
+test/test.py
