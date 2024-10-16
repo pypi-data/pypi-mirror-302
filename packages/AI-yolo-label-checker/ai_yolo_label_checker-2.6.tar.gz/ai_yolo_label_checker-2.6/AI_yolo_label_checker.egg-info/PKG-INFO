@@ -1,0 +1,112 @@
+Metadata-Version: 2.1
+Name: AI_yolo_label_checker
+Version: 2.6
+Summary: Thư viện hữu ích của Tuấn Anh.
+Home-page: https://pypi.org/project/AI-yolo-label-checker/
+Author: Tuấn Anh - Foxconn
+Author-email: nt.anh.fai@gmail.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: collection
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: opencv-python
+
+# Giới thiệu
+
+Chương trình này để kiểm tra yolo label
+
+## Cài đặt
+
+```
+pip install AI_yolo_label_checker
+```
+
+## Cách dùng nhanh
+
+Tại console gõ lệnh:
+
+```
+AI_check
+
+hoặc:
+
+AI_yolo_label_checker
+```
+
+Khi phần mềm chạy, sẽ có help hiển thị trong terminal.
+
+# Phần mềm hỗ trợ làm data cho YOLOv5.6
+
+# Hướng dẫn sử dụng:
+
+Tại hàm `def runApp()` trên đầu:
+
+1. Mở code, thay đổi thư mục đường dẫn 1 file ảnh bất kỳ thuộc thư mục ảnh cần xem
+2. Thay đổi giá trị các biến nếu cần, đã có giải thích đầy đủ ở các biến đó.
+3. Nếu là hiển thị ảnh:
+    - bấm phím bất kỳ để thay đổi ảnh
+    - bấm phím số tương ứng với ảnh cần xem => ENTER
+    - Muốn lấy màu cho 1 ảnh, thì bấm quay đi quay lại (bằng phím mũi tên)
+4. Nếu là xuất ảnh ra thư mục: kiểm tra thư mục được in ra màn hình, thư mục này = thư mục cha của tập ảnh + '\_output'
+5. Nếu muốn đổi tên ảnh, dồn ảnh cùng tên vào 1 thư mục: đặt Run=2, chọn thư mục nguồn, đích, thay đổi Prefix.
+
+# Vesion
+
+## Ver 2.6:
+- Thêm chức năng tách ghép ảnh (swap ảnh theo chiều ngang)
+- Chuyển thư mục IVIS_Data về ổ gốc của thư mục đang chạy, ví dụ: c:/RunProgram/APP_NAME
+- Vẽ lại khung ROI cho nó thanh mảnh, đẹp hơn
+- Thêm Cover ROI, hiển thị vùng lớn nhất các ROI di chuyển 
+- Thêm chức năng xuất tọa độ Cover ROI ra file + màn hình (F4)
+- Thêm chức năng hiển thị chỗ các Obj di chuyển và tần suất của nó theo màu (F3, F5, F6)
+- Thêm chức năng phóng to, thu nhỏ đường vẽ ROI
+- Thêm: In Key press thông minh hơn: chỉ in khi bấm các phím khác nhau, 1 phím bấm nhiều lần liên tục thì chỉ in 1 lần đầu.
+- Fixbug: khi ảnh của thư mục `xxx` không có label đi kèm, thì move nó sang thư mục `xxx_Errors`, giữ nguyên cấu trúc.
+
+## Ver 2.5:
+
+-   Release date: 2022-12-23
+-   Thêm chức năng tách ảnh từ video: Nếu thư mục image là thư mục chứa video, chương trình sẽ kiểm tra xem file video
+    đó có ảnh chưa, nếu chưa có, nó sẽ tách frame đầu tiên thành ảnh có cùng tên.
+-   Nếu path của Label không được nhập vào ('') thì sẽ lấy thư mục label tại thư mục image luôn.
+
+## Ver 2.4:
+
+-   Release date: 2022-12-02
+-   Thêm chức năng giao diện cho các thành phần
+-   Thêm chức năng lưu tham số khi bấm nút hiển thị xly ảnh
+
+## Ver 2.3:
+
+-   Release date: 2022-11-23
+-   Check file ảnh <=> Label?
+-
+
+## Ver 2.2:
+
+-   Release date: 2022-11-23
+-   Thêm giao diện nhập path
+-   Thêm chức năng phân tách các ảnh thuộc 1 nhãn nào đó
+-   Cải thiện khả năng hiển thị thông tin
+-   Thêm thông tin vào phần hiển thị
+
+## Ver 2.1:
+
+-   Release date: 2022-11-22
+-   Thêm chức năng cuộn chuột để chạy các ảnh, cuộn lên là ảnh lùi về đầu, cuộn xuống là ảnh về cuối
+
+## Ver 1.1:
+
+-   Release date: 2022/11/21
+-   thêm bấm số + ENTER sẽ ra ảnh có stt tương ứng trong list ảnh
+-   Thêm tham số RandColor để mỗi ảnh có thể cho 1 color, tất nhiên, ROI cùng tên sẽ cùng màu
+-   TODO: lăn chuột sẽ vẽ ảnh tương ứng.
+
+## Ver 1.0
+
+-   Hiển thị ảnh của thư mục gốc, chứa thư mục images và labels theo chuẩn của YOLOv5.6. Thư viện này sinh ra nhằm kiểm soát lỗi trong quá trình đánh label, nó có thể hiển thị hoặc xuất ra ảnh để xem tổng thể 1 lượt.
+-   Hỗ trợ đổi tên theo cặp Images/Labels để dồn nhiều thư mục có ảnh+nhãn trùng tên với nhau vào 1 thư mục train.

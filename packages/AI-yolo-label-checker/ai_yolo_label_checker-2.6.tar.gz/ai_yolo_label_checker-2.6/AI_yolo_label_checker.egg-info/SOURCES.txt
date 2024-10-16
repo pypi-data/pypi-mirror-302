@@ -1,0 +1,13 @@
+setup.py
+AI_yolo_label_checker/AI_yolo_label_checker.py
+AI_yolo_label_checker/AiLibs.py
+AI_yolo_label_checker/__init__.py
+AI_yolo_label_checker/cv2_pan_zoom.py
+AI_yolo_label_checker.egg-info/PKG-INFO
+AI_yolo_label_checker.egg-info/SOURCES.txt
+AI_yolo_label_checker.egg-info/dependency_links.txt
+AI_yolo_label_checker.egg-info/entry_points.txt
+AI_yolo_label_checker.egg-info/requires.txt
+AI_yolo_label_checker.egg-info/top_level.txt
+AI_yolo_label_checker/IVIS_data/config.yml
+AI_yolo_label_checker/IVIS_data/system.ta

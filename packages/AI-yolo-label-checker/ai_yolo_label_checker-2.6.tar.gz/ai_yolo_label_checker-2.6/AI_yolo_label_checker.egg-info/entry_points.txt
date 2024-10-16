@@ -1,0 +1,3 @@
+[console_scripts]
+AI_check = AI_yolo_label_checker:runApp
+AI_yolo_label_checker = AI_yolo_label_checker:runApp
