@@ -1,0 +1,10 @@
+mkrecipe/__init__.py,sha256=7Q1g5pRNyQClS1D_9fkQfRDqHQQjlOv1yeQOkdO29CE,12033
+mkrecipe/__main__.py,sha256=1OYHKtvwunCX0SxXsfmF9_-kPxpJiK-51ANNRczmAIU,3525
+mkrecipe/config.py,sha256=xhxPbsi0LEmt3JExT-kcNe_Qrqo7I1tcJzU0ddXglEE,9993
+mkrecipe/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mkrecipe/recipe_template.ymlt,sha256=jT7hc-3TKbxCSP4GqE8zcMOseJhjQtMP5r3vtdcs5_U,1086
+mkrecipe-0.9.0.dist-info/LICENSE,sha256=TXanB-tJYmHhByFsynyh-UGwh2VdTVVjbZeFz1utSWc,1064
+mkrecipe-0.9.0.dist-info/METADATA,sha256=UKwAGP1UUetMwupKYWO2vBhUzpgHDYy-Mb9wGwhM608,7490
+mkrecipe-0.9.0.dist-info/WHEEL,sha256=BKn3NsEitvGOujn9xNlxxTBtBPCGWWsB3u3zHbttCmw,83
+mkrecipe-0.9.0.dist-info/entry_points.txt,sha256=iy9J8k6GvHFaibS-USRtyrbzIgXaMUWKQlNhQi53-Hs,52
+mkrecipe-0.9.0.dist-info/RECORD,,
