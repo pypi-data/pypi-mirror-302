@@ -1,0 +1,7 @@
+[console_scripts]
+p12 = p12:v3120_app
+p3120 = p12:v3120_app
+py3-twelve = p12:v3120_app
+
+[gui_scripts]
+

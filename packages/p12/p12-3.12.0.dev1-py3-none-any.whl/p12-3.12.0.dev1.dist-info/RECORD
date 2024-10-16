@@ -1,0 +1,8 @@
+p12-3.12.0.dev1.dist-info/METADATA,sha256=nJp7ksrfK3ayC1auYZxsoIPpcB9a2jiMAtxZZnB2FOM,336
+p12-3.12.0.dev1.dist-info/WHEEL,sha256=pM0IBB6ZwH3nkEPhtcp50KvKNX-07jYtnb1g1m6Z4Co,90
+p12-3.12.0.dev1.dist-info/entry_points.txt,sha256=gZdecT9GA_3b5wrRkj2AAL0MoQyl6z8ajDgX_9tO0HA,103
+p12-3.12.0.dev1.dist-info/licenses/LICENSE,sha256=tNz14sUGU_wbofHoOgg5MhJpPyVb4AyyUDlq8yrOYww,1073
+p12/__init__.py,sha256=NgVeE6eGHvfCo-4QkM0zMPSNrjXjV4EBbP3kNuV5dM8,123
+p12/app.py,sha256=mdo3erB0SxKReuNZe2SFEPa43XIIpJ5D-VUr0Km_0V0,3267
+p12/twelve/__init__.py,sha256=K5kzwdw_qEwANOhmmFvKADM00N4w4z2HXYVbH5lmAK0,98
+p12-3.12.0.dev1.dist-info/RECORD,,
