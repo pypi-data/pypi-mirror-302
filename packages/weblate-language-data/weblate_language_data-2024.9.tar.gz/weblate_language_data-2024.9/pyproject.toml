@@ -1,0 +1,137 @@
+[build-system]
+build-backend = "setuptools.build_meta"
+# Minimum requirements for the build system to execute.
+requires = [
+  "setuptools>=70.0",
+  "translate-toolkit"
+]
+
+[project]
+authors = [
+  {name = "Michal Čihař", email = "michal@weblate.org"}
+]
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Topic :: Software Development :: Internationalization",
+  "Topic :: Software Development :: Localization",
+  "Topic :: Utilities"
+]
+description = "Language definitions for Weblate"
+keywords = [
+  "i18n l10n gettext git mercurial translate"
+]
+name = "weblate-language-data"
+requires-python = ">=3.9"
+version = "2024.9"
+
+[project.license]
+text = "MIT"
+
+[project.optional-dependencies]
+dev = [
+  "weblate-language-data[lint,test]",
+  "translate-toolkit==3.14.1"
+]
+django = [
+  "Django"
+]
+lint = [
+  "pre-commit==4.0.1"
+]
+test = [
+  "twine==5.1.1"
+]
+
+[project.readme]
+content-type = "text/x-rst"
+file = "README.rst"
+
+[project.urls]
+Documentation = "https://docs.weblate.org/"
+Download = "https://github.com/WeblateOrg/language-data"
+Funding = "https://weblate.org/donate/"
+Homepage = "https://weblate.org/"
+"Issue Tracker" = "https://github.com/WeblateOrg/language-data/issues"
+"Source Code" = "https://github.com/WeblateOrg/language-data"
+Twitter = "https://twitter.com/WeblateOrg"
+
+[tool.black]
+target-version = ['py39']
+
+[tool.isort]
+profile = "black"
+
+[tool.ruff]
+target-version = "py39"
+
+[tool.ruff.lint]
+ignore = [
+  "D10",  # TODO: we are missing many docstrings
+  "D203",  # CONFIG: incompatible with D211
+  "D212",  # CONFIG: incompatible with D213
+  "ISC001",  # CONFIG: incompatible with formatter
+  "TRY003",  # WONTFIX: Avoid specifying long messages outside the exception class
+  "T201",  # WONTFIX: using print() (maybe add noqa)
+  "T203",  # WONTFIX: using pprint() (maybe add noqa)
+  "RUF001",  # WONTFIX: String contains ambiguous unicode character, we are using Unicode
+  "RUF012",  # TODO: Mutable class attributes should be annotated with `typing.ClassVar`
+  "E501"  # WONTFIX: we accept long strings (rest is formatted by black)
+]
+select = [
+  "E",
+  "F",
+  "B",
+  "T10",
+  "A",
+  "C4",
+  "C90",
+  "YTT",
+  "DJ",
+  "UP",
+  "D",
+  "PD",
+  "PGH",
+  "PL",
+  "TRY",
+  "RUF",
+  "ERA",
+  "ICN",
+  "ISC",
+  "EXE",
+  "INP",
+  "PIE",
+  "G",
+  "PYI",
+  "Q",
+  "SIM",
+  "TID",
+  "RSE",
+  "T20",
+  "RET",
+  "SLF",
+  "N"
+]
+
+[tool.ruff.lint.mccabe]
+max-complexity = 16
+
+[tool.setuptools]
+include-package-data = true
+license-files = [
+  "LICENSE"
+]
+platforms = [
+  "any"
+]
+
+[tool.setuptools.package-dir]
+weblate_language_data = "weblate_language_data"
+
+[tool.setuptools.packages.find]
+namespaces = true
