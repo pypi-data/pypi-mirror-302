@@ -1,0 +1,93 @@
+Metadata-Version: 2.1
+Name: mrjsonstore
+Version: 0.5.0
+Summary: Simple, transparent on-disk JSON store
+License: Apache-2.0
+Author: Ole Kliemann
+Author-email: mail@olekliemann.de
+Requires-Python: >=3.12
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: atomicwrites (>=1.4.1,<2.0.0)
+Requires-Dist: drresult (>=0.6.0,<0.7.0)
+Requires-Dist: pyyaml (>=6.0.2,<7.0.0)
+Requires-Dist: types-pyyaml (>=6.0.12.20240917,<7.0.0.0)
+Description-Content-Type: text/markdown
+
+# mrjsonstore
+Simple, transparent on-disk JSON store using `atomicwrites`.
+
+## Basic Usage
+
+### Without context
+
+```python
+store = JsonStore('example.json')
+assert isinstance(store.content, dict)
+store.content['woohoo'] = 'I am just a Python dictionary'
+result = store.commit()
+if not result:
+    print(f'There was a problem when writing: {result})
+```
+
+You can also use transactions...
+
+```python
+store = JsonStore('example.json')
+t = store.transaction()
+store.content['woohoo'] = 'I am just a Python dictionary'
+result = t.commit()
+if not result:
+    print(f'There was a problem when writing: {result})
+```
+
+... and possibly roll them back:
+
+```python
+store = JsonStore('example.json')
+store.content['woohoo'] = 'I am just a Python dictionary'
+t = store.transaction()
+store.content['woohoo'] = 'I am going to be rolled back!'
+t.rollback()
+assert store.content['woohoo'] == 'I am just a Python dictionary'
+```
+
+### With context
+
+```python
+store = JsonStore('example.json')
+with store.transaction() as t:
+    store.content['woohoo'] = 'I am just a Python dictionary'
+```
+
+Changes will be committed on context exit, unless there is an exception:
+
+```python
+store = JsonStore('example.json')
+store.content['woohoo'] = 'I am just a Python dictionary'
+with store.transaction() as t:
+    store.content['woohoo'] = 'I am going to be rolled back!'
+    raise RuntimeError()
+[...]
+assert store.content['woohoo'] == 'I am just a Python dictionary'
+```
+
+If you want to commit regardless of exceptions, you can choose not to rollback:
+
+```python
+store = JsonStore('example.json')
+store.content['woohoo'] = 'I am just a Python dictionary'
+with store.transaction(rollback=False) as t:
+    store.content['woohoo'] = 'I am not going to be rolled back!'
+    raise RuntimeError()
+[...]
+assert store.content['woohoo'] == 'I am not going to be rolled back!'
+```
+
+Changes will be committed to disk then.
+
+## TODO
+
+* Add support for concurrency?
+
