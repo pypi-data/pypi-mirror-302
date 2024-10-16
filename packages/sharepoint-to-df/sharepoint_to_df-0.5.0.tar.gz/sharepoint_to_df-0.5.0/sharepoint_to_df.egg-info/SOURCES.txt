@@ -1,0 +1,9 @@
+README.md
+setup.py
+sharepoint_to_df/__init__.py
+sharepoint_to_df/sharepoint_utils.py
+sharepoint_to_df.egg-info/PKG-INFO
+sharepoint_to_df.egg-info/SOURCES.txt
+sharepoint_to_df.egg-info/dependency_links.txt
+sharepoint_to_df.egg-info/requires.txt
+sharepoint_to_df.egg-info/top_level.txt
