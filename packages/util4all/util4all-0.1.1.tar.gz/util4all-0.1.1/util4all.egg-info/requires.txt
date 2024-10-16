@@ -1,0 +1,6 @@
+platformdirs
+rich
+setuptools
+twine
+typer
+wheel
