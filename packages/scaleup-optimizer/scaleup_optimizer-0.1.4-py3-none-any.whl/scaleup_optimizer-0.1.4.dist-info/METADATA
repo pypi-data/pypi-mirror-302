@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: scaleup-optimizer
+Version: 0.1.4
+Summary: This library is use to optimize hyperparameter of machine learning with scale up algorithm
+Author: Ly Sreypov
+License-File: LICENSE
+Requires-Dist: numpy>=1.21.0
+Requires-Dist: scipy>=1.10.0
+Requires-Dist: scikit-optimize>=0.8.1
+
