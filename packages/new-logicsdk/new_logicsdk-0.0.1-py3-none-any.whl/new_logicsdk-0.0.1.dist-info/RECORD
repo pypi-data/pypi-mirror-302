@@ -1,0 +1,10 @@
+new_logicsdk/__init__.py,sha256=OFUzv_uBPpVA7LTmwtwJmC2VtrUd6dTm0S3ipUYndlg,229
+new_logicsdk/data_masking.py,sha256=4NOw32aujDn3cDrSnSsobzQ-P486el5Hl9sF4FHCYAI,10562
+new_logicsdk/main.py,sha256=bvBerFoCkLoJESFTs8iHAnWETDn7PKpKFWe7By5rbp0,5777
+new_logicsdk/structredExtraction.py,sha256=dV_BjIFO1WmY0EWo5JifQdAuX5GoYY0lsK7xxtQjQrQ,10051
+new_logicsdk/summarizer.py,sha256=7gkgE8qz5Uzt9hh5yGJhDgOCKc9bISvn8Vg0-Fwll_w,9533
+new_logicsdk-0.0.1.dist-info/LICENSE,sha256=HopDXC16OpgKSca_BawBM3lLBJewYT1oFo82jXJe_Lc,1066
+new_logicsdk-0.0.1.dist-info/METADATA,sha256=NbLwujWDwhVgPCvAtKMI2PCEUYnjY6XhUInGQYueeMs,6728
+new_logicsdk-0.0.1.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+new_logicsdk-0.0.1.dist-info/top_level.txt,sha256=9-mQTWthqFt1qyggH1FELp8yuHowNywvAOk3VT-VeDE,13
+new_logicsdk-0.0.1.dist-info/RECORD,,
