@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: Gfdlws_Sub
+Version: 0.1
+Summary: A WebSocket client library for real-time streaming
+Home-page: https://github.com/yourusername/my_websocket_lib
+Author: Surendran M
+Requires-Dist: websockets
+
