@@ -1,0 +1,13 @@
+mirapi/__init__.py,sha256=Vrcvp9heMhuoCfguDp3dNM0NqMUR5XDH5Znidire_FA,86
+mirapi/errors.py,sha256=tqnP0kSnsbkkXiMkB_byDkTcZVO3QvU8QyJ0YcZqFUU,417
+mirapi/exceptions.py,sha256=fyZlC5uCrQ6y6B9f2fcuCAkyEuCM-wYtOXrY58xJKy8,433
+mirapi/mirapi.py,sha256=qpM2PBmlV-Cfao7kLwxA7sMuA1y0PY8No8R1RsbO53s,14315
+mirapi/requests.py,sha256=xxATr3bD34gmd5lxNmeZouktSP1_QdO2SeXoMAs3AW4,32
+mirapi/responses.py,sha256=0sr8Rsj7sD-JdA1WWqIWfGonw1ZxCovGEy_N1bTJMSI,34
+mirapi/router.py,sha256=w_WHzVtB3e7uErhCTPeX1YtpckZHyV4ZnmM0HNHYSx0,1730
+mirapi/types.py,sha256=2-GNawLXPsEqUmW1M5KHeVkQg-V-OaP_OZhccRrJabc,479
+mirapi-0.0.3.dist-info/LICENSE,sha256=-Sx0B0YIedhX0YLZrI8I5prdwnoyY09Nryy58Qr2G5k,1095
+mirapi-0.0.3.dist-info/METADATA,sha256=C1ju4j_mqIKSCZCOCTe0tqbxN6ao0-1XYAtEiKSwQAA,6346
+mirapi-0.0.3.dist-info/WHEEL,sha256=GV9aMThwP_4oNCtvEC2ec3qUYutgWeAzklro_0m4WJQ,91
+mirapi-0.0.3.dist-info/top_level.txt,sha256=0YfYqRvnMFZipzKYnWQNlzIIqXBciBBMB5vbgbCEZZU,7
+mirapi-0.0.3.dist-info/RECORD,,
