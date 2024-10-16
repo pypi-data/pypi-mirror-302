@@ -1,0 +1,15 @@
+/.coverage
+/.pytest_cache
+/dist
+*.pyc
+*.pyi
+.snakemake
+reads
+Note.md
+tests/data/workflow/bin/workflow
+hello.txt
+__pycache__
+tests/data/workflow/.conda
+.DS_Store
+.conda
+.venv
