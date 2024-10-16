@@ -1,0 +1,2 @@
+[dsplayer.plugins]
+soundcloud = dsplayer_soundcloud.soundcloud:SoundCloudPlugin
