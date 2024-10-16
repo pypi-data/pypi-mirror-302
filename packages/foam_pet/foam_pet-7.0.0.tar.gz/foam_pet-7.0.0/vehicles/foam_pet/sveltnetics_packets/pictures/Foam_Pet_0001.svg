@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="170mm"
+   height="100mm"
+   viewBox="0 0 170 100"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3 (0e150ed, 2023-07-21)"
+   sodipodi:docname="Foam_Pet_0001.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="1.0280428"
+     inkscape:cx="17.99536"
+     inkscape:cy="208.16254"
+     inkscape:window-width="1846"
+     inkscape:window-height="1016"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="fill:#3433c7;stroke-width:0.239;fill-opacity:1"
+       d="m 45.689681,42.68266 c 0,0 -17.556538,1.13553 -21.129557,-12.199157 -3.573018,-13.334686 -6.819402,-19.405148 -9.957226,-12.785434 -3.137825,6.619715 -0.712302,25.812054 2.347326,27.135714 3.059627,1.323657 0.545955,5.362879 20.993708,6.689381 20.447754,1.326502 7.745749,-8.840504 7.745749,-8.840504 z"
+       id="path2" />
+    <ellipse
+       style="fill:#ddad62;fill-opacity:1;stroke-width:0.135533"
+       id="path1-3-2"
+       cx="137.33875"
+       cy="36.714542"
+       rx="12.57321"
+       ry="8.123642" />
+    <ellipse
+       style="fill:#da604e;fill-opacity:1;stroke-width:0.390895;stroke-dasharray:none"
+       id="path2-8-4-6"
+       cx="79.328156"
+       cy="81.658028"
+       transform="matrix(0.98718428,-0.15958444,0.18886777,0.98200253,0,0)"
+       rx="10.144915"
+       ry="24.801371" />
+    <ellipse
+       style="fill:#df7363;fill-opacity:1;stroke-width:0.354632"
+       id="path2-8-4"
+       cx="58.523197"
+       cy="57.388046"
+       transform="matrix(0.97937236,0.20206378,-0.14901189,0.9888354,0,0)"
+       rx="8.2217827"
+       ry="25.27434" />
+    <ellipse
+       style="fill:#796aea;fill-opacity:1;stroke-width:0.372955"
+       id="path1"
+       cx="77.472855"
+       cy="54.995373"
+       rx="41.180416"
+       ry="18.780968" />
+    <ellipse
+       style="fill:#796aea;fill-opacity:1;stroke-width:0.474964"
+       id="path1-5-2-7-6-6"
+       cx="138.59042"
+       cy="47.276543"
+       rx="28.460505"
+       ry="44.072441"
+       transform="matrix(0.98866957,0.15010821,-0.81990718,0.57249648,0,0)" />
+    <ellipse
+       style="fill:#796aea;fill-opacity:1;stroke-width:0.224525"
+       id="path1-3"
+       cx="126.59671"
+       cy="33.697342"
+       rx="17.751987"
+       ry="15.790003" />
+    <ellipse
+       style="fill:#d64c38;fill-opacity:1;stroke-width:0.378232"
+       id="path2-8"
+       cx="61.163124"
+       cy="48.992851"
+       transform="matrix(0.9308546,0.36538981,-0.31976766,0.94749599,0,0)"
+       rx="9.1709032"
+       ry="25.774687" />
+    <ellipse
+       style="fill:#d64c38;fill-opacity:1;stroke-width:0.421335"
+       id="path2-8-4-6-4"
+       cx="87.586617"
+       cy="81.476379"
+       transform="matrix(0.98907575,-0.14740814,0.20421855,0.97892532,0,0)"
+       rx="11.379221"
+       ry="25.777084" />
+    <ellipse
+       style="fill:#6f3ad4;fill-opacity:1;stroke-width:0.553284"
+       id="path2-8-4-6-4-8"
+       cx="-55.343628"
+       cy="-94.234077"
+       transform="matrix(-0.80369021,0.59504793,-0.77486776,-0.63212336,0,0)"
+       rx="20.660763"
+       ry="24.481726" />
+    <circle
+       style="fill:#93d0ea;fill-opacity:1;stroke-width:0.074519"
+       id="path2-8-3"
+       cx="132.52356"
+       cy="28.39167"
+       r="3.0290797" />
+  </g>
+</svg>
