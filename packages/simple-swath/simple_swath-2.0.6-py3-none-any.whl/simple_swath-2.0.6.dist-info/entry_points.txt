@@ -1,0 +1,3 @@
+[console_scripts]
+swath = swath.command_line:main
+
