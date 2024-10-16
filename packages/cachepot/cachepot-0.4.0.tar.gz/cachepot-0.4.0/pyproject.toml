@@ -1,0 +1,45 @@
+[tool.ruff]
+line-length = 79
+
+[tool.poetry]
+# I use poetry as just a package manager.
+# So, I only write the settings that poetry needs.
+# The actual package metadata is written in setup.cfg.
+# I use pypa/build for packaging.
+name = "cachepot"
+version = "0.0.0"
+description = ""
+authors = []
+packages = [{ include = "cachepot" }]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+typing-extensions = "*"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "*"
+pytest = "*"
+pytest-cov = "*"
+poethepoet = "*"
+setuptools-scm = "*"
+build = "*"
+redis = "*"
+types-redis = "*"
+mypy = "*"
+
+[build-system]
+requires = ["setuptools", "setuptools_scm"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools_scm]
+write_to = "cachepot/_version.py"
+
+[tool.poe.tasks]
+test = "pytest"
+coverage-xml = "pytest --cov=cachepot --doctest-modules --cov-report=xml"
+format = "ruff format cachepot"
+check = [
+    { cmd = "ruff check cachepot tests" },
+    { cmd = "mypy cachepot tests" },
+]
+build = "python -m build"
