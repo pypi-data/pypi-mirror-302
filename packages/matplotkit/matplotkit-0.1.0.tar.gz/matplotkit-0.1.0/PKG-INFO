@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: matplotkit
+Version: 0.1.0
+Summary: A Python library for enhancing Matplotlib with additional features.
+Author: SongshGeo
+Author-email: songshgeo@gmail.com
+Requires-Python: >=3.10,<3.12
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: matplotlib (>=3,<4)
+Description-Content-Type: text/markdown
+
+# MatplotKit
+
+A Python library for enhancing Matplotlib with additional features, including:
+
+- [x] Decorators for adding default axes to functions.
+- [x] Functions for adding annotations to plots.
+
+## Installation
+
+```bash
+pip install matplotkit
+```
+
