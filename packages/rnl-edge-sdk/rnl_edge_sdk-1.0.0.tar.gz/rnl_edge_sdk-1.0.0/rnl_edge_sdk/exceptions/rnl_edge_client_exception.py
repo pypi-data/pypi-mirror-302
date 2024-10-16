@@ -1,0 +1,2 @@
+class RnlEdgeClientException(Exception):
+    pass

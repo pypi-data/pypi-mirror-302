@@ -1,0 +1,223 @@
+Metadata-Version: 2.1
+Name: rnl-edge-sdk
+Version: 1.0.0
+Summary: Python SDK for RNL Edge API
+Home-page: https://github.com/ruffalo-noel-levitz/ai-rnl-edge-api/tree/master/rnl-edge-sdk/rnl-edge-sdk-python
+Author: Baby Manisha Sunkara
+Author-email: babymaneesha@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests>=2.26.0
+
+# RNL Edge Python SDK
+The RNL Edge SDK is a Python library designed to interact with RNL Edge services, providing an easy-to-use interface for authentication, managing documents, feedback collection, and interacting with the RNL API. This SDK simplifies the process of accessing and utilizing RNL Edge API features, allowing you to quickly authenticate users, manage documents, and handle various other tasks.
+
+## Features
+Authentication: Handle user authentication via the RNL API.
+Document Management: Upload, retrieve, and manage documents within the RNL system.
+Feedback Collection: Submit feedback data to the RNL system.
+RAG (Retrieval-Augmented Generation): Query documents using the RNL RAG interface.
+Others: Additional utility functions for interacting with RNL API.
+
+## Installation
+```bash
+pip install rnl_edge_sdk
+```
+
+## Usage
+### 1. Authentication
+The `auth.py` module allows you to authenticate users using the RNL Edge API. Here’s how to authenticate a user:
+
+**Example:** `example_auth.py`
+``` python
+from rnl_edge_sdk.environment import Environment
+from rnl_edge_sdk.rnl_edge_client import RnlEdgeClient
+
+def main():
+    # Initialize the environment and client
+    environment = Environment(Environment.Hosts.QA, "QA")
+    client = RnlEdgeClient(environment, "token1234", "subdomain").auth
+
+    # Perform authentication
+    try:
+        auth_data = client.auth("local", {"email": "user@example.com", "password": "password"})
+        print(f"Authentication successful! Access token: {client.access_token}")
+    except Exception as e:
+        print(f"Authentication failed: {str(e)}")
+
+if __name__ == "__main__":
+    main()
+```
+
+### 2. Document Management
+The `documents.py` module provides functionality for uploading and retrieving documents.
+
+**Example:** `example_documents.py`
+``` python
+from rnl_edge_sdk.environment import Environment
+from rnl_edge_sdk.rnl_edge_client import RnlEdgeClient
+from rnl_edge_sdk.requests.post_document_request import PostDocumentRequest
+
+def main():
+    environment = Environment(Environment.Hosts.QA, "QA")
+    client = RnlEdgeClient(environment, "token1234", "subdomain").document
+
+    # Authenticate the user
+    client.auth("local", {"email": "user@example.com", "password": "password"})
+
+    # Retrieve documents
+    try:
+        documents_response = client.get_documents()
+        print(f"Number of documents: {documents_response.record_count}")
+        for doc in documents_response.files:
+            print(f"- {doc.get('name', 'Unnamed document')}")
+    except Exception as e:
+        print(f"Failed to get documents: {str(e)}")
+
+    # Post a new document
+    try:
+        request = PostDocumentRequest([{"name": "sample.pdf", "content": "base64encodedcontent"}], category="Enrollment")
+        post_document_response = client.post_document(request)
+        print(f"Document uploaded successfully! ID: {post_document_response.document_id}")
+    except Exception as e:
+        print(f"Failed to post document: {str(e)}")
+
+if __name__ == "__main__":
+    main()
+```
+
+### 3. Feedback
+The `feedback.py` module allows users to submit feedback through the RNL API.
+
+**Example:** `example_feedback.py`
+```python
+from rnl_edge_sdk.environment import Environment
+from rnl_edge_sdk.rnl_edge_client import RnlEdgeClient
+
+def main():
+    environment = Environment(Environment.Hosts.QA, "QA")
+    client = RnlEdgeClient(environment, "token1234", "subdomain").feedback
+
+    # Authenticate the user
+    client.auth("local", {"email": "user@example.com", "password": "password"})
+
+    # Submit feedback
+    try:
+        client.submit_feedback("This is feedback for the RNL system.")
+        print("Feedback submitted successfully!")
+    except Exception as e:
+        print(f"Failed to submit feedback: {str(e)}")
+
+if __name__ == "__main__":
+    main()
+
+```
+
+### 4. RAG (Retrieval-Augmented Generation)
+The `rag.py` module provides an interface for querying documents using the RAG (Retrieval-Augmented Generation) system.
+
+**Example:** `example_rag.py`
+```python
+from rnl_edge_sdk.environment import Environment
+from rnl_edge_sdk.rnl_edge_client import RnlEdgeClient
+
+def main():
+    environment = Environment(Environment.Hosts.QA, "QA")
+    client = RnlEdgeClient(environment, "token1234", "subdomain").rag
+
+    # Authenticate the user
+    client.auth("local", {"email": "user@example.com", "password": "password"})
+
+    # Query RAG
+    try:
+        response = client.query_rag("What is the enrollment process?")
+        print("Query response:", response)
+    except Exception as e:
+        print(f"Failed to query RAG: {str(e)}")
+
+if __name__ == "__main__":
+    main()
+
+```
+
+### 5. Compass
+The `compass.py` module contains functionality for interacting with the Compass component of the RNL system.
+
+**Example:** `example_compass.py`
+```python
+from rnl_edge_sdk.environment import Environment
+from rnl_edge_sdk.rnl_edge_client import RnlEdgeClient
+
+def main():
+    environment = Environment(Environment.Hosts.QA, "QA")
+    client = RnlEdgeClient(environment, "token1234", "subdomain").compass
+
+    # Authenticate the user
+    client.auth("local", {"email": "user@example.com", "password": "password"})
+
+    # Use Compass functionality (example)
+    try:
+        response = client.some_compass_function()
+        print("Compass response:", response)
+    except Exception as e:
+        print(f"Failed to interact with Compass: {str(e)}")
+
+if __name__ == "__main__":
+    main()
+
+```
+
+### 6. Others
+The `others.py` module contains additional utility functions for interacting with the RNL API.
+
+**Example:** `example_others.py`
+```python
+from rnl_edge_sdk.environment import Environment
+from rnl_edge_sdk.rnl_edge_client import RnlEdgeClient
+
+def main():
+    environment = Environment(Environment.Hosts.QA, "QA")
+    client = RnlEdgeClient(environment, "token1234", "subdomain").other
+
+    # Perform other utility functions
+    try:
+        response = client.some_other_function()
+        print("Utility function response:", response)
+    except Exception as e:
+        print(f"Failed to perform utility function: {str(e)}")
+
+if __name__ == "__main__":
+    main()
+
+```
+
+### 7. Prompt
+The `prompt.py` module provides prompt management functionality.
+
+**Example:** `example_prompt.py`
+```python
+from rnl_edge_sdk.environment import Environment
+from rnl_edge_sdk.rnl_edge_client import RnlEdgeClient
+
+def main():
+    environment = Environment(Environment.Hosts.QA, "QA")
+    client = RnlEdgeClient(environment, "token1234", "subdomain").prompt
+
+    # Authenticate and manage prompts
+    try:
+        client.auth("local", {"email": "user@example.com", "password": "password"})
+        response = client.get_prompt()
+        print("Prompt response:", response)
+    except Exception as e:
+        print(f"Failed to manage prompt: {str(e)}")
+
+if __name__ == "__main__":
+    main()
+```
+
+## Example Usage Files
+The repository contains example Python scripts (example_auth.py, example_documents.py, etc.) that demonstrate how to use the various features of the SDK. You can refer to these files for detailed usage examples.
