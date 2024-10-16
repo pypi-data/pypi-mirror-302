@@ -1,0 +1,8 @@
+bandcamp_search/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bandcamp_search/__main__.py,sha256=868-i-3OYe7XatG5OapTI-PupXXHwOg7sB3_3OKAzLA,1101
+bandcamp_search/models.py,sha256=7l5u15kcxKAD-Zih7UW8-2XMHxilGIAxANHCDq1atFM,1123
+bandcamp_search/search.py,sha256=S6fuD5vV6ujrryA4uLnve64jH-HBSaqC9AYdSBJdKJg,496
+bandcamp_search-0.1.0.dist-info/LICENSE,sha256=jprRRnJQKqIJxIuPObwpOcU1i0Ehs2KIL-HhVXvlKFk,1066
+bandcamp_search-0.1.0.dist-info/METADATA,sha256=EQ0gBayoXpbFfi6KXAvTEJ1L6Mui6wFx_EaCeHV78-c,1787
+bandcamp_search-0.1.0.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+bandcamp_search-0.1.0.dist-info/RECORD,,
