@@ -1,0 +1,10 @@
+zephyrus/XUV_flux.py,sha256=uJeztD_5Tgt1TKjDHgmwd7a_bQFb185muF03dXMtqFs,6288
+zephyrus/constants.py,sha256=sDTKHzx90DrKt1UKNxheftyPrnw5Ws_oYsFygb78gA4,1167
+zephyrus/escape.py,sha256=PgD-o4KSD43PGQ1EG4QLy5wF7X1ZwPok4qQ3WPCEkxA,5645
+zephyrus/planets_parameters.py,sha256=nAcrxOXDrGlVm-J_cjrXKQHHb763mSEXj0md2rpdbQ8,3137
+zephyrus/data/Johnstone_2021/1p0Msun_1p0OmegaSun_basic.dat,sha256=mkdRwHC7PNYlBANnxckZN1sU0OFTR41o0h__Cx3iCN8,39231
+fwl_zephyrus-24.10.15.dist-info/LICENSE.md,sha256=4Y0K38laAgjtbjQYRHWmcTfXCy3efdCQJdODFo6HW9M,10793
+fwl_zephyrus-24.10.15.dist-info/METADATA,sha256=Ity-mJuudyCAKk6P23YuzUVZ1AGftMAXTS0B0nepdd8,3140
+fwl_zephyrus-24.10.15.dist-info/WHEEL,sha256=GV9aMThwP_4oNCtvEC2ec3qUYutgWeAzklro_0m4WJQ,91
+fwl_zephyrus-24.10.15.dist-info/top_level.txt,sha256=vXsmle72d6ZT51kn3VEW7sSnE-b0gtaP7oOl4MgqGYU,9
+fwl_zephyrus-24.10.15.dist-info/RECORD,,
