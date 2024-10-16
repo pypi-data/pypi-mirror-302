@@ -1,0 +1,7 @@
+setup.py
+pycordapi/__init__.py
+pycordapi/pycordapi.py
+pycordapi.egg-info/PKG-INFO
+pycordapi.egg-info/SOURCES.txt
+pycordapi.egg-info/dependency_links.txt
+pycordapi.egg-info/top_level.txt
