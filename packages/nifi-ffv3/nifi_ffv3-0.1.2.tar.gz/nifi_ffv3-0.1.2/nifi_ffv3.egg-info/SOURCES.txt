@@ -1,0 +1,7 @@
+LICENSE
+README.md
+setup.py
+nifi_ffv3.egg-info/PKG-INFO
+nifi_ffv3.egg-info/SOURCES.txt
+nifi_ffv3.egg-info/dependency_links.txt
+nifi_ffv3.egg-info/top_level.txt
