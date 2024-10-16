@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: karuocv
+Version: 0.2
+Author-email: caimmy <caimmy@hotmail.com>
+Maintainer-email: caimmy <caimmy@hotmail.com>
+Requires-Python: >=3.8
+License-File: LICENSE
+Requires-Dist: setuptools>65.3.0
+Requires-Dist: wheel
+Requires-Dist: opencv-contrib-python
+Requires-Dist: opencv-python
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: ultralytics
+Requires-Dist: supervision
