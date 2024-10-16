@@ -1,0 +1,2 @@
+[console_scripts]
+ssi = ssi.__main__:main
