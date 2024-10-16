@@ -1,0 +1,57 @@
+# dj-pydantic-settings
+
+Небольшая библиотечка для упрощения конфигурирования django проектов
+
+```python
+# settings.py
+from dj_pydantic_settings import DjangoModel, Database, DjangoSettings
+from pydantic import BaseModel
+
+# удобно собирать конфиг базы
+class Databases(BaseModel):
+    default: Database = Database(url="sqlite:///...")
+
+# Можно разбивать настройки на группы
+class GeneralSettings(BaseModel):
+    debug: bool = False
+    allowed_hosts: list[str] = ["*"]
+    databases: Databases = Databases()
+    ...
+
+# можно структурировать конфиг самостоятельно
+class TemplateEngine(DjangoModel):
+    backend: str
+    app_dirs: bool
+    dirs: list[str]
+    options: dict[str, Any]
+
+class TemplateSettings(BaseModel):
+    templates: list[TemplateEngine] = [
+        TemplateEngine(
+            backend = "django.template.backends.django.DjangoTemplates",
+            dirs = [],
+            app_dirs = True,
+            options = {
+                "context_processors": [
+                    "django.template.context_processors.debug",
+                    "django.template.context_processors.request",
+                    "django.contrib.auth.context_processors.auth",
+                    "django.contrib.messages.context_processors.messages",
+                ],
+            },
+        ),
+    ]
+
+...
+
+class ProjectSettings(
+    GeneralSettings,
+    TemplateSettings,
+    ...,
+    DjangoSettings
+):
+    # можно использовать всю мощь pydantic-settings для переопределения конфига из внешних источников
+    model_config = SettingsConfigDict(env_file=".env", env_file_encoding="utf-8", extra="ignore", env_prefix="DJANGO_")
+
+ProjectSettings()
+```

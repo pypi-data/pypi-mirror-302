@@ -1,0 +1,26 @@
+[project]
+name = "dj-pydantic-settings"
+version = "0.1.1"
+description = "Add your description here"
+authors = [{ name = "Vova Abdrakhmanov", email = "369565@gmail.com" }]
+dependencies = ["dj-database-url>=2.2.0", "pydantic-settings>=2.5.2"]
+readme = "README.md"
+requires-python = ">= 3.8"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = []
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/dj_pydantic_settings"]
+
+[tool.pyright]
+venvPath = "."
+venv = ".venv"
