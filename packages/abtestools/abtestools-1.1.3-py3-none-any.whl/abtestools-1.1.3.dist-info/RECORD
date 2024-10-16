@@ -1,0 +1,14 @@
+abtestools/.DS_Store,sha256=swC_vk4jmaKflvAs4IqwX182pSYYGmlwZFel7C8crXo,6148
+abtestools/__init__.py,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+abtestools/_utils/log/__init__.py,sha256=kUw1wJ6nY3mmp_pv_x3i1KtXY6OMFyFe8nEA540rkDI,43
+abtestools/_utils/log/log.py,sha256=cI2-RQA4Lm0W9i9VHURih6hA1kvHdoS4KOc_R9GBFmg,2542
+abtestools/audiences/__init__.py,sha256=Lp39J_Wxv3fdbWtRekIUvEeInTIQosMMEXZF0FALcMI,159
+abtestools/audiences/_audiences.py,sha256=NCPFL1V1jGvmB3znmOddWufykRnoeTuTT7wgedjsYPM,6016
+abtestools/campaign/__init__.py,sha256=1Hm4Hdgs3f3Us3ZuHRzCGQotgr1KQC--_vCpu4i1BVI,117
+abtestools/campaign/campaign.py,sha256=IjA5zQ6IgiTaxdLIoER2uMPr17NMoZLBNgfzzKLpNiA,2321
+abtestools/test/__init__.py,sha256=37JaJytDWgcNWR-nZEsr6xUZRavs8rJHHWm-ma8kICc,157
+abtestools/test/abtest.py,sha256=SvPYkUsYzoIjmQqGbnnBh7zG4yLCwHO86q_C3vKmYKM,5706
+abtestools-1.1.3.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+abtestools-1.1.3.dist-info/METADATA,sha256=MOEYCnnTBxKX0UKoTOxuIu3zjBrAl6Uk6FkpLkGfXDk,8859
+abtestools-1.1.3.dist-info/WHEEL,sha256=FMvqSimYX_P7y0a7UY-_Mc83r5zkBZsCYPm7Lr0Bsq4,88
+abtestools-1.1.3.dist-info/RECORD,,
