@@ -1,0 +1,6 @@
+README
+setup.py
+ApSp_x86.1.0.1.egg-info/PKG-INFO
+ApSp_x86.1.0.1.egg-info/SOURCES.txt
+ApSp_x86.1.0.1.egg-info/dependency_links.txt
+ApSp_x86.1.0.1.egg-info/top_level.txt
