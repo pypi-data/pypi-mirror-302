@@ -1,0 +1,4 @@
+passagemath-objects~=10.4.1
+
+[test]
+passagemath-repl~=10.4.1
