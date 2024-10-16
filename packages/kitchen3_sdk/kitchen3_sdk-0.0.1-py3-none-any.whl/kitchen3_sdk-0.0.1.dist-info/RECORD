@@ -1,0 +1,15 @@
+kitchen3_sdk/__init__.py,sha256=LhHS0PJRXS6yWXs4X7SBFOrroqJkY9x5LIAuckwfkEY,1048
+kitchen3_sdk/api/__init__.py,sha256=51585pD5glQNMKbPR25s5u9dIPlz1Evf-kaNbi79Y0E,100
+kitchen3_sdk/api/default_api.py,sha256=gQ7J28qny1Eql7FSq3s5hmZ8sjSnEbM9_U5wHS0YZ7E,47970
+kitchen3_sdk/api_client.py,sha256=2s8RRYtVvu3m6QH_qO2CBc5yo6MoLFN8vd1wr7_YfRw,27460
+kitchen3_sdk/api_response.py,sha256=eMxw1mpmJcoGZ3gs9z6jM4oYoZ10Gjk333s9sKxGv7s,652
+kitchen3_sdk/configuration.py,sha256=hF2PAuQQ3VHwdljlCdClSY2W6eLNJ8VERAGx5hH0V-w,15046
+kitchen3_sdk/exceptions.py,sha256=yNOWdeCBbBATo9IBJeFgPIIhNVw1_7cSisjmj1rJ1Mo,5977
+kitchen3_sdk/models/__init__.py,sha256=jVPuX_HSKbmEG7EY5qK_uwHk9DzqfpBNULBeN2ZaZUE,470
+kitchen3_sdk/models/item.py,sha256=BLxSEpXLt62GZ0UzLRiKICTWi7S0l6LaqhYeKwb-whQ,2985
+kitchen3_sdk/models/query_input.py,sha256=YimU9-JIkyv_DtW20PwAdnqYFpUrJyaqR12vw00yDdk,2465
+kitchen3_sdk/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+kitchen3_sdk/rest.py,sha256=2o_K_9ivjY8uReWE45XwLOlHjIAPZ1dpJwZi2nNjimI,9415
+kitchen3_sdk-0.0.1.dist-info/METADATA,sha256=UJhCfjns3ck-1a92laZiEr-NTTmnARKHmO_9b4OdgWA,4279
+kitchen3_sdk-0.0.1.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+kitchen3_sdk-0.0.1.dist-info/RECORD,,
