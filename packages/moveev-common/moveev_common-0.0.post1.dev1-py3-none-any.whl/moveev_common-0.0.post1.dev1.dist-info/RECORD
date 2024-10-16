@@ -1,0 +1,9 @@
+moveev_common/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+moveev_common/charging_session.py,sha256=XneqZv441hG2-LHTrf81RWs9hAyhIKZ93sX3Gu95Whw,4422
+moveev_common/location.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+moveev_common/vehicle.py,sha256=M9q27Qcuhx4rTEePgUKoqgOLceJ7yn8fRghzzY81okQ,2442
+moveev_common-0.0.post1.dev1.dist-info/LICENSE,sha256=EjALy6V6ENHgTTsl1J2PtaTauRxklSAfwfpjisj-OR0,1043
+moveev_common-0.0.post1.dev1.dist-info/METADATA,sha256=cTsJwMnEBdksZTEWPMRF2lWedINSVlI-k7IZEPFxHgk,1973
+moveev_common-0.0.post1.dev1.dist-info/WHEEL,sha256=GV9aMThwP_4oNCtvEC2ec3qUYutgWeAzklro_0m4WJQ,91
+moveev_common-0.0.post1.dev1.dist-info/top_level.txt,sha256=bSOBtgPDC8G8mcAsnt2Hu2Xzbl3N2mrD079dNf5uJvg,14
+moveev_common-0.0.post1.dev1.dist-info/RECORD,,
