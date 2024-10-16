@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: licensepy
+Version: 0.0.1
+Summary: licensepy is a license check tool for project package dependencies.
+Home-page: https://github.com/natibek/licensepy/tree/main
+Author: Nathnael Bekele
+Author-email: nwtbekele@gmail.com
+License: Apache 2.0
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.11.0
+License-File: LICENSE
+Requires-Dist: tomlkit==0.13.0
+
+Python License Check Module.
+
