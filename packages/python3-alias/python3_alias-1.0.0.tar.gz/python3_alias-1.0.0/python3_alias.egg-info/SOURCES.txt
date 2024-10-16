@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+python3/__init__.py
+python3/__main__.py
+python3_alias.egg-info/PKG-INFO
+python3_alias.egg-info/SOURCES.txt
+python3_alias.egg-info/dependency_links.txt
+python3_alias.egg-info/top_level.txt
