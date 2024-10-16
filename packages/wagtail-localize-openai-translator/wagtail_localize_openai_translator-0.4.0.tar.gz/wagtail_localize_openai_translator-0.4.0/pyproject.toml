@@ -1,0 +1,28 @@
+[project]
+name = "wagtail-localize-openai-translator"
+version = "0.4.0"
+description = ""
+authors = [
+    { name = "Python Italia", email = "help@pycon.it" },
+]
+dependencies = [
+    "openai>=1.51.2",
+]
+requires-python = ">=3.11"
+readme = "README.md"
+
+[project.license]
+text = "MIT"
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[tool.pdm.dev-dependencies]
+dev = [
+    "pytest>=8.3.3",
+    "wagtail-localize>=1.10",
+    "wagtail>=6.2.2",
+]
