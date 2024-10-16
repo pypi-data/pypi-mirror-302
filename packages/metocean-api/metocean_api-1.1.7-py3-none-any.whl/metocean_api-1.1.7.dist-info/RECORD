@@ -1,0 +1,17 @@
+metocean_api/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+metocean_api/ts/__init__.py,sha256=BJgQEsUxxzXUWsFb26vHIFBQGb_XMDqTIO_y3cDeth0,531
+metocean_api/ts/aux_funcs.py,sha256=ho4-Ng8P61KBgW0BrMLiQ5dy2mht7_oGuGlMiB99VYE,17530
+metocean_api/ts/read_ec.py,sha256=LASWq2B0lCUh7k51BIwMgVPiOB_ew7tEr6EY6r-xinA,7668
+metocean_api/ts/read_metno.py,sha256=611OAi2icOOjCkxIE0vy1xpJ1QjG3HGSGCvGazJU36s,19550
+metocean_api/ts/read_tudelft.py,sha256=8puXz8bTBkvCe87DtywwD-45r957HNGeZQC81w_WPQ4,2736
+metocean_api/ts/ts_mod.py,sha256=Opc5JZTs8FsgQFb-1yXuaHpbBGbcfPcvexRrprcjoDc,8823
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_combine_data.py,sha256=TM5eL1vGcNBcGWjiIDK4y0gM8QMtMhsF4vrxqe8Rnzk,374
+tests/test_extract_data.py,sha256=YTU23ZLZoENddpP-EIC1AkJwkklzbWu2RVoBdHkwo4Q,2886
+tests/data/NORA3_atm_sub_lon1.32_lat53.324_20210101_20210331.csv,sha256=TxPuA7_Fds2QI8QoHCIRtM58WK2Usf7SfzfItDFQZC4,134459
+tests/data/NORA3_wind_sub_lon1.32_lat53.324_20210101_20210131.csv,sha256=w_5cBPXgiGREjL3yMfLo7Vb5SMYE8tfbrE0GIfmb2zs,73812
+metocean_api-1.1.7.dist-info/LICENSE,sha256=IMF9i4xIpgCADf0U-V1cuf9HBmqWQd3qtI3FSuyW4zE,26526
+metocean_api-1.1.7.dist-info/METADATA,sha256=mykoZ7OMAOIdx-SZWEA6yYm-hkr66LBOPD6TX4AT_xw,531
+metocean_api-1.1.7.dist-info/WHEEL,sha256=GV9aMThwP_4oNCtvEC2ec3qUYutgWeAzklro_0m4WJQ,91
+metocean_api-1.1.7.dist-info/top_level.txt,sha256=a3QbQi4w_yIR1WDKmfGgEq6PIB0OSB-54h5FtMbf58o,19
+metocean_api-1.1.7.dist-info/RECORD,,
