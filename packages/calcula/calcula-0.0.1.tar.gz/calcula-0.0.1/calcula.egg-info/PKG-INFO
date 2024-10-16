@@ -1,0 +1,74 @@
+Metadata-Version: 2.1
+Name: calcula
+Version: 0.0.1
+Summary: Uma calculadora simples que suporta operações básicas em Python.
+Home-page: https://github.com/elvingup/calcula-01.git
+Author: elvingup
+Author-email: el.cayro@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# LaboratÃ³rio de Python: uma calculadora
+LaboratÃ³rio de calculadora python para publicar no Pypi. Handson para o Curso NTT DATA - Engenharia de Dados com Python da plataforma DIO. Este Ã© um script de uma calculadora bÃ¡sica em Python que suporta diversas operaÃ§Ãµes matemÃ¡ticas, como soma, subtraÃ§Ã£o, multiplicaÃ§Ã£o, divisÃ£o, potÃªncia, raiz quadrada e raiz cÃºbica. A funÃ§Ã£o principal Ã© a `calcula`, que recebe como parÃ¢metros a operaÃ§Ã£o a ser realizada e uma lista de nÃºmeros sobre os quais a operaÃ§Ã£o serÃ¡ aplicada.
+
+## Funcionalidades
+
+- **Soma**: Calcula a soma de todos os nÃºmeros da lista.
+- **SubtraÃ§Ã£o**: Subtrai todos os nÃºmeros da lista a partir do primeiro.
+- **MultiplicaÃ§Ã£o**: Calcula o produto de todos os nÃºmeros da lista.
+- **DivisÃ£o**: Divide o primeiro nÃºmero pelo produto dos nÃºmeros restantes.
+- **PotÃªncia**: Eleva o primeiro nÃºmero ao segundo nÃºmero (suporta apenas dois nÃºmeros).
+- **Raiz Quadrada**: Calcula a raiz quadrada do primeiro nÃºmero da lista.
+- **Raiz CÃºbica**: Calcula a raiz cÃºbica do primeiro nÃºmero da lista.
+
+## Uso
+
+### FunÃ§Ã£o `calcula`
+
+```python
+def calcula(operacao: str, numeros: list[float]) -> float:
+```
+
+#### ParÃ¢metros:
+- `operacao` (str): Uma string que define a operaÃ§Ã£o a ser realizada. Pode ser:
+  - `"soma"`
+  - `"subtracao"`
+  - `"multiplicacao"`
+  - `"divisao"`
+  - `"potencia"`
+  - `"raiz_quadrada"`
+  - `"raiz_cubica"`
+- `numeros` (list[float]): Uma lista de nÃºmeros de ponto flutuante sobre os quais a operaÃ§Ã£o serÃ¡ realizada.
+
+#### Retorno:
+- Retorna o resultado da operaÃ§Ã£o como um nÃºmero de ponto flutuante.
+
+#### ExceÃ§Ãµes:
+- `ValueError`: LanÃ§a uma exceÃ§Ã£o caso a operaÃ§Ã£o seja invÃ¡lida ou se houver uma divisÃ£o por zero.
+
+### Exemplo de Uso
+
+```python
+# Realizando a soma de 10, 20 e 30
+resultado = calcula("soma", [10.0, 20.0, 30.0])
+print(resultado)  # SaÃ­da: 60.0
+
+# Realizando a divisÃ£o de 10 por 5
+resultado = calcula("divisao", [10.0, 5.0])
+print(resultado)  # SaÃ­da: 2.0
+```
+
+## ExceÃ§Ãµes Tratadas
+
+A funÃ§Ã£o `calcula` trata as seguintes exceÃ§Ãµes:
+- **DivisÃ£o por zero**: Gera uma mensagem de erro especÃ­fica para divisÃµes por zero.
+- **OperaÃ§Ã£o invÃ¡lida**: Retorna um erro se a operaÃ§Ã£o nÃ£o estiver entre as suportadas.
+- **Erro de tipo ou Ã­ndice**: Caso os parÃ¢metros nÃ£o correspondam aos esperados para uma operaÃ§Ã£o especÃ­fica, uma mensagem de erro Ã© gerada.
+
+## Requisitos
+
+A funÃ§Ã£o utiliza o mÃ³dulo `math` para operaÃ§Ãµes avanÃ§adas, como potÃªncia e raiz quadrada. Este mÃ³dulo Ã© parte da biblioteca padrÃ£o do Python.
+

@@ -1,0 +1,9 @@
+README.md
+setup.py
+calcula/__init__.py
+calcula/calcula.py
+calcula.egg-info/PKG-INFO
+calcula.egg-info/SOURCES.txt
+calcula.egg-info/dependency_links.txt
+calcula.egg-info/entry_points.txt
+calcula.egg-info/top_level.txt
