@@ -1,0 +1,2 @@
+[console_scripts]
+makedown = makedown:main
