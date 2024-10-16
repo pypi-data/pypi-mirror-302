@@ -1,0 +1,16 @@
+LICENSE
+README.md
+setup.py
+src/salomos/__init__.py
+src/salomos/db_manager.py
+src/salomos/dsl_processor.py
+src/salomos/example_function.py
+src/salomos/example_module.py
+src/salomos/salomos.py
+src/salomos.egg-info/PKG-INFO
+src/salomos.egg-info/SOURCES.txt
+src/salomos.egg-info/dependency_links.txt
+src/salomos.egg-info/entry_points.txt
+src/salomos.egg-info/requires.txt
+src/salomos.egg-info/top_level.txt
+tests/test_salomos.py

@@ -1,0 +1,51 @@
+Metadata-Version: 2.1
+Name: salomos
+Version: 0.1.7
+Summary: Salomos is a Python package that provides a domain-specific language (DSL) processor for executing commands based on sentences stored in a SQLite database.
+Home-page: https://python.dobyemail.com
+Author: Tom Sapletta
+Author-email: info@softreck.dev
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: sqlite3
+
+# Salomos
+
+Salomos is a Python package that provides utilities for creating and managing project structures.
+
+## Installation
+
+To install Salomos, simply run:
+
+```
+pip install salomos
+```
+
+## Usage
+
+Salomos provides a `create_project` function that generates a standardized project structure. Here's an example of how to use it:
+
+```python
+from salomos import create_project
+
+create_project("my_project", ["src", "tests", "docs"])
+```
+
+This will create a new project directory called "my_project" with the specified subdirectories.
+
+## Contributing
+
+Contributions are welcome! Please see the [contributing guidelines](CONTRIBUTING.md) for more details.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
