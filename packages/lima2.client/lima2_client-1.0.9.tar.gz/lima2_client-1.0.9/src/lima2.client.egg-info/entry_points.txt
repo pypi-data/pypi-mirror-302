@@ -1,0 +1,2 @@
+[console_scripts]
+lima2_cli = lima2.client.cli:main

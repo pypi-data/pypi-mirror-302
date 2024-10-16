@@ -1,0 +1,6 @@
+pytango
+gevent
+jsonschema
+jsonschema-default
+finite-state-machine
+beartype
