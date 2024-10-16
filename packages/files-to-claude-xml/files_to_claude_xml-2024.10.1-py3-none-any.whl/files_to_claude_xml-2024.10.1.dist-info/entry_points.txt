@@ -1,0 +1,2 @@
+[console_scripts]
+files-to-claude-xml = files_to_claude_xml:app
