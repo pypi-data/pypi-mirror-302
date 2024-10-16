@@ -1,0 +1,15 @@
+CollectLabel: '-1'
+RandColor: true
+Rename_files_Des: E:\DATA-SupperCAP\STEP2-SUPERCAP
+Rename_files_Pre: im2_
+Rename_files_Src: E:\DATA-SupperCAP\STEP2-SUPERCAP
+Resized_H: 800
+Resized_W: 640
+fDraw_ROI_2_Imgs: 0
+fMove2Test: false
+fResize: false
+pDir1: H:\DATA\Cam360SmartGate\Training_data_from_DUY\_Train\11_10\6
+pDir2: ''
+pDir3: ''
+show_full_txt_path_on_image: false
+swapHorizontal: false
