@@ -1,0 +1,8 @@
+cbim_utils/__init__.py,sha256=novpJNsVoO12WDXC6lWrQpJgc2PFAsF7BTfB4jWBcQo,44
+cbim_utils/db_connection.py,sha256=4qJ0-mDGcJUJwetcG-RF40HsiGWcj-7Wm2Z09YdVM4k,1213
+cbim_utils/mysql_db_connection.py,sha256=4qJ0-mDGcJUJwetcG-RF40HsiGWcj-7Wm2Z09YdVM4k,1213
+cbim_utils-0.1.5.dist-info/LICENSE.txt,sha256=ZY8wwPlz4CV3myXL0P2PwwmYOikKd56z2rR9VWukMOY,1047
+cbim_utils-0.1.5.dist-info/METADATA,sha256=_k4xy8fnJd3Y8DhMAyCOkl58kSsQLoctNQdlhnENmNM,736
+cbim_utils-0.1.5.dist-info/WHEEL,sha256=GV9aMThwP_4oNCtvEC2ec3qUYutgWeAzklro_0m4WJQ,91
+cbim_utils-0.1.5.dist-info/top_level.txt,sha256=2vbcjdGPuNTfyIqQzklFwIrL25jLv9RZlbkjn2N4S9Q,11
+cbim_utils-0.1.5.dist-info/RECORD,,
