@@ -1,0 +1,2328 @@
+{
+  "#acceptable-use": {
+    "current": {
+      "number": "9.9",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Acceptable Use",
+      "url": "https://w3c.github.io/vc-data-model/#acceptable-use"
+    },
+    "snapshot": {
+      "number": "9.9",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Acceptable Use",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#acceptable-use"
+    }
+  },
+  "#accessibility-considerations": {
+    "current": {
+      "number": "",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "10. Accessibility Considerations",
+      "url": "https://w3c.github.io/vc-data-model/#accessibility-considerations"
+    },
+    "snapshot": {
+      "number": "",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "10. Accessibility Considerations",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#accessibility-considerations"
+    }
+  },
+  "#acknowledgements": {
+    "current": {
+      "number": "F",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Acknowledgements",
+      "url": "https://w3c.github.io/vc-data-model/#acknowledgements"
+    },
+    "snapshot": {
+      "number": "F",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Acknowledgements",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#acknowledgements"
+    }
+  },
+  "#additional-diagrams-for-verifiable-presentations": {
+    "current": {
+      "number": "D",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Additional Diagrams for Verifiable Presentations",
+      "url": "https://w3c.github.io/vc-data-model/#additional-diagrams-for-verifiable-presentations"
+    },
+    "snapshot": {
+      "number": "D",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Additional Diagrams for Verifiable Presentations",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#additional-diagrams-for-verifiable-presentations"
+    }
+  },
+  "#advanced-concepts": {
+    "current": {
+      "number": "5",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Advanced Concepts",
+      "url": "https://w3c.github.io/vc-data-model/#advanced-concepts"
+    },
+    "snapshot": {
+      "number": "5",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Advanced Concepts",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#advanced-concepts"
+    }
+  },
+  "#aggregation-of-credentials": {
+    "current": {
+      "number": "8.13",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Aggregation of Credentials",
+      "url": "https://w3c.github.io/vc-data-model/#aggregation-of-credentials"
+    },
+    "snapshot": {
+      "number": "8.13",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Aggregation of Credentials",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#aggregation-of-credentials"
+    }
+  },
+  "#algorithms": {
+    "current": {
+      "number": "7",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Algorithms",
+      "url": "https://w3c.github.io/vc-data-model/#algorithms"
+    },
+    "snapshot": {
+      "number": "7",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Algorithms",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#algorithms"
+    }
+  },
+  "#artificial-intelligence-and-machine-learning": {
+    "current": {
+      "number": "A.11",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "\"Artificial Intelligence\" and \"Machine Learning\"",
+      "url": "https://w3c.github.io/vc-data-model/#artificial-intelligence-and-machine-learning"
+    },
+    "snapshot": {
+      "number": "A.11",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "\"Artificial Intelligence\" and \"Machine Learning\"",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#artificial-intelligence-and-machine-learning"
+    }
+  },
+  "#authorization": {
+    "current": {
+      "number": "5.9",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Authorization",
+      "url": "https://w3c.github.io/vc-data-model/#authorization"
+    },
+    "snapshot": {
+      "number": "5.9",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Authorization",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#authorization"
+    }
+  },
+  "#base-context": {
+    "current": {
+      "number": "B.1",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Base Context",
+      "url": "https://w3c.github.io/vc-data-model/#base-context"
+    },
+    "snapshot": {
+      "number": "B.1",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Base Context",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#base-context"
+    }
+  },
+  "#basic-concepts": {
+    "current": {
+      "number": "4",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Basic Concepts",
+      "url": "https://w3c.github.io/vc-data-model/#basic-concepts"
+    },
+    "snapshot": {
+      "number": "4",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Basic Concepts",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#basic-concepts"
+    }
+  },
+  "#bearer-credentials": {
+    "current": {
+      "number": "8.10",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Bearer Credentials",
+      "url": "https://w3c.github.io/vc-data-model/#bearer-credentials"
+    },
+    "snapshot": {
+      "number": "8.10",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Bearer Credentials",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#bearer-credentials"
+    }
+  },
+  "#bundling-dependent-claims": {
+    "current": {
+      "number": "9.6",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Bundling Dependent Claims",
+      "url": "https://w3c.github.io/vc-data-model/#bundling-dependent-claims"
+    },
+    "snapshot": {
+      "number": "9.6",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Bundling Dependent Claims",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#bundling-dependent-claims"
+    }
+  },
+  "#claims": {
+    "current": {
+      "number": "3.1",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Claims",
+      "url": "https://w3c.github.io/vc-data-model/#claims"
+    },
+    "snapshot": {
+      "number": "3.1",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Claims",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#claims"
+    }
+  },
+  "#code-injection": {
+    "current": {
+      "number": "9.10",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Code Injection",
+      "url": "https://w3c.github.io/vc-data-model/#code-injection"
+    },
+    "snapshot": {
+      "number": "9.10",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Code Injection",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#code-injection"
+    }
+  },
+  "#conformance": {
+    "current": {
+      "number": "1.3",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Conformance",
+      "url": "https://w3c.github.io/vc-data-model/#conformance"
+    },
+    "snapshot": {
+      "number": "1.3",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Conformance",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#conformance"
+    }
+  },
+  "#content-integrity-protection": {
+    "current": {
+      "number": "9.3",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Content Integrity Protection",
+      "url": "https://w3c.github.io/vc-data-model/#content-integrity-protection"
+    },
+    "snapshot": {
+      "number": "9.3",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Content Integrity Protection",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#content-integrity-protection"
+    }
+  },
+  "#contexts": {
+    "current": {
+      "number": "4.3",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Contexts",
+      "url": "https://w3c.github.io/vc-data-model/#contexts"
+    },
+    "snapshot": {
+      "number": "4.3",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Contexts",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#contexts"
+    }
+  },
+  "#contexts-vocabularies-types-and-credential-schemas": {
+    "current": {
+      "number": "B",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Contexts, Vocabularies, Types, and Credential Schemas",
+      "url": "https://w3c.github.io/vc-data-model/#contexts-vocabularies-types-and-credential-schemas"
+    },
+    "snapshot": {
+      "number": "B",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Contexts, Vocabularies, Types, and Credential Schemas",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#contexts-vocabularies-types-and-credential-schemas"
+    }
+  },
+  "#core-data-model": {
+    "current": {
+      "number": "3",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Core Data Model",
+      "url": "https://w3c.github.io/vc-data-model/#core-data-model"
+    },
+    "snapshot": {
+      "number": "3",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Core Data Model",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#core-data-model"
+    }
+  },
+  "#correlation-during-validation": {
+    "current": {
+      "number": "8.11",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Correlation During Validation",
+      "url": "https://w3c.github.io/vc-data-model/#correlation-during-validation"
+    },
+    "snapshot": {
+      "number": "8.11",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Correlation During Validation",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#correlation-during-validation"
+    }
+  },
+  "#credential-subject": {
+    "current": {
+      "number": "4.8",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Credential Subject",
+      "url": "https://w3c.github.io/vc-data-model/#credential-subject"
+    },
+    "snapshot": {
+      "number": "4.8",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Credential Subject",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#credential-subject"
+    }
+  },
+  "#credential-subject-0": {
+    "current": {
+      "number": "A.2",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Credential Subject",
+      "url": "https://w3c.github.io/vc-data-model/#credential-subject-0"
+    },
+    "snapshot": {
+      "number": "A.2",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Credential Subject",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#credential-subject-0"
+    }
+  },
+  "#credential-type": {
+    "current": {
+      "number": "A.1",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Credential Type",
+      "url": "https://w3c.github.io/vc-data-model/#credential-type"
+    },
+    "snapshot": {
+      "number": "A.1",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Credential Type",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#credential-type"
+    }
+  },
+  "#credentials": {
+    "current": {
+      "number": "3.2",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Credentials",
+      "url": "https://w3c.github.io/vc-data-model/#credentials"
+    },
+    "snapshot": {
+      "number": "3.2",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Credentials",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#credentials"
+    }
+  },
+  "#cryptography-suites-and-libraries": {
+    "current": {
+      "number": "9.1",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Cryptography Suites and Libraries",
+      "url": "https://w3c.github.io/vc-data-model/#cryptography-suites-and-libraries"
+    },
+    "snapshot": {
+      "number": "9.1",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Cryptography Suites and Libraries",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#cryptography-suites-and-libraries"
+    }
+  },
+  "#data-first-approaches": {
+    "current": {
+      "number": "10.1",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Data First Approaches",
+      "url": "https://w3c.github.io/vc-data-model/#data-first-approaches"
+    },
+    "snapshot": {
+      "number": "10.1",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Data First Approaches",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#data-first-approaches"
+    }
+  },
+  "#data-schemas": {
+    "current": {
+      "number": "4.11",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Data Schemas",
+      "url": "https://w3c.github.io/vc-data-model/#data-schemas"
+    },
+    "snapshot": {
+      "number": "4.11",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Data Schemas",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#data-schemas"
+    }
+  },
+  "#data-theft": {
+    "current": {
+      "number": "8.17",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Data Theft",
+      "url": "https://w3c.github.io/vc-data-model/#data-theft"
+    },
+    "snapshot": {
+      "number": "8.17",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Data Theft",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#data-theft"
+    }
+  },
+  "#datatypes": {
+    "current": {
+      "number": "B.3",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Datatypes",
+      "url": "https://w3c.github.io/vc-data-model/#datatypes"
+    },
+    "snapshot": {
+      "number": "B.3",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Datatypes",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#datatypes"
+    }
+  },
+  "#device-theft-and-impersonation": {
+    "current": {
+      "number": "9.8",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Device Theft and Impersonation",
+      "url": "https://w3c.github.io/vc-data-model/#device-theft-and-impersonation"
+    },
+    "snapshot": {
+      "number": "9.8",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Device Theft and Impersonation",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#device-theft-and-impersonation"
+    }
+  },
+  "#device-tracking-and-fingerprinting": {
+    "current": {
+      "number": "8.7",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Device Tracking and Fingerprinting",
+      "url": "https://w3c.github.io/vc-data-model/#device-tracking-and-fingerprinting"
+    },
+    "snapshot": {
+      "number": "8.7",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Device Tracking and Fingerprinting",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#device-tracking-and-fingerprinting"
+    }
+  },
+  "#differences-between-contexts-types-and-credentialschemas": {
+    "current": {
+      "number": "B.4",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Differences between Contexts, Types, and CredentialSchemas",
+      "url": "https://w3c.github.io/vc-data-model/#differences-between-contexts-types-and-credentialschemas"
+    },
+    "snapshot": {
+      "number": "B.4",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Differences between Contexts, Types, and CredentialSchemas",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#differences-between-contexts-types-and-credentialschemas"
+    }
+  },
+  "#ecosystem-compatibility": {
+    "current": {
+      "number": "5.11",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Ecosystem Compatibility",
+      "url": "https://w3c.github.io/vc-data-model/#ecosystem-compatibility"
+    },
+    "snapshot": {
+      "number": "5.11",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Ecosystem Compatibility",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#ecosystem-compatibility"
+    }
+  },
+  "#ecosystem-overview": {
+    "current": {
+      "number": "1.2",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Ecosystem Overview",
+      "url": "https://w3c.github.io/vc-data-model/#ecosystem-overview"
+    },
+    "snapshot": {
+      "number": "1.2",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Ecosystem Overview",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#ecosystem-overview"
+    }
+  },
+  "#enveloped-verifiable-credentials": {
+    "current": {
+      "number": "",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Enveloped Verifiable Credentials",
+      "url": "https://w3c.github.io/vc-data-model/#enveloped-verifiable-credentials"
+    },
+    "snapshot": {
+      "number": "",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Enveloped Verifiable Credentials",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#enveloped-verifiable-credentials"
+    }
+  },
+  "#enveloped-verifiable-presentations": {
+    "current": {
+      "number": "",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Enveloped Verifiable Presentations",
+      "url": "https://w3c.github.io/vc-data-model/#enveloped-verifiable-presentations"
+    },
+    "snapshot": {
+      "number": "",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Enveloped Verifiable Presentations",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#enveloped-verifiable-presentations"
+    }
+  },
+  "#evidence": {
+    "current": {
+      "number": "5.6",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Evidence",
+      "url": "https://w3c.github.io/vc-data-model/#evidence"
+    },
+    "snapshot": {
+      "number": "5.6",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Evidence",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#evidence"
+    }
+  },
+  "#extensibility": {
+    "current": {
+      "number": "5.2",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Extensibility",
+      "url": "https://w3c.github.io/vc-data-model/#extensibility"
+    },
+    "snapshot": {
+      "number": "5.2",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Extensibility",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#extensibility"
+    }
+  },
+  "#favor-abstract-claims": {
+    "current": {
+      "number": "8.8",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Favor Abstract Claims",
+      "url": "https://w3c.github.io/vc-data-model/#favor-abstract-claims"
+    },
+    "snapshot": {
+      "number": "8.8",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Favor Abstract Claims",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#favor-abstract-claims"
+    }
+  },
+  "#fitness-for-purpose": {
+    "current": {
+      "number": "A.10",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Fitness for Purpose",
+      "url": "https://w3c.github.io/vc-data-model/#fitness-for-purpose"
+    },
+    "snapshot": {
+      "number": "A.10",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Fitness for Purpose",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#fitness-for-purpose"
+    }
+  },
+  "#frequency-of-claim-issuance": {
+    "current": {
+      "number": "8.18",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Frequency of Claim Issuance",
+      "url": "https://w3c.github.io/vc-data-model/#frequency-of-claim-issuance"
+    },
+    "snapshot": {
+      "number": "8.18",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Frequency of Claim Issuance",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#frequency-of-claim-issuance"
+    }
+  },
+  "#getting-started": {
+    "current": {
+      "number": "4.1",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Getting Started",
+      "url": "https://w3c.github.io/vc-data-model/#getting-started"
+    },
+    "snapshot": {
+      "number": "4.1",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Getting Started",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#getting-started"
+    }
+  },
+  "#highly-dynamic-information": {
+    "current": {
+      "number": "9.7",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Highly Dynamic Information",
+      "url": "https://w3c.github.io/vc-data-model/#highly-dynamic-information"
+    },
+    "snapshot": {
+      "number": "9.7",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Highly Dynamic Information",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#highly-dynamic-information"
+    }
+  },
+  "#holder": {
+    "current": {
+      "number": "A.4",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Holder",
+      "url": "https://w3c.github.io/vc-data-model/#holder"
+    },
+    "snapshot": {
+      "number": "A.4",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Holder",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#holder"
+    }
+  },
+  "#iana-considerations": {
+    "current": {
+      "number": "C",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "IANA Considerations",
+      "url": "https://w3c.github.io/vc-data-model/#iana-considerations"
+    },
+    "snapshot": {
+      "number": "C",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "IANA Considerations",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#iana-considerations"
+    }
+  },
+  "#identifier-based-correlation": {
+    "current": {
+      "number": "8.4",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Identifier-Based Correlation",
+      "url": "https://w3c.github.io/vc-data-model/#identifier-based-correlation"
+    },
+    "snapshot": {
+      "number": "8.4",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Identifier-Based Correlation",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#identifier-based-correlation"
+    }
+  },
+  "#identifiers": {
+    "current": {
+      "number": "4.4",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Identifiers",
+      "url": "https://w3c.github.io/vc-data-model/#identifiers"
+    },
+    "snapshot": {
+      "number": "4.4",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Identifiers",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#identifiers"
+    }
+  },
+  "#inappropriate-use": {
+    "current": {
+      "number": "9.9.2",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Inappropriate Use",
+      "url": "https://w3c.github.io/vc-data-model/#inappropriate-use"
+    },
+    "snapshot": {
+      "number": "9.9.2",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Inappropriate Use",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#inappropriate-use"
+    }
+  },
+  "#informative-references": {
+    "current": {
+      "number": "G.2",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Informative references",
+      "url": "https://w3c.github.io/vc-data-model/#informative-references"
+    },
+    "snapshot": {
+      "number": "G.2",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Informative references",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#informative-references"
+    }
+  },
+  "#integrity-of-related-resources": {
+    "current": {
+      "number": "5.3",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Integrity of Related Resources",
+      "url": "https://w3c.github.io/vc-data-model/#integrity-of-related-resources"
+    },
+    "snapshot": {
+      "number": "5.3",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Integrity of Related Resources",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#integrity-of-related-resources"
+    }
+  },
+  "#internationalization-considerations": {
+    "current": {
+      "number": "",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "11. Internationalization Considerations",
+      "url": "https://w3c.github.io/vc-data-model/#internationalization-considerations"
+    },
+    "snapshot": {
+      "number": "",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "11. Internationalization Considerations",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#internationalization-considerations"
+    }
+  },
+  "#introduction": {
+    "current": {
+      "number": "1",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Introduction",
+      "url": "https://w3c.github.io/vc-data-model/#introduction"
+    },
+    "snapshot": {
+      "number": "1",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Introduction",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#introduction"
+    }
+  },
+  "#issuance-date": {
+    "current": {
+      "number": "A.5",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Issuance Date",
+      "url": "https://w3c.github.io/vc-data-model/#issuance-date"
+    },
+    "snapshot": {
+      "number": "A.5",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Issuance Date",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#issuance-date"
+    }
+  },
+  "#issuer": {
+    "current": {
+      "number": "4.7",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Issuer",
+      "url": "https://w3c.github.io/vc-data-model/#issuer"
+    },
+    "snapshot": {
+      "number": "4.7",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Issuer",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#issuer"
+    }
+  },
+  "#issuer-0": {
+    "current": {
+      "number": "A.3",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Issuer",
+      "url": "https://w3c.github.io/vc-data-model/#issuer-0"
+    },
+    "snapshot": {
+      "number": "A.3",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Issuer",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#issuer-0"
+    }
+  },
+  "#issuer-cooperation-impacts-on-privacy": {
+    "current": {
+      "number": "8.21",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Issuer Cooperation Impacts on Privacy",
+      "url": "https://w3c.github.io/vc-data-model/#issuer-cooperation-impacts-on-privacy"
+    },
+    "snapshot": {
+      "number": "8.21",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Issuer Cooperation Impacts on Privacy",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#issuer-cooperation-impacts-on-privacy"
+    }
+  },
+  "#json-ld": {
+    "current": {
+      "number": "6.1",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "JSON-LD",
+      "url": "https://w3c.github.io/vc-data-model/#json-ld"
+    },
+    "snapshot": {
+      "number": "6.1",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "JSON-LD",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#json-ld"
+    }
+  },
+  "#key-management": {
+    "current": {
+      "number": "9.2",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Key Management",
+      "url": "https://w3c.github.io/vc-data-model/#key-management"
+    },
+    "snapshot": {
+      "number": "9.2",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Key Management",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#key-management"
+    }
+  },
+  "#language-and-base-direction": {
+    "current": {
+      "number": "11.1",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Language and Base Direction",
+      "url": "https://w3c.github.io/vc-data-model/#language-and-base-direction"
+    },
+    "snapshot": {
+      "number": "11.1",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Language and Base Direction",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#language-and-base-direction"
+    }
+  },
+  "#legal-processes": {
+    "current": {
+      "number": "8.15",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Legal Processes",
+      "url": "https://w3c.github.io/vc-data-model/#legal-processes"
+    },
+    "snapshot": {
+      "number": "8.15",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Legal Processes",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#legal-processes"
+    }
+  },
+  "#lists-and-arrays": {
+    "current": {
+      "number": "",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Lists and Arrays",
+      "url": "https://w3c.github.io/vc-data-model/#lists-and-arrays"
+    },
+    "snapshot": {
+      "number": "",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Lists and Arrays",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#lists-and-arrays"
+    }
+  },
+  "#man-in-the-middle-mitm-attack": {
+    "current": {
+      "number": "9.5.1",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Man-in-the-Middle (MITM) Attack",
+      "url": "https://w3c.github.io/vc-data-model/#man-in-the-middle-mitm-attack"
+    },
+    "snapshot": {
+      "number": "9.5.1",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Man-in-the-Middle (MITM) Attack",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#man-in-the-middle-mitm-attack"
+    }
+  },
+  "#man-in-the-middle-mitm-replay-and-cloning-attacks": {
+    "current": {
+      "number": "9.5",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Man-in-the-Middle (MITM), Replay, and Cloning Attacks",
+      "url": "https://w3c.github.io/vc-data-model/#man-in-the-middle-mitm-replay-and-cloning-attacks"
+    },
+    "snapshot": {
+      "number": "9.5",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Man-in-the-Middle (MITM), Replay, and Cloning Attacks",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#man-in-the-middle-mitm-replay-and-cloning-attacks"
+    }
+  },
+  "#media-type-precision": {
+    "current": {
+      "number": "",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Media Type Precision",
+      "url": "https://w3c.github.io/vc-data-model/#media-type-precision"
+    },
+    "snapshot": {
+      "number": "",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Media Type Precision",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#media-type-precision"
+    }
+  },
+  "#media-types": {
+    "current": {
+      "number": "6.2",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Media Types",
+      "url": "https://w3c.github.io/vc-data-model/#media-types"
+    },
+    "snapshot": {
+      "number": "6.2",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Media Types",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#media-types"
+    }
+  },
+  "#metadata-based-correlation": {
+    "current": {
+      "number": "8.6",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Metadata-based Correlation",
+      "url": "https://w3c.github.io/vc-data-model/#metadata-based-correlation"
+    },
+    "snapshot": {
+      "number": "8.6",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Metadata-based Correlation",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#metadata-based-correlation"
+    }
+  },
+  "#names-and-descriptions": {
+    "current": {
+      "number": "4.6",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Names and Descriptions",
+      "url": "https://w3c.github.io/vc-data-model/#names-and-descriptions"
+    },
+    "snapshot": {
+      "number": "4.6",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Names and Descriptions",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#names-and-descriptions"
+    }
+  },
+  "#normative-references": {
+    "current": {
+      "number": "G.1",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Normative references",
+      "url": "https://w3c.github.io/vc-data-model/#normative-references"
+    },
+    "snapshot": {
+      "number": "G.1",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Normative references",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#normative-references"
+    }
+  },
+  "#notable-json-ld-features": {
+    "current": {
+      "number": "",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Notable JSON-LD Features",
+      "url": "https://w3c.github.io/vc-data-model/#notable-json-ld-features"
+    },
+    "snapshot": {
+      "number": "",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Notable JSON-LD Features",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#notable-json-ld-features"
+    }
+  },
+  "#patterns-of-use": {
+    "current": {
+      "number": "8.14",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Patterns of Use",
+      "url": "https://w3c.github.io/vc-data-model/#patterns-of-use"
+    },
+    "snapshot": {
+      "number": "8.14",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Patterns of Use",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#patterns-of-use"
+    }
+  },
+  "#personally-identifiable-information": {
+    "current": {
+      "number": "8.3",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Personally Identifiable Information",
+      "url": "https://w3c.github.io/vc-data-model/#personally-identifiable-information"
+    },
+    "snapshot": {
+      "number": "8.3",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Personally Identifiable Information",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#personally-identifiable-information"
+    }
+  },
+  "#prefer-single-use-credentials": {
+    "current": {
+      "number": "8.19",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Prefer Single-Use Credentials",
+      "url": "https://w3c.github.io/vc-data-model/#prefer-single-use-credentials"
+    },
+    "snapshot": {
+      "number": "8.19",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Prefer Single-Use Credentials",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#prefer-single-use-credentials"
+    }
+  },
+  "#presentations": {
+    "current": {
+      "number": "3.3",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Presentations",
+      "url": "https://w3c.github.io/vc-data-model/#presentations"
+    },
+    "snapshot": {
+      "number": "3.3",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Presentations",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#presentations"
+    }
+  },
+  "#presentations-including-holder-claims": {
+    "current": {
+      "number": "",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Presentations Including Holder Claims",
+      "url": "https://w3c.github.io/vc-data-model/#presentations-including-holder-claims"
+    },
+    "snapshot": {
+      "number": "",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Presentations Including Holder Claims",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#presentations-including-holder-claims"
+    }
+  },
+  "#presentations-using-derived-credentials": {
+    "current": {
+      "number": "",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Presentations Using Derived Credentials",
+      "url": "https://w3c.github.io/vc-data-model/#presentations-using-derived-credentials"
+    },
+    "snapshot": {
+      "number": "",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Presentations Using Derived Credentials",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#presentations-using-derived-credentials"
+    }
+  },
+  "#privacy-considerations": {
+    "current": {
+      "number": "8",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Privacy Considerations",
+      "url": "https://w3c.github.io/vc-data-model/#privacy-considerations"
+    },
+    "snapshot": {
+      "number": "8",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Privacy Considerations",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#privacy-considerations"
+    }
+  },
+  "#private-browsing": {
+    "current": {
+      "number": "8.20",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Private Browsing",
+      "url": "https://w3c.github.io/vc-data-model/#private-browsing"
+    },
+    "snapshot": {
+      "number": "8.20",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Private Browsing",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#private-browsing"
+    }
+  },
+  "#problem-details": {
+    "current": {
+      "number": "7.2",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Problem Details",
+      "url": "https://w3c.github.io/vc-data-model/#problem-details"
+    },
+    "snapshot": {
+      "number": "7.2",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Problem Details",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#problem-details"
+    }
+  },
+  "#proofs-signatures": {
+    "current": {
+      "number": "A.6",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Proofs (Signatures)",
+      "url": "https://w3c.github.io/vc-data-model/#proofs-signatures"
+    },
+    "snapshot": {
+      "number": "A.6",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Proofs (Signatures)",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#proofs-signatures"
+    }
+  },
+  "#providing-default-language-and-direction": {
+    "current": {
+      "number": "11.2",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Providing Default Language and Direction",
+      "url": "https://w3c.github.io/vc-data-model/#providing-default-language-and-direction"
+    },
+    "snapshot": {
+      "number": "11.2",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Providing Default Language and Direction",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#providing-default-language-and-direction"
+    }
+  },
+  "#references": {
+    "current": {
+      "number": "G",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "References",
+      "url": "https://w3c.github.io/vc-data-model/#references"
+    },
+    "snapshot": {
+      "number": "G",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "References",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#references"
+    }
+  },
+  "#refreshing": {
+    "current": {
+      "number": "5.4",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Refreshing",
+      "url": "https://w3c.github.io/vc-data-model/#refreshing"
+    },
+    "snapshot": {
+      "number": "5.4",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Refreshing",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#refreshing"
+    }
+  },
+  "#replay-attack": {
+    "current": {
+      "number": "9.5.2",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Replay Attack",
+      "url": "https://w3c.github.io/vc-data-model/#replay-attack"
+    },
+    "snapshot": {
+      "number": "9.5.2",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Replay Attack",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#replay-attack"
+    }
+  },
+  "#representing-time": {
+    "current": {
+      "number": "5.8",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Representing Time",
+      "url": "https://w3c.github.io/vc-data-model/#representing-time"
+    },
+    "snapshot": {
+      "number": "5.8",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Representing Time",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#representing-time"
+    }
+  },
+  "#reserved-extension-points": {
+    "current": {
+      "number": "5.10",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Reserved Extension Points",
+      "url": "https://w3c.github.io/vc-data-model/#reserved-extension-points"
+    },
+    "snapshot": {
+      "number": "5.10",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Reserved Extension Points",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#reserved-extension-points"
+    }
+  },
+  "#restrictions-on-json-ld": {
+    "current": {
+      "number": "",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Restrictions on JSON-LD",
+      "url": "https://w3c.github.io/vc-data-model/#restrictions-on-json-ld"
+    },
+    "snapshot": {
+      "number": "",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Restrictions on JSON-LD",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#restrictions-on-json-ld"
+    }
+  },
+  "#revision-history": {
+    "current": {
+      "number": "E",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Revision History",
+      "url": "https://w3c.github.io/vc-data-model/#revision-history"
+    },
+    "snapshot": {
+      "number": "E",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Revision History",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#revision-history"
+    }
+  },
+  "#schema": {
+    "current": {
+      "number": "A.9",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Schema",
+      "url": "https://w3c.github.io/vc-data-model/#schema"
+    },
+    "snapshot": {
+      "number": "A.9",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Schema",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#schema"
+    }
+  },
+  "#sd-jwt-claim-0C-ydmmA2uwERVMudDWNAgMMPvdTX5dy5ELvd0viVAk": {
+    "current": {
+      "number": "",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Claim: id",
+      "url": "https://w3c.github.io/vc-data-model/#sd-jwt-claim-0C-ydmmA2uwERVMudDWNAgMMPvdTX5dy5ELvd0viVAk"
+    }
+  },
+  "#sd-jwt-claim-1E-UBA2k-q5TH_e0MWjAiZxTBtaPMzrKQK1rSHYPQGw": {
+    "current": {
+      "number": "",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Claim: type",
+      "url": "https://w3c.github.io/vc-data-model/#sd-jwt-claim-1E-UBA2k-q5TH_e0MWjAiZxTBtaPMzrKQK1rSHYPQGw"
+    }
+  },
+  "#sd-jwt-claim-1bl-j2EHU89vSUfNKoDiKBz9GENhGU09AMo_pJVgl54": {
+    "snapshot": {
+      "number": "",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Claim: id",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#sd-jwt-claim-1bl-j2EHU89vSUfNKoDiKBz9GENhGU09AMo_pJVgl54"
+    }
+  },
+  "#sd-jwt-claim-2hhnawrN1I0fMjXghhaDVMKAt6E1ns9SbFqFHBrmdzQ": {
+    "current": {
+      "number": "",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Claim: id",
+      "url": "https://w3c.github.io/vc-data-model/#sd-jwt-claim-2hhnawrN1I0fMjXghhaDVMKAt6E1ns9SbFqFHBrmdzQ"
+    }
+  },
+  "#sd-jwt-claim-3w6xdSbehC0uPSfSWRhrBcAOaBqdByVVxnHRuxWlQe0": {
+    "current": {
+      "number": "",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Claim: id",
+      "url": "https://w3c.github.io/vc-data-model/#sd-jwt-claim-3w6xdSbehC0uPSfSWRhrBcAOaBqdByVVxnHRuxWlQe0"
+    }
+  },
+  "#sd-jwt-claim-47ccI82YsvYACUi7JnuNzLTBA5MBQ4iR0xkkUwLQPzg": {
+    "snapshot": {
+      "number": "",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Claim: type",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#sd-jwt-claim-47ccI82YsvYACUi7JnuNzLTBA5MBQ4iR0xkkUwLQPzg"
+    }
+  },
+  "#sd-jwt-claim-4GEnuyu8qmnV_uLU4mCCTxzSkytZdpzlGOWUAY_8st4": {
+    "snapshot": {
+      "number": "",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Claim: type",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#sd-jwt-claim-4GEnuyu8qmnV_uLU4mCCTxzSkytZdpzlGOWUAY_8st4"
+    }
+  },
+  "#sd-jwt-claim-771gBOijEgDTqsdTA33rqVGKsCQDLs3QclShKgTYNIk": {
+    "snapshot": {
+      "number": "",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Claim: id",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#sd-jwt-claim-771gBOijEgDTqsdTA33rqVGKsCQDLs3QclShKgTYNIk"
+    }
+  },
+  "#sd-jwt-claim-7nIEmVnFyDHeVzWbqW62NhESPdmfqgz2BXEAHQtz8HY": {
+    "snapshot": {
+      "number": "",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Claim: id",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#sd-jwt-claim-7nIEmVnFyDHeVzWbqW62NhESPdmfqgz2BXEAHQtz8HY"
+    }
+  },
+  "#sd-jwt-claim-8e16HtOP7Mr7qmzhOI6-n4AVkbAcA6JTeJKnm4oZpAw": {
+    "current": {
+      "number": "",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Claim: type",
+      "url": "https://w3c.github.io/vc-data-model/#sd-jwt-claim-8e16HtOP7Mr7qmzhOI6-n4AVkbAcA6JTeJKnm4oZpAw"
+    }
+  },
+  "#sd-jwt-claim-8hb-lMkQmtOrq75NrS-z0SyRxTAdWgma5aVaDHnhvNU": {
+    "current": {
+      "number": "",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Claim: id",
+      "url": "https://w3c.github.io/vc-data-model/#sd-jwt-claim-8hb-lMkQmtOrq75NrS-z0SyRxTAdWgma5aVaDHnhvNU"
+    }
+  },
+  "#sd-jwt-claim-9nvzdCVL1Ghqs-HMuKbdJ2ov72Z9qd1j2t9M3FQz3U4": {
+    "current": {
+      "number": "",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Claim: id",
+      "url": "https://w3c.github.io/vc-data-model/#sd-jwt-claim-9nvzdCVL1Ghqs-HMuKbdJ2ov72Z9qd1j2t9M3FQz3U4"
+    }
+  },
+  "#sd-jwt-claim-9xiOfXgEF-f4KUwM2mc0wQZpbeL5JDXfrgcoKwnwqyM": {
+    "snapshot": {
+      "number": "",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Claim: id",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#sd-jwt-claim-9xiOfXgEF-f4KUwM2mc0wQZpbeL5JDXfrgcoKwnwqyM"
+    }
+  },
+  "#sd-jwt-claim-Aq9Qp3eMMKDcxZWdNVrgj6JgSk6k2mgfIadPFV9XQRo": {
+    "current": {
+      "number": "",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Claim: type",
+      "url": "https://w3c.github.io/vc-data-model/#sd-jwt-claim-Aq9Qp3eMMKDcxZWdNVrgj6JgSk6k2mgfIadPFV9XQRo"
+    }
+  },
+  "#sd-jwt-claim-BwA4OcLF9h5hENx2E78Dnwg03BpLsQSwQ93JWCgU2RQ": {
+    "snapshot": {
+      "number": "",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Claim: type",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#sd-jwt-claim-BwA4OcLF9h5hENx2E78Dnwg03BpLsQSwQ93JWCgU2RQ"
+    }
+  },
+  "#sd-jwt-claim-CAVL38zhMKRnUpyFcEGqu8IyvVOUQtTA6UisVRC7jF8": {
+    "snapshot": {
+      "number": "",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Claim: id",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#sd-jwt-claim-CAVL38zhMKRnUpyFcEGqu8IyvVOUQtTA6UisVRC7jF8"
+    }
+  },
+  "#sd-jwt-claim-CGLwf4hvpCINJaIsl_SvK1--RwLLCiNp-iqBapnQNSE": {
+    "snapshot": {
+      "number": "",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Claim: type",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#sd-jwt-claim-CGLwf4hvpCINJaIsl_SvK1--RwLLCiNp-iqBapnQNSE"
+    }
+  },
+  "#sd-jwt-claim-D2deRCwP5jNb9QXzn6op2Ckr1-fLPNIEHGJSjOwk6Og": {
+    "snapshot": {
+      "number": "",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Claim: type",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#sd-jwt-claim-D2deRCwP5jNb9QXzn6op2Ckr1-fLPNIEHGJSjOwk6Og"
+    }
+  },
+  "#sd-jwt-claim-DjmJID4MtAAgE7zhwSMLKZmMfzFXKlayG1ja0QuISrc": {
+    "snapshot": {
+      "number": "",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Claim: type",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#sd-jwt-claim-DjmJID4MtAAgE7zhwSMLKZmMfzFXKlayG1ja0QuISrc"
+    }
+  },
+  "#sd-jwt-claim-EVeXPqEw2pxFvlhTUgFnITx1N5DP8Qv5QZFvXKHepHY": {
+    "current": {
+      "number": "",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Claim: type",
+      "url": "https://w3c.github.io/vc-data-model/#sd-jwt-claim-EVeXPqEw2pxFvlhTUgFnITx1N5DP8Qv5QZFvXKHepHY"
+    }
+  },
+  "#sd-jwt-claim-G29zIA-xnDL7pBrEWP-UYjmIa7msKnHebddg6J2Cjm0": {
+    "current": {
+      "number": "",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Claim: type",
+      "url": "https://w3c.github.io/vc-data-model/#sd-jwt-claim-G29zIA-xnDL7pBrEWP-UYjmIa7msKnHebddg6J2Cjm0"
+    }
+  },
+  "#sd-jwt-claim-Inu5yIBh6wkSwjGMis5EjYbTxWRzyCd7nlswZXdap8Q": {
+    "snapshot": {
+      "number": "",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Claim: id",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#sd-jwt-claim-Inu5yIBh6wkSwjGMis5EjYbTxWRzyCd7nlswZXdap8Q"
+    }
+  },
+  "#sd-jwt-claim-LAjw2RCWNMtSPuv2bDaFeMDzV3pHBMOWsHYmWKx-pCE": {
+    "current": {
+      "number": "",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Claim: type",
+      "url": "https://w3c.github.io/vc-data-model/#sd-jwt-claim-LAjw2RCWNMtSPuv2bDaFeMDzV3pHBMOWsHYmWKx-pCE"
+    }
+  },
+  "#sd-jwt-claim-LhTRnyMaSn6Ezofvom21LhlkFnQuwPD2IwmNnDQ79Ws": {
+    "current": {
+      "number": "",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Claim: type",
+      "url": "https://w3c.github.io/vc-data-model/#sd-jwt-claim-LhTRnyMaSn6Ezofvom21LhlkFnQuwPD2IwmNnDQ79Ws"
+    }
+  },
+  "#sd-jwt-claim-M1_GKkkYtCXlkUPKTcTxYY5RD6yGMaN8J5azpZwnkMQ": {
+    "snapshot": {
+      "number": "",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Claim: id",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#sd-jwt-claim-M1_GKkkYtCXlkUPKTcTxYY5RD6yGMaN8J5azpZwnkMQ"
+    }
+  },
+  "#sd-jwt-claim-Mkqc-8fRAEblYDwvixj2nvy-mC8LmJDMtthuZM2zcjQ": {
+    "snapshot": {
+      "number": "",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Claim: id",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#sd-jwt-claim-Mkqc-8fRAEblYDwvixj2nvy-mC8LmJDMtthuZM2zcjQ"
+    }
+  },
+  "#sd-jwt-claim-N-f1uVgZQKV4Le-7x1qTAfRdLcLg46D0bS5uMvhQJp0": {
+    "snapshot": {
+      "number": "",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Claim: id",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#sd-jwt-claim-N-f1uVgZQKV4Le-7x1qTAfRdLcLg46D0bS5uMvhQJp0"
+    }
+  },
+  "#sd-jwt-claim-PyuuwcviPJjcawO1d7DlwH-Ai2_p-OAMpyCVLfD0wxY": {
+    "snapshot": {
+      "number": "",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Claim: id",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#sd-jwt-claim-PyuuwcviPJjcawO1d7DlwH-Ai2_p-OAMpyCVLfD0wxY"
+    }
+  },
+  "#sd-jwt-claim-QANDpa9hdOibhmydQhrGI4mUtiEblggw17ndfq4BA4o": {
+    "current": {
+      "number": "",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Claim: id",
+      "url": "https://w3c.github.io/vc-data-model/#sd-jwt-claim-QANDpa9hdOibhmydQhrGI4mUtiEblggw17ndfq4BA4o"
+    }
+  },
+  "#sd-jwt-claim-Rgn33AhH8kLGaI1IhZkykI1vUbop1QciMBsexmwrU6c": {
+    "snapshot": {
+      "number": "",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Claim: id",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#sd-jwt-claim-Rgn33AhH8kLGaI1IhZkykI1vUbop1QciMBsexmwrU6c"
+    }
+  },
+  "#sd-jwt-claim-Rx89GZa-Wvvc5LgpDfqBTAx7kP27w6TSVM-OAl8JKxg": {
+    "current": {
+      "number": "",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Claim: type",
+      "url": "https://w3c.github.io/vc-data-model/#sd-jwt-claim-Rx89GZa-Wvvc5LgpDfqBTAx7kP27w6TSVM-OAl8JKxg"
+    }
+  },
+  "#sd-jwt-claim-SFDgjwDkLMyQM-3ra8HPI7S4wAREysvOtLjFCQ3MH7E": {
+    "current": {
+      "number": "",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Claim: type",
+      "url": "https://w3c.github.io/vc-data-model/#sd-jwt-claim-SFDgjwDkLMyQM-3ra8HPI7S4wAREysvOtLjFCQ3MH7E"
+    }
+  },
+  "#sd-jwt-claim-UbZDRUaRyQ77zMrNADH22gXy3WkZrSu5XA36ZrlWwmA": {
+    "current": {
+      "number": "",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Claim: id",
+      "url": "https://w3c.github.io/vc-data-model/#sd-jwt-claim-UbZDRUaRyQ77zMrNADH22gXy3WkZrSu5XA36ZrlWwmA"
+    }
+  },
+  "#sd-jwt-claim-WCogtZTYEhAB6mpaQaA6KhQTiStPbCL6GbrT9__CHf0": {
+    "current": {
+      "number": "",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Claim: type",
+      "url": "https://w3c.github.io/vc-data-model/#sd-jwt-claim-WCogtZTYEhAB6mpaQaA6KhQTiStPbCL6GbrT9__CHf0"
+    }
+  },
+  "#sd-jwt-claim-Y3d2YLHzPGdteWyH5Bg4Zke8J7ygbvHpnacpWFGhX2Q": {
+    "current": {
+      "number": "",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Claim: id",
+      "url": "https://w3c.github.io/vc-data-model/#sd-jwt-claim-Y3d2YLHzPGdteWyH5Bg4Zke8J7ygbvHpnacpWFGhX2Q"
+    }
+  },
+  "#sd-jwt-claim-YpM2OfnHSw9Kd5S6-nTgqyrWRPsjfK8joIoof5gXb7E": {
+    "current": {
+      "number": "",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Claim: type",
+      "url": "https://w3c.github.io/vc-data-model/#sd-jwt-claim-YpM2OfnHSw9Kd5S6-nTgqyrWRPsjfK8joIoof5gXb7E"
+    }
+  },
+  "#sd-jwt-claim-ZKzDsi-jlcAdZXvGuiaSF7IKTHBr2KCCjPTFTJRWEHA": {
+    "snapshot": {
+      "number": "",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Claim: type",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#sd-jwt-claim-ZKzDsi-jlcAdZXvGuiaSF7IKTHBr2KCCjPTFTJRWEHA"
+    }
+  },
+  "#sd-jwt-claim-akFEahTaoDLMwevcJwsTsrb4ZZYg3yVQgSUZsLUgEsA": {
+    "current": {
+      "number": "",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Claim: id",
+      "url": "https://w3c.github.io/vc-data-model/#sd-jwt-claim-akFEahTaoDLMwevcJwsTsrb4ZZYg3yVQgSUZsLUgEsA"
+    }
+  },
+  "#sd-jwt-claim-co6A0B-MhqqPVdP5j1dhWYiRG2Swo_2JdEffv5ly1Ik": {
+    "snapshot": {
+      "number": "",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Claim: id",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#sd-jwt-claim-co6A0B-MhqqPVdP5j1dhWYiRG2Swo_2JdEffv5ly1Ik"
+    }
+  },
+  "#sd-jwt-claim-eYL7owisslaDtH4__OZqaeHE6kVcx5NXMtMJSHp3KvQ": {
+    "current": {
+      "number": "",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Claim: id",
+      "url": "https://w3c.github.io/vc-data-model/#sd-jwt-claim-eYL7owisslaDtH4__OZqaeHE6kVcx5NXMtMJSHp3KvQ"
+    }
+  },
+  "#sd-jwt-claim-fJWAUJWdXgog5w05T_-QB40k69_hy4btPlaGG9tyIe4": {
+    "current": {
+      "number": "",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Claim: id",
+      "url": "https://w3c.github.io/vc-data-model/#sd-jwt-claim-fJWAUJWdXgog5w05T_-QB40k69_hy4btPlaGG9tyIe4"
+    }
+  },
+  "#sd-jwt-claim-gQ9v3575ULPZjGGR0Zpxg5ZJoDkfRxWf5QZADk6rTfQ": {
+    "current": {
+      "number": "",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Claim: id",
+      "url": "https://w3c.github.io/vc-data-model/#sd-jwt-claim-gQ9v3575ULPZjGGR0Zpxg5ZJoDkfRxWf5QZADk6rTfQ"
+    }
+  },
+  "#sd-jwt-claim-guvNOIkpvReYS9Bt7vtgfk4tAJYaSmGUTKGqNHC5w0Q": {
+    "snapshot": {
+      "number": "",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Claim: id",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#sd-jwt-claim-guvNOIkpvReYS9Bt7vtgfk4tAJYaSmGUTKGqNHC5w0Q"
+    }
+  },
+  "#sd-jwt-claim-hSfKNCPAcvT3mZZqxIllLo1VANDMR4HwKpU9Zx-ti_c": {
+    "current": {
+      "number": "",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Claim: id",
+      "url": "https://w3c.github.io/vc-data-model/#sd-jwt-claim-hSfKNCPAcvT3mZZqxIllLo1VANDMR4HwKpU9Zx-ti_c"
+    }
+  },
+  "#sd-jwt-claim-hg-OYdTFwZWIXgM_HWOOothEN21OtB_eant-P26g72Q": {
+    "snapshot": {
+      "number": "",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Claim: id",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#sd-jwt-claim-hg-OYdTFwZWIXgM_HWOOothEN21OtB_eant-P26g72Q"
+    }
+  },
+  "#sd-jwt-claim-hhW6ok3lPFDYnihlepueELHTjhubwVr2OOIF5PAmLfI": {
+    "current": {
+      "number": "",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Claim: id",
+      "url": "https://w3c.github.io/vc-data-model/#sd-jwt-claim-hhW6ok3lPFDYnihlepueELHTjhubwVr2OOIF5PAmLfI"
+    }
+  },
+  "#sd-jwt-claim-iOFjwMQej4muZ67gSOV1ht4xsB2FbfI1UkmcO44L-gU": {
+    "snapshot": {
+      "number": "",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Claim: type",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#sd-jwt-claim-iOFjwMQej4muZ67gSOV1ht4xsB2FbfI1UkmcO44L-gU"
+    }
+  },
+  "#sd-jwt-claim-irbHexXxu5Wkp3BiONJwe9iNy9eYpZb9qjHqnUsibK0": {
+    "current": {
+      "number": "",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Claim: id",
+      "url": "https://w3c.github.io/vc-data-model/#sd-jwt-claim-irbHexXxu5Wkp3BiONJwe9iNy9eYpZb9qjHqnUsibK0"
+    }
+  },
+  "#sd-jwt-claim-jZmDgT46TQFFxd0CMBPiWVlRSegMPaEkfn77lJmz9y8": {
+    "current": {
+      "number": "",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Claim: type",
+      "url": "https://w3c.github.io/vc-data-model/#sd-jwt-claim-jZmDgT46TQFFxd0CMBPiWVlRSegMPaEkfn77lJmz9y8"
+    }
+  },
+  "#sd-jwt-claim-jekXii9ILf5nj1psJYaY_aif-XVfyhpuYzKlszni9sQ": {
+    "current": {
+      "number": "",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Claim: id",
+      "url": "https://w3c.github.io/vc-data-model/#sd-jwt-claim-jekXii9ILf5nj1psJYaY_aif-XVfyhpuYzKlszni9sQ"
+    }
+  },
+  "#sd-jwt-claim-lYIf6J9YkniuAHpkXOuxDPUYJLbk39jj_mbLqgu2A0I": {
+    "snapshot": {
+      "number": "",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Claim: id",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#sd-jwt-claim-lYIf6J9YkniuAHpkXOuxDPUYJLbk39jj_mbLqgu2A0I"
+    }
+  },
+  "#sd-jwt-claim-lyrdnHptGZ9vaMCId8pQQ_cI3WMpcpjH3nZQ0Y-QbGo": {
+    "snapshot": {
+      "number": "",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Claim: type",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#sd-jwt-claim-lyrdnHptGZ9vaMCId8pQQ_cI3WMpcpjH3nZQ0Y-QbGo"
+    }
+  },
+  "#sd-jwt-claim-mKP4GocLTeM-O5DZHj0tOr90nv8UGRShT2yLnfZZ_nI": {
+    "snapshot": {
+      "number": "",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Claim: type",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#sd-jwt-claim-mKP4GocLTeM-O5DZHj0tOr90nv8UGRShT2yLnfZZ_nI"
+    }
+  },
+  "#sd-jwt-claim-mkX530cv1FA6rOO77ORy4KPvHsSv7ND0iizvM8q11As": {
+    "current": {
+      "number": "",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Claim: id",
+      "url": "https://w3c.github.io/vc-data-model/#sd-jwt-claim-mkX530cv1FA6rOO77ORy4KPvHsSv7ND0iizvM8q11As"
+    }
+  },
+  "#sd-jwt-claim-n8CiK6gHwbeG-VswqEw02-kmLA8a3ODwWRpeL2nQuKI": {
+    "snapshot": {
+      "number": "",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Claim: id",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#sd-jwt-claim-n8CiK6gHwbeG-VswqEw02-kmLA8a3ODwWRpeL2nQuKI"
+    }
+  },
+  "#sd-jwt-claim-ptfkGI6bjzpsVnl0OX-L1MgSK_Pb8q1fBfUS9eTtxyI": {
+    "snapshot": {
+      "number": "",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Claim: id",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#sd-jwt-claim-ptfkGI6bjzpsVnl0OX-L1MgSK_Pb8q1fBfUS9eTtxyI"
+    }
+  },
+  "#sd-jwt-claim-pw5lmYI2BFcg-V6NYq6eX10kBltpoc8ka28yFWjB51M": {
+    "snapshot": {
+      "number": "",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Claim: id",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#sd-jwt-claim-pw5lmYI2BFcg-V6NYq6eX10kBltpoc8ka28yFWjB51M"
+    }
+  },
+  "#sd-jwt-claim-r7k9AFlBoXWvXuwZxEhyKCobcKsCOLtDjALyh-ReVRI": {
+    "snapshot": {
+      "number": "",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Claim: id",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#sd-jwt-claim-r7k9AFlBoXWvXuwZxEhyKCobcKsCOLtDjALyh-ReVRI"
+    }
+  },
+  "#sd-jwt-claim-rAkEYqI-TGcUKLQAIvv1S4rOeTWlGHCCuGrNjtAG3Ho": {
+    "snapshot": {
+      "number": "",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Claim: type",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#sd-jwt-claim-rAkEYqI-TGcUKLQAIvv1S4rOeTWlGHCCuGrNjtAG3Ho"
+    }
+  },
+  "#sd-jwt-claim-raY3nLuKhEzRl9U_asBcpkCwf5u7P4yJj2oFp0WcTAA": {
+    "current": {
+      "number": "",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Claim: type",
+      "url": "https://w3c.github.io/vc-data-model/#sd-jwt-claim-raY3nLuKhEzRl9U_asBcpkCwf5u7P4yJj2oFp0WcTAA"
+    }
+  },
+  "#sd-jwt-claim-rc1Rr2essfo0mQkOpjGXjJgkL0oUS_6XLmLBEiZ6X0E": {
+    "current": {
+      "number": "",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Claim: type",
+      "url": "https://w3c.github.io/vc-data-model/#sd-jwt-claim-rc1Rr2essfo0mQkOpjGXjJgkL0oUS_6XLmLBEiZ6X0E"
+    }
+  },
+  "#sd-jwt-claim-rhcz8rNY31o6Pi9sjNXboZzL4PgaBLVGI-44UULqdB0": {
+    "snapshot": {
+      "number": "",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Claim: type",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#sd-jwt-claim-rhcz8rNY31o6Pi9sjNXboZzL4PgaBLVGI-44UULqdB0"
+    }
+  },
+  "#sd-jwt-claim-rzCvuIJ4tBowoCtxneoGRKiLSDB_0H6p4q7q6686bYs": {
+    "current": {
+      "number": "",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Claim: type",
+      "url": "https://w3c.github.io/vc-data-model/#sd-jwt-claim-rzCvuIJ4tBowoCtxneoGRKiLSDB_0H6p4q7q6686bYs"
+    }
+  },
+  "#sd-jwt-claim-sgBI9P1tWojMy3vSH7eeZ0tyjXf2Rh1S41lMIYJaCTQ": {
+    "snapshot": {
+      "number": "",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Claim: type",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#sd-jwt-claim-sgBI9P1tWojMy3vSH7eeZ0tyjXf2Rh1S41lMIYJaCTQ"
+    }
+  },
+  "#sd-jwt-claim-t-7VPQ8jqAMa4FqXz43iCXWdD_xf2YFBmJJStWWM3rU": {
+    "snapshot": {
+      "number": "",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Claim: type",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#sd-jwt-claim-t-7VPQ8jqAMa4FqXz43iCXWdD_xf2YFBmJJStWWM3rU"
+    }
+  },
+  "#sd-jwt-claim-tVq9Q3Bey347G3f4MXN7uEJ_ouNmrDF4Ij2-67-Ufkk": {
+    "current": {
+      "number": "",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Claim: type",
+      "url": "https://w3c.github.io/vc-data-model/#sd-jwt-claim-tVq9Q3Bey347G3f4MXN7uEJ_ouNmrDF4Ij2-67-Ufkk"
+    }
+  },
+  "#sd-jwt-claim-tZAbVaXtLIOcoj9RJmZlcqbfqzH-SpYM0ykZYSgnXSU": {
+    "current": {
+      "number": "",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Claim: id",
+      "url": "https://w3c.github.io/vc-data-model/#sd-jwt-claim-tZAbVaXtLIOcoj9RJmZlcqbfqzH-SpYM0ykZYSgnXSU"
+    }
+  },
+  "#sd-jwt-claim-v70ZziWsR54Vr6CWIauVRmNLdSghMZm86Cf5O_0erMU": {
+    "current": {
+      "number": "",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Claim: id",
+      "url": "https://w3c.github.io/vc-data-model/#sd-jwt-claim-v70ZziWsR54Vr6CWIauVRmNLdSghMZm86Cf5O_0erMU"
+    }
+  },
+  "#sd-jwt-claim-vbkiNyRCCbs9-r2bl2Wvca57_I2feZ_vIkaeTBBRibY": {
+    "snapshot": {
+      "number": "",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Claim: type",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#sd-jwt-claim-vbkiNyRCCbs9-r2bl2Wvca57_I2feZ_vIkaeTBBRibY"
+    }
+  },
+  "#sd-jwt-claim-wrQ8_y4EwITwwAQwKhkWwcT-FaIAWjV0GiM8qs5JUdc": {
+    "current": {
+      "number": "",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Claim: type",
+      "url": "https://w3c.github.io/vc-data-model/#sd-jwt-claim-wrQ8_y4EwITwwAQwKhkWwcT-FaIAWjV0GiM8qs5JUdc"
+    }
+  },
+  "#sd-jwt-claim-yIGdad0aQMCCNf6JKeOCzl5mt_6ODssKKJs-jkrPLxE": {
+    "snapshot": {
+      "number": "",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Claim: type",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#sd-jwt-claim-yIGdad0aQMCCNf6JKeOCzl5mt_6ODssKKJs-jkrPLxE"
+    }
+  },
+  "#sd-jwt-claim-zwA6iSmQNZnV2M9wz3uEi2QZZ9z-0nHoPKCTFLs2thk": {
+    "snapshot": {
+      "number": "",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Claim: type",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#sd-jwt-claim-zwA6iSmQNZnV2M9wz3uEi2QZZ9z-0nHoPKCTFLs2thk"
+    }
+  },
+  "#securing-mechanism-specifications": {
+    "current": {
+      "number": "5.13",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Securing Mechanism Specifications",
+      "url": "https://w3c.github.io/vc-data-model/#securing-mechanism-specifications"
+    },
+    "snapshot": {
+      "number": "5.13",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Securing Mechanism Specifications",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#securing-mechanism-specifications"
+    }
+  },
+  "#securing-mechanisms": {
+    "current": {
+      "number": "4.12",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Securing Mechanisms",
+      "url": "https://w3c.github.io/vc-data-model/#securing-mechanisms"
+    },
+    "snapshot": {
+      "number": "4.12",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Securing Mechanisms",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#securing-mechanisms"
+    }
+  },
+  "#security-considerations": {
+    "current": {
+      "number": "9",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Security Considerations",
+      "url": "https://w3c.github.io/vc-data-model/#security-considerations"
+    },
+    "snapshot": {
+      "number": "9",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Security Considerations",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#security-considerations"
+    }
+  },
+  "#semantic-interoperability": {
+    "current": {
+      "number": "",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Semantic Interoperability",
+      "url": "https://w3c.github.io/vc-data-model/#semantic-interoperability"
+    },
+    "snapshot": {
+      "number": "",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Semantic Interoperability",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#semantic-interoperability"
+    }
+  },
+  "#sharing-information-with-the-wrong-party": {
+    "current": {
+      "number": "8.16",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Sharing Information with the Wrong Party",
+      "url": "https://w3c.github.io/vc-data-model/#sharing-information-with-the-wrong-party"
+    },
+    "snapshot": {
+      "number": "8.16",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Sharing Information with the Wrong Party",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#sharing-information-with-the-wrong-party"
+    }
+  },
+  "#signature-based-correlation": {
+    "current": {
+      "number": "8.5",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Signature-Based Correlation",
+      "url": "https://w3c.github.io/vc-data-model/#signature-based-correlation"
+    },
+    "snapshot": {
+      "number": "8.5",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Signature-Based Correlation",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#signature-based-correlation"
+    }
+  },
+  "#software-trust-boundaries": {
+    "current": {
+      "number": "8.2",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Software Trust Boundaries",
+      "url": "https://w3c.github.io/vc-data-model/#software-trust-boundaries"
+    },
+    "snapshot": {
+      "number": "8.2",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Software Trust Boundaries",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#software-trust-boundaries"
+    }
+  },
+  "#spectrum-of-privacy": {
+    "current": {
+      "number": "8.1",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Spectrum of Privacy",
+      "url": "https://w3c.github.io/vc-data-model/#spectrum-of-privacy"
+    },
+    "snapshot": {
+      "number": "8.1",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Spectrum of Privacy",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#spectrum-of-privacy"
+    }
+  },
+  "#spoofing-attack": {
+    "current": {
+      "number": "9.5.3",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Spoofing Attack",
+      "url": "https://w3c.github.io/vc-data-model/#spoofing-attack"
+    },
+    "snapshot": {
+      "number": "9.5.3",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Spoofing Attack",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#spoofing-attack"
+    }
+  },
+  "#status": {
+    "current": {
+      "number": "4.10",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Status",
+      "url": "https://w3c.github.io/vc-data-model/#status"
+    },
+    "snapshot": {
+      "number": "4.10",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Status",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#status"
+    }
+  },
+  "#status-0": {
+    "current": {
+      "number": "A.8",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Status",
+      "url": "https://w3c.github.io/vc-data-model/#status-0"
+    },
+    "snapshot": {
+      "number": "A.8",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Status",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#status-0"
+    }
+  },
+  "#storage-providers-and-data-mining": {
+    "current": {
+      "number": "8.12",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Storage Providers and Data Mining",
+      "url": "https://w3c.github.io/vc-data-model/#storage-providers-and-data-mining"
+    },
+    "snapshot": {
+      "number": "8.12",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Storage Providers and Data Mining",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#storage-providers-and-data-mining"
+    }
+  },
+  "#syntaxes": {
+    "current": {
+      "number": "6",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Syntaxes",
+      "url": "https://w3c.github.io/vc-data-model/#syntaxes"
+    },
+    "snapshot": {
+      "number": "6",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Syntaxes",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#syntaxes"
+    }
+  },
+  "#terminology": {
+    "current": {
+      "number": "2",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Terminology",
+      "url": "https://w3c.github.io/vc-data-model/#terminology"
+    },
+    "snapshot": {
+      "number": "2",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Terminology",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#terminology"
+    }
+  },
+  "#terms-of-use": {
+    "current": {
+      "number": "5.5",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Terms of Use",
+      "url": "https://w3c.github.io/vc-data-model/#terms-of-use"
+    },
+    "snapshot": {
+      "number": "5.5",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Terms of Use",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#terms-of-use"
+    }
+  },
+  "#the-principle-of-data-minimization": {
+    "current": {
+      "number": "8.9",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "The Principle of Data Minimization",
+      "url": "https://w3c.github.io/vc-data-model/#the-principle-of-data-minimization"
+    },
+    "snapshot": {
+      "number": "8.9",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "The Principle of Data Minimization",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#the-principle-of-data-minimization"
+    }
+  },
+  "#the-sristring-datatype": {
+    "current": {
+      "number": "B.3.1",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "The sriString Datatype",
+      "url": "https://w3c.github.io/vc-data-model/#the-sristring-datatype"
+    },
+    "snapshot": {
+      "number": "B.3.1",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "The sriString Datatype",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#the-sristring-datatype"
+    }
+  },
+  "#title": {
+    "current": {
+      "number": "",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Verifiable Credentials Data Model v2.0",
+      "url": "https://w3c.github.io/vc-data-model/#title"
+    },
+    "snapshot": {
+      "number": "",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Verifiable Credentials Data Model v2.0",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#title"
+    }
+  },
+  "#toc": {
+    "current": {
+      "number": "",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Table of Contents",
+      "url": "https://w3c.github.io/vc-data-model/#toc"
+    },
+    "snapshot": {
+      "number": "",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Table of Contents",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#toc"
+    }
+  },
+  "#trust-model": {
+    "current": {
+      "number": "5.1",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Trust Model",
+      "url": "https://w3c.github.io/vc-data-model/#trust-model"
+    },
+    "snapshot": {
+      "number": "5.1",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Trust Model",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#trust-model"
+    }
+  },
+  "#type-specific-credential-processing": {
+    "current": {
+      "number": "6.3",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Type-Specific Credential Processing",
+      "url": "https://w3c.github.io/vc-data-model/#type-specific-credential-processing"
+    },
+    "snapshot": {
+      "number": "6.3",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Type-Specific Credential Processing",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#type-specific-credential-processing"
+    }
+  },
+  "#types": {
+    "current": {
+      "number": "4.5",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Types",
+      "url": "https://w3c.github.io/vc-data-model/#types"
+    },
+    "snapshot": {
+      "number": "4.5",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Types",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#types"
+    }
+  },
+  "#unauthorized-use": {
+    "current": {
+      "number": "9.9.1",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Unauthorized Use",
+      "url": "https://w3c.github.io/vc-data-model/#unauthorized-use"
+    },
+    "snapshot": {
+      "number": "9.9.1",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Unauthorized Use",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#unauthorized-use"
+    }
+  },
+  "#unsigned-claims": {
+    "current": {
+      "number": "9.4",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Unsigned Claims",
+      "url": "https://w3c.github.io/vc-data-model/#unsigned-claims"
+    },
+    "snapshot": {
+      "number": "9.4",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Unsigned Claims",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#unsigned-claims"
+    }
+  },
+  "#validation": {
+    "current": {
+      "number": "A",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Validation",
+      "url": "https://w3c.github.io/vc-data-model/#validation"
+    },
+    "snapshot": {
+      "number": "A",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Validation",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#validation"
+    }
+  },
+  "#validity-period": {
+    "current": {
+      "number": "4.9",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Validity Period",
+      "url": "https://w3c.github.io/vc-data-model/#validity-period"
+    },
+    "snapshot": {
+      "number": "4.9",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Validity Period",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#validity-period"
+    }
+  },
+  "#validity-periods": {
+    "current": {
+      "number": "A.7",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Validity Periods",
+      "url": "https://w3c.github.io/vc-data-model/#validity-periods"
+    },
+    "snapshot": {
+      "number": "A.7",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Validity Periods",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#validity-periods"
+    }
+  },
+  "#vc-ld-media-type": {
+    "current": {
+      "number": "C.1",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "application/vc",
+      "url": "https://w3c.github.io/vc-data-model/#vc-ld-media-type"
+    },
+    "snapshot": {
+      "number": "C.1",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "application/vc",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#vc-ld-media-type"
+    }
+  },
+  "#verifiable-credential-graphs": {
+    "current": {
+      "number": "5.12",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Verifiable Credential Graphs",
+      "url": "https://w3c.github.io/vc-data-model/#verifiable-credential-graphs"
+    },
+    "snapshot": {
+      "number": "5.12",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Verifiable Credential Graphs",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#verifiable-credential-graphs"
+    }
+  },
+  "#verifiable-credentials": {
+    "current": {
+      "number": "4.2",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Verifiable Credentials",
+      "url": "https://w3c.github.io/vc-data-model/#verifiable-credentials"
+    },
+    "snapshot": {
+      "number": "4.2",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Verifiable Credentials",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#verifiable-credentials"
+    }
+  },
+  "#verifiable-presentations": {
+    "current": {
+      "number": "4.13",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Verifiable Presentations",
+      "url": "https://w3c.github.io/vc-data-model/#verifiable-presentations"
+    },
+    "snapshot": {
+      "number": "4.13",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Verifiable Presentations",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#verifiable-presentations"
+    }
+  },
+  "#verification": {
+    "current": {
+      "number": "7.1",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Verification",
+      "url": "https://w3c.github.io/vc-data-model/#verification"
+    },
+    "snapshot": {
+      "number": "7.1",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Verification",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#verification"
+    }
+  },
+  "#vocabularies": {
+    "current": {
+      "number": "B.2",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Vocabularies",
+      "url": "https://w3c.github.io/vc-data-model/#vocabularies"
+    },
+    "snapshot": {
+      "number": "B.2",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Vocabularies",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#vocabularies"
+    }
+  },
+  "#vp-ld-media-type": {
+    "current": {
+      "number": "C.2",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "application/vp",
+      "url": "https://w3c.github.io/vc-data-model/#vp-ld-media-type"
+    },
+    "snapshot": {
+      "number": "C.2",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "application/vp",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#vp-ld-media-type"
+    }
+  },
+  "#what-is-a-verifiable-credential": {
+    "current": {
+      "number": "1.1",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "What is a Verifiable Credential?",
+      "url": "https://w3c.github.io/vc-data-model/#what-is-a-verifiable-credential"
+    },
+    "snapshot": {
+      "number": "1.1",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "What is a Verifiable Credential?",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#what-is-a-verifiable-credential"
+    }
+  },
+  "#zero-knowledge-proofs": {
+    "current": {
+      "number": "5.7",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Zero-Knowledge Proofs",
+      "url": "https://w3c.github.io/vc-data-model/#zero-knowledge-proofs"
+    },
+    "snapshot": {
+      "number": "5.7",
+      "spec": "Verifiable Credentials Data Model v2.0",
+      "text": "Zero-Knowledge Proofs",
+      "url": "https://www.w3.org/TR/vc-data-model-2.0/#zero-knowledge-proofs"
+    }
+  }
+}
