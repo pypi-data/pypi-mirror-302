@@ -1,0 +1,13 @@
+defigraph/Edge.py,sha256=rXdpYJBicncua5L1QO9xgiXIdy_hJWuoi1N0Vf_qAyI,313
+defigraph/Edge_test.py,sha256=rNZXYxAsz3eNKCcSMwax6zDDdikKOtkM7HWUxYmaPpU,112
+defigraph/Graph.py,sha256=AgF9E3huvtc0_CqzV-Kdc-1VaMf7UK7aY9nS19Dx-C4,44
+defigraph/Graph_test.py,sha256=ooFwa1n4MHNq3chwAxbLC4IQ4bVZ8AFq9shkdT6i2vY,4104
+defigraph/Pool.py,sha256=Oib9wW-LpFgic5I59ywvZ16J2HJaQN0AB4-vQGl3HMU,213
+defigraph/Vertex.py,sha256=Z4cG3VBRGwqKwym7vTZYBFVwuZZVCJFZAmvez0MJp-w,288
+defigraph/Vertex_test.py,sha256=bU-xCShMwVZi8ou8veVvLmVhjyCTTDgh4wTVo1IxsIE,321
+defigraph/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+defigraph-0.0.1.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+defigraph-0.0.1.dist-info/METADATA,sha256=YcOdOvwM-dgmj2gvqFRBz_OHQ2P_I-3POQfQGdjh-yM,529
+defigraph-0.0.1.dist-info/WHEEL,sha256=GV9aMThwP_4oNCtvEC2ec3qUYutgWeAzklro_0m4WJQ,91
+defigraph-0.0.1.dist-info/top_level.txt,sha256=J0tecgxam-IwGTbwheKxu3pCKDh-hnPtOgk8KP9RluU,10
+defigraph-0.0.1.dist-info/RECORD,,
