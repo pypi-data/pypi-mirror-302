@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: dsplayer-lyrics
+Version: 1.0.0
+License-File: LICENSE
+Requires-Dist: dsplayer
+Requires-Dist: aiohttp
+Requires-Dist: bs4
+

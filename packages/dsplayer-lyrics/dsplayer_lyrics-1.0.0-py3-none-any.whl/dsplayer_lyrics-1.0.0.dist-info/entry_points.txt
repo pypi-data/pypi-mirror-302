@@ -1,0 +1,2 @@
+[dsplayer.plugins]
+lyrics = dsplayer_lyrics.lyrics:LyricsPlugin
