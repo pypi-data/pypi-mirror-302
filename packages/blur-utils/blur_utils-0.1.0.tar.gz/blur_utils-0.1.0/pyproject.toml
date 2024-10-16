@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "blur-utils"
+version = "0.1.0"
+description = "Tiny package containing helpful classes and functions when blurring images"
+authors = ["galactixx"]
+license = "MIT License"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+numpy = "^2.1.1"
+pydantic = "^2.7.1"
+pillow = "^10.4.0"
+opencv-python = "^4.10.0.84"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
