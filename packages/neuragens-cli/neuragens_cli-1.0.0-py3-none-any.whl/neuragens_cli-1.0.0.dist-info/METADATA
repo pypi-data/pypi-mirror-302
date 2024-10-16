@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: neuragens-cli
+Version: 1.0.0
+Summary: The NeuraGens CLI is a command-line interface tool that you use to initialize, develop, scaffold, and maintain NeuraGens applications directly from a command shell.
+Author: Michael Douglas Barbosa Araujo
+Author-email: michaeldouglas010790@gmail.com
+License-File: LICENSE
+Requires-Dist: click
+
