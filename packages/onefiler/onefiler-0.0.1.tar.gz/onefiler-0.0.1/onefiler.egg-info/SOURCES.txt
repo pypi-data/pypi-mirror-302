@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+onefiler/__init__.py
+onefiler/main.py
+onefiler.egg-info/PKG-INFO
+onefiler.egg-info/SOURCES.txt
+onefiler.egg-info/dependency_links.txt
+onefiler.egg-info/entry_points.txt
+onefiler.egg-info/top_level.txt

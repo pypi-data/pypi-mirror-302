@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: onefiler
+Version: 0.0.1
+Summary: A tool to create a unique file with contents of other files
+Home-page: https://github.com/fabiopipitone/onefiler
+Author: Fabio Pipitone
+Author-email: fabio.pipitone93@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# onefiler
+
+A Python tool to read the structure of your folders and files starting from the folder it is launched from and output a txt file containing the folders tree from the current one up to a pickable level and the content of each files. It can be launched specifying:
+- level of depth 
+- folders to ignore
+- output filename
