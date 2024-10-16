@@ -1,0 +1,66 @@
+# Repo infra-data-utilities - Module
+
+infra-data-utilities es el repositorio del equipo de Datos de Pomelo. Se centraliza toda funcionalidad para establecer conexiones con las bases de datos, integraciones varias, interactuar con la consola de aws, etc. 
+
+##  Agregar un submódulo de infra-data-utilities a un repositorio git
+
+1- Ejecutar el siguiente comando en el directorio raiz del repositorio al cual se quiere agregar este infra-data-utilities como submodulo.
+
+    git submodule add git@github.com:pomelo-la/infra-data-utilities.git utilities
+    git add .gitmodules
+    git commit -m "Se agrega submódulo utilities de infra-data-utilities"
+
+##  Actualizar un submódulo de infra-data-utilities en repositorio principal (local)
+
+1- Para actualizar un cambio realizado en el repositorio de infra-data-utilities, debemos haber commiteado y pusheado estos cambios en ese repositorio. 
+    Luego debemos ejecutar el siguiente comando:
+
+    git submodule update --remote --merge
+    
+Este comando actualiza el submódulo de nuestro repositorio principal con los cambios el repositorio remoto infra-data-utilities.
+
+Esto debemos hacerlo así porque el repositorio infra-data-utilities es un repositorio donde todos los miembros del equipo de Data pueden generar cambios 
+y/o desarrollar nuevas funcionalidades. 
+
+**Importante: Esto deberá hacerse en una branch nueva que luego mediante un PR se mergeará a la branch main remota** 
+
+## Agregar un submódulo de infra-data-utilities en repositorio que corre en kubernetes (K8s)
+TBD - 
+
+## Quitar un submódulo
+
+1- Eliminar la entrada del submódulo del archivo .gitmodules:
+
+    git submodule deinit -f utilities
+    git rm --cached utilities
+    git rm -rf .git/modules/utilities
+
+2- Eliminar el directorio del submódulo:
+
+    $git rm -rf utilities
+
+##### importante: Los modulos no pueden tener guión medio 
+
+Los submódulos son referencias a otros repositorios de Git, por lo que al agregar un submódulo, estás incluyendo en tu repositorio principal una referencia al estado actual del submódulo en ese momento. Cuando haces cambios en tu repositorio principal y haces un commit y push, esos cambios no afectarán al submódulo, ya que son dos repositorios separados.
+
+Si deseas actualizar el submódulo en tu repositorio principal, deberá existir un cambio por el cual modifiques este repositorio, lo cual tendrás que hacer un commit y push para actualizar su estado, y luego hacer otro commit y push en tu repositorio principal para actualizar la referencia del submódulo en tu repositorio principal. Los submódulos funcionan tanto local como remotamente y deben ser actualizados por separado de tu repositorio principal.
+
+###Dependencias de paquetes en el submódulo
+
+Es importante que el repositorio del submódulo tenga un requirements.txt que al momento de importante en un repositorio principal instale de manera recursiva todas las dependencias (slack-sdk, aiohttp, sendgrid, etc)
+Para actualizar el requirements.txt de este repositorio debemos ejecutar el siguiente comando: 
+
+    pipreqs . --force
+
+Debemos tener instalado pipreqs, si no lo tenes instalado en tu entorno lo instalas con el siguiente comando. 
+
+    pip install pipreqs
+
+###Instalar requirements.txt del submódulo en repositorio principal (local)
+Lo primero que debemos asegurarnos es que nuestro submódulo está actualizado
+
+    git submodule update --init --recursive
+
+Luego ejecutamos el siguiente comando
+
+    pip install -r submódulo/requirements.txt
