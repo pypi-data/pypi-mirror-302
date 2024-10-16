@@ -1,0 +1,19 @@
+Metadata-Version: 2.3
+Name: xaosim
+Version: 1.0.1
+Summary: Extreme AO simulation
+Project-URL: Homepage, https://github.com/fmartinache/xaosim/
+Project-URL: Issues, https://github.com/fmartinache/xaosim/issues
+Author-email: Frantz Martinache <frantz.martinache@oca.eu>
+License-File: LICENSE.txt
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.9
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: pillow
+Requires-Dist: scipy
+Description-Content-Type: text/markdown
+
+# Test XAOSIM à réécrire
