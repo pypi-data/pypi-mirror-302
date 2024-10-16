@@ -1,0 +1,7 @@
+tqdm
+requests
+pandas
+
+[test]
+pytest
+validate_version_code
