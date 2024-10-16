@@ -1,0 +1,5 @@
+scmultikano.egg-info/PKG-INFO
+scmultikano.egg-info/SOURCES.txt
+scmultikano.egg-info/dependency_links.txt
+scmultikano.egg-info/requires.txt
+scmultikano.egg-info/top_level.txt
