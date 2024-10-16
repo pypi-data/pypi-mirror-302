@@ -1,0 +1,3 @@
+class CUZeroHzErr(Exception):
+    pass
+    
