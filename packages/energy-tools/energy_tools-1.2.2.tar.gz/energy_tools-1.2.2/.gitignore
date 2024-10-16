@@ -1,0 +1,13 @@
+*.pyc
+__pycache__/
+dist/
+energy_tools.egg-info/
+Include/
+Lib/
+Scripts/
+pip-selfcheck.json
+.pytest_cache/
+*.xls
+.vscode
+build/
+.coverage

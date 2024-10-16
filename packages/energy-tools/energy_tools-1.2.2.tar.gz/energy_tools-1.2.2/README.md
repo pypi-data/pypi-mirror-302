@@ -1,0 +1,123 @@
+# energy_tools
+
+Modest collection of electrical energy calculation tools.
+
+**Content:**
+
+- [Installation](#installation)
+    - [Requirements](#requirements)
+    - [Installing energy_tools](#installing-energy_tools)
+        - [With pip](#with-pip)
+        - [Without pip](#without-pip)
+        - [Development version](#development-version)
+    - [Test your installation](#test-your-installation)
+- [Features](#features)
+    - [complex](#complex)
+    - [energy_factors](#energy_factors)
+    - [misc](#misc)
+    - [per_unit](#per_unit)
+    - [phasor](#phasor)
+    - [power](#power)
+- [Usage](#usage)
+- [Contributing](#contributing)
+
+## Installation
+
+```
+pip install -U --user energy_tools
+```
+
+### Development version
+
+`energy_tools` is now managed with `uv`. After downloading or cloning the project from GitHub, run `uv sync` to fetch and install the requirements.
+
+You can then test the installation with `make tests` or `uv run python -m pytest`.
+
+## Features
+
+`energy_tools` currently includes the following modules:
+
+### complex
+
+The `complex` module includes an improved `EleComplex` class which adds the following attributes (properties): `phase`, `module`.
+
+- `EleComplex.phase` returns the complex number's phase in degrees.
+- `EleComplex.module` returns the complex number's amplitude.
+
+The `complex` module also includes a `complex_impedance` function that returns an improved `EleComplex` number, based on a provided real impedance *z* and an *X/R* ratio.
+
+The `EleComplex` class must be imported in order for some of the other tools to be usable:
+
+``` python
+from energy_tools.complex import EleComplex
+```
+
+See [Usage](#usage) below for more details.
+
+### energy_factors
+
+The `energy_factors` module includes functions to calculate yearly energy factors for special calculations. Currently, it includes the `utilisation_factor` and `loss_factor` functions.
+
+### misc
+
+The `misc` module includes basic functions to manipulate impedances, including `serie`, `parallel`, `zCap` and `zInd`. These calculate series impedance, parallel impedances, capacitance impedance and inductance impedance respectively.
+
+### per_unit
+
+The `per_unit` module includes functions that return the base current, impedance and power.
+
+### phasor
+
+The `phasor` module includes a new data type `Phasor` for the electrical phasor used in power systems.
+
+A phasor is defined by an amplitude and a phase. The instance can be created either using those, or by providing a complex amplitude (in this case the phase is ignored). Several operations are supported, including: addition, substraction, multiplication, division, power, inversion and equality with either another phasor, a float or an integer.
+
+It also provides a nice representation in this form: 120.000 @ 0.000°
+
+Attributes:
+
+- amp: The unitless phasor amplitude.
+- pha: The phasor's phase in degrees.
+- real: The phasor's real part (interpreted as a complex number).
+- imag: The phasor's imaginary part (interpreted as a complex number).
+
+The `phasor` module also includes functions `sequences` and `phasors`. The former retuns phase A's sequence voltages from phase A, B and C's voltages. The latter does the opposite, i.e. it returns phase A, B and C's voltages from phases A's sequence voltages.
+
+### power
+
+The `power` module includes 2 functions `p()` and `q()` which calculate the active power and reactive power based on at least 2 of the following arguments:
+
+- `p`: Active power (for `q()`).
+- `q`: Reactive power (for `p()`).
+- `s`: Apparent power.
+- `pf`: Power factor.
+
+The arguments and return value are unitless.
+
+## Usage
+
+Sample usage may be found in the [tests](https://gitlab.com/miek770/energy_tools/tree/master/energy_tools/tests) directory. Most of these tools are straightforward (or aim to be), so the tests and docstrings should be helpful enough.
+
+As mentioned [above](#complex), the `EleComplex` class must be imported in order for many of the other tools to be usable:
+
+``` python
+from energy_tools.complex import EleComplex
+```
+
+When the improved `EleComplex` type is imported this way, the following call will result in variable `a` being an `energy_tools.complex.EleComplex` instance, as expected:
+
+```
+a = EleComplex(1, 1)
+a.phase #  Will return 45 degrees
+```
+
+Implicitly declaring a complex number, however, will return the built-in `complex` type:
+
+```
+a = 1 + 1j
+a.phase #  Will raise AttributeError
+```
+
+## Contributing
+
+If you wish to contribute, please follow the development version instructions above and refer to the project's [contribution guide](https://gitlab.com/miek770/energy_tools/blob/master/CONTRIBUTING.md).
