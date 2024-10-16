@@ -1,0 +1,7 @@
+numpy~=1.26
+scipy
+termcolor
+
+[visual]
+plotly
+matplotlib
