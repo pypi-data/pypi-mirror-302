@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: simple_proc
+Version: 0.1.0
+Summary: 
+License: SimPL-2.0
+Author: slef
+Author-email: slef05@gmail.com
+Requires-Python: ==3.12.3
+Classifier: License :: OSI Approved
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+
+# simple-proc
