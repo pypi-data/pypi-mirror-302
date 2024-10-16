@@ -1,0 +1,4 @@
+[console_scripts]
+html2bbcode = md2bbcode.html2bbcode:main
+md2ast = md2bbcode.md2ast:main
+md2bbcode = md2bbcode.main:main
