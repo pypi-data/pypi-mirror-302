@@ -1,0 +1,3 @@
+[jac]
+studio=jac_studio.cli:JacCmd
+
