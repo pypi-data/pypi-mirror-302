@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: image-processing-studies-mvbs
+Version: 0.0.1
+Summary: image processing package using skimage to study
+Home-page: https://github.com/mvbs3/image-processing-package
+Author: Karina, and student Marcelo
+Requires-Python: >=3.5
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: scikit-image (>=0.16.1)
+
+# image_processing_studies_mvbs
+
+Description.
+The package image_processing_studies_mvbs is used to:
+Processing - Histogram matching - Structural similarity - Resize image
+Utils - Read image - Save image - Plot image - Plot result - Plot histogram
+
+## Installation
+
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install package_name
+
+```bash
+pip install package_name
+```
+
+## Author
+
+Autora real: Karina
+(Aluno que sestÃ¡ utilizando esse repositorio a fim de estudos: Marcelo Victor)
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
