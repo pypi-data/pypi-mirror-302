@@ -1,0 +1,38 @@
+[tool.poetry]
+name = "multivec"
+version = "0.1.1"
+description = "Supercharge your LLMs with synthetic high-quality multimodal Data"
+authors = ["mr-green1337 <islam.hachimi2003@gmail.com>"]
+license = "Apache-2.0"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+ruff = "^0.6.8"
+pydantic = "^2.9.2"
+numpy = "^2.0.0"
+pymupdf = "^1.24.10"
+ipykernel = "^6.29.5"
+boto3 = "^1.35.29"
+openai = "^1.50.2"
+cryptography = "^43.0.1"
+groq = "^0.11.0"
+pandas = "^2.2.3"
+pinecone = "^5.3.1"
+qdrant-client = "^1.11.3"
+python-docx = "^1.1.2"
+pillow = "^10.4.0"
+pytest = "^8.3.3"
+bs4 = "^0.0.2"
+tenacity = "^9.0.0"
+openai-clip = "^1.0.1"
+azure-storage-blob = "^12.23.1"
+matplotlib = "^3.9.2"
+selenium = "^4.25.0"
+pytesseract = "^0.3.13"
+opencv-python = "^4.10.0.84"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
