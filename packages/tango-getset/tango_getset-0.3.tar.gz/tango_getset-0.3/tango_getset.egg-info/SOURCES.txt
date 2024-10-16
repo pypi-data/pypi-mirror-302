@@ -1,0 +1,7 @@
+setup.py
+tango_getset/__init__.py
+tango_getset/tango_getset.py
+tango_getset.egg-info/PKG-INFO
+tango_getset.egg-info/SOURCES.txt
+tango_getset.egg-info/dependency_links.txt
+tango_getset.egg-info/top_level.txt
