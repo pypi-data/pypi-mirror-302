@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: util4all
+Version: 0.1.0
+Summary: Common utility methods for enterprise projects
+Home-page: https://github.com/CYBA7K2M-COMMON8Z/COMMON8Z_UTIL4ALL.git
+Author: Antoine Fusilier
+Author-email: antoinefusilier@gmail.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: setuptools
+Requires-Dist: wheel
+Requires-Dist: twine
+
+# Utils for All 
+***The main library of the enterprise*** 
+
+### 1. **Install `venv` Module (if needed)**
+The `venv` module is included in Python 3.3 and later, but make sure it's installed:
+
+```bash
+# On Debian/Ubuntu systems, you might need to install it explicitly:
+sudo apt-get install python3-venv
+```
+
+### 2. **Create a New Virtual Environment**
+In your project folder, run the following command to create a new virtual environment:
+
+```bash
+python3 -m venv venv_name
+```
+
+- Replace `venv_name` with your desired name for the virtual environment (commonly just `venv`).
+- This command creates a `venv_name/` directory with all the files
+
+
