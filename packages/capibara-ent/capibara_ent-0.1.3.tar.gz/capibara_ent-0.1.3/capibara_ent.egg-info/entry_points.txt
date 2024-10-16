@@ -1,0 +1,5 @@
+[console_scripts]
+capibara-infer = capibara_model.scripts.run_inference:main
+capibara-interact = capibara_model.scripts.interactive_session:main
+capibara-serve = capibara_model.scripts.serve_api:main
+capibara-train = capibara_model.scripts.run_training:main
