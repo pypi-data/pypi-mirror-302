@@ -1,0 +1,61 @@
+Metadata-Version: 2.1
+Name: nifi_ffv3
+Version: 0.1.2
+Summary: Python library to manipulate the flowfile-v3 format used by Apache NiFi.
+Home-page: https://github.com/qweralfredo/nifi_ffv3.git
+Author: Alfredo Prates - Learn or Die
+Author-email: qwer.alfredo@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+## Description
+
+nifi_ffv3 is a Python library for packaging and unpacking data in the `application/flowfile-v3` format, commonly used in Apache NiFi.
+
+## Features
+
+* Packages data into a byte stream compatible with `flowfile-v3`.
+* Allows adding custom attributes to the flowfile.
+* Handles large file sizes.
+
+## Installation
+
+```bash
+pip install nifi_ffv3
+```
+
+## Usage
+
+```python
+import io
+from nifi_ffv3 import package_flowfile
+
+# Data to be packaged
+data = b"Hello, world!"
+input_stream = io.BytesIO(data)
+
+# Create an output byte stream
+output_stream = io.BytesIO()
+
+# Define custom attributes (optional)
+attributes = {"filename": "example.txt", "author": "John Doe"}
+
+# Package the data in flowfile-v3 format
+package_flowfile(input_stream, output_stream, attributes=attributes)
+
+# Access the packaged flowfile
+flowfile_data = output_stream.getvalue()
+```
+
+## Contribution
+
+Contributions are welcome! Feel free to open an issue or submit a pull request.
+
+## License
+
+Apache-2.0 license
