@@ -1,0 +1,2 @@
+[console_scripts]
+bq_stream_register = streaming_connector.bq_stream_register:main
