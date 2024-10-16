@@ -1,0 +1,20 @@
+argcomplete
+cryptography
+future
+requests
+threadlocal-aws
+
+[:platform_system == "Windows"]
+pypiwin32
+win-unicode-console
+wmi
+
+[build]
+build
+setuptools
+twine
+wheel
+
+[test]
+coverage
+coveralls
