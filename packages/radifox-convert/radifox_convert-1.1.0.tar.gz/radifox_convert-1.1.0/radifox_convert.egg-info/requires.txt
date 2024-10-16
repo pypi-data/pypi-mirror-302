@@ -1,0 +1,4 @@
+nibabel
+numpy
+radifox>=2.1.0
+pydicom
