@@ -1,0 +1,12 @@
+uvicorn==0.31.*
+fastapi==0.115.*
+fastapi-versioning==0.10.*
+asgi-correlation-id==4.3.*
+cryptography==43.0.*
+boto3==1.35.*
+geojson==3.1.*
+python-json-logger==2.0.*
+osml-imagery-toolkit>=1.4.0
+
+[test]
+tox
