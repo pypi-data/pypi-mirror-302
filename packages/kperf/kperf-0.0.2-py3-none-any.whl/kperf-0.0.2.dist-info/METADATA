@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: kperf
+Version: 0.0.2
+Summary: linux kernel profiler
+License: MIT
+Author: luzhixing12345
+Author-email: luzhixing12345@163.com
+Requires-Python: >=3.9,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: paperplotlib
+Requires-Dist: prettytable
+Requires-Dist: psutil
+Description-Content-Type: text/markdown
+
+# kperf
+
+linux kernel profiler
+
+## 参考
+
+- [awesome-profiling](https://github.com/msaroufim/awesome-profiling)
+- [cpplinks](https://github.com/MattPD/cpplinks)
+- [cpplinks performance.tools](https://github.com/MattPD/cpplinks/blob/master/performance.tools.md)
+- [推荐适用于 Linux 的 C++ 工具?(分析器、静态分析等)?](https://www.reddit.com/r/cpp/comments/7kurp6/comment/drhpyfh/?utm_source=share)- [awesome-profiling](https://github.com/msaroufim/awesome-profiling)
+- [cpplinks](https://github.com/MattPD/cpplinks)
+- [cpplinks performance.tools](https://github.com/MattPD/cpplinks/blob/master/performance.tools.md)
+- [推荐适用于 Linux 的 C++ 工具?(分析器、静态分析等)?](https://www.reddit.com/r/cpp/comments/7kurp6/comment/drhpyfh/?utm_source=share)
