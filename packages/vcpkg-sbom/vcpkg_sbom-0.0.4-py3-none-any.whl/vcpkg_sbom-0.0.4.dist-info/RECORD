@@ -1,0 +1,7 @@
+vcpkg_sbom/__init__.py,sha256=yFzW4EBakH8UomfGsTJUK23JmuUDKBuaju2u1Ny4v1o,9562
+vcpkg_sbom-0.0.4.dist-info/LICENSE,sha256=S2hdooAZAzPgIxxZEVvzF6COJAuuxgfEOvIWwFczi8Y,1064
+vcpkg_sbom-0.0.4.dist-info/METADATA,sha256=rrSEPuh5-dUXUxZlvQXkJ1bjqs5fwnRj6aOSjem2Ies,1213
+vcpkg_sbom-0.0.4.dist-info/WHEEL,sha256=GV9aMThwP_4oNCtvEC2ec3qUYutgWeAzklro_0m4WJQ,91
+vcpkg_sbom-0.0.4.dist-info/entry_points.txt,sha256=bMeAwKqGPG2YwBAST3I4pvUeKaj1u0dS84xWgJH7QuE,55
+vcpkg_sbom-0.0.4.dist-info/top_level.txt,sha256=U_hZFrQjSWiZCgjDgZVVgkDfUX5ftCoe3Bz5QxQOgIg,11
+vcpkg_sbom-0.0.4.dist-info/RECORD,,
