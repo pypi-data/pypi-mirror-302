@@ -1,0 +1,10 @@
+endec-0.2.0.dist-info/METADATA,sha256=xMUZG0IedCngjHbsEPHMEsVm9TnAkIscV32eDox3xJM,3580
+endec-0.2.0.dist-info/WHEEL,sha256=YC5u-H3bhOQm4Fqc0IEdyuxTueT4krwHICqmzc18ZkI,105
+endec-0.2.0.dist-info/licenses/LICENSE,sha256=Dix8fgnEM4M0liTQ0rUrcP-Qon1T4G_IHBXFRNiIyxg,1064
+endec.libs/libgcc_s-b5472b99.so.1,sha256=wh8CpjXz9IccAyeERcB7YDEx7NH2jF-PykwOyYNeRRI,453841
+endec/exceptions.py,sha256=0vllesQZ3btKIArFIPyccwTHfSMxenbYsaQUIH717oY,1060
+endec/__init__.py,sha256=QHs4ebnMRPpR5cUVLh4FpZLdlc0ooJBgLgk83mw_iaA,113
+endec/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+endec/_endec.pyi,sha256=93qe9Ra7ZsUiL2vfv-2_Gz2G8PrtKofjioxLOlK7AV8,515
+endec/_endec.cpython-313-i386-linux-musl.so,sha256=fDEm7dPdT9w2dgCdYA8dO2fbKAvSktKwz0CPLnOS7rM,735177
+endec-0.2.0.dist-info/RECORD,,
