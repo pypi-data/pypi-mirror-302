@@ -1,0 +1,66 @@
+[project]
+name = "p3k_app"
+version = "3.12.0-beta"
+description = "Python 3000 CLI"
+authors = [
+    { name = "D. Alex Graham", email = "alex@aode.space" },
+]
+dependencies = [
+    "rich>=13.9.2",
+    "version3900>=3.9.0",
+    "typer>=0.12.5",
+    "p12>=3.12.0.dev0",
+]
+requires-python = ">=3.12"
+readme = "README.md"
+
+[project.license]
+text = "MIT"
+
+[project.scripts]
+p3900 = "p3k_app:app"
+p3k = "p3k_app:app"
+p9 = "p3k_app:app"
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[tool.pdm]
+distribution = true
+
+[tool.black]
+line-length = 72
+
+[tool.pylint.basic]
+module-naming-style = "snake_case"
+class-naming-style = "PascalCase"
+class-const-naming-style = "PascalCase"
+method-naming-style = "snake_case"
+function-naming-style = "snake_case"
+variable-naming-style = "snake_case"
+good-names = [
+    "_",
+    "f",
+    "i",
+    "j",
+    "k",
+]
+
+[tool.pylint.design]
+max-parents = 15
+max-attr = 40
+max-locals = 50
+max-args = 100
+max-branches = 150
+max-statements = 150
+max-returns = 150
+max-public-methods = 500
+
+[tool.pylint."messages control"]
+disable = [
+    "missing-class-docstring",
+    "missing-module-docstring",
+]
