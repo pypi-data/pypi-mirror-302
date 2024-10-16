@@ -1,0 +1,10 @@
+neutrino_client/__init__.py,sha256=XL9wW7q-1uqOrOYiPkUSRj2363T5KSQilngTtmjb9AY,1647
+neutrino_client/client.py,sha256=megq6wdA7E1wRpYK95C7HLM-f3uD4MXs8zmEUmpWbmo,3487
+neutrino_client/neutrino_task.py,sha256=PkHuAPR4bUuztmpQUJEERTsMprOGRmxh5h4tuS5FEjA,338
+neutrino_client/task_pb2.py,sha256=J1E0gJRABMOBLMpsiq4xBl0ihIzVapmxKbSHA-t0RGg,2785
+neutrino_client/task_pb2.pyi,sha256=95NCrsOL2dqJ0VieJCh5GI5qXPA_tCOpFiC6Ce_CQVQ,2214
+neutrino_client/task_pb2_grpc.py,sha256=_aM04tRV-3Z_EW4nFAYtGEK2mhyfhaZpuzktemxeq-s,3911
+neutrino_client-0.0.5.dist-info/METADATA,sha256=8L48rhB7KZbqdoifvwaVa34f7hTcZz-rdTYWcarCXAs,349
+neutrino_client-0.0.5.dist-info/WHEEL,sha256=cVxcB9AmuTcXqmwrtPhNK88dr7IR_b6qagTj0UvIEbY,91
+neutrino_client-0.0.5.dist-info/top_level.txt,sha256=T4vRJEEQBMhKwHehxp0M7x03FYhFJR0amuBqCiR2jlc,16
+neutrino_client-0.0.5.dist-info/RECORD,,
