@@ -1,0 +1,12 @@
+util4all/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+util4all/core.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+util4all/main.py,sha256=dErT-Xvy9HiAL1WPOfaW4b5INc9eYVaPhqdHUF8gGd8,415
+util4all/utils.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+util4all/cli/__init__.py,sha256=jIrs2V4MuabAA4zN3JYgcic92BtX7Y_XJK9ypY7uB04,228
+util4all/cli/log_utils.py,sha256=u98S6Mr-1BKHGF5wv3kV7y5yxFY174cK7SZrT51MSi0,4340
+util4all/cli/logging.py,sha256=kdMwWngXfLRuSDZiDJPb90jyqTUKssOVBq2PCbybNNI,2528
+util4all-0.1.1.dist-info/METADATA,sha256=jZSMsuyxvZeIKu4YSypNPTgrpwT9UwpqLDEQ4kp9STA,723
+util4all-0.1.1.dist-info/WHEEL,sha256=eOLhNAGa2EW3wWl_TU484h7q1UNgy0JXjjoqKoxAAQc,92
+util4all-0.1.1.dist-info/entry_points.txt,sha256=6RHLEjozaCfdh_nIw0xdTewGX1F4puIVL3nNQlWZKuE,47
+util4all-0.1.1.dist-info/top_level.txt,sha256=VdF08hap0ur3hy9E3SZn56Gfe4Aud65Emv9VwqcTrD8,9
+util4all-0.1.1.dist-info/RECORD,,

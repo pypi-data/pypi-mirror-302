@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: util4all
+Version: 0.1.1
+Summary: Common utility methods for enterprise projects
+Home-page: https://github.com/CYBA7K2M-COMMON8Z/COMMON8Z_UTIL4ALL.git
+Author: Antoine Fusilier
+Author-email: antoinefusilier@gmail.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: platformdirs
+Requires-Dist: rich
+Requires-Dist: setuptools
+Requires-Dist: twine
+Requires-Dist: typer
+Requires-Dist: wheel
+
+# Welcome to Util4All library :)
+
+
+Update the library
+```bash
+python setup.py sdist bdist_wheel
+twine upload dist/*
+```
