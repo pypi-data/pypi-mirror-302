@@ -1,0 +1,3 @@
+[console_scripts]
+pingradarapi = pingintel_api.pingradarapi_cmd:main
+sovfixerapi = pingintel_api.sovfixerapi_cmd:main
