@@ -1,0 +1,56 @@
+[project]
+name = "version3900"
+version = "3.9.0"
+description = "Python versioning package"
+authors = [
+    { name = "D. Alex Graham", email = "alex@aode.space" },
+]
+dependencies = []
+requires-python = ">=3.9"
+readme = "README.md"
+
+[project.license]
+text = "MIT"
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[tool.pdm]
+distribution = true
+
+[tool.black]
+line-length = 72
+
+[tool.pylint.basic]
+module-naming-style = "snake_case"
+class-naming-style = "PascalCase"
+class-const-naming-style = "PascalCase"
+method-naming-style = "snake_case"
+function-naming-style = "snake_case"
+variable-naming-style = "snake_case"
+good-names = [
+    "_",
+    "f",
+    "i",
+    "j",
+    "k",
+]
+
+[tool.pylint.design]
+max-parents = 15
+max-attr = 40
+max-locals = 50
+max-args = 100
+max-branches = 150
+max-statements = 150
+max-returns = 150
+max-public-methods = 500
+
+[tool.pylint."messages control"]
+disable = [
+    "missing-class-docstring",
+    "missing-module-docstring",
+]

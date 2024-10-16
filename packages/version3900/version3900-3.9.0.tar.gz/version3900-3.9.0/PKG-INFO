@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: version3900
+Version: 3.9.0
+Summary: Python versioning package
+Author-Email: "D. Alex Graham" <alex@aode.space>
+License: MIT
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+
+# version3900
+
+Versioning package for random build names with set build numbers
+
+### Installation
+
+`pip install version3900`
