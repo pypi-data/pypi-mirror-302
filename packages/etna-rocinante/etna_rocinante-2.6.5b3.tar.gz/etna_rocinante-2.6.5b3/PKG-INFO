@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: etna-rocinante
+Version: 2.6.5b3
+Summary: Tool to manage execution of automated tests jobs
+License: MIT
+Author: Clément "Doom" Doumergue
+Author-email: clement.doumergue@etna.io
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: etna-api (>=3.0.0,<4.0.0)
+Requires-Dist: etna-panza (>=4.0.0,<5.0.0)
+Requires-Dist: etna-pika-utils (>=1.0.0,<2.0.0)
+Requires-Dist: etna-quixote (>=2.0.0,<3.0.0)
+Requires-Dist: nectarine (>=1.1.1,<2.0.0)
