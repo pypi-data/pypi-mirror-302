@@ -1,0 +1,119 @@
+Metadata-Version: 2.1
+Name: image-processing-robertwilliam
+Version: 0.0.1
+Summary: Teste Pypi
+Home-page: https://github.com/DevRobertW/simple-package-template
+Author: Robert William
+Author-email: rw.codemaster@outlook.com
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Projeto: Pacote de Processamento de Imagens
+
+## Autora Original: Karina Kato  
+### Desafio de Projeto - Digital Innovation One  
+[Veja meu perfil na plataforma](https://www.dio.me/users/rwilliam634)
+
+#### Tecnologia Utilizada: Python  
+
+---
+
+## DescriÃ§Ã£o
+
+O pacote **image_processing** oferece diversas funcionalidades para manipulaÃ§Ã£o e anÃ¡lise de imagens, distribuÃ­das em dois mÃ³dulos principais:
+
+### MÃ³dulo "Processing":
+- CorrespondÃªncia de histograma (histogram matching);
+- Similaridade estrutural entre imagens (structural similarity);
+- Redimensionamento de imagens (resize).
+
+### MÃ³dulo "Utils":
+- Leitura de imagens (read);
+- Salvamento de imagens (save);
+- ExibiÃ§Ã£o de imagens (plot);
+- GeraÃ§Ã£o de grÃ¡ficos (plot results);
+- Plotagem de histogramas (plot histogram).
+
+---
+
+## Como Configurar e Hospedar um Pacote no Test PyPi
+
+### 1. Instalar DependÃªncias
+
+Certifique-se de ter as versÃµes mais recentes de `setuptools` e `wheel` instaladas:
+
+```bash
+py -m pip install --user --upgrade setuptools wheel
+```
+
+### 2. Construir o Pacote
+
+Certifique-se de que vocÃª estÃ¡ no diretÃ³rio onde o arquivo `setup.py` estÃ¡ localizado, e execute:
+
+```bash
+py setup.py sdist bdist_wheel
+```
+
+ApÃ³s a execuÃ§Ã£o, os seguintes diretÃ³rios devem ser gerados:
+- `build/`
+- `dist/`
+- `image-processing-nome.egg-info/`
+
+### 3. Subir o Pacote para o Test PyPi
+
+Utilize o Twine para fazer o upload dos arquivos gerados no passo anterior para o Test PyPi:
+
+```bash
+py -m twine upload --repository testpypi dist/*
+```
+
+VocÃª serÃ¡ solicitado a fornecer suas credenciais de login do Test PyPi. ApÃ³s isso, o pacote serÃ¡ hospedado no ambiente de testes.
+
+> **Nota**: O Test PyPi Ã© um ambiente de testes. Para que o pacote esteja disponÃ­vel publicamente, vocÃª precisarÃ¡ hospedÃ¡-lo no PyPi oficial.
+
+
+### Aqui o objetivo nÃ£o Ã© utilizar o projeto da Karina para postar em meu perfil do Pypi pessoal, visto que o projeto Ã© dela. Ainda nÃ£o tenho nenhum projeto que possa ser utilizado como pacote.
+
+### No entanto, tenha em mente que o Test Pypi, como o prÃ³prio nome diz, Ã© apenas um ambiente de testes. Para que o projeto esteja disponÃ­vel como um pacote para ser usado publicamente, Ã© necessÃ¡rio hospedÃ¡-lo no site oficial do Pypi.
+---
+
+## InstalaÃ§Ã£o Local ApÃ³s Hospedagem no Test PyPi
+
+### 1. Instalar DependÃªncias
+
+Para instalar as dependÃªncias do projeto:
+
+```bash
+pip install -r requirements.txt
+```
+
+### 2. Instalar o Pacote
+
+Para instalar o pacote a partir do Test PyPi:
+
+```bash
+pip install -i https://test.pypi.org/simple/image-processing-robertwilliam
+```
+
+---
+
+## Como Usar o Pacote em Qualquer Projeto
+
+Aqui estÃ¡ um exemplo de como utilizar o pacote no seu projeto:
+
+```python
+from image_processing.processing import combination
+combination.find_difference(image1, image2)
+```
+
+---
+
+## Autor(a) do Pacote no Test PyPi
+
+- **Robert William**
+
+---
+
+## LicenÃ§a
+
+Este projeto estÃ¡ licenciado sob os termos da [LicenÃ§a MIT](https://choosealicense.com/licenses/mit/).
