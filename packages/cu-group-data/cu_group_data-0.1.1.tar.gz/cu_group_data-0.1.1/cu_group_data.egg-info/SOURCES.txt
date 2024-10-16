@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+cu_group_data.egg-info/PKG-INFO
+cu_group_data.egg-info/SOURCES.txt
+cu_group_data.egg-info/dependency_links.txt
+cu_group_data.egg-info/requires.txt
+cu_group_data.egg-info/top_level.txt

@@ -1,0 +1,20 @@
+[build-system]
+requires = ['setuptools>=42', 'wheel']
+build-backend = 'setuptools.build_meta'
+
+[tool.setuptools]
+py-modules = []
+
+[project]
+name = 'cu-group-data'
+version = '0.1.1'
+description = 'Что-то считаем :)'
+authors = [
+    { name = 'Pavel', email = 'p.glazunov@edu.centarlunivercity.ru' }
+]
+dependencies = [
+  'pandas>=2.2.3'
+]
+readme = 'README.md'
+license = { text = 'MIT' }
+requires-python = '>=3.10'
