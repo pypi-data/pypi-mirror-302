@@ -1,0 +1,6 @@
+Metadata-Version: 2.1
+Name: dsplayer-soundcloud
+Version: 1.3.0
+License-File: LICENSE
+Requires-Dist: dsplayer
+Requires-Dist: yt-dlp

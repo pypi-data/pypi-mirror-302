@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+dsplayer_soundcloud/__init__.py
+dsplayer_soundcloud/soundcloud.py
+dsplayer_soundcloud.egg-info/PKG-INFO
+dsplayer_soundcloud.egg-info/SOURCES.txt
+dsplayer_soundcloud.egg-info/dependency_links.txt
+dsplayer_soundcloud.egg-info/entry_points.txt
+dsplayer_soundcloud.egg-info/requires.txt
+dsplayer_soundcloud.egg-info/top_level.txt
