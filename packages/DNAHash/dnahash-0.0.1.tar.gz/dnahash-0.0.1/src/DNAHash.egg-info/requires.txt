@@ -1,0 +1,12 @@
+pybloomer>=0.0.1
+numpy>=1.19.5
+nptyping>=2.5.0
+
+[dev]
+mypy
+biopython
+matplotlib
+PyQt6
+
+[test]
+mypy
