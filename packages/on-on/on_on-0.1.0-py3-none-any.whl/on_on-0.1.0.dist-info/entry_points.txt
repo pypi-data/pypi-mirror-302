@@ -1,0 +1,2 @@
+[console_scripts]
+oo = on_on.main
