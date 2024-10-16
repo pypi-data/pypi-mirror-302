@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: nlpmining
+Version: 0.0.8
+Summary: Text Preprocessing  package
+Author: NLP Mining
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: pandas
+Requires-Dist: numpy
+
+Text Preprocessing package demo built with nltk. Has support for all the basic text preprocessing.
+

@@ -1,0 +1,14 @@
+LICENSE.txt
+README.md
+setup.py
+nlpmining/src/nlpmining.egg-info/PKG-INFO
+nlpmining/src/nlpmining.egg-info/SOURCES.txt
+nlpmining/src/nlpmining.egg-info/dependency_links.txt
+nlpmining/src/nlpmining.egg-info/requires.txt
+nlpmining/src/nlpmining.egg-info/top_level.txt
+nlpmining/src/nlpmining.py
+nlpmining/src/nlpmining.egg-info/PKG-INFO
+nlpmining/src/nlpmining.egg-info/SOURCES.txt
+nlpmining/src/nlpmining.egg-info/dependency_links.txt
+nlpmining/src/nlpmining.egg-info/requires.txt
+nlpmining/src/nlpmining.egg-info/top_level.txt
