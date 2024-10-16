@@ -1,0 +1,3 @@
+[console_scripts]
+sentinel-cli = sentinel_downloader.cli:CLI
+sentinel-json = sentinel_downloader.json_runner:JSONRunner
