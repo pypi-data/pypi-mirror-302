@@ -1,0 +1,95 @@
+Metadata-Version: 2.3
+Name: structured-array
+Version: 0.0.1
+Summary: Efficient manipulation of the numpy structured arrays.
+Project-URL: Documentation, https://github.com/Hanjin Liu/structured-array#readme
+Project-URL: Issues, https://github.com/Hanjin Liu/structured-array/issues
+Project-URL: Source, https://github.com/Hanjin Liu/structured-array
+Author-email: Hanjin Liu <liuhanjin-sc@i.softbank.jp>
+License: MIT License
+        
+        Copyright (c) 2024-present Hanjin Liu <liuhanjin-sc@i.softbank.jp>
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+License-File: LICENSE
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.9
+Requires-Dist: numpy>=1.21.0
+Requires-Dist: tabulate>=0.9.0
+Provides-Extra: testing
+Requires-Dist: pandas>=2.2.3; extra == 'testing'
+Requires-Dist: polars>=1.9.0; extra == 'testing'
+Requires-Dist: pytest; extra == 'testing'
+Requires-Dist: pytest-cov; extra == 'testing'
+Description-Content-Type: text/markdown
+
+# structured-array
+
+[![PyPI - Version](https://img.shields.io/pypi/v/structured-array.svg)](https://pypi.org/project/structured-array)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/structured-array.svg)](https://pypi.org/project/structured-array)
+[![codecov](https://codecov.io/gh/hanjinliu/structured-array/graph/badge.svg?token=vaPM3dusOW)](https://codecov.io/gh/hanjinliu/structured-array)
+
+Efficient manipulation of the numpy structured arrays.
+
+-----
+
+## Installation
+
+```console
+pip install structured-array
+```
+
+## Examples
+
+A structured array can easily be created.
+
+```python
+import structured_array as st
+
+arr = st.array({
+    "label": ["a", "b", "c"],
+    "value": [4, 5, 6],
+    "array": [np.zeros(3), np.ones(3), np.zeros(3)],
+})
+arr
+```
+
+```
+label    value    array
+[<U1]    [<i8]    [<f8]
+-------  -------  ----------
+a        4        (3,) array
+b        5        (3,) array
+c        6        (3,) array
+```
+
+You can directly read and write the structured array from/to a npy file.
+
+```python
+arr = st.read_npy("data.npy")
+```
+
+`structured-array` use [polars expression system](https://docs.pola.rs/user-guide/concepts/expressions-and-contexts/)
+to manipulate the structured array.
+
+```python
+arr.select("label", st.col("value") + 1)  # column selection
+arr.group_by("label").agg(st.col("value").sum())  # aggregation
+arr.filter(st.col("value") > 5)  # filtering
+```
+
+## License
+
+`structured-array` is distributed under the terms of the [MIT](https://spdx.org/licenses/MIT.html) license.
