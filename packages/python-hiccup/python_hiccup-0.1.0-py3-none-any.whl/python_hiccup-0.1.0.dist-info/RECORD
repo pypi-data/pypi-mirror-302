@@ -1,0 +1,10 @@
+python_hiccup/__init__.py,sha256=NoU3kSOb3DB7bxGrQ4lWwhcbFOaWfndZj27r4VgGL8s,52
+python_hiccup/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+python_hiccup/html/__init__.py,sha256=jEdoeNQ4faz6MDjhOUmJ89gJjSDzJzxpi-f9W8tWThw,95
+python_hiccup/html/core.py,sha256=qo-NK-P4whThZ1_tkW_Blxc7w3Z6_RZ87j1ic6tD3nQ,2278
+python_hiccup/transform/__init__.py,sha256=ORCXW937lf1qkb7QqygA5sHqwM5nBbfwAYGIgpK09ao,108
+python_hiccup/transform/core.py,sha256=yUwHCBljwcP6CP8SajMTYbbPm-7ItYmZEoDyWukc3w0,2244
+python_hiccup-0.1.0.dist-info/METADATA,sha256=JL7CTSO5hxYUpoQEUM8ADMhowvV2-fS19oyANiS_odY,2925
+python_hiccup-0.1.0.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+python_hiccup-0.1.0.dist-info/licenses/LICENSE,sha256=dU_TdmGkhrCi3vVTj42y-9wiluZlkdm9RwJHHY4nqH0,1068
+python_hiccup-0.1.0.dist-info/RECORD,,
