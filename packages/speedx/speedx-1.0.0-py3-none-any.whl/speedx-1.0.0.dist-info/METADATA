@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: speedx
+Version: 1.0.0
+Summary: A simple network speed tester utility for the terminal.
+Author: Abhinav
+Author-email: upstage.barrier_0x@icloud.com
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Utilities
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: click >=8.0
+Requires-Dist: matplotlib >=3.5
+Requires-Dist: termplotlib >=0.3.0
+Requires-Dist: colorama >=0.4.4
+Requires-Dist: requests >=2.26.0
+Requires-Dist: speedtest-cli
+
