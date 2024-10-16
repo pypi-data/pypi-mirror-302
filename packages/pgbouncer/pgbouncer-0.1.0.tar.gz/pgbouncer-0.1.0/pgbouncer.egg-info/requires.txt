@@ -1,0 +1,7 @@
+fixtures
+psycopg2
+testtools
+
+[test]
+postgresfixture
+testscenarios
