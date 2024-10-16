@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: kg26_excel_writer
+Version: 0.2.0
+Summary: A library to write pandas DataFrames to Excel with formatting
+Home-page: https://github.com/yourusername/excel_writer
+Author: Kiran R Gupta
+Author-email: kiran.rgupta26@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: pandas>=1.0.0
+Requires-Dist: openpyxl>=3.0.0
+
+# Excel Writer
+
+A simple library to write pandas DataFrames to Excel files with custom formatting.
+
+## Installation
+
+You can install the library using pip:
+
+```bash
+pip install excel_writer
