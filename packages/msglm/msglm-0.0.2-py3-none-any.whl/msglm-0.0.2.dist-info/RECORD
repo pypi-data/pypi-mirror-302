@@ -1,0 +1,9 @@
+msglm/__init__.py,sha256=oDLMnoGVIAzRy6kwJGpxSDGyOG-aI7DiiERW6jGauWk,42
+msglm/_modidx.py,sha256=nWudPdHIW2fTO15HyuzZOMf0lKlVY93aBWrsYKTfViw,2459
+msglm/core.py,sha256=c0jQPB5jj3sYGxL5HXwS-vfx-eCetBU7D1RKw6iigD8,5120
+msglm-0.0.2.dist-info/LICENSE,sha256=xV8xoN4VOL0uw9X8RSs2IMuD_Ss_a9yAbtGNeBWZwnw,11337
+msglm-0.0.2.dist-info/METADATA,sha256=6ZQO5QKKWygMDaXEd6YLTRk5CEp7oli-82p1-6kBlcM,5633
+msglm-0.0.2.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+msglm-0.0.2.dist-info/entry_points.txt,sha256=U3Rf8Og0cG0nmm3_5UXSmZf3Jg84hBJCiUVTuGTb-OM,32
+msglm-0.0.2.dist-info/top_level.txt,sha256=thISqyWW_XCaZjzkosHTWzZnAE9H-NESMDqY7FaGy1U,6
+msglm-0.0.2.dist-info/RECORD,,
