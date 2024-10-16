@@ -1,0 +1,16 @@
+# ctweather
+get information of weather with 3days
+## 목적
+OpenWeatherMap API를 활용하여 3일간의 날씨 정보를 조회하는 파이썬 클라이언트 소스코드입니다. 
+
+날씨를 알고 싶은 도시와 시간(오늘, 내일, 모레)를 물어보면 해당 도시의 기온, 습도등의 정보를 얻을 수 있습니다.
+
+### 사용 하기
+
+1. 아래의 웹사이트에서 OpenWeather의 API KEY를 얻습니다.('owm_apikey.txt'에 api key를 입력합니다) 
+
+    - <https://home.openweathermap.org/>
+      
+2. 필요 파이썬 패키지를 설치합니다.
+
+    - 'pip install requests'
