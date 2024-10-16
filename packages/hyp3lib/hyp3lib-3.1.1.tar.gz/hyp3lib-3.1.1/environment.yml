@@ -1,0 +1,31 @@
+name: hyp3-lib
+channels:
+  - conda-forge
+  - nodefaults
+dependencies:
+  # FIXME: standard lib `cgi` module removed in 3.13: https://github.com/ASFHyP3/hyp3-lib/issues/300
+  - python>=3.10,<3.13
+  - pip
+  # For running
+  - boto3
+  - gdal
+  - lxml
+  - netCDF4
+  - numpy
+  - pillow
+  - requests
+  - scipy
+  - statsmodels
+  - urllib3
+  # For packaging, and testing
+  - python-build
+  - flake8
+  - flake8-import-order
+  - flake8-blind-except
+  - flake8-builtins
+  - setuptools
+  - setuptools_scm
+  - pytest
+  - pytest-console-scripts
+  - pytest-cov
+  - responses
