@@ -1,0 +1,69 @@
+[tool.poetry]
+name = "p2d"
+version = "0.3.0"
+description = "Simple python script converting polygon package to domjudge(kattis) package"
+license = "MIT"
+authors = ["cubercsl <hi@cubercsl.site>"]
+maintainers = ["cubercsl <hi@cubercsl.site>", "Dup4 <hi@dup4.com>"]
+readme = ["README.md", "README.cn.md"]
+homepage = "https://github.com/cn-xcpc-tools/Polygon2DOMjudge"
+repository = "https://github.com/cn-xcpc-tools/Polygon2DOMjudge"
+documentation = "https://github.com/cn-xcpc-tools/Polygon2DOMjudge"
+keywords = ["Polygon", "DOMjudge", "Kattis", "Codeforces"]
+classifiers = [
+    "Topic :: Software Development :: Build Tools",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+pyyaml = "^6.0.2"
+betterlogging = "^1.0.0"
+tomli = "^2.0.1"
+typer-slim = { extras = ["standard"], version = "^0.12.5" }
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.3"
+autopep8 = "^2.3.1"
+poetry-bumpversion = "^0.3.2"
+types-pyyaml = "^6.0.12.20240917"
+mypy = "^1.11.2"
+pytest-cov = "^5.0.0"
+pre-commit = "^3.8.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+p2d = 'p2d.cli:main'
+p2d-contest = 'p2d.contest:main'
+
+[[tool.poetry_bumpversion.replacements]]
+files = ["p2d/__init__.py"]
+search = '__version__ = "{current_version}"'
+replace = '__version__ = "{new_version}"'
+
+[tool.autopep8]
+max-line-length = 120
+
+[tool.pytest.ini_options]
+addopts = "--cov=p2d --cov-report html --cov-report term --cov-report xml --cov-fail-under=85"
+
+[tool.coverage.report]
+exclude_also = [
+    "def __repr__",
+    "raise AssertionError",
+    "raise NotImplementedError",
+    "if 0:",
+    "if __name__ == .__main__.:",
+    "if TYPE_CHECKING:",
+    "class .*\\bProtocol\\):",
+    "@(abc\\.)?abstractmethod",
+    "raise ProcessError",
+]
