@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: torch-linear-assignment
+Version: 0.0.1.post2
+Summary: Batched linear assignment with PyTorch and CUDA.
+Author: Ivan Karpukhin
+Author-email: karpuhini@yandex.ru
+License-File: LICENSE
+Requires-Dist: torch>=1.12.0
+Requires-Dist: scipy>=1.6.0
