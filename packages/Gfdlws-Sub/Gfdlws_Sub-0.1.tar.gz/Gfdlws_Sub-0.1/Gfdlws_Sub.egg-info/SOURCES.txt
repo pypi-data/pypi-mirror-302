@@ -1,0 +1,8 @@
+setup.py
+Gfdlws_Sub/__init__.py
+Gfdlws_Sub/stream.py
+Gfdlws_Sub.egg-info/PKG-INFO
+Gfdlws_Sub.egg-info/SOURCES.txt
+Gfdlws_Sub.egg-info/dependency_links.txt
+Gfdlws_Sub.egg-info/requires.txt
+Gfdlws_Sub.egg-info/top_level.txt
