@@ -1,0 +1,23 @@
+Metadata-Version: 2.3
+Name: pymultiplayer
+Version: 0.2
+Summary: A package for adding multiplayer functionality to python games.
+Project-URL: Homepage, https://github.com/iamdeedz/pymultiplayer
+Project-URL: Bug Tracker, https://github.com/iamdeedz/pymultiplayer/issues
+Author: iamdeedz
+License-File: LICENCE
+Requires-Python: >=3
+Description-Content-Type: text/markdown
+
+# pymultiplayer
+A package for adding multiplayer functionality to games.
+
+# Installation
+`pip install pymultiplayer` or `python -m pip install multiplayer`
+
+# Notes
+This is a work in progress. Don't expect all features to work.
+I don't know what version of python is needed for this package to work.
+I will figure this stuff out in due course.
+
+This is mainly just a passion project/project to help future projects (in fact I'm using it right now in [Elemental Defense](https://www.github.com/iamdeedz/elemental-defense/)) but it would be nice if it had some use.

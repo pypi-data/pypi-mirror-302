@@ -1,0 +1,12 @@
+pymultiplayer/TCPserver.py,sha256=s4UpNZAcvIVPkFjiMt5kRAshwXFE89FbjKQ2lC5RWLQ,2645
+pymultiplayer/UDPserver.py,sha256=vg3jv4HVw0waECLJ88p7ano0zxipPi_R-E3JsTu893w,178
+pymultiplayer/__init__.py,sha256=oFGvBAj8l5ACoLoMEglYUjkTCU5noP0PnDuUK2vsWcE,290
+pymultiplayer/_ws_client.py,sha256=QJM47ElQSRB78kms40oY1ZVhnqiYFYAT-OzT0byjCM4,93
+pymultiplayer/client.py,sha256=hmBVoolEd0RxqwWBS_d4Ogs1vgR3g8LDPE60bCmzhjA,1879
+pymultiplayer/errors.py,sha256=aevJ415yY8HF5aYTMuPn-Z_p2buBJhslFs_17auER_8,1009
+pymultiplayer/initial_server.py,sha256=t2UDDPPKNu_lfoQVTFwCgjTfJ8Gf1QanyQ87SwBNVsA,1189
+pymultiplayer/pymultiplayer.py,sha256=b3B4vD3eunR3Jk_NbTP5C6977PwoRx1PvnGyHyuO28s,7368
+pymultiplayer-0.2.dist-info/METADATA,sha256=_8kOZAy7t04laJohVWM8LZqT-bFeB_UFYz52rC85KRA,933
+pymultiplayer-0.2.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+pymultiplayer-0.2.dist-info/licenses/LICENCE,sha256=haiT5sROk6gcwGrsMxtis_VG73EPkFTLI1Kuymovu_Y,1086
+pymultiplayer-0.2.dist-info/RECORD,,
