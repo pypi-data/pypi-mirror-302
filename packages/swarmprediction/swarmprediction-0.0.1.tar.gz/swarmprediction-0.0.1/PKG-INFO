@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: swarmprediction
+Version: 0.0.1
+Summary: Ensembles for prediction powered by agentic systems
+Home-page: https://github.com/microprediction/swarmprediction
+Author: microprediction
+Author-email: peter.cotton@microprediction.com
+License: MIT
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: pytest
+
+# swarmprediction
+Swarm prediction
