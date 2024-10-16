@@ -1,0 +1,5 @@
+[console_scripts]
+pyright=pyright_alright.__main__:pyright
+pyright-alright=pyright_alright.__main__:pyright
+pyright_alright=pyright_alright.__main__:pyright
+
