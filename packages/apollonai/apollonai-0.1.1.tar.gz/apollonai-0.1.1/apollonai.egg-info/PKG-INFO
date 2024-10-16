@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: apollonai
+Version: 0.1.1
+Summary: CyberAiBot AI Library
+Home-page: https://github.com/CYBA7K2M-DATAPROJ/DATAPROJ_ai_library.git
+Author: Antoine Fusilier
+Author-email: antoinefusilier@gmail.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# ApollonAI
+
+
+Setup Library
+```bash
+python setup.py sdist bdist_wheel
+```
+
+Locally install
+```bash 
+pip install .
+```
+
+Install twine into the virtual env
+
+```bash
+pip install twine
+```
+
+Upload to pip package manager
+```bash
+twine upload dist/*
+```

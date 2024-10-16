@@ -1,0 +1,12 @@
+README.md
+setup.py
+apollonai/__init__.py
+apollonai/core.py
+apollonai/main.py
+apollonai/utils.py
+apollonai.egg-info/PKG-INFO
+apollonai.egg-info/SOURCES.txt
+apollonai.egg-info/dependency_links.txt
+apollonai.egg-info/entry_points.txt
+apollonai.egg-info/requires.txt
+apollonai.egg-info/top_level.txt
