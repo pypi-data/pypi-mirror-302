@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+aliyun_python_sdk_iqs.egg-info/PKG-INFO
+aliyun_python_sdk_iqs.egg-info/SOURCES.txt
+aliyun_python_sdk_iqs.egg-info/dependency_links.txt
+aliyun_python_sdk_iqs.egg-info/requires.txt
+aliyun_python_sdk_iqs.egg-info/top_level.txt
+aliyunsdkiqs/__init__.py
+aliyunsdkiqs/request/__init__.py
+aliyunsdkiqs/request/v20240712/CommonQueryBySceneRequest.py
+aliyunsdkiqs/request/v20240712/QueryAttractionsRequest.py
+aliyunsdkiqs/request/v20240712/QueryHotelsRequest.py
+aliyunsdkiqs/request/v20240712/QueryRestaurantsRequest.py
+aliyunsdkiqs/request/v20240712/__init__.py
