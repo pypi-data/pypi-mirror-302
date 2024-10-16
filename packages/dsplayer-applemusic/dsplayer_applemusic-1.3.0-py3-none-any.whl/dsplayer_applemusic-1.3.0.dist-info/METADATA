@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: dsplayer-applemusic
+Version: 1.3.0
+License-File: LICENSE
+Requires-Dist: dsplayer
+Requires-Dist: aiohttp
+Requires-Dist: bs4
+Requires-Dist: yt-dlp
+

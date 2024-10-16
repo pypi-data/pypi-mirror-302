@@ -1,0 +1,2 @@
+[dsplayer.plugins]
+applemusic = dsplayer_applemusic.applemusic:AppleMusicPlugin
