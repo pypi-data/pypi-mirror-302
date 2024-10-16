@@ -1,0 +1,28 @@
+{
+  "name": "gradio_modal",
+  "version": "0.1.0",
+  "description": "Gradio UI packages",
+  "type": "module",
+  "author": "",
+  "license": "ISC",
+  "main_changeset": true,
+  "private": false,
+  "main": "./Index.svelte",
+  "exports": {
+    ".": {
+      "gradio": "./Index.svelte"
+    },
+    "./package.json": "./package.json"
+  },
+  "dependencies": {
+    "@gradio/markdown": "0.10.0",
+    "@gradio/atoms": "0.9.0",
+    "@gradio/column": "0.2.0",
+    "@gradio/icons": "0.8.0",
+    "@gradio/statustracker": "0.8.1",
+    "@gradio/utils": "0.7.0"
+  },
+  "devDependencies": {
+    "@gradio/preview": "^0.12.0"
+  }
+}
