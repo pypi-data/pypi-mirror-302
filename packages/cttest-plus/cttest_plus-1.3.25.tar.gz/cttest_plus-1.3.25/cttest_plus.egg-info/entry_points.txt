@@ -1,0 +1,3 @@
+[console_scripts]
+ctlocust = cttest_plus._locust:main_locust
+cttest = cttest_plus.cli:main
