@@ -1,0 +1,12 @@
+aliyunsdkiqs/__init__.py,sha256=dHuoY6voK7np1A7oRzw1xyBy7CK9_KBAc4FCKW29uRQ,21
+aliyunsdkiqs/request/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aliyunsdkiqs/request/v20240712/CommonQueryBySceneRequest.py,sha256=4GzgOnvbIuNtOfgZZ3sbewKai5UBvo-bSw1WXSdRNCk,1125
+aliyunsdkiqs/request/v20240712/QueryAttractionsRequest.py,sha256=G3W1WgycmjlR7jqjyv9oRR1ykj2ImcYN9N6sOPRrkq8,1126
+aliyunsdkiqs/request/v20240712/QueryHotelsRequest.py,sha256=cxOkgomCIjqhgPBZpDIcvjOCsuCNaeTqAbayuS68NZ4,1111
+aliyunsdkiqs/request/v20240712/QueryRestaurantsRequest.py,sha256=e9lou2au7VXg5nx8A3umd17mo_pcTyA8UMICK-oN0ls,1126
+aliyunsdkiqs/request/v20240712/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aliyun_python_sdk_iqs-1.0.0.dist-info/LICENSE,sha256=CvyZB4el1cZGT3cy9OYoITxta_Ea2maondKqmi8EcpU,575
+aliyun_python_sdk_iqs-1.0.0.dist-info/METADATA,sha256=FISa4DBCT_2sRRoO2dEMUK7JL81uDUk-PhTzr7bS0nU,1454
+aliyun_python_sdk_iqs-1.0.0.dist-info/WHEEL,sha256=iYlv5fX357PQyRT2o6tw1bN-YcKFFHKqB_LwHO5wP-g,110
+aliyun_python_sdk_iqs-1.0.0.dist-info/top_level.txt,sha256=QIillUX5VTuDL2PVtHKSlAdDDhlLew8gJQ6WqxN6Hyg,13
+aliyun_python_sdk_iqs-1.0.0.dist-info/RECORD,,
