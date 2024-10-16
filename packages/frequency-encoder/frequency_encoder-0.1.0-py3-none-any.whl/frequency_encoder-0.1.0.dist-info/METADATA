@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: frequency-encoder
+Version: 0.1.0
+Summary: A frequency encoder for pandas DataFrames compatible with scikit-learn pipelines.
+Home-page: https://github.com/crisbebop/frequency_encoder
+Author: Cristopher Lincoleo Oyarce
+Author-email: cris.lincoleo@gmail.com
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.10
+License-File: LICENSE
+Requires-Dist: pandas
+Requires-Dist: scikit-learn
+
