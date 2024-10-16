@@ -1,0 +1,4 @@
+[console_scripts]
+iup = iup.main:main
+iup-cfg = iup.main:gen_config
+iupd = iup.main_iupd:main

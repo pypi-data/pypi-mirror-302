@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: iup-nft
+Version: 0.5
+Summary: nftset updater for openwrt
+Author: nobitaqaq
+Author-email: xiaoleigs@gmail.com
+Keywords: ipset,openwrt
+Requires-Python: >=3.8
+Requires-Dist: paramiko
+
