@@ -1,0 +1,16 @@
+clayton/__init__.py,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+clayton/rng/__init__.py,sha256=UsWV9m93rHgN8RuiKg4k4rPx9UZc9uOygk5ie4AHSfc,812
+clayton/rng/archimedean.py,sha256=AjAg64POXR4W5Qe3qp-xm_oqpnf6-9wEM0CuEB8T58E,19585
+clayton/rng/base.py,sha256=rgnTF4ZOUUh6DWNhEUxStylhSB6XCJtvcO5dXcpw9gc,31192
+clayton/rng/elliptical.py,sha256=UN5WEIvy-Y0OId5igTMr4Vt8NYFY09pakbjZwKXvqUQ,2273
+clayton/rng/evd.py,sha256=gfSAae--4qVY_bcDymAS6P-KgKZvGmKRUh4DaHihPk0,35476
+clayton/rng/monte_carlo.py,sha256=E7-huuqMLmvKLDGIMnd-xNvVWTk5yKwq0xs1o14QsMc,8160
+clayton/rng/utils.py,sha256=bPNMWZmOIhDv3n37Jc4AZ2Fnrlq4KpQsV_3lJyykkEA,4465
+clayton/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+clayton/tests/test_archimedean.py,sha256=_AoANPLYWEuuHiWbU-t8RpmOyGxDrYAWl7eTXIWXzfQ,8816
+clayton/tests/test_base.py,sha256=eFyeKwfIOq81furnHMxtF08FfcLkl-XrTkIbi3TqKw0,1997
+clayton/tests/test_evd.py,sha256=3gEtOff1c0ZUaNV0tO77TlX8RV9CCa1_YYM_ctgxsJQ,7164
+clayton-0.0.4.dist-info/METADATA,sha256=HNfgcqAGFy--3NVlmogyPwGIG6eqS12m-eDyi6UN9vk,1634
+clayton-0.0.4.dist-info/WHEEL,sha256=GV9aMThwP_4oNCtvEC2ec3qUYutgWeAzklro_0m4WJQ,91
+clayton-0.0.4.dist-info/top_level.txt,sha256=BRmqrgNaIuCSPnAV4tLYy2nZ2mZQAAFHPe6dHeP1nYM,8
+clayton-0.0.4.dist-info/RECORD,,
