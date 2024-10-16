@@ -1,0 +1,4 @@
+Spatial variations in the demodulation matrices are now fit on a per-IFU-group basis.
+First, a demodulation matrix is fit for every illuminated spatial pixel and these results are fit as a function of spatial pixel within each IFU group.
+These polynomial fits (order is a pipeline parameter) mitigate noise in the individual demodulation matrices.
+We still average all wavelengths in each spatial pixel because the demodulation matrices have been shown to be constant with wavelength.

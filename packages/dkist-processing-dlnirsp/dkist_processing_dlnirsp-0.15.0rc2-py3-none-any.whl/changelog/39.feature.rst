@@ -1,0 +1,2 @@
+Compute demodulation matrices separately for each spatial pixel and then fit the demodulation matrices as a function
+of spatial pixel within each group.
