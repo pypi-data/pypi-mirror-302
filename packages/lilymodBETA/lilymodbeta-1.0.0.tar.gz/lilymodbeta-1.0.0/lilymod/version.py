@@ -1,0 +1,3 @@
+LILY_MAJOR:int=1
+LILY_MINOR:int=0
+LILY_PATCH:int=0

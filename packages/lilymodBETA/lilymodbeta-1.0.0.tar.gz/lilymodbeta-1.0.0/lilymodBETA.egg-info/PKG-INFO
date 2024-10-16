@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: lilymodBETA
+Version: 1.0.0
+Summary: So simple, its criminal
+Home-page: https://github.com/d34d0s/Anntwinetta
+Author: Izaiyah Stokes
+Author-email: zeroth.bat@gmail.com
+Classifier: Programming Language :: Python :: 3.12
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: GLFW
+Requires-Dist: PyGLM
+Requires-Dist: PyOpenGL
+Requires-Dist: ModernGL
+Requires-Dist: Pygame-CE
+Requires-Dist: Numpy
+Requires-Dist: Numba
+Requires-Dist: SetupTools
+
+![Lily Mod Banner](https://private-user-images.githubusercontent.com/118138305/370608403-fdc5a337-8fd8-4dbb-a4f6-b53edd92c81c.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MjkwMjMyNTQsIm5iZiI6MTcyOTAyMjk1NCwicGF0aCI6Ii8xMTgxMzgzMDUvMzcwNjA4NDAzLWZkYzVhMzM3LThmZDgtNGRiYi1hNGY2LWI1M2VkZDkyYzgxYy5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQxMDE1JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MTAxNVQyMDA5MTRaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1lZjExOTM0NDcyOGJlNWRiNDQ5MDAxMDIzZTY2OWY0NTM1Yjg1OTU2MGU1YTBlMjMyYmQ5YTEyOTkyMjk4OGY4JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.inpj0QaS4r8NJS63BDF6C5aKQMnH7hSQCTith3LJxBE)
+<h3>Lily Module</h3>
+[ The official Python wrapper for the Anntwinetta Engine ]
+<hr>
+<br>
+
+### Features
+- Includes the Lily-Mod scripting layer for the Anntwinetta Engine
+- Includes the Pytwin sub-module wrapping the Anntwinetta Engine
+- Includes many 'pythonic' utility functions and classes for a quickend development pace
