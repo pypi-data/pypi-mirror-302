@@ -1,0 +1,8 @@
+include *
+exclude baysalt/actual_harbor.py
+exclude baysalt/Forge
+exclude *.pyc
+exclude __pycache__
+exclude .gitignore
+exclude .DS_Store
+
