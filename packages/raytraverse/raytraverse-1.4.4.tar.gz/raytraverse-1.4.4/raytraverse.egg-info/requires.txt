@@ -1,0 +1,9 @@
+craytraverse>=0.1.5
+raytools
+clasp
+numpy<1.27
+scipy
+matplotlib
+skyfield
+shapely
+scikit-learn
