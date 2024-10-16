@@ -1,0 +1,42 @@
+[tool.poetry]
+name = "etna-rocinante"
+version = "2.6.5-b.2"
+description = "Tool to manage execution of automated tests jobs"
+authors = [
+    "Clément \"Doom\" Doumergue <clement.doumergue@etna.io>",
+    "Arthur \"Barbatrou\" Cros <arthur.cros@etna.io>",
+]
+license = "MIT"
+
+packages = [
+    { include = "rocinante"},
+    { include = "rocinante/drivers"},
+]
+
+[tool.poetry.scripts]
+rocinante = 'rocinante:main'
+
+[tool.poetry.dependencies]
+python = "^3.8"
+etna-quixote = "^2.0.0"
+etna-api = "^3.0.0"
+etna-panza = "^4.0.0"
+etna-pika-utils = "^1.0.0"
+nectarine = "^1.1.1"
+[tool.poetry.dev-dependencies]
+black = "^22.6.0"
+ipython = "^8.4.0"
+mypy = "^0.961"
+pytest = "^7.1.2"
+pika = "^1.1.0"
+PyYAML = "^5.3.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 120
+
+[tool.mypy]
+plugins = []
