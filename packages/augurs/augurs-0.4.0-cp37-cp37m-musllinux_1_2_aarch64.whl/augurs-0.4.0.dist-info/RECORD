@@ -1,0 +1,10 @@
+augurs-0.4.0.dist-info/METADATA,sha256=4QWitX1Aod-w23Ctlb7N05lDx9i9WfSSdOSfIIG1vzs,2396
+augurs-0.4.0.dist-info/WHEEL,sha256=Beq599YDiYg8E_IB-yMBdJ1HtkpASFI1SxXt7QwcRqA,107
+augurs-0.4.0.dist-info/licenses/LICENSE-APACHE,sha256=NwhFje5_NZrGycVVgCPtSBvoflNyxD69fyynrSPBICY,10848
+augurs-0.4.0.dist-info/licenses/LICENSE-MIT,sha256=RDOQ6MOtjZhAK1TwvzErhr_jcEumEwvmf914kB_qsb0,1054
+augurs.libs/libgcc_s-e52197c3.so.1,sha256=vkPW1Auw6CH9Bjk7frmX3hry_1H9c0tRI0Ncyg71WUI,724137
+augurs/__init__.py,sha256=vsb8MNUQlADD_3dQs8Lp0HtmXL-F0j5zt1ZAVKnZ8Ew,107
+augurs/__init__.pyi,sha256=QBZSdvZAjgljvHmfgxW4oVAKQl3plw5aTSJY2Q7Yej8,3300
+augurs/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+augurs/augurs.cpython-37m-aarch64-linux-gnu.so,sha256=8LqEXZ6axjtHF9L40RN4luTU8wnStq4Vg8x-3ndTtZY,1248097
+augurs-0.4.0.dist-info/RECORD,,
