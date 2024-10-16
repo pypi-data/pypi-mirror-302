@@ -1,0 +1,7 @@
+LICENSE
+README.md
+pyproject.toml
+cu_analise.egg-info/PKG-INFO
+cu_analise.egg-info/SOURCES.txt
+cu_analise.egg-info/dependency_links.txt
+cu_analise.egg-info/top_level.txt
