@@ -1,0 +1,12 @@
+jquant-0.1.2b16.dist-info/METADATA,sha256=fS616TqceIXAns8TEQQbn77juqhtYjBKDC1EM6WS19s,488
+jquant-0.1.2b16.dist-info/WHEEL,sha256=pM0IBB6ZwH3nkEPhtcp50KvKNX-07jYtnb1g1m6Z4Co,90
+jquant-0.1.2b16.dist-info/entry_points.txt,sha256=6OYgBcLyFCUgeqLgnvMyOJxPCWzgy7se4rLPKtNonMs,34
+jquant/.DS_Store,sha256=rH8r-_jR7JSBAv1MFZ4SyTbRBlkgtteAObCxY5prMCA,6148
+jquant/__init__.py,sha256=2YKORDxlgQ9rsi12Z3TNsDMmDN_bE_CQBXmWCgoUXyI,815
+jquant/_typing.py,sha256=AMoJ4QpXo1xxVxM_X9B7D2dC9o-k9YZ5EVJGB_6JBdY,3493
+jquant/aio.py,sha256=pi5GrHL6RCzBNd2O2jFLMZY6xg-qAQ39GAeSDL5KReo,27020
+jquant/client.py,sha256=w9EguU6sv_IgpeSic-YxMrHZqYXbh-4Dsfaw-07ZudE,28055
+jquant/platform_pb2.py,sha256=qLcBeGU30zn_OXA-jSyhpJgIOa0Y75cYCLIGeCAH5UI,26118
+jquant/platform_pb2.pyi,sha256=cY66LoyLbqStk45SGKRZPTFrEGRQgkaJhVaDAxiQ6LU,36080
+jquant/platform_pb2_grpc.py,sha256=sOjWnokinrh_2muXGJGSZ1l1LY3EuTKUciSAqyEYh0w,28612
+jquant-0.1.2b16.dist-info/RECORD,,
