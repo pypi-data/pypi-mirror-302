@@ -1,0 +1,13 @@
+external_resources/VERSION,sha256=kR_AxIywxwYB21d1qb7xt0DcTMn5tGOJufBWP-frlNc,5
+external_resources/__init__.py,sha256=Tjq0KxU7ccpql5_URiFGnbG32LUFWMtsc0-mmt-FaB4,104
+external_resources/cache.py,sha256=GdqDCs-adG28wQSd20jmlpirI9wlnKet2rcbotzOyp4,2201
+external_resources/extres.py,sha256=Quc_q9utXYWi4joJKdKB-d0ZrxRd-LgnwI22sTEPJ94,4505
+external_resources/operations.py,sha256=hrNTUrSJYEmC1s7PkCHFVIUPdWYLjx-Qa9XUrPJTfXw,1137
+external_resources/requirements.py,sha256=eut2QBp0p3iMuKZN9PX8uhQ-YWUNdFXMfaJCxi2u8wg,3065
+external_resources/resinfo.py,sha256=ZDjEQ9PRyE11f3w-wF2X5-KsEsyNm4BD0Bcz9nm5uxY,4642
+external_resources/tools.py,sha256=HP64j0isge2ecLG3fKuJZ1fYQPS0L7yK0ION9YlsLDQ,1656
+external_resources-0.2.0.dist-info/METADATA,sha256=q7OyQc75JXQU9isJVlw2ea0jNAj2Pzu9oKjrZ13MEwU,3855
+external_resources-0.2.0.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+external_resources-0.2.0.dist-info/entry_points.txt,sha256=dqrU2DchSRXptraZc8AcGthMwKMjkILdi8-A0dr8i3U,57
+external_resources-0.2.0.dist-info/licenses/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+external_resources-0.2.0.dist-info/RECORD,,
