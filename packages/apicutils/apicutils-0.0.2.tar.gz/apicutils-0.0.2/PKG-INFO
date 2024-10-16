@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: apicutils
+Version: 0.0.2
+Summary: personal misc functions
+Author: Antoine Picard-Weibel
+Author-email: apicard.w@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+License-File: LICENSE
+Requires-Dist: pandas
+Requires-Dist: numpy<=1.26
+Requires-Dist: multiprocess>=0.70
+
+Miscellaneous functions shared between packages
