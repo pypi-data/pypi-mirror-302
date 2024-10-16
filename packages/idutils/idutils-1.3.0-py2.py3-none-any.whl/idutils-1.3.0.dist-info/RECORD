@@ -1,0 +1,14 @@
+idutils/__init__.py,sha256=DaO4bYeELAAI7k_wGIxShweyhdJa0Zr9_lFuKN2bdjQ,2897
+idutils/detectors.py,sha256=_Lr8FVtH0IrMeSOZMnbfAoS73A4qJTzCa2aDhHID_BQ,4258
+idutils/ext.py,sha256=IMr3aqDjr6qI0eIPRQYm7HkhPK-JQRyZG4i0Dl_xXP4,3744
+idutils/normalizers.py,sha256=6AA-Oap9Mq2YCtAOUlsoO1FpNSaKUlkx9bXQOiJkbco,7482
+idutils/proxies.py,sha256=qTw8szZU-Q9TrOJ_lVIruq1XACJLHbPF2VVr6hFAvWY,633
+idutils/utils.py,sha256=ohjbi9vt4DJvRUHGpiR4Y8jsF69LhywSXXKlaLRbrrk,13061
+idutils/validators.py,sha256=VBd69mUVFMaPdStyVIHWLgK1e5IOGx7y7w5-U-lnLIs,8171
+idutils-1.3.0.dist-info/AUTHORS.rst,sha256=94JrFJeyM63e6hf0leKm-ukYtIGDuXqWxJo3efiPruE,615
+idutils-1.3.0.dist-info/LICENSE,sha256=nVT_ANvTK_Zi0b5x0BxgEp47l2qh3DtirwlJB7pV9zM,1835
+idutils-1.3.0.dist-info/METADATA,sha256=tbUzCfydh69tN3imRb1srO-yL3Y-KIMs2GNF8Dvmg1E,6861
+idutils-1.3.0.dist-info/WHEEL,sha256=-G_t0oGuE7UD0DrSpVZnq1hHMBV9DD2XkS5v7XpmTnk,110
+idutils-1.3.0.dist-info/entry_points.txt,sha256=BqW-a-k3HeQaeRQivigAp_ZfWS67MITdonalitF9cuM,234
+idutils-1.3.0.dist-info/top_level.txt,sha256=5b-VgV_eLzXv0AdVAx1So3ReCkSHq8LOH9UjJ10g4Zw,8
+idutils-1.3.0.dist-info/RECORD,,
