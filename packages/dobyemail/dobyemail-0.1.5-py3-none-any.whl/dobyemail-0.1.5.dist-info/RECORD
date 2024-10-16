@@ -1,0 +1,16 @@
+dobyemail/__init__.py,sha256=UKMsrWT3GXLgL9cG1Y73ARnuToa9llntsZc3zJS-mZM,470
+dobyemail/check_ports.py,sha256=Jy-hxVG4N19_SaZBaNwwmwjwwCGZ5YI0y77awBra-WU,436
+dobyemail/config.py,sha256=zRgRqZVYrIRrjcCaJqQTkzappZSL9YSfNhHkVvWmNaQ,519
+dobyemail/email_ports.json,sha256=P397DtrF-IovvvtZiHdAtfWVkTjFtTN0yOZC56BE5GY,451
+dobyemail/get_email_ports.py,sha256=gz2wm_QijWYfwrHo1ZpzyDNNW8Y-92fAhsIzy0tKcIw,81
+dobyemail/is_valid_email.py,sha256=8mn8sCjbNgia0jBxMXEqg47AU5VhpJE7gZ7nggyZCFk,152
+dobyemail/parse_date.py,sha256=XvlxAqlNvHuGFvgc0TE17sADfYiFTLjRqYGbGesI3hI,544
+dobyemail/reader.py,sha256=zrmtR6kClNIj9rH1zhuerV5NJ4xKaulKgQMl2B3XAo4,11638
+dobyemail/sender.py,sha256=VOFn7t4k6cWujV9yOj5-Qp0KjkH2LTD7NAcbscx_QHY,7498
+dobyemail/service.py,sha256=quJAPcAXl86oS3xk8oJYU10nLIIK9bIZ6A7kHK2-RyM,3784
+dobyemail/transfer.py,sha256=6mhzA5obGe2T8ge2mBC2cB1UraWsc38AETth6a4myP0,3930
+dobyemail-0.1.5.dist-info/LICENSE,sha256=B7IfEB1ukvT0Bp_hzRx6vuMfu4e5pFoxmKG2GdfEOqw,11916
+dobyemail-0.1.5.dist-info/METADATA,sha256=g-gTfYDMzJC4fxu0K8P_FJ71_DPewuq7eJUGBXbep2E,4665
+dobyemail-0.1.5.dist-info/WHEEL,sha256=GV9aMThwP_4oNCtvEC2ec3qUYutgWeAzklro_0m4WJQ,91
+dobyemail-0.1.5.dist-info/top_level.txt,sha256=4aWsWowTvrLZY9XgVw3ovpFMTxbYlCcBaqZ_v-ozUFk,10
+dobyemail-0.1.5.dist-info/RECORD,,
