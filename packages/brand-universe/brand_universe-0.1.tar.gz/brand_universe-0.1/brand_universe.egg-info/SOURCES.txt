@@ -1,0 +1,5 @@
+setup.py
+brand_universe.egg-info/PKG-INFO
+brand_universe.egg-info/SOURCES.txt
+brand_universe.egg-info/dependency_links.txt
+brand_universe.egg-info/top_level.txt
