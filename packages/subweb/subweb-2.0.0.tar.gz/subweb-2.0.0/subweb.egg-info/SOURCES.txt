@@ -1,0 +1,9 @@
+README.md
+setup.py
+subweb/__init__.py
+subweb/scanner.py
+subweb.egg-info/PKG-INFO
+subweb.egg-info/SOURCES.txt
+subweb.egg-info/dependency_links.txt
+subweb.egg-info/requires.txt
+subweb.egg-info/top_level.txt
