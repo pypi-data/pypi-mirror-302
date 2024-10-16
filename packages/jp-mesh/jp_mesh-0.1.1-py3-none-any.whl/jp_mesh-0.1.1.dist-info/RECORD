@@ -1,0 +1,15 @@
+mesh_processing/__init__.py,sha256=NZH17rijugQsRkWo1G3k7oq_DLx_f3ymQIx5iGkPvhs,1071
+mesh_processing/logging_config.py,sha256=DT7fzTzQgYXrSSUVr8V-vBSAwer5AmwA5mCo9toKXdY,451
+mesh_processing/main.py,sha256=bcB5BfBno1ai3KZdC9fzcgaeyToDgG65z51FcnYWm44,4440
+mesh_processing/mesh_analysis.py,sha256=dv8-tgR5cD_poADhsB_R258xsuuCHXcIJrddo_ClIpU,2882
+mesh_processing/mesh_exceptions.py,sha256=zhlUBzJC3Z15L2CKxGjGNH9h5r13u7C7ltkc_NTfsEc,1149
+mesh_processing/mesh_load.py,sha256=90_g056SH9WDCx5uTMPVqLQHGbp4qjcTs0zzqG4GL8w,992
+mesh_processing/mesh_sdf.py,sha256=Z3pNRyzZ_ekp2Qim_C_X1dbljtG9BbYgxwtv7Ivw5G8,1695
+mesh_processing/mesh_simplification.py,sha256=cgplCHR45bWtSKHnEe9fzR1dg4o_utcdTVZpEU3oRBk,3656
+mesh_processing/mesh_visualizer.py,sha256=uZ-NZM-rEhmVLpJhpknzQwA60HmxV2QhjR4B2vRwxdg,5885
+mesh_processing/utils.py,sha256=mW3IKquaus7DJUb_ccK7OM2nPToSwgwem8wAjB1nuxk,1069
+jp_mesh-0.1.1.dist-info/LICENSE,sha256=im-dFchCnOw4-gN68zuRz6E4EU1VsDB16WawzlCebzI,1090
+jp_mesh-0.1.1.dist-info/METADATA,sha256=JBCzwXe5tbhvANPGXlPFcqzlZsKzkaIQaakV54F1rP8,2896
+jp_mesh-0.1.1.dist-info/WHEEL,sha256=GV9aMThwP_4oNCtvEC2ec3qUYutgWeAzklro_0m4WJQ,91
+jp_mesh-0.1.1.dist-info/top_level.txt,sha256=-iEEENaIa_7HNqPINnyLC2l_TY5kIm4VnTOkxIbgODk,16
+jp_mesh-0.1.1.dist-info/RECORD,,
