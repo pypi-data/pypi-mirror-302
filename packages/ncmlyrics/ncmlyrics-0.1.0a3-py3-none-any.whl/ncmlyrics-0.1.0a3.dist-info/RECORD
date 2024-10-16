@@ -1,0 +1,15 @@
+ncmlyrics/__init__.py,sha256=XZftJGfNa3XrIBn6USUBI3OcVRNMbZHz_n_EnhoY7Uo,159
+ncmlyrics/__main__.py,sha256=R1Bp088McP-kOpKEgY3nJUA7CtMGhqN9uqn4jE8t9UQ,5165
+ncmlyrics/__version__.py,sha256=DwYP0ruuBzwEORWH6Gtk30w80YvFjNkU94-Z2USxiCo,91
+ncmlyrics/api.py,sha256=hBhbRHYISkDItCQtDD0y_vrynu4vhMPOYZZUdnTQHBY,4343
+ncmlyrics/constant.py,sha256=lCkMFWkgTo3Zy1A9J0d__mF3pnJCQTYycyJLYoNhUe0,330
+ncmlyrics/enum.py,sha256=AYuFIfRf0IZHOvnZPbRiXoI7BsMV1-QfnrkDyvjVyMY,652
+ncmlyrics/error.py,sha256=kKJDfLI1e49DS4EhS7gJypcylme-ofZPkPoOahF2RmM,1028
+ncmlyrics/lrc.py,sha256=1M-F1DCuuQ6QyubsQfRfPD2E_EKWZWtB8cC2U3AKyhw,6569
+ncmlyrics/object.py,sha256=Xxxu178FhxIbVo69SAv_nDqFKGzdoDgRFpN7YzKDQ48,4875
+ncmlyrics/util.py,sha256=5-VOmNJBETJy4qTO61MbDxXFnzbw7WN9-D2Mdf8Ja_g,4010
+ncmlyrics-0.1.0a3.dist-info/METADATA,sha256=C58WXweYSLHZXzBKCL7Co5z_MtjsGxU3oHbDYqXtqDY,1369
+ncmlyrics-0.1.0a3.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+ncmlyrics-0.1.0a3.dist-info/entry_points.txt,sha256=wlq_IaB1hEBpv9Gm_NoGlGS7zpaxNJSkDZOwJLStPMg,45
+ncmlyrics-0.1.0a3.dist-info/licenses/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+ncmlyrics-0.1.0a3.dist-info/RECORD,,
