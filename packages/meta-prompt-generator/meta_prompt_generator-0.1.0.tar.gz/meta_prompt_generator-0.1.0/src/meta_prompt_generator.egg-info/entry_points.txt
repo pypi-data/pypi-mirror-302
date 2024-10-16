@@ -1,0 +1,2 @@
+[console_scripts]
+meta-prompt = meta_prompt_generator.cli:main
