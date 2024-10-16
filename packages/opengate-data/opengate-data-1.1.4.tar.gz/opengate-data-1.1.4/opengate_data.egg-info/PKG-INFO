@@ -1,0 +1,108 @@
+Metadata-Version: 2.1
+Name: opengate-data
+Version: 1.1.4
+Summary: description
+Author: amplia soluciones
+Author-email: pipy@amplia.es
+License: Apache License 2.0
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Opengate-data
+
+Opengate-data is a python library that helps you integrate OpenGate into your python projects.
+
+## Installation
+
+pip install opengate-data
+
+## Import
+
+from opengate_data import OpenGateClient
+
+## Basic use with user and password
+
+client = OpenGateClient(url="Url", user="User", password="Password")
+
+## Basic use with api-key
+
+client = OpenGateClient(url="Url", api_key="Api_Key")
+
+## Generate version
+
+To configure uploading packages to PyPI, you need to create and set up the .pypirc file in your home directory. Below are the steps for different operating systems:
+
+- **Windows**: `notepad $env:USERPROFILE\.pypirc`. 
+- **Linux**: `nano ~/.pypirc`. 
+
+Inside the .pypirc file, configure the following lines, replacing token with your actual PyPI API token:
+
+```
+[pypi]
+     username = __token__
+     password = token
+```
+
+Open the **setup.py** file and update the version of your project as needed.
+After updating the version in setup.py, run the following script to build and upload your package to PyPI:
+`./dish.sh`. 
+
+## Features
+
+The library consists of the following modules:
+
+- **IA**
+  - Models
+  - Pipelines
+  - Transformers
+- **Collection**
+  - Collection
+  - Bulk Collection
+- **Provision**
+  - Asset
+  - Bulk
+  - Devices
+  - Processor
+- **Rules**
+- **Searching**
+  - Datapoints
+  - Data sets
+  - Timeseries
+  - Entities
+  - Rules
+
+## Documentation
+
+To generate the API documentation you can execute `./generate_doc.sh` and open the generated Markdown on:
+**docs/documentation.md**
+
+## Additional Documentation
+
+For more details and examples about each of the modules,
+consult the [complete documentation](https://documentation.opengate.es/).
+
+## Test
+
+### Running All Tests
+
+If you want to run all the tests, both unit and integration tests, you can execute the `pytest.ini` file.
+Run the following command in your terminal: `pytest`
+
+### Running Unit Tests
+
+Inside the unit folder, you will find all the unit tests corresponding to each module.
+These tests verify the functionality of each function individually.
+To run a unit test, use the pytest command followed by the name of the unit test.
+For example: `pytest test_iot_collection.py`
+
+### Running Integration Tests
+
+Inside the test/features, you will find all the integration tests.
+Additionally, you need to add the URL and api_key to the test_steps_cucumber.py file:  `OpenGateClient(url='url', api_key='api_key')`
+
+To run the tests, use the following command: `pytest test_steps_cucumber.py`
+
+## License
+
+This project is licensed under the MIT License.
