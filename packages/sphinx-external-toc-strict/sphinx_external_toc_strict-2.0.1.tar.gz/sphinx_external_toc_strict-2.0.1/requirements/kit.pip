@@ -1,0 +1,53 @@
+auditwheel==6.0.0
+    # via -r requirements/kit.in
+bashlex==0.18
+    # via cibuildwheel
+bracex==2.4
+    # via cibuildwheel
+build==1.2.1
+    # via -r requirements/kit.in
+certifi==2024.8.30
+    # via cibuildwheel
+cibuildwheel==2.17.0
+    # via -r requirements/kit.in
+filelock==3.13.4
+    # via cibuildwheel
+markdown-it-py==3.0.0
+    # via rich
+mdurl==0.1.2
+    # via markdown-it-py
+packaging==24.1
+    # via
+    #   auditwheel
+    #   build
+    #   cibuildwheel
+    #   setuptools-scm
+platformdirs==4.3.6
+    # via cibuildwheel
+pyelftools==0.31
+    # via auditwheel
+pygments==2.18.0
+    # via rich
+pyproject-hooks==1.0.0
+    # via build
+rich==13.8.1
+    # via setuptools-scm
+setuptools-scm[rich]==8.1.0
+    # via -r requirements/kit.in
+tomli==2.0.1 ; python_version < "3.11"
+    # via
+    #   -c requirements/pins.pip
+    #   build
+    #   cibuildwheel
+    #   pyproject-hooks
+    #   setuptools-scm
+typing-extensions==4.12.2; python_version<"3.10"
+    # via cibuildwheel
+wheel==0.43.0
+    # via -r requirements/kit.in
+
+# The following packages are considered to be unsafe in a requirements file:
+setuptools==69.2.0
+    # via
+    #   -r requirements/kit.in
+    #   setuptools-scm
