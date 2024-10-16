@@ -1,0 +1,9 @@
+README.md
+setup.py
+intune_study/__init__.py
+intune_study/create_compliance.py
+intune_study.egg-info/PKG-INFO
+intune_study.egg-info/SOURCES.txt
+intune_study.egg-info/dependency_links.txt
+intune_study.egg-info/requires.txt
+intune_study.egg-info/top_level.txt
