@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+openexr_numpy/__init__.py
+openexr_numpy/openexr_numpy.py
+openexr_numpy/py.typed
+openexr_numpy.egg-info/PKG-INFO
+openexr_numpy.egg-info/SOURCES.txt
+openexr_numpy.egg-info/dependency_links.txt
+openexr_numpy.egg-info/requires.txt
+openexr_numpy.egg-info/top_level.txt
+tests/test_openexr_numpy.py
