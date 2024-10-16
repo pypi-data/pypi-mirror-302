@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: tango_getset
+Version: 0.4
+Summary: Automatisch Getter und Setter für Klassen generieren
+Home-page: https://github.com/Pankraz01/gettersetter
+Author: Daniel
+Author-email: mine6626@gmail.com
