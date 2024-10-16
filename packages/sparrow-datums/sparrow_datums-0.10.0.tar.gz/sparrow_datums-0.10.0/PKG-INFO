@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: sparrow-datums
+Version: 0.10.0
+Author: Sparrow Computing
+Author-email: ben@sparrow.dev
+License-File: LICENSE
+Requires-Dist: fire
+Requires-Dist: numpy
+Requires-Dist: xmltodict
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: pytest-cov; extra == "dev"

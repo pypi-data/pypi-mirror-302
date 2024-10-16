@@ -1,0 +1,7 @@
+fire
+numpy
+xmltodict
+
+[dev]
+pytest
+pytest-cov
