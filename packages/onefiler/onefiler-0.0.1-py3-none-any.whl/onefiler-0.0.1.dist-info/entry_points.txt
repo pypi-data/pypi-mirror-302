@@ -1,0 +1,2 @@
+[console_scripts]
+onefiler = onefiler.main:main
