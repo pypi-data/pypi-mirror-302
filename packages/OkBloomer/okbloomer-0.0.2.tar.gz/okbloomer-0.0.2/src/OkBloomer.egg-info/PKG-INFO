@@ -1,0 +1,69 @@
+Metadata-Version: 2.1
+Name: OkBloomer
+Version: 0.0.2
+Summary: An implementation of the OkBloomer algorithm, an autoscaling Bloom filter with ultra-low memory footprint for Python.
+Author-email: Andrew DalPino <support@andrewdalpino.com>
+License: MIT
+Project-URL: Homepage, https://github.com/andrewdalpino/PyBloomer
+Project-URL: Documentation, https://github.com/andrewdalpino/PyBloomer/README.md
+Project-URL: Source, https://github.com/andrewdalpino/PyBloomer
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: mmh3>5.0.0
+Requires-Dist: nptyping>=2.5.0
+Requires-Dist: numpy>=1.19.5
+Provides-Extra: dev
+Requires-Dist: mypy; extra == "dev"
+Provides-Extra: test
+Requires-Dist: mypy; extra == "test"
+
+# Ok Bloomer
+An implementation of the OkBloomer algorithm, an autoscaling [Bloom filter](https://en.wikipedia.org/wiki/Bloom_filter) with ultra-low memory footprint for Python. Ok Bloomer employs a novel layered filtering strategy that allows it to expand while maintaining an upper bound on the false positive rate. As such, Ok Bloomer is suitable for streaming data where the size is not known a priori.
+
+- **Ultra-low** memory footprint
+- **Autoscaling** works on streaming data
+- **Bounded** maximum false positive rate
+- **Open-source** and free to use commercially
+
+### Parameters
+| # | Name | Default | Type | Description |
+|---|---|---|---|---|
+| 1 | max_false_positive_rate | 0.01 | float | The upper false positivity rate bounds. |
+| 2 | num_hashes | 4 | int | The number of hash functions used, i.e. the number of slices per layer. |
+| 3 | layer_size | 32000000 | int | The size of each layer of the filter in bits. |
+
+### Example
+
+```python
+import okbloomer
+
+filter = okbloomer.BloomFilter(
+    max_false_positive_rate=0.01,
+    num_hashes=4,
+    layer_size=32000000,
+)
+
+filter.insert('foo')
+
+print(filter.exists('foo'))
+
+print(filter.existsOrInsert('bar'))
+
+print(filter.exists('bar'))
+
+print(filter.false_positive_rate())
+```
+
+```
+True 
+
+False
+
+True
+
+3.906249999999999e-27
+```
+
+## References
+- [1] A. DalPino. (2021). OkBloomer, a novel autoscaling Bloom Filter [[link](https://github.com/andrewdalpino/OkBloomer)].
