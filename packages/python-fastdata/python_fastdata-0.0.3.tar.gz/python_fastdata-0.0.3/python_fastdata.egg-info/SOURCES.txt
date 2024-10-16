@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+settings.ini
+setup.py
+fastdata/__init__.py
+fastdata/_modidx.py
+fastdata/core.py
+python_fastdata.egg-info/PKG-INFO
+python_fastdata.egg-info/SOURCES.txt
+python_fastdata.egg-info/dependency_links.txt
+python_fastdata.egg-info/entry_points.txt
+python_fastdata.egg-info/not-zip-safe
+python_fastdata.egg-info/requires.txt
+python_fastdata.egg-info/top_level.txt
