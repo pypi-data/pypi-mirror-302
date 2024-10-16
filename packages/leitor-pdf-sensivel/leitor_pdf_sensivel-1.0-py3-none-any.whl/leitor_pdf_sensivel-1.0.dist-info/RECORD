@@ -1,0 +1,15 @@
+leitor_pdf_sensivel/__init__.py,sha256=W09ULmhwt0ewLJ5r-PQ6z5XdBdE_okdYTb9_4cVWf54,91
+leitor_pdf_sensivel/elimina_dados_sensiveis.py,sha256=K9CswPujyAZfejO3mBHzndVa6ARUWNQZEa6PCs-roK4,17458
+leitor_pdf_sensivel/le_arquivo_sem_dados_sensiveis.py,sha256=da43xtklUrds95gTYUSRBzRogXnlOmA_7KhXER6MIGg,3188
+leitor_pdf_sensivel/data/exames.xlsx,sha256=VIzcm934ed6KHBSK3UtB3AuCrIkemeBgvt9fTSMbXx8,62300
+leitor_pdf_sensivel/pt_core_news_lg-3.7.0/LICENSE,sha256=OyiQ6s2FE3MAHEoUYjRY462vGxlnk5qpw4oxjijWHAA,20138
+leitor_pdf_sensivel/pt_core_news_lg-3.7.0/LICENSES_SOURCES,sha256=PaiS1jEKbeoq7fG-EGSXrMnaNL4WB5JgruhtqY980Mg,40015
+leitor_pdf_sensivel/pt_core_news_lg-3.7.0/README.md,sha256=Nn7JcQw_S5WRCXDCId3aOAc7Ik1oP8MR5g53O1el7To,34072
+leitor_pdf_sensivel/pt_core_news_lg-3.7.0/accuracy.json,sha256=ZwblSVrsZuR840K2TxNpiHqPAe-i0kN1YGJKSdHsxok,5646
+leitor_pdf_sensivel/pt_core_news_lg-3.7.0/config.cfg,sha256=v_cIvsrosn57tVswsmv39I1BcYaIOaSWDe2mYojhDc8,6076
+leitor_pdf_sensivel/pt_core_news_lg-3.7.0/meta.json,sha256=cde-1iNBAcKlxxqSsWw6z2f2DeFd9Dqiw0xpn87t0gg,43989
+leitor_pdf_sensivel/pt_core_news_lg-3.7.0/tokenizer,sha256=v3eUCMS4eCv3KfZj8XWIiSDGXuR131emCgBALpAuQOU,38332
+leitor_pdf_sensivel-1.0.dist-info/METADATA,sha256=MEBuNZERwG35rbNqpcV6M0UiqNwWNFu365sfAYEWsUc,3834
+leitor_pdf_sensivel-1.0.dist-info/WHEEL,sha256=GV9aMThwP_4oNCtvEC2ec3qUYutgWeAzklro_0m4WJQ,91
+leitor_pdf_sensivel-1.0.dist-info/top_level.txt,sha256=DLHh7WZbTe0D0gh50umeDKb7j6vhkaBeDrxDPSXdDPQ,20
+leitor_pdf_sensivel-1.0.dist-info/RECORD,,
