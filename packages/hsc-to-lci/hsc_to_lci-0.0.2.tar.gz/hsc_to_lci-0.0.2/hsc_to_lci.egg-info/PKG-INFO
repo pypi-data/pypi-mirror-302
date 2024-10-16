@@ -1,0 +1,76 @@
+Metadata-Version: 2.1
+Name: hsc-to-lci
+Version: 0.0.2
+Summary: Convert HSC Chemistry simulation results to Brightway-format life cycle inventories
+Home-page: https://github.com/robyistrate/hsc_to_lci
+Author: Robert Istrate <i.r.istrate@cml.leidenuniv.nl>
+License: BSD 3-Clause License
+        
+        Copyright (c) 2023, Leiden University
+        
+        Redistribution and use in source and binary forms, with or without
+        modification, are permitted provided that the following conditions are met:
+        
+        1. Redistributions of source code must retain the above copyright notice, this
+           list of conditions and the following disclaimer.
+        
+        2. Redistributions in binary form must reproduce the above copyright notice,
+           this list of conditions and the following disclaimer in the documentation
+           and/or other materials provided with the distribution.
+        
+        3. Neither the name of the copyright holder nor the names of its
+           contributors may be used to endorse or promote products derived from
+           this software without specific prior written permission.
+        
+        THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+        AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+        IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+        DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+        FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+        DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+        SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+        CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+        OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+        OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+        
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Requires-Python: >=3.9,<3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: brightway2
+
+# hsc_to_lci
+
+Python library to convert HSC Chemistry simulation results to Brightway LCIs disaggregated by unit processes.
+
+
+## Installation
+
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install hsc_to_lci.
+
+```bash
+
+    pip install hsc-to-lci
+```
+
+## How to use
+
+Follow [the example from the Jupyter Notebook](https://github.com/robyistrate/hsc_to_lci/blob/main/examples/use_example.ipynb)
+
+## Authors
+[Robert Istrate](https://github.com/robyistrate)
+
+## Contributing
+
+Contributions are welcome! Please check out the [GitHub repository](https://github.com/robyistrate/hsc_to_lci) for more information.
+
+## License
+
+[BSD-3-Clause](https://github.com/robyistrate/hsc_to_lci/blob/main/LICENSE)
