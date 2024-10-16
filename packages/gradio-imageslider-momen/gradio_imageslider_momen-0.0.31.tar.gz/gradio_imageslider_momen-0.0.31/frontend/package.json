@@ -1,0 +1,41 @@
+{
+  "name": "gradio_imageslider",
+  "version": "0.3.0-beta.5",
+  "description": "Gradio UI packages",
+  "type": "module",
+  "main": "./index.ts",
+  "svelte": "./index.svelte",
+  "author": "",
+  "license": "ISC",
+  "private": false,
+  "dependencies": {
+    "@gradio/atoms": "0.9.0",
+    "@gradio/client": "^1.6.0",
+    "@gradio/icons": "0.8.0",
+    "@gradio/statustracker": "0.8.1",
+    "@gradio/upload": "0.13.1",
+    "@gradio/utils": "0.7.0",
+    "@gradio/wasm": "^0.14.1",
+    "cropperjs": "^1.6.2",
+    "d3-drag": "^3.0.0",
+    "d3-selection": "^3.0.0",
+    "lazy-brush": "^2.0.2",
+    "resize-observer-polyfill": "^1.5.1",
+    "svelte": "^4.2.19"
+  },
+  "exports": {
+    ".": {
+      "gradio": "./index.ts"
+    },
+    "./example": {
+      "gradio": "./Example.svelte"
+    }
+  },
+  "config": {
+    "pnpm": {
+      "patchedDependencies": {
+        "@gradio/upload@0.5.1": "patches/@gradio__upload@0.5.1.patch"
+      }
+    }
+  }
+}
