@@ -1,0 +1,4 @@
+dsplayer
+aiohttp
+bs4
+yt-dlp

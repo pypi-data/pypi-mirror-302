@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+dsplayer_applemusic/__init__.py
+dsplayer_applemusic/applemusic.py
+dsplayer_applemusic.egg-info/PKG-INFO
+dsplayer_applemusic.egg-info/SOURCES.txt
+dsplayer_applemusic.egg-info/dependency_links.txt
+dsplayer_applemusic.egg-info/entry_points.txt
+dsplayer_applemusic.egg-info/requires.txt
+dsplayer_applemusic.egg-info/top_level.txt
