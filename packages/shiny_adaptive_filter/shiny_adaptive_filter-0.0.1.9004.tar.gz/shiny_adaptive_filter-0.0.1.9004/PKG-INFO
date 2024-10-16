@@ -1,0 +1,64 @@
+Metadata-Version: 2.3
+Name: shiny_adaptive_filter
+Version: 0.0.1.9004
+Summary: Shiny for Python module that implments UI components that are aware and adapts to other component selections.
+Project-URL: Documentation, https://github.com/chendaniely/pyshiny_adaptive_filter#readme
+Project-URL: Issues, https://github.com/chendaniely/pyshiny_adaptive_filter/issues
+Project-URL: Source, https://github.com/chendaniely/pyshiny_adaptive_filter
+Author-email: Daniel Chen <daniel.chen@posit.co>, Joe Cheng <joe@posit.co>
+License-Expression: MIT
+License-File: LICENSE.txt
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.10
+Requires-Dist: pandas
+Requires-Dist: shiny
+Provides-Extra: tests
+Requires-Dist: nox; extra == 'tests'
+Requires-Dist: playwright; extra == 'tests'
+Requires-Dist: pytest; extra == 'tests'
+Requires-Dist: pytest-cov; extra == 'tests'
+Requires-Dist: pytest-playwright; extra == 'tests'
+Description-Content-Type: text/markdown
+
+# Shiny for Python Adaptive Filters
+
+[![PyPI - Version](https://img.shields.io/pypi/v/shiny-adaptive-filter.svg)](https://pypi.org/project/shiny-adaptive-filter)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/shiny-adaptive-filter.svg)](https://pypi.org/project/shiny-adaptive-filter)
+
+-----
+
+## Installation
+
+```console
+pip install git+https://github.com/chendaniely/pyshiny_adaptive_filter.git
+```
+
+```console
+pip install shiny_adaptive_filter
+```
+
+## License
+
+`pyshiny_adaptive_filter` is distributed under the terms of the [MIT](https://spdx.org/licenses/MIT.html) license.
+
+
+## Development Guide
+
+Install Hatch
+
+- <https://hatch.pypa.io/latest/install/>
+
+
+```shell
+brew install hatch
+```
+
+Need to install playwright browsers after new environment setup
+
+```bash
+playwright install
+```
