@@ -1,0 +1,17 @@
+radifox/qa/__init__.py,sha256=WjDmvecyDIyJLYp4rCV9vsSYbQDc4L1EpYqORvEXliI,33
+radifox/qa/_static_version.py,sha256=Y1KWLquOU6Bh_0QhYnRCwDK0eoTa2Hf9xxXBaQ1_F3A,60
+radifox/qa/_version.py,sha256=8zBBR1PTDyaz8bALVvx-TYPMB3_wXeuqnCh4mEJGo84,5857
+radifox/qa/app.py,sha256=6wfUyp3BHWGQWyJ0Av4lCiml2An1WjsyFW8tLFOENq0,16057
+radifox/qa/run.py,sha256=V2yG4T_S86gxMlTEvv4M9Q9WbPBxg2g2Z5qOkhbw2ao,1341
+radifox/qa/templates/conversion.html,sha256=U-LaJuQz1yzxg9iOV9i1LSfTVooOUlSNP3YwL8ZRO9c,25968
+radifox/qa/templates/index.html,sha256=zcHaILxB0ImLjrcPrGIR2u9hPXSb7s11yGmc6NEKlzk,3083
+radifox/qa/templates/login.html,sha256=p2CC3g62DAQ73ZreFdyZ0cyioweVvDrLs-ZlrpbAsAU,3300
+radifox/qa/templates/processing.html,sha256=L5iVcYA7j2fiisROocx7bD8QOCCGSJkq6I1s-AXqLt4,22900
+radifox/qa/templates/project.html,sha256=R0FEi6wNPDOYiykkkAvb_gOfGDtQ5GeX1H_jL95Oa9U,3190
+radifox/qa/templates/subject.html,sha256=1aPjerKxWONkdtxlzC5QCl_ga9bswcXyExLwp8ofFIU,2622
+radifox_qa-1.0.1.dist-info/LICENSE,sha256=TqxLL8m7JTI_n_KGrBmPnG6sVusVPNivd5-teKcs9l4,591
+radifox_qa-1.0.1.dist-info/METADATA,sha256=aAFzTy0yYWwmefoZyi2z0u1S0pmxFCng-F2u75mwFcA,3907
+radifox_qa-1.0.1.dist-info/WHEEL,sha256=GV9aMThwP_4oNCtvEC2ec3qUYutgWeAzklro_0m4WJQ,91
+radifox_qa-1.0.1.dist-info/entry_points.txt,sha256=f4q7kTZ_d4IbnzN1-NJW59eVNftgPwikDGbSjcbB2TU,50
+radifox_qa-1.0.1.dist-info/top_level.txt,sha256=uOqtgi6pro1TKpaXDZ9gM_rSGkYH_ZxB1u07is7JfiA,8
+radifox_qa-1.0.1.dist-info/RECORD,,
