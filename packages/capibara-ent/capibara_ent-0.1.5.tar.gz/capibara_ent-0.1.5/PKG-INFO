@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: capibara-ent
+Version: 0.1.5
+Summary: Capibara: A Flexible Multimodal AI Library
+Home-page: https://github.com/Anachroni/capibara
+Author: Marco Durán
+Author-email: marco@anachroni.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Requires-Dist: tensorflow>=2.5.0
+Requires-Dist: docker
+Requires-Dist: nltk
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: torch>=1.8.0
+Requires-Dist: torch-xla
+Requires-Dist: jax
+Requires-Dist: wandb
