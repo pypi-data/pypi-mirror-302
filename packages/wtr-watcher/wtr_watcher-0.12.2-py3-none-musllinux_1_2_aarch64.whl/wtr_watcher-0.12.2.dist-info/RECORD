@@ -1,0 +1,10 @@
+wtr_watcher.libs/libgcc_s-7393e603.so.1,sha256=7G--_FjUcXaygGLbopN7bg1zXff52EmI7Bsc2D2TXbk,201017
+wtr_watcher.libs/libstdc++-1b614e01.so.6.0.32,sha256=XXJsmg9XChAumTluQnKaKPw0aZHT_olzaylk-ZtJWcY,3586193
+wtr_watcher-0.12.2.dist-info/RECORD,,
+wtr_watcher-0.12.2.dist-info/METADATA,sha256=t8EGsV4QEq_09VJViQDklBO-TJYIVLsSPzHsvREOVss,27561
+wtr_watcher-0.12.2.dist-info/WHEEL,sha256=mO48xTvoJA8nJO1g8-duwgPtU1JMo7u1HM-wajge6EQ,96
+wtr_watcher-0.12.2.dist-info/license,sha256=iG6m2xYGD1OW017_2x9kbLJuLT7Yp28ZlPdufy6tM4Q,1070
+.wtr_watcher.mesonpy.libs/libwatcher-c.so.0.12.2,sha256=uBJ10lA8UR7rWZwF2vvrW9wSTKrZwGpP8daF63AYxqo,281713
+wtr_watcher-0.12.2.data/headers/wtr/watcher-c.h,sha256=shla4fHaZ4gDALeeds6sCQD6TrKWXKvyoWM7LPgy6WM,1879
+wtr_watcher-0.12.2.data/purelib/__init__.py,sha256=WYEin1f1QKkw865JLRj9FH_uaEANy39lGQ5MxFx792s,126
+wtr_watcher-0.12.2.data/purelib/watcher.py,sha256=ulqeztdejaPQTrzM-rFjghF-45e5DZLvkyCDYZM1qXU,5013
