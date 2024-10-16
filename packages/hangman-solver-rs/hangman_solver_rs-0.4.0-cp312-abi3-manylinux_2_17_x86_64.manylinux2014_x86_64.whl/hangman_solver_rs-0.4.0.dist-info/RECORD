@@ -1,0 +1,8 @@
+hangman_solver_rs-0.4.0.dist-info/METADATA,sha256=oSBCpDqwdGO32H1xF04a45jiSc_uYSY4pV48pDFOb5Q,653
+hangman_solver_rs-0.4.0.dist-info/WHEEL,sha256=BdF6-u5Slou6vd2FmxvnNDlHo2W8v75u7xdpBZG2NQM,128
+hangman_solver_rs-0.4.0.dist-info/licenses/LICENSE,sha256=b8nnCcy_4Nd_v_okJ6mDKCvi64jkexzbSfIag7TR5mU,13827
+hangman_solver/__init__.py,sha256=DEq0Cef0HAYXsrAPE00bzUJcRISPHfjBks6BnQLIFrY,290
+hangman_solver/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+hangman_solver/__init__.pyi,sha256=XLNX-Oacl9NkRDanzk4XWRhxugUYPSeNGS48nr_mdYI,1634
+hangman_solver/_solver.abi3.so,sha256=3Ki5IpwhJnP1w12TfBt-Thfua4s0PYDIX59fXcay8go,93371208
+hangman_solver_rs-0.4.0.dist-info/RECORD,,
