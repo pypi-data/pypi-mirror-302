@@ -1,0 +1,9 @@
+ncut_pytorch/__init__.py,sha256=E3xcVj2CtBlcxdiRf0ceGer034_UTE1VTGYh5tqqDaE,432
+ncut_pytorch/backbone.py,sha256=YnLooJkEHGmvnkCx8t0VGTDRSZYPexJgw6eaIimhAUY,87761
+ncut_pytorch/backbone_text.py,sha256=6u0ifryc3YVx9tlHgrhjQzy9LrChSnda088KXX86M34,9932
+ncut_pytorch/ncut_pytorch.py,sha256=TT5uwy0QxYBVKSI-9P9Y-th-UkO-AuGPkghEdiGeomI,46819
+ncut_pytorch-1.5.4.dist-info/LICENSE,sha256=2bm9uFabQZ3Ykb_SaSU_uUbAj2-htc6WJQmS_65qD00,1073
+ncut_pytorch-1.5.4.dist-info/METADATA,sha256=Lq1l14LSs1M_90sHEDThZ9eoMgNbk4QNx8Mfq5QyeKE,5634
+ncut_pytorch-1.5.4.dist-info/WHEEL,sha256=GV9aMThwP_4oNCtvEC2ec3qUYutgWeAzklro_0m4WJQ,91
+ncut_pytorch-1.5.4.dist-info/top_level.txt,sha256=7wYut3vP8TVH4nvzDgebROYBBbGqdShuaerBGNM1Tao,13
+ncut_pytorch-1.5.4.dist-info/RECORD,,
