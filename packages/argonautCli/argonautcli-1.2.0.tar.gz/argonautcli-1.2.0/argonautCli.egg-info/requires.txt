@@ -1,0 +1,10 @@
+pyyaml
+asyncio
+pyreadline3
+
+[test]
+pytest
+pytest-cov
+
+[windows]
+pyreadline3
