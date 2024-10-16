@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: STCS
+Version: 0.1.0
+Summary: The Standardized Time and Calendar System (STCS) is a system which replaces the traditional time and calendar systems to make them more intuitive and decimalized.
+Home-page: https://github.com/LiamSpatola/STCS
+Author: Liam Spatola
+License: GNU GPLv3
+License-File: LICENSE
+Requires-Dist: typer==0.12.5

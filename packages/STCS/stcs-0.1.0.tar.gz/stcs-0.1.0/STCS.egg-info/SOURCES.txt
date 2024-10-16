@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+STCS.egg-info/PKG-INFO
+STCS.egg-info/SOURCES.txt
+STCS.egg-info/dependency_links.txt
+STCS.egg-info/requires.txt
+STCS.egg-info/top_level.txt
+stcs/__init__.py
+stcs/__main__.py
+stcs/cli.py
+stcs/date_conversion.py
+stcs/time_conversion.py
+tests/test_stcs.py
