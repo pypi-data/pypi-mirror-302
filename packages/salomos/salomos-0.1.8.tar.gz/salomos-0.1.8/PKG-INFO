@@ -1,0 +1,67 @@
+Metadata-Version: 2.1
+Name: salomos
+Version: 0.1.8
+Summary: Salomos is a Python package that provides a domain-specific language (DSL) processor for executing commands based on sentences stored in a SQLite database.
+Home-page: https://python.dobyemail.com
+Author: Tom Sapletta
+Author-email: info@softreck.dev
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: sqlite3
+
+# Salomos
+
+Salomos is a Python package that provides utilities for processing domain-specific languages (DSLs) and managing associated data.
+
+## Installation
+
+To install Salomos, simply run:
+
+```
+pip install salomos
+```
+
+## Key Components
+
+### DBManager
+
+The `DBManager` class (`db_manager.py`) handles database operations for the Salomos package. It provides methods to:
+
+- Initialize the database
+- Load sentences and objects from the database
+- Close the database connection
+
+### DSLProcessor 
+
+The `DSLProcessor` class (`dsl_processor.py`) is responsible for processing DSL sentences. It offers functionality to:
+
+- Import modules and resolve class names
+- Find matching elements based on a name
+- Process a DSL sentence and execute corresponding actions
+- Perform operations like print, add, concatenate
+
+## Usage Examples
+
+The package also includes example modules and functions to illustrate usage:
+
+- `ExampleModule` (`example_module.py`): Contains a greeting function and sample math operations
+- `example_function` (`example_function.py`): A standalone example function
+
+Refer to these examples for basic usage patterns of the Salomos package classes and functions.
+
+## Contributing
+
+Contributions are welcome! Please see the [contributing guidelines](CONTRIBUTING.md) for more details.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
