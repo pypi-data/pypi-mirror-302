@@ -1,0 +1,2 @@
+[console_scripts]
+radifox-stage = radifox.modules.staging:Staging
