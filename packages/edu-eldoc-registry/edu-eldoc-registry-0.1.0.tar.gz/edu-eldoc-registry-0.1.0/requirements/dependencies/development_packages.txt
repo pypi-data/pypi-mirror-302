@@ -1,0 +1,7 @@
+isort<=5.14
+mypy<=1.12
+pylint<=3.3
+
+sphinx<=7.4
+sphinx-autodoc-typehints<=2.4
+myst-parser<=3.1
