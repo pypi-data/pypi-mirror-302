@@ -1,0 +1,42 @@
+[tool.poetry]
+
+name = "kitsuyui.hello"
+version = "0.0.0"
+description = "A playground for publishing packages to PyPI"
+authors = ["Yui KITSU <kitsuyui+github@kitsuyui.com>"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "License :: OSI Approved :: BSD License",
+]
+license = "BSD-3-Clause"
+repository = "https://github.com/kitsuyui/pypi-playground"
+packages = [{ include = "src/kitsuyui/hello" }]
+include = ["pyproject.toml", "README.md", "py.typed", "*.pyi"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+[tool.poetry.group.dev.dependencies]
+
+[project]
+name = "kitsuyui.hello"
+dynamic = ["version"]
+readme = { file = "README.md", content-type = "text/markdown" }
+
+[build-system]
+requires = ["setuptools", "setuptools_scm"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools_scm]
+version_file = "./src/kitsuyui/hello/_version.py"
+root = "../../"
+relative_to = "__file__"
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+
+[tool.mypy]
+mypy_path = "src"
