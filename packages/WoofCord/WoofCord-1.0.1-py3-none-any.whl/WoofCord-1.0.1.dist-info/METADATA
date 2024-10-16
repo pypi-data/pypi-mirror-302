@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: WoofCord
+Version: 1.0.1
+Summary: WoofCord is a easier and faster version of discord.py
+Author: Lordpomind
+Author-email: lordpomind@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: aiohttp
+Requires-Dist: websockets
+
+1.0.1
+
+Removed debug lines so it no longer pops some random debug log

@@ -1,0 +1,13 @@
+woofcord/__init__.py,sha256=XwUBkO6ydiCQLN4O3UZU8Icb2Md2Ta0lVgG-Zpr3DA8,6476
+woofcord/channel.py,sha256=KlAms_bAaSUBcfKQK0YDwLR0qwGyQQOErdfZEH-9ziM,1125
+woofcord/color.py,sha256=g7CWbl0AjV33W8RFbUKacJleplayHNp7CxT98Lb3PVI,770
+woofcord/embed.py,sha256=qCAgSPldIoV5nyDxUscGmSgeP8o9c0H7ru4cjQF79kg,978
+woofcord/guild.py,sha256=UYWt7rfnn7OkPIfMS_13s_CrZmvsWuM-Xx2lLji9wKQ,353
+woofcord/intents.py,sha256=gT6Iv2TgvE_GnE6UMGOlIjzUzbtotoK8FNsKMElurwo,27
+woofcord/message.py,sha256=05O82WxkYJHJT7QW93zrxkkFBy2WoHKZZcynElcqPRY,610
+woofcord/msg.py,sha256=qB1IqyRCA0SHY_VxWwrC5zRS-Ou66ZCHY0ikiyVuc0U,718
+woofcord/user.py,sha256=3svPa0X3YUjkpvhF-qITzp08mhn-jJqjTMqEdSUf1Ww,2071
+WoofCord-1.0.1.dist-info/METADATA,sha256=DKbLevYcDlWRwd7VlRgPbf54woXvgMwrijXFEir_Ppo,498
+WoofCord-1.0.1.dist-info/WHEEL,sha256=eOLhNAGa2EW3wWl_TU484h7q1UNgy0JXjjoqKoxAAQc,92
+WoofCord-1.0.1.dist-info/top_level.txt,sha256=T_poq9V9LIbUq7ODxeAMXPU3rzxF9Vh9GhrDeappejY,9
+WoofCord-1.0.1.dist-info/RECORD,,
