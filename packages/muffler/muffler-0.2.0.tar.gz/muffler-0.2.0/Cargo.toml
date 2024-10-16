@@ -1,0 +1,34 @@
+[package]
+name = "muffler"
+version = "0.2.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[lib]
+name = "muffler"
+crate-type = ["cdylib"]
+
+[dependencies]
+bincode = "1.3"
+ndarray = { version = "0.16", features = ["rayon", "serde"] }
+pyo3-log = "0.11"
+rayon = "1.10"
+
+[dependencies.pyo3]
+version = "0.22"
+features = ["extension-module"]
+
+[dependencies.smartcore]
+git = "https://github.com/nishaq503/smartcore.git"
+branch = "feat/clone"
+features = ["ndarray-bindings", "serde"]
+
+[dependencies.numpy]
+git = "https://github.com/nishaq503/rust-numpy.git"
+
+[dependencies.serde]
+version = "1.0"
+features = ["derive"]
+
+[dev-dependencies]
+rand = "0.8.5"

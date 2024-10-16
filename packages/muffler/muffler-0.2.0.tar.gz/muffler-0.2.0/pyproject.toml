@@ -1,0 +1,37 @@
+[build-system]
+requires = ["maturin>=1.4,<2.0"]
+build-backend = "maturin"
+
+[project]
+name = "muffler"
+version = "0.2.0"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Rust",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python :: Implementation :: PyPy",
+]
+description = "Denoising time-series data."
+
+dependencies = [
+    "numpy>=1.16.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pre-commit",
+    "bump2version",
+    "pytest",
+    "pytest-xdist",
+    "pytest-cov",
+    "pytest-sugar",
+    "streamlit",
+    "watchdog",
+    "seaborn",
+    "plotly",
+    "scipy",
+]
+
+[tool.maturin]
+python-source = "python"
+features = ["pyo3/extension-module"]
