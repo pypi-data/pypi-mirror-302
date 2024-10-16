@@ -1,0 +1,10 @@
+svs/__init__.py,sha256=gWeafQH8vpxzAoigxN7kRZzIJoFj9POSxQ5wtB6Nums,341
+svs/embeddings.py,sha256=b6SfxybghjnH8nJReF9XzcegpKx-ZXtDQPigKxpd2v0,4202
+svs/kb.py,sha256=72mXkyx2sM4zzuHaw9Z-FY08XTGBZ5EKg7h5hIc3pRA,64837
+svs/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+svs/types.py,sha256=C9dyULWktc6JnZJ42BxD-mpc3zwm4Fkh8LdKta82WrQ,5707
+svs/util.py,sha256=_6e_lb2ypIFB639OEjbaRi0Nmy0nyGrY88GvlWcaNzI,9482
+svs-0.6.0.dist-info/METADATA,sha256=hip2zC9QCvRFPqeFbsCH0wQ1p1rQIgF_Q6zLCQwZ11M,8796
+svs-0.6.0.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+svs-0.6.0.dist-info/licenses/LICENSE.txt,sha256=1EUQGcf0n-3H5Zmk_eMV8x8DnKdWzJz71SGTm0JVeYM,1096
+svs-0.6.0.dist-info/RECORD,,
