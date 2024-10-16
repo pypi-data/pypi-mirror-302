@@ -1,0 +1,60 @@
+name: Run tests
+on:
+  push
+jobs:
+
+  types:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: fetch code
+        uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - run: pipx install nox
+
+      - name: run pyright in nox environment
+        run: nox -s typecheck --force-color
+
+  tests:
+
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-13, windows-latest]
+    runs-on: ${{ matrix.os }}
+
+    steps:
+
+      - name: fetch code
+        uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          allow-prereleases: true
+          python-version: |
+            3.13
+            3.12
+            3.11
+            3.10
+            3.9
+            3.8
+            3.7
+
+      - run: pipx install nox
+
+      - name: run ward tests in nox environment
+        run: nox -s test test_without_toml combine_coverage --force-color
+        env:
+          PYTHONIOENCODING: utf-8
+
+      - name: upload coverage data
+        uses: codecov/codecov-action@v4
+        with:
+          files: ./coverage.json
+          token: ${{ secrets.CODECOV_TOKEN }}

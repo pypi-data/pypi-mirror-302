@@ -1,0 +1,91 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "nt2"
+authors = [{name = "Andy Kluger"}]
+dynamic = ["version", "description"]
+license = {file = "LICENSE"}
+readme = "README.md"
+keywords = ["NestedText", "JSON", "YAML", "TOML"]
+classifiers = [
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Environment :: Console",
+    "Operating System :: MacOS",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: POSIX :: Linux",
+    "Topic :: Text Processing :: Markup",
+    "Topic :: Utilities",
+]
+dependencies = ["cattrs", "nestedtext", "plumbum", "rich", "ruamel.yaml", "yamlpath>=3.6.9"]
+requires-python = ">=3.7"
+
+[project.urls]
+Home = "https://github.com/andydecleyre/nestedtextto"
+
+[project.scripts]
+nt2json = "nt2.ui:NestedTextToJSON"
+nt2yaml = "nt2.ui:NestedTextToYAML"
+nt2toml = "nt2.ui:NestedTextToTOML"
+json2nt = "nt2.ui:JSONToNestedText"
+yaml2nt = "nt2.ui:YAMLToNestedText"
+toml2nt = "nt2.ui:TOMLToNestedText"
+
+[project.optional-dependencies]
+dev = ["darglint", "flit", "ipython", "nestedtext", "nox", "plumbum", "pyright", "ruff", "ssort", "taskipy", "tomli", "tomli-w", "ward"]
+test = ["nestedtext", "plumbum", "tomli", "tomli-w", "ward"]
+toml = ["tomli", "tomli-w"]
+fmt = ["darglint", "ruff", "ssort"]
+test-without-toml = ["nestedtext", "plumbum", "ward"]
+doc = ["md-toc", "plumbum", "pydoctor", "wheezy.template"]
+
+[tool.ruff]
+line-length = 99
+
+[tool.ruff.format]
+quote-style = "preserve"
+skip-magic-trailing-comma = true
+
+[tool.ruff.lint]
+select = ["ALL"]
+ignore = ["BLE", "COM812", "EM", "FIX", "ISC001", "PERF203", "PGH003", "Q000", "T20", "TD002", "TD003", "TRY003", "TRY302"]
+
+[tool.ruff.lint.flake8-annotations]
+suppress-none-returning = true
+
+[tool.ruff.lint.isort]
+combine-as-imports = true
+split-on-trailing-comma = false
+
+[tool.ruff.lint.pydocstyle]
+convention = "pep257"
+
+[tool.ruff.lint.pylint]
+max-args = 6
+
+[tool.taskipy.tasks]
+fmt = "nox -s fmt"
+lock = "nox -s lock"
+install = "if [ $VIRTUAL_ENV ]; then pip install -r local-requirements.txt; else printf '%s\n' 'Please activate a venv first'; return 1; fi"
+test = "nox -s test test_without_toml typecheck -p 3.12"
+docs = "nox -s render_readme render_api_docs"
+
+[tool.ward]
+path = ["test"]
+show-diff-symbols = true
+test-output-style = "dots-module"
+
+[tool.pydoctor]
+docformat = "google"
+theme = "readthedocs"
+project-url = "https://github.com/andydecleyre/nestedtextto"
+project-name = "NestedTextTo"
+html-output = "doc/api"
+html-viewsource-base = "https://github.com/AndydeCleyre/nestedtextto/tree/develop"
