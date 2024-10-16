@@ -1,0 +1,17 @@
+stretchable-1.1.3.dist-info/METADATA,sha256=drUCqtU-hlxy2v-ptslk42CQj_IpOeJk5_SUFtd7bUI,6599
+stretchable-1.1.3.dist-info/WHEEL,sha256=Q2elmUM8_psAXv3PVlXmxmlwy_TJBblIAlDhcFbvSPw,127
+stretchable-1.1.3.dist-info/licenses/LICENSE,sha256=GIngvuEx844F91Cd3C-5tpO48FF0Spht8J2WsEur2-A,1085
+stretchable/exceptions.py,sha256=XKdB9ueRNfK66WPq-qhHzMQrh6Lmrc0P5fbiBL0UDkY,185
+stretchable/node.py,sha256=annnPPgmeBvdYn6e02IyPd0ukhRa43cd9TlXytUWZos,27433
+stretchable/context.py,sha256=7MH-uZkLEinh5SNJ5mKfe9tjYNrUfjDjqmyN010YUfo,41
+stretchable/style/props.py,sha256=aWI5I5KV9P76aZfBfUtmQ6Pb7M_Abkj6xmeuLO-RwHE,19692
+stretchable/style/geometry/size.py,sha256=9LbQOdX5-xvOCHtqiyJKfc2TqZIIQKZPrv9z9-grtvc,2808
+stretchable/style/geometry/length.py,sha256=Qq2RNa8_IxWp4mvCe6R1geh88a59d7bRGqjcCVS1BP8,11125
+stretchable/style/geometry/rect.py,sha256=jEP1K3xbvfzPTrsR3_r-M-rRH38IcfCLnBc53oIjcfM,3924
+stretchable/style/geometry/__init__.py,sha256=mdQcHiINUqPVsRDrcQ5nKjqnGHT84tVeqiXM2vaVS5w,625
+stretchable/style/core.py,sha256=jm-qSFHYw8knLWAAtmmTZUf1mOV7J9SNH_50lyAw_Ak,22269
+stretchable/style/__init__.py,sha256=i-NFSgg9tYN69E2hHnVxNMFqDgIsaOpWGKP1UJu3-K8,843
+stretchable/core.py,sha256=WkIVPGuVWD8b-Icnk_vc5s4wI0fMaIutAK3kYU-4n7g,899
+stretchable/__init__.py,sha256=JgwYNHpQv0Lmc-AECEp1Cu4DA2c1YKfq6hM80ssUaCA,657
+stretchable/taffylib.abi3.so,sha256=qCFVU8KM9rnV9my0e5CPYeSmqN-XJy_NRH-DLQChR_k,1234016
+stretchable-1.1.3.dist-info/RECORD,,
