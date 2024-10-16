@@ -1,0 +1,18 @@
+[project]
+name = "rmind_yandex_smart_home"
+version = "0.0.2"
+authors = [
+  { name="rMind.Dev", email="grafinfector@hotmail.com" },
+]
+description = "Yandex smart home cloud function engine"
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/korhog/rmind.yandex.smart.home"
+Issues = "https://github.com/korhog/rmind.yandex.smart.home/issues"
