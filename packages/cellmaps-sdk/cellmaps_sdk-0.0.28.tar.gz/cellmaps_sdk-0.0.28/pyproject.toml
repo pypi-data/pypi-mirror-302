@@ -1,0 +1,67 @@
+[project]
+name = "cellmaps-sdk"
+authors = [{name = "Colm Brandon", email = "colm.brandon@ul.ie"}]
+version = "0.0.28"
+description = "The SDK for tool builders who wish to integrate their tool into the CellMaps Analysis Workflow IME"
+readme = "README.rst"
+license = {file = "LICENSE.txt"}
+keywords = ["Highly-plexed Tissue Imaging", "AI",]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+]
+
+requires-python = ">= 3.7" # Can potentially expand on this
+
+dependencies = [
+    "requests",
+    "jinja2",
+    "jinja2-strcase",
+    "typing",
+    "dataclasses",
+    "tifffile",
+    "imagecodecs",
+    "numpy<2",
+    "pillow",
+    "types-pillow",
+    "minio" ,
+    "pathlib",
+    "dacite",
+    "pandas",
+    "mypy",
+    "click"
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+
+[project.optional-dependencies]
+R = ['rpy2', 'types-tzlocal', 'mypy']
+python37 = ["typing-extensions"]
+
+[project.urls]
+Homepage = "http://example.com"
+Documentation = "http://example.com"
+Repository = "http://example.com"
+"Bug Tracker" = "http://example.com"
+Changelog = "http://example.com"
+
+
+
+[project.scripts]
+cellmaps = "cellmaps_sdk.__main__:cli"
+
+
+[tool.setuptools.package-data]
+"cellmaps_sdk" = ["py.typed"]
+
+[tool.mypy]
+mypy_path = "$MYPY_CONFIG_FILE_DIR/out/cellmaps_sdk"
+warn_return_any = true
+warn_unused_configs = true
