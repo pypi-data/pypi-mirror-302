@@ -1,0 +1,15 @@
+IGJSP/generador.py,sha256=U4xy63dWzS9rp_npQJbmMXirVRZxWluSeE4cth36U1A,22128
+IGJSP/main.py,sha256=qnpAdI9Nymfbb2t674EHKCZr1vG80tGyVT5RKMiGvZM,2727
+IGJSP/Minizinc/Models/RD/JSP0.mzn,sha256=cfN_E3RQ6nBulGfaOOYTd-zAgA5SI6E2saDlYtKCflg,2282
+IGJSP/Minizinc/Models/RD/JSP1.mzn,sha256=5B8cyw2WyKR8yEL1fFd0TaCAVhjPoxEJRJDPPEjJGEk,2840
+IGJSP/Minizinc/Models/RD/JSP2.mzn,sha256=ATqpg-Ow_VzjQJ_hZSSXiTXmwmqNqFsq81TZgcnjTks,2941
+IGJSP/Minizinc/Types/RD/JSP0.mzn,sha256=cfN_E3RQ6nBulGfaOOYTd-zAgA5SI6E2saDlYtKCflg,2282
+IGJSP/Minizinc/Types/RD/JSP1.mzn,sha256=5B8cyw2WyKR8yEL1fFd0TaCAVhjPoxEJRJDPPEjJGEk,2840
+IGJSP/Minizinc/Types/RD/JSP2.mzn,sha256=ATqpg-Ow_VzjQJ_hZSSXiTXmwmqNqFsq81TZgcnjTks,2941
+IGJSP/Minizinc/Types/RD/type0.dzn,sha256=alo54TrPd2svp-YeOq8rNhb42Aj5w4N1y1WYRxZ-aWM,225
+IGJSP/Minizinc/Types/RD/type1.dzn,sha256=r3f1uOoDnscjpXHbpvOWPGhGN0tmwkJ3NYIRP-NGk5M,298
+IGJSP/Minizinc/Types/RD/type2.dzn,sha256=ddJxLqR_WlUpycHhA_QulxiTx3o9neIzNESEt59VUx0,344
+igjsp-0.0.3.dist-info/METADATA,sha256=XXVu9TscGqrQMBpKUspi3iwjHGAAhozcimkoCmhU-ys,7369
+igjsp-0.0.3.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+igjsp-0.0.3.dist-info/licenses/LICENSE,sha256=JJvw-24-Kyyqu80L6pZ5UImXjuvta4gcDwypMgItrro,1079
+igjsp-0.0.3.dist-info/RECORD,,
