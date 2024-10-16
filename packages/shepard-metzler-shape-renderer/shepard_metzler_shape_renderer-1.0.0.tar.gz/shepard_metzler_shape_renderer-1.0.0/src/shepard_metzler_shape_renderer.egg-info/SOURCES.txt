@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+src/shaperenderer/__init__.py
+src/shaperenderer/__main__.py
+src/shaperenderer/geometry.py
+src/shaperenderer/renderer.py
+src/shaperenderer/utils.py
+src/shepard_metzler_shape_renderer.egg-info/PKG-INFO
+src/shepard_metzler_shape_renderer.egg-info/SOURCES.txt
+src/shepard_metzler_shape_renderer.egg-info/dependency_links.txt
+src/shepard_metzler_shape_renderer.egg-info/requires.txt
+src/shepard_metzler_shape_renderer.egg-info/top_level.txt
