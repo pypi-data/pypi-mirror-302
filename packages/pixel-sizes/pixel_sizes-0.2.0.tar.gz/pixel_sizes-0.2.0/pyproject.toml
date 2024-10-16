@@ -1,0 +1,53 @@
+[tool.poetry]
+# I use poetry as just a package manager.
+# So, I only write the settings that poetry needs.
+# The actual package metadata is written in setup.cfg.
+# I use pypa/build for packaging.
+name = "pixel_sizes"
+version = "0.0.0"
+description = ""
+authors = []
+packages = [
+    { include = "pixel_sizes" },
+]
+
+[tool.setuptools_scm]
+write_to = "pixel_sizes/_version.py"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "*"
+pytest = "*"
+pytest-cov = "*"
+poethepoet = "*"
+setuptools-scm = "*"
+build = "*"
+mypy = "*"
+
+[build-system]
+requires = [
+    "setuptools", "setuptools_scm"
+]
+build-backend = "setuptools.build_meta"
+
+[tool.poe.tasks]
+test = "pytest"
+coverage-xml = "pytest --cov=pixel_sizes --doctest-modules --cov-report=xml"
+format = "ruff format pixel_sizes"
+check = [
+    { cmd = "ruff check pixel_sizes tests" },
+    { cmd = "mypy pixel_sizes tests" }
+]
+build = [
+    { cmd = "python -m build"}
+]
+
+[tool.mypy]
+# https://mypy.readthedocs.io/en/latest/config_file.html
+strict = true
+ignore_missing_imports = false
+
+[tool.ruff]
+line-length = 79
