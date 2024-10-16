@@ -1,0 +1,6 @@
+rich
+prompt_toolkit
+openai
+requests
+bs4
+tomli
