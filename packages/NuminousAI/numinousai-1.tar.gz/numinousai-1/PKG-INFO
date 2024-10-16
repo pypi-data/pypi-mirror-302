@@ -1,0 +1,86 @@
+Metadata-Version: 2.1
+Name: NuminousAI
+Version: 1
+Summary: This Python package designed to provide a comprehensive interface for interacting with various AI models and performing a range of functionalities such as URL interaction, system command execution, and more.
+Author: Sujal Rajpoot
+Author-email: sujalrajpoot70@gmail.com
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: requests>=2.0.0
+Requires-Dist: click>=8.1.7
+Requires-Dist: appdirs>=1.4.4
+Requires-Dist: tqdm>=4.66.4
+Requires-Dist: selenium>=4.20.0
+Requires-Dist: cerebras_cloud_sdk>=1.5.0
+
+# NuminousAI
+
+NuminousAI is a Python package designed to provide a comprehensive interface for interacting with various AI models and performing a range of functionalities such as URL interaction, system command execution, and more. This package is intended to serve as a robust tool for developers and researchers working with AI technologies.
+
+# Features
+
+### CerebrasAI Integration with NuminousAI
+
+`CerebrasAI` is a Python class designed to interact with the Cerebras Cloud API, leveraging powerful models such as `llama3.1-8b` for text generation tasks. The class simplifies API key management, ensures seamless interaction with the Cerebras API, and offers a robust text generation interface.
+
+This class is a part of the `NuminousAI` project and extends functionality from the `AIBase` class, which provides common utilities and paths for the project.
+
+## Features
+
+- **Model Support**: Supports Cerebras models such as `llama3.1-8b` and `llama3.1-70b`.
+- **API Key Management**: Automatically fetches and manages Cerebras API keys using Selenium to handle authentication.
+- **Chrome User Data Syncing**: Synchronizes Chrome user data to ensure cookies and session data are available for authentication.
+- **Text Generation Interface**: Allows for sending questions or prompts to the Cerebras models with customizable parameters like temperature, max tokens, and system prompts.
+- **Error Handling**: Robust error handling for expired API keys, connection errors, and general exceptions.
+- **Streaming Support**: Option to stream responses in real-time.
+
+## Installation
+
+You can install the package via `pip`:
+
+```pip install NuminousAI```
+# Requirements
+- `Python 3.6+`: Ensure you have Python 3.6 or higher installed.
+- `requests>=2.0.0`: For making HTTP requests to the Cerebras API.
+- `click>=8.1.7`: For building command-line interfaces (CLI).
+- `appdirs>=1.4.4`: For handling platform-specific directories (used to store config files).
+- `tqdm>=4.66.4`: For showing progress bars in the console.
+- `selenium>=4.20.0`: For automating Chrome browser tasks and fetching cookies.
+- `cerebras_cloud_sdk>=1.5.0`: Official SDK for interacting with Cerebras models.
+
+# Usage
+
+```python
+from NuminousAI.Provider.CerebrasAI import CerebrasAI
+
+Cerebras = CerebrasAI()
+if __name__ == "__main__":
+    deepinfra_response = DeepInfra.generate("Hi")
+    print(f'DeepInfraAI: {deepinfra_response}')
+```
+
+# Key Sections
+- **Overview**: Provides a summary of what the class does and its features.
+- **Installation**: Lists prerequisites and installation steps for dependencies.
+- **Usage**: Demonstrates how to use the class for initialization and asking questions.
+- **Configuration**: Explains the config file format and how it's managed.
+- **Error Handling**: Describes the built-in error handling mechanisms.
+- **Contributing & License**: Encourages contributions and provides licensing information.
+
+# License
+
+[MIT](https://choosealicense.com/licenses/mit/)
+# Hi, I'm Sujal Rajpoot! 👋
+## 🔗 Links
+[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://sujalrajpoot.netlify.app/)
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sujal-rajpoot-469888305/)
+[![twitter](https://img.shields.io/badge/twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/sujalrajpoot70)
+
+
+## 🚀 About Me
+I'm a skilled Python programmer and experienced web developer. With a strong background in programming and a passion for creating interactive and engaging web experiences, I specialize in crafting dynamic websites and applications. I'm dedicated to transforming ideas into functional and user-friendly digital solutions. Explore my portfolio to see my work in action.
