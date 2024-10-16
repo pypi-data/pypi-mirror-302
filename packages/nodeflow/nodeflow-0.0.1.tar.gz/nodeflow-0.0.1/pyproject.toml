@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "nodeflow"
+version = "0.0.1"
+description = ""
+authors = ["Maksim Shushkevich <m.e.shushkevich@yandex.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+pytest = "^8.3.3"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
