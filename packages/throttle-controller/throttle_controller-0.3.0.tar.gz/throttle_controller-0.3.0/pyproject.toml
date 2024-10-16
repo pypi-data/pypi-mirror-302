@@ -1,0 +1,52 @@
+[tool.poetry]
+# I use poetry as just a package manager.
+# So, I only write the settings that poetry needs.
+# The actual package metadata is written in setup.cfg.
+# I use pypa/build for packaging.
+name = "python-throttle-controller"
+version = "0.0.0"
+description = ""
+authors = []
+packages = [
+    { include = "throttle_controller" },
+]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+typing_extensions = "*"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "*"
+pytest = "*"
+pytest-cov = "*"
+poethepoet = "*"
+setuptools-scm = "*"
+build = "*"
+mypy = "*"
+
+[build-system]
+requires = [
+    "setuptools", "setuptools_scm"
+]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools_scm]
+write_to = "throttle_controller/_version.py"
+
+[tool.poe.tasks]
+test = "pytest"
+coverage-xml = "pytest --cov=throttle_controller --doctest-modules --cov-report=xml"
+format = "ruff format throttle_controller"
+check = [
+    { cmd = "ruff check throttle_controller" },
+    { cmd = "mypy throttle_controller tests" },
+]
+build = [
+    { cmd = "python -m build"}
+]
+[tool.mypy]
+strict = true
+ignore_missing_imports = false
+
+[tool.ruff]
+line-length = 79
