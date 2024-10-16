@@ -1,0 +1,4 @@
+[console_scripts]
+aeon=aeonsync.cli:app
+lint=scripts.lint:run_lint
+

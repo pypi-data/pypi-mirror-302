@@ -1,0 +1,12 @@
+aeonsync/__init__.py,sha256=SM0ZF3s59y3MdCYO-ygdLP9wRbxjfrzDXL6lW4sIgkM,680
+aeonsync/backup.py,sha256=dQ0Vnjl1YhcQ0ZD7wNY35lQ7utQIo-MFH6Sj18hppvI,7201
+aeonsync/cli.py,sha256=NEmILmjcJ8qXgDjOny7L5E8jB3Y-wjbvR8wPH16xIpY,11165
+aeonsync/config.py,sha256=tRaQpizegW3OwjTEl-6pzW_OlKTCas3b0jug72iASYs,5914
+aeonsync/list.py,sha256=dhAGB4aGs5PpPNALdORswyuZMmM19G75lqm5bJH6cEs,6821
+aeonsync/restore.py,sha256=XWadWzZ4H_6Cnd8qeo9vnUtWuF6lDJw5DMhWLo0fOgM,28001
+aeonsync/utils.py,sha256=oCu4H-L5IaJAzc6bEecc7Xmf2GnwZePh0bVLCH-Z1yg,5082
+aeonsync-0.2.0.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+aeonsync-0.2.0.dist-info/METADATA,sha256=DJrmKq3res1fkKHY1KNN5P7NWDbdOqrNMxbU5L2y8BU,6887
+aeonsync-0.2.0.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+aeonsync-0.2.0.dist-info/entry_points.txt,sha256=6fZq9V7OjTAsbYJMvr8HE_2Iu6iKJJPt9qnzQ3YhbI0,68
+aeonsync-0.2.0.dist-info/RECORD,,
