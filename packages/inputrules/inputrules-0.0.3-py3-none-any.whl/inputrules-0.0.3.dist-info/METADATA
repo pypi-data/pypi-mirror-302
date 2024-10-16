@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: inputrules
+Version: 0.0.3
+Summary: Predefined rules for processing data input (Forms/JSON/HTTP Requests)
+Home-page: https://github.com/alvarodeleon/inputrules
+Author: Alvaro De Leon
+Author-email: info@alvarodeleon.com
+License-File: LICENSE
+
