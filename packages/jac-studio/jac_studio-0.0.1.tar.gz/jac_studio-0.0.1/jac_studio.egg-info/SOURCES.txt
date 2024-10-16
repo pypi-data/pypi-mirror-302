@@ -1,0 +1,8 @@
+MANIFEST.in
+setup.py
+jac_studio.egg-info/PKG-INFO
+jac_studio.egg-info/SOURCES.txt
+jac_studio.egg-info/dependency_links.txt
+jac_studio.egg-info/entry_points.txt
+jac_studio.egg-info/requires.txt
+jac_studio.egg-info/top_level.txt
