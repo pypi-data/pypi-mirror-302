@@ -1,0 +1,14 @@
+Metadata-Version: 1.2
+Name: shelf_audit_preprocess
+Version: 0.2
+Summary: Pre processing for model training.
+Home-page: UNKNOWN
+Author: Blackstraw
+Author-email: arshpreet.singh@blackstraw.ai
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
