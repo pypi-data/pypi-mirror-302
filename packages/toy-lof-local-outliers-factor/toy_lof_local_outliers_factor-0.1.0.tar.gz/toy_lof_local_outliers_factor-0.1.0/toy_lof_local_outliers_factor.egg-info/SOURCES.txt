@@ -1,0 +1,7 @@
+LICENSE
+setup.py
+toy_lof_local_outliers_factor.py
+toy_lof_local_outliers_factor.egg-info/PKG-INFO
+toy_lof_local_outliers_factor.egg-info/SOURCES.txt
+toy_lof_local_outliers_factor.egg-info/dependency_links.txt
+toy_lof_local_outliers_factor.egg-info/top_level.txt
