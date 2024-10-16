@@ -1,0 +1,55 @@
+[project]
+name = "ggps"
+license = {file = "LICENSE"}
+version = "0.5.1"
+authors = [
+  {name = "Chris Joakim", email = "christopher.joakim@gmail.com" }
+]
+maintainers = [
+  {name = "Chris Joakim", email = "christopher.joakim@gmail.com" }
+]
+description = "ggps - tcx and gpx file parsing for garmin connect and garmin devices"
+keywords = ["parse", "garmin", "gpx", "tcx", "gps", "files", "running"]
+readme = "README.md"
+requires-python = ">=3.11"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/cjoakim/ggps-py"
+Issues = "https://github.com/cjoakim/ggps-py/issues"
+Repository = "https://github.com/cjoakim/ggps-py.git"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+# see https://hatch.pypa.io/1.12/config/build/#excluding-files-outside-packages
+# [tool.hatch.build.targets.wheel]
+# only-packages = true
+
+
+[tool.hatch.build.targets.sdist]
+include = [
+  "*.py",
+  "ggps/*.py",
+  "/tests",
+]
+exclude = [
+  "*.sh",
+  "*.ps1",
+  "*.json",
+  "*.txt",
+  "*.xml",
+  "*.gpx",
+  "*.kml",
+  "*.tcx",
+  ".DS_Store",
+  ".gitignore",
+  ".coverage/",
+  ".pytest_cache/",
+  "test_project/"
+]
