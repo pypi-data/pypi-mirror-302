@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: ASLTranslator
+Version: 0.1.0
+Summary: Using WebCam to translate ASL to English
+Home-page: UNKNOWN
+Author: Abdullah Mohammad
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: opencv-python
+Requires-Dist: numpy
+Requires-Dist: mediapipe
+Requires-Dist: tf-keras
+
+UNKNOWN
+
