@@ -1,0 +1,119 @@
+[project]
+name = "files-to-claude-xml"
+version = "2024.10.2"
+description = "Use XML tags for long context prompting using Claude's multi-document structure."
+readme = "README.md"
+requires-python = ">=3.11"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+]
+dependencies = [
+    "rich",
+    "typer",
+]
+authors = [
+    {name = "Jeff Triplett"}
+]
+license = {text = "PolyForm-Noncommercial-1.0.0 "}
+
+[project.urls]
+Changelog = "https://github.com/jefftriplett/files-to-claude-xml/releases"
+CI = "https://github.com/jefftriplett/files-to-claude-xml/actions"
+Homepage = "https://github.com/jefftriplett/files-to-claude-xml"
+Issues = "https://github.com/jefftriplett/files-to-claude-xml/issues"
+
+[project.entry-points.console_scripts]
+files-to-claude-xml = "files_to_claude_xml:app"
+
+[tool.bumpver]
+commit = true
+commit_message = ":bookmark: bump version {old_version} -> {new_version}"
+current_version = "2024.10.2"
+push = false  # disabled for GitHub Actions
+tag = true
+version_pattern = "YYYY.MM.INC1"
+
+[tool.bumpver.file_patterns]
+"files_to_claude_xml.py" = [
+    '__version__ = "{version}"',
+]
+"pyproject.toml" = [
+  'version = "{version}"'
+]
+
+[tool.ruff]
+# Exclude a variety of commonly ignored directories.
+exclude = [
+    ".bzr",
+    ".direnv",
+    ".eggs",
+    ".git",
+    ".github",
+    ".hg",
+    ".mypy_cache",
+    ".nox",
+    ".pants.d",
+    ".ruff_cache",
+    ".svn",
+    ".tox",
+    ".venv",
+    "__pypackages__",
+    "_build",
+    "build",
+    "dist",
+    "media",
+    "node_modules",
+    "static",
+    "venv",
+]
+
+# Same as Black.
+line-length = 88
+indent-width = 4
+
+# Assume Python 3.11
+target-version = "py311"
+
+
+[tool.ruff.format]
+# Like Black, use double quotes for strings.
+quote-style = "double"
+
+# Like Black, indent with spaces, rather than tabs.
+indent-style = "space"
+
+# Like Black, respect magic trailing commas.
+# magic-trailing-comma = "respect"
+
+# Like Black, automatically detect the appropriate line ending.
+line-ending = "auto"
+
+[tool.ruff.lint]
+ignore = ["E501", "E741"] # temporary
+
+per-file-ignores = {}
+
+select = [
+  # "B", # flake8-bugbear
+  "E", # Pycodestyle
+  "F", # Pyflakes
+  "I", # isort
+  "UP", # pyupgrade
+]
+
+# Allow unused variables when underscore-prefixed.
+dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
+
+# Allow autofix for all enabled rules (when `--fix`) is provided.
+fixable = ["A", "B", "C", "D", "E", "F", "I"]
+unfixable = []
+
+[tool.ruff.lint.isort]
+force-single-line = true
+
+[tool.ruff.lint.mccabe]
+# Unlike Flake8, default to a complexity level of 10.
+max-complexity = 10
