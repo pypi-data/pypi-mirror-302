@@ -1,0 +1,10 @@
+LICENSE.MD
+README.md
+setup.py
+PolStringConvertor/PolStringConvertor.py
+PolStringConvertor/__init__.py
+PolStringConvertor.egg-info/PKG-INFO
+PolStringConvertor.egg-info/SOURCES.txt
+PolStringConvertor.egg-info/dependency_links.txt
+PolStringConvertor.egg-info/requires.txt
+PolStringConvertor.egg-info/top_level.txt
