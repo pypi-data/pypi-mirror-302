@@ -1,0 +1,194 @@
+Metadata-Version: 2.3
+Name: farcaster-py
+Version: 0.1.6
+Summary: Python bindings for Farcaster
+Project-URL: Documentation, https://github.com/vrypan/farcaster-py#readme
+Project-URL: Issues, https://github.com/vrypan/farcaster-py/issues
+Project-URL: Source, https://github.com/vrypan/farcaster-py
+Author-email: Panayotis Vryonis <vrypan@gmail.comm>
+License-Expression: MIT
+License-File: LICENSE
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Requires-Python: >=3.10
+Requires-Dist: aiohappyeyeballs==2.4.3
+Requires-Dist: aiohttp==3.10.10
+Requires-Dist: aiosignal==1.3.1
+Requires-Dist: annotated-types==0.7.0
+Requires-Dist: attrs==24.2.0
+Requires-Dist: bitarray==2.9.3
+Requires-Dist: certifi==2024.8.30
+Requires-Dist: cffi==1.17.1
+Requires-Dist: charset-normalizer==3.4.0
+Requires-Dist: ckzg==2.0.1
+Requires-Dist: cytoolz==1.0.0
+Requires-Dist: eth-abi==5.1.0
+Requires-Dist: eth-account==0.13.4
+Requires-Dist: eth-hash==0.7.0
+Requires-Dist: eth-keyfile==0.8.1
+Requires-Dist: eth-keys==0.5.1
+Requires-Dist: eth-rlp==2.1.0
+Requires-Dist: eth-typing==5.0.1
+Requires-Dist: eth-utils==5.0.0
+Requires-Dist: frozenlist==1.4.1
+Requires-Dist: grpcio==1.66.2
+Requires-Dist: hexbytes==1.2.1
+Requires-Dist: idna==3.10
+Requires-Dist: importlib-resources>=6.4.5
+Requires-Dist: multidict==6.1.0
+Requires-Dist: parsimonious==0.10.0
+Requires-Dist: propcache==0.2.0
+Requires-Dist: protobuf==5.28.2
+Requires-Dist: pycparser==2.22
+Requires-Dist: pycryptodome==3.21.0
+Requires-Dist: pydantic-core==2.23.4
+Requires-Dist: pydantic==2.9.2
+Requires-Dist: pynacl==1.5.0
+Requires-Dist: pypandoc==1.14
+Requires-Dist: python-dotenv==1.0.1
+Requires-Dist: pyunormalize==16.0.0
+Requires-Dist: regex==2024.9.11
+Requires-Dist: requests==2.32.3
+Requires-Dist: rlp==4.0.1
+Requires-Dist: toolz==1.0.0
+Requires-Dist: types-requests==2.32.0.20240914
+Requires-Dist: typing-extensions==4.12.2
+Requires-Dist: urllib3==2.2.3
+Requires-Dist: web3==7.3.1
+Requires-Dist: websockets==13.1
+Requires-Dist: yarl==1.15.2
+Description-Content-Type: text/markdown
+
+# farcaster-py
+Python bindings for [Farcaster](https://farcaster.xyz).
+
+The bindings are based on the protocol implementation by [Hubble](https://thehubble.xyz) which can be found at [@farcaster/hub-monorepo](https://github.com/farcasterxyz/hub-monorepo/).
+
+farcaster-py makes use of the gRPC interface exposed by farcaster hubs.
+
+
+# Quick start
+
+Until there is a proper pipy package, a quick and easy way to play around:
+
+1. `pip install farcaster-py`
+2. Create `.env` with the following entries:
+```
+FARCASTER_HUB="farcaster_hub:grpc_port"
+
+OP_ETH_PROVIDER="OP provider endpoint"
+
+APP_FID="application fid"
+APP_PRIVATE_KEY="application private key"
+
+USER_FID="User fid"
+USER_PRIVATE_KEY="User private key" 
+APP_SIGNER_KEY="You have to create a signer first. Use examples/approve_new_signer.py." 
+```
+3. Download the examples found in `examples/` and try `python ./get_user_casts.py`
+
+# Internals
+
+I have tried to both follow Farcaster's conventions and naming, but also provide a pythonic API that make sense to use without requiring deep knowledge of the underlying protocols.
+
+## HubServce
+The `HubService` class uses Hubble's gRPC interface to interact with hubs. Most of the gRPC described in [the protocol specification](https://github.com/farcasterxyz/protocol/blob/main/docs/SPECIFICATION.md) is avalable through farcaster-py.
+
+Example:
+
+```python
+from farcaster.HubService import HubService
+hub = HubService(hub_address, use_async=False)
+casts = hub.GetCastsByFid(fid=280)
+for cast in casts.messages:
+	print(cast)
+```
+
+- Secure connections have not been implemented.
+- 99% of the gRPC API is read-only: You get data from the hubs. The only (I think) call that allows you to change the global state is `HubService.SubmitMessage(Message) -> Message`. (see next section)
+
+## Message
+
+The `Message.MessageBuilder` class offers three types of methods:
+- The initializer that creates a new `MessageBuilder` with specific characteristics (hash scheme, signature scheme and the user's private key)
+- Methods like `MessageBuilder.link.add(...)` and `Message.link.remove(...)` that return a `MessageData` protobuf.
+- `MessageBuilder.message(self, data: MessageData)` that gets `MessageData` and hashes, signs, etc and returns a `Message` protobuf object ready to be used by `HubService.SubmitMessage(Message)`
+
+Example:
+
+```python
+from farcaster.HubService import HubService
+from farcaster.fcproto.message_pb2 import SignatureScheme, HashScheme, Embed
+from farcaster import Message
+
+hub_address	= '....'
+app_signer = '....'
+user_fid = '....'
+
+hub = HubService(hub_address, use_async=False)
+message_builder = Message.MessageBuilder(
+	HashScheme.HASH_SCHEME_BLAKE3, 
+	SignatureScheme.SIGNATURE_SCHEME_ED25519, 
+	bytes.fromhex(app_signer[2:])
+)
+data = message_builder.cast.add(
+	fid = user_fid, 
+	text = "Hello, world!" 
+	)
+msg  = message_builder.message(data)
+ret  = hub.SubmitMessage(msg)
+```
+
+## Signer
+The `Signer` class provides a simple interface to creating signers.
+
+To create a signer, you need:
+1. Fid and corresponding private key of the user that will approve the signer.
+2. The fid and private key of the application that will create and use the signer.
+
+Once you have this data, you create a new `Signer`, and use `approve_signer()` to submit the on-chain tx:
+```python
+# snippet from examples/approve_new_signer.py
+s = Signer( op_eth_provider, user_fid, user_key, app_fid, app_key )
+tx_hash = s.approve_signer()
+signer_private_key = s.key
+signer_public_key = s.signer_pub()
+```
+
+## Updating protobuf shemas
+
+If you are installing from source, you use `generate_proto.sh <HUBBLE VERSION>`
+to generate the corresponding protbuffer Python code.
+
+
+```bash
+./generate_proto.sh 1.5.6                                                                                                                                                                                  git:main*
+x schemas/
+x schemas/gossip.proto
+x schemas/hub_event.proto
+x schemas/hub_state.proto
+x schemas/job.proto
+x schemas/message.proto
+x schemas/onchain_event.proto
+x schemas/request_response.proto
+x schemas/rpc.proto
+x schemas/sync_trie.proto
+x schemas/username_proof.proto
+
+Protobuf schemas parsed.
+```
+
+# Versioning
+
+Eventually, farcaster-py will follow the version numbers of farcaster protocol buffers (when/if they become a separate package).
+
+Until then, I'll keep version numbers low (0.0.x) and update them manually.
+
+# License
+`farcaster-py` is distributed under the [MIT License](LICENSE).
+
+# Credits
+
+This package was created and is maintained by [@vrypan.eth](https://warpcast.com/vrypan.eth).
+
+An older repository, called [hub_py](https://github.com/mirceapasoi/hub_py) has been a valuable source while building the initial version of `farcaster-py`.
