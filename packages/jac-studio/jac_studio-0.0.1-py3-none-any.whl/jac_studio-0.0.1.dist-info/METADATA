@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: jac-studio
+Version: 0.0.1
+Home-page: https://trueselph.com/
+Author: TrueSelph Inc.
+Author-email: admin@trueselph.com
+Requires-Dist: jaclang~=0.7.24
+Requires-Dist: jac-cloud~=0.1.5
+

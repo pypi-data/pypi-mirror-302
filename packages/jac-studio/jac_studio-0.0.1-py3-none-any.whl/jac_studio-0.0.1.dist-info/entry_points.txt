@@ -1,0 +1,2 @@
+[jac]
+create_cmd = jac_studio.cli:JacCmd
