@@ -1,0 +1,17 @@
+frontpy/__init__.py,sha256=kakMTMWIh4rQ8HJZxbmoJtJJ_xuvOOhfTdbBEf83IvQ,462
+frontpy/calc_tfp.py,sha256=Zio4sDHsroxrxfNQfyTMrUzlAU2KQdV_R-xsFyLZlBw,2621
+frontpy/cli.py,sha256=HbW0IK0YjeqjbQCqLyFEVXmMSG84MS-V0kcIZ_rw7Yk,3621
+frontpy/cpt_convert.py,sha256=oHeHF5Jxe6OiIPMJnCapKOQMMxLoQ0JkSUsUp1TmTz8,1718
+frontpy/download_data.py,sha256=L-QjAkWwrlew336NivxOBCZlfLsSRBXvZzJFQuQGCHc,2636
+frontpy/front_ident.py,sha256=HDsa9-85Rk9HRIgUGb0wJ1C_SDj-KUXZGpyKBMVxUDI,7850
+frontpy/main.py,sha256=O6sk8rNwqmclsVmzX3R4L3f_j--_X3KMZcFzXWGrBS4,1838
+frontpy/make_gif.py,sha256=Z1BKV8t5V09x4ww8YdNSJ2iEMiUf6qUdDFDE3IvQLDE,2281
+frontpy/plot_fronts.py,sha256=fRF08y1iboBuurwgUYeGXbxb-z__xdBhnIGC_5KSbHQ,7062
+frontpy/utilities.py,sha256=LBRcbefGE5QjFA9FYsCBhibXigVmyiAqBQJIM5EXLho,12040
+frontpy/resources/IR4AVHRR6.cpt,sha256=maS9p7s6qgUC8j6wFKFjkpWS6zOzZRi9_YOOZdNDAXQ,8725
+frontpy-0.1.12.dist-info/LICENSE,sha256=PYlJmvZFYENybMveL0BkRk4PFSTFpuX3FxvaYLbYX_Y,11355
+frontpy-0.1.12.dist-info/METADATA,sha256=7ndqAMZU5cwHv_2WuAdElc4LPuJiW2_VejHCnXSic-k,6919
+frontpy-0.1.12.dist-info/WHEEL,sha256=GV9aMThwP_4oNCtvEC2ec3qUYutgWeAzklro_0m4WJQ,91
+frontpy-0.1.12.dist-info/entry_points.txt,sha256=uksZfswpNAl2FsMWp1h1qC99SVsNpmJjXLhElWrEfL0,48
+frontpy-0.1.12.dist-info/top_level.txt,sha256=UGZpd45dptwkk53plGTl_D0u5CSeZM1Qp9-310SJfRo,8
+frontpy-0.1.12.dist-info/RECORD,,
