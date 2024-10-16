@@ -1,0 +1,10 @@
+handy_utils/__init__.py,sha256=A1DK_LNGaMsNc3dojy7dIi0kspr0MwjN-yqxML9wUs4,136
+handy_utils/cli.py,sha256=xUrGO9nrxQ-WEQ2GYn0HrZxkPnHAGP4TTAQtmqTqP5Q,1653
+handy_utils/configuration.py,sha256=zubhfdl-O1E1xcZePN4u5Mhoc_yYnbwtjverTrNBlJw,1916
+handy_utils/generate_commit.py,sha256=Hrj3px2JV9jCbGJZPwtbpgozfAlrYxLy7rHjJh3Oy4Q,903
+handy_utils/handy_utils.py,sha256=h0hwdogXGFqerm-5ZPeT-irPn91pCcQRjiHThXsRzEk,19
+handy_utils_agni-0.1.0.dist-info/LICENSE,sha256=bMen7Wdm82WuoqyyfqRooJxSbJKWtFEZ8fnajrewKBw,1071
+handy_utils_agni-0.1.0.dist-info/METADATA,sha256=8osYwWirMzB3A4LJnq4A4uI6MGCfRXthF0GFdVHzh4Y,2855
+handy_utils_agni-0.1.0.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+handy_utils_agni-0.1.0.dist-info/entry_points.txt,sha256=0v_3lnugoN4PsyuAgwDJfgvNy6XF6dIjgh39Md_ZS5k,52
+handy_utils_agni-0.1.0.dist-info/RECORD,,
