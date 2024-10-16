@@ -1,0 +1,13 @@
+octotail/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+octotail/browser.py,sha256=XiWQdIuTZFXvXgh1_fl44LVGpfEjYnNORPTfWzgdYm8,6777
+octotail/cli.py,sha256=A4IU23kUVsNrLbNUmUNnD6iezSwxFlmObhI3vs7e3MQ,3545
+octotail/fmt.py,sha256=DmbiRAooXzUbGAo_9EBtT02pe_xDAbr_3SuMhEx6EUU,3057
+octotail/gh.py,sha256=bMMkDn72cAOhkIhbZf9jzKb1OJxI1kyVHd4Ai-IvJ1c,4134
+octotail/main.py,sha256=i3O_YVt4Lr1iljbCKObu1skvF5ZEn-bGMiyFQQ2ii0A,4737
+octotail/mitm.py,sha256=BUof7szPcGhA7q_VzHQLAP26_1xbC-QW7h89YpojsV8,3543
+octotail/streamer.py,sha256=-gvLaJSpux9TA_M0o7FnN19DywQMJS3eV6d_3N49_D8,1905
+octotail/utils.py,sha256=Yrs8aYMuOAGO5mw_j2jly-nOJFb6Yv-IG10LojiWxjA,2915
+octotail-1.0.8.dist-info/METADATA,sha256=0KgNknxpSgM4j2PBIf7XmkobEpuEyMJXVArcKPh7_2Y,9435
+octotail-1.0.8.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+octotail-1.0.8.dist-info/entry_points.txt,sha256=HSJ_U1meuRI6Y7IWt-Y9sSKXYK9MbsFvDBzV0D7oODQ,49
+octotail-1.0.8.dist-info/RECORD,,
