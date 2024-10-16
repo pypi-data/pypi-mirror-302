@@ -1,0 +1,9 @@
+LICENSE
+setup.py
+meizter_ingestions/__init__.py
+meizter_ingestions/meizter_ingestions.py
+meizter_ingestions.egg-info/PKG-INFO
+meizter_ingestions.egg-info/SOURCES.txt
+meizter_ingestions.egg-info/dependency_links.txt
+meizter_ingestions.egg-info/requires.txt
+meizter_ingestions.egg-info/top_level.txt
