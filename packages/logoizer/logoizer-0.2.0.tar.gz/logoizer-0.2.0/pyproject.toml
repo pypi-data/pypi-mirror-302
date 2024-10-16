@@ -1,0 +1,135 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "logoizer"
+description = "Make CSDMS text logos"
+authors = [
+  {email = "mcflugen@gmail.com"},
+  {name = "Eric Hutton"}
+]
+maintainers = [
+  {email = "mcflugen@gmail.com"},
+  {name = "Eric Hutton"}
+]
+keywords = ["csdms", "logo"]
+license = {file = "LICENSE.md"}
+classifiers = [
+  "Development Status :: 2 - Pre-Alpha",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+]
+requires-python = ">=3.11"
+dependencies = [
+  "matplotlib>=3.2",
+]
+dynamic = ["readme", "version"]
+
+
+[project.urls]
+repository="https://github.com/mcflugen/logoize"
+documentation = "https://github.com/mcflugen/logoizer/blob/main/README.md"
+changelog = "https://github.com/mcflugen/logoizer/blob/main/CHANGES.md"
+
+[project.optional-dependencies]
+dev = [
+  "black",
+  "coverage",
+  "flake8",
+  "isort",
+  "nox",
+  "pre-commit",
+  "pytest",
+  "pytest-cov",
+  "pytest-datadir",
+  "pytest-runner",
+  "towncrier",
+  "zestreleaser.towncrier",
+]
+doc = [
+  "sphinx",
+  "pygments>=2.4",
+  "sphinx-inline-tabs",
+  "furo",
+]
+
+
+[project.scripts]
+logoize = "logoizer.cli:main"
+
+
+[tool.setuptools.dynamic]
+readme = {file = ["README.md", "AUTHORS.md", "CHANGES.md"]}
+version = {attr = "logoizer._version.__version__"}
+
+
+[tool.setuptools.packages.find]
+# namespaces = true
+where = ["src"]
+
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.package-data]
+logoizer = [
+  "fonts/Quicksand/*.ttf",
+  "fonts/Quicksand/static/*.ttf",
+]
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+testpaths = ["src/logoizer"]
+norecursedirs = [".*", "*.egg*", "build", "dist", "examples"]
+addopts = """
+  --ignore setup.py
+  --tb native
+  --strict
+  --durations 16
+  --doctest-modules
+  -vvv
+"""
+doctest_optionflags = [
+  "NORMALIZE_WHITESPACE",
+  "IGNORE_EXCEPTION_DETAIL",
+  "ALLOW_UNICODE"
+]
+markers = [
+    "slow: marks tests as slow (deselect with '-m \"not slow\"')",
+    "notebook: marks tests as notebook (deselect with '-m \"not notebook\"')"
+]
+
+[tool.isort]
+multi_line_output = 3
+include_trailing_comma = true
+force_grid_wrap = 0
+combine_as_imports = true
+line_length = 88
+
+[tool.towncrier]
+directory = "news"
+name = "logoizer"
+filename = "CHANGES.md"
+create_add_extension = false
+single_file = true
+underlines = [
+    "",
+    "",
+    "",
+]
+start_string = """
+<!-- towncrier release notes start -->
+"""
+template = "news/changelog_template.jinja"
+issue_format = "[#{issue}](https://github.com/mcflugen/logoizer/issues/{issue})"
+title_format = "## {version} ({project_date})"
+type = [
+  {name="🍰 New Features", directory="feature", showcontent=true},
+  {name="🛠️ Bug Fixes", directory="bugfix", showcontent=true},
+  {name="📖 Documentation Enhancements", directory="docs", showcontent=true},
+  {name="🔩 Other Changes and Additions", directory="misc", showcontent=true},
+]

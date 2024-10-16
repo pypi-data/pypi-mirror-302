@@ -1,0 +1,134 @@
+Metadata-Version: 2.1
+Name: logoizer
+Version: 0.2.0
+Summary: Make CSDMS text logos
+Author: Eric Hutton
+Author-email: mcflugen@gmail.com
+Maintainer: Eric Hutton
+Maintainer-email: mcflugen@gmail.com
+License: # The MIT License (MIT)
+        
+        Copyright (c) `2022` `Eric Hutton`
+        
+        Permission is hereby granted, free of charge, to any person
+        obtaining a copy of this software and associated documentation
+        files (the "Software"), to deal in the Software without
+        restriction, including without limitation the rights to use,
+        copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the
+        Software is furnished to do so, subject to the following
+        conditions:
+        
+        The above copyright notice and this permission notice shall be
+        included in all copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+        EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+        OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+        NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+        HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+        WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+        FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+        OTHER DEALINGS IN THE SOFTWARE.
+        
+Project-URL: repository, https://github.com/mcflugen/logoize
+Project-URL: documentation, https://github.com/mcflugen/logoizer/blob/main/README.md
+Project-URL: changelog, https://github.com/mcflugen/logoizer/blob/main/CHANGES.md
+Keywords: csdms,logo
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Python: >=3.11
+Description-Content-Type: text/x-rst
+License-File: LICENSE.md
+Requires-Dist: matplotlib>=3.2
+Provides-Extra: dev
+Requires-Dist: black; extra == "dev"
+Requires-Dist: coverage; extra == "dev"
+Requires-Dist: flake8; extra == "dev"
+Requires-Dist: isort; extra == "dev"
+Requires-Dist: nox; extra == "dev"
+Requires-Dist: pre-commit; extra == "dev"
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: pytest-cov; extra == "dev"
+Requires-Dist: pytest-datadir; extra == "dev"
+Requires-Dist: pytest-runner; extra == "dev"
+Requires-Dist: towncrier; extra == "dev"
+Requires-Dist: zestreleaser.towncrier; extra == "dev"
+Provides-Extra: doc
+Requires-Dist: sphinx; extra == "doc"
+Requires-Dist: pygments>=2.4; extra == "doc"
+Requires-Dist: sphinx-inline-tabs; extra == "doc"
+Requires-Dist: furo; extra == "doc"
+
+![Logoizer][logoizer-logo]
+
+[logoizer-logo]: https://raw.githubusercontent.com/mcflugen/logoizer/main/docs/_static/logoizer-logo-light.svg
+
+# Make CSDMS text logos
+
+## Installation
+
+*logoizer* can be installed from source in the usual way or directly from GitHub,
+
+```bash
+pip install git+https://github.com/mcflugen/logoizer
+```
+
+## Usage
+
+The main way to use *logoizer* is through the *logoize* command line program.
+Use `logoize --help` to get a brief help message that contains all of the
+available options. The following examples, however, will cover most use cases.
+
+Turn the word "logoizer" into an official CSDMS logo,
+
+```bash
+logoize "logoizer" -o logoizer-logo.svg
+```
+
+The default is to create a logo for use with a light theme (i.e. the logo
+will contain black text on a transparent background). To create a logo for
+use with a dark theme,
+
+```bash
+logoize "logoizer" -o logoizer-logo-dark.svg --theme=dark
+```
+
+The output image format will be chosen based on the output file extension. If,
+however, you would like to override that behavior you can use the `--format`
+option.
+
+# Release Notes
+
+<!-- towncrier-draft-entries:: Not yet released -->
+
+<!-- towncrier release notes start -->
+
+## 0.2.0 (2024-10-15)
+
+
+### 📖 Documentation Enhancements
+
+- Converted the docs from ReStructuredText to markdown. [#6](https://github.com/mcflugen/logoizer/issues/6)
+- Modified towncrier to work with markdown rather than ReStructuredTxt. [#7](https://github.com/mcflugen/logoizer/issues/7)
+
+
+### 🔩 Other Changes and Additions
+
+- Updated the linters and added several new ones. [#4](https://github.com/mcflugen/logoizer/issues/4)
+- Removed dependency on *click* (and *rich_click*) by moving to *argparse*. [#5](https://github.com/mcflugen/logoizer/issues/5)
+- Added a GitHub Actions *test* workflow. [#8](https://github.com/mcflugen/logoizer/issues/8)
+
+## 0.1.0 (2022-07-03)
+
+### 🍰 New Features
+
+- Added the logize package for creating official CSDMS text-based logos. ([#1](https://github.com/mcflugen/logoizer/issues/1))
+
+### 🔩 Other Changes and Additions
+
+- Changed the name of the project from *logoize* to *logoizer*. ([#2](https://github.com/mcflugen/logoizer/issues/2))
