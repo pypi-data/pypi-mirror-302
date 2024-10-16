@@ -1,0 +1,64 @@
+Metadata-Version: 2.1
+Name: speechmatics-flow
+Version: 0.0.1
+Summary: Python library and CLI for Speechmatics Flow API
+Home-page: https://github.com/speechmatics/speechmatics-flow/
+Author: Speechmatics
+Author-email: support@speechmatics.com
+License: MIT
+Project-URL: Documentation, https://speechmatics.github.io/speechmatics-flow/
+Project-URL: Source Code, https://github.com/speechmatics/speechmatics-flow/
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Topic :: Multimedia :: Sound/Audio :: Speech
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: httpx==0.27.1
+Requires-Dist: pyaudio==0.2.14
+Requires-Dist: websockets>=10
+
+# speechmatics-flow
+
+Python client library and CLI for Speechmatics' Flow Service API.
+
+## Getting started
+
+To install from PyPI:
+
+```bash
+pip install speechmatics-flow
+```
+
+To install from source:
+
+```bash
+git clone https://github.com/speechmatics/speechmatics-flow
+cd speechmatics-flow && python setup.py install
+```
+
+Windows users may need to run the install command with an extra flag:
+
+```bash
+python setup.py install --user
+```
+
+## Example command-line usage
+
+- Setting URLs for connecting to flow service. These values can be used in places of the --url flag:
+
+*Note: Requires access to microphone
+
+ ```bash
+ speechmatics-flow --url $URL --auth-token $TOKEN -
+ ```
+
+## Support
+
+If you have any issues with this library or encounter any bugs then please get in touch with us at
+support@speechmatics.com.
