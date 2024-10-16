@@ -1,0 +1,2 @@
+[dsplayer.plugins]
+youtube = dsplayer_youtube.youtube:YoutubePlugin

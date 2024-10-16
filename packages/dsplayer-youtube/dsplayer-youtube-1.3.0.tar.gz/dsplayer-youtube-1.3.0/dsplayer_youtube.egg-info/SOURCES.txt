@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+dsplayer_youtube/__init__.py
+dsplayer_youtube/youtube.py
+dsplayer_youtube.egg-info/PKG-INFO
+dsplayer_youtube.egg-info/SOURCES.txt
+dsplayer_youtube.egg-info/dependency_links.txt
+dsplayer_youtube.egg-info/entry_points.txt
+dsplayer_youtube.egg-info/requires.txt
+dsplayer_youtube.egg-info/top_level.txt
