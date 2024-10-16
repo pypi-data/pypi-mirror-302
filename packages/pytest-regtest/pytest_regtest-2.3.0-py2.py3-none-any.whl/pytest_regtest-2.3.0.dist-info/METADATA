@@ -1,0 +1,111 @@
+Metadata-Version: 2.3
+Name: pytest-regtest
+Version: 2.3.0
+Summary: pytest plugin for snapshot regression testing
+Project-URL: Source, https://gitlab.com/uweschmitt/pytest-regtest
+Project-URL: Documentation, https://pytest-regtest.readthedocs.org
+Author-email: Uwe Schmitt <uwe.schmitt@id.ethz.ch>
+License: MIT License
+License-File: LICENSE.txt
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: pytest>7.2
+Provides-Extra: dev
+Requires-Dist: black; extra == 'dev'
+Requires-Dist: build; extra == 'dev'
+Requires-Dist: hatchling; extra == 'dev'
+Requires-Dist: jinja2-cli; extra == 'dev'
+Requires-Dist: mistletoe; extra == 'dev'
+Requires-Dist: mkdocs; extra == 'dev'
+Requires-Dist: mkdocs-awesome-pages-plugin; extra == 'dev'
+Requires-Dist: mkdocs-material; extra == 'dev'
+Requires-Dist: mkdocstrings[python]; extra == 'dev'
+Requires-Dist: numpy; extra == 'dev'
+Requires-Dist: numpy>=2.1.1; extra == 'dev'
+Requires-Dist: pandas; extra == 'dev'
+Requires-Dist: pandas>=2.2.3; extra == 'dev'
+Requires-Dist: polars>=1.9.0; extra == 'dev'
+Requires-Dist: pre-commit; extra == 'dev'
+Requires-Dist: pytest-cov; extra == 'dev'
+Requires-Dist: ruff; extra == 'dev'
+Requires-Dist: twine; extra == 'dev'
+Requires-Dist: wheel; extra == 'dev'
+Description-Content-Type: text/markdown
+
+![](https://gitlab.com/uweschmitt/pytest-regtest/badges/main/pipeline.svg)
+![](https://gitlab.com/uweschmitt/pytest-regtest/badges/main/coverage.svg?job=coverage)
+
+
+The full documentatin for this package are available at
+https://pytest-regtest.readthedocs.org
+
+# About
+
+## Introduction
+
+`pytest-regtest` is a plugin for [pytest](https://pytest.org) to implement
+**regression testing**.
+
+Unlike [functional testing](https://en.wikipedia.org/wiki/Functional_testing),
+[regression testing](https://en.wikipedia.org/wiki/Regression_testing)
+does not test whether the software produces the correct
+results, but whether it behaves as it did before changes were introduced.
+
+More specifically, `pytest-regtest` provides **snapshot testing**, which
+implements regression testing by recording data within a test function
+and comparing this recorded output to a previously recorded reference
+output.
+
+
+## Installation
+
+To install and activate this plugin execute:
+
+    $ pip install pytest-regtest
+
+
+!!! note
+
+    `pyteset-regtest` offers some functionalities which are tailored
+     for `NumPy`, `pandas` and `polars`. These depencies are not
+     installed if you install `pytest-regtest`. In case you are using
+     e.g. `NumPy` snapshots, we assume that your productive code (the
+     code under test) uses `NumPy` and thus should be part of the setup
+     of your project.
+
+
+## Use case 1: Changing code with no or little testing setup yet
+If you're working with code that has little or no unit testing, you
+can use regression testing to ensure that your changes don't break or
+alter previous results.
+
+**Example**:
+This can be useful when working with data analysis scripts, which often
+start as one long script and then are restructured into different
+functions as they evolve.
+
+
+## Use case 2:  Testing complex data
+If a unit tests contains many `assert` statements to check a complex
+data structure you can use regression tests instead.
+
+**Example**: To test code which ingests data into a database one can
+use regression tests on textual database dumps.
+
+## Use case 3: Testing NumPy arrays or pandas data frames
+
+If your code generates numerical results, such as `NumPy` arrays,
+`pandas` or `polars` data frames, you can use `pytest-regtest` to simply record such
+results and test them later, taking into account relative and absolute
+tolerances.
+
+
+**Example**:
+A function creates a 10 x 10 matrix. Either you have to write 100
+assert statements or you use summary statistics to test your result.
+In both cases, you may get little debugging information if a test
+fails.
