@@ -1,0 +1,12 @@
+[invenio_base.api_apps]
+idutils = idutils:IDUtils
+
+[invenio_base.api_finalize_app]
+idutils = idutils.ext:api_finalize_app
+
+[invenio_base.apps]
+idutils = idutils:IDUtils
+
+[invenio_base.finalize_app]
+idutils = idutils.ext:finalize_app
+
