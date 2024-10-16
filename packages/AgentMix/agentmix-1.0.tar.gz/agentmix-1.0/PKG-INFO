@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: AgentMix
+Version: 1.0
+Requires-Dist: httpx
+Requires-Dist: asyncio
+Requires-Dist: colorama
+Requires-Dist: beautifulsoup4

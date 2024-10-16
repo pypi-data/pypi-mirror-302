@@ -1,0 +1,4 @@
+httpx
+asyncio
+colorama
+beautifulsoup4
