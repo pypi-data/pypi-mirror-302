@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: urdf2mjcf
+Version: 0.0.1
+Summary: The urdf2mjcf project
+Home-page: https://github.com/kscalelabs/urdf2mjcf
+Author: Benjamin Bolte
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: mujoco
+Provides-Extra: dev
+Requires-Dist: black ; extra == 'dev'
+Requires-Dist: darglint ; extra == 'dev'
+Requires-Dist: mypy ; extra == 'dev'
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: ruff ; extra == 'dev'
+
+# urdf2mjcf
+
+![Example](./docs/example.png)
+
+This script converts URDF files to MJCF files, with some nice options.
+
+## Installation
+
+```bash
+pip install urdf2mjcf
+```
+
+## Usage
+
+### Command Line
+
+To see all the options, use:
+
+```bash
+urdf2mjcf --help
+```
