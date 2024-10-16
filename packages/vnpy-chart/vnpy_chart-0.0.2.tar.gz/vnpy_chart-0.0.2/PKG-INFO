@@ -1,0 +1,68 @@
+Metadata-Version: 2.1
+Name: vnpy_chart
+Version: 0.0.2
+Summary: enhanced chart for vnpy.
+Home-page: https://github.com/suyu0925/vnpy_chart
+Author: suyu0925
+Author-email: suyu0925@gmail.com
+License: MIT
+Keywords: quant,quantitative,investment,trading,algotrading
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: MacOS
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Office/Business :: Financial :: Investment
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: Chinese (Simplified)
+Description-Content-Type: text/markdown
+Requires-Dist: vnpy
+
+# vnpy_chart
+
+enhanced chart for vnpy
+
+## tips
+
+If you encounter issues while installing [ta-lib](https://github.com/TA-Lib/ta-lib-python), try:
+
+```sh
+pip install numpy==1.26.4 importlib_metadata
+pip install --extra-index-url https://pypi.vnpy.com TA_Lib==0.4.24
+```
+
+## dev
+
+### run test
+
+```sh
+pip install .
+python -m unittest discover -s tests
+```
+
+### publish
+
+build
+
+```sh
+pip install --upgrade build
+
+python -m build
+```
+
+upload to testpypi
+
+```sh
+pip install --upgrade twine
+
+python -m twine upload --repository testpypi dist/*
+```
+
+upload to pypi
+
+```sh
+python -m twine upload dist/*
+```
