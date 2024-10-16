@@ -1,0 +1,16 @@
+[babel.extractors]
+ckan = ckan.lib.extract:extract_ckan
+
+[ckan.plugins]
+data_qld = ckanext.data_qld.plugin:DataQldPlugin
+data_qld_google_analytics = ckanext.data_qld.google_analytics.plugin:GoogleAnalyticsPlugin
+data_qld_integration = ckanext.data_qld.plugin:DataQldPlugin
+data_qld_reporting = ckanext.data_qld.plugin:PlaceholderPlugin
+data_qld_resources = ckanext.data_qld.plugin:PlaceholderPlugin
+
+[paste.paster_command]
+demote_publishers = ckanext.data_qld.commands:DemotePublishers
+migrate_extras = ckanext.data_qld.commands:MigrateExtras
+send_email_dataset_due_to_publishing_notification = ckanext.data_qld.resource_freshness.commands:SendEmailDatasetDueToPublishingNotification
+send_email_dataset_overdue_notification = ckanext.data_qld.resource_freshness.commands:SendEmailDatasetOverdueNotification
+update_fullname = ckanext.data_qld.user_creation.commands:UpdateFullname
