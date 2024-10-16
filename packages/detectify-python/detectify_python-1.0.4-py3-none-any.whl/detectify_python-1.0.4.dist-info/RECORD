@@ -1,0 +1,10 @@
+Detectify/__init__.py,sha256=8WA9-vsff28nRtSJyVK9v7K88HmGQv5PUhyjZMWEZas,69
+Detectify/logger.py,sha256=6Rd6CsPyw992_MpMAL9JZGmDufUBiRSWxZnjCYER0rk,824
+Detectify/predict.py,sha256=ZCngOa_eaRB8H2lBCs8DmWfyTBWJ8a_-ASia1zOX6-o,4911
+Detectify/train.py,sha256=T8Ot5X8jZoCwRVug4ioE7i0PgyENQ4QR2RGRQ0zvenI,5869
+Detectify/util.py,sha256=FagHJxzLPfVnKNIinljmnQbVHc-i_Qdt68G5XLCgBiI,899
+detectify_python-1.0.4.dist-info/LICENSE,sha256=K0xCc38czEA_lzKMWX4KvScqrV5BOiJTmzulwx6pQ8I,35164
+detectify_python-1.0.4.dist-info/METADATA,sha256=8wMdF9LeF4Gnu5nthdQUUPySMcJ4VDD5I5diEi4WZE8,320
+detectify_python-1.0.4.dist-info/WHEEL,sha256=GV9aMThwP_4oNCtvEC2ec3qUYutgWeAzklro_0m4WJQ,91
+detectify_python-1.0.4.dist-info/top_level.txt,sha256=ucnEoDJ7LBBbCzTza__mzFIYjKWf6551p-xgVVtQxys,10
+detectify_python-1.0.4.dist-info/RECORD,,
