@@ -1,0 +1,4 @@
+serial_number,tenant__name,type__name,asset_tag,dc_tag,supplier__name
+1234,GWDG,10G SFP+ LR 1330nm 10km,4201,691,Flexoptix
+5678,GWDG,10G SFP+ BIDI LR 1330nm 10km,4202,692,Flexoptix
+9101,GWDG,10G SFP+ ZR 1310nm 70km,4203,693,Flexoptix

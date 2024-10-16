@@ -1,0 +1,11 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <strong>Assigned SFPs</strong>
+    </div>
+    {% include 'responsive_table.html' with table=used_sfps_table %}
+    <div class="panel-footer text-right noprint">
+      <a href="{% url 'plugins:nautobot_sfp_inventory:sfp_bulk_attach' pk=object.pk %}" class="btn btn-xs btn-primary">
+                                          <span class="mdi mdi-pencil" aria-hidden="true"></span> Edit assigned SFPs
+                                        </a>
+    </div>
+</div>
