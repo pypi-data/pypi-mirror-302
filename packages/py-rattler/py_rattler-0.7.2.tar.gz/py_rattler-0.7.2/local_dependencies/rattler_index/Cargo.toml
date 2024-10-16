@@ -1,0 +1,21 @@
+[package]
+name = "rattler_index"
+version = "0.19.32"
+edition= "2021"
+authors = []
+description = "A crate that indexes directories containing conda packages to create local conda channels"
+categories= ["development-tools"]
+homepage= "https://github.com/conda/rattler"
+repository= "https://github.com/conda/rattler"
+license= "BSD-3-Clause"
+readme= "README.md"
+resolver = "2"
+
+[dependencies]
+rattler_conda_types = { path= "../rattler_conda_types", version = "0.28.2", default-features = false }
+rattler_digest = { path= "../rattler_digest", version = "1.0.2", default-features = false }
+rattler_package_streaming = { path= "../rattler_package_streaming", version = "0.22.10", default-features = false }
+fs-err = { version = "2.11.0", features = ["tokio"] }
+serde_json = { version = "1.0.116" }
+tracing = "0.1.40"
+walkdir = "2.5.0"

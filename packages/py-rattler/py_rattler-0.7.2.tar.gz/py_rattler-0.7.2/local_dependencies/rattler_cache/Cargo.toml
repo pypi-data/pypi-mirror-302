@@ -1,0 +1,33 @@
+[package]
+name = "rattler_cache"
+version = "0.2.6"
+description = "A crate to manage the caching of data in rattler"
+categories= ["development-tools"]
+homepage= "https://github.com/conda/rattler"
+repository= "https://github.com/conda/rattler"
+license= "BSD-3-Clause"
+edition= "2021"
+readme= "README.md"
+resolver = "2"
+
+[dependencies]
+rattler_conda_types = { version = "0.28.2", path = "../rattler_conda_types", default-features = false }
+rattler_digest = { version = "1.0.2", path = "../rattler_digest", default-features = false }
+rattler_networking = { version = "0.21.4", path = "../rattler_networking", default-features = false }
+rattler_package_streaming = { version = "0.22.10", path = "../rattler_package_streaming", default-features = false, features = ["reqwest"] }
+simple_spawn_blocking = { version = "1.0.0", path = "../simple_spawn_blocking", features = ["tokio"] }
+anyhow = "1.0.82"
+dashmap = "6.0.1"
+dirs = "5.0.1"
+futures = "0.3.30"
+fxhash = "0.2.1"
+itertools = "0.13.0"
+parking_lot = "0.12.1"
+reqwest = { version = "0.12.3", default-features = false }
+tokio = { version = "1.37.0", default-features = false , features = ["macros"] }
+tracing = "0.1.40"
+url = { version = "2.5.0" }
+thiserror = "1.0"
+reqwest-middleware = "0.3.0"
+digest = "0.10.7"
+fs4 = { version = "0.9.1", features = ["fs-err-tokio"] }
