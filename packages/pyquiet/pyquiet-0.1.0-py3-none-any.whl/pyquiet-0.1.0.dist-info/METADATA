@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: pyquiet
+Version: 0.1.0
+Summary: A Python Parser for the Quiet Quantum Instruction Set
+Home-page: https://gitee.com/hpcl_quanta/quiet-parser.git
+Author: Yuzhen Zheng, Zhengdong Tang, Xiang Fu
+Author-email: gtaifu@gmail.com
+Project-URL: Bug Tracker, https://gitee.com/hpcl_quanta/quiet-parser/issues
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: antlr4-python3-runtime (==4.13.0)
+Requires-Dist: numpy
+
+# QUIET-paser
+
+## 环境安装
+```sh
+pip install -e .
+```
+## 使用
+目前 pyquiet 是在 QuaLeSim 模拟器对 QUIET-s(.qi) 指令集模拟时，对 `.qi` 文件进行解析时使用，详见 [QuaLeSim](https://pypi.org/project/qualesim/)。
+
+其应用于 Quingo 青果运行时系统的模拟后端，详见 [quingo](https://pypi.org/project/quingo/)。
+
+### 测试
+```sh
+pytest
+```

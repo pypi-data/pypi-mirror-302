@@ -1,0 +1,6 @@
+from pyquiet.qir.qinstructions.modules_instruction.ct import QuietCTInstructions
+from pyquiet.qir.qinstructions.modules_instruction.fm import QuietFmInstruction
+from pyquiet.qir.qinstructions.modules_instruction.im import QuietImInstruction
+from pyquiet.qir.qinstructions.modules_instruction.std import QuietStdInstruction
+from pyquiet.qir.qinstructions.modules_instruction.pm import QuietPmInstruction
+from pyquiet.qir.qinstructions.modules_instruction.tm import QuietTmInstruction
