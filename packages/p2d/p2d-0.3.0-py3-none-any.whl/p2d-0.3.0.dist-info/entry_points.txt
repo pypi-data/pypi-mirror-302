@@ -1,0 +1,4 @@
+[console_scripts]
+p2d=p2d.cli:main
+p2d-contest=p2d.contest:main
+
