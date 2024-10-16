@@ -1,0 +1,13 @@
+.idea/
+target/
+.classpath
+.project
+.settings
+*.iml
+
+# pip
+build/
+dist/
+.egg/
+*.egg-info/
+kernelspec/**/*.jar
