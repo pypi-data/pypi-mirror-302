@@ -1,0 +1,5 @@
+py_rust_stemmers-0.1.0.dist-info/METADATA,sha256=zFQIUYKj5BRsco_tV6IAjAhxwNWKT8qMi36yuWQNwpw,3320
+py_rust_stemmers-0.1.0.dist-info/WHEEL,sha256=BHIiZKG5AIPCZKEJn0tihK9KDQdwZySdpu0eE0825kg,102
+py_rust_stemmers/__init__.py,sha256=yz40wc_OCcpEW3bQWGa7ELT9hJfrHp2pmbNyPNAsi3c,147
+py_rust_stemmers/py_rust_stemmers.cpython-38-darwin.so,sha256=qMg1UZTkhFXj_715kKNfGIDpZ8RmYeQnwpAES0FtlVc,703576
+py_rust_stemmers-0.1.0.dist-info/RECORD,,
