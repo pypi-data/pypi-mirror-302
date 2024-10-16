@@ -1,0 +1,11 @@
+dawgz/__init__.py,sha256=xIkvuPVgvioffj2FpUNt-ENU0Y_cOYRmfLL67GqlYto,3684
+dawgz/__main__.py,sha256=YCNzDCEm142A82mj6JWdwBNCsamxFWV052ufQG16uV0,1885
+dawgz/schedulers.py,sha256=Kjn0PW0wZmP1euOuUg98MjJbtbo63Rfs86EjKwUZWNA,16539
+dawgz/utils.py,sha256=opD0ySpXpD3DP-CK_uxAIxSnxzN0ocBXlzl6uJNHuOw,2543
+dawgz/workflow.py,sha256=FI_FeZ30gzgwWTrMEUJK6w0ecflx3MJJslks29a2VHY,6584
+dawgz-1.0.2.dist-info/LICENSE,sha256=Ky7iFioaAAZxBew89qZDyJe-Kr_7VC4WGBqKb2W1CoM,1072
+dawgz-1.0.2.dist-info/METADATA,sha256=p3gSrxaK2tAWoq8zXCErdNuXYdFbZB1nve9NO4rwIAc,8346
+dawgz-1.0.2.dist-info/WHEEL,sha256=GV9aMThwP_4oNCtvEC2ec3qUYutgWeAzklro_0m4WJQ,91
+dawgz-1.0.2.dist-info/entry_points.txt,sha256=g3r_kLXdWDmXhIJOpM2a6dZxLUR4Srw9Iq_QV3hOJ5U,46
+dawgz-1.0.2.dist-info/top_level.txt,sha256=P3Qhf15iMvZfrKHDS-CuWHSXfZ6kk41y3Z_VNLc-OGo,6
+dawgz-1.0.2.dist-info/RECORD,,
