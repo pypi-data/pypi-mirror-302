@@ -1,0 +1,4 @@
+*.egg-info
+dist
+test-output.xml
+__pycache__
