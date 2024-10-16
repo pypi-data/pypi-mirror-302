@@ -1,0 +1,7 @@
+[console_scripts]
+p13 = pt13:v3130_app
+p3130 = pt13:v3130_app
+py3-thirteen = pt13:v3130_app
+
+[gui_scripts]
+
