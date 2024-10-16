@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.rst
+analogSynth01.csd
+bufferInOut.csd
+csoundSession.py
+ctcsound7.py
+pyproject.toml
+simple.csd
+test_ctcsound.py
+ctcsound7.egg-info/PKG-INFO
+ctcsound7.egg-info/SOURCES.txt
+ctcsound7.egg-info/dependency_links.txt
+ctcsound7.egg-info/requires.txt
+ctcsound7.egg-info/top_level.txt
