@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+src/vocochat/__init__.py
+src/vocochat/vocochat.py
+src/vocochat.egg-info/PKG-INFO
+src/vocochat.egg-info/SOURCES.txt
+src/vocochat.egg-info/dependency_links.txt
+src/vocochat.egg-info/entry_points.txt
+src/vocochat.egg-info/top_level.txt
+tests/test_audio.py
+tests/test_vocochat.py
