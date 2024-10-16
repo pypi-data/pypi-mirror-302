@@ -1,0 +1,35 @@
+Version 0.2.5     15 Oct 2024
+
+	* Pull in latest updates from run-script-framework.
+	* Simplify GHA integration with coveralls.io.
+	* Update transitive dependencies to address Dependabot warnings.
+	* Add support for Python v3.13, no need to drop older versions.
+	* Upgrade to Poetry v1.8.4 for official Python 3.13 support.
+
+Version 0.2.4     26 Feb 2024
+
+	* Upgrade to Poetry v1.8.0 and make related adjustments.
+	* Disable Python keyring via poetry.toml.
+	* Update Poetry install instructions in DEVELOPER.md.
+	* Pull in latest version of run-script-framework.
+	* Upgrade to gha-shared-workflows@v4 with new Poetry setup.
+	* Add support for 'run outdated' and update dependencies.
+
+Version 0.2.3     17 Jan 2024
+
+	* Update jinja2 to address CVE-2024-22195 from Dependabot.
+
+Version 0.2.2     05 Nov 2023
+
+	* Update urllib3 to address Dependabot warnings.
+	* Upgrade to Poetry v1.7.0 for official Python 3.12 support.
+
+Version 0.2.1     11 Oct 2023
+
+	* Upgrade major dependencies.
+	* Upgrade build process to Poetry v1.6.1.
+	* Add support for Python v3.12.
+
+Version 0.2.0     17 Sep 2023
+
+	* Initial release to PyPI.
