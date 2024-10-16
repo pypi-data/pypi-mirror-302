@@ -1,0 +1,9 @@
+LICENSE
+setup.py
+mzr_ingestion/__init__.py
+mzr_ingestion/mzr_ingestion.py
+mzr_ingestions.egg-info/PKG-INFO
+mzr_ingestions.egg-info/SOURCES.txt
+mzr_ingestions.egg-info/dependency_links.txt
+mzr_ingestions.egg-info/requires.txt
+mzr_ingestions.egg-info/top_level.txt
