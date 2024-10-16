@@ -1,0 +1,6 @@
+numpy
+grad-cam
+scikit-learn
+pillow
+matplotlib
+torch

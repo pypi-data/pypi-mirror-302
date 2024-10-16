@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+fseg/__init__.py
+fseg/fseg.py
+segf.egg-info/PKG-INFO
+segf.egg-info/SOURCES.txt
+segf.egg-info/dependency_links.txt
+segf.egg-info/requires.txt
+segf.egg-info/top_level.txt
