@@ -1,0 +1,15 @@
+LICENSE.md
+MANIFEST.in
+README.md
+pyproject.toml
+fwl_zephyrus.egg-info/PKG-INFO
+fwl_zephyrus.egg-info/SOURCES.txt
+fwl_zephyrus.egg-info/dependency_links.txt
+fwl_zephyrus.egg-info/requires.txt
+fwl_zephyrus.egg-info/top_level.txt
+src/zephyrus/XUV_flux.py
+src/zephyrus/constants.py
+src/zephyrus/escape.py
+src/zephyrus/planets_parameters.py
+src/zephyrus/data/Johnstone_2021/1p0Msun_1p0OmegaSun_basic.dat
+tests/test_earth.py
