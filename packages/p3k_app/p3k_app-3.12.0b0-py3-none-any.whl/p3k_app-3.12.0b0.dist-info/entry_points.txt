@@ -1,0 +1,7 @@
+[console_scripts]
+p3900 = p3k_app:app
+p3k = p3k_app:app
+p9 = p3k_app:app
+
+[gui_scripts]
+
