@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: image_processing_package_dayane01
+Version: 0.0.2
+Summary: Pacote de processamento de imagens
+Home-page: https://github.com/DayPateis/image-processing-package
+Author: Dayane
+Author-email: dayanepateis@gmail.com
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: scikit-image>=0.16.1
+
+# package_name
+
+Description. 
+The package package_name is used to:
+	Processing:
+		- Histrogram matching
+		-Structual similarity
+		-Resize image
+	Utils:
+		-Read image
+		-Save image
+		-plot image
+		-plot result
+		-plot histogram
+
+
+## Installation
+
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install package_name
+
+```bash
+pip install image_processing
+```
+
+## Author
+Dayane
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
