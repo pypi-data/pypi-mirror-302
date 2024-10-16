@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+dsplayer_lyrics/__init__.py
+dsplayer_lyrics/lyrics.py
+dsplayer_lyrics.egg-info/PKG-INFO
+dsplayer_lyrics.egg-info/SOURCES.txt
+dsplayer_lyrics.egg-info/dependency_links.txt
+dsplayer_lyrics.egg-info/entry_points.txt
+dsplayer_lyrics.egg-info/requires.txt
+dsplayer_lyrics.egg-info/top_level.txt
