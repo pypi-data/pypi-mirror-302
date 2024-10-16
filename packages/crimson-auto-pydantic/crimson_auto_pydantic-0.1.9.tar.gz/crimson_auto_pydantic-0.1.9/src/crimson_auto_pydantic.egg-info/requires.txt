@@ -1,0 +1,6 @@
+pydantic
+crimson-code-extractor
+crimson-ast-dev-tool
+inflection
+crimson-intelli-type
+crimson-file-loader

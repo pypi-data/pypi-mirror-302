@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+src/crimson/auto_pydantic/__init__.py
+src/crimson/auto_pydantic/generator.py
+src/crimson/auto_pydantic/generator_model.py
+src/crimson/auto_pydantic/validator.py
+src/crimson_auto_pydantic.egg-info/PKG-INFO
+src/crimson_auto_pydantic.egg-info/SOURCES.txt
+src/crimson_auto_pydantic.egg-info/dependency_links.txt
+src/crimson_auto_pydantic.egg-info/requires.txt
+src/crimson_auto_pydantic.egg-info/top_level.txt
