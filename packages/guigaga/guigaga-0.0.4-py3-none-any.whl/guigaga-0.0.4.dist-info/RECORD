@@ -1,0 +1,12 @@
+guigaga/__about__.py,sha256=QXv0xbUec3V-wgU5LwQ5RSZbKMlVh2836dJPpVNyh5M,131
+guigaga/__init__.py,sha256=9poIqDe-152kF8tqtbSZbyCHMMcl0mkQs-GikKiIVSM,263
+guigaga/gui.py,sha256=FcR5PR-hElU3vhKfrUSJg-8qaH0e7xPIwa2EQxBuZNw,5392
+guigaga/interface.py,sha256=a4kaDPsOkzPhNWP5RvRkHCUmg71PaP8VKDNKJ7NRHV0,15321
+guigaga/introspect.py,sha256=kSNgL6KS01gaXddKGaR6tyDxOsIZ2-AKAM7bbSV8X5o,9889
+guigaga/logger.py,sha256=k-FgWtMvwWrp-U2hXh0yB7NlIBwZbguBnzQIL7bIsdM,6097
+guigaga/themes.py,sha256=esAHjlHTG44OUnobaDDThms_X03WBEh1NC3hsVoJ6b0,1086
+guigaga/types.py,sha256=OeWO2KKVLgfRM0vaA0lur0KrUbOyteLkZgAdivWvZ_o,3937
+guigaga-0.0.4.dist-info/METADATA,sha256=_Gm5-QNo1xxuqUVlroha9wemT_-JftA0a8DGIYUHFck,2484
+guigaga-0.0.4.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+guigaga-0.0.4.dist-info/licenses/LICENSE.txt,sha256=G0-XdRDvjMQkq2F5T_FMPPWWqullmv-goXrqtDK13Rs,1101
+guigaga-0.0.4.dist-info/RECORD,,
