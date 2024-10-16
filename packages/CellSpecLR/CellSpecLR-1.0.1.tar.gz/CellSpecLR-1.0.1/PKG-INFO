@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: CellSpecLR
+Version: 1.0.1
+Summary: Cell-Specific Ligand-Receptor Pair Prediction Algorithm
+Home-page: https://github.com/liaoxy-16/CellSpecLR
+Author: liaoxingyu
+Author-email: 464623158@qq.com
+Keywords: python,Ligand receptor prediction
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
