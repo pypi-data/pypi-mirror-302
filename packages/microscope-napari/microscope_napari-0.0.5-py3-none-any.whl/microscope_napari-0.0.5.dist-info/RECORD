@@ -1,0 +1,14 @@
+microscope_napari/__init__.py,sha256=foR9LubpAhgRwCRiW7l-Lr8hsUhxNQHhNFQsdF7WUvg,241
+microscope_napari/_version.py,sha256=EJB7__SNK9kQS_SWZB_U4DHJ3P8ftF6etZEihTYnuXE,411
+microscope_napari/napari.yaml,sha256=EvOFpT_JiYEHEwy9hGZxb4pAt4xKZGzqt_YMzwIq398,1084
+microscope_napari/utils.py,sha256=u3NM7qczqQCqgD52P8Qj4N9KyHJx8c82yDyEOxpvNFk,4755
+microscope_napari/workers.py,sha256=bS9XXJWs8u94yt9oUaXQB56z4BESbfed3CIzNu7FUzE,2034
+microscope_napari/samples/cell_data.py,sha256=lKV0EO_x153OPDuWTzer-033g4lbA0PPyhiaUssuVXA,1522
+microscope_napari/widgets/counting_widget.py,sha256=mVxv8FPluGwZoA41kLDxdf7qpMptFlfMN1xiPeE1Fw8,6020
+microscope_napari/widgets/segmentation_widget.py,sha256=UJ6--Yh9oO90dg9NdFYOo9S0pNkJKKwY0yw6pW3wg6Q,16108
+microscope_napari-0.0.5.dist-info/LICENSE,sha256=IuXY43sv7GlcJ3v_kkgH6BUmz98XI7fP2SLBpytI6nA,1489
+microscope_napari-0.0.5.dist-info/METADATA,sha256=JasWzII0xVwz5Q_HISZlCnQgf-xAdxK-aERwQZbsEk0,3750
+microscope_napari-0.0.5.dist-info/WHEEL,sha256=GV9aMThwP_4oNCtvEC2ec3qUYutgWeAzklro_0m4WJQ,91
+microscope_napari-0.0.5.dist-info/entry_points.txt,sha256=frweXuAzrfZw4s6vSlEdq2VoK-4VtmYtim8fmV-Ray8,68
+microscope_napari-0.0.5.dist-info/top_level.txt,sha256=QZIsxuLVJXh597waEsaVB1lHe1xS-_P4dxenBL2iqqI,18
+microscope_napari-0.0.5.dist-info/RECORD,,
