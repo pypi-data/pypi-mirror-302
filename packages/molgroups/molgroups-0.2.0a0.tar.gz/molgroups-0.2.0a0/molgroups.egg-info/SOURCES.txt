@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+molgroups/__init__.py
+molgroups/components.py
+molgroups/lipids.py
+molgroups/mol.py
+molgroups.egg-info/PKG-INFO
+molgroups.egg-info/SOURCES.txt
+molgroups.egg-info/dependency_links.txt
+molgroups.egg-info/requires.txt
+molgroups.egg-info/top_level.txt
