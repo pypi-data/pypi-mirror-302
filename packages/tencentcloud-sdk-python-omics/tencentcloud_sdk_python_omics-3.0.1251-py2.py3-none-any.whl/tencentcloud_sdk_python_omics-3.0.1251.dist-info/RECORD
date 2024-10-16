@@ -1,0 +1,10 @@
+tencentcloud/__init__.py,sha256=4ShRF5stIoNri9YFqFY5cD8ek5hw8hdm4qZdr-plJP8,631
+tencentcloud/omics/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tencentcloud/omics/v20221128/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tencentcloud/omics/v20221128/errorcodes.py,sha256=UT5fVDRzRbNl7KiCWizmn26g7qYjWaLvcSVIt2VknhE,4545
+tencentcloud/omics/v20221128/models.py,sha256=VGZ_CAcKtCY2CECBkdwk9wfqlh8lKA-HAxMofVNAhJU,153941
+tencentcloud/omics/v20221128/omics_client.py,sha256=iBZVdpIh_YYKvu85afojPHjywT0AtuXSty7yz2K3Zpg,18216
+tencentcloud_sdk_python_omics-3.0.1251.dist-info/METADATA,sha256=LzcYno0-aqfB6HTZ4rroeUjF_OFx2l8ufT96oBHUId0,1502
+tencentcloud_sdk_python_omics-3.0.1251.dist-info/WHEEL,sha256=z9j0xAa_JmUKMpmz72K0ZGALSM_n-wQVmGbleXx2VHg,110
+tencentcloud_sdk_python_omics-3.0.1251.dist-info/top_level.txt,sha256=g-8OyzoqI6O6LiS85zkeNzhB-osEnRIPZMdyRd_0eL0,13
+tencentcloud_sdk_python_omics-3.0.1251.dist-info/RECORD,,
