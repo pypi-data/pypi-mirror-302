@@ -1,0 +1,15 @@
+glutamate/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+glutamate/__main__.py,sha256=kcFKsQbLPENH7W5lTzPQYWfNQ9ugFB1nrmSxWXtWcCw,244
+glutamate/consts.py,sha256=AkPpB1FH1poK1T9JLhsijucbwERhKD3HsbFzv3qcqvI,666
+glutamate/database.py,sha256=tgUASioMHTAjfzB0xEEVM0GgxUC9A7C0YAYiwGn5BB0,29054
+glutamate/datamodel.py,sha256=4DnFjDCLln39LTfQ_Kuee6Wi2tdWN7zquuFwv9ky3sI,3971
+glutamate/dataset.py,sha256=f--sZ4GlWiF-UEGCra7JSLBYNfu02d1t5XNXIIBOF80,1085
+glutamate/download.py,sha256=68NxmSo3EXPCvPusUcgCdwFqrnicfz2CTDq0JtMUwLI,7202
+glutamate/inner_types.py,sha256=YRy82FUzW3dZzG6tQ7JbuDz7nYvDniy8r8n0voRaCbg,4199
+glutamate/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+glutamate/utils.py,sha256=0reod_vicEm4H1hDNRZWTyqa5JJFmgtPmAW0DsN8dZw,975
+glutamate-0.0.1a7.dist-info/METADATA,sha256=0zWC3jqrOO6vYbUPnOO-dcnrRRa3WEJ8ceym6zShMPI,2411
+glutamate-0.0.1a7.dist-info/WHEEL,sha256=GV9aMThwP_4oNCtvEC2ec3qUYutgWeAzklro_0m4WJQ,91
+glutamate-0.0.1a7.dist-info/entry_points.txt,sha256=3j4cHpcj4VPsB5HMyDidoidkWXQmIMZliOeUxD052p4,55
+glutamate-0.0.1a7.dist-info/top_level.txt,sha256=HLOZB8lMwmdRN0St5KTj_y0sR48581Nl16SL9ty1BnM,10
+glutamate-0.0.1a7.dist-info/RECORD,,
