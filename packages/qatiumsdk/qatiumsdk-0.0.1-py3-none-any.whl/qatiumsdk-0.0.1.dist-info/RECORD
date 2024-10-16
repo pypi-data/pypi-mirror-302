@@ -1,0 +1,8 @@
+qatiumsdk/__init__.py,sha256=XSExQ0yfWjELcSmIHVRhK3imlGs-6wW5yzQnWQTnrWI,136
+qatiumsdk/plugin.py,sha256=Mj478kYWbF-CzqSpBy1JYa48asjEFNF7AaFqexZyHMY,137
+qatiumsdk/register_plugin.py,sha256=8xHsRDy4H-KG3ZDtGaHA7Tj-mA_NN09kQYsViMSiHUs,207
+qatiumsdk/sdk.py,sha256=mKrtKRq3Y_18AJvsQEHrQge-_HkLJmAYn2qFjd0sWGo,851
+qatiumsdk/sdk_version.py,sha256=9qKpougx3hM2L7SkyW-1NV3bWzLvx2e9fKqifglH5Cc,44
+qatiumsdk-0.0.1.dist-info/METADATA,sha256=QskScoDdeQEPDYcamQ1Pa5o232hdd42Ii5goGvLn8bk,777
+qatiumsdk-0.0.1.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+qatiumsdk-0.0.1.dist-info/RECORD,,
