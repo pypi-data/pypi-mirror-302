@@ -1,0 +1,13 @@
+src/Package.py,sha256=tZ_uwWQjXtEEPYL6sgVNI4eeT1WmZ_Qd-_2xSkFU-mk,588
+src/ProjectLicense.py,sha256=CSNMgiKVfz4KFybh7WUAPnINNXSKWnBA5uUA5JkZ9y8,9640
+src/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+src/_version.py,sha256=1mptEzQihbdyqqzMgdns_j5ZGK9gz7hR2bsgA_TnjO4,22
+src/licensepy.py,sha256=spsO4B-eS5MWBgy3_nf_6a9EA5lH0TKTispgmYRRX04,2117
+src/pretty_string.py,sha256=G9HaQsieClrM5TzRCvmTK_XrY2VEr7F5I6iPUAEoQDM,691
+src/test_projectlicenses.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+licensepy-0.0.4.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+licensepy-0.0.4.dist-info/METADATA,sha256=d0dE4zYyA5RT4YhqmxZzXlqpydXcemmGKJHtzBPyYoo,2983
+licensepy-0.0.4.dist-info/WHEEL,sha256=GV9aMThwP_4oNCtvEC2ec3qUYutgWeAzklro_0m4WJQ,91
+licensepy-0.0.4.dist-info/entry_points.txt,sha256=wK-AeOCgD1CxgxwWZCfXKNrLOlXVc5WBUgMxkq0gScA,58
+licensepy-0.0.4.dist-info/top_level.txt,sha256=74rtVfumQlgAPzR5_2CgYN24MB0XARCg0t-gzk6gTrM,4
+licensepy-0.0.4.dist-info/RECORD,,
