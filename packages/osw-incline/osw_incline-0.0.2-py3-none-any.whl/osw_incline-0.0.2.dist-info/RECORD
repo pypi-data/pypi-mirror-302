@@ -1,0 +1,10 @@
+osw_incline/__init__.py,sha256=hO3LUhgJ5fqL8YTYNf6hDJgZ55LUYqv3WDjzY6ngMPM,2000
+osw_incline/dem_processor.py,sha256=7Ighz9xqZHYy-snJi8uZSdkbPwUeFhkI1orugGpIM7I,11279
+osw_incline/logger.py,sha256=bmf3iMQz0amZDEK-59gd6hAOB9WHTF3MhrlP3j7icjw,938
+osw_incline/osm_graph.py,sha256=poC7zPwUpyoE8f9xA5bZRl9JzH1JpamJpze1WRHRI7k,4503
+osw_incline/version.py,sha256=ZkJ4YFnqff5CwHnqUupPsAVatqD4aozkrh1u-iQrvMc,21
+osw_incline-0.0.2.dist-info/LICENSE,sha256=2bm9uFabQZ3Ykb_SaSU_uUbAj2-htc6WJQmS_65qD00,1073
+osw_incline-0.0.2.dist-info/METADATA,sha256=S-ZGBUji_FfCaxvRAQ9kbmmX6xrrerCHxLed4hRt16E,8054
+osw_incline-0.0.2.dist-info/WHEEL,sha256=eOLhNAGa2EW3wWl_TU484h7q1UNgy0JXjjoqKoxAAQc,92
+osw_incline-0.0.2.dist-info/top_level.txt,sha256=9nU4aU1xp-WkBDtAk6pzrYXc8J6L0bYAdpJoYTyaz2s,12
+osw_incline-0.0.2.dist-info/RECORD,,
