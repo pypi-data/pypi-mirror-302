@@ -1,0 +1,7 @@
+README.md
+pyproject.toml
+paas_app_charmer.egg-info/PKG-INFO
+paas_app_charmer.egg-info/SOURCES.txt
+paas_app_charmer.egg-info/dependency_links.txt
+paas_app_charmer.egg-info/requires.txt
+paas_app_charmer.egg-info/top_level.txt
