@@ -1,0 +1,7 @@
+inference_client/__init__.py,sha256=LFEApD5prEgCZptwLzKQ7hCvWlEjxBDXMHmSgPEZT48,54
+inference_client/client.py,sha256=E9anHfCq7Qhsqy6wj9phKfH_lt-emUKAM8IcpdQFe3Y,5474
+daoai_inference_client-0.4.0.dist-info/LICENSE,sha256=0RwFsJKTmxYhREHpv1r_hENw4G6tLIpr3c0Q7dZx_os,1075
+daoai_inference_client-0.4.0.dist-info/METADATA,sha256=lgRey7wXU2MyxSkPPxhiJW6F5xsghXegE4RR3cfk3oE,714
+daoai_inference_client-0.4.0.dist-info/WHEEL,sha256=GV9aMThwP_4oNCtvEC2ec3qUYutgWeAzklro_0m4WJQ,91
+daoai_inference_client-0.4.0.dist-info/top_level.txt,sha256=b3qFmuUWbTWp2iqoXj6vUayYSsB4qx6zpOWd4SEvJ5M,17
+daoai_inference_client-0.4.0.dist-info/RECORD,,
