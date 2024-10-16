@@ -1,0 +1,5 @@
+llama_index/storage/chat_store/upstash/__init__.py,sha256=rR6saVPPjocwU3APzXHsYtU1AcEKxq00UaFbPcd1Ws8,105
+llama_index/storage/chat_store/upstash/base.py,sha256=mOVfTgWB0O0hVUl1pJRl4ZH0KCwsjnikF059Q7Fonkc,11401
+llama_index_storage_chat_store_upstash-0.1.2.dist-info/METADATA,sha256=_8_kDDzYFE4xFe8Cnk5renQJhhpf0L7P46NOPaYRdsU,2012
+llama_index_storage_chat_store_upstash-0.1.2.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+llama_index_storage_chat_store_upstash-0.1.2.dist-info/RECORD,,
