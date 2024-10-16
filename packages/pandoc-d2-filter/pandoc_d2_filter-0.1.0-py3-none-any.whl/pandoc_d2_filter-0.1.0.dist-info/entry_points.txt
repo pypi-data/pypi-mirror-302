@@ -1,0 +1,2 @@
+[console_scripts]
+pandoc-d2 = pandoc_d2_filter:main
