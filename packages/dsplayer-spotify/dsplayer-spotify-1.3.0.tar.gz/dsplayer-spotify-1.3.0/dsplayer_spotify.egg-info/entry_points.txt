@@ -1,0 +1,2 @@
+[dsplayer.plugins]
+spotify = dsplayer_spotify.spotify:SpotifyPlugin

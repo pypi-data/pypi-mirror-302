@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+dsplayer_spotify/__init__.py
+dsplayer_spotify/spotify.py
+dsplayer_spotify.egg-info/PKG-INFO
+dsplayer_spotify.egg-info/SOURCES.txt
+dsplayer_spotify.egg-info/dependency_links.txt
+dsplayer_spotify.egg-info/entry_points.txt
+dsplayer_spotify.egg-info/requires.txt
+dsplayer_spotify.egg-info/top_level.txt

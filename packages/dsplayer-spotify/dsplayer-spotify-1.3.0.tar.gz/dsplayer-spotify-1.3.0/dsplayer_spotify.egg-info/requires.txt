@@ -1,0 +1,3 @@
+dsplayer
+yt-dlp
+spotipy
