@@ -1,0 +1,4 @@
+requests>=2.25.1
+
+[sftp]
+paramiko>=1.9.1
