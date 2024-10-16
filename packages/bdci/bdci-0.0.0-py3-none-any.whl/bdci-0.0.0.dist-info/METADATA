@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: bdci
+Version: 0.0.0
+Summary: Bjontegaard Delta Confidence Interval
+Home-page: https://github.com/fgvfgfg564/BDCI
+Author: Xinyu Hang, NERCVT, PKU
+Author-email: xyhang@pku.edu.cn
+License: MIT Licence
+Keywords: pip,bdci,vqi
+Platform: any
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: torch >=1.7
+Requires-Dist: tqdm
+Requires-Dist: transformers
+Requires-Dist: typing-extensions
+
+Python library for computing Bjontegaard Delta-Confidence Interval (BDCI)
