@@ -1,0 +1,11 @@
+agent/__init__.py,sha256=yMsK-7f-6k0SztERS7UKw2Rbdd9nrmvQJG12t68sVkE,1021
+agent/completions.py,sha256=EPDb1bqlVDfq69mv-kbqDExGbBTrpbQU4po1tFtg5wQ,2963
+agent/config.py,sha256=oJmZ-UuXN9omVvZR0Uo5rsPZlLEPH-warKOrVhIRprs,536
+agent/logging.py,sha256=NVyEbQkycUAyiuzfwdOU6qD_prYocQtbsICJ_9ivjtQ,308
+agent/tools.py,sha256=3e1BEZcu7oiy5bBMdj8uqL00obDIrLstaWtNi22TbRA,4063
+agent/utils.py,sha256=E4dfC8u0btUby86Cg52Q70X7lyAwJDiW_ZE6vZUNKSE,89
+automators_agent-0.1.0.dist-info/METADATA,sha256=wdupKO-v5_WVg-MOjt3ANyPHOQ1hrn2VR49Oq05HE9s,909
+automators_agent-0.1.0.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+automators_agent-0.1.0.dist-info/entry_points.txt,sha256=QaCmzKDbtwl86hfGeucXNcFZCMFW2gv0GJklEpWmJ_E,36
+automators_agent-0.1.0.dist-info/licenses/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+automators_agent-0.1.0.dist-info/RECORD,,
