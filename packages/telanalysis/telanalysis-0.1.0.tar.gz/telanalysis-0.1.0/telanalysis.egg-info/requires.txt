@@ -1,0 +1,12 @@
+pywebio
+jmespath
+emoji
+wordcloud
+phonenumbers
+validate_email
+pandas
+vaderSentiment
+nltk
+matplotlib
+networkx
+twine

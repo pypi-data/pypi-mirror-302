@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+telanalysis.egg-info/PKG-INFO
+telanalysis.egg-info/SOURCES.txt
+telanalysis.egg-info/dependency_links.txt
+telanalysis.egg-info/requires.txt
+telanalysis.egg-info/top_level.txt
