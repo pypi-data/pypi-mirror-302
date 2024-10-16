@@ -1,0 +1,6 @@
+click>=8.0
+matplotlib>=3.5
+termplotlib>=0.3.0
+colorama>=0.4.4
+requests>=2.26.0
+speedtest-cli

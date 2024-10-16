@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.py
+speedx/__init__.py
+speedx/cli.py
+speedx/core.py
+speedx/graphs.py
+speedx/history.py
+speedx.egg-info/PKG-INFO
+speedx.egg-info/SOURCES.txt
+speedx.egg-info/dependency_links.txt
+speedx.egg-info/entry_points.txt
+speedx.egg-info/requires.txt
+speedx.egg-info/top_level.txt
