@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: financial_calculator_5
+Version: 0.1.0
+Summary: Крутой пакет
+Author-email: euschevlyakova <euschevlyakova@yandex.ru>
+License: MIT
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+Requires-Dist: argparse>=3.2
+
