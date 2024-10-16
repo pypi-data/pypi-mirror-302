@@ -1,0 +1,6 @@
+pyconcord/__init__.py,sha256=zlFw4cKOkVTbKGu6Gcf4D6nLCDXtVFT0ghKJooxySJY,106
+pyconcord/_core.pypy310-pp73-darwin.so,sha256=CrMemKaGpnkMttI6CMv05LNMxXFz4z03KvbyfLdfmCo,232672
+pyconcord-0.4.0.dist-info/RECORD,,
+pyconcord-0.4.0.dist-info/WHEEL,sha256=uxkwKkSaV2pc3sD3d44sbDGjdTRMBim1WjOy45_KYiM,121
+pyconcord-0.4.0.dist-info/METADATA,sha256=sR1FufCE5xS-bW9dieqHKTB0KYO-kir0iEjo_t8OuGk,4862
+pyconcord-0.4.0.dist-info/licenses/LICENSE,sha256=SBNiCMUPOkN74CrKaGEJk1CNXzPemZ76Qsm106kwI1E,2182
