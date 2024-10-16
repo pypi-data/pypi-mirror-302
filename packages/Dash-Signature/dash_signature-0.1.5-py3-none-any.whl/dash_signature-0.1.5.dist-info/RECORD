@@ -1,0 +1,14 @@
+dash_signature/Signature.py,sha256=5FJFIdx9KsgWvjP8RCJlLugxiwDVEdtJd5LrTdbVFwg,1242
+dash_signature/Test.py,sha256=UqikFWUWU_oQxe9SPMoTFd6jHwhjRzSAyCed6Z4GUPI,910
+dash_signature/__init__.py,sha256=68e67RyM_CGfNhkF0bs0xm1HAPU4sQfZm6JdCi_cJf4,2278
+dash_signature/_imports_.py,sha256=irJaJYzuCkts4hutO0Wm33ar0M4Rcb5dE13sC-34C8s,98
+dash_signature/dash_signature.min.js,sha256=FkAzFZH0feuGGnqVhvqG6meGmA0G_7e-odozSnBk4BU,48263
+dash_signature/dash_signature.min.js.LICENSE.txt,sha256=xm2bBV3HgMGBoprGIk8YO7QZndTUlAtUOzhCXllBCqI,132
+dash_signature/dash_signature.min.js.map,sha256=PXw-BHf1OMHBgy2x9PFInsuKgGVJWMG4TNGavhRv_tk,123300
+dash_signature/metadata.json,sha256=-yWUmyH9MNna80ZegqgDlO9RSluCf7LZJRUS2J4XK9A,1747
+dash_signature/package-info.json,sha256=WElYNdPWcQu-YM2qQvgmvKFIfaAyonie2IIyPb8hiS8,2535
+dash_signature-0.1.5.dist-info/LICENSE,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dash_signature-0.1.5.dist-info/METADATA,sha256=OZ-8vH8qqTrkPTyJ1dO1KteQU9A9UOJmlbZSaek7qV4,4580
+dash_signature-0.1.5.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+dash_signature-0.1.5.dist-info/entry_points.txt,sha256=7gvHjEcH9yfC8cGU3Vwf3EG69cU6dbt3Uw_o_YmmaS8,54
+dash_signature-0.1.5.dist-info/RECORD,,
