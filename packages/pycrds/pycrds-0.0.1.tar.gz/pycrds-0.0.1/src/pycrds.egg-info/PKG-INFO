@@ -1,0 +1,52 @@
+Metadata-Version: 2.1
+Name: pycrds
+Version: 0.0.1
+Summary: A library to CRDS (cavity ring-down spectroscopy) data processing
+Home-page: https://github.com/lapat-iag-usp/PyCRDS
+Author: Marcia Marques
+Author-email: marcia.marques@alumni.usp.br
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Atmospheric Science
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy>=1.26.4
+Requires-Dist: pandas>=2.2.2
+Requires-Dist: xarray>=2024.6.0
+Requires-Dist: dask>=2024.5.2
+Requires-Dist: dask-expr>=1.1.2
+Requires-Dist: netCDF4>=1.6.5
+
+# PyCRDS
+
+[![Documentation Status](https://readthedocs.org/projects/pycrds/badge/?version=latest&style=flat)](https://readthedocs.org/projects/pycrds/?badge=latest)
+
+PyCRDS is a library for CRDS (cavity ring-down spectroscopy) data processing.
+
+## Installation
+
+Install using pip:
+
+```bash
+pip install pycrds
+```
+
+Or you can clone the repository and install it locally:
+
+```bash
+pip install -e .
+```
+
+## Dataset
+
+The dataset used for testing can be found in the following GitHub repository:
+
+[PyCRDS-data](https://github.com/lapat-iag-usp/PyCRDS-data)
+
+To download the dataset, you can download it as a ZIP file or clone the repository:
+
+```bash
+git clone git@github.com:lapat-iag-usp/PyCRDS-data.git
+```

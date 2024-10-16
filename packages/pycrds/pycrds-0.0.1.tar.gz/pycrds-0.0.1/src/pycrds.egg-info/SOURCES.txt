@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+setup.py
+src/pycrds/__init__.py
+src/pycrds/datafile.py
+src/pycrds/flags.py
+src/pycrds/graphs.py
+src/pycrds.egg-info/PKG-INFO
+src/pycrds.egg-info/SOURCES.txt
+src/pycrds.egg-info/dependency_links.txt
+src/pycrds.egg-info/requires.txt
+src/pycrds.egg-info/top_level.txt
