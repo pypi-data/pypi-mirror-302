@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: cbim_utils
+Version: 0.1.5
+Summary: Various utilities
+Home-page: https://github.com/mmartinelli00/package_cbim.git
+Author-email: m.martinelli@cbim.it
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: PyMySQL==1.1.1
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0; extra == "dev"
+Requires-Dist: twine>=4.0.2; extra == "dev"
+
+# Documentazione Moduli
+
+## db_connection.py: 
+Get a connection to a MySQL database from a url style connection string. (Param url: MySQL connection string, e.g.: mysql://user:password@hostname:port/database)
