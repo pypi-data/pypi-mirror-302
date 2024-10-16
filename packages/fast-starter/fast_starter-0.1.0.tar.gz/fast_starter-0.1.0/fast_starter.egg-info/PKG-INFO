@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: fast_starter
+Version: 0.1.0
+Summary: A simple package to quickly set up a FastAPI project structure.
+Home-page: https://github.com/AbdulroufMuhammad/Fast_Starter
+Author: Abdulrauf muhammad
+Author-email: abdulraufmuhammad28@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Framework :: FastAPI
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: fastapi
+Requires-Dist: sqlalchemy
+Requires-Dist: pydantic
+Requires-Dist: alembic
+
+<<<<<<< HEAD
+# Fast_Starter
+a fast api project structurer
+=======
+# Fast Starter
+
+A simple package to quickly set up a FastAPI project structure.
+
+## Installation
+
+You can install the package via pip:
+
+```bash
+pip install fast_starter
+>>>>>>> 475bd97 (Initial commit)

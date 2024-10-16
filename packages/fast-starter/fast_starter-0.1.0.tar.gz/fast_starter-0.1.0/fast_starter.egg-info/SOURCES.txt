@@ -1,0 +1,10 @@
+README.md
+setup.py
+fast_starter/__init__.py
+fast_starter/main.py
+fast_starter.egg-info/PKG-INFO
+fast_starter.egg-info/SOURCES.txt
+fast_starter.egg-info/dependency_links.txt
+fast_starter.egg-info/entry_points.txt
+fast_starter.egg-info/requires.txt
+fast_starter.egg-info/top_level.txt

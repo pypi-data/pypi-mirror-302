@@ -1,0 +1,2 @@
+[console_scripts]
+fast-starter = fast_starter.main:main
