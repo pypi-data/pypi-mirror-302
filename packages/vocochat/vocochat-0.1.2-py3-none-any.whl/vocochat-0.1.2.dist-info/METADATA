@@ -1,0 +1,118 @@
+Metadata-Version: 2.1
+Name: vocochat
+Version: 0.1.2
+Home-page: https://python.dobyemail.com
+Author: Tom Sapletta
+Author-email: info@softreck.dev
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Audio Library
+
+This is a Python library for audio interface, including text-to-speech (TTS), speech-to-text (STT), audio playback, recording, and processing. It can be used in desktop apps, web apps, and provides a simple API for integration.
+
+## Features
+
+- Text-to-speech conversion
+- Speech-to-text conversion 
+- Audio playback
+- Audio recording
+- Audio processing
+
+## Installation
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/yourusername/audio-library.git
+cd audio-library
+```
+
+2. Build and run the Docker container:
+
+```bash
+docker-compose up --build
+```
+
+This will build the Docker image, install all dependencies (including PortAudio), and run the unit tests.
+
+## Usage
+
+Here's an example of how to use the various features of the library:
+
+```python
+from vocochat.audio.audio import AudioInterface
+
+audio = AudioInterface()
+
+# Text-to-speech example
+text = "Hello, this is a test of the text-to-speech functionality."
+audio_data = audio.text_to_speech(text)
+audio.play_audio(audio_data)
+
+# Speech-to-text example 
+print("Speak now...")
+audio_data = audio.record_audio(duration=5)
+text = audio.speech_to_text(audio_data)
+print(f"You said: {text}")
+
+# Audio processing example
+processed_audio_data = audio.process_audio(audio_data)
+audio.play_audio(processed_audio_data)
+```
+
+See the `examples` directory for more detailed usage examples.
+
+## API
+
+### `AudioInterface`
+
+The main interface for the audio library.
+
+#### `text_to_speech(text)`
+
+Convert text to speech.
+
+#### `speech_to_text(audio_data)`
+
+Convert speech to text.
+
+#### `play_audio(audio_data)`
+
+Play audio data.
+
+#### `record_audio(duration)`
+
+Record audio from the microphone for the specified duration (in seconds).
+
+#### `process_audio(audio_data)`
+
+```bash
+docker compose up --build
+```
+
+```bash
+pip install pyaudio
+sudo dnf install portaudio-devel redhat-rpm-config
+pip install --user pyaudio
+```
+
+
+Process audio data (e.g., noise reduction, format conversion, etc.).
+
+## Contributing
+
+Contributions are welcome! Please see the `CONTRIBUTING.md` file for guidelines.
+
+## License
+
+This project is licensed under the MIT License - see the `LICENSE` file for details.

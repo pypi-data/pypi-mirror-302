@@ -1,0 +1,2 @@
+[console_scripts]
+vocochat = vocochat.vocochat:main
