@@ -1,0 +1,11 @@
+lupapy-2.2.dist-info/RECORD,,
+lupapy-2.2.dist-info/WHEEL,sha256=Ek5IYlvDymhUlbAiF4LbHsWgPjpdG_hjA9kvN_OTI3w,115
+lupapy-2.2.dist-info/top_level.txt,sha256=zBjq_OEwVlKBUT25L2ENcMO-9XdwVQSN7X6VHyH7Pcg,5
+lupapy-2.2.dist-info/LICENSE.txt,sha256=lXr-SRPfxGn9YFQdhHpYHFvd1roMy3I5DteMdYN3aKE,2231
+lupapy-2.2.dist-info/METADATA,sha256=400d7StA8oZfuJzdo8aSL_rJB5PbAXRxUYoqWDZFcKU,39960
+lupa/version.py,sha256=4dh37gwetUr8V4jXwwSMYVDIsQE1GBdIIJY43DjD1h8,20
+lupa/lua51.pypy39-pp73-darwin.so,sha256=NxbJjlUAG5evYCF3TRqHoCbHVYWWaBwslYhlkNCMKFM,452776
+lupa/lua53.pypy39-pp73-darwin.so,sha256=LY8U_AULgO7z5bIEuWJ__VHSjvhcN4UNTqp9oOU-Jh8,484712
+lupa/__init__.py,sha256=c99ILOqbgXcktoS1YsqNLg9juNuAJZ_Yxm4VGEANkqo,3001
+lupa/lua54.pypy39-pp73-darwin.so,sha256=ZS8YZMgkoYVH5y1BKh7fd1jYT78vsWCSlYvZoikIjZ0,533368
+lupa/lua52.pypy39-pp73-darwin.so,sha256=B7O-ehopIcluk2i0V6_FN0zL3al2hTwU84oF1Kqqu-w,463440
