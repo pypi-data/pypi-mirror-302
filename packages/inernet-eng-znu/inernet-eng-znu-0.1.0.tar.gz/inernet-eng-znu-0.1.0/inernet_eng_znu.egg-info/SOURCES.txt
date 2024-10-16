@@ -1,0 +1,8 @@
+setup.py
+inernet_eng_znu.egg-info/PKG-INFO
+inernet_eng_znu.egg-info/SOURCES.txt
+inernet_eng_znu.egg-info/dependency_links.txt
+inernet_eng_znu.egg-info/entry_points.txt
+inernet_eng_znu.egg-info/top_level.txt
+internet_eng_znu/__init__.py
+internet_eng_znu/main.py
