@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "matly"
+version = "0.1.0"
+description = "Matly"
+license = "MIT"
+authors = ["LunaStev <lunastev@gurmstudios.com>"]
+readme = "README.md"
+packages = [{include = "matly", from = "src"}]
+repository = "https://github.com/lunastev/Matly"
+
+[tool.poetry.dependencies]
+python = ">=3.5,<4.0"
+requests = "*"
+beautifulsoup4 = "*"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
