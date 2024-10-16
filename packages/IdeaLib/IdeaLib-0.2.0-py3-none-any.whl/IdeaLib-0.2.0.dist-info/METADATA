@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: IdeaLib
+Version: 0.2.0
+Home-page: http://github.com/Mindey/IdeaLib
+Author: Mindey
+Author-email: mindey@gmail.com
+License: MI
+Requires-Dist: matplotlib
+Requires-Dist: pandas
+
