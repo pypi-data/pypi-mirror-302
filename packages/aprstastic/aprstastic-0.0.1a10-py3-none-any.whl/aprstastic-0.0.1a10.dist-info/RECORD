@@ -1,0 +1,13 @@
+aprstastic/__about__.py,sha256=rbAGOmxIIen0TEHWvb8ChPPUCG0x1cuVxjCm9QFbGXk,135
+aprstastic/__init__.py,sha256=gn9hIpDTylMxj_sMIuLhcz1e0_lF9vLhkUZj3rmcv50,110
+aprstastic/__main__.py,sha256=IO_4qhnFodxK26LnZd88qEdqa1sKuxoFij6q85XDMbA,1562
+aprstastic/_aprs_client.py,sha256=J4bvBIpCk3-h0DSRZL0VGNwV8xg5OmdZspF6uMWcz10,3337
+aprstastic/_config.py,sha256=8aPhCUW-2uHIcnRJgzzYaCu1kdkR4GKGCJKuebkrJkw,3225
+aprstastic/_config_const.py,sha256=IB9t6zPffpRx9nEyIwev7dcowkQv4I8IAc7vy502Q9c,885
+aprstastic/_gateway.py,sha256=F2vViefVJ8sUN96_ar27tTTOWr1TW-0rijzhOdYqxg8,14924
+aprstastic/_registry.py,sha256=qSBKGXu3YeQ_rJ58gGJhSsZod5UJSaQqVpYSSSC9ywY,7181
+aprstastic/res/precompiled_registrations.json,sha256=Jc2L6Zxs5Ht5nWdz7zyAZUMwQodv9Tx_QCs-ZzEdhkE,324
+aprstastic-0.0.1a10.dist-info/METADATA,sha256=MHmeberauR8ajiIZ9yw2wNP8B3DZLoJoIcBHP_ClUzo,5717
+aprstastic-0.0.1a10.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+aprstastic-0.0.1a10.dist-info/licenses/LICENSE,sha256=vV2vhIx5d5r6LzC5bwlCFYOKHNPBYCKlEqeacwsEO7E,1069
+aprstastic-0.0.1a10.dist-info/RECORD,,
