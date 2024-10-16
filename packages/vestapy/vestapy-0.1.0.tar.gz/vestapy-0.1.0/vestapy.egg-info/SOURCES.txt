@@ -1,0 +1,8 @@
+MANIFEST.in
+README.md
+setup.py
+vestapy.egg-info/PKG-INFO
+vestapy.egg-info/SOURCES.txt
+vestapy.egg-info/dependency_links.txt
+vestapy.egg-info/requires.txt
+vestapy.egg-info/top_level.txt

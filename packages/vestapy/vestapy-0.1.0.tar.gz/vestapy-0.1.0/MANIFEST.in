@@ -1,0 +1,15 @@
+# Include the .env.sample file in the root of the package
+include vestaboard/.env.sample
+
+# Include all JSON files from the data directory
+include vestaboard/data/*.json
+
+# Include the README, LICENSE, and other common project files
+include README.md
+include LICENSE
+
+# Exclude unnecessary files like tests and any __pycache__ directories
+global-exclude __pycache__/*
+global-exclude *.py[cod]
+
+# Include any additional non-Python files if needed (e.g., config files, documentation)

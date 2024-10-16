@@ -1,0 +1,165 @@
+
+# Vestaboard Local API Wrapper and Integrations
+
+## Overview
+
+This Python package provides an API wrapper for controlling a Vestaboard display using its local API. The package also includes integrations such as Twitter scraping (using Playwright) to post tweets directly to the Vestaboard. This project has evolved from a simple CLI script into a fully featured package that can be installed and used by third-party developers to extend the functionality of their Vestaboard displays.
+
+### Features
+
+- **Message Display**: Send text messages to the Vestaboard, supporting background colors and gradients.
+- **Justification Options**: Supports left, center, and right justification for text.
+- **Gradient Background**: Display a gradient background across the board with customizable colors.
+- **Integrations**: Integration with Twitter (via Playwright) to scrape and display tweets from specific users.
+- **Environment-Based Configuration**: The package uses a `.env` file for easy configuration of API keys and settings.
+
+## Requirements
+
+- Python 3.x
+- `requests`, `python-dotenv`, and `playwright` libraries; playwright is required for twitter/x.com scrapes
+- Access to a Vestaboard with a local API enablement token and API key
+- Chrome or another browser installed via Playwright for Twitter scraping
+
+## Installation
+
+### Step 1: Clone the Repository
+
+```sh
+git clone https://github.com/booyasatoshi/vestaboard
+```
+
+### Step 2: Set up a Virtual Environment (optional but recommended)
+
+```sh
+python -m venv env
+source env/bin/activate   # On Linux/macOS
+env\Scripts\activate      # On Windows
+```
+
+### Step 3: Install Dependencies
+
+```sh
+pip install -r requirements.txt
+```
+
+### Step 4: Install Playwright Browsers
+
+The Twitter scraping integration uses Playwright, which requires browser binaries to be installed.
+
+```sh
+playwright install
+```
+
+### Step 5: Set Up the `.env` File
+
+A sample `.env` file is provided in the package to configure your Vestaboard API settings. Copy the sample `.env` file to the correct location:
+
+```sh
+cp vestaboard/.env.sample vestaboard/.env
+```
+
+Edit the `.env` file with your own credentials:
+
+```ini
+VBOARD_ENABLEMENT_TOKEN=<Your Enablement Token>
+VBOARD_API_TOKEN=<Your API Token>
+VBOARD=<Your Vestaboard IP Address>
+
+TWITTER_ENABLED=True
+LAST_TWEETS=5
+X_USERS=your_twitter_username
+```
+
+- **VBOARD_ENABLEMENT_TOKEN**: Token for enabling the Vestaboard API.
+- **VBOARD_API_TOKEN**: API token for authenticating with the Vestaboard API.
+- **VBOARD**: The local IP address of your Vestaboard.
+- **TWITTER_ENABLED**: Set to `True` to enable Twitter scraping.
+- **LAST_TWEETS**: Number of recent tweets to display.
+- **X_USERS**: Comma-separated Twitter usernames to scrape tweets from.
+
+## Usage
+
+### Importing the Package
+
+After installing the package, you can import it and use it to send messages to the Vestaboard:
+
+```python
+import vestaboard
+vestaboard.send_message("Hello, Vestaboard!", color="red", justify="center")
+```
+
+### Sending a Message
+
+- **`send_message(message, color=None, justify='left', gradient=None)`**
+  - **message**: The text message to be displayed.
+  - **color**: (Optional) The background color for the message. Supported options are `red`, `orange`, `yellow`, `green`, `blue`, `violet`, `white`, and `black`.
+  - **justify**: (Optional) Text justification. Can be `left`, `center`, or `right`. Default is `left`.
+  - **gradient**: (Optional) A tuple of two colors to create a gradient (e.g., `("red", "blue")`).
+
+### Scraping Tweets (Twitter Integration)
+
+The Twitter scraping integration allows you to pull tweets from specific users and display them on the Vestaboard. This feature uses Playwright to automate the scraping process.
+
+To use the Twitter scraping feature:
+
+1. Ensure that Playwright is installed and the `.env` file is correctly configured with Twitter scraping enabled.
+2. You can scrape and display the latest tweets by calling the `scrape_tweet` method from the `twitter.py` integration.
+
+Example:
+```python
+from vestaboard.connections.twitter import scrape_tweet
+
+latest_tweet = scrape_tweet("your_twitter_username")
+vestaboard.send_message(latest_tweet['text'], color="blue")
+```
+
+### Using the `.env` File
+
+The `.env` file is used to store API keys and configuration parameters securely. Make sure to configure it properly before running the package.
+
+- **Vestaboard API Keys**: Set `VBOARD_ENABLEMENT_TOKEN`, `VBOARD_API_TOKEN`, and `VBOARD` (the local IP address of the Vestaboard).
+- **Twitter Scraping**: Set `TWITTER_ENABLED`, `LAST_TWEETS`, and `X_USERS` to enable Twitter scraping.
+
+### Example Usage with Gradient
+
+```python
+vestaboard.send_message("Gradient Message!", gradient=("red", "blue"), justify="center")
+```
+
+### Debugging
+
+To enable debugging for more verbose output, pass `debug=True` when initializing the `vestaboard` instance:
+
+```python
+vb = vestaboard(debug=True)
+vb.send_message("Debug Mode On")
+```
+
+## Troubleshooting
+
+### Common Issues
+
+#### Connection Issues
+- You will not be able to connect to the board on the local network and send messages until you obtain an enablement token.
+- The board will print out an API key every time you make a POST request using the enablement token given to you by Vestaboard:
+```sh
+curl -X POST -H "X-Vestaboard-Local-Api-Enablement-Token: YOUR_API_ENABLEMENT_TOKEN" http://vestaboard.local:7000/local-api/enablement
+```
+- Without an API key generated by the Board
+- Make sure the Vestaboard's local API is enabled as described in the [Vestaboard Local API Documentation](https://docs.vestaboard.com/docs/local-api/authentication).
+
+#### Error: Failed to Send Message
+- Ensure that the Vestaboard IP address is correctly set in your `.env` file.
+- Ensure the local API key and enablement token are valid.
+
+#### Playwright Installation Issues
+- If Playwright does not install browser binaries, manually run:
+  ```sh
+  playwright install
+  ```
+
+## Contributing
+Feel free to contribute to this project by opening issues or submitting pull requests. All contributions are welcome!
+
+## License
+This project is licensed under the GNU General Public License (GPL). The GPL ensures that the software remains free and open-source, allowing users to modify, distribute, and use it freely. However, any modifications or derivative works must also be licensed under the GPL and include the source code, ensuring that improvements to the software are shared with the community. This fosters collaboration and encourages transparency and innovation.
