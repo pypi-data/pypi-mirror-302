@@ -1,0 +1,44 @@
+load("//tools:cpplint.bzl", "cpplint")
+load("//tools:dlinear.bzl", "dlinear_cc_library", "dlinear_srcs")
+
+package(default_visibility = [
+    "//benchmark:__subpackages__",
+    "//dlinear:__subpackages__",
+    "//pydlinear:__subpackages__",
+    "//test:__subpackages__",
+])
+
+dlinear_srcs(
+    name = "srcs",
+    subfolder = "parser",
+    deps = [
+        "//dlinear/parser/mps",
+        "//dlinear/parser/onnx",
+        "//dlinear/parser/smt2",
+        "//dlinear/parser/vnnlib",
+    ],
+)
+
+dlinear_cc_library(
+    name = "driver",
+    srcs = ["Driver.cpp"],
+    hdrs = ["Driver.h"],
+    implementation_deps = [
+        "//dlinear/libs:gmp",
+        "//dlinear/solver:solver_output",
+        "//dlinear/symbolic:prefix_printer",
+        "//dlinear/util:box",
+        "//dlinear/util:config",
+        "//dlinear/util:exception",
+        "//dlinear/util:scoped_structures",
+    ],
+    deps = [
+        "//dlinear/solver:context",
+        "//dlinear/solver:logic",
+        "//dlinear/symbolic",
+        "//dlinear/util:stats",
+        "//dlinear/util:timer",
+    ],
+)
+
+cpplint()

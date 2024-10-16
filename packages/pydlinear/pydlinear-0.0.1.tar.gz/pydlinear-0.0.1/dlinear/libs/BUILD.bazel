@@ -1,0 +1,73 @@
+load("//tools:cpplint.bzl", "cpplint")
+load("//tools:dlinear.bzl", "dlinear_cc_library", "dlinear_srcs")
+
+package(default_visibility = [
+    "//benchmark:__subpackages__",
+    "//dlinear:__subpackages__",
+    "//pydlinear:__subpackages__",
+    "//test:__subpackages__",
+    "//third_party:__subpackages__",
+])
+
+dlinear_srcs(
+    name = "srcs",
+    subfolder = "libs",
+)
+
+dlinear_cc_library(
+    name = "gmp",
+    srcs = ["libgmp.cpp"],
+    hdrs = ["libgmp.h"],
+    deps = [
+        "//dlinear/util:logging",
+        "@gmp//:gmpxx",
+    ],
+)
+
+dlinear_cc_library(
+    name = "soplex",
+    srcs = ["libsoplex.cpp"],
+    hdrs = ["libsoplex.h"],
+    deps = [
+        "//dlinear/util:logging",
+    ] + select({
+        "//tools:enabled_soplex": ["@soplex"],
+        "//conditions:default": [],
+    }),
+)
+
+dlinear_cc_library(
+    name = "qsopt_ex",
+    srcs = ["libqsopt_ex.cpp"],
+    hdrs = ["libqsopt_ex.h"],
+    tags = ["no-iwyu"],
+    deps = [
+        "@gmp//:gmpxx",
+    ] + select({
+        "//tools:enabled_qsoptex": ["@qsopt_ex"],
+        "//conditions:default": [],
+    }),
+)
+
+dlinear_cc_library(
+    name = "onnx",
+    srcs = ["libonnx.cpp"],
+    hdrs = ["libonnx.h"],
+    tags = [
+        "no-dwyu",
+        "no-iwyu",
+    ],
+    deps = ["@onnx//:onnx_proto_headers"],
+)
+
+dlinear_cc_library(
+    name = "xtensor",
+    srcs = ["libxtensor.cpp"],
+    hdrs = ["libxtensor.h"],
+    tags = ["no-iwyu"],
+    deps = [
+        "@xtensor",
+    ],
+)
+
+cpplint()

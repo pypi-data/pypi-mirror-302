@@ -1,0 +1,14 @@
+"""Include the picosat SAT solver in the build."""
+licenses(["notice"])  # MIT
+
+cc_library(
+    name = "picosat",
+    srcs = ["picosat.c"],
+    hdrs = ["picosat.h"],
+    include_prefix = "picosat",
+    linkstatic = select({
+        "@dlinear//tools:dynamic_build": False,
+        "//conditions:default": True,
+    }),
+    visibility = ["//visibility:public"],
+)

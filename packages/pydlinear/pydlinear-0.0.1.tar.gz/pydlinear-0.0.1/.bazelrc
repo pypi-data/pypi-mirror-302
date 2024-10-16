@@ -1,0 +1,56 @@
+# Workspace status command
+build --workspace_status_command=tools/workspace_status.sh
+build --experimental_cc_shared_library
+
+# Flag aliases
+build --flag_alias=enable_static_build=//tools:enable_static_build
+build --flag_alias=enable_dynamic_build=//tools:enable_dynamic_build
+build --flag_alias=enable_pydlinear_build=//tools:enable_pydlinear_build
+build --flag_alias=enable_fpic_build=//tools:enable_fpic_build
+build --flag_alias=enable_threads_build=//tools:enable_threads_build
+build --flag_alias=static_boost=@boost//:use_linkstatic
+build --flag_alias=python_version=@rules_python//python/config_settings:python_version
+
+# Default build
+build --cxxopt=-std=c++20
+build --static_boost
+
+# Ignore env vars from shell. Avoids rebuilding when env vars change.
+build --incompatible_strict_action_env
+
+# Build with cache
+build --disk_cache=~/.cache/dlinear_bazel
+
+# Debug build
+build:debug --disk_cache=~/.cache/dlinear_bazel_debug
+build:debug --compilation_mode=dbg
+build:debug --cxxopt=-O0
+build:debug --cxxopt=-ggdb3
+
+# Optimized build
+build:opt --disk_cache=~/.cache/dlinear_bazel_opt
+build:opt --compilation_mode=opt
+build:opt --cxxopt=-O3
+
+# Build for benchmarking
+build:bench --disk_cache=~/.cache/dlinear_bazel_bench
+build:bench --compilation_mode=opt
+build:bench --cxxopt=-O3
+build:bench --cxxopt=-DNLOG
+build:bench --//tools:enable_static_build=True
+
+# Building python bindings
+build:pydlinear --disk_cache=~/.cache/dlinear_bazel_pybind
+build:pydlinear --compilation_mode=opt
+build:pydlinear --//tools:enable_static_build=True
+build:pydlinear --//tools:enable_fpic_build=True
+build:pydlinear --//tools:enable_pydlinear_build=True
+
+# IWYU
+build:iwyu --@bazel_iwyu//:iwyu_mappings=@dlinear//tools:iwyu_mappings
+build:iwyu --aspects @bazel_iwyu//bazel/iwyu:iwyu.bzl%iwyu_aspect
+build:iwyu --output_groups=report
+build:iwyu --build_tag_filters=-no-iwyu
+
+# Dependency clean
+build:dwyu --aspects=//tools:dwyu.bzl%dwyu --output_groups=dwyu

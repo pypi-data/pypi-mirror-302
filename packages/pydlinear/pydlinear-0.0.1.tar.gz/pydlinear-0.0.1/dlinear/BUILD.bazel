@@ -1,0 +1,70 @@
+load("//tools:cpplint.bzl", "cpplint")
+load("//tools:dlinear.bzl", "DLINEAR_NAME", "DLINEAR_VERSION", "dlinear_cc_binary", "dlinear_cc_library", "dlinear_srcs")
+
+package(default_visibility = ["//visibility:public"])
+
+genrule(
+    name = "generate_version_header",
+    outs = ["version.h"],
+    cmd = "$(location //tools:generate_version_header) %s %s > $@" % (DLINEAR_NAME, DLINEAR_VERSION),
+    stamp = True,
+    tools = ["//tools:generate_version_header"],
+    visibility = ["//package:__subpackages__"],
+)
+
+dlinear_cc_library(
+    name = "version",
+    hdrs = [":generate_version_header"],
+)
+
+dlinear_cc_library(
+    name = "dlinear_header",
+    hdrs = ["dlinear.h"],
+    deps = [
+        ":version",
+        "//dlinear/solver:context",
+        "//dlinear/solver:logic",
+        "//dlinear/symbolic",
+        "//dlinear/util:box",
+        "//dlinear/util:config",
+    ],
+)
+
+dlinear_cc_binary(
+    name = "dlinear",
+    srcs = ["main.cpp"],
+    deps = [
+        "//dlinear/solver",
+        "//dlinear/solver:solver_output",
+        "//dlinear/util:argparser",
+        "//dlinear/util:config",
+    ],
+)
+
+cc_shared_library(
+    name = "libdlinear.so",
+    shared_lib_name = "libdlinear.so",
+    tags = [
+        "manual",
+        "no-dwyu",
+        "no-iwyu",
+    ],
+    deps = [
+        "//dlinear/solver",
+        "@system_deps//:gmpxx_deps",
+        "@system_deps//:mpfr_deps",
+    ],
+)
+
+dlinear_srcs(
+    name = "srcs",
+    deps = [
+        "//dlinear/libs",
+        "//dlinear/parser",
+        "//dlinear/solver",
+        "//dlinear/symbolic",
+        "//dlinear/util",
+    ],
+)
+
+cpplint()

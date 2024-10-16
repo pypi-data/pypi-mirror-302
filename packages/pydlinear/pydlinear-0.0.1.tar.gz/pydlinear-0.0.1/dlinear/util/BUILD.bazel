@@ -1,0 +1,206 @@
+load("//tools:cpplint.bzl", "cpplint")
+load("//tools:dlinear.bzl", "dlinear_cc_library", "dlinear_srcs")
+
+package(default_visibility = [
+    "//benchmark:__subpackages__",
+    "//dlinear:__subpackages__",
+    "//pydlinear:__subpackages__",
+    "//test:__subpackages__",
+])
+
+dlinear_srcs(
+    name = "srcs",
+    subfolder = "util",
+)
+
+dlinear_cc_library(
+    name = "argparser",
+    srcs = ["ArgParser.cpp"],
+    hdrs = ["ArgParser.h"],
+    implementation_deps = [
+        ":exception",
+        ":filesystem",
+        ":logging",
+        "//dlinear:version",
+    ] + select({
+        "//tools:enabled_qsoptex": ["//dlinear/libs:qsopt_ex"],
+        "//conditions:default": [],
+    }) + select({
+        "//tools:enabled_soplex": ["//dlinear/libs:soplex"],
+        "//conditions:default": [],
+    }),
+    tags = ["no-cpplint"],
+    deps = [
+        ":config",
+        "@argparse",
+    ],
+)
+
+dlinear_cc_library(
+    name = "config",
+    srcs = ["Config.cpp"],
+    hdrs = [
+        "Config.h",
+        "OptionValue.hpp",
+    ],
+    implementation_deps = [
+        ":exception",
+        ":filesystem",
+    ],
+    deps = [":logging"],
+)
+
+dlinear_cc_library(
+    name = "exception",
+    hdrs = ["exception.h"],
+    visibility = ["//visibility:public"],
+    deps = [
+        ":logging",
+        "@fmt",
+    ],
+)
+
+dlinear_cc_library(
+    name = "logging",
+    srcs = ["logging.cpp"],
+    hdrs = ["logging.h"],
+    deps = [
+        "@fmt",
+        "@spdlog",
+    ],
+)
+
+dlinear_cc_library(
+    name = "stats",
+    srcs = ["Stats.cpp"],
+    hdrs = ["Stats.h"],
+    implementation_deps = ["@fmt"],
+    tags = ["no-dwyu"],
+    deps = [":timer"],
+)
+
+dlinear_cc_library(
+    name = "infinity",
+    srcs = ["Infinity.cpp"],
+    hdrs = ["Infinity.h"],
+    implementation_deps = [
+        ":exception",
+    ] + select({
+        "//tools:enabled_qsoptex": ["//dlinear/libs:qsopt_ex"],
+        "//conditions:default": [],
+    }) + select({
+        "//tools:enabled_soplex": ["//dlinear/libs:soplex"],
+        "//conditions:default": [],
+    }),
+    deps = [
+        "//dlinear/libs:gmp",
+        "//dlinear/util:config",
+    ],
+)
+
+dlinear_cc_library(
+    name = "box",
+    srcs = ["Box.cpp"],
+    hdrs = ["Box.h"],
+    implementation_deps = [
+        ":exception",
+        ":infinity",
+        ":math",
+    ],
+    deps = [
+        ":interval",
+        ":logging",
+        "//dlinear/libs:gmp",
+        "//dlinear/symbolic",
+        "//dlinear/symbolic:literal",
+        "//dlinear/util:config",
+    ],
+)
+
+dlinear_cc_library(
+    name = "interval",
+    srcs = ["Interval.cpp"],
+    hdrs = [
+        "Interval.h",
+        "RoundingModeGuard.hpp",
+    ],
+    implementation_deps = [
+        ":exception",
+    ],
+    deps = [
+        ":definitions",
+        ":logging",
+        "//dlinear/libs:gmp",
+    ],
+)
+
+dlinear_cc_library(
+    name = "math",
+    srcs = ["math.cpp"],
+    hdrs = ["math.h"],
+    implementation_deps = [
+        ":exception",
+        ":logging",
+    ],
+    deps = ["//dlinear/libs:gmp"],
+)
+
+dlinear_cc_library(
+    name = "scoped_structures",
+    hdrs = [
+        "ScopedUnorderedMap.hpp",
+        "ScopedUnorderedSet.hpp",
+        "ScopedVector.hpp",
+    ],
+)
+
+dlinear_cc_library(
+    name = "filesystem",
+    srcs = ["filesystem.cpp"],
+    hdrs = ["filesystem.h"],
+    implementation_deps = [":logging"],
+)
+
+dlinear_cc_library(
+    name = "timer",
+    srcs = ["Timer.cpp"],
+    hdrs = ["Timer.h"],
+    implementation_deps = [":logging"],
+)
+
+dlinear_cc_library(
+    name = "definitions",
+    hdrs = ["definitions.h"],
+)
+
+dlinear_cc_library(
+    name = "sorted_vector",
+    srcs = ["SortedVector.cpp"],
+    hdrs = ["SortedVector.hpp"],
+    implementation_deps = ["//dlinear/solver:bound"],
+)
+
+dlinear_cc_library(
+    name = "bit_increment_iterator",
+    srcs = ["BitIncrementIterator.cpp"],
+    hdrs = ["BitIncrementIterator.h"],
+    deps = [":logging"],
+)
+
+dlinear_cc_library(
+    name = "graph",
+    hdrs = ["Graph.hpp"],
+)
+
+dlinear_cc_library(
+    name = "numeric_data_container",
+    hdrs = ["NumericDataContainer.hpp"],
+    deps = [":concepts"],
+)
+
+dlinear_cc_library(
+    name = "concepts",
+    hdrs = ["concepts.h"],
+)
+
+cpplint()

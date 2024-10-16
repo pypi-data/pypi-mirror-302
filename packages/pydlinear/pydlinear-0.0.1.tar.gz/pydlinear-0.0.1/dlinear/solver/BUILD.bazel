@@ -1,0 +1,383 @@
+load("//tools:cpplint.bzl", "cpplint")
+load("//tools:dlinear.bzl", "dlinear_cc_library", "dlinear_srcs")
+
+package(default_visibility = [
+    "//dlinear:__subpackages__",
+    "//test:__subpackages__",
+])
+
+dlinear_srcs(
+    name = "srcs",
+    subfolder = "solver",
+)
+
+dlinear_cc_library(
+    name = "logic",
+    srcs = ["Logic.cpp"],
+    hdrs = ["Logic.h"],
+    implementation_deps = ["//dlinear/util:exception"],
+    deps = ["//dlinear/util:logging"],
+)
+
+dlinear_cc_library(
+    name = "lp_result",
+    srcs = ["LpResult.cpp"],
+    hdrs = ["LpResult.h"],
+    implementation_deps = ["//dlinear/util:exception"],
+    deps = ["//dlinear/util:logging"],
+)
+
+dlinear_cc_library(
+    name = "lp_sense",
+    srcs = ["LpRowSense.cpp"],
+    hdrs = ["LpRowSense.h"],
+    implementation_deps = ["//dlinear/util:exception"],
+    deps = [
+        "//dlinear/symbolic",
+        "//dlinear/util:logging",
+    ],
+)
+
+dlinear_cc_library(
+    name = "lp_bound",
+    srcs = ["LpColBound.cpp"],
+    hdrs = ["LpColBound.h"],
+    implementation_deps = ["//dlinear/util:exception"],
+    deps = ["//dlinear/util:logging"],
+)
+
+dlinear_cc_library(
+    name = "sat_result",
+    srcs = ["SatResult.cpp"],
+    hdrs = ["SatResult.h"],
+    implementation_deps = ["//dlinear/util:exception"],
+    deps = ["//dlinear/util:logging"],
+)
+
+dlinear_cc_library(
+    name = "sat_solver",
+    srcs = [
+        "SatSolver.cpp",
+    ] + select({
+        "//tools:enabled_picosat": ["PicosatSatSolver.cpp"],
+        "//conditions:default": [],
+    }) + select({
+        "//tools:enabled_cadical": ["CadicalSatSolver.cpp"],
+        "//conditions:default": [],
+    }),
+    hdrs = [
+        "SatSolver.h",
+    ] + select({
+        "//tools:enabled_picosat": ["PicosatSatSolver.h"],
+        "//conditions:default": [],
+    }) + select({
+        "//tools:enabled_cadical": ["CadicalSatSolver.h"],
+        "//conditions:default": [],
+    }),
+    implementation_deps = [
+        "//dlinear/util:exception",
+        "//dlinear/util:logging",
+        "//dlinear/util:timer",
+    ],
+    deps = [
+        "//dlinear/symbolic",
+        "//dlinear/symbolic:literal",
+        "//dlinear/symbolic:plaisted_greenbaum_cnfizer",
+        "//dlinear/symbolic:predicate_abstractor",
+        "//dlinear/util:config",
+        "//dlinear/util:scoped_structures",
+        "//dlinear/util:stats",
+    ] + select({
+        "//tools:enabled_picosat": ["@picosat"],
+        "//conditions:default": [],
+    }) + select({
+        "//tools:enabled_cadical": ["@cadical"],
+        "//conditions:default": [],
+    }),
+)
+
+dlinear_cc_library(
+    name = "piecewise_constraint_state",
+    srcs = ["PiecewiseConstraintState.cpp"],
+    hdrs = ["PiecewiseConstraintState.h"],
+    implementation_deps = ["//dlinear/util:exception"],
+)
+
+dlinear_cc_library(
+    name = "piecewise_linear_constraint",
+    srcs = ["PiecewiseLinearConstraint.cpp"],
+    hdrs = ["PiecewiseLinearConstraint.h"],
+    implementation_deps = [
+        "//dlinear/util:config",
+        "//dlinear/util:exception",
+        "//dlinear/util:infinity",
+    ],
+    deps = [
+        ":bound_preprocessor",
+        ":piecewise_constraint_state",
+        "//dlinear/libs:gmp",
+        "//dlinear/symbolic",
+        "//dlinear/symbolic:literal",
+        "//dlinear/util:logging",
+    ],
+)
+
+dlinear_cc_library(
+    name = "relu_constraint",
+    srcs = ["ReluConstraint.cpp"],
+    hdrs = ["ReluConstraint.h"],
+    implementation_deps = [
+        "//dlinear/symbolic:linear_formula_flattener",
+        "//dlinear/util:exception",
+        "//dlinear/util:infinity",
+    ],
+    deps = [
+        ":piecewise_linear_constraint",
+        "//dlinear/symbolic",
+        "//dlinear/symbolic:predicate_abstractor",
+    ],
+)
+
+dlinear_cc_library(
+    name = "leaky_relu_constraint",
+    srcs = ["LeakyReluConstraint.cpp"],
+    hdrs = ["LeakyReluConstraint.h"],
+    implementation_deps = [
+        "//dlinear/symbolic:linear_formula_flattener",
+        "//dlinear/util:exception",
+        "//dlinear/util:infinity",
+    ],
+    deps = [
+        ":piecewise_linear_constraint",
+        "//dlinear/symbolic:literal",
+        "//dlinear/symbolic:predicate_abstractor",
+    ],
+)
+
+dlinear_cc_library(
+    name = "bound",
+    srcs = ["Bound.cpp"],
+    hdrs = ["Bound.h"],
+    deps = [
+        ":lp_bound",
+        "//dlinear/libs:gmp",
+        "//dlinear/symbolic:literal",
+        "//dlinear/util:logging",
+    ],
+)
+
+dlinear_cc_library(
+    name = "bound_iterator",
+    srcs = ["BoundIterator.cpp"],
+    hdrs = ["BoundIterator.h"],
+    implementation_deps = ["//dlinear/util:exception"],
+    deps = [":bound"],
+)
+
+dlinear_cc_library(
+    name = "bound_vector",
+    srcs = ["BoundVector.cpp"],
+    hdrs = ["BoundVector.h"],
+    implementation_deps = ["//dlinear/util:exception"],
+    deps = [
+        ":bound_iterator",
+        ":lp_bound",
+        "//dlinear/libs:gmp",
+        "//dlinear/symbolic:literal",
+        "//dlinear/util:logging",
+        "//dlinear/util:sorted_vector",
+    ],
+)
+
+dlinear_cc_library(
+    name = "bound_implicator",
+    srcs = ["BoundImplicator.cpp"],
+    hdrs = ["BoundImplicator.h"],
+    implementation_deps = ["//dlinear/util:exception"],
+    deps = [
+        ":lp_sense",
+        "//dlinear/libs:gmp",
+        "//dlinear/symbolic",
+        "//dlinear/symbolic:literal",
+        "//dlinear/symbolic:predicate_abstractor",
+        "//dlinear/util:config",
+        "//dlinear/util:sorted_vector",
+    ],
+)
+
+dlinear_cc_library(
+    name = "bound_preprocessor",
+    srcs = ["BoundPreprocessor.cpp"],
+    hdrs = ["BoundPreprocessor.h"],
+    implementation_deps = [
+        "//dlinear/util:exception",
+        "//dlinear/util:infinity",
+    ],
+    deps = [
+        ":bound_vector",
+        "//dlinear/libs:gmp",
+        "//dlinear/symbolic",
+        "//dlinear/symbolic:environment",
+        "//dlinear/symbolic:literal",
+        "//dlinear/symbolic:predicate_abstractor",
+        "//dlinear/util:config",
+        "//dlinear/util:logging",
+    ],
+)
+
+dlinear_cc_library(
+    name = "theory_solver",
+    srcs = [
+        "TheorySolver.cpp",
+    ] + select({
+        "//tools:enabled_qsoptex": [
+            "DeltaQsoptexTheorySolver.cpp",
+            "QsoptexTheorySolver.cpp",
+        ],
+        "//conditions:default": [],
+    }) + select({
+        "//tools:enabled_soplex": [
+            "CompleteSoplexTheorySolver.cpp",
+            "DeltaSoplexTheorySolver.cpp",
+            "NNSoplexTheorySolver.cpp",
+            "SoplexTheorySolver.cpp",
+        ],
+        "//conditions:default": [],
+    }),
+    hdrs = [
+        "TheorySolver.h",
+    ] + select({
+        "//tools:enabled_qsoptex": [
+            "DeltaQsoptexTheorySolver.h",
+            "QsoptexTheorySolver.h",
+        ],
+        "//conditions:default": [],
+    }) + select({
+        "//tools:enabled_soplex": [
+            "CompleteSoplexTheorySolver.h",
+            "DeltaSoplexTheorySolver.h",
+            "NNSoplexTheorySolver.h",
+            "SoplexTheorySolver.h",
+        ],
+        "//conditions:default": [],
+    }),
+    implementation_deps = [
+        "//dlinear/util:exception",
+        "//dlinear/util:timer",
+    ],
+    deps = [
+        ":bound_iterator",
+        ":bound_preprocessor",
+        ":lp_bound",
+        ":lp_sense",
+        ":piecewise_linear_constraint",
+        ":sat_result",
+        "//dlinear/libs:gmp",
+        "//dlinear/symbolic",
+        "//dlinear/symbolic:literal",
+        "//dlinear/symbolic:predicate_abstractor",
+        "//dlinear/util:bit_increment_iterator",
+        "//dlinear/util:box",
+        "//dlinear/util:config",
+        "//dlinear/util:logging",
+        "//dlinear/util:stats",
+    ] + select({
+        "//tools:enabled_qsoptex": ["//dlinear/libs:qsopt_ex"],
+        "//conditions:default": [],
+    }) + select({
+        "//tools:enabled_soplex": ["//dlinear/libs:soplex"],
+        "//conditions:default": [],
+    }),
+)
+
+dlinear_cc_library(
+    name = "context",
+    srcs = [
+        "Context.cpp",
+        "ContextImpl.cpp",
+        "ContextImpl.h",
+    ],
+    hdrs = [
+        "Context.h",
+    ],
+    implementation_deps = [
+        ":bound_implicator",
+        ":relu_constraint",
+        ":sat_solver",
+        ":theory_solver",
+        "//dlinear/symbolic:if_then_else_eliminator",
+        "//dlinear/util:exception",
+        "//dlinear/util:logging",
+        "//dlinear/util:stats",
+    ],
+    deps = [
+        ":logic",
+        ":lp_result",
+        ":piecewise_linear_constraint",
+        ":sat_result",
+        ":solver_output",
+        "//dlinear/libs:gmp",
+        "//dlinear/symbolic",
+        "//dlinear/symbolic:literal",
+        "//dlinear/symbolic:predicate_abstractor",
+        "//dlinear/util:box",
+        "//dlinear/util:config",
+        "//dlinear/util:scoped_structures",
+    ] + select({
+        "//tools:pydlinear_build": ["//pydlinear:interrupt"],
+        "//conditions:default": [],
+    }),
+)
+
+dlinear_cc_library(
+    name = "solver_output",
+    srcs = ["SmtSolverOutput.cpp"],
+    hdrs = ["SmtSolverOutput.h"],
+    implementation_deps = ["//dlinear/util:exception"],
+    visibility = [
+        "//benchmark:__subpackages__",
+        "//dlinear:__subpackages__",
+        "//pydlinear:__subpackages__",
+        "//test:__subpackages__",
+    ],
+    deps = [
+        ":lp_result",
+        ":sat_result",
+        "//dlinear/libs:gmp",
+        "//dlinear/util:box",
+        "//dlinear/util:config",
+        "//dlinear/util:stats",
+        "//dlinear/util:timer",
+    ],
+)
+
+dlinear_cc_library(
+    name = "solver",
+    srcs = ["SmtSolver.cpp"],
+    hdrs = ["SmtSolver.h"],
+    implementation_deps = [
+        "//dlinear/parser/mps",
+        "//dlinear/parser/onnx",
+        "//dlinear/parser/smt2",
+        "//dlinear/parser/vnnlib",
+        "//dlinear/util:concepts",
+        "//dlinear/util:exception",
+        "//dlinear/util:logging",
+        "//dlinear/util:timer",
+    ],
+    visibility = [
+        "//benchmark:__subpackages__",
+        "//dlinear:__subpackages__",
+        "//pydlinear:__subpackages__",
+        "//test:__subpackages__",
+    ],
+    deps = [
+        ":context",
+        ":solver_output",
+        "//dlinear/symbolic",
+        "//dlinear/util:box",
+        "//dlinear/util:config",
+    ],
+)
+
+cpplint()

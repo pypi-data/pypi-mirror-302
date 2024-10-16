@@ -1,0 +1,42 @@
+load("//tools:dlinear.bzl", "dlinear_cc_library")
+
+licenses(["notice"])  # BSD 3-Clause License
+
+package(default_visibility = ["//visibility:public"])
+
+# Headers to expose.
+filegroup(
+    name = "hdrs",
+    srcs = [
+        "dlinear/symbolic/hash.h",
+        "dlinear/symbolic/symbolic_environment.h",
+        "dlinear/symbolic/symbolic_expression.h",
+        "dlinear/symbolic/symbolic_expression_cell.h",
+        "dlinear/symbolic/symbolic_expression_visitor.h",
+        "dlinear/symbolic/symbolic_formula.h",
+        "dlinear/symbolic/symbolic_formula_visitor.h",
+        "dlinear/symbolic/symbolic_variable.h",
+        "dlinear/symbolic/symbolic_variables.h",
+    ],
+)
+
+dlinear_cc_library(
+    name = "drake_symbolic",
+    srcs = [
+        "dlinear/symbolic/symbolic_environment.cc",
+        "dlinear/symbolic/symbolic_expression.cc",
+        "dlinear/symbolic/symbolic_expression_cell.cc",
+        "dlinear/symbolic/symbolic_expression_cell.h",
+        "dlinear/symbolic/symbolic_expression_visitor.cc",
+        "dlinear/symbolic/symbolic_formula.cc",
+        "dlinear/symbolic/symbolic_formula_cell.cc",
+        "dlinear/symbolic/symbolic_formula_cell.h",
+        "dlinear/symbolic/symbolic_formula_visitor.cc",
+        "dlinear/symbolic/symbolic_variable.cc",
+        "dlinear/symbolic/symbolic_variables.cc",
+    ],
+    hdrs = [":hdrs"],
+    implementation_deps = ["//dlinear/util:exception"],
+    includes = ["."],
+    deps = ["//dlinear/libs:gmp"],
+)

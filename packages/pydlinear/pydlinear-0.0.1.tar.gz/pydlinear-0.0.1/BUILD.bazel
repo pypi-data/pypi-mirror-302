@@ -1,0 +1,6 @@
+licenses(["notice"])  # BSD 3-Clause License
+
+exports_files([
+    "CPPLINT.cfg",
+    "README.md",
+])

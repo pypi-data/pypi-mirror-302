@@ -1,0 +1,6 @@
+.bazelignore
+/bazel-*
+.clwb
+.vscode
+script
+example
