@@ -1,0 +1,14 @@
+caribou_hi/__init__.py,sha256=vynJ6s66Nif8sLIlX5e-84em1Bt7vIH4e8X5pHSDFns,606
+caribou_hi/_version.py,sha256=URDQ-Gth05sQ2wSOyfowq7JfpYacy0z4v2XGRwalL9Q,497
+caribou_hi/absorption_model.py,sha256=d9Co0MzU1vLDI0X9TeZY-GwR3B-HZTaIRef3dPMkxBg,2938
+caribou_hi/emission_absorption_matched_model.py,sha256=AnuW7ZFd6P66iF3-FhZVmNMLN4y6tsoFKR8iG2mqvPg,3706
+caribou_hi/emission_absorption_mismatched_model.py,sha256=SFiHWZVfDGU-EE_8R8ci-CGo8MeyHEKpafX46fnubjc,3922
+caribou_hi/emission_absorption_model.py,sha256=5p0_l8wC3upsKJbHs2H6WhCmHT_vHnmN2q427d82vKM,3380
+caribou_hi/emission_model.py,sha256=QXzevC0N9bwaTMYHx7HDxqekU-6yjEzqOt-qdDXnMl4,3181
+caribou_hi/hi_model.py,sha256=sURvAa6j5ZRQcC4kh6NLBkYzyMfdHsYnlmi9EREuvtw,9505
+caribou_hi/physics.py,sha256=PnhaCvKm03lNPiWx8u4gHqSNTojfVK70z2T9U9wDBHA,6737
+caribou_hi-1.3.0.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+caribou_hi-1.3.0.dist-info/METADATA,sha256=QY9ql1jugTb140Nk-XBZhr-RJ4zE_TEiIpjRrbv0lJs,57511
+caribou_hi-1.3.0.dist-info/WHEEL,sha256=GV9aMThwP_4oNCtvEC2ec3qUYutgWeAzklro_0m4WJQ,91
+caribou_hi-1.3.0.dist-info/top_level.txt,sha256=7Z4atXZ0HjhkIsOn51dK83KFTF-KG06tNGXBRDe4mUM,11
+caribou_hi-1.3.0.dist-info/RECORD,,
