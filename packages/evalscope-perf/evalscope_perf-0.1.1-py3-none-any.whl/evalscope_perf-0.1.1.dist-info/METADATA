@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: evalscope-perf
+Version: 0.1.1
+Summary: 大模型性能压测可视化
+Home-page: http://www.wangjunjian.com
+Author: Junjian Wang
+Author-email: vwarship@163.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: typer
+Requires-Dist: pandas
+Requires-Dist: matplotlib
+
+# Model inference performance stress test
+
+```shell
+evalscope-perf http://172.16.33.66:9997/v1/chat/completions gpt-4-32k \
+    ./datasets/open_qa.jsonl \
+    --parallels 4 \
+    --parallels 8 \
+    --parallels 16 \
+    --n 20
+```
