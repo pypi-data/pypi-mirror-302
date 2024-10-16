@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=42.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pywrappers"
+version = "1.0.0"
+description = "A package that provides compatibility wrappers for different python libraries."
+readme = "README.md"
+authors = [{name = "Paulo Mol", email = "paulo.junior@robbyson.com"}]
+license = {text = "MIT"}
+dependencies = [
+    "pymongo>=4.0",
+    "typing-extensions>=4.0; python_version<'3.8'",
+    "importlib-metadata>=1.7.0; python_version<'3.8'"
+]
+requires-python = ">=3.7"
+
+[project.urls]
+"Homepage" = "https://gitlab.com/Robbyson/pywrappers"
+"Bug Tracker" = "https://gitlab.com/Robbyson/pywrappers/issues"
+
+[tool.setuptools]
+packages = ["pywrappers"]
+
+[tool.setuptools.package-data]
+pywrappers = ["*.txt", "*.md"]

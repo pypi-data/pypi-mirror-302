@@ -1,0 +1,462 @@
+# Pywrappers
+
+## Objetivo do Pacote
+
+O **pywrappers** foi criado com o intuito de fornecer uma camada de compatibilidade e abstração para diferentes versões de bibliotecas, começando pelo suporte ao **PyMongo**. Ele permite que projetos legados que utilizam **PyMongo 3.x** possam ser atualizados de maneira simples para **PyMongo 4.x**, sem precisar reescrever grandes porções de código. O pacote oferece "wrappers" (camadas intermediárias) que mapeiam métodos e comportamentos da versão 3.x para versões mais recentes, garantindo a funcionalidade esperada em projetos novos e antigos.
+
+Atualmente, o pacote `pywrappers` contém o subpacote **`pywrappers.pymongo`**, que encapsula o `MongoClient`, `Database`, e `Collection` do PyMongo, mantendo a compatibilidade com versões anteriores enquanto utiliza a versão mais recente do PyMongo.
+
+## Requisitos
+
+- **Python 3.7 ou superior**
+- **PyMongo 4.0 ou superior**
+
+> **Importante**: O pacote `pywrappers` foi desenvolvido para trabalhar com **PyMongo 4.x**. Caso o PyMongo não esteja instalado ou a versão instalada seja inferior a 4.0, será lançado um erro durante a importação.
+
+## Instalação
+
+### Modo de desenvolvimento
+
+```bash
+git clone git@gitlab.com:Robbyson/pywrappers.git
+cd pywrappers
+pip install -e .
+```
+
+Certifique-se de que o PyMongo 4.x está instalado, caso contrário, o pacote não funcionará corretamente.
+
+---
+
+<details>
+  <summary><i>pywrappers.<h2><b>pymongo</i></h2></b></summary>
+
+### Objetivo
+
+O subpacote `pywrappers.pymongo` tem como objetivo fornecer uma camada de compatibilidade para o PyMongo, garantindo que sistemas que utilizam a versão 3.x possam continuar a funcionar corretamente ao migrarem para o PyMongo 4.x. Ele encapsula as principais classes do PyMongo — MongoClient, Database, e Collection — mantendo a API da versão 3.x sem abrir mão das interfaces específicas da versão 4.x.
+
+### Características
+
+- **Compatibilidade Retroativa**: O pywrappers.pymongo encapsula a API do PyMongo 3.x, permitindo que sistemas legados que utilizam essa versão continuem funcionando sem mudanças significativas ao serem migrados para o PyMongo 4.x.
+
+- **Suporte a Novas Funcionalidades**: Embora ofereça suporte à API antiga, o pacote também permite o uso de novos métodos introduzidos no PyMongo 4.x.
+
+### Como Utilizar
+
+O subpacote `pywrappers.pymongo` pode ser importado da seguinte forma:
+
+```python
+from pywrappers import pymongo
+# ou
+from pywrappers.pymongo import MongoClient, Database, Collection
+```
+
+### Exemplo de Uso
+
+Aqui está um exemplo de como utilizar o `MongoClient` encapsulado pelo `pywrappers.pymongo`:
+
+```python
+from pywrappers.pymongo import MongoClient
+
+# Inicializando o cliente MongoDB
+client = MongoClient("localhost", 27017)
+
+# Acessando um banco de dados
+db = client.get_database("mydatabase")
+
+# Acessando uma coleção
+collection = db.get_collection("mycollection")
+
+# Inserindo um documento
+collection.insert({"name": "John", "age": 30})
+
+# Buscando um documento
+result = collection.find_one({"name": "John"})
+print(result)
+
+# Fechando a conexão
+client.close()
+```
+
+## Módulos
+
+<details>
+  <summary><i>pywrappers.pymongo.<h2><b>CollectionWrapper</i></h2></b></summary>
+
+`CollectionWrapper` é uma **abstração** da classe Collection do PyMongo 3.x, que preserva as assinaturas de métodos deprecados e remapeia esses métodos para suas contrapartes modernas no PyMongo 4.x, ou, quando isso não é possível, lança exceções explicativas com sugestões de alternativas.
+
+<details>
+  <summary><h3><b>Características</h3></b></summary>
+
+- **Tratamento de Erros Explicativo**: Nos casos em que a adaptação não é possível, o `CollectionWrapper` lança exceções explicativas que ajudam os desenvolvedores a entender a causa do problema e sugerem alternativas (como o uso de agregações em vez de `map_reduce`).
+
+- **Incompatibilidades Finais**: Algumas funcionalidades do PyMongo 3.x foram removidas no PyMongo 4.x sem uma substituição direta, como o método `map_reduce()`. Nesses casos, o desenvolvedor é forçado a reescrever partes do sistema utilizando novas abordagens.
+
+</details>
+
+<details>
+  <summary><h3><b>Diferenças entre <i>Collection</i> do PyMongo 3.x e 4.x</h3></b></summary>
+
+##### 1. **Métodos Depreciados e Removidos**
+
+###### PyMongo 3.x
+
+- **`insert()`**: Permitia a inserção de um ou mais documentos de forma genérica. No PyMongo 3.x, o método era amplamente utilizado para operações de inserção em massa ou única.
+- **`update()`**: Atualizava documentos, suportando tanto atualizações únicas quanto múltiplas através do parâmetro `multi`.
+- **`remove()`**: Removia documentos de uma coleção, com suporte para exclusões únicas ou múltiplas.
+- **`map_reduce()`**: Executava operações MapReduce diretamente sobre uma coleção, sendo uma alternativa para agregações complexas.
+
+###### PyMongo 4.x
+
+- **`insert()`**, **`update()`**, e **`remove()`** foram removidos e substituídos por seus equivalentes específicos:
+  - `insert_one()`, `insert_many()`
+  - `update_one()`, `update_many()`
+  - `delete_one()`, `delete_many()`
+- **`map_reduce()`** foi completamente removido. A abordagem recomendada para operações complexas agora é o **Aggregation Framework**, que é mais eficiente e flexível para operações em grandes volumes de dados.
+
+##### 2. **Métodos Alterados**
+
+- **`count()`** foi substituído por **`count_documents()`** para melhorar a precisão e adequação ao padrão MongoDB moderno.
+- **`find()`** e outros métodos de busca mantêm comportamento similar, mas com algumas adições de parâmetros no PyMongo 4.x para maior controle sobre leitura e escrita.
+
+</details>
+
+<details>
+  <summary><h3><b>Adaptações Necessárias</h3></b></summary>
+
+##### 1. **Inserções**
+
+O método **`insert()`**, deprecado no PyMongo 4.x, foi reimplementado no `CollectionWrapper` por meio de uma função que redireciona chamadas para **`insert_one()`** ou **`insert_many()`**, dependendo do tipo de entrada. Isso garante que o código legado que utilizava `insert()` continue funcional sem alterações.
+
+```python
+def insert(self, doc_or_docs: Union[Dict[str, Any], List[Dict[str, Any]]], manipulate: bool = True, check_keys: bool = True, continue_on_error: bool = False) -> Union[InsertOneResult, InsertManyResult]:
+    if isinstance(doc_or_docs, list):
+        return self.insert_many(doc_or_docs, ordered=not continue_on_error)
+    return self.insert_one(doc_or_docs)
+```
+
+##### 2. **Atualizações**
+
+O método **`update()`**, que aceitava o parâmetro multi, foi redirecionado para as funções **`update_one()`** ou **`update_many()`**, dependendo do valor de multi. Isso mantém o comportamento de múltiplas atualizações possível no PyMongo 3.x.
+
+```python
+def update(self, spec: Dict[str, Any], document: Dict[str, Any], upsert: bool = False, multi: bool = False) -> UpdateResult:
+    if multi:
+        return self.update_many(spec, document, upsert=upsert)
+    return self.update_one(spec, document, upsert=upsert)
+```
+
+##### 3. Remoções
+
+O método **`remove()`** foi reimplementado de forma equivalente a **`delete_one()`** e **`delete_many()`**, dependendo do valor de `multi`, garantindo que a funcionalidade seja mantida.
+
+##### 4. **MapReduce**
+
+O método **`map_reduce()`** foi completamente removido no PyMongo 4.x, sem uma substituição direta. A recomendação é o uso do **Aggregation Framework**, que é mais eficiente e escalável. O `CollectionWrapper` lança uma exceção **NotImplementedError** explicando a remoção e sugerindo o uso de agregações.
+
+```python
+def map_reduce(self, map: str, reduce: str, out: Union[str, Dict[str, Any]], full_response: bool = False, **kwargs: Any) -> Any:
+    raise NotImplementedError("map_reduce was removed in PyMongo 4.x. Use the aggregation framework instead.")
+```
+
+</details>
+
+<details>
+  <summary><h3><b>Casos de Equivalência Impossível</h3></b></summary>
+
+##### MapReduce
+
+O método **`map_reduce()`** foi completamente removido no PyMongo 4.x devido a problemas de desempenho e escalabilidade. Embora o **Aggregation Framework** cubra a maioria das funcionalidades de **MapReduce**, ele não suporta diretamente o mesmo padrão de programação, o que torna algumas adaptações inevitáveis.
+
+</details>
+
+---
+
+</details>
+
+<details>
+  <summary><i>pywrappers.pymongo.<h2><b>DatabaseWrapper</i></b></h2></summary>
+
+A classe `DatabaseWrapper` foi projetada para atuar como uma interface compatível entre sistemas que utilizam PyMongo 3.x e PyMongo 4.x. Seu objetivo principal é garantir que a API da classe `Database` do PyMongo 3.x seja mantida e reproduzida adequadamente no PyMongo 4.x, além de fornecer métodos que foram deprecados ou removidos na nova versão. A classe permite a manipulação de coleções, execução de comandos de banco de dados, e oferece suporte a métodos de compatibilidade, como o `authenticate()` e `eval()`, que não estão mais disponíveis na versão 4.x.
+
+<details>
+  <summary><h3><b>Características</h3></b></summary>
+
+- **Dependências**: Esta classe utiliza `CollectionWrapper` para compatibilidade completa.
+
+- **Tratamento de Erros Claro**: Nos casos em que a funcionalidade não pode ser mantida (por exemplo, `eval()`), a exceção lança uma mensagem descritiva, orientando o desenvolvedor sobre como proceder.
+
+- **Incompatibilidades Irreversíveis**: Algumas funcionalidades, como `map_reduce()` e `eval()`, foram removidas por questões de segurança e desempenho e não têm substitutos diretos no PyMongo 4.x.
+
+</details>
+
+<details>
+  <summary><h3><b>Diferenças Entre PyMongo 3.x e 4.x</h3></b></summary>
+
+##### 1. **Métodos Depreciados e Removidos**
+
+###### PyMongo 3.x
+
+- **`collection_names()`**: Listava todas as coleções do banco de dados.
+- **`authenticate()`**: Permitía a autenticação de um usuário diretamente no banco de dados.
+- **`eval()`**: Executava código JavaScript no servidor MongoDB.
+- **`add_user()` e `remove_user()`**: Permitiam a adição e remoção de usuários diretamente no banco de dados.
+
+###### PyMongo 4.x
+
+- **`collection_names()`** foi substituído por **`list_collection_names()`**, mas mantemos a compatibilidade no wrapper.
+- **`authenticate()`** e **`eval()`** foram removidos, sendo necessário usar URI de conexão para autenticação e o **Aggregation Framework** para operações de consulta complexas.
+- **`add_user()` e `remove_user()`** também foram removidos, sendo substituídos por operações que utilizam diretamente o comando `createUser` e `dropUser`.
+
+##### 2. **Alterações em Métodos Existentes**
+
+- **`command()`**: Continua com a mesma função, executando comandos diretamente no banco de dados, mas recebeu novos parâmetros no PyMongo 4.x para maior controle.
+- **`with_options()`**: Permite configurar parâmetros como `read_concern` e `write_concern` na criação do banco de dados.
+
+</details>
+
+<details>
+  <summary><h3><b>Adaptações Necessárias</h3></b></summary>
+
+##### 1. **Compatibilidade com `collection_names()`**
+
+No PyMongo 4.x, o método `collection_names()` foi deprecado e substituído por `list_collection_names()`. A função `collection_names()` foi mantida no `DatabaseWrapper` para garantir compatibilidade com sistemas legados.
+
+```python
+def collection_names(self, include_system_collections: bool = True, session: Optional[ClientSession] = None) -> List[str]:
+    if include_system_collections:
+        return self.database.list_collection_names(session=session)
+    return [name for name in self.database.list_collection_names(session=session) if not name.startswith("system.")]
+```
+
+##### 2. Substituição do Método `authenticate()`
+
+O método `authenticate()` foi removido no PyMongo 4.x, e a autenticação agora deve ser feita diretamente via URI de conexão. A implementação no wrapper lança uma exceção clara que explica essa mudança
+
+```python
+def authenticate(self, name: str, password: Optional[str] = None, source: Optional[str] = None, mechanism: Optional[str] = None) -> None:
+    raise NotImplementedError(
+        """The authenticate() method was removed in PyMongo 4.x. Use the authSource or authMechanism parameters in the connection string."""
+    )
+```
+
+##### 3. Remoção de `eval()`
+
+O método `eval()` foi removido no MongoDB 4.x por razões de segurança e desempenho. Não há um substituto direto, mas o **Aggregation Framework** ou **MapReduce** podem ser usados como alternativas para funcionalidades semelhantes.
+
+```python
+def eval(self, code: str, args: Optional[Any] = None, nolock: bool = False) -> None:
+    raise NotImplementedError(
+        """The eval() method was removed in MongoDB 4.x for security and performance reasons.
+        Use the Aggregation Framework or MapReduce to achieve similar functionality."""
+    )
+```
+
+</details>
+
+<details>
+  <summary><h3><b>Casos de Equivalência Impossível</h3></b></summary>
+
+##### Eval
+
+O método `eval()` foi removido por motivos de segurança e desempenho, e o **Aggregation Framework** foi sugerido como uma alternativa mais robusta e segura. Não há como reproduzir diretamente o comportamento do `eval()` no PyMongo 4.x.
+</details>
+
+---
+
+</details>
+
+<details>
+  <summary><i>pywrappers.pymongo.<h2><b>MongoClientWrapper</i></b></h2></summary>
+
+A classe `MongoClientWrapper` foi criada para fornecer uma camada de compatibilidade entre as versões 3.x e 4.x do PyMongo. Seu principal objetivo é garantir que a API da classe `MongoClient` do PyMongo 3.x seja mantida e reproduzida adequadamente no PyMongo 4.x, tratando de mudanças significativas na API, incluindo a remoção de métodos importantes como `ismaster()` e `database_names()`.
+
+<details>
+  <summary><h3><b>Características</h3></b></summary>
+
+- **Dependências**: Esta classe utiliza `CollectionWrapper` e `DatabaseWrapper` para compatibilidade completa.
+- **Incompatibilidades Não Replicáveis**: Algumas funcionalidades, como o comando `ismaster()`, não possuem equivalentes diretos no MongoDB standalone, o que pode exigir adaptações na lógica de negócios.
+
+</details>
+
+<details>
+  <summary><h3><b>Diferenças entre PyMongo 3.x e 4.x</h3></b></summary>
+
+### PyMongo 3.x
+
+- **`database_names()`**: Retornava uma lista de nomes de bancos de dados.
+- **`ismaster()`**: Retornava informações sobre o estado do nó MongoDB (principalmente em configurações de replica set).
+- **`get_default_database()`**: Permitía acessar o banco de dados padrão.
+
+### PyMongo 4.x
+
+- **`list_database_names()`**: Substitui o método `database_names()`, mantendo a mesma função de listar bancos de dados.
+- **`hello`**: Substitui o comando `ismaster()` nas configurações de replica set.
+- **`get_default_database()`**: Foi removido e deve ser substituído pela definição explícita do banco de dados no URI de conexão.
+
+</details>
+
+<details>
+  <summary><h3><b>Adaptações Necessárias</h3></b></summary>
+
+### 1. **Compatibilidade com `database_names()`**
+
+No PyMongo 4.x, o método `database_names()` foi deprecado e substituído por `list_database_names()`. O wrapper implementa o método `database_names()` para garantir compatibilidade retroativa.
+
+```python
+    def database_names(self) -> List[str]:
+        """Return a list of database names (PyMongo 3.x compatibility)."""
+        return self.list_database_names()
+```
+
+### 2. **Substituição do `ismaster()`**
+
+```python
+No PyMongo 4.x, o comando `ismaster()` foi removido e substituído pelo comando `"hello"`. O método `ismaster()` no `MongoClientWrapper` utiliza o comando `"hello"` em configurações de replica set e lança uma exceção descritiva em instâncias standalone.
+
+    def ismaster(self, session: Optional[ClientSession] = None) -> Dict[str, Any]:
+        """
+        Mimic the 'ismaster' command using 'hello' (removed in PyMongo 4.x).
+        This only works in replica set configurations.
+        """
+        try:
+            return self.client.admin.command("hello", session=session)
+        except OperationFailure as e:
+            raise NotImplementedError(
+                "The 'ismaster' method has been removed in PyMongo 4.x. Use the 'hello' command for similar functionality, "
+                "which works only in replica set configurations."
+            )
+```
+
+### 3. **Remoção de `get_default_database()`**
+
+O método `get_default_database()` foi completamente removido no PyMongo 4.x. O wrapper lança uma exceção que explica essa remoção e sugere que o banco de dados padrão seja especificado na URI de conexão.
+
+```python
+    def get_default_database(self) -> None:
+        """
+        No longer supported in PyMongo 4.x.
+        - Raises NotImplementedError because the method is removed in PyMongo 4.x.
+        """
+        raise NotImplementedError("The 'get_default_database' method has been removed in PyMongo 4.x. "
+                                  "Specify the default database directly in the connection string if needed.")
+```
+
+</details>
+
+<details>
+  <summary><h3><b>Métodos Principais</h3></b></summary>
+
+### 1. **Inicialização da Conexão**
+
+```python
+    def __init__(self, host: Optional[Union[str, List[str]]] = None, port: Optional[int] = None, **kwargs: Any):
+        """
+        Initialize MongoClientWrapper with the same parameters as MongoClient.
+        If no host/port are provided, it uses MongoDB's default connection.
+        """
+        try:
+            self.client = MongoClient(host, port, **kwargs)
+        except Exception as e:
+            raise ConnectionError(f"Failed to initialize MongoClient: {e}")
+```
+
+A inicialização do `MongoClientWrapper` aceita os mesmos parâmetros da classe `MongoClient` original, permitindo passar o host, porta e outras configurações via `kwargs`. Em caso de falha, uma exceção `ConnectionError` é lançada.
+
+### 2. **Acesso a Bancos de Dados**
+
+```python
+    def get_database(self, name: str, codec_options: Optional[Any] = None, read_preference: Optional[ReadPreference] = None,
+                     write_concern: Optional[WriteConcern] = None, read_concern: Optional[ReadConcern] = None) -> DatabaseWrapper:
+        """
+        Return a DatabaseWrapper for the specified database.
+        Uses MongoClient.get_database() and wraps the result.
+        """
+        db = self.client.get_database(name, codec_options=codec_options, read_preference=read_preference,
+                                      write_concern=write_concern, read_concern=read_concern)
+        return DatabaseWrapper(db)
+```
+
+Este método obtém uma instância do banco de dados via `get_database()` e a encapsula em um `DatabaseWrapper`. O método também permite especificar opções de codec, preferência de leitura, preocupação de gravação e preocupação de leitura.
+
+### 3. **Listagem de Bancos de Dados**
+
+```python
+    def list_database_names(self, session: Optional[ClientSession] = None) -> List[str]:
+        """List all database names on the MongoDB server (replaces the deprecated database_names())."""
+        try:
+            return self.client.list_database_names(session=session)
+        except OperationFailure as e:
+            raise RuntimeError(f"Error listing database names: {e}")
+```
+
+O método `list_database_names()` retorna todos os nomes dos bancos de dados presentes no servidor MongoDB, substituindo o método deprecado `database_names()`.
+
+### 4. **Execução de Comandos**
+
+```python
+    def command(self, dbname: str, command: Union[str, Dict[str, Any]], session: Optional[ClientSession] = None) -> Dict[str, Any]:
+        """Execute a command on the specified database."""
+        try:
+            db = self.get_database(dbname)
+            return db.command(command, session=session)
+        except OperationFailure as e:
+            raise RuntimeError(f"Error executing command on database '{dbname}': {e}")
+```
+
+Este método executa um comando MongoDB no banco de dados especificado e retorna o resultado. Qualquer erro de operação gera uma exceção com uma mensagem clara explicando a falha.
+
+### 5. **Ping no Servidor**
+
+```python
+    def ping(self, session: Optional[ClientSession] = None) -> Dict[str, Any]:
+        """Ping the MongoDB server to check its responsiveness."""
+        try:
+            return self.client.admin.command("ping", session=session)
+        except OperationFailure as e:
+            raise RuntimeError(f"Error pinging server: {e}")
+```
+
+O método `ping()` envia um comando `ping` ao servidor MongoDB para verificar se ele está respondendo corretamente. Caso ocorra uma falha de operação, uma exceção será lançada.
+
+### 6. **Fechamento da Conexão**
+
+```python
+    def close(self) -> None:
+        """Close the MongoDB connection."""
+        self.client.close()
+```
+
+O método `close()` encerra a conexão MongoDB, garantindo que os recursos sejam liberados corretamente.
+
+</details>
+
+<details>
+  <summary><h3><b>Exemplo de Uso</h3></b></summary>
+
+```python
+    from pywrappers.pymongo import MongoClient
+
+    client = MongoClient("localhost", 27017)
+
+    # Acessar um banco de dados
+    db = client.get_database("mydatabase")
+
+    # Listar todos os bancos de dados
+    print(client.list_database_names())
+
+    # Ping no servidor
+    print(client.ping())
+
+    # Fechar a conexão
+    client.close()
+```
+
+</details>
+
+---
+
+</details>
+
+---
+
+</details>
