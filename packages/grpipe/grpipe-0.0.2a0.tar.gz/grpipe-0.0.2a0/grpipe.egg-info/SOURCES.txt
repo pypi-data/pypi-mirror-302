@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+grpipe/__init__.py
+grpipe/foo.py
+grpipe.egg-info/PKG-INFO
+grpipe.egg-info/SOURCES.txt
+grpipe.egg-info/dependency_links.txt
+grpipe.egg-info/requires.txt
+grpipe.egg-info/top_level.txt
+tests/test_foo.py
+tests/test_pipeline.py
