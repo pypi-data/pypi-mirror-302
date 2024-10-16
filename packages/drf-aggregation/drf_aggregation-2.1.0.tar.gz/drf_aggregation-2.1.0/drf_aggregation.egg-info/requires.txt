@@ -1,0 +1,6 @@
+django>=3.0.0
+
+[dev]
+djangorestframework~=3.12
+drf-complex-filter~=1.0
+parameterized~=0.7
