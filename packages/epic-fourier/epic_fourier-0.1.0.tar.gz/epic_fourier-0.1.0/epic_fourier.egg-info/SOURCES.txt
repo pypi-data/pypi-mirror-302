@@ -1,0 +1,9 @@
+README.md
+setup.py
+epic_fourier/__init__.py
+epic_fourier/epic_fourier.py
+epic_fourier.egg-info/PKG-INFO
+epic_fourier.egg-info/SOURCES.txt
+epic_fourier.egg-info/dependency_links.txt
+epic_fourier.egg-info/requires.txt
+epic_fourier.egg-info/top_level.txt
