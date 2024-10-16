@@ -1,0 +1,12 @@
+CHANGELOG.md,sha256=uAbzS9Gjecxrhnjr3-sAKXHtyACmw1Sctj9QKnyNRKo,2182
+CHANGELOG_zh.md,sha256=6Fuicl3R2BgA25vYNxCSUH3s3GuzZlXDOnyXMv6PbzI,1947
+README_zh.md,sha256=3SQfEUe2Pe9u1OzTYoflAyDgIZ3WbaWtlO3E_g9qBVw,1890
+asmysql/__init__.py,sha256=pDAmbtlXoH4na5CsRVjS_IxOZAvB7a7Hdw0RS3O2IiU,58
+asmysql/_asmysql.py,sha256=zbawGVh1poi4hr39kK7sa5_SAs8pogcC6Hoe6Rmwv-o,4383
+asmysql/_cursor_client.py,sha256=13UXFmeV72T1N8tFAIsmTI3RqfmSjZdGL93TiDYzWTA,1530
+asmysql/_error.py,sha256=mna_mFFFCHO_5SySVPDtzFXNOBdunL1ZoHuv9xhoUZU,249
+asmysql/_result.py,sha256=cduOz7vyx9j-TSMXWXsPspEytbj3wdTsE_FvxyWrspk,1594
+asmysql-0.2.0.dist-info/LICENSE,sha256=YJfpiTZj7hziSNkF_2kfQn2JFQ3vSpvQZ2EEsfLGYec,1074
+asmysql-0.2.0.dist-info/METADATA,sha256=I6ppXVwL8bzxjG3Qx29fI4Ni6lLYXB6jFNnzmknMzuA,2954
+asmysql-0.2.0.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+asmysql-0.2.0.dist-info/RECORD,,
