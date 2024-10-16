@@ -1,0 +1,4 @@
+[console_scripts]
+zigcargo = zigcc:main
+zigcc = zigcc:main
+zigcxx = zigcc:main
