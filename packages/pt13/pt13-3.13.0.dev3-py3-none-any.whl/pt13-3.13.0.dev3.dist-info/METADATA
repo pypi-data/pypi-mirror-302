@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: pt13
+Version: 3.13.0.dev3
+Summary: Stuff for Python 3.13.0
+Author-Email: "D. Alex Graham" <alex@aode.space>
+License: MIT
+Requires-Python: >=3.13
+Requires-Dist: typer>=0.12.5
+Description-Content-Type: text/markdown
+
+# p13
+
+Random things related to or useful for python-3.13

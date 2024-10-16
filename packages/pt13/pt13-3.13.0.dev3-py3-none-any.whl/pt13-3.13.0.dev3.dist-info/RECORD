@@ -1,0 +1,14 @@
+pt13-3.13.0.dev3.dist-info/METADATA,sha256=dA9LHFOKqm_mdPg1AJuSbg-8v1yDQ3IME6rdiD4MtZw,301
+pt13-3.13.0.dev3.dist-info/WHEEL,sha256=pM0IBB6ZwH3nkEPhtcp50KvKNX-07jYtnb1g1m6Z4Co,90
+pt13-3.13.0.dev3.dist-info/entry_points.txt,sha256=6OYgBcLyFCUgeqLgnvMyOJxPCWzgy7se4rLPKtNonMs,34
+pt13-3.13.0.dev3.dist-info/licenses/LICENSE,sha256=tNz14sUGU_wbofHoOgg5MhJpPyVb4AyyUDlq8yrOYww,1073
+pt13/__init__.py,sha256=SMsqsxPnU6Rj8i3pCFyeZTkLAoW3TV6ZG1mir_VlBAw,126
+pt13/app.py,sha256=_S7HFLbB8aXGfsJGHyzbfM6IUfjp8lTQrOFn7F9jaxI,2831
+pt13/thirteen/__init__.py,sha256=YOjoXRqkcFXK3Kx6UCjyDupa5EZSc_377y2qwPjuRJU,74
+pt13/thirteen/more_iters/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pt13/thirteen/more_iters/buckets.py,sha256=Jh_0E1mDReC341fCum7ePJUiyJeTIxZr-SmRq3BQ6M0,2691
+pt13/thirteen/stdlib_changes_p13/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pt13/thirteen/stdlib_changes_p13/math_changes.py,sha256=o4U3vXbLEhVKNpFqZtShHofcFypPEsB7X4SgPz_Chks,771
+pt13/thirteen/stdlib_changes_p13/path_changes.py,sha256=Ff4_rFIg-B3kxDSL_jHyX7A-NeP2yQvt6p0wPnZr-FE,635
+pt13/thirteen/stdlib_changes_p13/typing_changes.py,sha256=rWE5BtpS3qaLEbuu0pRcKpSFeRIpV4MU5hYC8Gkdi34,2280
+pt13-3.13.0.dev3.dist-info/RECORD,,
