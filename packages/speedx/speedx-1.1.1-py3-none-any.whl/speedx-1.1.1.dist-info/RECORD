@@ -1,0 +1,11 @@
+speedx/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+speedx/cli.py,sha256=sUjrC7WUYe-hYx3KigOE2uVlpeZWmK_5KXgLBWsiBYA,2271
+speedx/core.py,sha256=VHtiocuKkUu2FMnwLJr2bQsKgV8T1nH5BJfbg3iWoqc,1211
+speedx/graphs.py,sha256=Tvm2I-VwCmsyVCSKrhPGvmbvOuuKbQy-UbspdEgzi1g,861
+speedx/history.py,sha256=UMpsIy0lH-5-i96nyhT7yfbMP-j9dWkjYyYd5tTYWJI,515
+speedx-1.1.1.dist-info/LICENSE,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+speedx-1.1.1.dist-info/METADATA,sha256=19pzcc5y8YX45wn5ngyolRhQ0HXaAoSGQsHvYXXPxKk,2552
+speedx-1.1.1.dist-info/WHEEL,sha256=GV9aMThwP_4oNCtvEC2ec3qUYutgWeAzklro_0m4WJQ,91
+speedx-1.1.1.dist-info/entry_points.txt,sha256=jxk2NucrKJ3pW0CKMVazZVvjMU4C8JsfEQ6w4tRU5zo,42
+speedx-1.1.1.dist-info/top_level.txt,sha256=c_XjqaaxdksTYzHLVBvciMnjqCO28RE1zGcDUDVfnxs,7
+speedx-1.1.1.dist-info/RECORD,,
