@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: halkoSVD
+Version: 0.2.1
+Summary: Fast Python/Cython implementation of the PCAone Halko algorithm
+Author: Jonas Meisner
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 3 - Alpha
+Requires-Python: >=3.7
+License-File: LICENSE
+Requires-Dist: cython>=3.0.0
+Requires-Dist: numpy>=1.26.0
