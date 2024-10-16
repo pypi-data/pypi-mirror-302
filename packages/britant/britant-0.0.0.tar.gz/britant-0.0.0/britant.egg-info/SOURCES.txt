@@ -1,0 +1,6 @@
+pyproject.toml
+britant/__init__.py
+britant.egg-info/PKG-INFO
+britant.egg-info/SOURCES.txt
+britant.egg-info/dependency_links.txt
+britant.egg-info/top_level.txt
