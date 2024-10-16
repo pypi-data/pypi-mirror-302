@@ -1,0 +1,18 @@
+[build-system]
+requires = ['setuptools>=42', 'wheel']
+build-backend = 'setuptools.build_meta'
+
+[tool.setuptools]
+py-modules = []
+
+[project]
+name = 'cu-receipt'
+version = '0.1.0'
+description = 'Что-то считаем :)'
+authors = [
+    { name = 'Pavel', email = 'p.glazunov@edu.centarlunivercity.ru' }
+]
+dependencies = []
+readme = 'README.md'
+license = { text = 'MIT' }
+requires-python = '>=3.10'

@@ -1,0 +1,7 @@
+LICENSE
+README.md
+pyproject.toml
+cu_receipt.egg-info/PKG-INFO
+cu_receipt.egg-info/SOURCES.txt
+cu_receipt.egg-info/dependency_links.txt
+cu_receipt.egg-info/top_level.txt
