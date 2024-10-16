@@ -1,0 +1,11 @@
+nepal_municipalities/__init__.py,sha256=cNzR06-BbqU9e0508k8ES3V6rkYQzKfFbsgYNoVcRSI,36
+nepal_municipalities/nepal_municipalities.py,sha256=QKNkc1b0LgRa-cMKU75uYv94Xs6j2p2WhzIP5JchLhw,4227
+nepal_municipalities/test.py,sha256=F37viSh1yJoBOOFNT_1BaeMC8aHX2Ftj_TlAPMgRnz0,125
+nepal_municipalities/data/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+nepal_municipalities/data/all_nepal_municipalities.json,sha256=8hAwtd-RWpiULgfmtK2udEWJN6uTUBERvH_26aoqT_U,104320
+nepal_municipalities/data/data.json,sha256=8u2aF7q7OZY-XCEpdmMkTxzDvNRURmjHA0EWcVyUFH8,24254
+nepal_sub_divisions-0.0.4.dist-info/LICENSE,sha256=ukX8NFyKs9WSVh_Xqj_HZEtKsYQ3PaVwjTKcep6u9os,1073
+nepal_sub_divisions-0.0.4.dist-info/METADATA,sha256=8A_AQ3tOWlZ6pHvwxUo8jteK6xss7kZMJv2i1O60asE,3006
+nepal_sub_divisions-0.0.4.dist-info/WHEEL,sha256=GV9aMThwP_4oNCtvEC2ec3qUYutgWeAzklro_0m4WJQ,91
+nepal_sub_divisions-0.0.4.dist-info/top_level.txt,sha256=qdb6bBmoJarKBG7lflxJPFLFtr4Lgh1prx3lneekyq8,21
+nepal_sub_divisions-0.0.4.dist-info/RECORD,,
