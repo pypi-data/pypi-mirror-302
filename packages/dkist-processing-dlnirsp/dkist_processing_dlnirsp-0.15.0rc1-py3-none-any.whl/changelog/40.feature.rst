@@ -1,0 +1,1 @@
+Allow groups that border the edges of the array to have their area changed by IFU drifts.
