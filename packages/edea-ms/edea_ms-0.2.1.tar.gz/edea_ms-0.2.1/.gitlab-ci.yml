@@ -1,0 +1,130 @@
+# You can override the included template(s) by including variable overrides
+# SAST customization: https://docs.gitlab.com/ee/user/application_security/sast/#customizing-the-sast-settings
+# Secret Detection customization: https://docs.gitlab.com/ee/user/application_security/secret_detection/#customizing-settings
+# Dependency Scanning customization: https://docs.gitlab.com/ee/user/application_security/dependency_scanning/#customizing-the-dependency-scanning-settings
+# Container Scanning customization: https://docs.gitlab.com/ee/user/application_security/container_scanning/#customizing-the-container-scanning-settings
+# Note that environment variables can be set in several places
+# See https://docs.gitlab.com/ee/ci/variables/#cicd-variable-precedence
+stages:
+  - build
+  - test
+  - security
+  - deploy
+sast:
+  stage: security
+  variables:
+    SAST_EXCLUDED_PATHS: spec, test, tests, tmp,.cache,
+secret_detection:
+  stage: security
+dependency_scanning:
+  tags:
+    - edea_runner
+  stage: security
+include:
+  - template: Jobs/Dependency-Scanning.gitlab-ci.yml
+  - template: Security/SAST.gitlab-ci.yml
+  - template: Security/Secret-Detection.gitlab-ci.yml
+services:
+  - docker:dind
+variables:
+  DOCKER_HOST: tcp://docker:2375
+  DOCKER_TLS_CERTDIR: ""
+# variables:
+#   PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pip"
+#   POETRY_CACHE_DIR: "$CI_PROJECT_DIR/.cache/poetry"
+# cache:
+#   paths:
+#     - ".cache/pip"
+#     - ".cache/poetry"
+#     - venv/
+#     - ".mypy_cache"
+#     - ".pytest_cache"
+default:
+  before_script:
+    - |
+      . /etc/os-release
+      if [ "$ID" == "ubuntu" ];
+      then
+        if [ ! -x "$(command -v curl)" ]; then
+          apt-get update
+          apt-get install -yqq curl
+        fi
+
+        curl -sSf https://rye.astral.sh/get | RYE_INSTALL_OPTION="--yes" bash
+
+        source "$HOME/.rye/env"
+        rye sync
+        . .venv/bin/activate
+        python3 --version # For debugging
+      else
+        echo $os
+        echo "image isn't ubuntu, assuming this is an included stage"
+      fi
+
+test-server:
+  image: mcr.microsoft.com/playwright:v1.43.0-jammy
+  stage: test
+  services:
+    - docker:dind
+  variables:
+    OIDC_PROVIDERS: "dex"
+    DEX_HOST: "0.0.0.0:5556"
+    DEX_ISSUER: "http://docker:5556/dex"
+    DEX_CLIENT_ID: "edea-ms-test"
+    DEX_CLIENT_SECRET: "edea-ms-test-secret"
+    DEX_SERVER_METADATA_URL: "http://docker:5556/dex/.well-known/openid-configuration"
+    DEX_SCOPE: "openid profile groups"
+    API_BASE_URL: "http://localhost:8000/api"
+    SESSION_SECRET: "test"
+  script:
+    - curl -sSL https://get.docker.com | sh
+    - npm install
+    - npm run build
+    - playwright install
+    - coverage run --concurrency=thread,gevent -m pytest edea_ms
+    - coverage report
+    - coverage xml
+  coverage: "/(?i)total.*? (100(?:\\.0+)?\\%|[1-9]?\\d(?:\\.\\d+)?\\%)$/"
+  artifacts:
+    reports:
+      coverage_report:
+        coverage_format: cobertura
+        path: coverage.xml
+# test-ui:
+#   image: registry.gitlab.com/edea-dev/ci-runner:latest
+#   stage: test
+#   services:
+#     - docker:dind
+#   variables:
+#     OIDC_PROVIDERS: "dex"
+#     DEX_HOST: "0.0.0.0:5556"
+#     DEX_ISSUER: "http://docker:5556/dex"
+#     DEX_CLIENT_ID: "edea-ms-test"
+#     DEX_CLIENT_SECRET: "edea-ms-test-secret"
+#     DEX_SERVER_METADATA_URL: "http://docker:5556/dex/.well-known/openid-configuration"
+#     DEX_SCOPE: "openid profile groups"
+#     API_BASE_URL: "http://localhost:8000/api"
+#     SESSION_SECRET: "test"
+#   script:
+#     - npm install
+#     - npm run build
+#     - npx playwright install
+#     - nohup poetry run uvicorn app.main:app &
+#     - npx playwright test
+typecheck:
+  image: docker.io/ubuntu:noble
+  stage: build
+  script:
+    - mypy -p edea_ms
+pages:
+  image: registry.gitlab.com/edea-dev/ci-runner:latest
+  stage: deploy
+  script:
+    - cd doc
+    - mkdocs build
+    - mv site/ ../public/
+  artifacts:
+    paths:
+      - public
+  rules:
+    - if: "$CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH"
