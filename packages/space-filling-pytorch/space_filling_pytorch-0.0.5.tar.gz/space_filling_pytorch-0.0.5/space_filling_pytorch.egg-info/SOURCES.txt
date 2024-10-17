@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+space_filling_pytorch/__init__.py
+space_filling_pytorch.egg-info/PKG-INFO
+space_filling_pytorch.egg-info/SOURCES.txt
+space_filling_pytorch.egg-info/dependency_links.txt
+space_filling_pytorch.egg-info/not-zip-safe
+space_filling_pytorch.egg-info/requires.txt
+space_filling_pytorch.egg-info/top_level.txt
