@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mfa-authenticator"
+version = "1.0.4"
+description = "This helps you setup MFA with 3rd Party Authenticator"
+requires-python = ">=3.10"
+authors = [
+  { name="Sunday Ajayi", email="sunnexajayi@gmail.com"},
+]
+readme = "README.md"
+
+
+dependencies = [
+    "python-decouple",
+    "pyotp",
+    "qrcode",
+    "pillow"
+]
+
+[project.urls]
+homepage = "https://your_project_homepage.com"
