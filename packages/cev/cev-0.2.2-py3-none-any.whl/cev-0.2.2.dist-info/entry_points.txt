@@ -1,0 +1,2 @@
+[console_scripts]
+cev = cev._cli:main
