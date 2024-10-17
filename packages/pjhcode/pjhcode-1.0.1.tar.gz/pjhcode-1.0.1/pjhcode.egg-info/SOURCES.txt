@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+test.txt
+指令.md
+pjhcode/__init__.py
+pjhcode/data_deal.py
+pjhcode/data_fenxi.py
+pjhcode/data_get.py
+pjhcode/mydf.py
+pjhcode.egg-info/PKG-INFO
+pjhcode.egg-info/SOURCES.txt
+pjhcode.egg-info/dependency_links.txt
+pjhcode.egg-info/requires.txt
+pjhcode.egg-info/top_level.txt
