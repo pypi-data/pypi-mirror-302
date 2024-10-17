@@ -1,0 +1,6 @@
+setup.py
+sumo_py_cli.egg-info/PKG-INFO
+sumo_py_cli.egg-info/SOURCES.txt
+sumo_py_cli.egg-info/dependency_links.txt
+sumo_py_cli.egg-info/not-zip-safe
+sumo_py_cli.egg-info/top_level.txt
