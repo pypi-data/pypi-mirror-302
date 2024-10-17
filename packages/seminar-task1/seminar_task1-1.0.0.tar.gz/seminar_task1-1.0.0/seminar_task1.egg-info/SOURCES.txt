@@ -1,0 +1,7 @@
+README.md
+setup.py
+seminar_task1.egg-info/PKG-INFO
+seminar_task1.egg-info/SOURCES.txt
+seminar_task1.egg-info/dependency_links.txt
+seminar_task1.egg-info/entry_points.txt
+seminar_task1.egg-info/top_level.txt

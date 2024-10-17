@@ -1,0 +1,2 @@
+[console_scripts]
+task_1 = task1_package.main:main
