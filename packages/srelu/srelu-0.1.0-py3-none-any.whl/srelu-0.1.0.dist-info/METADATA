@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: srelu
+Version: 0.1.0
+Summary: A library for the SReLU activation function.
+Home-page: https://github.com/SiddhanthBhat/sRELU
+Author: Siddhanth Bhat
+Author-email: siddhanthbhat@outlook.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: tensorflow
+
+The SReLU (Smooth Rectified Linear Unit) is an activation function designed to improve deep learning model performance by providing smooth, differentiable gradients across both positive and negative input domains. Traditional activation functions like ReLU (Rectified Linear Unit) have been widely used for their simplicity and computational efficiency, but they come with some drawbacks, especially when dealing with negative input values, where the gradient becomes zero (leading to the "dying ReLU" problem). SReLU addresses these issues while preserving the benefits of ReLU for positive inputs.
