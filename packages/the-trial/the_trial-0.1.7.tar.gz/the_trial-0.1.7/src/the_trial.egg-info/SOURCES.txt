@@ -1,0 +1,11 @@
+LICENSE
+README.rst
+pyproject.toml
+src/theTrial/__init__.py
+src/theTrial/addition.py
+src/the_trial.egg-info/PKG-INFO
+src/the_trial.egg-info/SOURCES.txt
+src/the_trial.egg-info/dependency_links.txt
+src/the_trial.egg-info/requires.txt
+src/the_trial.egg-info/top_level.txt
+tests/test_addition.py
