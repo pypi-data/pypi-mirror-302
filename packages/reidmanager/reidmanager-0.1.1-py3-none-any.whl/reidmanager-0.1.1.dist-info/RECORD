@@ -1,0 +1,9 @@
+ReIDManager.py,sha256=2aCeU6dP17wSSlJxfohjbR3I5e45cu6Xenoij8PszPw,1999
+__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+containers/ReIDTracker.py,sha256=EHB7bBaoQR-P_rBdDS7nDbnUTk021tPbxEmJvkpGxfE,830
+containers/__init__.py,sha256=ZHEyUA4epdA65x_mZKJH9yKb4tnG-en0wl6OQ5OXuTk,32
+reidmanager-0.1.1.dist-info/LICENSE,sha256=ACwmltkrXIz5VsEQcrqljq-fat6ZXAMepjXGoe40KtE,1069
+reidmanager-0.1.1.dist-info/METADATA,sha256=Ks9tzZSn7Js_NUSsk_fEjjdvmeOpEaHML8T9mObwaqY,623
+reidmanager-0.1.1.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+reidmanager-0.1.1.dist-info/top_level.txt,sha256=Xl_ThDNU6RbsKI3nybo5UotyvwLz6Xvm-qYIbQwi0a0,32
+reidmanager-0.1.1.dist-info/RECORD,,
