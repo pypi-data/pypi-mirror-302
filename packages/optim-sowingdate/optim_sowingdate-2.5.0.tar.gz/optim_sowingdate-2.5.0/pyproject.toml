@@ -1,0 +1,88 @@
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.portray]
+modules = ["optim_sowingdate"]
+
+[project]
+name = "optim_sowingdate"
+description = "A package to optimize sowing date from estimated yield time series"
+requires-python = ">=3.9"
+readme = "README.md"
+version = "2.5.0"
+authors = [
+  {name = "Cyrille MIDINGOYI", email = "cyrille_ahmed.midingoyi@cirad.fr" },
+  {name = "Argeo ULRICH"}
+]
+license = {file = "LICENSE.txt"}
+maintainers = [
+  {name = "Cyrille MIDINGOYI", email = "cyrille_ahmed.midingoyi@cirad.fr" }
+]
+dependencies = [
+  "numpy",
+  "xarray",
+  "pathlib",
+  "pandas",
+  "netCDF4",
+  "click"
+]
+
+classifiers = [
+  # How mature is this project? Common values are
+  #   3 - Alpha
+  #   4 - Beta
+  #   5 - Production/Stable
+  "Development Status :: 3 - Alpha",
+
+  # Indicate who your project is intended for
+  "Intended Audience :: Developers",
+  "Topic :: Software Development :: Build Tools",
+
+  # Pick your license as you wish
+  "License :: OSI Approved :: MIT License",
+
+  # Specify the Python versions you support here. In particular, ensure
+  # that you indicate you support Python 3. These classifiers are *not*
+  # checked by "pip install". See instead "requires-python" key in this file.
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3 :: Only",
+]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+pytest-cov = "^5.0.0"
+numpy = "^1.26.4"
+xarray = "^2024.2.0"
+pathlib = "^1.0.1"
+pandas  = "^2.2.1"
+netCDF4 = "^1.6.5"
+click  = "^8.1.7"
+
+
+[project.urls]
+Homepage = "https://github.com/cropmodelingplatform/Optim_sowingDate"
+documentation = "https://Optim_sowingDate.readthedocs.io"
+Repository = "https://github.com/CropModelingPlatform/Optim_sowingDate.git"
+
+[tool.portray.mkdocs.theme]
+name = "readthedocs"
+palette = {primary = "green", accent = "pink"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+#include = ["optim_sowingdate*"]
+
+[tool.portray.mkdocs.theme.icon]
+repo='fontawesome/brands/gitlab'
+
+[[tool.portray.mkdocs.nav]]
+Home = "README.md"
+
+[project.scripts]
+optim_sowingdate = "optim_sowingdate.cmd:cli"
+
