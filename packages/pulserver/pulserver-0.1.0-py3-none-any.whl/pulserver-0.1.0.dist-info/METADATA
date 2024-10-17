@@ -1,0 +1,95 @@
+Metadata-Version: 2.1
+Name: pulserver
+Version: 0.1.0
+Summary: A PyPulseq-based client/server MR sequence design toolbox.
+Author-email: Matteo Cencini <matteo.cencini@gmail.com>
+Project-URL: Homepage, https://github.com/INFN-MRI/pulserver
+Project-URL: Bug Reports, https://github.com/INFN-MRI/pulserver/issues
+Project-URL: Source, https://github.com/INFN-MRI/pulserver
+Keywords: pulseq,mri,sequence-design,pulse-sequences,mri-sequences
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.10
+Description-Content-Type: text/x-rst
+License-File: LICENSE.txt
+Requires-Dist: numpy<2.0
+Requires-Dist: scipy<1.14
+Requires-Dist: numba
+Requires-Dist: pypulseq
+Requires-Dist: pulpy
+Requires-Dist: mri-nufft
+Requires-Dist: ismrmrd
+Requires-Dist: ipywidgets
+Provides-Extra: dev
+Requires-Dist: black; extra == "dev"
+Requires-Dist: isort; extra == "dev"
+Provides-Extra: doc
+Requires-Dist: sphinx; extra == "doc"
+Requires-Dist: pydata-sphinx-theme; extra == "doc"
+Requires-Dist: myst-nb; extra == "doc"
+Requires-Dist: matplotlib; extra == "doc"
+Requires-Dist: mrtwin; extra == "doc"
+Provides-Extra: test
+Requires-Dist: pytest; extra == "test"
+Requires-Dist: pytest-black; extra == "test"
+Requires-Dist: pytest-cov; extra == "test"
+Requires-Dist: pytest-sugar; extra == "test"
+Requires-Dist: pytest-xdist; extra == "test"
+
+Pulserver
+=========
+
+Pulserver is a high-level wrapper over PyPulseq. It is designed to 
+improve MR sequence code organization and provide a bridge
+between different Pulseq interpreter representations while providing
+a familiar interface to PyPulseq user.
+
+It also provide a server-based interface to enable online sequence design
+routines, e.g., using the MR scanner as a client.
+
+Features
+--------
+
+
+
+Installation
+------------
+Pulserver can be installed via pip:
+
+.. code-block:: bash
+
+    pip install pulserver
+
+Development
+-----------
+If you want to modifiy the Pulserver code base:
+
+.. code-block:: bash
+
+    git clone https://github.com/INFN-MRI/pulservert.git
+    pip install -e ./pulserver
+
+Usage
+-----
+
+TODO: add quick example
+
+Testing
+-------
+To run the tests, execute the following command in the terminal:
+
+.. code-block:: bash
+
+     pytest .
+
+License
+-------
+This project is licensed under the MIT License.
+
+Contributing
+------------
+Contributions are welcome! Please fork the repository and submit a pull request.
