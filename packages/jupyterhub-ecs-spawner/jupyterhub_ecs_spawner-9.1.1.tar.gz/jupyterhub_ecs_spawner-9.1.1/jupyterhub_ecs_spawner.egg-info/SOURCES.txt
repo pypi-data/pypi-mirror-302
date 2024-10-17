@@ -1,0 +1,7 @@
+README.md
+setup.py
+jupyterhub_ecs_spawner.egg-info/PKG-INFO
+jupyterhub_ecs_spawner.egg-info/SOURCES.txt
+jupyterhub_ecs_spawner.egg-info/dependency_links.txt
+jupyterhub_ecs_spawner.egg-info/not-zip-safe
+jupyterhub_ecs_spawner.egg-info/top_level.txt
