@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: w32_fnmatch
+Version: 1.1
+Summary: Windows compatible wildcard matching algorithms
+Author-email: maxpat78 <maxpat78@yahoo.it>
+License: GPL
+Project-URL: homepage, https://github.com/maxpat78/w32_fnmatch
+Project-URL: repository, https://github.com/maxpat78/w32_fnmatch.git
+Keywords: wildcards,fnmatch,compatibility,globbing
+Classifier: Programming Language :: Python :: 3
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: Environment :: Win32 (MS Windows)
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Topic :: System :: Filesystems
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
+
