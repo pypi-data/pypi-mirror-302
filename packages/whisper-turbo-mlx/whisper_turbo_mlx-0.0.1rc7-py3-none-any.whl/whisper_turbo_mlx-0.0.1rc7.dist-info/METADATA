@@ -1,0 +1,52 @@
+Metadata-Version: 2.1
+Name: whisper-turbo-mlx
+Version: 0.0.1rc7
+Summary: Whisper Turbo in MLX
+Home-page: https://github.com/JosefAlbers/whisper-turbo-mlx
+Author: Josef Albers
+Author-email: albersj66@gmail.com
+License: Apache License 2.0
+Requires-Python: >=3.12.3
+Description-Content-Type: text/markdown
+Requires-Dist: mlx ==0.18.1
+Requires-Dist: numpy ==2.0.2
+Requires-Dist: tiktoken ==0.8.0
+Requires-Dist: huggingface-hub ==0.24.7
+Requires-Dist: fire ==0.6.0
+
+# WTM (Whisper Turbo MLX)
+
+This repository provides a fast implementation of the [Whisper](openai/whisper-large-v3-turbo) model using MLX, designed for efficient audio transcription.
+
+![Alt text](https://raw.githubusercontent.com/JosefAlbers/whisper-turbo-mlx/main/assets/benchmark.png)
+
+## Features
+
+- **Fast Audio Transcription**: Optimized for quick processing.
+- **Simplified Architecture**: Focus on ease of use with minimal decoding strategies.
+- **Custom Tokenizer**: Supports multilingual tokenization.
+
+## Installation
+
+```zsh
+# Quick install (note: PyPI version may not always be up to date)
+brew install ffmpeg
+pip install whisper-turbo-mlx
+
+# For the latest version, you can install directly from the repository:
+# git clone https://github.com/JosefAlbers/whisper-turbo-mlx.git
+# cd whisper-turbo-mlx
+# pip install -e .
+```
+
+## Usage
+
+To transcribe an audio file, call the `transcribe` function:
+
+```zsh
+transcribe 'test.wav'
+```
+
+## Contributing
+
+Contributions are welcome! Feel free to submit issues or pull requests.
