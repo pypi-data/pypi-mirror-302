@@ -1,0 +1,3 @@
+[console_scripts]
+pa = cli.pa:app
+
