@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+IkonGlobals/__init__.py
+IkonGlobals/settings.py
+IkonGlobals.egg-info/PKG-INFO
+IkonGlobals.egg-info/SOURCES.txt
+IkonGlobals.egg-info/dependency_links.txt
+IkonGlobals.egg-info/requires.txt
+IkonGlobals.egg-info/top_level.txt
