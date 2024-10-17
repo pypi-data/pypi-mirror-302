@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+altcolor/__init__.py
+altcolor/altcolor.py
+altcolor.egg-info/PKG-INFO
+altcolor.egg-info/SOURCES.txt
+altcolor.egg-info/dependency_links.txt
+altcolor.egg-info/requires.txt
+altcolor.egg-info/top_level.txt
