@@ -1,0 +1,81 @@
+[build-system]
+requires = [
+    "setuptools>=61",
+    "setuptools_scm>=6.2",
+    "wheel",
+    "cmake>=3.18",
+    "pybind11~=2.10",
+    "ninja; sys_platform != 'win32'",
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "quicktex"
+description = "A fast block compression library for python"
+readme = "README.md"
+authors = [{ name = "Andrew Cassidy", email = "drewcassidy@me.com" }]
+
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3",
+    "Topic :: Multimedia :: Graphics :: Graphics Conversion",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: C++",
+]
+
+requires-python = ">=3.9"
+dependencies = ["Pillow", "click"]
+dynamic = ["version"]
+
+[project.optional-dependencies]
+tests = ["parameterized", "pytest"]
+docs = [
+    "Sphinx >= 3.5",
+    "sphinx-click >= 2.7",
+    "sphinx-rtd-theme",
+    "myst-parser >= 0.14",
+]
+stubs = ["pybind11-stubgen"]
+
+[project.urls]
+Docs = "https://quicktex.readthedocs.io/en/latest/"
+Source = "https://github.com/drewcassidy/quicktex"
+Changelog = "https://github.com/drewcassidy/quicktex/blob/main/CHANGELOG.md"
+
+[project.scripts]
+quicktex = "quicktex.__main__:main"
+
+[tool.setuptools]
+zip-safe = false
+packages = { find = { include = ["quicktex*"] } } # only include quicktex and not tests
+package-data = { '*' = ['py.typed', '*.pyi'] } # include stubs
+package-dir = { '' = '.' } # without this line, C++ source files get included in the bdist
+
+[tool.setuptools_scm]
+
+[tool.cibuildwheel]
+build = "cp*" # only build wheels for cpython.
+build-frontend = "build"
+test-command = "pytest {project}/tests --verbose"
+test-extras = ["tests"]
+
+[tool.cibuildwheel.macos]
+archs = ["native"] # build both x86 and ARM wheels
+
+[tool.cibuildwheel.windows]
+archs = ["auto64"] # arm64 windows builds not yet supported
+
+[tool.cibuildwheel.linux]
+archs = ["x86_64", "aarch64"]
+skip = ["*musllinux_aarch64*"] # skip targets without available Pillow wheels
+manylinux-x86_64-image = "manylinux2014"
+manylinux-aarch64-image = "manylinux2014"
+
+[tool.black]
+line-length = 120 # 80-column is stupid
+target-version = ['py39', 'py310', 'py310']
+skip-string-normalization = true
