@@ -1,0 +1,7 @@
+LICENSE
+README.md
+setup.py
+zenmodel.egg-info/PKG-INFO
+zenmodel.egg-info/SOURCES.txt
+zenmodel.egg-info/dependency_links.txt
+zenmodel.egg-info/top_level.txt
