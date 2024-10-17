@@ -1,0 +1,10 @@
+LICENSE.txt
+README.md
+pyproject.toml
+src/linked_list/Linked_List.py
+src/linked_list/__init__.py
+src/py_linked_list.egg-info/PKG-INFO
+src/py_linked_list.egg-info/SOURCES.txt
+src/py_linked_list.egg-info/dependency_links.txt
+src/py_linked_list.egg-info/top_level.txt
+tests/test_linked_list.py
