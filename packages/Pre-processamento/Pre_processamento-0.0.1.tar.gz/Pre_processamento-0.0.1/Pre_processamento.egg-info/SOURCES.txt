@@ -1,0 +1,12 @@
+README.md
+setup.py
+Pre_processamento/__init__.py
+Pre_processamento.egg-info/PKG-INFO
+Pre_processamento.egg-info/SOURCES.txt
+Pre_processamento.egg-info/dependency_links.txt
+Pre_processamento.egg-info/requires.txt
+Pre_processamento.egg-info/top_level.txt
+Pre_processamento/Pre_eng/Pro_eng.py
+Pre_processamento/Pre_eng/__init__.py
+Pre_processamento/Pre_pt_br/Pro_pt_br.py
+Pre_processamento/Pre_pt_br/__init__.py
