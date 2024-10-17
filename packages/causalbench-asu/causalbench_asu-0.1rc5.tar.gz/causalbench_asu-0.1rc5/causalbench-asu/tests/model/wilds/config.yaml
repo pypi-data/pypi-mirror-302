@@ -1,0 +1,13 @@
+type: model
+name: wilds
+task: domaingeneralization
+path: wilds.py
+inputs:
+    data:
+        id: data
+        data: dataframe
+outputs:
+    prediction:
+        id: pred
+        data: dataframe
+
