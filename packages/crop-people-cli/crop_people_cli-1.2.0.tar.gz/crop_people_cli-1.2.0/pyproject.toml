@@ -1,0 +1,35 @@
+[project]
+name = "crop-people-cli"
+version = "1.2.0"
+description = "CLI tool to crop people from images using YOLOvX"
+authors = [{ name = "tadeasf", email = "business@tadeasfort.com" }]
+
+dependencies = [
+    "ultralytics>=8.3.14",
+    "opencv-python>=4.10.0.84",
+    "prompt-toolkit>=3.0.48",
+    "typer>=0.12.5",
+    "loguru>=0.7.2",
+
+]
+readme = "README.md"
+requires-python = ">= 3.12"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = ["ruff-lsp>=0.0.57"]
+
+[tool.rye.scripts]
+single = "python src/crop_people_cli/main.py single"
+multi = "python src/crop_people_cli/main.py multi"
+help = "python src/crop_people_cli/main.py --help"
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/crop_people_cli"]
