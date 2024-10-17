@@ -1,0 +1,9 @@
+pyrogram
+click
+pydantic
+
+[speedup]
+tgcrypto
+
+[tgcrypto]
+tgcrypto
