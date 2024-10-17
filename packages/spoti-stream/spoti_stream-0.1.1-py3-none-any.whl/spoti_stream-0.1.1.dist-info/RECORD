@@ -1,0 +1,12 @@
+spoti_stream/__init__.py,sha256=ejDT6N39W9DrhRRaqYOdQpIuhSsxxsTkHUMyfkjQp-M,190
+spoti_stream/__main__.py,sha256=DtHGSLwLjza-hJhPNbqamgM1CJYYZGitxJFFzoGCoZM,3524
+spoti_stream/converter.py,sha256=FnMPU6IF-_cKLWoVGwwD5965rkwMTi_3OTmeONalgSw,595
+spoti_stream/downloader.py,sha256=Olc6Na6_ncV3VmTCTHFcQUh4OlGCC4z5siB-mGhITpw,3548
+spoti_stream/install_dependencies.py,sha256=yzwsbX6L7Pta-os5o9N8dQqesVnNjArAz3uCoWqcBbw,1452
+spoti_stream/spotify_utils.py,sha256=9ehwUiepM2ZCK7VG6E-QwBL1_cHTagaJdG1ASqGakWY,2778
+spoti_stream-0.1.1.dist-info/LICENSE.txt,sha256=qIVZzvyU9EhEIU_vKRQ9RCDb7L7FcDmNCXDZR1s3uV0,1072
+spoti_stream-0.1.1.dist-info/METADATA,sha256=PPn-Sx6S2fHgPxbVaSEr6lNkjqgoc-sEbbraM1xn4So,1602
+spoti_stream-0.1.1.dist-info/WHEEL,sha256=Z4pYXqR_rTB7OWNDYFOm1qRk0RX6GFP2o8LgvP453Hk,91
+spoti_stream-0.1.1.dist-info/entry_points.txt,sha256=0muJlf-Id2OFknCd_zwoBvnfvhtRaUjrPZKsi5DqW5w,53
+spoti_stream-0.1.1.dist-info/top_level.txt,sha256=RjLxF4wm3-LVhZj79xlfObUjgHdQENfPtR0HAOL08fU,13
+spoti_stream-0.1.1.dist-info/RECORD,,
