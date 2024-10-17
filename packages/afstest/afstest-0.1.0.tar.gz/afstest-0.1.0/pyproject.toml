@@ -1,0 +1,25 @@
+[project]
+name = "afstest"
+version = "0.1.0"
+description = "autotest init tools."
+authors = [
+    { name = "funcdefmain", email = "741132517@qq.com" },
+]
+dependencies = []
+requires-python = ">=3.10"
+readme = "README.md"
+
+[project.license]
+text = "MIT"
+
+[project.scripts]
+afstest = "afstest.cli:main"
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[tool.pdm]
+distribution = true
