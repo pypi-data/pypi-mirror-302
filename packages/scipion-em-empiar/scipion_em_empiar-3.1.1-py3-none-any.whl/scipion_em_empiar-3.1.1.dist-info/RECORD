@@ -1,0 +1,16 @@
+empiar/EMPIAR_logo.png,sha256=SRwAwPNQ3BFa4XzXiVDIPoRpZaLxW9KFiEcvnpZ5aWM,22433
+empiar/__init__.py,sha256=v_vvBns2cisktpxyCBLO4qFR-QZW6S8PBElguV3NHdU,2170
+empiar/bibtex.py,sha256=hboJ5Iivm6UW0Ei2BzM7q7TYD3MgnfJtRTz9JcmB8Ew,1606
+empiar/constants.py,sha256=t93PgA6nxZrP4qtTWXrhYNZMjBt2GTzUYek2E9pNsXg,4633
+empiar/protocols.conf,sha256=ODFz3yeF3n_8RBOoqJhkxPvRflh72ATXoGC8tfBNoOk,430
+empiar/utils.py,sha256=ofc2wvwCDcNX83zR1A_ADSrQFmYpZHF7XM9l2klGwbE,7480
+empiar/protocols/__init__.py,sha256=czTUwxFkpVkI6hCjmNFxkcayQJjfZVtc8Mml8IKI9ng,1257
+empiar/protocols/protocol_downloader.py,sha256=9e2H6G9aM01Wtrl_m-4ZpMir7GhS9LIXSy3ZGXxIsr8,11335
+empiar/protocols/protocol_empiar_submission.py,sha256=sGu8xnxgV4jpFfT3iOOuzzH-6ZnBhROqt60H6i7jtBQ,49141
+empiar/templates/empiar_deposition_template.json,sha256=N7MkSgf48T2M3apOxzAB1co9mqTqqmOTjd8BzyIeo2c,1910
+scipion_em_empiar-3.1.1.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+scipion_em_empiar-3.1.1.dist-info/METADATA,sha256=ShhOAfnVfY_Uis5scY5t8x_mNiBtS2c3Ql8bSMvhcos,2847
+scipion_em_empiar-3.1.1.dist-info/WHEEL,sha256=eOLhNAGa2EW3wWl_TU484h7q1UNgy0JXjjoqKoxAAQc,92
+scipion_em_empiar-3.1.1.dist-info/entry_points.txt,sha256=g5XBZ_-pKh6njE_Rnhw8eQS543ydJwrp02YV9k_IdY0,37
+scipion_em_empiar-3.1.1.dist-info/top_level.txt,sha256=hOyGJ-B5W2DgG97gggKApFkypuGazEUI2xQlC13l7oo,7
+scipion_em_empiar-3.1.1.dist-info/RECORD,,
