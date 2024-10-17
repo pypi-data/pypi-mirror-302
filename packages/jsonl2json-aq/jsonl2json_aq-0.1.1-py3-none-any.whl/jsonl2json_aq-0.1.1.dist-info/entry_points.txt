@@ -1,0 +1,3 @@
+[console_scripts]
+jl2j=jsonl2json_aq.__main__:main
+
