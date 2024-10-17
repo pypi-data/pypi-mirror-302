@@ -1,0 +1,12 @@
+HISTORY.md,sha256=X3MauKPO9DFFoSyhqdsRYraz50k6mBXj-aW15UYWUWA,308
+psiconfig/__init__.py,sha256=Ryd-u8AWiQmQEGy8Fj78FIIgv7ZjeBWDuXwQts3giLk,167
+psiconfig/_version.py,sha256=cQoIiO1VnNhWnVn7Jl1cpU9qolE6V8n6TtXfn2i5zK8,32
+psiconfig/config.py,sha256=c48uBam4x9Q1FDKsTjRa_04wWZlcuqp7gsDkgs3gaDo,2897
+psiconfig/json_config.py,sha256=yTpLo20IbYkWQ8diwrZGLkZUF_dXW2Aysh1K_tqTaC0,1467
+psiconfig/text.py,sha256=qMqcHLn0PZU0lhIDZoOrrtYTo_5LIb02Sszt8v9uCTU,390
+psiconfig/toml_config.py,sha256=Dpf6yDk-ntPcVW7Y-Fu3m8_TGmuyCPz8Ro6GixXv5d4,1490
+psiconfig/utilities.py,sha256=No6X2piMOAFc42ShdbX4FuUL5O3YjLpH25dclGD3U_I,237
+psiconfig-0.0.3.dist-info/LICENSE.txt,sha256=4h0e1iLfuruOGdqDfs8-aua1e_Ma97UnS8ZfwAau8aE,33889
+psiconfig-0.0.3.dist-info/METADATA,sha256=5_NTUQur_2r-lKUYpjW0atwrkFGEZR1YGJGbmKaG_do,398
+psiconfig-0.0.3.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+psiconfig-0.0.3.dist-info/RECORD,,
