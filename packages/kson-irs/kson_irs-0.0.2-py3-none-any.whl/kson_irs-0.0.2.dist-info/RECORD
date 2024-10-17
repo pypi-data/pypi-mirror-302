@@ -1,0 +1,9 @@
+kson/__init__.py,sha256=DyfXss8mv9UhhUIA18Om31tS7Q_g03U7bsc1xoTtDmY,616
+kson/decoder.py,sha256=QaMCJlQrLg0nCFprnxMDS32mMqd6kqqbp3_lDZL5Ngg,6120
+kson/encoder.py,sha256=UKgi8S2_oZVHSsCo9Pd9uU2Q-sQ5wPwyrYw4d12JT2g,3696
+kson/exceptions.py,sha256=DIM925s8YVK9dtlSia71TT9SVnc82fuoUpVd5qbWQTY,264
+kson_irs-0.0.2.dist-info/LICENSE,sha256=7xRk7XGH7YM-driK3lgQKLS6OhzjUegOywB8ErZuk60,1080
+kson_irs-0.0.2.dist-info/METADATA,sha256=yp6ECXLabebD-UbjJ2wwZYyQVVNyRRtMOtPtBv5iLaQ,3892
+kson_irs-0.0.2.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+kson_irs-0.0.2.dist-info/top_level.txt,sha256=nCxtdkgryr6tHwwIoIMD1bivM1dFvRuwcpkwge1Vtgo,5
+kson_irs-0.0.2.dist-info/RECORD,,
