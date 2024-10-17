@@ -1,0 +1,15 @@
+mykitchen/__init__.py,sha256=6BwY6ln_X0u0zdtldxShRr5w4_GTdtlyoSZl70wFy8A,131
+mykitchen/__main__.py,sha256=DWoedoXGmoCsD5ejlJSCHYApblyiaOgPI7YpYd-_Udo,3220
+mykitchen/api.py,sha256=4Z_p1JhN2UyMoTnutPIYjSyHNjgcNDCSmDaphwRFm1g,236
+mykitchen/asgi.py,sha256=RnqFgN7AxTJr-utQEWIOFsSCuIU5og6-RNlUFnGJi5U,170
+mykitchen/settings.py,sha256=5vZ8htZJB8UWOvu8tLwjuxKF_6v07je5tMpAw1yyE7o,10883
+mykitchen/urls.py,sha256=muH4jlu-CPxLVnfGQ3reu_PxrV_3KbYQzHWWITlGQXs,1091
+mykitchen/wsgi.py,sha256=Fcfp3ZhQNWPxlYHwzy8dFQ_bH5ppimjs-vG1MrS04aM,170
+mykitchen/mykitchen_cookbook/__init__.py,sha256=3xp9U_osx3uyayu3-Snh2rSdbYCiHuRydEptoNuIVvg,161
+mykitchen/mykitchen_cookbook/apps.py,sha256=LRmiRmYuVruIaEizJhioQdXIPPCm3pTBtGGmn6WwQ3I,177
+mykitchen/mykitchen_cookbook/kitchen.py,sha256=n3p0kEEy8cupMYmzlTeZ6UKpuEVVVFF00c_3lDxAGGk,494
+mykitchen/mykitchen_cookbook/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mykitchen-0.0.1.dist-info/METADATA,sha256=Zme_aMqSUXxxne6J8JTP0iteX8GzGJ2np5W176oUkwA,2370
+mykitchen-0.0.1.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+mykitchen-0.0.1.dist-info/licenses/LICENSE,sha256=u0jbAsaLd1siyk7WTIcbxJIRr_kWQ6IFfeBDYE0aKgY,1064
+mykitchen-0.0.1.dist-info/RECORD,,
