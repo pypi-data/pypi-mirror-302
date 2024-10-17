@@ -1,0 +1,57 @@
+Metadata-Version: 2.3
+Name: automators-agent
+Version: 0.1.1
+Summary: Automators AI Agent
+License-File: LICENSE
+Requires-Python: >=3.11
+Requires-Dist: openai>=1.51.2
+Requires-Dist: playwright>=1.47.0
+Requires-Dist: pytest-playwright>=0.5.2
+Requires-Dist: pytest>=8.3.3
+Requires-Dist: python-dotenv>=1.0.1
+Requires-Dist: rich>=13.9.2
+Requires-Dist: typer>=0.12.5
+Description-Content-Type: text/markdown
+
+# Automators Agent
+
+
+## Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/automators-com/agent.git
+cd agent
+```
+
+Install the dependencies:
+
+```bash
+uv sync --all-extras --dev
+```
+
+Install playwright:
+    
+```bash
+playwright install chromium
+```
+
+## Environment Variables
+
+Create a `.env` file in the root of the project with the following content:
+
+```bash
+OPENAI_API_KEY=""
+OPENAI_MODEL="gpt-4o"
+HEADLESS=true
+LOG_LEVEL="INFO"
+```
+
+## Usage
+
+Run the agent:
+
+```bash
+uv run agent
+```
