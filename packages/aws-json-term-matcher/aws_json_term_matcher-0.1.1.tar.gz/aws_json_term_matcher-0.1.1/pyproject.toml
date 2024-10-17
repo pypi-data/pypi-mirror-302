@@ -1,0 +1,30 @@
+[project]
+name = "aws-json-term-matcher"
+version = "0.1.1"
+authors = [
+    { name = 'Cristopher Pinzon', email = 'cristopher.pinzon@localstack.cloud' }
+]
+description = 'A Python library for advanced filtering and matching of AWS JSON logs, designed to simplify log parsing and enhance filtering capabilities.'
+
+requires-python = ">=3.8"
+dependencies=[
+    "lark"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "ruff",
+    "black"
+]
+
+test = [
+    "pytest"
+]
+
+
+[project.urls]
+Repository = "https://github.com/pinzon/aws-json-term-matcher.git"
+
+[tool.setuptools.dynamic]
+readme = { file = ["README.md"], content-type = "text/markdown"}
