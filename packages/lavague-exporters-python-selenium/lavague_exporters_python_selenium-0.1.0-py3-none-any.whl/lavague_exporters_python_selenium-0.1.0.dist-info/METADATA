@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: lavague-exporters-python-selenium
+Version: 0.1.0
+Summary: selenium+python exporter for lavague trajectories
+License: Apache-2.0
+Author: lavague-ai
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: lavague-exporters-python (>=0.1.0)
+Requires-Dist: lavague-sdk (>=0.1.0)
+Description-Content-Type: text/markdown
+
+
