@@ -1,0 +1,11 @@
+npc_io/__init__.py,sha256=Fl08L1idFV8GGrXAQAsh0Fb-zuBPGznwirGdTwdlCUQ,1359
+npc_io/cached_property.py,sha256=sg2xNVzCrPdtf0zoqi-j-DvpPq_2NpqQFzQ-wZeyEPg,3132
+npc_io/file_io.py,sha256=zWPpDpyOLg1ZA2tIct1fOorZ6F2_cSsNXM4mCBlh3IU,12716
+npc_io/lazy_dict.py,sha256=GWlx-dIdUlek51z7YWOvV86dgLrpCAaz1noGPZegMXE,2217
+npc_io/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+npc_io/types.py,sha256=NUj6sIY0KSFr5sAuT2O3QnDIxzm8rgqG4K01SAMfqxQ,281
+npc_io-0.1.31.dist-info/LICENSE,sha256=mtlEo7YLDjglqRsGRRZolan__6RMODXtSu-KOpO7I98,1085
+npc_io-0.1.31.dist-info/METADATA,sha256=nOCznt9gAyHTdPfagYwYyfff9UyyIx6_6q6qlhBwdBs,2137
+npc_io-0.1.31.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+npc_io-0.1.31.dist-info/top_level.txt,sha256=v290u4qDTBzyitEliYEZql0Slb7UsYceZseDSDf4k9U,7
+npc_io-0.1.31.dist-info/RECORD,,
