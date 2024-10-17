@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "pytest-influx"
+version = "0.1.0"
+description = "Pytest plugin for managing your influx instance between test runs"
+authors = ["vonum <vonum.mk@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pytest = "^8.3.3"
+influxdb-client = "^1.46.0"
+
+
+[tool.poetry.group.dev.dependencies]
+ipython = "^8.28.0"
+pytest-env = "^1.1.5"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
