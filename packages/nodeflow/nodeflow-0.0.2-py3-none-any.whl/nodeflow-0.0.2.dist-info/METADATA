@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: nodeflow
+Version: 0.0.2
+Summary: 
+License: MIT
+Author: Maksim Shushkevich
+Author-email: m.e.shushkevich@yandex.com
+Requires-Python: >=3.12,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: pytest (>=8.3.3,<9.0.0)
+Description-Content-Type: text/markdown
+
+# Nodeflow
+----------
+Nodeflow if a framework to make pipelines from nodes. You can implement any logic you want by using Variable, 
+Function and Adapter nodes. Nodeflow support implicit converter for Variables with priority on non-lossy adapters
+converting pipeline 
+
+Installing
+----------
+Install NodeFlow from PyPI via ``pip install nodeflow``
+
+Usage
+----------
+To write your own things just implement all required methods in corresponding abstract classes.
+Example for Variable:
+```python
+from nodeflow.node.abstract import Variable
+
+
+class Bool(Variable):
+    def __init__(self, value: bool):
+        assert isinstance(value, bool)
+        super().__init__(value)
+```
+
