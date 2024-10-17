@@ -1,0 +1,5 @@
+pandasai_qdrant/__init__.py,sha256=4vn-cWWjYX_9ynFss_Jwqk77rVAHupsFqyHqf6EAmjY,49
+pandasai_qdrant/qdrant.py,sha256=UqlF019VRGRbczT-pzo01426sOvvpd8qz5JKaJbXheI,9136
+pandasai_qdrant-0.1.0.dist-info/METADATA,sha256=IeXgJD-xhdK6S_lZBwiuV9ji4BYgKs-DsJhq5cA8zkg,886
+pandasai_qdrant-0.1.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+pandasai_qdrant-0.1.0.dist-info/RECORD,,
