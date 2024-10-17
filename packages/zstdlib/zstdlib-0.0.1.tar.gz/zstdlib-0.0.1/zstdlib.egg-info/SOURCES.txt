@@ -1,0 +1,11 @@
+LICENSE
+pyproject.toml
+zstdlib/__init__.py
+zstdlib/enum.py
+zstdlib/py.typed
+zstdlib/singleton.py
+zstdlib/trace.py
+zstdlib.egg-info/PKG-INFO
+zstdlib.egg-info/SOURCES.txt
+zstdlib.egg-info/dependency_links.txt
+zstdlib.egg-info/top_level.txt
