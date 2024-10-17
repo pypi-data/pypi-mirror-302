@@ -1,0 +1,17 @@
+.gitignore
+LICENSE
+README.md
+bun.lockb
+package.json
+pyproject.toml
+release.config.cjs
+requirements.txt
+setup.py
+.github/workflows/release.yml
+src/pdf_to_duc/__init__.py
+src/pdf_to_duc/main.py
+src/pdf_to_duc.egg-info/PKG-INFO
+src/pdf_to_duc.egg-info/SOURCES.txt
+src/pdf_to_duc.egg-info/dependency_links.txt
+src/pdf_to_duc.egg-info/requires.txt
+src/pdf_to_duc.egg-info/top_level.txt

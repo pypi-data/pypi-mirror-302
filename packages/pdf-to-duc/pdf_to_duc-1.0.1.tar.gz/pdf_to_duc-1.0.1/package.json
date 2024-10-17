@@ -1,0 +1,27 @@
+{
+  "name": "pdf-to-duc",
+  "version": "0.0.0-development",
+  "private": true,
+  "scripts": {
+    "install-deps": "python3 -m pip install -r requirements.txt",
+    "build": "python3 -m build",
+    "test": "python3 -m unittest discover tests",
+    "prepublish": "python3 setup.py sdist bdist_wheel",
+    "semantic-release": "semantic-release"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/commit-analyzer": "^13.0.0",
+    "@semantic-release/exec": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^11.0.0",
+    "@semantic-release/npm": "^12.0.1",
+    "@semantic-release/release-notes-generator": "^14.0.1",
+    "semantic-release": "^24.1.2"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "packageManager": "bun@1.1.24"
+}

@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: pdf-to-duc
+Version: 1.0.1
+Summary: Transform PDF's into Duc CAD files
+Author-email: Ducflair <support@ducflair.com>
+License: Apache-2.0
+Project-URL: Homepage, https://ducflair.com
+Project-URL: Source, https://github.com/ducflair/pdf-to-duc
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: ducflair_duc
+
+# PDF-to-Duc
+Library to transform CAD PDF's into Duc CAD files. This will enable ease of transition from old CAD projects.
