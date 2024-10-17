@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: rvd_ap
+Version: 0.1.0
+Summary: My description will help you to pass time and understand my ability of writing codes
+Home-page: https://github.com/AravindSreeU/rvd_ap
+Author: ARAVIND SREE U
+Author-email: uaravindsree@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENCE.txt
+
+# rvd_ap
+
+This project is done for fun and to learn how python modules are created. Since I'm spending some of my valuable resource called "Time" 
+I've slao included some useful functions inside this.The following text will tell you what are the functions that I've initiased under this.
+They are: avg(),sign(),perfect_num(),armstrong_num(),palindrome_num(),primality(),fib(),vowel_count(),consonant_count(),space_count(),
+palindrome_str(),word_count(),alpha_count(),int_count() and div_it().
+
+## Installation
+
+To install the package, use the following command:
+
+Or else go to PyPI.com and serch for the module named rvd_ap. So you'll find it there.
+
+```sh
+pip install rvd_ap
