@@ -1,0 +1,2 @@
+[console_scripts]
+mltaskfusion-cli = mltaskfusion.cmd.cli:main
