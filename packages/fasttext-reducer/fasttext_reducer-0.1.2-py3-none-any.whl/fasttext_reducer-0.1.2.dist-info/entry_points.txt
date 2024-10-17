@@ -1,0 +1,2 @@
+[console_scripts]
+fasttext-reduce = fasttext_reducer.reduce_fasttext_models:_main
