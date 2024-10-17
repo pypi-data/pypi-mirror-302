@@ -1,0 +1,21 @@
+*~
+\#*\#
+*.pyc
+.tfds
+.DS_Store
+dist/
+build/
+*.egg-info
+*.rej
+.pytype
+.vscode/*
+/.devcontainer
+docs*/**/_autosummary
+docs*/_build
+docs*/**/tmp
+
+# used by direnv
+.envrc
+
+# custom
+/tmp-files
