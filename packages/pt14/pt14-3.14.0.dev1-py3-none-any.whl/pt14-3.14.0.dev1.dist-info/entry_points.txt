@@ -1,0 +1,7 @@
+[console_scripts]
+p14 = pt14:v3140_app
+p3140 = pt14:v3140_app
+py3-fourteen = pt14:v3140_app
+
+[gui_scripts]
+
