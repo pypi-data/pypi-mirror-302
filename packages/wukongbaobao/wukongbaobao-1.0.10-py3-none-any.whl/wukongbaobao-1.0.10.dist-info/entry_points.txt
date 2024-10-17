@@ -1,0 +1,8 @@
+[console_scripts]
+t1=wukongbaobao.tests.test1:f1
+t2=wukongbaobao.tests.test1:f2
+wk=wukongbaobao.__main__:main
+
+[pygments.lexers]
+dogelang=dogelang.lexer:DogeLexer
+
