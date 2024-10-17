@@ -1,0 +1,11 @@
+drf_excel/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+drf_excel/_version.py,sha256=22tfRM9OwFMNZpfbY5SwhehtT_8ljy__s8iqxgveimE,411
+drf_excel/fields.py,sha256=FO5cxeRMXiQL59VWXO8FV4uz1I0MSiqvArzHYxSv0q0,6587
+drf_excel/mixins.py,sha256=nchxu5QbpZ3UvZFlIEYWn2ryclxrcYrjBEdu-knGW1U,1160
+drf_excel/renderers.py,sha256=_voD5hI8gaWNjXWmYsKeC7vV6oURLKPgc_MjJ8Jb0Hg,14609
+drf_excel/utilities.py,sha256=CZ1TlQjOmSjPHF7cOWJGjfcclRv-ZpM-0RtK0I-kYfo,3524
+drf_excel-2.5.0.dist-info/LICENSE,sha256=2L7iMW5Yiks3qafzK3LrB-kuDlzsfpS1gCDTiPotJ4I,1582
+drf_excel-2.5.0.dist-info/METADATA,sha256=v6_uTx5XUtc-mdj0WnUiqwcnTGADKmStOO3RDhKP278,14692
+drf_excel-2.5.0.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+drf_excel-2.5.0.dist-info/top_level.txt,sha256=XvdwJ71oWh1MzRf_ZKiA3F1bLj33W-hyD95YsjY4RI4,10
+drf_excel-2.5.0.dist-info/RECORD,,
