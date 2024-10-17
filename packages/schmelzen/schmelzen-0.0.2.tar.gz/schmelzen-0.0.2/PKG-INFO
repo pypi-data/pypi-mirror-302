@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: schmelzen
+Version: 0.0.2
+Summary: Merge multiple embeddings.
+Author-email: Javier Ruiz-Ramirez <javier.ruizramirez@uhn.ca>
+License: GNU General Public License v3
+Project-URL: Homepage, https://github.com/JRR3/schmelzen
+Keywords: schmelzen
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: pandas
+Provides-Extra: all
+Requires-Dist: schmelzen[extra]; extra == "all"
+Provides-Extra: extra
+
+# schmelzen
+
+
+[![image](https://img.shields.io/pypi/v/schmelzen.svg)](https://pypi.python.org/pypi/schmelzen)
+[![image](https://img.shields.io/conda/vn/conda-forge/schmelzen.svg)](https://anaconda.org/conda-forge/schmelzen)
+
+
+**Merge multiple embeddings.**
+
+
+-   Free software: GNU General Public License v3
+-   Documentation: https://JRR3.github.io/schmelzen
+    
+
+## Features
+
+-   TODO

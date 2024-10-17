@@ -1,0 +1,7 @@
+numpy
+pandas
+
+[all]
+schmelzen[extra]
+
+[extra]
