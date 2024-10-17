@@ -1,0 +1,14 @@
+COPYING
+MANIFEST.in
+README.md
+pyproject.toml
+src/term_assist/__init__.py
+src/term_assist/term_assist.py
+src/term_assist.egg-info/PKG-INFO
+src/term_assist.egg-info/SOURCES.txt
+src/term_assist.egg-info/dependency_links.txt
+src/term_assist.egg-info/entry_points.txt
+src/term_assist.egg-info/requires.txt
+src/term_assist.egg-info/top_level.txt
+src/term_assist/data/config_default.yaml
+src/term_assist/data/models.yaml
