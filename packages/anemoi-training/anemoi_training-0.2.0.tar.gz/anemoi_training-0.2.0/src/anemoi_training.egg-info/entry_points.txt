@@ -1,0 +1,3 @@
+[console_scripts]
+.anemoi-training-train = anemoi.training.commands.train:main
+anemoi-training = anemoi.training.__main__:main
