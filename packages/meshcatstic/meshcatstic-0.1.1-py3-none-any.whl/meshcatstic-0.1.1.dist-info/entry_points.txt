@@ -1,0 +1,5 @@
+[console_scripts]
+meshcat=meshcatstic.client:app
+server=meshcatstic.server:start
+start=meshcatstic.server:start
+
