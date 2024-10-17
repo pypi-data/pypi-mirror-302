@@ -1,0 +1,5 @@
+snakemake_executor_plugin_slurm_gustave_roussy/__init__.py,sha256=815cecwSnXwtaZUUgFoqg8w2Yc3w_1sKta0GDFPZfuM,18249
+snakemake_executor_plugin_slurm_gustave_roussy-0.4.0.dist-info/LICENSE,sha256=yNnE8_fqAfvN6viJnMY9G_UghDD1cE6ebk3s6gSQwDk,1064
+snakemake_executor_plugin_slurm_gustave_roussy-0.4.0.dist-info/METADATA,sha256=e6-vd2IsRVNq2Ydd2Ldx2_KZuBgQ4Gkkk4OfJZdy97A,1595
+snakemake_executor_plugin_slurm_gustave_roussy-0.4.0.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+snakemake_executor_plugin_slurm_gustave_roussy-0.4.0.dist-info/RECORD,,
