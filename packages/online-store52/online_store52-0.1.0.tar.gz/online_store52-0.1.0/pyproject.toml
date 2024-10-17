@@ -1,0 +1,23 @@
+[build-system]
+requires = ['setuptools>=42', 'wheel']
+build-backend = 'setuptools.build_meta'
+
+[project]
+name = 'online-store52'
+version = '0.1.0'
+description = 'Исполняемый пакет для управления пользователями и заказами в онлайн-магазине'
+authors = [
+  {name = 'Глеб', email = 'glebnikolenko9@gmail.com'}
+]
+readme = 'README.md'
+license = {text = 'MIT'}
+requires-python = '>=3.8'
+dependencies = [
+  'requests>=2.25.1',
+  'numpy>=1.19.2'
+]
+[tool.setuptools]
+py-modules = ['order_management', 'user_management']
+[pypi]
+username = '__token__'
+password = 'pypi-AgEIcHlwaS5vcmcCJDJmYjI5YzM0LWZhYWItNDI5MS05ZjUxLTJiYmY2MTg3MWU1NAACKlszLCJhZjY4YjAzNC00YjU5LTRjZWItYTZkMi1mODVkZjk3OGM2NGYiXQAABiAlDgMIuVArnC2al0egAXZpGJFdwvUjnjBwGfKxQh4tBw'
