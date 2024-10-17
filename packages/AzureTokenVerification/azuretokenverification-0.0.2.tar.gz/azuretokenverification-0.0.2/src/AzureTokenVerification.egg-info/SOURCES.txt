@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/AzureTokenVerification/__init__.py
+src/AzureTokenVerification/exceptions.py
+src/AzureTokenVerification/token_verifier.py
+src/AzureTokenVerification.egg-info/PKG-INFO
+src/AzureTokenVerification.egg-info/SOURCES.txt
+src/AzureTokenVerification.egg-info/dependency_links.txt
+src/AzureTokenVerification.egg-info/requires.txt
+src/AzureTokenVerification.egg-info/top_level.txt
