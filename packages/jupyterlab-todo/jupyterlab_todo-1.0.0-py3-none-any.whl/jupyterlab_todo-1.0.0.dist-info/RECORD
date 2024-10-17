@@ -1,0 +1,16 @@
+jupyterlab_todo/__init__.py,sha256=y1Fdog6cemQNj2XsouVNGX2UIRH-TIkXtTQE_mhgPQM,588
+jupyterlab_todo/_version.py,sha256=zyF8mhjkgpQ0U__lYOzn5h3wDcryypKU_QfKG8HkULM,175
+jupyterlab_todo-1.0.0.data/data/share/jupyter/labextensions/jupyterlab_todo/build_log.json,sha256=ulrBZnDQPaEKd--ahSrAt3ILK90OfAF_vTvFHvtnia0,22603
+jupyterlab_todo-1.0.0.data/data/share/jupyter/labextensions/jupyterlab_todo/package.json,sha256=GByXhfflbJ5uQgCBll8Hj1dwafYlsZIQ_Ze_xt5-kuA,5696
+jupyterlab_todo-1.0.0.data/data/share/jupyter/labextensions/jupyterlab_todo/static/lib_index_js.bd2229b04d6b0e1fd18b.js,sha256=5JFDPZTR7hAd4B2IYm_3B5MtI7Rm_kAi3ey-WF2j2hY,4050
+jupyterlab_todo-1.0.0.data/data/share/jupyter/labextensions/jupyterlab_todo/static/lib_index_js.bd2229b04d6b0e1fd18b.js.map,sha256=RReK4ZLlAyA7hqzC4BKUtoe2JAEZFhzfg9agmfNAHIw,4562
+jupyterlab_todo-1.0.0.data/data/share/jupyter/labextensions/jupyterlab_todo/static/remoteEntry.1b1eed80f2cfaa82e17a.js,sha256=UC-ZqhrOu4WwCYTh4aMFP-N7wVoSXOUsQ-lerA5QqVc,27562
+jupyterlab_todo-1.0.0.data/data/share/jupyter/labextensions/jupyterlab_todo/static/remoteEntry.1b1eed80f2cfaa82e17a.js.map,sha256=m_iBiyZqyXl-rpkvlLJPgqDRQaNIIaAU1XY0M3lAfbg,26348
+jupyterlab_todo-1.0.0.data/data/share/jupyter/labextensions/jupyterlab_todo/static/style.js,sha256=Y_ikdCpY-uH_kBN6DJzedTe9U6ptt18VgBqjsZ0A4q4,158
+jupyterlab_todo-1.0.0.data/data/share/jupyter/labextensions/jupyterlab_todo/static/style_index_js.0c160c90b9d6db5a579b.js,sha256=lYr_-ScayZ32mFtamIsHUeySLuTAbAewySQCKuWpGvE,19363
+jupyterlab_todo-1.0.0.data/data/share/jupyter/labextensions/jupyterlab_todo/static/style_index_js.0c160c90b9d6db5a579b.js.map,sha256=7xln4OYqtZ3PCcBCwl9QIaDlUoK4ajFnPXm3a4qztUQ,14767
+jupyterlab_todo-1.0.0.data/data/share/jupyter/labextensions/jupyterlab_todo/install.json,sha256=cqqP7MdyTqgijRSqlLcM8269V0yXoaRbNEE9owuwVM0,191
+jupyterlab_todo-1.0.0.dist-info/METADATA,sha256=eAn8RoVZESDoieCjDDu5Dh_OLG6G3gpqtwhmmugMFfw,5756
+jupyterlab_todo-1.0.0.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+jupyterlab_todo-1.0.0.dist-info/licenses/LICENSE,sha256=RSnTydr6AqGwWhdb7Awb96gkY63ERoxz2Kr_skVUMjo,1529
+jupyterlab_todo-1.0.0.dist-info/RECORD,,
