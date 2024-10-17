@@ -1,0 +1,2 @@
+[console_scripts]
+saving = saving.main:main
