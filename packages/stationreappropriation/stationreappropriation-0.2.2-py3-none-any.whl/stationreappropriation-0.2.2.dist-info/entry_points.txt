@@ -1,0 +1,3 @@
+[console_scripts]
+setup-marimo-autostart=stationreappropriation.scripts.setup_autostart:main
+
