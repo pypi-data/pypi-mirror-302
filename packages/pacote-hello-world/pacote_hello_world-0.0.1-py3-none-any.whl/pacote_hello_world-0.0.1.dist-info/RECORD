@@ -1,0 +1,10 @@
+printe/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+printe/hello_world/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+printe/hello_world/hello_world_diferentes_linguas.py,sha256=RXG6WD8pI9f-HkHiwLSpHg6wUzTjF3KQwYhfMKJHLJw,429
+printe/hello_world/hello_world_original.py,sha256=OaRo6VBbeTjaz_uIYwph6sNk3vJcUCNLpSAsoqC9occ,45
+printe/mensagem_propria/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+printe/mensagem_propria/mensagem.py,sha256=iapWc33kUIXK_nL6e8eAdcHDM1n8XQuAEryvIAonU9A,91
+pacote_hello_world-0.0.1.dist-info/METADATA,sha256=uO2Qjda1JR2hbfiQjj1mF61pynUUglc_P4czY5S5q0o,759
+pacote_hello_world-0.0.1.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+pacote_hello_world-0.0.1.dist-info/top_level.txt,sha256=yEPn8ch5xiVaw5orYiqvOgP9sQoRbJP-lKO1fA5xsqM,7
+pacote_hello_world-0.0.1.dist-info/RECORD,,
