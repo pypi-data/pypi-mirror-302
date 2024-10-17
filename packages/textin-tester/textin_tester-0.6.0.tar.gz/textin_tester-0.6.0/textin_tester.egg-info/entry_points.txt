@@ -1,0 +1,2 @@
+[console_scripts]
+run_test = textin_tester.run_test:main
