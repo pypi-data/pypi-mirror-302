@@ -1,0 +1,59 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, Kazuya Takei
+# This file is distributed under the same license as the
+# atsphinx-revealjs-rtd package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: atsphinx-revealjs-rtd 0.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-10-17 03:45+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Kazuya Takei <myself@attakei.net>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+
+#: ../../index.rst:3
+msgid "Home"
+msgstr ""
+
+#: ../../index.rst:12
+msgid "Overview"
+msgstr "概要"
+
+#: ../../index.rst:14
+msgid "``atsphinx-revealjs-rtd`` is Sphinx extension for sphinx-revealjs."
+msgstr "``atsphinx-revealjs-rtd`` はsphinx-revealjsを前提としたSphinx拡張です。"
+
+#: ../../index.rst:16
+msgid ""
+"This provides Reveal.js plugin to append features for presentation on "
+"Read the Docs hosting. It will raise your motivation to manage "
+"presentation on RTD."
+msgstr ""
+"この拡張はRead the Docs上でホスティングされているプレゼンテーションに機能を追加するためのReveal.jsプラグインを提供します。"
+"この動作は、「プレゼンテーションをRTD上でホスティングする」ことへの関心を惹くでしょう。"
+
+#: ../../index.rst:20
+msgid "Refs"
+msgstr "参照"
+
+#: ../../index.rst:22
+msgid ""
+"`Demo(Japanese) <https://https://atsphinx-revealjs-"
+"rtd.readthedocs.io/stable/>`_"
+msgstr ""
+"`デモプレゼンテーション（日本語） <https://https://atsphinx-revealjs-"
+"rtd.readthedocs.io/stable/>`_"
+
+#: ../../index.rst:23
+msgid "https://sphinx-revealjs.readthedocs.io/"
+msgstr ""
+

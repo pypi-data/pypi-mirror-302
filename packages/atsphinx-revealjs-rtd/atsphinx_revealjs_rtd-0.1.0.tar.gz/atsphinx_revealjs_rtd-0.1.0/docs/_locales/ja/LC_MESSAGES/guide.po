@@ -1,0 +1,50 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, Kazuya Takei
+# This file is distributed under the same license as the
+# atsphinx-revealjs-rtd package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: atsphinx-revealjs-rtd 0.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-10-17 03:45+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Kazuya Takei <myself@attakei.net>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+
+#: ../../guide.rst:3
+msgid "User guide"
+msgstr "利用ガイド"
+
+#: ../../guide.rst:6
+msgid "Installation"
+msgstr "インストール"
+
+#: ../../guide.rst:8
+msgid "You need install and register package."
+msgstr "パッケージのインストールと拡張の登録が必要です。"
+
+#: ../../guide.rst:22
+msgid "Usage"
+msgstr "使用法"
+
+#: ../../guide.rst:24
+msgid "You can use it without especially settings exclude register."
+msgstr "この拡張は、登録以外の追加作業なしに使用できます。"
+
+#: ../../guide.rst:31
+msgid "Configuration"
+msgstr "設定"
+
+#: ../../guide.rst:33
+msgid "Currently, this does not have configuration variables."
+msgstr "現時点では、この拡張に追加の設定項目はありません。"
+

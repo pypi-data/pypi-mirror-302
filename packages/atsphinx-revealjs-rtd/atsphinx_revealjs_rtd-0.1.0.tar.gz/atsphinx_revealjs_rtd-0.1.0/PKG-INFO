@@ -1,0 +1,69 @@
+Metadata-Version: 2.3
+Name: atsphinx-revealjs-rtd
+Version: 0.1.0
+Summary: Optimize for sphinx-revealjs on Read the Docs
+Project-URL: Home, https://github.com/atsphinx/revealjs-rtd
+Project-URL: Documentation, https://atsphinx.github.io/revealjs-rtd
+Author-email: Kazuya Takei <myself@attakei.net>
+License-Expression: Apache-2.0
+License-File: LICENSE
+Classifier: Development Status :: 3 - Alpha
+Classifier: Framework :: Sphinx
+Classifier: Framework :: Sphinx :: Extension
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Documentation
+Classifier: Topic :: Documentation :: Sphinx
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Documentation
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Text Processing
+Classifier: Topic :: Text Processing :: Markup
+Classifier: Topic :: Text Processing :: Markup :: reStructuredText
+Requires-Python: >=3.9
+Requires-Dist: sphinx-revealjs>=3
+Description-Content-Type: text/x-rst
+
+=====================
+atsphinx-revealjs-rtd
+=====================
+
+Optimize for sphinx-revealjs on Read the Docs
+
+Overview
+========
+
+This has plugin for Reveal.js to optimize presentation on Read the Docs.
+
+You will be able to well done about manage presentation on RTD.
+
+Getting started
+===============
+
+.. code:: console
+
+   pip install atsphinx-revealjs-rtd
+
+.. code:: python
+
+   extensions = [
+       ...,  # Your extensions
+       "atsphinx.revealjs_rtd",
+   ]
+
+Usage
+=====
+
+This does not have features as Python works, have only providing Reveal.js plugin.
+
+- You can toggle versioning widget of RTD by pressing 'D' key.
+- (ToDo) It suppresses Reveal.js shortcut when you searching on widget of RTD.
