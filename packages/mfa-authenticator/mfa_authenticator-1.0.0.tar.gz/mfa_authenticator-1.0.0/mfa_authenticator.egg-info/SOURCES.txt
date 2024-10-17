@@ -1,0 +1,9 @@
+pyproject.toml
+setup.py
+mfa/__init__.py
+mfa/main.py
+mfa_authenticator.egg-info/PKG-INFO
+mfa_authenticator.egg-info/SOURCES.txt
+mfa_authenticator.egg-info/dependency_links.txt
+mfa_authenticator.egg-info/requires.txt
+mfa_authenticator.egg-info/top_level.txt
