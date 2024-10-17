@@ -1,0 +1,15 @@
+ks_coinmarketcap_api/./.git,sha256=94dhHqyW1ctxQ51qsBP3BxGHMp0Rcf1NeOaKz2FHC6E,32
+ks_coinmarketcap_api/./.gitignore,sha256=-J1njJpKwOHdu-nlXblIKfkedPp5cf1sFxrs3zA1l_Y,2171
+ks_coinmarketcap_api/./LICENSE,sha256=IEmoll8GE1TxfIErZY_Zv0HZOXQJASQeymgl6N_2tks,1089
+ks_coinmarketcap_api/./README.en.md,sha256=xgREKs3jkDIeh1Pr_ZHqQ6EtfL6bqVmLR5mbnxgaPXk,898
+ks_coinmarketcap_api/./README.md,sha256=Bup3jObZw6Tg18DHSABeW-IkkUU8ud7XKWy1NhTUWno,988
+ks_coinmarketcap_api/./__about__.py,sha256=yxGkeKG-vAR-v1WADQmORtMZoUBecryvhGL4CIoxJ_s,129
+ks_coinmarketcap_api/./__init__.py,sha256=w761Ak69VMrsJiL4z_Bac2qH3KlmhwUR5H_kjkNcbcM,226
+ks_coinmarketcap_api/./coinmarketcap_api.py,sha256=8t84H3Zn1uvQbbIBkkt9qmNgZ5EsQRNTHKq_8Bh7_bQ,8370
+ks_coinmarketcap_api/./constant.py,sha256=McybAahnzhcU4MVJfd5CmN447ZklX05kFAVoptpzBvs,724
+ks_coinmarketcap_api/./pyproject.toml,sha256=_wV56yrikTtRJrRF0j9-L35r9a9vhZC_MrxbXW_0nyU,2194
+ks_coinmarketcap_api/./requirements.txt,sha256=yiTVlyHZFuRanTyp59qwZAbW2SdCBujH0uUKqhQlsxE,60
+ks_coinmarketcap_api-0.0.1.dist-info/METADATA,sha256=e0LYWMivLTiF_iowjwR9GMFQDKl6jManbhKUQzaPqqU,1900
+ks_coinmarketcap_api-0.0.1.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+ks_coinmarketcap_api-0.0.1.dist-info/licenses/LICENSE,sha256=IEmoll8GE1TxfIErZY_Zv0HZOXQJASQeymgl6N_2tks,1089
+ks_coinmarketcap_api-0.0.1.dist-info/RECORD,,
