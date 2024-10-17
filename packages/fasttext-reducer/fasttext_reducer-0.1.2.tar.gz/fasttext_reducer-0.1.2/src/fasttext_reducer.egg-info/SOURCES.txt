@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/fasttext_reducer/__init__.py
+src/fasttext_reducer/reduce_fasttext_models.py
+src/fasttext_reducer.egg-info/PKG-INFO
+src/fasttext_reducer.egg-info/SOURCES.txt
+src/fasttext_reducer.egg-info/dependency_links.txt
+src/fasttext_reducer.egg-info/entry_points.txt
+src/fasttext_reducer.egg-info/requires.txt
+src/fasttext_reducer.egg-info/top_level.txt
