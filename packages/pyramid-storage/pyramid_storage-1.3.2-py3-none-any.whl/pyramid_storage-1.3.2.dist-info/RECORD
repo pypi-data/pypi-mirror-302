@@ -1,0 +1,15 @@
+pyramid_storage/__init__.py,sha256=I-kqAz0MMCtKJzTi3HN6L6zYYSN2sVyBTvRTEi_dtxI,142
+pyramid_storage/exceptions.py,sha256=r6rFFILbUSja03rQprkQmqpyVZx9JFz1rzjfcoykQ7A,130
+pyramid_storage/extensions.py,sha256=ccOMBeCTWj-EBg_b4IcAUhOHoTYOiS2GClJUhb1atRg,1427
+pyramid_storage/gcloud.py,sha256=HREY3nXGsW8QjNktUq24toRNDzAj40SkjySpenjwYxo,10004
+pyramid_storage/interfaces.py,sha256=h_ppV3mxoCdiNCZjqmuL0OnmOVJdMisfwIqTZuB9N10,104
+pyramid_storage/local.py,sha256=wVUQ5FUZIOnn7uFoPXh7hpllzLM3TzaqSKRPzOBjoUU,7252
+pyramid_storage/registry.py,sha256=L0hPRmg9Ieukiq1vUmp1dK9CyQsUu5UuJNDF1u3O8WA,587
+pyramid_storage/s3.py,sha256=GS5xXDm1_yyj0CGfcOhxJDKRC10R7oZ9Cezr6LbKaXU,8174
+pyramid_storage/testing.py,sha256=ReOseDekV2gBAo5VvtXDURMuTH7-RHH7DlJ8RZy9wBM,646
+pyramid_storage/utils.py,sha256=r_YKpUnXPySFWyZK9d7qN5yYYC4Qzi8eVMZJxRGkBR4,2351
+pyramid_storage-1.3.2.dist-info/LICENSE.txt,sha256=4C6psQBKQQLYm6qpVMQpC5b5MmWpTsz4-HED5uh3KHw,1445
+pyramid_storage-1.3.2.dist-info/METADATA,sha256=R_zLmfr-m9zD9Rbe3fIWloZf12pGr4Uv_zF3OnB-tQ0,3683
+pyramid_storage-1.3.2.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+pyramid_storage-1.3.2.dist-info/top_level.txt,sha256=_CJe3Zebag9ADT92FwfpHdor7O1OOzVxyL7DlH1Brx4,16
+pyramid_storage-1.3.2.dist-info/RECORD,,
