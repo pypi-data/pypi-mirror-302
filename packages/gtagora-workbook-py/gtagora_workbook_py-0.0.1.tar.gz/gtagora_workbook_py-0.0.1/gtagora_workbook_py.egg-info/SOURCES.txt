@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+gtagora_workbook_py.egg-info/PKG-INFO
+gtagora_workbook_py.egg-info/SOURCES.txt
+gtagora_workbook_py.egg-info/dependency_links.txt
+gtagora_workbook_py.egg-info/requires.txt
+gtagora_workbook_py.egg-info/top_level.txt
+workbook/__init__.py
