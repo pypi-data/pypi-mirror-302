@@ -1,0 +1,5 @@
+from setuptools import setup
+
+setup(
+    entry_points={"mlflow.request_header_provider": ("unused=igx_api.ml.request_header_provider:PluginRequestHeaderProvider")},
+)
