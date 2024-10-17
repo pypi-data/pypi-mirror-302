@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: eoq1
+Version: 1.0.1
+Summary: Essential Object Query - a framework to access ecore models - DEPRECATED version 1
+Author-email: Bjoern Annighoefer <bjoern.annighoefer@ils.uni-stuttgart.de>
+Project-URL: Homepage, https://gitlab.com/eoq/py/eoq2
+Project-URL: Issues, https://gitlab.com/eoq/py/eoq2/-/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pyecore
+
+# EOQ1 Python Library
+
+**WARNING: EOQ1 is depricated and should not be used any longer. This lib is for legacy reasons only.**
+
+This is the implementation of EOQ1 in Python. For more details see [PyEOQ](https://gitlab.com/eoq/py/pyeoq).
+
+This library is based on [pyecore](https://github.com/pyecore/pyecore). 
+
+Python examples: https://gitlab.com/eoq/py/pyeoq
+
+
+# EOQ
+
+[Essential Object Query (EOQ)](https://gitlab.com/eoq/essentialobjectquery) is a language to interact remotely and efficiently with object-oriented models, i.e. domain-specific models. It explicitly supports the search for patterns, as used in model transformation languages. Its motivation is an easy to parse and deterministically behaving query structure, but as high as possible efficiency and flexibility. EOQ’s capabilities and semantics are similar to the Object-Constraint-Language (OCL), but it supports in addition transactional model modification, change events, and error handling.  
+
+Main Repository: https://gitlab.com/eoq/essentialobjectquery
+
+EOQ user manual: https://gitlab.com/eoq/doc 
+
