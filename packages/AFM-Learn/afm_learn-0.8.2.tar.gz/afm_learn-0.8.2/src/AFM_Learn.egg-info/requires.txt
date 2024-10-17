@@ -1,0 +1,9 @@
+importlib-metadata
+numpy
+matplotlib
+xrayutilities
+
+[testing]
+setuptools
+pytest
+pytest-cov
