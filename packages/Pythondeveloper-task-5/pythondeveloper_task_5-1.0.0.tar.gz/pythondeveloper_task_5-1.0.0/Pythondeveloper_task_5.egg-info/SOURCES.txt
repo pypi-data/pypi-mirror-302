@@ -1,0 +1,8 @@
+README.md
+main.py
+pyproject.toml
+Pythondeveloper_task_5.egg-info/PKG-INFO
+Pythondeveloper_task_5.egg-info/SOURCES.txt
+Pythondeveloper_task_5.egg-info/dependency_links.txt
+Pythondeveloper_task_5.egg-info/requires.txt
+Pythondeveloper_task_5.egg-info/top_level.txt

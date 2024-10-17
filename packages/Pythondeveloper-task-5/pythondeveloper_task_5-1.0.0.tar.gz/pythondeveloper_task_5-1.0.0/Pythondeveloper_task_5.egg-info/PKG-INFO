@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: Pythondeveloper-task-5
+Version: 1.0.0
+Summary: .
+Author-email: Gleb <glebnikolenko9@gmail.com>
+Requires-Python: >=3.6
+Requires-Dist: pandas
