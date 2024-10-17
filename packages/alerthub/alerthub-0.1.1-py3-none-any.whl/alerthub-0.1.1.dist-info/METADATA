@@ -1,0 +1,58 @@
+Metadata-Version: 2.1
+Name: alerthub
+Version: 0.1.1
+Summary: A Python package for managing email services across multiple platforms
+Home-page: https://github.com/akvdkharnath/alerthub
+Author: Harnath Atmakuri
+Author-email: akvdkharnath@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: google-api-python-client
+Requires-Dist: google-auth
+Requires-Dist: google-auth-httplib2
+Requires-Dist: google-auth-oauthlib
+Requires-Dist: python-dotenv
+Requires-Dist: requests
+
+# AlertHub
+
+**AlertHub** is a Python package that provides an easy and unified interface to manage email services across multiple platforms. It allows you to send, monitor, delete, move, and forward emails using various popular email service providers, such as Gmail, Outlook, SendGrid, and SMTP.
+
+## Features
+
+- **Email Sending**: Easily send emails using Gmail, Outlook, SendGrid, and generic SMTP.
+- **Email Monitoring**: Monitor incoming emails based on specific criteria.
+- **Email Management**: Delete, move, or forward emails across supported platforms.
+- **Unified Interface**: Interact with different email services using a consistent API.
+- **Modular and Scalable**: Easily add support for more email service providers.
+
+## Supported Email Services
+
+- Gmail
+- Outlook (Office 365)
+- SendGrid
+- SMTP (Generic)
+
+## Installation
+
+You can install AlertHub using pip:
+
+```bash
+pip install alerthub
+```
+
+
+## Changelog
+
+You can view the complete list of changes in the [Changelog](./CHANGELOG.md).
+
