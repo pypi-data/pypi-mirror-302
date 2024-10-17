@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: asm-chill_py
+Version: 0.1.0
+Summary: A Python library for simulating assembly language programming
+Home-page: https://github.com/atharvapatil1210/asm_py
+Author: atharva bodade
+Author-email: atharvabodade@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# asm_py
