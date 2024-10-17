@@ -1,0 +1,17 @@
+urllib3>=1.25
+
+[dev]
+ruff==0.6.9
+mypy==1.12.0
+
+[fastimport]
+fastimport
+
+[https]
+urllib3>=1.24.1
+
+[paramiko]
+paramiko
+
+[pgp]
+gpg
