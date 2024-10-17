@@ -1,0 +1,16 @@
+audio-libs-tlk/__main__.py,sha256=woSrrnX4wPCzVIr2kb1UzxhjWV6ehgkPOJdh4NHEn-Y,3591
+audio-libs-tlk/convertion_functions.py,sha256=IqTCnxMPTntPtZkNxYPsh2t9XpHU5X5MRvM_JG-FEHc,5103
+audio-libs-tlk/create_md_labels.py,sha256=r8tZuYhkTrI4IQNLbAVY3F5P464Zt2ppgTO0oAvREqM,22208
+audio-libs-tlk/edit_cover_artwork.py,sha256=hDMUWmrE9tLRniaV8463TbFEybZocXJW6J_QHh0430Y,5358
+audio-libs-tlk/folder_lib_scan.py,sha256=-r83Xu2YuhtoPg2qF5MHrACyC18A5S4IdjktLs4JXto,5422
+audio-libs-tlk/itunes_lib_scan.py,sha256=GGD_XnP0WrAWuYhkf5f2zyytweVB10YYbDLPZLi1nfs,7160
+audio-libs-tlk/lib_scan.py,sha256=gZjD6M4KHahWFmFFTbLjuoNoPw0BL0pVf99pANsdKis,4686
+audio-libs-tlk/main_minidisc_cli.py,sha256=BnZUBRWxFfX-q8eUjbEUrue-Fzjr8QxEjqN65WHSWSE,169
+audio-libs-tlk/parameters.py,sha256=spuue0yZqpkdoWCYW4DxPJF6xalk5D1Y4orpN1vIEs8,5037
+audio-libs-tlk/processing_lib.py,sha256=8b_mbRNY-vDXmxv44d0R0bdX2xRhpm5zPROTwBsgmxU,15852
+audio_libs_tlk-1.1.11.dist-info/LICENCE,sha256=ixuiBLtpoK3iv89l7ylKkg9rs2GzF9ukPH7ynZYzK5s,35148
+audio_libs_tlk-1.1.11.dist-info/METADATA,sha256=cP3UQxf3FWOXAYiforEuqLv0agGK3VPjUfoFc4xbOKA,9509
+audio_libs_tlk-1.1.11.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+audio_libs_tlk-1.1.11.dist-info/entry_points.txt,sha256=AqtBk5I8nJm0RNjh_rMMAXFLS0BJl5IchlozXj98Ubk,67
+audio_libs_tlk-1.1.11.dist-info/top_level.txt,sha256=R9cSJGQlBvoZeI44k5g-3LQCrfSxkaeNPHbYPLF9EX0,15
+audio_libs_tlk-1.1.11.dist-info/RECORD,,
