@@ -1,0 +1,13 @@
+bookshelf_producer/__init__.py,sha256=g8tnQabldTWBG7jQsidj5fnFlLsTXX5afYLOLb42Wos,140
+bookshelf_producer/actions.py,sha256=E8LunHHKCfhW4ecLjZ2DTH6RB2rY1xCqMEBSLF9xM9A,4500
+bookshelf_producer/cli.py,sha256=VirrxY5JgtREPZQLRI5FlF7NbjBpzSudD5qkbxJSvLQ,1415
+bookshelf_producer/constants.py,sha256=sM9fK6YrQY5VRcpZ1PcIepxDcHaoKtSdoBoXbPypud4,135
+bookshelf_producer/notebook.py,sha256=amuDLFyI1CBlkDxv8faWAwPVlNZ2815ZuGzSOVik5Ss,7465
+bookshelf_producer/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bookshelf_producer/commands/__init__.py,sha256=YwUjwg4EmMqSqKkpC9dobwqyHxifgcHxY_EjHT4sRjM,21
+bookshelf_producer/commands/cmd_publish.py,sha256=hJNs_f4cNdXVyYmfXspBllytsTrb9lfuZQlf5MESBPc,2348
+bookshelf_producer/commands/cmd_run.py,sha256=MbjYFYiWU8cCax5HeWFGqDFr5orLJSruzWkqSWXs3C8,1442
+bookshelf_producer-0.4.0.dist-info/METADATA,sha256=J5q0qgAdKFac2QsXIaIBh9p5j9p555deObDNyNcPDNM,531
+bookshelf_producer-0.4.0.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+bookshelf_producer-0.4.0.dist-info/entry_points.txt,sha256=RXMwm-V3brgwFuh52Oet0DgBoUYnBBAp-aOBp0GhI3U,58
+bookshelf_producer-0.4.0.dist-info/RECORD,,
