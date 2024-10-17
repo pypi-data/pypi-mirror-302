@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: rmind_yandex_smart_home
+Version: 0.0.8
+Summary: Yandex smart home cloud function engine
+Author-email: "rMind.Dev" <grafinfector@hotmail.com>
+Project-URL: Homepage, https://github.com/korhog/rmind.yandex.smart.home
+Project-URL: Issues, https://github.com/korhog/rmind.yandex.smart.home/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: paho-mqtt ==1.6.1
+Requires-Dist: ydb
+Requires-Dist: yandexcloud
+Requires-Dist: requests
+
+# rmind.yandex.smart.home
