@@ -1,0 +1,7 @@
+msms_binary/__init__.py,sha256=352RYoVgnEPz0HWad7zinParBNbLprpVHyI1fqqUhvI,104
+msms_binary/executable.py,sha256=PJptajyeKd0GdaXnwRqpzEgjtP8u_81UUM6QMgdmOBw,1062
+msms_binary/bin/msms,sha256=WbhzZyx0Ck8wJDoiryQWWcmNmyBrcCjvhCTGKqxBBN0,186029
+msms_binary-2.6.1.dist-info/METADATA,sha256=4J6-g0jDdQQpgovy_MiZgyVtKWvODr2z3V4P-Wn6Uh4,670
+msms_binary-2.6.1.dist-info/WHEEL,sha256=RgmvTbFgtENpmaoNKV-g6CWeKaDC9Px_pn71OxOKZ6A,144
+msms_binary-2.6.1.dist-info/top_level.txt,sha256=RpuVYT2udxIRrxdW5k5hThWMYMLSuCQcuA_4KpRwMNs,12
+msms_binary-2.6.1.dist-info/RECORD,,
