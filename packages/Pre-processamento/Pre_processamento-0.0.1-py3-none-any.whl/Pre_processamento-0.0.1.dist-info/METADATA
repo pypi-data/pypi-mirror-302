@@ -1,0 +1,164 @@
+Metadata-Version: 2.1
+Name: Pre-processamento
+Version: 0.0.1
+Summary: Pré-processamento de corpus para português e inglês usando spaCy.
+Home-page: https://github.com/alexxs2/Pr--processamento.pacote
+Author: Alexsandro Da Silva Bezerra
+Author-email: alecsbezerra@gmail.com
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: spacy
+
+# Pre_processamento
+
+**DescriÃ§Ã£o**: 
+
+O pacote **Pre_processamento** oferece uma soluÃ§Ã£o eficiente para o prÃ©-processamento de texto em portuguÃªs e inglÃªs, facilitando a preparaÃ§Ã£o de corpus para tarefas de NLP (Processamento de Linguagem Natural). Ele integra diversas etapas de limpeza e normalizaÃ§Ã£o do texto, removendo ruÃ­dos e transformando o conteÃºdo para que esteja pronto para anÃ¡lise, classificaÃ§Ã£o ou modelagem. Utiliza a biblioteca **spaCy**, garantindo suporte a modelos avanÃ§ados de linguagem para ambos os idiomas.
+
+**Etapas do Pre-processamento:**
+
+**1. DetecÃ§Ã£o e Carregamento AutomÃ¡tico de Modelos SpaCy:**
+
+- O pacote tenta carregar automaticamente o maior modelo SpaCy disponÃ­vel (large, medium ou small) para o idioma em questÃ£o.
+- Exemplo: Se os modelos "large" e "medium" nÃ£o estiverem disponÃ­veis, o modelo "small" serÃ¡ carregado.
+
+**2. ConversÃ£o para MinÃºsculas:**
+
+- Todo o texto Ã© convertido para minÃºsculas, garantindo uniformidade e padronizaÃ§Ã£o para facilitar as comparaÃ§Ãµes entre palavras.
+- Exemplo: "Hello World!" âž” "hello world!"
+
+**3. RemoÃ§Ã£o de URLs:**
+
+- Todos os links (URLs) que comeÃ§am com 'http', 'https' ou 'www' sÃ£o removidos do texto, eliminando conteÃºdos irrelevantes como referÃªncias a sites.
+- Exemplo: "Visite https://site.com para mais informaÃ§Ãµes" âž” "Visite para mais informaÃ§Ãµes."
+
+**4. RemoÃ§Ã£o de MenÃ§Ãµes e Hashtags:**
+
+- MenÃ§Ãµes a usuÃ¡rios (como @usuÃ¡rio) e hashtags (como #exemplo) sÃ£o removidas automaticamente, filtrando elementos tÃ­picos de redes sociais.
+- Exemplo: "@joao, veja o #exemplo" âž” "veja o."
+
+**5. RemoÃ§Ã£o de Emojis:**
+
+- O pacote utiliza expressÃµes regulares para detectar e remover uma ampla gama de emojis do texto.
+- Exemplo: "Estou feliz ðŸ˜Š" âž” "Estou feliz."
+
+**6. RemoÃ§Ã£o de PontuaÃ§Ãµes e Caracteres Especiais:**
+
+- O pacote remove todos os caracteres especiais e pontuaÃ§Ãµes, exceto letras e nÃºmeros.
+- Exemplo: "OlÃ¡, tudo bem!?" âž” "OlÃ¡ tudo bem"
+
+**7. LematizaÃ§Ã£o:**
+
+- O pacote aplica a tÃ©cnica de lematizaÃ§Ã£o, que converte cada palavra para sua forma bÃ¡sica ou "lemma".
+- Exemplo: "correram" âž” "correr"
+
+**8. RemoÃ§Ã£o de Stopwords:**
+
+- As stopwords (palavras comuns e geralmente irrelevantes para anÃ¡lises, como "e", "de", "o", "para") sÃ£o removidas com base nas listas prÃ©-definidas do SpaCy, especÃ­ficas para inglÃªs e portuguÃªs.
+- Exemplo: "o gato e o cachorro" âž” "gato cachorro"
+
+**9. Filtragem de Tokens:**
+
+- Tokens numÃ©ricos e tokens com menos de dois caracteres sÃ£o eliminados, mantendo apenas palavras que tÃªm relevÃ¢ncia semÃ¢ntica e eliminando "ruÃ­dos" de dados.
+- Exemplo: "a 123 casas" âž” "casas"
+
+## InstalaÃ§Ã£o
+
+Use o gerenciador de pacotes [pip](https://pip.pypa.io/en/stable/) para instalar o pacote:
+
+```bash
+pip install Pre_processamento
+```
+
+## Modo de uso
+
+PortuguÃªs
+```python
+from Pre_processamento.Pre_pt_br import Pro_pt_br
+Pro_pt_br.P_pt_br("Seu corpus em portuguÃªs aqui.")
+```
+
+InglÃªs
+```python
+from Pre_processamento.Pre_eng import Pro_eng
+Pro_eng.P_eng("Your English corpus here.")
+```
+## Requisitos
+Para assegurar o correto funcionamento do pacote, Ã© necessÃ¡rio realizar o download dos modelos de linguagem do spaCy para portuguÃªs e inglÃªs.
+
+## Modelos do spaCy para PortuguÃªs
+
+Para analisar textos em portuguÃªs, vocÃª pode escolher entre trÃªs tamanhos de modelos:
+
+**pt_core_news_sm (small)**: Modelo leve e rÃ¡pido.
+
+- BenefÃ­cios: Ideal para anÃ¡lises rÃ¡pidas ou ambientes com restriÃ§Ãµes de memÃ³ria.
+
+- Desvantagens: Menos preciso e captura menos variaÃ§Ãµes linguÃ­sticas.
+
+**Comando para instalar**
+```python
+python -m spacy download pt_core_news_sm
+```
+
+**pt_core_news_md (medium)**: Modelo balanceado.
+
+- BenefÃ­cios: Melhor precisÃ£o do que o modelo "small", com um desempenho razoÃ¡vel.
+
+- Desvantagens: Ocupa mais memÃ³ria e tempo de processamento.
+
+**Comando para instalar**
+```python
+python -m spacy download pt_core_news_md
+```
+
+**pt_core_news_lg (large)**: Modelo grande, mais preciso.
+
+- BenefÃ­cios: Captura mais nuances linguÃ­sticas e tem maior precisÃ£o nas anÃ¡lises.
+
+- Desvantagens: Mais pesado, consome mais memÃ³ria e tempo de processamento.
+
+**Comando para instalar**
+```python
+python -m spacy download pt_core_news_lg
+```
+
+## Modelos do spaCy para InglÃªs
+
+Da mesma forma, para textos em inglÃªs, hÃ¡ diferentes modelos disponÃ­veis:
+
+**en_core_web_sm (small)**: Modelo leve e rÃ¡pido.
+
+- BenefÃ­cios: Ã“timo para tarefas simples ou quando o desempenho Ã© uma prioridade.
+
+- Desvantagens: Menor precisÃ£o, captura menos informaÃ§Ãµes detalhadas.
+
+**Comando para instalar**
+```python
+python -m spacy download en_core_web_sm
+```
+**en_core_web_md (medium)**: Modelo mÃ©dio, balanceado.
+
+- BenefÃ­cios: Melhor precisÃ£o em comparaÃ§Ã£o com o modelo pequeno.
+
+- Desvantagens: Um pouco mais lento e consome mais memÃ³ria.
+
+**Comando para instalar**
+```python
+python -m spacy download en_core_web_md
+```
+**en_core_web_lg (large)**: Modelo grande e mais robusto.
+
+- BenefÃ­cios: Alta precisÃ£o, captura mais nuances do idioma.
+
+- Desvantagens: O modelo mais pesado, consome mais recursos de memÃ³ria e processamento.
+
+**Comando para instalar**	
+```python
+python -m spacy download en_core_web_lg
+```
+## Author
+Alexsandro Da Silva Bezerra
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
