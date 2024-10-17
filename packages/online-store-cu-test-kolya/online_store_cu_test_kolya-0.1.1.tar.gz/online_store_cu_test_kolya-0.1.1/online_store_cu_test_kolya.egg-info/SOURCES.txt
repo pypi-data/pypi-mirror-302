@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+online_store_cu_test_kolya/__init__.py
+online_store_cu_test_kolya/__main__.py
+online_store_cu_test_kolya/order_management.py
+online_store_cu_test_kolya/user_management.py
+online_store_cu_test_kolya.egg-info/PKG-INFO
+online_store_cu_test_kolya.egg-info/SOURCES.txt
+online_store_cu_test_kolya.egg-info/dependency_links.txt
+online_store_cu_test_kolya.egg-info/top_level.txt
