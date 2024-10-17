@@ -1,0 +1,8 @@
+gamspy_soplex/__init__.py,sha256=acdu48eyqgzn81qpKFoQoBjkgy3xUkeBXKFlAPlmqmY,329
+gamspy_soplex/libospcclib64.dylib,sha256=9Z6w-S3j5cVjV9G3tDhiLWl1KxiE9WXBWpeUxyoOl0U,4537584
+gamspy_soplex/libtbb64.dylib,sha256=BtHJDeNNgBMeoHmtBO7aSex69L7Skb_cbwELw_spHLQ,420160
+gamspy_soplex/version.py,sha256=wCZPwLAPnxXFrnUyDGjHUEpjDJZkOGZHtwjNA0S3rP4,22
+gamspy_soplex-48.1.0.dist-info/METADATA,sha256=IaXDzlBh70oUVTMhgRvdWr_chQy9kNAsNBSFzAxnfxs,59
+gamspy_soplex-48.1.0.dist-info/WHEEL,sha256=C4JIzXXA9S7UHkNKF7lzx0pM8qN4G0aq_gTqstNwpIA,111
+gamspy_soplex-48.1.0.dist-info/top_level.txt,sha256=15zSDNPZl5qpnR56MaVCRfFdhf60UMk0TAr8leYhLjw,14
+gamspy_soplex-48.1.0.dist-info/RECORD,,
