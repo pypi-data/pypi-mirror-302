@@ -1,0 +1,13 @@
+scienceworld/__init__.py,sha256=UR7dL5GoLmm22ZNkMWvVuiSH6SDID4c12ofDyPzFxyQ,192
+scienceworld/constants.py,sha256=I819rANYo7wZZrP8uREaGzA8MVIZVDbWprhSeCraE5o,1123
+scienceworld/object_type_ids.tsv,sha256=yK14_UH3nZ7dlmlWWZCljsWPkW9ZnebAZ2XCJ1qYPjI,10633
+scienceworld/scienceworld.jar,sha256=rPeEMxmOVGRlnff2vesFA7ybWALBDCfrxaouua_gXpA,7784074
+scienceworld/scienceworld.py,sha256=q-NRleL5CwkP-8HZHbsco7MIisJmNYlG3XpPVCHwIU4,27385
+scienceworld/tasks.json,sha256=zRpv_QpDwmnQFn3k1TznxCaHp7QuiwriKPMLMyGIWnk,4871
+scienceworld/utils.py,sha256=lHB2LZrvM8eHcXH_ZZvi1AcrnMG9CKbgGMw5AHdjdAg,909
+scienceworld/version.py,sha256=TyoJr5e3yETpfn6Cqp5KwpweiqaDNZKKhK7N7U81GVQ,22
+scienceworld-1.2.2.dist-info/LICENSE,sha256=2F_YKcI2NHxeH-u_K6hE9wbdNOSjykxDubHl-hZn-t8,11394
+scienceworld-1.2.2.dist-info/METADATA,sha256=PBhBl99HSPT0j0TEiKYmea7WKw2m-5AhN_CCiJCI9bY,6719
+scienceworld-1.2.2.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+scienceworld-1.2.2.dist-info/top_level.txt,sha256=nhldJeXYgbmvtOf3DZRVQSJjMzJQ15YZ-rWp1ZGa0fk,13
+scienceworld-1.2.2.dist-info/RECORD,,
