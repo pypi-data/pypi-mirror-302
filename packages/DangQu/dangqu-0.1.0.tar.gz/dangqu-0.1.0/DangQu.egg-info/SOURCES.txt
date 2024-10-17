@@ -1,0 +1,10 @@
+setup.py
+DangQu.egg-info/PKG-INFO
+DangQu.egg-info/SOURCES.txt
+DangQu.egg-info/dependency_links.txt
+DangQu.egg-info/requires.txt
+DangQu.egg-info/top_level.txt
+dangqu_sdk/OCR.py
+dangqu_sdk/__init__.py
+dangqu_sdk/client.py
+dangqu_sdk/slider.py
