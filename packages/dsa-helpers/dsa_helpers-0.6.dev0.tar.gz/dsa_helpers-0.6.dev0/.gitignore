@@ -1,0 +1,11 @@
+# Python environment directories.
+env/
+pyenv/
+
+*.pyc
+*.egg-info
+dist/
+.env
+
+# Ignore data directory created for testing the package.
+tests/data/
