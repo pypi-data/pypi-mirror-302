@@ -1,0 +1,15 @@
+html[data-theme="dark"] .logo:not(.dark-light):not(.only-dark) img,
+html[data-theme="dark"] img:not(.dark-light):not(.only-dark),
+html[data-theme="dark"] .figure:not(.dark-light):not(.only-dark) img,
+html[data-theme="dark"] iframe:not([src*="youtube.com"]):not([src*="vimeo.com"]):not(.dark-light) {
+  filter: invert(1) hue-rotate(180deg);
+  background-color: transparent;
+  mix-blend-mode: difference;
+}   
+
+
+/* Fix alert dark mode */
+html[data-theme="dark"] .alert {
+  --bs-alert-bg: #132119;
+  --bs-alert-color: #d1e7dd;
+}
