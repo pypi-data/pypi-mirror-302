@@ -1,0 +1,75 @@
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+fn5
+test/run_tests
+
+#Saved data
+saves/*
+new_saves/*
+outputs/*
+cryptic_fastas
+*.tar.gz
+test/saves
+
+**/__pycache__
+
+#Build data
+build/*
+
+#Keep the env files out
+.env
+.db
+
+*.txt
+
+!requirements.txt
+!**/CMakeLists.txt
+test/output/*
+test/cases/dummy/saves
+
+
+!**/.gitkeep
+*massif*
+mprofile*
+.pytest_cache
+
+#Ensure that the test lists are kept
+!test/all.txt
+!test/two_samples.txt
+
+saves.old/*
+
+#Keep the python dist files out
+*.egg-info
+
+.cache
