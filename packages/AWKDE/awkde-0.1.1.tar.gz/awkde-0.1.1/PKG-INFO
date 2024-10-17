@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: AWKDE
+Version: 0.1.1
+Summary: A package for Adaptive Weighted Kernel Density Estimation
+Author: Javad Jafari
+Author-email: javad.jafari@mail.um.ac.ir
+Requires-Dist: numpy>=1.19.5

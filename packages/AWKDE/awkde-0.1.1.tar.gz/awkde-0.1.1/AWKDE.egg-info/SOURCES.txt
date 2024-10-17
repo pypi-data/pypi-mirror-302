@@ -1,0 +1,9 @@
+README.md
+setup.py
+AWKDE/AWKDE.py
+AWKDE/__init__.py
+AWKDE.egg-info/PKG-INFO
+AWKDE.egg-info/SOURCES.txt
+AWKDE.egg-info/dependency_links.txt
+AWKDE.egg-info/requires.txt
+AWKDE.egg-info/top_level.txt
