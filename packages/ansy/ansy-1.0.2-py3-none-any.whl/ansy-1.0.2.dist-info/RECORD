@@ -1,0 +1,13 @@
+ansy/__init__.py,sha256=_1qyMzDGdoBgn1A1YOhg6UPFZ02CZ1yl1cfwfZMP5PQ,1502
+ansy/_corpus_colors.py,sha256=7Z-quK3u8HftI2g6cxpXm0kVRpiZVOOwpFqzQ4ORIzc,40894
+ansy/_others.py,sha256=R62gGVRkl1F2lugxktsAYg_ORsiyrb3zTTNArYI4cYk,13710
+ansy/ansy.py,sha256=YZLIgENyfTbdhJMzSsvmEmS1o8-6N3809ad0YhKxZNA,35292
+ansy/cli.py,sha256=ZDZPjm8rnHcJfkNfrWZ_srrXu8Uct2BaKEDL6dpSPzI,1489
+ansy/colors.py,sha256=RQdzfRoBVjpEG4hJ-bsqK1WHY1Y0erWOr-3QQ2NXprM,1882
+ansy/exceptions.py,sha256=oE0-hb9Y747VljYgR7lIAPUAkMNi-hfc3yRtATBq2ww,1017
+ansy-1.0.2.dist-info/LICENSE,sha256=2MitBk18CVn16dsijI0xuhLS6SyFtLr9jSl-Nypl5VY,1090
+ansy-1.0.2.dist-info/METADATA,sha256=q9AG13gtbBti6So_voIdnWrd1vTSeH6IhKRaOuJBaow,31268
+ansy-1.0.2.dist-info/WHEEL,sha256=eOLhNAGa2EW3wWl_TU484h7q1UNgy0JXjjoqKoxAAQc,92
+ansy-1.0.2.dist-info/entry_points.txt,sha256=zO9FSz2p1wYgBcYO_O2HSHFOnY3POzWltv9-KZIl6no,39
+ansy-1.0.2.dist-info/top_level.txt,sha256=PZhzF2qXuqwZfygIKbPOIFY6v6fzFJeTpWhvvf2H9vE,5
+ansy-1.0.2.dist-info/RECORD,,
