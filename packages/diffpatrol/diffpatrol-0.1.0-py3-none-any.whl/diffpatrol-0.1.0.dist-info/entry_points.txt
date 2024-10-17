@@ -1,0 +1,3 @@
+[console_scripts]
+diffpatrol = diffpatrol.cli:main
+
