@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: usefulgen
+Version: 1.0.1.1
+Summary: A Python script containing some must-have generators
+Home-page: https://github.com/M4elstr0m/UsefulGenPy
+Download-URL: https://pypi.org/project/usefulgen/
+Author: M4elstr0m
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Requires-Dist: typing
+
+A Python module containing some must-have generators
+For more details, don't hesitate to go on https://github.com/M4elstr0m/UsefulGenPy
