@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: acintellisense
+Version: 1.0.0
+Summary: Assetto Corsa intellisense stubs helper
+Author: RipRock
+Author-email: <me@riprock.tech>
+Keywords: python,AC,Assetto Corsa,dummy,stub
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Topic :: Games/Entertainment :: Simulation
+License-File: LICENSE
+
+Assetto Corsa stubs library for "ac" object. 
+Helping intellisense and documentation when developing.
+
+Currently only implemented whats in the known AC PDF for modding. Working on expanding in the future
