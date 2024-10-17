@@ -1,0 +1,12 @@
+basic_colormath/__init__.py,sha256=vi0roA_v4emncnx9ODoIIG3KnPV-R0UbzAPlFZqY5RM,2507
+basic_colormath/conversion.py,sha256=4P8QfbqfvHN6Xe-ef5MqrMMzFeNg8eaWB0p8hJOZDos,5971
+basic_colormath/distance.py,sha256=0co54O1ew6dOp92_lxAptmc2XchoRaahv-d1bDO5iSo,8122
+basic_colormath/mix.py,sha256=IpDGvWhWtLX9-JFUUvERkgwEvYbEBPEUgzg83bgcnCg,3847
+basic_colormath/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+basic_colormath/type_hints.py,sha256=BBlhbY5W_tLjiBDYSCLGMNoHYzssAFfkw4ZObJ26kAk,838
+basic_colormath/vec_conversion.py,sha256=5R3kCbBGIpyUEGIRk-wS1ANiwist1k4-kqTf0OfQj8c,7451
+basic_colormath/vec_distance.py,sha256=8vTg4229nsgDV6xtPCxSWRboKRSKgphJRM_4Hy6dc-0,16474
+basic_colormath-0.5.0.dist-info/METADATA,sha256=_b17Hh7QyZTU6MJFpRZmjeG30cxBPPP42tn6wypDEss,9226
+basic_colormath-0.5.0.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+basic_colormath-0.5.0.dist-info/top_level.txt,sha256=fSmmDbuKz_gUEpmhvzC6IutVNixVjtWiWRI16xtr63Y,16
+basic_colormath-0.5.0.dist-info/RECORD,,
