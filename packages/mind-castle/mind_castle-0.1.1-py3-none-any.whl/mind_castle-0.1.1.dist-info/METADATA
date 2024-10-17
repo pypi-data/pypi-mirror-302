@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: mind-castle
+Version: 0.1.1
+Summary: A universal secrets manager
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: boto3 >=1.35.38
+Requires-Dist: sqlalchemy <3.0.0,>=2.0.0
+
+# mind-castle
+A universal secret store
