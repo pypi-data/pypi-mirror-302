@@ -1,0 +1,10 @@
+numpy
+
+[pandas]
+pandas
+
+[tests]
+pytest
+pytest-runner
+pytest-benchmark
+teamcity-messages
