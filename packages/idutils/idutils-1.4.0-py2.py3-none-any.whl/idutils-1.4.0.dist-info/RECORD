@@ -1,0 +1,14 @@
+idutils/__init__.py,sha256=KIjipQrpJ2a40GC9A4wLAICUvNju9Qcx7-4VNIl8Iyk,1570
+idutils/detectors.py,sha256=igqPo9YuhfsIUXZIZGGpLOizRshbJlz5qnKTh0QWiJk,2779
+idutils/ext.py,sha256=_q4PdzyZrtmst0kxPoxOCZEvABdslbWDWKYPm594qNA,5267
+idutils/normalizers.py,sha256=kdHczhJFwhXBEjSOVAqd-3PpO3ikA-M4c_RokcNjnaM,7532
+idutils/proxies.py,sha256=vl8RIlJ0NcrhRVS_FJWl0P3M33PIEvRKsPGRYcr9O0M,604
+idutils/schemes.py,sha256=611UEpS0UAG769XVYfiIUl4UuLBPGlSzDUCA4bwjto8,2509
+idutils/utils.py,sha256=ohjbi9vt4DJvRUHGpiR4Y8jsF69LhywSXXKlaLRbrrk,13061
+idutils/validators.py,sha256=VBd69mUVFMaPdStyVIHWLgK1e5IOGx7y7w5-U-lnLIs,8171
+idutils-1.4.0.dist-info/AUTHORS.rst,sha256=94JrFJeyM63e6hf0leKm-ukYtIGDuXqWxJo3efiPruE,615
+idutils-1.4.0.dist-info/LICENSE,sha256=nVT_ANvTK_Zi0b5x0BxgEp47l2qh3DtirwlJB7pV9zM,1835
+idutils-1.4.0.dist-info/METADATA,sha256=TetO116g4umRvHhSGa1xXN2x7b41gBU6GXKJpG1KLCs,7038
+idutils-1.4.0.dist-info/WHEEL,sha256=-G_t0oGuE7UD0DrSpVZnq1hHMBV9DD2XkS5v7XpmTnk,110
+idutils-1.4.0.dist-info/top_level.txt,sha256=5b-VgV_eLzXv0AdVAx1So3ReCkSHq8LOH9UjJ10g4Zw,8
+idutils-1.4.0.dist-info/RECORD,,
