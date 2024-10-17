@@ -1,0 +1,10 @@
+aiostreammagic/__init__.py,sha256=fXH8vNQdEMBlfWhSQF4NNsPaYROiYk0ZveKxDZ43vG4,572
+aiostreammagic/const.py,sha256=LHB47w4nnXjQR5DnvBhQAPA_4yxhCb83NaxApxRNnU0,57
+aiostreammagic/endpoints.py,sha256=Nwt7a6EmpkSEbr1G8Rku2zx7robpJYKw-OriIcwLaeQ,448
+aiostreammagic/exceptions.py,sha256=lfp-RTTsQwXZ9tWAjsCRd3f-RE9NbKq4RbmKAQFc9mM,241
+aiostreammagic/models.py,sha256=nidF7y7_JNEwnDfp1GVH5HdwWkeg5bPc0JR1RMg_hEA,8022
+aiostreammagic/stream_magic.py,sha256=MeXNH1S6-aPEnuJONXt1QBoBAs8e91k5qabVRSfe8EA,21329
+aiostreammagic-2.8.0.dist-info/LICENSE,sha256=BZBHU8QEXNSVAAYR2pnn7UD1UzgcLaF9bD4_Ht_HgtM,1067
+aiostreammagic-2.8.0.dist-info/METADATA,sha256=z3uSEEIpApG-EvvjbnCLiHdh9-84DF5M33HTeyp_ncI,4193
+aiostreammagic-2.8.0.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+aiostreammagic-2.8.0.dist-info/RECORD,,
