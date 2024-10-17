@@ -1,0 +1,10 @@
+jlkutils/__init__.py,sha256=d4uOCLA8a0TUL9i_QrcfbivBq3skWdPIUWSzXwOjGt0,163
+jlkutils/cam.py,sha256=_cNehl4ymK0UUS9C8L3M_7uHJ15OF5qQ3jaYnNId58E,552
+jlkutils/chatgpt.py,sha256=3lbFwBNukv0CB5WhWnHDvditxVpZ6hhXsoz4Evak8pw,622
+jlkutils/crypt.py,sha256=QJ4BTkmaGtiLBVAWaUQmGDrHOWGT43insxkmGLj8C4c,2321
+jlkutils/file.py,sha256=sjmQ3C-Di93DRRmQhl-8dE1W1pHHt3KWucr34UGo_SQ,1386
+jlkutils/jlkutils.py,sha256=QJ4BTkmaGtiLBVAWaUQmGDrHOWGT43insxkmGLj8C4c,2321
+jlkutils-0.18.dist-info/METADATA,sha256=pi7tNGXVunUaNR_dfq3pYf1fbsiJrHM1_xPNGY7so3g,473
+jlkutils-0.18.dist-info/WHEEL,sha256=cVxcB9AmuTcXqmwrtPhNK88dr7IR_b6qagTj0UvIEbY,91
+jlkutils-0.18.dist-info/top_level.txt,sha256=KpGGqRWoykQ46t3fi5LnvvtBjMf514xBePrCeDFNQNY,9
+jlkutils-0.18.dist-info/RECORD,,
