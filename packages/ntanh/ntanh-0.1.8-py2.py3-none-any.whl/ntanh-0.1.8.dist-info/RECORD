@@ -1,0 +1,14 @@
+ntanh/ParamsBase.py,sha256=Xgn3GKdcZXkP-k00R0QKicfOe6XRhud5TS6hxRPEIWg,8429
+ntanh/__init__.py,sha256=ShX1_r8mguuBn4AohpYM_zHvO-Xd8BHXIrCEo-sAqzI,4357
+ntanh/image_augmentation.py,sha256=S3D6eSckbgx-f0tYHZsPI1WYVIH8ukLgy6bZwVNDKjc,9595
+ntanh/image_dupplicate_remove.py,sha256=nrnOfLXmuhV9pAFHA0US0fjckIwzUROoOo4agPm2lsY,8534
+ntanh/yolo_boxes.py,sha256=w9Sn-PiDCYJZxjCgrHVYv2uzIY6QSSbwrbwiNYMNoPU,2065
+ntanh/IVIS_Data/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tact/ParamsBase.py,sha256=I2ovp8hoEcYyauRtQ9sq0M0bk5XmZ6UVXnJzgn0NGoM,6612
+tact/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ntanh-0.1.8.dist-info/LICENSE,sha256=3abl9Jl4sjVbMCYyhg8sC4p-7rNkJtzO2JUw4kR3Zj4,11
+ntanh-0.1.8.dist-info/METADATA,sha256=9No7OnozYlu_vUS8SvTKUQKkA64E96qbROGoC49G6mA,5442
+ntanh-0.1.8.dist-info/WHEEL,sha256=0XQbNV6JE5ziJsWjIU8TRRv0N6SohNonLWgP86g5fiI,109
+ntanh-0.1.8.dist-info/entry_points.txt,sha256=sx8OhgU_anjxFmQcS7sonZ1AB-ZVVVU1PDCy5ilIZfs,137
+ntanh-0.1.8.dist-info/top_level.txt,sha256=vX24G-tp6L-d1DFVmrYtPqyc_i912ifTV2bHxwP9iBE,6
+ntanh-0.1.8.dist-info/RECORD,,
