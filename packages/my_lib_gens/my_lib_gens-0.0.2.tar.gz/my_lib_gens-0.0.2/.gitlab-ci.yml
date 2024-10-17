@@ -1,0 +1,45 @@
+test:
+  image: "python:$VERSION"
+  script:
+    - python -V
+    - pip install pipx
+    - pipx ensurepath
+    - source ~/.bashrc
+    - pipx install hatch
+    - hatch run +py=$VERSION test:cov
+  parallel:
+    matrix:
+      - VERSION: ["3.9", "3.10", "3.11", "3.12"]
+
+docs-build:
+  image: "python:3.12"
+  script:
+    - python -V
+    - pip install pipx
+    - pipx ensurepath
+    - source ~/.bashrc
+    - pipx install hatch
+    - hatch run docs:build
+
+release-pypi:
+  image: "python:3.12"
+  rules:
+    - if: '$CI_COMMI_TAG'
+  script:
+    - python -V
+    - pip install pipx
+    - pipx ensurepath
+    - source ~/.bashrc
+    - pipx install hatch
+    - hatch build
+    - hatch publish -u __token__ -a PYPI_TOKEN -n
+
+#release:
+#  stage: release
+#  scipt:
+#    - echo "Create release"
+#  rules:
+#    - if '$CI_COMMIT_TAG'
+#  release:
+#    name: 'Release ${CI_COMMIT_TAG}'
+#    tag_name: '$CI_COMMIT_TAG'

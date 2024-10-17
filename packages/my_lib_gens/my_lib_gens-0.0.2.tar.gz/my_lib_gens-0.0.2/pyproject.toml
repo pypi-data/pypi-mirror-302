@@ -1,0 +1,57 @@
+[project]
+name = "my_lib_gens"
+dynamic = ["version"]
+description = "Useless library to perform basic computations"
+readme = "README.md"
+license = "MIT"
+authors = [
+    { name = "Nicolas Gensollen", email = "nicolas.gensollen@inria.fr" },
+]
+maintainers = [
+    { name = "Nicolas Gensollen", email = "nicolas.gensollen@inria.fr" },
+]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "Intended Audience :: Science/Research",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+]
+requires-python = ">=3.9"
+dependencies = [
+    "numpy>=2.0.2",
+]
+
+[project.optional-dependencies]
+dev = [
+  "awesome-project[crypto]",
+  "black",
+]
+
+docs = [
+  "myst-nb",
+  "sphinx",
+  "sphinx-autoapi",
+  "sphinx-book-theme",
+  "sphinx-autobuild",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.ruff.format]
+preview = true
+quote-style = "double"
+
+[tool.ruff.lint]
+preview = true
+extend-select = ["C901"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["my_lib_gens"]
