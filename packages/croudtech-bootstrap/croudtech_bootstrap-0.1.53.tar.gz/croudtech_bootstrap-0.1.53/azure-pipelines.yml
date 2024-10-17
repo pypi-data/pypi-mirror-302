@@ -1,0 +1,108 @@
+# Python package
+# Create and test a Python package on multiple Python versions.
+# Add steps that analyze code, save the dist with the build record, publish to a PyPI-compatible index, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/python
+
+trigger:
+  - main
+  - chore/*
+  - feature/*
+
+pool:
+  vmImage: ubuntu-latest
+resources:
+  repositories:
+    - repository: templates
+      type: github
+      name: CroudTech/devops-azure-pipelines-step-templates
+      ref: master
+      endpoint: CroudTech
+    - repository: self
+variables:
+  - group: "package_managers"
+  - name: python_version
+    value: 3.12
+jobs:
+  # - job: PythonTest
+  #   steps:
+  #     - template: test/python-test.yaml@templates
+  #       parameters:
+  #         coverage: app,core,status
+  #         root_dir: ./
+  #         python_version: 3.12
+  #         pipenv_version: 2023.12.1
+  - job: build
+    displayName: Build
+    # dependsOn: PythonTest
+    condition: and(succeeded(), in(variables['Build.SourceBranchName'],  'integration', 'main'))
+    steps:
+      - task: UsePythonVersion@0
+        inputs:
+          versionSpec: "$(python_version)"
+        displayName: "Use Python $(python_version)"
+      - script: |
+          pip install -r requirements.dev.txt
+          SEMVER=$(python setup.py --version)
+          echo "##vso[task.setvariable variable=semVer]$SEMVER"
+          python -m build
+          python -m twine upload ./dist/* --non-interactive -u __token__ -p $(pypi_token)
+      - task: UpdateBuildNumber@0
+        inputs:
+          buildNumber: $(semVer)
+  - job: CliBuild
+    dependsOn: build
+    displayName: CliBuild
+    steps:
+      - task: UsePythonVersion@0
+        inputs:
+          versionSpec: "3.12"
+          addToPath: true
+          architecture: "x64"
+      - script: |
+          set -x
+          pip install -r requirements.dev.txt
+          python -m build
+          pip install pyinstaller
+          pyinstaller  --onefile ./croudtech_bootstrap_app/croudtech-bootstrap.py --clean
+          ls -la dist
+          cp ./dist/croudtech-bootstrap $(Build.ArtifactStagingDirectory)/croudtech-bootstrap
+      - task: PublishBuildArtifacts@1
+        inputs:
+          PathtoPublish: "$(Build.ArtifactStagingDirectory)/croudtech-bootstrap"
+          ArtifactName: "croudtech-bootstrap"
+          publishLocation: "Container"
+  - job: CliBuildDebianBullseye
+    dependsOn: CliBuild
+    container: python:3.12.7-bullseye
+    displayName: CliBuildDebianBullseye
+    steps:
+      - script: |
+          set -x
+          pip install -r requirements.dev.txt
+          python -m build
+          pip install pyinstaller
+          /home/vsts_azpcontainer/.local/bin/pyinstaller  --onefile ./croudtech_bootstrap_app/croudtech-bootstrap.py --clean
+          ls -la dist
+          cp ./dist/croudtech-bootstrap $(Build.ArtifactStagingDirectory)/croudtech-bootstrap-debian-bullseye
+      - task: PublishBuildArtifacts@1
+        inputs:
+          PathtoPublish: "$(Build.ArtifactStagingDirectory)/croudtech-bootstrap-debian-bullseye"
+          ArtifactName: "croudtech-bootstrap-debian-bullseye"
+          publishLocation: "Container"
+  - job: GithubRelease
+    dependsOn: CliBuildDebianBullseye
+    displayName: GithubRelease
+    steps:
+      - download: current
+        artifact: croudtech-bootstrap-debian-bullseye
+      - download: current
+        artifact: croudtech-bootstrap
+      - script: |
+          cp $(Pipeline.Workspace)/croudtech-bootstrap/croudtech-bootstrap $(Build.ArtifactStagingDirectory)
+          cp $(Pipeline.Workspace)/croudtech-bootstrap-debian-bullseye/croudtech-bootstrap-debian-bullseye $(Build.ArtifactStagingDirectory)
+      - template: release/github-release-build-number.yaml@templates
+        parameters:
+          semVer: $(semVer)
+          github_access_token: $(github_access_token)
+          github_org: CroudTech
+          github_repo: croudtech-python-bootstrap-app
