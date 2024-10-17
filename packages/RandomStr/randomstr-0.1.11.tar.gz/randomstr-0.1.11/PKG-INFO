@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: RandomStr
+Version: 0.1.11
+Summary: Generates a random string of your length choice.
+Author-email: qloha <officialqloha@gmail.com>
+Project-URL: Homepage, https://github.com/qloha/randomstr
+Project-URL: Issues, https://github.com/qloha/randomstr/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# RandomStr
+
+Generates a random string of your length choice.
+
+## How to install:
+
+To install this package, run ```pip install randomstr```
+
+## Tutorial
+
+You can use it's generate function to generate a random string, and you can choose it's length
+
+```
+import randomstr
+
+randomstr.generate(6)
+```
+
+### For the full documentation, please visit https://qloha.github.io/randomstr

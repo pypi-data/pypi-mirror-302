@@ -1,0 +1,18 @@
+[project]
+name = "RandomStr"
+version = "0.1.11"
+authors = [
+  { name="qloha", email="officialqloha@gmail.com" },
+]
+description = "Generates a random string of your length choice."
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/qloha/randomstr"
+Issues = "https://github.com/qloha/randomstr/issues"
