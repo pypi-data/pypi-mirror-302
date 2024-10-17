@@ -1,0 +1,9 @@
+include MANIFEST.in
+include LICENSE
+include README.md
+include requirements.txt
+include django_environ_settings.py
+prune django_environ_settings_demo
+exclude manage.py
+global-exclude __pycache__
+global-exclude *.py[co]
