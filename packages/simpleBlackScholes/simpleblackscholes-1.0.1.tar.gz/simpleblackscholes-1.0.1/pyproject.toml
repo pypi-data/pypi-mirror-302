@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "simpleBlackScholes"
+version = "1.0.1"
+readme = "README.md"
+authors = [
+    { name="Anas Arkawi" }
+]
+description = "Functions for Black-Scholes Model related calculations."
+requires-python = ">=3.11"
+dependencies = [
+    "numpy",
+    "pandas",
+    "dataclasses",
+    "pydantic",
+    "scipy"
+]
