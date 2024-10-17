@@ -1,0 +1,12 @@
+dora_gen72/main.py,sha256=WGVSkyVyjEdbxt4x5b9g75witrBBLhvLdRCYt5OB2y4,8488
+dora_gen72/robotic_arm_package/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dora_gen72/robotic_arm_package/libs/linux_arm/libRM_Base.so.1.0.0,sha256=AbDJtUSSFXp_-8_VdHe9XKqKKF6HcIpySwVaNeYIMl0,707992
+dora_gen72/robotic_arm_package/libs/linux_x86/libRM_Base.so.1.0.0,sha256=VkeYOAaiPSkSqYbxWsNAuBRxJpV5MGxfAJRn9vkVnD4,877136
+dora_gen72/robotic_arm_package/libs/win_32/RM_Base.dll,sha256=lyr0kXmujYfQ0By2bbzb8XszX_qF5poAja3xmS7mh8c,674304
+dora_gen72/robotic_arm_package/libs/win_64/RM_Base.dll,sha256=8MNNTt64mR_wW_qvhnsX1pLDugh_Tpax56a_6T0ebQQ,785408
+dora_gen72/robotic_arm_package/log_setting.py,sha256=834n2ONLDQDDPK1zLoMWPlfv6RBKFVHjber69rK56Q8,2362
+dora_gen72/robotic_arm_package/robotic_arm.py,sha256=F3hzg38AdkqRhfJnQpNrVwgP1JyZnkxN2COIGYmSb3U,220189
+dora_gen72-0.2.3.dist-info/METADATA,sha256=vGcWnA6VWTavLqqptn5WsNy87UibZIrluhnncdyQBqg,511
+dora_gen72-0.2.3.dist-info/WHEEL,sha256=Zb28QaM1gQi8f4VCBhsUklF61CTlNYfs9YAZn-TOGFk,88
+dora_gen72-0.2.3.dist-info/entry_points.txt,sha256=QzJuzIrvar5hEecWMIysYH8fQZJCYIsuJOu8m5MUfOI,51
+dora_gen72-0.2.3.dist-info/RECORD,,
