@@ -1,0 +1,124 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+images/Screenshot 2024-05-01 234657.png
+images/Screenshot 2024-05-01 234727.png
+images/Screenshot 2024-05-01 234827.png
+images/Screenshot 2024-05-01 234909.png
+images/Screenshot 2024-05-01 234941.png
+images/Screenshot 2024-05-01 234950.png
+images/Screenshot 2024-05-01 235028.png
+images/Screenshot 2024-05-01 235132.png
+images/Screenshot 2024-05-01 235259.png
+images/Screenshot 2024-05-01 235318.png
+images/Screenshot 2024-05-01 235346.png
+images/Screenshot 2024-05-01 235443.png
+images/Screenshot 2024-05-01 235513.png
+images/Screenshot 2024-05-01 235601.png
+images/Screenshot 2024-05-01 235629.png
+images/config_debug.png
+images/config_print.png
+images/configdebug.png
+images/continuous_show_secrets.png
+images/decrypt.png
+images/decryptingsecrets.png
+images/encrypt.png
+images/encrypting secrets.png
+images/encrypting_secrets.png
+images/expired_secrets_still_showing.png
+images/expiring_continuous.png
+images/finished_codes.png
+images/help.png
+images/hotp.png
+images/hotp_secret.png
+images/keyboard_interrupt.png
+images/lock_logo_1.jpeg
+images/lock_logo_2.jpeg
+images/lock_logo_3.jpeg
+images/lock_logo_3a.jpeg
+images/lock_logo_3b (2).png
+images/lock_logo_3b.png
+images/lock_logo_3c_600.png
+images/lock_logo_3d_400.png
+images/lock_logo_3e_thumbnail_cropped.png
+images/lock_logo_4.jpeg
+images/mfa_help.png
+images/mfa_logo.png
+images/mfa_logo_nounder.png
+images/mfa_word_logo.png
+images/non_continuous_showing_secrets.png
+images/run_cont.png
+images/run_show_secrets.png
+images/running_no_secrets.png
+images/search_all_secrets.png
+images/search_secrets.png
+images/show_config.png
+images/backup/Screenshot 2024-04-09 011355.png
+images/backup/Screenshot 2024-04-09 011531.png
+images/backup/Screenshot 2024-04-20 013435.png
+images/backup/Screenshot 2024-04-22 021135.png
+images/backup/Screenshot 2024-04-22 213331.png
+images/backup/Screenshot 2024-04-23 002206.png
+images/backup/Screenshot 2024-04-23 002242.png
+images/backup/Screenshot 2024-04-23 210808.png
+images/backup/Screenshot 2024-04-23 210906.png
+images/backup/Screenshot 2024-04-23 210912.png
+images/backup/Screenshot 2024-04-30 220328.png
+images/backup/Screenshot 2024-04-30 220409.png
+images/backup/Screenshot 2024-04-30 220509.png
+images/backup/Screenshot 2024-04-30 220518.png
+images/backup/Screenshot 2024-04-30 220758.png
+images/backup/Screenshot 2024-04-30 222257.png
+images/backup/Screenshot 2024-04-30 222323.png
+images/backup/Screenshot 2024-04-30 222343.png
+images/backup/Screenshot 2024-04-30 222432.png
+images/backup/Screenshot 2024-04-30 222552.png
+images/backup/Screenshot 2024-04-30 222652.png
+images/backup/Screenshot 2024-04-30 223416.png
+images/backup/Screenshot 2024-04-30 223438.png
+images/backup/Screenshot 2024-04-30 223510.png
+images/backup/Screenshot 2024-04-30 223519.png
+images/backup/Screenshot 2024-05-01 234657.png
+images/backup/Screenshot 2024-05-01 234727.png
+images/backup/Screenshot 2024-05-01 234827.png
+images/backup/Screenshot 2024-05-01 234909.png
+images/backup/Screenshot 2024-05-01 234941.png
+images/backup/Screenshot 2024-05-01 234950.png
+images/backup/Screenshot 2024-05-01 235028.png
+images/backup/Screenshot 2024-05-01 235132.png
+images/backup/Screenshot 2024-05-01 235259.png
+images/backup/Screenshot 2024-05-01 235318.png
+images/backup/Screenshot 2024-05-01 235346.png
+images/backup/Screenshot 2024-05-01 235443.png
+images/backup/Screenshot 2024-05-01 235513.png
+images/backup/Screenshot 2024-05-01 235601.png
+images/backup/Screenshot 2024-05-01 235629.png
+images/backup/expired_secrets_still_showing.png
+images/backup/frija Screenshot 2024-04-23 002242.png
+images/backup/hotp_secret.png
+images/backup/keyboard_interrupt.png
+images/backup/show_config.png
+src/mfawesome/__init__.py
+src/mfawesome/__main__.py
+src/mfawesome/config.py
+src/mfawesome/countdownbars.py
+src/mfawesome/exception.py
+src/mfawesome/exec_mfawesome.py
+src/mfawesome/logutils.py
+src/mfawesome/mfa_secrets.py
+src/mfawesome/ntptime.py
+src/mfawesome/qrcodes.py
+src/mfawesome/totp.py
+src/mfawesome/utils.py
+src/mfawesome.egg-info/PKG-INFO
+src/mfawesome.egg-info/SOURCES.txt
+src/mfawesome.egg-info/dependency_links.txt
+src/mfawesome.egg-info/entry_points.txt
+src/mfawesome.egg-info/requires.txt
+src/mfawesome.egg-info/top_level.txt
+src/mfawesome/data/__init__.py
+src/mfawesome/data/ntpservers.yaml
+tests/test_mfawesome.py
