@@ -1,0 +1,9 @@
+fastsolv/__init__.py,sha256=iYN--DFeeDJ67zCgy3XwMIaxSFRfQqeibbuj7tslAjE,54
+fastsolv/_classes.py,sha256=aTJctoWiOP3ou0WVdkImUuyfpcDup_QYLWXXX_Wpqw0,8501
+fastsolv/_cli.py,sha256=0oBUZ5oF2IpWRDUSaTiK9oXgZYvgCdZs6ixbnNu_kB4,811
+fastsolv/_module.py,sha256=sebx4YXWIgyCotqa134EY_Yha7KV6a5BteXSXqLAiGU,3967
+fastsolv-1.0.0.dist-info/METADATA,sha256=f3riBH8iWu3Lhh3s1YNLqq0M9Sq0su7Hxasfy9dewhQ,1179
+fastsolv-1.0.0.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+fastsolv-1.0.0.dist-info/entry_points.txt,sha256=o8jWrYOTc58kGeNNC0JfYVtglPTA9a_NMoiw1BFRZR4,55
+fastsolv-1.0.0.dist-info/top_level.txt,sha256=h8ZzV9yQ7XcOp0WQLM9T_k2Vt8MiOKw_R-nVZqULPOU,9
+fastsolv-1.0.0.dist-info/RECORD,,
