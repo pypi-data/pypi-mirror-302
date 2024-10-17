@@ -1,0 +1,11 @@
+README.md
+setup.py
+hough3d/__init__.py
+hough3d/basic_hough.py
+hough3d/line_segment_hough.py
+hough3d/spatial.py
+hough3d/utils.py
+hough3d.egg-info/PKG-INFO
+hough3d.egg-info/SOURCES.txt
+hough3d.egg-info/dependency_links.txt
+hough3d.egg-info/top_level.txt
