@@ -1,0 +1,9 @@
+no_more_imports-0.1.0.dist-info/METADATA,sha256=ITXhn9a4-iORNe616r-rdpLpJ56H_Ti2v3lKrBs9VdU,4303
+no_more_imports-0.1.0.dist-info/WHEEL,sha256=pM0IBB6ZwH3nkEPhtcp50KvKNX-07jYtnb1g1m6Z4Co,90
+no_more_imports-0.1.0.dist-info/entry_points.txt,sha256=6OYgBcLyFCUgeqLgnvMyOJxPCWzgy7se4rLPKtNonMs,34
+no_more_imports-0.1.0.dist-info/licenses/LICENSE,sha256=V_tC-80LA3zlKO2PcvHsCV1nvGgl7PFEj_Ob4f5opLQ,13792
+no_more_imports/__init__.py,sha256=1wE5npePpAHBXSLE44o-jDHv2g9zXyEZ0fXzXHpZGrA,56
+no_more_imports/ast.py,sha256=EBMMG6VNlJCYl289uAE2rdePODM4jrp8D8AIKSbvLVM,10573
+no_more_imports/const.py,sha256=-T86FqX3Nc9wnG4Wa2F4AGtMbRm0MQQK5VGRvten1JQ,108
+no_more_imports/importer.py,sha256=We3ownu_vAZAjqti6C3wIUL6hfuF9S8PuV60PntKjX4,4812
+no_more_imports-0.1.0.dist-info/RECORD,,
