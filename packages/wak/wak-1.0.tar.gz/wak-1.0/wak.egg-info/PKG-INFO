@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: wak
+Version: 1.0
+Summary: Bibliothèque Python pour extraire les données financières de la Bourse de Casablanca, y compris les cours historiques des actions, les dividendes, et d'autres informations.
+Home-page: https://kamel.ma
+Author: Ayoub KAMEL
+Author-email: ayoub@kamel.ma
+Project-URL: Documentation, https://github.com/votre-utilisateur/ayoub
+Project-URL: Source, https://github.com/votre-utilisateur/ayoub
+Project-URL: Github, https://github.com/Ayoub-Kamel
+Project-URL: Linkedin, https://www.linkedin.com/in/ayoub-kamel/
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
