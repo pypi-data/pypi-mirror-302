@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: compute-horde
+Version: 0.0.11
+Author: Backend Developers LTD
+License: MIT License
+Requires-Python: ==3.11.*
+Requires-Dist: pydantic<3,>=2.3
+Requires-Dist: bittensor<8.0.0,>=7.3.1
+Requires-Dist: websockets>=11.0
+Requires-Dist: more-itertools>=10.2.0
+Requires-Dist: requests>=2.32.2
+Requires-Dist: Django~=4.2.4
+Description-Content-Type: text/markdown
+
+# compute-horde
+
+## Common django models
+This library contains common Django models for the receipts.
+To use them, update your `INSTALLED_APPS`:
+```python
+INSTALLED_APPS = [
+    ...,
+    'compute_horde.receipts',
+    ...,
+]
+```
+
+## Migrations
+To make new migrations after doing some changes in the model files, run:
+```shell
+DJANGO_SETTINGS_MODULE=compute_horde.settings pdm run django-admin makemigrations
+```
