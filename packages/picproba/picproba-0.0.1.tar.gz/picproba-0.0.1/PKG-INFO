@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: picproba
+Version: 0.0.1
+Summary: Probability distribution management
+Author: Antoine Picard-Weibel
+Author-email: apicard.w@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+License-File: LICENSE
+Requires-Dist: apicutils>=0.0.2
+Requires-Dist: pandas
+Requires-Dist: scipy>=1.7.0
+Requires-Dist: numpy<=1.26
+Requires-Dist: numba==0.58.1
+
+Probability distributions management
+This package provides classes for Probability distributions and parametric families of probability distributions, with a particular focus on log density and Kullback--Leibler divergence.
+Probability distributions and family of probability distributions can be easily transformed.
+NOTE: numba requirement is currently pinned to 0.58, as other versions have not yet been fully tested. This notably impacts the version of numpy (<2). This should be fixed in future versions.
