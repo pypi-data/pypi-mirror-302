@@ -1,0 +1,22 @@
+test:
+  image: "python:$VERSION"
+  script:
+    - python -V
+    - pip install pipx
+    - pipx ensurepath
+    - source ~/.bashrc
+    - pipx install hatch
+    - hatch run +py=$VERSION test:cov
+  parallel:
+    matrix:
+      - VERSION: ["3.9", "3.10", "3.11", "3.12"]
+
+docs-build:
+  image: "python:3.12"
+  script:
+    - python -V
+    - pip install pipx
+    - pipx ensurepath
+    - source ~/.bashrc
+    - pipx install hatch
+    - hatch run docs:build
