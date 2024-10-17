@@ -1,0 +1,154 @@
+# Giới thiệu
+
+ntanh là một thư viện các nhiệm vụ hàng ngày sử dụng, hay dùng nhưng không khó, mất thời gian code cho các dự án lẻ tẻ.
+
+# Cài đặt bằng các cách sau:
+
+```bash
+pip install ntanh
+pip install --upgrade --force-reinstall ntanh
+pip install --upgrade ntanh --no-deps
+
+```
+
+Cài trực tiếp trong code:
+
+```python
+
+try:
+    os.system("python -m pip install --upgrade --force-reinstall ntanh --no-deps")
+except Exception as e:
+    print('ntanh:', e)
+import ntanh
+```
+
+# Cách dùng:
+
+```python
+from pprint import pprint
+from ntanh.ParamsBase import tactParametters
+import ntanh
+
+print(ntanh.__version__)
+mParams = tactParametters()
+
+fns = mParams.fnFIS(r"../", exts=(".py"))
+pprint(fns)
+```
+
+Kết quả:
+
+```
+'0.1.4'
+['../tact/setup.py',
+ '../tact/__init__.py',
+ '../tact/build/lib/ntanh/ParamsBase.py',
+ '../tact/build/lib/ntanh/__init__.py',
+ '../tact/build/lib/tact/ParamsBase.py',
+ '../tact/build/lib/tact/__init__.py',
+ '../tact/dev/test_tact.py',
+ '../tact/ntanh/ParamsBase.py',
+ '../tact/ntanh/__init__.py']
+```
+
+Ví dụ 2: tạo file tham số:
+
+```python
+
+from pprint import pprint
+from ntanh.ParamsBase import tactParametters
+
+class Parameters(tactParametters):
+    def __init__(self, ModuleName="TACT"):
+        super().__init__()
+        self.thamso1 = "thamso1"
+        self.thamso2 = " xâu tiếng việt"
+        self.api_url = "https://200.168.90.38:6699/avi/collect_data"
+        self.testpath = "D:/test_debug_fii"
+        self.test_real = 0.8
+        self.test_int = 12
+        self.test_dict = {
+            1: 2,
+            3: 4.5,
+            "6": "bảy nhá",
+            -1: "Tám",
+            9: [10, 11.2, "22", (33, 44, "55")],
+            10: {101: 12, 102: "mười ba"},
+        }
+        self.test_list = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+        self.load_then_save_to_yaml(file_path="configs_test.yml", ModuleName=ModuleName)
+        self.privateVar1 = 2
+        self.privateVar2 = "Not in param file"
+
+
+mParams = Parameters(ModuleName="test")
+
+pprint(mParams.__dict__)
+```
+
+Kết quả:
+
+```
+{'ModuleName': 'test',
+ 'api_url': 'https://200.168.90.38:6699/avi/collect_data',
+ 'fn': 'configs_test.yml',
+ 'logdir': '',
+ 'privateVar1': 2,
+ 'privateVar2': 'Not in param file',
+ 'test_dict': {-1: 'Tám',
+               1: 2,
+               3: 4.5,
+               9: [10, 11.2, '22', (33, 44, '55')],
+               10: {101: 12, 102: 'mười ba'},
+               '6': 'bảy nhá'},
+ 'test_int': 12,
+ 'test_list': [1, 2, 3, 4, 5, 6, 7, 8, 9],
+ 'test_real': 0.8,
+ 'testpath': 'D:/test_debug_fii',
+ 'thamso1': 'thamso1',
+ 'thamso2': ' xâu tiếng việt'}
+```
+
+## Console Running
+
+### Image dupplicate remover
+Lệnh này sẽ di chuyển ảnh bị trùng lặp ra 1 folder khác (cấu hình trong file config), nhằm loại bỏ các ảnh quá giống nhau theo nội dung, nhưng so sánh theo tên liên tiếp (ảnh do video tách ra), training cho nhanh.
+
+Command: `ntanh_img_del`
+
+Lệnh này sẽ tạo 1 file config, đường dẫn sẽ hiển thị trên CMD, chúng ta vào đó cấu hình lại, rồi chạy
+
+### Image Augmentation
+Intro: Lệnh này nhằm tăng cường ảnh, từ 1 thư mục ảnh gốc, nó sẽ tăng cường ảnh ra thành ảnh mới, có độ sáng, độ nét,... thay đổi theo cấu hình.
+
+Command:`ntanh_aug`
+
+Lệnh này sẽ tạo 1 file config, đường dẫn sẽ hiển thị trên CMD, chúng ta vào đó cấu hình lại, rồi chạy
+
+### Help
+Command: `ntanh`
+
+Lệnh này sẽ hiển thị help có các trường hợp sử dụng cơ bản
+
+
+# Version changed
+ 
+-   V0.1.7 (2024-10-16):
+    - Thêm chức năng Augment ảnh theo folder
+        - Có thể chạy augment image trực tiếp trong console, thay đổi cấu hình trong file config, đường dẫn file config sẽ được hiển thị trong console khi chạy.
+    - Thêm hàm `ntanh.ParamsBase.get_Home_Dir(AppName)`, Hàm này sẽ tạo folder `C:\RunProgram\AppName` và trả về đường dẫn. Mặc định cho tất cả các ứng dụng, dễ dùng và tập trung, không bị nhầm lẫn.
+
+-   V0.1.6 (2024-10-14):
+
+    -   Thêm thư viện convert yolo-bbox: `from ntanh.yolo_boxes import xyxy_to_yolo_str, yolo_str_to_xyxy`
+    -   print: `ntanh.__help__` sẽ ra hướng dẫn.
+    -   V 0.1.6.1:
+        -   Thay đổi thứ tự tham số trong hàm Yolo convert, trả kết quả dạng int thay vì float khi convert yolo2bbox
+
+-   V0.1.5 (2024-10-14):
+    -   Hoàn thiện chức năng tạo file config cho mỗi class: `from ntanh.ParamsBase import tactParametters`
+    -   Cập nhật readme, diễn giải nội dung.
+    -   Chạy `ntanh.info()` sẽ in ra code mẫu.
+-   V0-V0.1.4:
+    -   Test upload.
