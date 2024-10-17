@@ -1,0 +1,21 @@
+[build-system]
+requires = [
+    "scikit-build-core>=0.10",
+    "pybind11[global]"
+]
+build-backend = "scikit_build_core.build"
+
+[project]
+name = "swisspair"
+version = "0.0.17"
+author = "Karel Jilek"
+author_email = "los.karlosss@gmail.com"
+description = "Python bindings for Swiss pairing algorithm for (not only) Magic: The Gathering."
+readme = "README.md"
+python_requires = ">=3.9"
+requires=[]
+
+[tool.cibuildwheel.linux]
+before-all = """
+yum -y install gmp-devel || apk add gmp-dev
+"""

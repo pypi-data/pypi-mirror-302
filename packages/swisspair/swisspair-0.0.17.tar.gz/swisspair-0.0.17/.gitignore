@@ -1,0 +1,4 @@
+build/
+swisspair.egg-info/
+dist/
+_build/
