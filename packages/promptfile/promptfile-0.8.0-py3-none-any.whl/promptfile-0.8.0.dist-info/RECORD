@@ -1,0 +1,13 @@
+promptfile/__init__.py,sha256=SzmWhanPKCitobXnQCRnFGeO8kqQyaYc2CQJnk59O1M,1394
+promptfile/prompt.py,sha256=4zU5S8p6ikplzNCeT65UKH-nmLNHg5vo37DAH2AMV6Y,5595
+promptfile/types.py,sha256=1nn_75cyGN5G1y7t2XsynU0leMi0ZtWIDKxXEPD08g0,161
+promptfile/utils.py,sha256=oBmxj8WZpXKvwg64WGt02IXQmt0TJXnGGNmIwWv3Z9Q,2338
+promptfile/clients/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+promptfile/clients/base_client.py,sha256=iGLOGzES12vqNPnnPL7XHT1queW-RxbJRYM7RUFDNug,1077
+promptfile/clients/client.py,sha256=byGbHgCuhL19fLToOi6NXnS47-hfAEbfuxztte-HTYw,321
+promptfile/clients/singleton_client.py,sha256=yIz3TXA7Vb-DwHtCpnx-Wk2t-ftcqGQk1_Wr2mTdzwY,705
+promptfile-0.8.0.dist-info/LICENSE,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+promptfile-0.8.0.dist-info/METADATA,sha256=zBY9RtAfXBOcEUv9K6JyDP8C6Mfd4OoFqBj9UQaopas,834
+promptfile-0.8.0.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+promptfile-0.8.0.dist-info/top_level.txt,sha256=DFsooSpsjvwz6xlUzwnosWz_C_ooiXail8lciE-GB-s,11
+promptfile-0.8.0.dist-info/RECORD,,
