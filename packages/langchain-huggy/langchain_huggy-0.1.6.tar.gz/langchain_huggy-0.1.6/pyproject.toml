@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "langchain_huggy"
+version= "0.1.6"
+authors = [
+  { name="Kammari santhosh", email="your.email@example.com" },
+]
+description = "A LangChain integration for HuggingChat models"
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+dependencies = [
+    "langchain_core",
+    "hugchat",
+]
+[project.urls]
+"Homepage" = "https://github.com/yourusername/langchain_huggy"
+"Bug Tracker" = "https://github.com/yourusername/langchain_huggy/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
