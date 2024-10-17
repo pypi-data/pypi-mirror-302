@@ -1,0 +1,6 @@
+README.md
+setup.py
+latta_python_recorder.egg-info/PKG-INFO
+latta_python_recorder.egg-info/SOURCES.txt
+latta_python_recorder.egg-info/dependency_links.txt
+latta_python_recorder.egg-info/top_level.txt
