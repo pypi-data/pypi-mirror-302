@@ -1,0 +1,12 @@
+httpretty/__init__.py,sha256=XvB82qvMSlxtBuPbUZzylvrLsmz1kDZcb83GgwXdntI,2907
+httpretty/compat.py,sha256=6XdFBVcXa9KrOlawMrIBVwQRj0_YkPnB-tiwTsz3m84,1846
+httpretty/core.py,sha256=E7_7Di420ZpVV3f2B6Ybi66_pMtcBcH-oJxmEjRrMa8,69617
+httpretty/errors.py,sha256=2jADdnUCRLykdhsEl_WPzNwMkrnPuobfY_hpgbpl8oE,2169
+httpretty/http.py,sha256=cAD9fVpnQouwGnBMCGUpQZTWs2kszckOOkSGrAtjnHc,4737
+httpretty/utils.py,sha256=dIKRYM3obNcQBVPPwpYSstlQvOF5n0BnVv5_XKCXPYs,1369
+httpretty/version.py,sha256=be4CUXKZf2KNZ07CpGt-PJZbiUIfnKM9Aww7M1vII2g,18
+fauxhttp-0.1.0.dist-info/COPYING,sha256=Tm12UAug5OLHk_7eTRgb5gR0cQK0OxdVbSzsUEhwDEY,1091
+fauxhttp-0.1.0.dist-info/METADATA,sha256=0EuVlqLI5GQJWBPAU_QT1zSkA32BPaC5o-pmcLY53mQ,6852
+fauxhttp-0.1.0.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+fauxhttp-0.1.0.dist-info/top_level.txt,sha256=pS-sU7EKkKr0eAKAUVngSi1VX4K77pkJ82enFD8GNjU,10
+fauxhttp-0.1.0.dist-info/RECORD,,
