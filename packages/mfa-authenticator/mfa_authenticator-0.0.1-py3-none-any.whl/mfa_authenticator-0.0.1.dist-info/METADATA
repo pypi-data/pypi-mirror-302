@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: mfa-authenticator
+Version: 0.0.1
+Summary: This helps you setup MFA with 3rd Party Authenticator
+Author-email: Sunday Ajayi <sunnexajayi@gmail.com>
+Project-URL: homepage, https://your_project_homepage.com
+Requires-Python: >=3.10
+Requires-Dist: python-decouple
+Requires-Dist: pyotp
+Requires-Dist: qrcode
+Requires-Dist: pillow
+
