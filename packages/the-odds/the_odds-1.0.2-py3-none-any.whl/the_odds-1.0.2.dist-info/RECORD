@@ -1,0 +1,11 @@
+the_odds/__init__.py,sha256=dtwLRji8evVq7d2hnls67NXIVNvDlbmGVJlH6VS1j6U,53
+the_odds/api/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+the_odds/api/v4.py,sha256=Z7QrBQ_zmahh75aLaqM4lBp95KsNKs2y6T53G5Tpv2k,7110
+the_odds/http_client.py,sha256=ig77aZ4ZmdG8YRHSypXlA6AMn924usq0iKSlumfPAVY,1873
+the_odds/odds_client.py,sha256=4aEIXoG3_ED7DkEZXdBM4whs6HYWmg6TcuzNTsVh3BY,1515
+the_odds/odds_config.py,sha256=3tKrQcVvwKOcFwZ5ONllDKJeS-kFuufNo7q4lk7TmUc,363
+the_odds/request_helpers.py,sha256=_grZP4t0LVsJQ5a2kmqUJ7iUYPgVWuqz5p1h3-h47pI,522
+the_odds-1.0.2.dist-info/LICENSE,sha256=nzKjbIu6Ryq0HxR9jZk_0MM79Kjss2-fliR2nt5821k,1068
+the_odds-1.0.2.dist-info/METADATA,sha256=CII43r4bJbveHDs2OxDhTJrZZLiY19-IVAg8Q6po3Nk,2443
+the_odds-1.0.2.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+the_odds-1.0.2.dist-info/RECORD,,
