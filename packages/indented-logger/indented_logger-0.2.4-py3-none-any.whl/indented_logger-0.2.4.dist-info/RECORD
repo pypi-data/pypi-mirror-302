@@ -1,0 +1,9 @@
+indented_logger/__init__.py,sha256=SkfZi5QZza8ybNqMcdelkjrLs3ra3smx7E9Q4_cWkvg,332
+indented_logger/decorator.py,sha256=FL5rPAS9pJ5Sh5RHZOCGdcTAJiDhOTnXa4ZIxfJ6kN8,332
+indented_logger/formatter.py,sha256=7mbOfewIwOPueEgN1BDb0Iwh86tMzfhfyUlUPDq04nU,4723
+indented_logger/indent.py,sha256=8hMIYxezRCDq4YcNYP_qQg_pP0WKwriQstufcxPhAl0,470
+indented_logger/logging_config.py,sha256=43fdMDqeJZ8uHGyJ120vLsOpgsF79Pn-FUV-WxRvnnk,1557
+indented_logger-0.2.4.dist-info/METADATA,sha256=-oeQWR3AqupgWndRH_Vb-anVvcMoObZ_IIo20b72gIQ,14759
+indented_logger-0.2.4.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+indented_logger-0.2.4.dist-info/top_level.txt,sha256=PxCC8ffIctMwfidef_2c1Ply9OkPRvZ-eJfDp6NKKaU,16
+indented_logger-0.2.4.dist-info/RECORD,,
