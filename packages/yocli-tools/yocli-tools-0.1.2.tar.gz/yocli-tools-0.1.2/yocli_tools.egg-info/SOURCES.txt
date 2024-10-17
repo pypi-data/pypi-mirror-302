@@ -1,0 +1,14 @@
+README.md
+setup.py
+yocli/__init__.py
+yocli/main.py
+yocli/menu.py
+yocli/ssh.py
+yocli/utils.py
+yocli/vscode.py
+yocli_tools.egg-info/PKG-INFO
+yocli_tools.egg-info/SOURCES.txt
+yocli_tools.egg-info/dependency_links.txt
+yocli_tools.egg-info/entry_points.txt
+yocli_tools.egg-info/requires.txt
+yocli_tools.egg-info/top_level.txt
