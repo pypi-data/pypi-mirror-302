@@ -1,0 +1,2 @@
+[console_scripts]
+pythiarg = pythiarg:main

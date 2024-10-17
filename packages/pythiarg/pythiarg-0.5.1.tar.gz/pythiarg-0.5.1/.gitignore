@@ -1,0 +1,14 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution/Packaging
+*.egg-info/
+dist/
+# Development environment
+.direnv
+.venv
+
+# SECRET!
+**/evank.py

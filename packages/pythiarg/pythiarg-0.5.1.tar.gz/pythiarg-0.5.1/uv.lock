@@ -1,0 +1,15 @@
+version = 1
+requires-python = "==3.12.*"
+resolution-markers = [
+    "sys_platform == 'darwin'",
+    "sys_platform == 'linux'",
+]
+supported-markers = [
+    "sys_platform == 'darwin'",
+    "sys_platform == 'linux'",
+]
+
+[[package]]
+name = "pythiarg"
+version = "0.5.2.dev1+gfec9565.d19800101"
+source = { editable = "." }
