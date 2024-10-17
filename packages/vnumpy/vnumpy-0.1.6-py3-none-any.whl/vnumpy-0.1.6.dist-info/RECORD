@@ -1,0 +1,8 @@
+vnumpy/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+vnumpy/v3d.py,sha256=OIS1W0H0-R9CCStJZoOR6k0i-dQvUhl9W4Yxr5ga8AA,981
+vnumpy/v_dll/v.dll,sha256=T8iF2WUpfT7pr-Z35Lyh7pFnFWs4VdNwVmbfZSuGL2s,4192768
+vnumpy-0.1.6.dist-info/LICENSE,sha256=6kbiFSfobTZ7beWiKnHpN902HgBx-Jzgcme0SvKqhKY,1091
+vnumpy-0.1.6.dist-info/METADATA,sha256=Ks94xZ9JadvxVBAAUcpAZh9hxQ8lujWh88FPmpMazXU,1795
+vnumpy-0.1.6.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+vnumpy-0.1.6.dist-info/top_level.txt,sha256=SjuS45eMOrxqLNDrmF2P86EPfHkzf9M6zHKIAr4M1LE,7
+vnumpy-0.1.6.dist-info/RECORD,,
