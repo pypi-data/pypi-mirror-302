@@ -1,0 +1,25 @@
+name: Kairo testing 🧪 and coverage report generation 📝
+
+on:
+  - push
+
+jobs:
+  testing:
+    name: Python Testing and Coverage
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run Python Tests
+        uses: maekind/github-actions/.github/actions/python-testing-and-coverage@main
+        with:
+          python_version: "3.12"
+          coverage_path: "./src"
+
+  upload-coverage:
+    name: Upload Coverage to Codecov
+    needs: testing
+    runs-on: ubuntu-latest
+    steps:
+      - name: Upload Code Coverage
+        uses: maekind/github-actions/.github/actions/upload-codecov-coverage@main
+        with:
+          codecov_token: ${{ secrets.CODECOV_GH_KAIRO }}
