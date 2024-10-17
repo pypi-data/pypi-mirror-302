@@ -1,0 +1,2 @@
+[console_scripts]
+tobacco = tobacco.__main__:main
