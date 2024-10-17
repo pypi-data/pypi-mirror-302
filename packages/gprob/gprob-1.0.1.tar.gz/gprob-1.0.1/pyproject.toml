@@ -1,0 +1,61 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gprob"
+version = "1.0.1"
+description = "Probabilistic programming with arrays of Gaussian variables."
+requires-python = ">= 3.9"
+readme = "readme.md"
+license = {file = "LICENSE"}
+authors = [
+    {name = "Sergey Fedorov", email = "fedorov.s.a@outlook.com"},
+]
+classifiers = [
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python",
+    "Operating System :: OS Independent",
+]
+keywords = [
+    "Gaussian distribution",
+    "Noise",
+    "Random variables",
+    "Stochastic processes",
+    "Gaussian processes",
+    "Probabilistic programming",
+    "Python",
+    "Numpy",
+    "Scipy",
+]
+dependencies = [
+    "numpy >= 1.25",
+    "scipy",
+]
+
+[project.urls]
+Source = "https://github.com/SAFedorov/gprob"
+
+[tool.setuptools]
+packages=[
+    "gprob",
+    "gprob.external"
+]
+
+[tool.coverage.run]
+source = ["gprob"]
+
+[tool.coverage.report]
+show_missing = true
+
+[tool.ruff]
+include = ["*.py", "pyproject.toml"]
+extend-exclude = ["tests/external"]
+
+[tool.ruff.lint]
+extend-ignore = [
+  "F401",
+  "E731",
+  "E741",
+]
