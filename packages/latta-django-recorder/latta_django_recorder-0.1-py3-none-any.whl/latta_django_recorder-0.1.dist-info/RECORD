@@ -1,0 +1,11 @@
+latta-django/__init__.py,sha256=kopvaZHT-U_Q2yIUu02_iwWwaqbCJHFXdjTpimHb0Do,45
+latta-django/api.py,sha256=Hz04RRVelBtdx9JKSp8lf27boXR1nIdplCZ9ObVGbUI,4297
+latta-django/apps.py,sha256=tKjinIgqEKJmkVRH9nIHLWfa2F12TJkM1pAsML_84-4,736
+latta-django/consts.py,sha256=mhEjZUwHS33o87F602cROUqqIJQVkkFJVrbdTtjXpM0,455
+latta-django/logging.py,sha256=7dW-7Osf1Ffa4tzYRIO9z4gi4sHGsqO-mQZT1eSwgfM,567
+latta-django/middleware.py,sha256=MfUuvwrBBMWFnzymA3piF1CqnlaUwLDLS9STinRcfJI,3869
+latta-django/utils.py,sha256=OCQGQB8qQF1YV3VoQYgmDoeWSxSuiI2I10-dt3CCnZI,834
+latta_django_recorder-0.1.dist-info/METADATA,sha256=vVEvxRgyVf9mkxxl8e4RFGObMil5PMiwzyd9iVcD32Q,2027
+latta_django_recorder-0.1.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+latta_django_recorder-0.1.dist-info/top_level.txt,sha256=0meSGoEhXCTXHXHNs0hTC9GDniumqlNLKGNDwCqPwaA,13
+latta_django_recorder-0.1.dist-info/RECORD,,
