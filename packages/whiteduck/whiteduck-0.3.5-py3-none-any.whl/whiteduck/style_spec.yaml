@@ -1,0 +1,65 @@
+banner:
+  justify: center
+  text_style: bold orange3
+errors:
+  emoji: "\u274C"
+  style: bold red
+headers:
+  h1:
+    emoji: "\U0001F4CC"
+    style: bold blue
+  h2:
+    emoji: "\U0001F539"
+    style: bold cyan
+  h3:
+    emoji: "\u27A1\uFE0F"
+    style: bold green
+info:
+  emoji: "\u2139\uFE0F"
+  style: yellow
+main_title:
+  emoji: "\U0001F680"
+  style: bold blue
+module_execution:
+  running:
+    emoji: "\u2699\uFE0F"
+    style: bold green
+  success:
+    emoji: "\u2705"
+    style: bold green
+  title:
+    emoji: "\U0001F527"
+    style: bold magenta
+output:
+  title:
+    emoji: "\U0001F4C4"
+    style: cyan
+panel:
+  border_style: bold
+  padding:
+    - 1
+    - 1
+prompts:
+  file_dir:
+    emoji: "\U0001F4C1"
+  password:
+    emoji: "\U0001F512"
+  select:
+    emoji: "\U0001F50D"
+  text:
+    emoji: "\u270F\uFE0F"
+steps:
+  skip:
+    emoji: "\u23ED\uFE0F"
+    style: yellow
+  title:
+    emoji: "\U0001F538"
+    style: bold yellow
+version_info:
+  company_style: bold
+  url_style: cyan
+  version_style: bold
+wizard:
+  title:
+    emoji: "\U0001F9D9"
+    style: cyan
