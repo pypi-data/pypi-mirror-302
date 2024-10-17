@@ -1,0 +1,22 @@
+---
+version: 2
+models:
+  - name: stg_ergast__race__driver_fastest_lap
+    description: '{{ doc("tbl_stg_ergast__race__driver_fastest_lap") }}'
+    meta:
+      dagster:
+        asset_key:
+          - staging
+          - ergast
+          - race
+          - driver_fastest_lap
+    columns:
+      - name: session_id
+      - name: driver_id
+      - name: constructor_id
+      - name: fastest_lap
+      - name: fastest_lap_rank
+      - name: fastest_lap_time
+      - name: fastest_lap_time_gap
+      - name: fastest_lap_speed
+      - name: fastest_lap_time_interval

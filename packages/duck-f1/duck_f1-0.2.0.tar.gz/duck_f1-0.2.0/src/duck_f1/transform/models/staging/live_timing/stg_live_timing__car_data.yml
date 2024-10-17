@@ -1,0 +1,24 @@
+---
+version: 2
+models:
+  - name: stg_live_timing__car_data
+    description: '{{ doc("tbl_stg_live_timing__car_data") }}'
+    meta:
+      dagster:
+        asset_key:
+          - staging
+          - live_timing
+          - car_data
+    columns:
+      - name: session_id
+      - name: car_number
+      - name: engine_rpm
+      - name: car_speed
+      - name: engine_gear
+      - name: throttle_position
+      - name: brake_position
+      - name: drs_status
+      - name: drs_status_id
+      - name: event_utc_ts
+      - name: session_ts
+      - name: correctedsession_ts

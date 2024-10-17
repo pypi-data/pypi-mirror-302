@@ -1,0 +1,27 @@
+---
+version: 2
+models:
+  - name: stg_live_timing__timing_data_sector_segments
+    description: '{{ doc("tbl_stg_live_timing__timing_data_sector_segments") }}'
+    meta:
+      dagster:
+        asset_key:
+          - staging
+          - live_timing
+          - timing_data_sector_segments
+    columns:
+      - name: sector_key
+      - name: segment_key
+      - name: sector_status
+      - name: driver
+      - name: session_ts
+      - name: event_id
+      - name: event_round_number
+      - name: event_sha
+      - name: event_country
+      - name: event_start_local
+      - name: event_name
+      - name: session_id
+      - name: session_sha
+      - name: session_type
+      - name: session_start_local

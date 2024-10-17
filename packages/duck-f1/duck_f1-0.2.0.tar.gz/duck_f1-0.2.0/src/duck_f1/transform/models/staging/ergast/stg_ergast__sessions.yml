@@ -1,0 +1,18 @@
+---
+version: 2
+models:
+  - name: stg_ergast__sessions
+    description: '{{ doc("tbl_stg_ergast__races") }}'
+    meta:
+      dagster:
+        asset_key:
+          - staging
+          - ergast
+          - sessions
+    columns:
+      - name: event_id
+      - name: session_id
+      - name: ergast_race_id
+      - name: session_type
+      - name: session_name
+      - name: session_start_utc

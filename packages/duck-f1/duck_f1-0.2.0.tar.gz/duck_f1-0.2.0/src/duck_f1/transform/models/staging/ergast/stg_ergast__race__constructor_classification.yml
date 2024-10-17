@@ -1,0 +1,16 @@
+---
+version: 2
+models:
+  - name: stg_ergast__race__constructor_classification
+    description: '{{ doc("tbl_stg_ergast__race__constructor_classification") }}'
+    meta:
+      dagster:
+        asset_key:
+          - staging
+          - ergast
+          - constructor_results
+    columns:
+      - name: constructor_id
+      - name: session_id
+      - name: points
+      - name: status

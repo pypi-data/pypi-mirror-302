@@ -1,0 +1,26 @@
+---
+version: 2
+models:
+  - name: stg_live_timing__driver_list
+    description: '{{ doc("tbl_stg_live_timing__driver_list") }}'
+    meta:
+      dagster:
+        asset_key:
+          - staging
+          - live_timing
+          - driver_list
+    columns:
+      - name: session_id
+      - name: live_timing_driver_id
+      - name: car_number
+      - name: broadcast_name
+      - name: first_name
+      - name: driver_code
+      - name: starting_position
+      - name: team_name
+      - name: team_color
+      - name: head_shot_url
+      - name: session_ts
+      - name: last_name
+      - name: full_name
+      - name: full_name_key

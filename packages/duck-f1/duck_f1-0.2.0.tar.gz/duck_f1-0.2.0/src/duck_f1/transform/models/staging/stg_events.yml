@@ -1,0 +1,22 @@
+---
+version: 2
+models:
+  - name: stg_events
+    description: '{{ doc("tbl_stg_ergast__events") }}'
+    meta:
+      dagster:
+        asset_key:
+          - staging
+          - events
+    columns:
+      - name: event_id
+      - name: circuit_id
+      - name: ergast_race_id
+      - name: live_timing_event_sha
+      - name: season
+      - name: round
+      - name: event_country
+      - name: event_location
+      - name: event_name
+      - name: event_official_name
+      - name: wikipedia_url

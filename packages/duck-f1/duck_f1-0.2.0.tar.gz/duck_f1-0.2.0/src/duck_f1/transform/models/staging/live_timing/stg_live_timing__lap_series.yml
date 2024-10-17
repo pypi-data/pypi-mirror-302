@@ -1,0 +1,20 @@
+---
+version: 2
+models:
+  - name: stg_live_timing__lap_series
+    description: '{{ doc("tbl_stg_live_timing__lap_series") }}'
+    meta:
+      dagster:
+        asset_key:
+          - staging
+          - live_timing
+          - lap_series
+    columns:
+      - name: session_id
+      - name: session_type
+      - name: car_number
+      - name: lap_number
+      - name: lap_position
+      - name: lap_end_ts
+      - name: lap_start_ts
+      - name: lap_time

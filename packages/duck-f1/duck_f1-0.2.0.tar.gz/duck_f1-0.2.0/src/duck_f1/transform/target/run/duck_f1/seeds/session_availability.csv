@@ -1,0 +1,13 @@
+
+    
+    
+    
+    create table "f1"."seeds"."session_availability" ("season_year" integer,"event_sha" text,"event_path" text,"event_name" text,"event_date" timestamp without time zone,"session_sha" text,"session_type" text,"session_date" timestamp without time zone,"dataset" text,"available" boolean,"content_length" integer)
+  ;
+    -- dbt seed --
+    
+          COPY "f1"."seeds"."session_availability" FROM '/workspaces/duck-f1/src/duck_f1/transform/seeds/session_availability.csv' (FORMAT CSV, HEADER TRUE, DELIMITER ',')
+        
+
+;
+  

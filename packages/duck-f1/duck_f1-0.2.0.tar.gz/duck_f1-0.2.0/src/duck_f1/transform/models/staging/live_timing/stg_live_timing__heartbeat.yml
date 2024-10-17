@@ -1,0 +1,25 @@
+---
+version: 2
+models:
+  - name: stg_live_timing__heartbeat
+    description: '{{ doc("tbl_stg_live_timing__heartbeat") }}'
+    meta:
+      dagster:
+        asset_key:
+          - staging
+          - live_timing
+          - heartbeat
+    columns:
+      - name: utc_ts
+      - name: session_ts
+      - name: start_utc
+      - name: event_id
+      - name: event_round_number
+      - name: event_sha
+      - name: event_country
+      - name: event_start_local
+      - name: event_name
+      - name: session_id
+      - name: session_sha
+      - name: session_type
+      - name: session_start_local

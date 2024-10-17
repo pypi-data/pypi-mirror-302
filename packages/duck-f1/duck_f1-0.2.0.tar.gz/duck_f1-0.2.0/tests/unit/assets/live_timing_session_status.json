@@ -1,0 +1,22 @@
+[
+  {
+    "_StreamTimestamp": "00:00:10.032",
+    "Status": "Inactive"
+  },
+  {
+    "_StreamTimestamp": "00:33:36.921",
+    "Status": "Started"
+  },
+  {
+    "_StreamTimestamp": "00:34:51.059",
+    "Status": "Aborted"
+  },
+  {
+    "_StreamTimestamp": "01:55:00.402",
+    "Status": "Started"
+  },
+  {
+    "_StreamTimestamp": "03:33:24.643",
+    "Status": "Finished"
+  }
+]

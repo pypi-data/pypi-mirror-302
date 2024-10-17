@@ -1,0 +1,15 @@
+---
+version: 2
+models:
+  - name: stg_ergast__seasons
+    description: '{{ doc("tbl_stg_ergast__seasons") }}'
+    meta:
+      dagster:
+        asset_key:
+          - staging
+          - ergast
+          - seasons
+    columns:
+      - name: year
+      - name: wikipedia_url
+      - name: season_id

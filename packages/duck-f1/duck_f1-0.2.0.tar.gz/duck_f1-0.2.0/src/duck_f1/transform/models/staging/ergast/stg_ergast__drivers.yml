@@ -1,0 +1,29 @@
+---
+version: 2
+models:
+  - name: stg_ergast__drivers
+    description: '{{ doc("tbl_stg_ergast__drivers") }}'
+    meta:
+      dagster:
+        asset_key:
+          - staging
+          - ergast
+          - drivers
+    columns:
+      - name: driver_id
+      - name: ergast_driver_id
+      - name: live_timing_driver_id
+      - name: full_name_key
+      - name: car_number
+      - name: first_name
+      - name: last_name
+      - name: full_name
+      - name: driver_reference
+      - name: driver_code
+      - name: is_driver_code_generated
+      - name: date_of_birth
+      - name: age_years
+      - name: age_days
+      - name: age_label
+      - name: nationality
+      - name: wikipedia_url

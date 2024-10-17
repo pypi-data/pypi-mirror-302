@@ -1,0 +1,34 @@
+---
+version: 2
+models:
+  - name: stg_ergast__races
+    description: '{{ doc("tbl_stg_ergast__races") }}'
+    meta:
+      dagster:
+        asset_key:
+          - staging
+          - ergast
+          - races
+    columns:
+      - name: session_type
+      - name: event_id
+      - name: session_id
+      - name: circuit_id
+      - name: ergast_race_id
+      - name: year
+      - name: round
+      - name: name
+      - name: date
+      - name: event_time
+      - name: race_time_utc
+      - name: wikipedia_url
+      - name: fp1_date
+      - name: fp1_time
+      - name: fp2_date
+      - name: fp2_time
+      - name: fp3_date
+      - name: fp3_time
+      - name: quali_date
+      - name: quali_time
+      - name: sprint_date
+      - name: sprint_time

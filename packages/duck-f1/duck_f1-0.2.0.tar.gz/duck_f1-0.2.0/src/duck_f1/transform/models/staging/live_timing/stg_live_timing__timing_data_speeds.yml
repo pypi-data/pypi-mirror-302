@@ -1,0 +1,19 @@
+---
+version: 2
+models:
+  - name: stg_live_timing__timing_data_speeds
+    description: '{{ doc("tbl_stg_live_timing__timing_data_speeds") }}'
+    meta:
+      dagster:
+        asset_key:
+          - staging
+          - live_timing
+          - timing_data_speeds
+    columns:
+      - name: session_id
+      - name: car_number
+      - name: speed_key
+      - name: speed_value
+      - name: is_personal_fastest
+      - name: speed_status
+      - name: session_ts

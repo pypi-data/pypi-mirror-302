@@ -1,0 +1,21 @@
+---
+version: 2
+models:
+  - name: int_standings__drivers
+    description: '{{ doc("tbl_int_standings__drivers") }}'
+    meta:
+      dagster:
+        asset_key:
+          - intermediate
+          - standings
+          - drivers
+    columns:
+      - name: driver_id
+      - name: session_id
+      - name: season
+      - name: race_round
+      - name: championship_position
+      - name: win_count
+      - name: season_total
+      - name: round_points
+      - name: positions_gained
