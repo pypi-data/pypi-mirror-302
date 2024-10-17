@@ -1,0 +1,2 @@
+[console_scripts]
+kaitian = kaitian:hello
