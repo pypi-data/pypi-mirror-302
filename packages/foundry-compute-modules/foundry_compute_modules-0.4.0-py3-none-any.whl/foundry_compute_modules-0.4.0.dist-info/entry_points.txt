@@ -1,0 +1,9 @@
+[console_scripts]
+check_format=scripts.checks:check_format
+check_license=scripts.checks:check_license
+check_mypy=scripts.checks:check_mypy
+format=scripts.checks:format
+license=scripts.checks:license
+set_version=scripts.set_version:main
+test=scripts.checks:test
+
