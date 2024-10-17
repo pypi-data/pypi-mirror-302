@@ -1,0 +1,11 @@
+realitydb/__init__.py,sha256=6yWpeiSPNhxOJWaGO42V3ITXatCspKXsfcwzSHRXHuI,262
+realitydb/_proxy.py,sha256=UVFbkRwJ4yGLqZRGdUuMsnxbjGBv0iysoQjxdXWUT3Q,2694
+realitydb/documents.py,sha256=ke1gJhYbV_ocAZxViLyaAv1-Zl_pMjlfX7fgTDNdvCE,2615
+realitydb/models.py,sha256=pZD0CmxdkFdIUsKKEtJKC8w7BOgSad9_Q_YKzcbF7PA,5269
+realitydb/rpc_client.py,sha256=qysd54P_K53QCoMIIYqtyHnOTPNxMxIFsqpatlQwJiI,5344
+realitydb/rpc_server.py,sha256=EuvxHKeLVPDx9_82e2ok8GVqa8PIY7k-mxPEu-JZbVs,3731
+realitydb/utils.py,sha256=oy37IrV7lKLhiUA4uHRby8SbGn8gMXoXOFFwkuVraf8,6717
+realitydb-0.0.1.dist-info/METADATA,sha256=tLgPsoWs1wmx2yplZXmZ5Belyej-Xj11nK3b8sIeQdw,1777
+realitydb-0.0.1.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+realitydb-0.0.1.dist-info/entry_points.txt,sha256=WJVJZuvl1jbEJ0jBgFpNebDKdApYB7hKBF79bq_9oc8,47
+realitydb-0.0.1.dist-info/RECORD,,

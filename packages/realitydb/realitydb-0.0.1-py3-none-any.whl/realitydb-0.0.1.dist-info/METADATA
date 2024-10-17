@@ -1,0 +1,63 @@
+Metadata-Version: 2.1
+Name: realitydb
+Version: 0.0.1
+Summary: RPC, WebSocket Server, JSON RPC 2.0, OpenAPI, Swagger UI
+Home-page: https://perudevlabs.com
+License: MIT
+Keywords: RPC,WebSocket,FastAPI,OpenAPI,Swagger,JSON-RPC
+Author: Oscar Bahamonde
+Author-email: oscar@perudevlabs.com
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: cachetools (>=5.5.0,<6.0.0)
+Requires-Dist: cbase64 (>=0.0.9,<0.0.10)
+Requires-Dist: fastapi[all] (>=0.115.2,<0.116.0)
+Requires-Dist: openpyxl (>=3.1.5,<4.0.0)
+Requires-Dist: orjson (>=3.10.7,<4.0.0)
+Requires-Dist: pydantic (>=2.9.2,<3.0.0)
+Requires-Dist: pymupdf (>=1.24.11,<2.0.0)
+Requires-Dist: pytest (>=8.3.3,<9.0.0)
+Requires-Dist: python-docx (>=1.1.2,<2.0.0)
+Requires-Dist: python-pptx (>=1.0.2,<2.0.0)
+Requires-Dist: requests (>=2.32.3,<3.0.0)
+Requires-Dist: rocksdict (>=0.3.23,<0.4.0)
+Requires-Dist: uvicorn[standard] (>=0.31.1,<0.32.0)
+Project-URL: Documentation, https://realitydb-docs.perudevlabs.com
+Project-URL: Repository, https://github.com/perudevlabs/realitydb
+Description-Content-Type: text/markdown
+
+# RealityDB
+
+Document-oriented realtime database built on top of RocksDB, tailored for media applications.
+
+## Installation
+
+```bash
+pip install realitydb
+```
+
+## Usage
+
+```python
+from realitydb import DocumentObject
+
+class User(DocumentObject):
+    name: str
+    age: int
+```
+
+```python
+async def main():
+    user = User(name="John Doe", age=25)
+    await user.put()
+
+
+if __name__ == "__main__":
+    asyncio.run(main())
+```
+
