@@ -1,0 +1,10 @@
+term_assist/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+term_assist/term_assist.py,sha256=RL6noR2PSSx0BRb5m1Ju14Y-mW_FsgeygBc8T-RJ1RQ,2466
+term_assist/data/config_default.yaml,sha256=rPaQeDM6HHEzXJ1qCvAFhtHuOyYq_Wwp7sO22ktv0nQ,351
+term_assist/data/models.yaml,sha256=sl6uOcvevBeg95ugZgRx0BGpzNNZubLCEkAzDIP2zK8,138
+term_assist-0.1.1.dist-info/COPYING,sha256=DZak_2itbUtvHzD3E7GNUYSRK6jdOJ-GqncQ2weavLA,34523
+term_assist-0.1.1.dist-info/METADATA,sha256=DHRUjVMO1cyJ43QVPySGot_AfKzFl931g1X8uSP0ejQ,42353
+term_assist-0.1.1.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+term_assist-0.1.1.dist-info/entry_points.txt,sha256=MpVHmcgK_GbmTcesa9Iuoi8Uizj59V1YlxXFF9fu0C8,52
+term_assist-0.1.1.dist-info/top_level.txt,sha256=qmT4xp-7v4VDAHvstJDnxZoTsA1j4R7ZbdLZRIEDRo8,12
+term_assist-0.1.1.dist-info/RECORD,,
