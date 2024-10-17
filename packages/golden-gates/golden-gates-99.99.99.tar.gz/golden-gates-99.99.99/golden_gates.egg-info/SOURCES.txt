@@ -1,0 +1,6 @@
+setup.py
+golden_gates.egg-info/PKG-INFO
+golden_gates.egg-info/SOURCES.txt
+golden_gates.egg-info/dependency_links.txt
+golden_gates.egg-info/not-zip-safe
+golden_gates.egg-info/top_level.txt
