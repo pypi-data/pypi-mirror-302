@@ -1,0 +1,23 @@
+[project]
+name = "desktop_file_generator"
+version = "0.0.3"
+authors = [
+  { name="Chris Bryan", email="chrismbryan@gmail.com" },
+]
+license = {file = "LICENSE"}
+description = "Automate the creation of .desktop files for the Linux desktop"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/cmbryan/desktop_file_generator"
+Issues = "https://github.com/cmbryan/desktop_file_generator/issues"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
