@@ -1,0 +1,89 @@
+Metadata-Version: 2.3
+Name: pyfroc
+Version: 0.1.0
+Summary: python toolkit for FROC analysis
+Project-URL: Homepage, https://github.com/akchan/pyfroc
+Project-URL: Issues, https://github.com/akchan/pyfroc/issues
+Author-email: Satoshi Funayama <akchan.acts@gmail.com>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.9
+Requires-Dist: bidict>=0.23.1
+Requires-Dist: matching>=1.4.3
+Requires-Dist: miniballcpp>=0.2.3
+Requires-Dist: numpy<2.0.0,>=1.2.0
+Requires-Dist: openpyxl>=3.1.4
+Requires-Dist: pandas>=2.2.2
+Requires-Dist: pydicom>=2.4.4
+Requires-Dist: pynrrd>=1.0.0
+Requires-Dist: pytypedstream>=0.1.0
+Requires-Dist: requests
+Requires-Dist: scikit-image>=0.23.2
+Requires-Dist: tcia-utils
+Requires-Dist: tqdm>=4.66.4
+Description-Content-Type: text/markdown
+
+# pyfroc
+
+Python framework for FROC analysis
+
+## About
+
+### What pyfroc does
+
+- Improve FROC analysis procedure.
+- Manage responses of raters.
+- The responses can be made using segmentation function of [3D Slicer](https://www.slicer.org/).
+- Evaluate responses and devide them into true positive or false positive automatically.
+- Build a xlsx file for the [RJafroc](https://github.com/dpc10ster/RJafroc), a R library which runs statistical tests of AFROC (alternative Free-response receiver operating characteristic) analysis.
+- Write images of responses with paired lesions (if exists).
+
+### What pyfroc doesn't
+
+- Statistical analysis of JAFROC. This is out of scope of pyfroc. Use [RJafroc](https://github.com/dpc10ster/RJafroc) for statistical analysis.
+- FROC analysis including multi-modality references because pyfroc doesn't implement an algorithm to match intermodality lesions.
+
+## Table of contents
+
+## Use case
+
+pyfroc is designed for specific scenarios of FROC analysis. pyfroc supports only one modality for reference lesions.
+
+### Example scenario #1
+
+- Compare diagnostic performance between radiologists and AI.
+- Using a specific series to record responses.
+
+### Example scenario #2
+
+- Compare a standard MRI protocol with an abbreviated protocol.
+- Using same series to record responses.
+
+### Example scenario #3
+
+- Compare images reconstructed using an advanced method with images reconstructed using conventional method.
+- Using either series to record responses.
+
+## Instalation
+
+```bash
+pip install pyfroc
+```
+
+## Tutorial
+
+Use pyfroc with 3D Slicer
+
+
+## License
+
+GPLv3
+
+
+
+
+
+
+
