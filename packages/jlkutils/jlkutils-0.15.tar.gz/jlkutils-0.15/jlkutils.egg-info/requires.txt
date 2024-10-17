@@ -1,0 +1,5 @@
+cryptography
+opencv-python
+openai
+tkinter
+ast
