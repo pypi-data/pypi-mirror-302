@@ -1,0 +1,15 @@
+AUTHORS.rst
+LICENSE
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+mslex/__init__.py
+mslex/exceptions.py
+mslex/py.typed
+mslex.egg-info/PKG-INFO
+mslex.egg-info/SOURCES.txt
+mslex.egg-info/dependency_links.txt
+mslex.egg-info/entry_points.txt
+mslex.egg-info/top_level.txt
+tests/test_mslex.py
