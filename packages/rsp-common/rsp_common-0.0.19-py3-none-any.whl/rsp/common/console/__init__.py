@@ -1,0 +1,1 @@
+from .console import Foreground, Background, print_c
