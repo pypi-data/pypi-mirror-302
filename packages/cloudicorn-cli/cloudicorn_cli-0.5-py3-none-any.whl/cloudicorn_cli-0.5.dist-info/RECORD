@@ -1,0 +1,13 @@
+cloudicorn/__init__.py,sha256=FcIkQNLlb1oElUUe2Y6hDISd4DIUxuGz_ywLA4I11u4,44
+cloudicorn/cloudicorn.py,sha256=LB0TiFd2Mg443dWTtH6ItGBh1Q60l_1g0vgqWj96F-g,16024
+cloudicorn/core/__init__.py,sha256=K0kNy26Vm6A-1V5lST3ily6yVsNLUbiqk6AZDFm2nJI,20
+cloudicorn/core/core.py,sha256=NKigT3TD_sDV03QKvBvTqsb-T4Ompn__kgruCSfnDNI,45279
+cloudicorn/setup/__init__.py,sha256=tHmedScGfMZ3z2HmZJtg5bQJ0QjEfuTIizOwhhNZqIs,47
+cloudicorn/setup/setup.py,sha256=ZV6D5JI83w_8-_gZmWIeeUIZyiVL5XvDkAamMYsZ9pc,28515
+cloudicorn/tfwrapper/__init__.py,sha256=HCsKPR0Fx3TPIePwY5_2-ewT1kZtkpXnJW_-xOygENI,25
+cloudicorn/tfwrapper/tfwrapper.py,sha256=U2wBe2wUpP0ZZZnhsMJ35mtb-jLe0bcIlspE9dvihlI,9853
+cloudicorn_cli-0.5.dist-info/METADATA,sha256=aXT-tuAojK5hkDELJJIMHPYgzUkXCv1t7ctTPjLOXf0,3266
+cloudicorn_cli-0.5.dist-info/WHEEL,sha256=oiQVh_5PnQM0E3gPdiz09WCNmwiHDMaGer_elqB3coM,92
+cloudicorn_cli-0.5.dist-info/entry_points.txt,sha256=PNwJzA7TyjohLN7s2_SA-pbNp0Z77pusUSyl8sepQPc,108
+cloudicorn_cli-0.5.dist-info/top_level.txt,sha256=tbopk-dU5tW0uXSnrurfid60DancBb9zMFbpflGtw38,11
+cloudicorn_cli-0.5.dist-info/RECORD,,
