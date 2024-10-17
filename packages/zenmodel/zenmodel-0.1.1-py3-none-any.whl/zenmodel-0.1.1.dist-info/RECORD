@@ -1,0 +1,10 @@
+examples2/__init__.py,sha256=uzyPNRYghZJJL9WfJ4-aPSBxcnre5hG0OBzZWhbnU1Q,219
+pyprocessor/__init__.py,sha256=yvdAryPtdAuT7_oXZ43TgsAaYP1Jmrly0VkD0O55u9k,250
+pyprocessor/brain_context.py,sha256=3tT6_FLgjyfoGK3oaflRV0-vMqUqzP5eMuNKanbrbr0,4519
+pyprocessor/processor.py,sha256=_eb9wZvzgrB-lmbMfOGV1266eekIzX0wH7fcv7BS-B0,174
+pyprocessor/selector.py,sha256=DXlgvsgcAF5X__HMa6Dxu_AOhfi-feDZ8q64dTd-Cw4,243
+zenmodel-0.1.1.dist-info/LICENSE,sha256=Dd0VcBA67--sY_cdIDvTLjaMniyYeaPj92j35PMN3v4,1106
+zenmodel-0.1.1.dist-info/METADATA,sha256=J3gdN3zpVTS8_KWiBhRaLAXQNVYdptfKSy_0vOPk_ow,29399
+zenmodel-0.1.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+zenmodel-0.1.1.dist-info/top_level.txt,sha256=gcSM9NQryXEq49PzScw05cr4uPbXqiBK0lozw1EYXK0,22
+zenmodel-0.1.1.dist-info/RECORD,,
