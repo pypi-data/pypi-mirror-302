@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: camsai-standards
+Version: 2024.10.16.post0
+Summary: CAMSAI standards
+Author-email: "Exabyte Inc." <info@mat3ra.com>
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Development Status :: 3 - Alpha
+Classifier: Topic :: Software Development
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Provides-Extra: tests
+Requires-Dist: coverage[toml]>=5.3; extra == "tests"
+Requires-Dist: pre-commit; extra == "tests"
+Requires-Dist: black; extra == "tests"
+Requires-Dist: ruff; extra == "tests"
+Requires-Dist: isort; extra == "tests"
+Requires-Dist: mypy; extra == "tests"
+Requires-Dist: pip-tools; extra == "tests"
+Requires-Dist: pytest; extra == "tests"
+Requires-Dist: pytest-cov; extra == "tests"
+Requires-Dist: pytest-mock; extra == "tests"
+Provides-Extra: all
+Requires-Dist: camsai-standards[tests]; extra == "all"
+
+# CAMSAI Standards
+
+To be added.

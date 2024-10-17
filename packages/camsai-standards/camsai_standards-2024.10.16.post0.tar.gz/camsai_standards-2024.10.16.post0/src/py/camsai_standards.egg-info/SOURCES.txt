@@ -1,0 +1,14 @@
+.gitignore
+LICENSE
+README.md
+pyproject.toml
+src/py/__init__.py
+src/py/camsai/__init__.py
+src/py/camsai/standards/__init__.py
+src/py/camsai_standards.egg-info/PKG-INFO
+src/py/camsai_standards.egg-info/SOURCES.txt
+src/py/camsai_standards.egg-info/dependency_links.txt
+src/py/camsai_standards.egg-info/requires.txt
+src/py/camsai_standards.egg-info/top_level.txt
+tests/py/unit/__init__.py
+tests/py/unit/test_example.py
