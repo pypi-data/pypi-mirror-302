@@ -1,0 +1,6 @@
+setup.py
+wiselog/__init__.py
+wiselog.egg-info/PKG-INFO
+wiselog.egg-info/SOURCES.txt
+wiselog.egg-info/dependency_links.txt
+wiselog.egg-info/top_level.txt
