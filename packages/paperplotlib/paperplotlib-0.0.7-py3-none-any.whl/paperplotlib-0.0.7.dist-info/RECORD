@@ -1,0 +1,11 @@
+paperplotlib/__init__.py,sha256=NMLOt_ITs-ZxKhVDavo7azfj7KhnLM9tKfY4vDZEtdk,90
+paperplotlib/bar_graph.py,sha256=rbR9k_dR5W5Elzt-jPdyRqupwkGhJmYSgSBv0E8hMCs,3173
+paperplotlib/color.css,sha256=dfr_V4KvLV-HUBics-N0tOE3qIecFhdirCdrSt3p10g,1473
+paperplotlib/color.py,sha256=AbBxscbi-Ib5Uw4ZDfvQ6XH6wu2--UESVbPAMTjuiAg,2949
+paperplotlib/consola-1.ttf,sha256=yiOnK8NFp6rWXmC6rzZjLcVH3itgwYGmioNfh6cEXJY,96772
+paperplotlib/graph.py,sha256=Z1_De_QPjjaV5-9iRo0Vq-a1IlcAZUAVjlAsgsR8IfM,4089
+paperplotlib/line_graph.py,sha256=YVjoip54wgGTK-ddK8xDEQRgr31MulPKs9chrxK-7JA,3287
+paperplotlib-0.0.7.dist-info/LICENSE,sha256=PilnE3nFW8JtAavDflmenrGbZnaUefqEGz9xK9GM56Y,1064
+paperplotlib-0.0.7.dist-info/METADATA,sha256=8qM_EoZ8tr6VwdctmW-lQr_KiAEg3dFTt8nHufoqZ58,2656
+paperplotlib-0.0.7.dist-info/WHEEL,sha256=Zb28QaM1gQi8f4VCBhsUklF61CTlNYfs9YAZn-TOGFk,88
+paperplotlib-0.0.7.dist-info/RECORD,,
