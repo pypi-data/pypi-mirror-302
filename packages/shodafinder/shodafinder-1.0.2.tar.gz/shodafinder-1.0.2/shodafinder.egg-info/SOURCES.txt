@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+favicon_hash/__init__.py
+favicon_hash/cli.py
+shodafinder.egg-info/PKG-INFO
+shodafinder.egg-info/SOURCES.txt
+shodafinder.egg-info/dependency_links.txt
+shodafinder.egg-info/entry_points.txt
+shodafinder.egg-info/requires.txt
+shodafinder.egg-info/top_level.txt
