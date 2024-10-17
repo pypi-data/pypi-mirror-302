@@ -1,0 +1,36 @@
+# Email Recollection Tool
+
+## Description
+
+Email Recollection Tool is a Python-based utility designed to automatically collect emails from a specified Outlook folder, save attachments with supported extensions, and process them accordingly. It offers an easy installation method and a simple configuration interface for users to set their parameters.
+
+## Features
+
+- **Outlook Integration**: Connects to Outlook and accesses a specified folder.
+- **Automatic Setup**: Runs configuration setup automatically upon first use.
+- **Email Filtering**: Retrieves emails based on a user-defined date range.
+- **Attachment Management**: Saves attachments with supported file extensions (.pdf, .xlsx, .csv).
+- **File Processing**: Processes PDF, Excel, and CSV files.
+- **User-Friendly Configuration**: Simple graphical interface to set and update configurations.
+- **Scheduling**: Allows users to schedule the tool to run automatically at a specified day and time.
+- **Easy Installation**: Installable via a single command using `pip`.
+
+## Installation
+
+**Important:** To ensure proper installation and functionality, please install the tool using **Command Prompt** or **PowerShell**. Installing via the terminal in Visual Studio Code (VSCode) may not correctly register the command-line scripts.
+
+Ensure you have **Python 3.6** or higher installed on your machine.
+
+1. **Open Command Prompt or PowerShell:**
+
+   - **Command Prompt:**
+     - Press `Win + R`, type `cmd`, and press **Enter**.
+     - Alternatively, search for **Command Prompt** in the Start menu.
+   - **PowerShell:**
+     - Press `Win + R`, type `powershell`, and press **Enter**.
+     - Alternatively, search for **PowerShell** in the Start menu.
+
+2. **Install the Tool:**
+
+   ```cmd
+   pip install extractimail
