@@ -1,0 +1,90 @@
+name: Create Release ✨ and Publish Python 🐍 distribution 📦 to PyPI
+
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - '**/README.md'
+
+jobs:
+  bump-version:
+    name: Bump Version
+    runs-on: ubuntu-latest
+    outputs:
+      new_version: ${{ steps.bump-version-step.outputs.new_version }}
+    # Ignore version bump commits to avoid a loop
+    if: ${{ !contains(github.event.head_commit.message, '[skip ci]') }}
+    permissions:
+      contents: write  # Required to modify the input file
+    steps:
+      - name: Bump version in pyproject.toml
+        id: bump-version-step
+        uses: maekind/github-actions/.github/actions/bump-version@main
+        with:
+          file: pyproject.toml
+          gh_token: ${{ secrets.GH_TOKEN }}
+
+  create-tag:
+    name: Create Tag
+    needs: bump-version
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Debug
+        run: | 
+          echo "new_version=${{ needs.bump-version.outputs.new_version }}"
+          echo "${{ needs.bump-version.outputs }} "
+        
+      - name: Create Git Tag
+        uses: maekind/github-actions/.github/actions/create-tag@main
+        with:
+          tag_name: v${{ needs.bump-version.outputs.new_version }}
+          commits: ${{ github.event.pull_request.commits }}
+          title: ${{ github.event.pull_request.title }}
+          description: ${{ github.event.pull_request.body }}
+          emoji: "🚀✨"
+
+  create-release:
+    name: Create Release
+    needs: [bump-version, create-tag]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write  # Required for creating a release
+    steps:
+      - name: Create GitHub Release
+        uses: maekind/github-actions/.github/actions/create-release@main
+        with:
+          tag_name: v${{ needs.bump-version.outputs.new_version }}
+
+  build-and-publish:
+    name: Build and Publish to PyPI
+    needs: create-release
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read  # Required to read the code for building the distribution
+      id-token: write  # Required for publishing to PyPI
+    steps:
+      - name: Build Python 🐍 Distributions 📦 
+        uses: maekind/github-actions/.github/actions/build-python-distribution@main
+        with:
+          python_version: "3.12"
+
+      - name: Publish distribution 📦 to PyPI
+        uses: maekind/github-actions/.github/actions/publish-to-pypi@main
+
+  github-release:
+    name: Sign and Upload to GitHub Release
+    needs: [bump-version, build-and-publish]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write  # Required to upload artifacts to the release
+      id-token: write  # Required for signing with Sigstore
+    steps:
+      - name:  >-
+          Sign the Python 🐍 distribution 📦 with Sigstore
+          and upload them to GitHub Release
+        uses: maekind/github-actions/.github/actions/github-release@main
+        with:
+          tag_name: v${{ needs.bump-version.outputs.new_version }}
