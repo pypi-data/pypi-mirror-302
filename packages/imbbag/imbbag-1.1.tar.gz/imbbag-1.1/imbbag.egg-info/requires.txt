@@ -1,0 +1,8 @@
+scikit-learn
+imblearn
+numpy
+scipy
+PyGAD
+mlxtend
+scikit-learn-intelex
+ARFS
