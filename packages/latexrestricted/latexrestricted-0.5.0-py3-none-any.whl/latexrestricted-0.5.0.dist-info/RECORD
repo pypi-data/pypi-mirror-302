@@ -1,0 +1,14 @@
+latexrestricted/__init__.py,sha256=P1AdAjSY373Zrvgrr3b1cozfY8N7FJdZxemqf2iZD_c,671
+latexrestricted/_anypath.py,sha256=vNl_ifKlliD2dXTTMBt063CfAyBAL9V45S5KBOQ_z3k,2779
+latexrestricted/_latex_config.py,sha256=mHrEqVY1A790FcEF6eTEHLBGQmXBhxP8TjXm5kRzx2k,26941
+latexrestricted/_restricted_pathlib.py,sha256=_5XPOMPrRK5_rzMuQWt1rWUhd6kX8icIbk-zIYE1nlg,30016
+latexrestricted/_restricted_subprocess.py,sha256=3hz-0-4zvz0-RoUdJgY2yx6QWtbOxIRgR9TVVPR9lsA,5389
+latexrestricted/err.py,sha256=DDBgoSEkCEtVSsQQbCuuqfTElzAXw8GemWYKAPdfPYs,755
+latexrestricted/fmtversion.py,sha256=Vfm7NQm50fzd9-teRzFLXKLHyiDtt2dSztufRH5YbwA,8724
+latexrestricted/version.py,sha256=JXNXCLTuV0EfFKaE3S-PdCsg4VjJGxlF7tPwM4KXLe0,150
+latexrestricted-0.5.0.dist-info/CHANGELOG.md,sha256=y2kOTqr-ea3pAqENn3aalI-JxDkGzOw6OyVmivkxXfI,1377
+latexrestricted-0.5.0.dist-info/LICENSE.txt,sha256=r32fnpOyfQtRKt1JYnobQXJEgpiMc3xTOqFz0au3Dlo,620
+latexrestricted-0.5.0.dist-info/METADATA,sha256=nS9O08-VFSGc6NvOAzcXqYWZgpmIHv08tgh-yUq8L-s,21806
+latexrestricted-0.5.0.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+latexrestricted-0.5.0.dist-info/top_level.txt,sha256=_IAF_fREhYKHSfm6bYRChxRyjRDSsuMQsjfvWlxBSl0,16
+latexrestricted-0.5.0.dist-info/RECORD,,
