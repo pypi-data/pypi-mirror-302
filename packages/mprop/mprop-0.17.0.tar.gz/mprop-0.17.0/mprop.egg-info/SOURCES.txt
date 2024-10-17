@@ -1,0 +1,8 @@
+LICENSE
+README.rst
+mprop.py
+setup.py
+mprop.egg-info/PKG-INFO
+mprop.egg-info/SOURCES.txt
+mprop.egg-info/dependency_links.txt
+mprop.egg-info/top_level.txt
