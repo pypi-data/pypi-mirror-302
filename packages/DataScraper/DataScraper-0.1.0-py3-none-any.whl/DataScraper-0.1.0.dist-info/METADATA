@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: DataScraper
+Version: 0.1.0
+Summary: A web scraper to extract URLs, content from websites and convert DOCX to PDF.
+Home-page: https://github.com/mukhtarulislam/Datascrapper.git
+Author: Mukhtar ul Islam
+Author-email: mukhtarulislam88@hotmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+Requires-Dist: beautifulsoup4
+Requires-Dist: python-docx
+Requires-Dist: reportlab
+Requires-Dist: pythoncom
+Requires-Dist: pywin32
+
+# Web Content Extractor
+
+This package extracts content from web pages, saves it as `.docx` files, and converts them to PDF.
+
+## Installation
+
+To install the package, use:
+
+
+```bash
+pip install .
