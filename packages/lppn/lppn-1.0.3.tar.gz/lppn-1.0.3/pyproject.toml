@@ -1,0 +1,37 @@
+# pyproject.toml
+
+[build-system]
+requires = ["setuptools>=64", "setuptools_scm>=8"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lppn"
+dynamic = ["version"]
+description = "Print the latest Python patch number of a given major and minor version"
+readme = "README.md"
+authors = [{ name = "President Not Sure", email = "144360653+president-not-sure@users.noreply.github.com" }]
+license = { file = "LICENSE" }
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Developers",
+]
+keywords = ["get", "latest", "python", "patch", "version"]
+dependencies = ["requests >= 2.32.3"]
+requires-python = ">=3.8"
+
+[project.optional-dependencies]
+dev = []
+
+[tool.setuptools_scm]
+version_file = "src/lppn/_version.py"
+
+[project.urls]
+Homepage = "https://github.com/president-not-sure/lppn"
+Repository = "https://github.com/president-not-sure/lppn.git"
+Issues = "https://github.com/president-not-sure/lppn/issues"
+
+[project.scripts]
+lppn = "lppn.cli:parse"
