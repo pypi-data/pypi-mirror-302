@@ -1,0 +1,10 @@
+fix_plugin_onprem/__init__.py,sha256=GP3V77mUf044dHfa8vFQzbf8_CkEEl21jJ7O-AyqpZ0,5381
+fix_plugin_onprem/config.py,sha256=L6MY8V76Hhcpu5mMNRnLhyGnSMFlI7BiwQ4IOzr890o,923
+fix_plugin_onprem/resources.py,sha256=nL9_iqrUCaiHe5YLzePf5-G_fQ3uAZeDROMvTsBpJyU,1778
+fix_plugin_onprem/ssh.py,sha256=r1cdylKJ1oi52Yw0JvEjfP5NWAQ3atM_YGAUoL3bHek,4232
+fixinventory_plugin_onprem-4.1.1.dist-info/LICENSE,sha256=J97xS2DyYAE0OOqQtlgjN8knkGtxt6dWbYrzIRWnf_Y,10844
+fixinventory_plugin_onprem-4.1.1.dist-info/METADATA,sha256=6Rneyst2cDex5XStsP-qBa53WKZvIF2cyqqx9-Zg7RM,1685
+fixinventory_plugin_onprem-4.1.1.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+fixinventory_plugin_onprem-4.1.1.dist-info/entry_points.txt,sha256=-ee4Fci-s7p8x7a2JS_AKqmyu3RQOE2YQ8vKnNQAd2I,63
+fixinventory_plugin_onprem-4.1.1.dist-info/top_level.txt,sha256=eL-SewhAZ1JqndQWV5avxCblmIAkTrBy8giSEt2trIM,18
+fixinventory_plugin_onprem-4.1.1.dist-info/RECORD,,
