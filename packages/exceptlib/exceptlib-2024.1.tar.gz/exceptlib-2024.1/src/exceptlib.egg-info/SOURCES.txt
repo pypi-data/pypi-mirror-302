@@ -1,0 +1,8 @@
+LICENSE.md
+README.md
+pyproject.toml
+src/exceptlib.py
+src/exceptlib.egg-info/PKG-INFO
+src/exceptlib.egg-info/SOURCES.txt
+src/exceptlib.egg-info/dependency_links.txt
+src/exceptlib.egg-info/top_level.txt
