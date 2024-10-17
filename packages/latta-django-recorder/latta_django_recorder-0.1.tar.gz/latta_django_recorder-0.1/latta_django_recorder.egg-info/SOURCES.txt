@@ -1,0 +1,14 @@
+README.md
+setup.py
+latta-django/__init__.py
+latta-django/api.py
+latta-django/apps.py
+latta-django/consts.py
+latta-django/logging.py
+latta-django/middleware.py
+latta-django/utils.py
+latta_django_recorder.egg-info/PKG-INFO
+latta_django_recorder.egg-info/SOURCES.txt
+latta_django_recorder.egg-info/dependency_links.txt
+latta_django_recorder.egg-info/requires.txt
+latta_django_recorder.egg-info/top_level.txt
