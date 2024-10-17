@@ -1,0 +1,10 @@
+dbt-spark<2.0,>=1.8.0
+dbt-core<2.0,>=1.9.0b1
+dbt-adapters<2.0,>=1.7.0
+dbt-common<2.0,>=1.10.0
+databricks-sql-connector<3.5.0,>=3.4.0
+databricks-sdk==0.17.0
+keyring>=23.13.0
+pandas<2.2.0
+protobuf<5.0.0
+pydantic~=2.7.0
