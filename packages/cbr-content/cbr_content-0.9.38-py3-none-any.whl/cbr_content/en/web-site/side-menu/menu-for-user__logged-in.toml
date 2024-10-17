@@ -1,0 +1,32 @@
+[home]
+    href = 'home'
+    icon = 'mdi-home'
+    text = 'Home'
+    logged_in = false
+    visibility = true
+[athena]
+    href = 'athena'
+    icon = 'mdi-robot'
+    text = 'Athena'
+    logged_in = false
+    visibility = true
+
+[past_chats]
+    href = 'past-chats'
+    icon = 'mdi-robot'
+    text = 'Past Chats'
+    logged_in = false
+    visibility = true
+
+[chat_with_llms]
+    href = 'chat-with-llms'
+    icon = 'mdi-message'
+    text = 'Chat with LLMs'
+    logged_in = false
+    visibility = true
+[docs]
+    href = 'docs'
+    icon = 'mdi-book-multiple-variant'
+    text = 'Docs'
+    logged_in = false
+    visibility = true
