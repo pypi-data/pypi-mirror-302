@@ -1,0 +1,13 @@
+README.md
+pyproject.toml
+fastsolv/__init__.py
+fastsolv/_classes.py
+fastsolv/_cli.py
+fastsolv/_module.py
+fastsolv.egg-info/PKG-INFO
+fastsolv.egg-info/SOURCES.txt
+fastsolv.egg-info/dependency_links.txt
+fastsolv.egg-info/entry_points.txt
+fastsolv.egg-info/requires.txt
+fastsolv.egg-info/top_level.txt
+test/test_fastsolv.py
