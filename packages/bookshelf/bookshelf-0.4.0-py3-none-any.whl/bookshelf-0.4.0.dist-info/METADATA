@@ -1,0 +1,28 @@
+Metadata-Version: 2.3
+Name: bookshelf
+Version: 0.4.0
+Summary: A collection of curated climate data sets
+Author-email: Jared Lewis <jared.lewis@climate-resource.com>
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Scientific/Engineering
+Requires-Python: >=3.10
+Requires-Dist: datapackage>=1.15.2
+Requires-Dist: platformdirs>=4.3.6
+Requires-Dist: pooch
+Requires-Dist: pydantic>=1.10.17
+Requires-Dist: pyyaml
+Requires-Dist: scmdata>=0.16.1
+Description-Content-Type: text/markdown
+
+# Bookshelf
+
+This file is replaced with ../../README.md during the build process.
