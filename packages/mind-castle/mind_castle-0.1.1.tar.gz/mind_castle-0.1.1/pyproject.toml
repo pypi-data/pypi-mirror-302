@@ -1,0 +1,21 @@
+[project]
+name = "mind-castle"
+version = "0.1.1"
+description = "A universal secrets manager"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "boto3>=1.35.38",
+    "sqlalchemy>=2.0.0,<3.0.0",
+]
+
+[tool.pytest.ini_options]
+pythonpath = [
+  "."
+]
+
+[tool.uv]
+dev-dependencies = [
+    "pytest>=8.3.3",
+]
+package = true
