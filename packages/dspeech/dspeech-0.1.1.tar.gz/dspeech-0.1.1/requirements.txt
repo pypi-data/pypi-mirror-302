@@ -1,0 +1,11 @@
+torch==2.1.0
+torchaudio==2.1.0
+torchvision==0.16.0
+funasr==1.1.12
+faster-whisper==1.0.3
+webrtcvad==2.0.10
+silero-vad-nuaazs==0.0.4
+numpy
+soundfile
+rich
+click
