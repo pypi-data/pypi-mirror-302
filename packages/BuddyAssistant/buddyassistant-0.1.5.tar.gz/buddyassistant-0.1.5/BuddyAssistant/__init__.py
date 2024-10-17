@@ -1,0 +1,1 @@
+from BuddyAssistant.Assistant import BuddyAssistant
