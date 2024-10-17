@@ -1,0 +1,3 @@
+[console_scripts]
+itox = mlinvitrotox:main
+mlinvitrotox = mlinvitrotox:main
