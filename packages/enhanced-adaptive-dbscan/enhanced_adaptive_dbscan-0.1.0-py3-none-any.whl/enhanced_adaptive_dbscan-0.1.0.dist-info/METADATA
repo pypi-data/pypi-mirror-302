@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: enhanced_adaptive_dbscan
+Version: 0.1.0
+Summary: An Enhanced Adaptive DBSCAN clustering algorithm for semiconductor wafer defects.
+Home-page: https://github.com/kennedym-ds/enhanced_adaptive_dbscan
+Author: Michael Kennedy
+Author-email: michael.patrick.kennedy@outlook.ie
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: License
+Requires-Dist: numpy
+Requires-Dist: scikit-learn
+Requires-Dist: plotly
+Requires-Dist: joblib
+Requires-Dist: pandas
+Provides-Extra: dev
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: sphinx ; extra == 'dev'
+Requires-Dist: wheel ; extra == 'dev'
+
+# Enhanced Adaptive DBSCAN
+
+An Enhanced Adaptive DBSCAN clustering algorithm tailored for semiconductor wafer defect analysis.
+
+## Features
+
+- **Adaptive Parameter Selection:** Adjusts Îµ and MinPts based on local density.
+- **Stability-Based Cluster Selection:** Retains only robust and persistent clusters.
+- **Dynamic Cluster Centers:** Maintains up-to-date cluster centroids.
+- **Partial Re-Clustering:** Efficiently updates affected clusters with new data points.
+- **Incremental Clustering:** Handles streaming data seamlessly.
+- **Interactive Visualization:** Utilizes Plotly for dynamic cluster plots.
+- **Comprehensive Logging:** Tracks the algorithm's progress and decisions.
+
+## Installation
+
+```bash
+pip install enhanced_adaptive_dbscan
