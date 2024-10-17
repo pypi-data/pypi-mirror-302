@@ -1,0 +1,24 @@
+---
+version: 2
+models:
+  - name: stg_live_timing__index
+    description: '{{ doc("tbl_stg_live_timing__index") }}'
+    meta:
+      dagster:
+        asset_key:
+          - staging
+          - live_timing
+          - index
+    columns:
+      - name: key_frame_path
+      - name: stream_path
+      - name: event_id
+      - name: event_round_number
+      - name: event_sha
+      - name: event_country
+      - name: event_start_local
+      - name: event_name
+      - name: session_id
+      - name: session_sha
+      - name: session_type
+      - name: session_start_local

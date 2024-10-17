@@ -1,0 +1,5 @@
+[console_scripts]
+duck-f1 = duck_f1.cli:cli
+
+[gui_scripts]
+

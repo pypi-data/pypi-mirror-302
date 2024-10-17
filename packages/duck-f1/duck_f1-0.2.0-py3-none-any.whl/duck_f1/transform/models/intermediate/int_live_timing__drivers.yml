@@ -1,0 +1,19 @@
+---
+version: 2
+models:
+  - name: int_live_timing__drivers
+    description: '{{ doc("tbl_int_live_timing__drivers") }}'
+    meta:
+      dagster:
+        asset_key:
+          - intermediate
+          - live_timing
+          - drivers
+    columns:
+      - name: live_timing_driver_id
+      - name: full_name_key
+      - name: first_name
+      - name: last_name
+      - name: full_name
+      - name: driver_code
+      - name: car_numbers

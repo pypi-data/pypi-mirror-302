@@ -1,0 +1,15 @@
+---
+version: 2
+models:
+  - name: stg_ergast__status
+    description: '{{ doc("tbl_stg_ergast__status") }}'
+    meta:
+      dagster:
+        asset_key:
+          - staging
+          - ergast
+          - status
+    columns:
+      - name: status_id
+      - name: ergast_status_id
+      - name: status

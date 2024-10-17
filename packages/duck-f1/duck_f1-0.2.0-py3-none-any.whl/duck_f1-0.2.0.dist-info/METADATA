@@ -1,0 +1,48 @@
+Metadata-Version: 2.1
+Name: duck-f1
+Version: 0.2.0
+Summary: Formula 1 historical and telemetry datasets with DuckDB
+Keywords: formula1,f1,data,statistic,visualization
+Author-Email: Marc-Etienne Madore <marc-etienne@madore.cc>
+License: GPL-3.0-or-later
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Scientific/Engineering :: Visualization
+Requires-Python: <3.12,>=3.9
+Requires-Dist: dagster<1.7.0,>=1.6.5
+Requires-Dist: dagster-dbt<1.0.0,>=0.22.5
+Requires-Dist: dagster-duckdb<1.0.0,>=0.22.5
+Requires-Dist: dbt-duckdb<2.0.0,>=1.7.1
+Requires-Dist: duckdb<1,>=0
+Requires-Dist: pyarrow<16.0.0,>=15.0.0
+Requires-Dist: requests<3.0.0,>=2.31.0
+Description-Content-Type: text/markdown
+
+# DuckF1
+
+Hello, and welcome to DuckF1! It’s a collection of datasets for all things related to Formula 1. It uses parquets files and DuckDB for storage and compute, making it available on every platform and can queried in almost any programming language.
+
+> [!WARNING]
+> This project is in active development and does not guarantee compatibility between minor versions until the first major release. The table definitions are prone to changes and you might need to adapt your custom queries.
+
+## Installation
+
+DuckF1 is available on PyPi and support Python 3.9 through version 3.11. It is strongly recommended that you install the duck-f1 cli with `pipx`. It will create its own dedicated environment while making the project available globally. The project required the dbt cli with the duckdb module to be installed.
+
+```bash
+# Install the dbt cli
+pipx install dbt-core
+pipx inject dbt-core dbt-duckdb
+
+# Install the duck-f1 cli
+pipx install duck-f1
+```
+## Building the database
+
+To get started on generating the database, you can execute the `duck-f1 run` command. By default, it will capture the historical data as well as the telemetry data for the last Grand Prix weekend.

@@ -1,0 +1,21 @@
+---
+version: 2
+models:
+  - name: stg_live_timing__weather_data
+    description: '{{ doc("tbl_stg_live_timing__weather_data") }}'
+    meta:
+      dagster:
+        asset_key:
+          - staging
+          - live_timing
+          - weather_data
+    columns:
+      - name: session_id
+      - name: session_ts
+      - name: air_temperature
+      - name: air_pressure
+      - name: relative_humidity
+      - name: rain_accumulation
+      - name: track_temperature
+      - name: wind_direction
+      - name: wind_speed

@@ -1,0 +1,13 @@
+
+    
+    
+    
+    create table "f1"."seeds"."countries" ("emoji" text,"iso_lower" text,"name" text)
+  ;
+    -- dbt seed --
+    
+          COPY "f1"."seeds"."countries" FROM '/workspaces/duck-f1/src/duck_f1/transform/seeds/countries.csv' (FORMAT CSV, HEADER TRUE, DELIMITER ',')
+        
+
+;
+  

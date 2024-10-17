@@ -1,0 +1,18 @@
+---
+version: 2
+models:
+  - name: stg_live_timing__timing_data_last_lap
+    description: '{{ doc("tbl_stg_live_timing__timing_data_last_lap") }}'
+    meta:
+      dagster:
+        asset_key:
+          - staging
+          - live_timing
+          - timing_data_last_lap
+    columns:
+      - name: session_id
+      - name: car_number
+      - name: lap_time
+      - name: lap_time_status
+      - name: is_personal_fastest
+      - name: session_ts

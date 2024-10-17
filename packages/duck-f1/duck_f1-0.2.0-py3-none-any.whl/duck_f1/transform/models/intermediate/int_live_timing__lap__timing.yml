@@ -1,0 +1,21 @@
+---
+version: 2
+models:
+  - name: int_live_timing__lap__timing
+    description: '{{ doc("tbl_int_live_timing__lap__timing") }}'
+    meta:
+      dagster:
+        asset_key:
+          - intermediate
+          - live_timing
+          - lap
+          - timing
+    columns:
+      - name: session_id
+      - name: car_number
+      - name: lap_number
+      - name: estimated_lap_time
+      - name: lap_time
+      - name: lap_time_status
+      - name: is_personal_fastest
+      - name: session_ts

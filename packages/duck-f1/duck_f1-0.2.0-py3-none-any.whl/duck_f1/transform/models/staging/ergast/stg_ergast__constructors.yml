@@ -1,0 +1,18 @@
+---
+version: 2
+models:
+  - name: stg_ergast__constructors
+    description: '{{ doc("tbl_stg_ergast__constructors") }}'
+    meta:
+      dagster:
+        asset_key:
+          - staging
+          - ergast
+          - constructors
+    columns:
+      - name: constructor_id
+      - name: ergast_constructor_id
+      - name: constructor_reference
+      - name: constructor_name
+      - name: nationality
+      - name: wikipedia_url

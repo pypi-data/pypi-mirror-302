@@ -1,0 +1,19 @@
+---
+version: 2
+models:
+  - name: stg_ergast__standings__drivers
+    description: '{{ doc("tbl_stg_ergast__standings__drivers") }}'
+    meta:
+      dagster:
+        asset_key:
+          - staging
+          - ergast
+          - standings
+          - driver
+    columns:
+      - name: driver_id
+      - name: session_id
+      - name: points
+      - name: position
+      - name: position_label
+      - name: win_count

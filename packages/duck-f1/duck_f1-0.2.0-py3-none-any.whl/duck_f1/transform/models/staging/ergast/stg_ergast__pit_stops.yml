@@ -1,0 +1,19 @@
+---
+version: 2
+models:
+  - name: stg_ergast__pit_stops
+    description: '{{ doc("tbl_stg_ergast__pit_stops") }}'
+    meta:
+      dagster:
+        asset_key:
+          - staging
+          - ergast
+          - pit_stops
+    columns:
+      - name: driver_id
+      - name: session_id
+      - name: stop_count
+      - name: lap_number
+      - name: pit_stop_time_label
+      - name: pit_stop_time_label_1
+      - name: pit_stop_time
