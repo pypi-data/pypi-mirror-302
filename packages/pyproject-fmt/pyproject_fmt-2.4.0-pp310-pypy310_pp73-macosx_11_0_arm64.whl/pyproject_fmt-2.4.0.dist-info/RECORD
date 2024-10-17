@@ -1,0 +1,11 @@
+pyproject_fmt-2.4.0.dist-info/METADATA,sha256=nbzLKjJXvUT3ikuxG_Jd9hQy292XCZDFIWeSV2xvEHw,2080
+pyproject_fmt-2.4.0.dist-info/WHEEL,sha256=pIk66CS_0BfM1YfCLFpV0em-9lmCgQsYjEHt9mx9wUM,111
+pyproject_fmt-2.4.0.dist-info/entry_points.txt,sha256=jljaryjQbLY4wqviZzMSFoiz9DeHwGv4wDPFKdWIMVg,59
+pyproject_fmt-2.4.0.dist-info/licenses/LICENSE.txt,sha256=kOJeH68qSq6o2V7o5_VziwUqGswMnFgGgQH5Mahr1Yg,1023
+pyproject_fmt/__init__.py,sha256=dpW8pIziSXTkvIhy45Jc7B6slT1hkILYND8pBra7pyo,124
+pyproject_fmt/cli.py,sha256=JjRrTy2z_9Z5gWYWH9L3Hd2D3Blpn6dSx3OMW_HudVA,6409
+pyproject_fmt/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pyproject_fmt/__main__.py,sha256=tYwEAyClWgQOwtuUx9g9b2m_kJwRhEy3WhEPsgbYYtU,2270
+pyproject_fmt/_lib.pyi,sha256=FW8Fni2a3BaGfpBPbFh2BA4p43cXaw8ZNFQSxC-Vlbc,621
+pyproject_fmt/_lib.pypy310-pp73-darwin.so,sha256=HBPX38FvsFu0spEN4FnxkfzXPwjyscXXGrSVjNQNaIE,4000064
+pyproject_fmt-2.4.0.dist-info/RECORD,,
