@@ -1,0 +1,10 @@
+websockets
+pydantic
+click
+
+[dev]
+black
+darglint
+mypy
+pytest
+ruff
