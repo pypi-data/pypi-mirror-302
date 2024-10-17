@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/langchain_huggy/__init__.py
+src/langchain_huggy/_base_huggy_chat.py
+src/langchain_huggy/_base_llm.py
+src/langchain_huggy/_base_login.py
+src/langchain_huggy/api.py
+src/langchain_huggy/cli.py
+src/langchain_huggy/const.py
+src/langchain_huggy/model.py
+src/langchain_huggy.egg-info/PKG-INFO
+src/langchain_huggy.egg-info/SOURCES.txt
+src/langchain_huggy.egg-info/dependency_links.txt
+src/langchain_huggy.egg-info/requires.txt
+src/langchain_huggy.egg-info/top_level.txt
