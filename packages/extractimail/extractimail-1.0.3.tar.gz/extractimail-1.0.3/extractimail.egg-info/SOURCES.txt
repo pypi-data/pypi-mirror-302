@@ -1,0 +1,12 @@
+README.md
+setup.py
+extractimail/__init__.py
+extractimail/config.py
+extractimail/main.py
+extractimail/setup_ui.py
+extractimail.egg-info/PKG-INFO
+extractimail.egg-info/SOURCES.txt
+extractimail.egg-info/dependency_links.txt
+extractimail.egg-info/entry_points.txt
+extractimail.egg-info/requires.txt
+extractimail.egg-info/top_level.txt
