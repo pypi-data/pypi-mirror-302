@@ -1,0 +1,27 @@
+---
+exclude: '^docs/html'
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: "v5.0.0"
+    hooks:
+      - id: check-added-large-files
+      - id: check-case-conflict
+      - id: check-merge-conflict
+      - id: check-symlinks
+      - id: check-yaml
+      - id: debug-statements
+      - id: end-of-file-fixer
+      - id: mixed-line-ending
+      - id: requirements-txt-fixer
+      - id: trailing-whitespace
+
+  - repo: https://github.com/PyCQA/doc8
+    rev: v1.1.2
+    hooks:
+      - id: doc8
+        additional_dependencies:
+          # Add extension used during Sphinx build, without this:
+          # > D000 Error in "include" directive:
+          # > invalid option value: (option: "parser"; value: 'myst')
+          # > Parser "myst" not found. No module named 'myst_parser'.
+          - myst-parser

@@ -1,0 +1,6 @@
+myst-parser==4.0.0
+# Pinning to avoid unexpected breakages.
+# Used by RTD to generate docs.
+Sphinx==8.0.2
+sphinx-book-theme>=1
+sphinx-tabs==3.4.7

@@ -1,0 +1,62 @@
+[build-system]
+requires = ["hatchling", "hatch-vcs", "hatch-fancy-pypi-readme"]
+build-backend = "hatchling.build"
+
+[project]
+name = "http_client_pretty_headers"
+authors = [{ name = "Pavol Babinčák", email = "pbabinca@redhat.com" }]
+license = { text = "MIT" }
+classifiers = [
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+requires-python = ">=3.9"
+description = "Display headers of HTTP protocol client in a readable way"
+dynamic = ["version", "readme"]
+
+[project.urls]
+Homepage = "https://github.com/pbabinca/http_client_pretty_headers"
+Documentation = "https://http-client-pretty-headers.readthedocs.io/"
+"Bug Tracker" = "https://github.com/pbabinca/http_client_pretty_headers/issues"
+Changelog = "https://github.com/pbabinca/http_client_pretty_headers/blob/main/CHANGELOG.md"
+
+[tool.uv]
+dev-dependencies = [
+  "isort",
+  "black",
+  "pylint",
+  "flake8",
+]
+
+[tool.black]
+include = "(^/src/.*.py|^/tests/.*.py)"
+
+[tool.isort]
+profile = "black"
+
+[tool.hatch.build.hooks.vcs]
+version-file = "src/http_client_pretty_headers/_version.py"
+
+[tool.hatch.metadata.hooks.fancy-pypi-readme]
+content-type = "text/markdown"
+
+[[tool.hatch.metadata.hooks.fancy-pypi-readme.fragments]]
+path = "README.md"
+
+[[tool.hatch.metadata.hooks.fancy-pypi-readme.substitutions]]
+# replace relative links with absolute links
+pattern = '\[(.+?)\]\(((?!https?://)\S+?)\)'
+replacement = '[\1](https://github.com/pbabinca/http_client_pretty_headers/tree/main/\g<2>)'
+
+[tool.hatch.version]
+source = "vcs"
+
+[tool.doc8]
+ignore = ["D001"]
+path = "docs"

@@ -1,0 +1,130 @@
+name: Publish Python 🐍 distribution 📦 to PyPI and TestPyPI
+
+on:
+  push:
+    branches:
+      # Run on (pre)release branches for testing.
+      - "release-[0-9]*"
+    tags:
+      # Run on release tags for publishing.
+      - 'v*'
+  workflow_dispatch:
+    # Allow this workflow to be run manually (pushing to testpypi instead of pypi)
+    inputs:
+      pretend_version:
+        # Specify a version in developmental release format:
+        # https://packaging.python.org/en/latest/specifications/version-specifiers/#developmental-releases
+        # to test the release workflow in TestPyPI.
+        description: 'Pretend version to be used for test builds and release to TestPyPI'
+        required: true
+
+jobs:
+  build:
+    name: Build distribution 📦
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v3
+
+      - name: Build custom version
+        if: ${{ github.event.inputs.pretend_version != null && github.event.inputs.pretend_version != '' }}
+        run: |
+          SETUPTOOLS_SCM_PRETEND_VERSION=${{ github.event.inputs.pretend_version }} uv build
+
+      - name: Build
+        if: ${{ !github.event.inputs.pretend_version }}
+        run: uv build
+
+      - name: Store the distribution packages
+        uses: actions/upload-artifact@master
+        with:
+          name: python-package-distributions
+          path: dist/
+
+  test-distribution:
+    name: Test distribution 📦
+    runs-on: ubuntu-latest
+    needs:
+      - build
+    strategy:
+      matrix:
+        package-type: ['whl', 'tar.gz']
+    steps:
+      - name: Install uv
+        uses: astral-sh/setup-uv@v3
+
+      - name: Download distribution 📦
+        uses: actions/download-artifact@master
+        with:
+          name: python-package-distributions
+          path: dist/
+
+      - name: Create virtualenv
+        run: uv venv
+
+      - name: Install package (${{ matrix.package-type }})
+        run: |
+          package_filename=$(find dist -type f -name "*.${{ matrix.package-type }}" | head -n 1)
+          uv pip install "$package_filename"
+
+      - name: Test import (${{ matrix.package-type }})
+        run: uv run python -c "import http_client_pretty_headers; print('http_client_pretty_headers import successful')"
+
+      - name: Uninstall package (${{ matrix.package-type }})
+        run: uv pip uninstall http_client_pretty_headers
+
+  publish-to-testpypi:
+    name: Publish Python 🐍 distribution 📦 to TestPyPI
+    if: github.repository == 'pbabinca/http_client_pretty_headers' && github.event_name == 'workflow_dispatch'
+    needs:
+      - build
+    runs-on: ubuntu-latest
+
+    environment:
+      name: testpypi
+      url: https://test.pypi.org/p/http_client_pretty_headers
+
+    permissions:
+      id-token: write
+
+    steps:
+      - name: Download all the dists
+        uses: actions/download-artifact@v4
+        with:
+          name: python-package-distributions
+          path: dist/
+
+      - name: Publish distribution 📦 to TestPyPI
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          repository-url: https://test.pypi.org/legacy/
+
+  publish-to-pypi:
+    name: >-
+      Publish Python 🐍 distribution 📦 to PyPI
+    if: startsWith(github.ref, 'refs/tags/')
+    needs:
+      - build
+    runs-on: ubuntu-latest
+    environment:
+      name: pypi
+      url: https://pypi.org/p/http_client_pretty_headers
+    permissions:
+      id-token: write
+
+    steps:
+      - name: Download all the dists
+        uses: actions/download-artifact@v4
+        with:
+          name: python-package-distributions
+          path: dist/
+
+      - name: Publish distribution 📦 to PyPI
+        uses: pypa/gh-action-pypi-publish@release/v1

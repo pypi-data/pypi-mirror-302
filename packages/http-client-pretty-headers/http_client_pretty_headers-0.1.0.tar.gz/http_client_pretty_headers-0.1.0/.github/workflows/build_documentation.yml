@@ -1,0 +1,31 @@
+---
+name: "Build Documentation"
+
+on:
+  workflow_dispatch:
+  workflow_call:
+
+jobs:
+  build-documentation:
+    runs-on: ubuntu-latest
+
+    strategy:
+      fail-fast: true
+      matrix:
+        python-version: ["3.12"]
+
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v3
+
+      - name: Generate Documentation
+        run: |
+          uvx --with-requirements docs/requirements.txt --from sphinx sphinx-build docs docs/_build/html
+
+      - name: Store Documentation
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs/_build/html
