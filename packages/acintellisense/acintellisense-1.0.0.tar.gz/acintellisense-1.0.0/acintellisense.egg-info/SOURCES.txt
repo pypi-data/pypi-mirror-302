@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+acintellisense/__init__.py
+acintellisense.egg-info/PKG-INFO
+acintellisense.egg-info/SOURCES.txt
+acintellisense.egg-info/dependency_links.txt
+acintellisense.egg-info/top_level.txt
