@@ -1,0 +1,10 @@
+urdf2mjcf/__init__.py,sha256=V-95LxXTX0dZW3hDYfkqX6EWcTF2i2LN7SgpFvsU0z4,72
+urdf2mjcf/convert.py,sha256=-teGo_musPq4ck2ZC4aNazl58jbsj7X4Jre43lKxRF4,16140
+urdf2mjcf/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+urdf2mjcf/utils.py,sha256=YDVzLWHHsXUlNBgnT2DahRDe33CnRtX8fNm-IKvy014,2552
+urdf2mjcf-0.0.3.dist-info/LICENSE,sha256=HCN2bImAzUOXldAZZI7JZ9PYq6OwMlDAP_PpX1HnuN0,1071
+urdf2mjcf-0.0.3.dist-info/METADATA,sha256=w_qD1mOBU0bOnSvGNLtsRKtQKpdn-P4zlhjzmD-jNXQ,2449
+urdf2mjcf-0.0.3.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+urdf2mjcf-0.0.3.dist-info/entry_points.txt,sha256=JRhYH1BW3HEFcH8uGsBghQJnyWJZTmoKKSuLB30Xems,53
+urdf2mjcf-0.0.3.dist-info/top_level.txt,sha256=f8OZ0LCcyziJuWTvznb7kn6wtMS3gxKLE6vjrAcup4A,10
+urdf2mjcf-0.0.3.dist-info/RECORD,,
