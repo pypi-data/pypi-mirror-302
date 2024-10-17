@@ -1,0 +1,10 @@
+anycrc/__init__.py,sha256=pWmdya-prEefKXpuo3y5nbbx9CSZv7xnO7HZMWvW5v4,41
+anycrc/__main__.py,sha256=pYhkStmaSlPx07Q0Xax-zf267wDa5jX_HGfctRkVyJ0,528
+anycrc/crc.cp312-win32.pyd,sha256=JibCXJ3w8KJS8cJhsV6y90A21dF49SpQkPXK40f5oEQ,156160
+anycrc/crc.pyx,sha256=XIUzKve5ofJOW95Bm8YtHxeX0OEgCOVYFrzDs0rsGe0,4926
+anycrc/models.py,sha256=p4vDLZUyCfSaWOd4oo4xjExaFGgY06EfCFJmIQ1QKQU,16907
+anycrc-1.2.1.dist-info/LICENSE,sha256=uxkqUocH4qyFvXfwLLih1UygwH13VKb6uoYwQv7Z4wQ,890
+anycrc-1.2.1.dist-info/METADATA,sha256=dvkIoXB5LmGl2R4YpE-WdYwF-gW0SpbWwHQWRZBYHGU,2838
+anycrc-1.2.1.dist-info/WHEEL,sha256=WvkOSu_HO_oE3sQnGm0UPRliwo7WiDQj1dfKR15g8gQ,97
+anycrc-1.2.1.dist-info/top_level.txt,sha256=HbCFlOeYEx638RXhl-PI4tQtdbHhwyL9ObHhSuPNyaA,7
+anycrc-1.2.1.dist-info/RECORD,,
