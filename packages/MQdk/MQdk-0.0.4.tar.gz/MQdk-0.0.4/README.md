@@ -1,0 +1,116 @@
+# Mortal Quest Development Kit
+The Mortal Quest Development Kit (MQdk) was created to be used to create Mortal Quest mods with ease.
+
+## Step by Step Guide For Beginners
+
+### Installation
+> ***NOTE:** This documentation is for Windows operating systems* 
+
+To use the MQdk, you need to have Python installed on your computer. To check this, type the following command in the terminal:
+```
+python --version
+```
+<hr>
+
+Once you have confirmed that you have python install onto your computer, run this pip command in the terminal to install MQdk:
+```
+pip install mqdk
+```
+To check that it installed correctly, run this command:
+```
+pip show mqdk
+```
+
+You now have successfully installed the Mortal Quest Development Kit!
+
+Continue following this documentation to see how to create your first mod.
+
+<hr>
+
+### Your First Mod
+> In this section of the documentation, you will learn how to create your first mod. This mod will change the durablility of trees.
+
+#### Getting Started
+
+Start by creating a folder and opening it in your IDE of choice. This will be your project folder. Next, create a main.py file, and import the MQdk library by using the following code:
+```
+from MQdk import mqdk # Import the Mortal Quest Development Kit
+```
+After you have imported the development kit, you need to initialize it by adding this line of code:
+```
+from MQdk import mqdk # Import the Mortal Quest Development Kit
+mqdk.init() # Initalize needed library variables
+```
+> *If you do not initialize the library, your mod will not build correctly, leading to errors.*
+
+<hr>
+
+#### Modifing Tree Durablility
+
+As stated before, in this mod we will be modifing the durablity of the trees. Let me explain a few things before we start:
+- Mortal Quest 'features' are static objects that get placed in the world, this includes trees, rocks, grass, etc.
+- Durability is one of many attributes features have that defines the amount of times you need to click itself for it to break.
+
+Alright, now that we have an understanding of what features are, lets add a line of code that modifies the durablility of trees. To do this, we need to run the 'modify' function within the MQdk, here is an example:
+```
+mqdk.modify.Feature("Trees", durability=3) # Modifies the feature 'Trees' to have a duriblity of 3
+```
+That line of code modifies the feature 'Trees' to have a durablility of 3, meaning you'll have to click tress three times for it to destroy.
+
+<hr>
+
+#### Packaging The Mod
+
+At the end of your mod file, you need to add a line of code to package (build) the mod into a file Mortal Quest will understand. This can be done like this:
+```
+mqdk.package() # Optional argument for build path, defaulted to 'builds/'
+```
+
+<hr>
+
+## MQdk Functions
+> This section is a list of all MQdk functions with examples
+
+### Modify
+Modify is a function that allows you to change existing objects in Mortal Quest. This includes Features.
+
+**Feature** 
+
+*Features are static objects that get placed in the world during creation.*
+```
+mqdk.modify.Feature(FEATURE_NAME, FEATURE_DATA)
+```
+
+#### FEATURE NAME LIST
+- Chest
+    - Data code: 0
+- Trees
+    - Data code: 0
+- Knoxwood
+    - Data code: 0
+- Grass
+    - Data code: 0
+- Beehive
+    - Data code: 0
+- Pebble
+    - Data code: 0
+- Seashell
+    - Data code: 0
+- Stone
+    - Data code: 0
+- Iron
+    - Data code: 0
+- Gold
+    - Data code: 0
+- Emerald
+    - Data code: 0
+- Diamond
+    - Data code: 0
+- Titanium
+    - Data code: 0
+
+#### FEATURE DATA LIST
+- Data code: 0
+    - Durablility
+
+<hr>
