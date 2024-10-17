@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: AzureTokenVerification
+Version: 0.0.2
+Summary: This package is used for azure token verification within Bosch
+Author-email: LV Zhichao <zhichao.lv@cn.bosch.com>
+Project-URL: Homepage, https://github.boschdevcloud.com/LZV2SZH/AzureTokenVerification
+Project-URL: Bug Tracker, https://github.boschdevcloud.com/LZV2SZH/AzureTokenVerification/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: aad-token-verify ==0.2.0
+
+# BoschRpaMagicBox
+
+This package is used for building common automation functions for sap web gui within Bosch
