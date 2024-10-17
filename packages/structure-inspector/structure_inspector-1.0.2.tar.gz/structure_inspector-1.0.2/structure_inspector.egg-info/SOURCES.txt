@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+structure_inspector/__init__.py
+structure_inspector/structure_inspector.py
+structure_inspector.egg-info/PKG-INFO
+structure_inspector.egg-info/SOURCES.txt
+structure_inspector.egg-info/dependency_links.txt
+structure_inspector.egg-info/top_level.txt
