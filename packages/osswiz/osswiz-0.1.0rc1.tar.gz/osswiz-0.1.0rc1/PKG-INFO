@@ -1,0 +1,47 @@
+Metadata-Version: 2.3
+Name: osswiz
+Version: 0.1.0rc1
+Summary: The Wizard of OSS - a tool to help you manage your open source projects
+Author-email: Adrian Rumpold <a.rumpold@gmail.com>
+License: Apache-2.0
+License-File: LICENSE
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Python: >=3.10
+Requires-Dist: repo-review[cli]>=0.11.2
+Description-Content-Type: text/markdown
+
+# OSSWiz - the Wizard of OSS
+
+## Usage
+
+You can run osswiz checks (through [repo-review](https://repo-review.readthedocs.io/en/latest/)) from the command line to interactively check your project:
+
+```console
+# If you have the package installed
+$ osswiz
+
+# If you don't have the package installed
+$ pipx run --spec git+https://github.com/AdrianoKF/osswiz@main osswiz
+# or, using uv:
+$ uvx --from git+https://github.com/AdrianoKF/osswiz osswiz
+```
+
+If want to run checks automatically whenever you make a commit, you can use the osswiz [`pre-commit`](https://pre-commit.com) hook:
+
+```yaml
+- repo: https://github.com/AdrianoKF/osswiz
+  rev: main # or desired version from releases/tags
+  hooks:
+    - id: osswiz
+```
+
+## License
+
+This project is licensed under the terms of the Apache-2.0 license.

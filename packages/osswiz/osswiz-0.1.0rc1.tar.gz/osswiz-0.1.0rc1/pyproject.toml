@@ -1,0 +1,98 @@
+[build-system]
+requires = ["hatchling", "hatch-vcs"]
+build-backend = "hatchling.build"
+
+[project]
+name = "osswiz"
+description = "The Wizard of OSS - a tool to help you manage your open source projects"
+dynamic = ["version"]
+license = { text = "Apache-2.0" }
+readme = "README.md"
+authors = [{ name = "Adrian Rumpold", email = "a.rumpold@gmail.com" }]
+requires-python = ">=3.10"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+]
+dependencies = ["repo-review[cli]>=0.11.2"]
+
+[tool.uv]
+dev-dependencies = [
+    "httpx>=0.27.2",
+    "pytest>=8.3.3",
+    "ruff>=0.6.9",
+    "sp-repo-review[cli]>=2024.8.19",
+]
+
+[tool.hatch.version]
+source = "vcs"
+
+[tool.hatch.build.hooks.vcs]
+version-file = "src/osswiz/_version.py"
+
+[project.scripts]
+osswiz = "repo_review.__main__:main"
+
+[project.entry-points."repo_review.checks"]
+osswiz = "osswiz.checks:repo_review_checks"
+
+[project.entry-points."repo_review.fixtures"]
+license_files = "osswiz.checks.fixtures:license_files"
+
+[tool.pytest.ini_options]
+minversion = "7"
+testpaths = ["tests"]
+log_cli_level = "INFO"
+xfail_strict = true
+filterwarnings = ["error"]
+addopts = "-ra --strict-markers --strict-config --doctest-modules --doctest-continue-on-failure"
+
+[tool.mypy]
+files = "src"
+python_version = "3.10"
+strict = true
+enable_error_code = ["ignore-without-code", "redundant-expr", "truthy-bool"]
+warn_unreachable = true
+
+[tool.ruff]
+preview = true
+
+[tool.ruff.lint]
+select = [
+    "E",
+    "F",
+    "I",
+    "W",
+    "B",
+    "UP",
+    "C4",
+    "PYI",
+    "PTH",
+    "T10", # prevent stray debug breakpoints
+]
+ignore = [
+    "E501", # Line too long
+]
+
+[tool.repo-review]
+ignore = [
+    # Python general
+    "PY004", # no docs for now
+    "PY007", # no task runner
+    # GitHub Actions
+    "GH103", # no deployment workflows, hence no manual dispatch trigger
+    # Pre-commit
+    "PC111", # blacken-docs
+    "PC160", # spell checker
+    "PC170", # PyGrep hooks
+    "PC180", # Markdown formatter
+    "PC901", # pre-commit CI config
+    # Others
+    "RTD", # not building for ReadTheDocs
+]

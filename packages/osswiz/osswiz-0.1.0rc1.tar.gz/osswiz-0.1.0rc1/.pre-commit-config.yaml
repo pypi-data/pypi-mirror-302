@@ -1,0 +1,39 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      - id: check-added-large-files
+      - id: check-json
+      - id: check-toml
+      - id: check-yaml
+        args: [--allow-multiple-documents]
+      - id: end-of-file-fixer
+        exclude: ^src/osswiz/_version\.py$
+      - id: mixed-line-ending
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.6.9
+    hooks:
+      - id: ruff
+        args: [--fix, --show-fixes]
+      - id: ruff-format
+  - repo: https://github.com/pre-commit/mirrors-mypy
+    rev: v1.12.0
+    hooks:
+      # See https://github.com/pre-commit/mirrors-mypy/blob/main/.pre-commit-hooks.yaml
+      - id: mypy
+        name: mypy
+        additional_dependencies:
+          - pytest
+          - httpx
+          - repo-review
+        types_or: [python, pyi]
+        args: [--config-file=pyproject.toml, --non-interactive, --install-types]
+  - repo: https://github.com/astral-sh/uv-pre-commit
+    rev: 0.4.22
+    hooks:
+      - id: uv-lock
+        name: Lock project dependencies
+  - repo: https://github.com/scientific-python/cookie
+    rev: 2024.08.19
+    hooks:
+      - id: sp-repo-review
