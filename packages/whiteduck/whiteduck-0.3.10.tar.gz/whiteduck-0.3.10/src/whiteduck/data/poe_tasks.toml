@@ -1,0 +1,64 @@
+[tool.poe.tasks._init_project]
+cmd = "uv init --app --author-from git --vcs git"
+
+[tool.poe.tasks._init_run]
+cmd = "uv run hello.py"
+
+[tool.poe.tasks._test_libs]
+cmd = "uv add pytest pytest-clarity pytest-cov pytest-sugar"
+
+[tool.poe.tasks._docs_libs]
+cmd = "uv add mkdocs mkdocs-material mkdocs-gen-files mkdocs-literate-nav mkdocs-section-index mkdocstrings mkdocstrings-python"
+
+[tool.poe.tasks._mandatory_libs]
+cmd = "uv add loguru rich ruff deptry"
+
+[tool.poe.tasks.__task_libs]
+cmd = "uv add pre-commit poethepoet nox"
+
+[tool.poe.tasks._monitoring_libs]
+cmd = "uv add pyinstrument"
+
+[tool.poe.tasks._jupyter_libs]
+cmd = "uv add ipykernel"
+
+##########################################################
+
+[tool.poe.tasks.install_win]
+cmd = "powershell -ExecutionPolicy ByPass -c 'irm https://github.com/astral-sh/uv/releases/download/0.4.22/uv-installer.ps1 | iex'"
+
+[tool.poe.tasks.install]
+cmd = "curl --proto '=https' --tlsv1.2 -LsSf https://github.com/astral-sh/uv/releases/download/0.4.22/uv-installer.sh | sh"
+
+[tool.poe.tasks.init]
+sequence = [
+    { ref = "_init_project" },
+    { ref = "_mandatory_libs" },
+    { ref = "_init_run" },
+]
+
+
+[tool.poe.tasks.test]
+sequence = [{ ref = "_test_libs" }]
+
+[tool.poe.tasks.docs]
+sequence = [{ ref = "_docs_libs" }]
+
+[tool.poe.tasks.monitoring]
+sequence = [{ ref = "_monitoring_libs" }]
+
+[tool.poe.tasks.jupyter]
+sequence = [{ ref = "_jupyter_libs" }]
+
+[tool.poe.tasks.runner]
+sequence = [{ ref = "__task_libs" }]
+
+[tool.poe.tasks.all]
+sequence = [
+    { ref = "init" },
+    { ref = "test" },
+    { ref = "docs" },
+    { ref = "monitoring" },
+    { ref = "jupyter" },
+    { ref = "runner" },
+]
