@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+filesecure/__init__.py
+filesecure/main.py
+filesecure.egg-info/PKG-INFO
+filesecure.egg-info/SOURCES.txt
+filesecure.egg-info/dependency_links.txt
+filesecure.egg-info/entry_points.txt
+filesecure.egg-info/requires.txt
+filesecure.egg-info/top_level.txt
