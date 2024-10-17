@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: hydra-aws-batch-launcher
+Version: 1.0.0
+Summary: AWS Batcher Launcher for Hydra apps
+Home-page: https://github.com/philkohl/hydra_aws_batch_launcher/
+Author: philkohl
+Author-email: 65112414+philkohl@users.noreply.github.com
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: Linux
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: hydra-core>=1.3.2
+
+# hydra_aws_batch_launcher
+
+Plugin for hydra to submit jobs to an AWS Batch queue.
+
+## Build
+
+```bash
+ python setup.py sdist bdist_wheel
+ ```

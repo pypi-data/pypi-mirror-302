@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+hydra_aws_batch_launcher.egg-info/PKG-INFO
+hydra_aws_batch_launcher.egg-info/SOURCES.txt
+hydra_aws_batch_launcher.egg-info/dependency_links.txt
+hydra_aws_batch_launcher.egg-info/requires.txt
+hydra_aws_batch_launcher.egg-info/top_level.txt
+hydra_plugins/hydra_aws_batch_launcher/__init__.py
+hydra_plugins/hydra_aws_batch_launcher/aws_batch_launcher.py
+hydra_plugins/hydra_aws_batch_launcher/config.py
