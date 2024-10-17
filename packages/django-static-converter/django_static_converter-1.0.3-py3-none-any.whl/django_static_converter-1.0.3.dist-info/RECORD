@@ -1,0 +1,9 @@
+django_static_converter/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_static_converter/converter.py,sha256=7iRc1bDlmaR-kaHGszgg_3acJAbNlXpaIJGZAxDKoNk,2416
+django_static_converter/management/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_static_converter/management/commands/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_static_converter/management/commands/convert-static.py,sha256=-VQt49d_t92Gj0xUA4tr1FmyymmepVvzyv8FBRnh_qg,874
+django_static_converter-1.0.3.dist-info/METADATA,sha256=eJWEI_KNFsdn-_07jThEV9QQgLB3rzAoKFAFihVuulw,3031
+django_static_converter-1.0.3.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+django_static_converter-1.0.3.dist-info/top_level.txt,sha256=Cl1NtvW3Mnbt4WaXo9stQ0A_AG_mvbS1H8N0gahlBgg,24
+django_static_converter-1.0.3.dist-info/RECORD,,
