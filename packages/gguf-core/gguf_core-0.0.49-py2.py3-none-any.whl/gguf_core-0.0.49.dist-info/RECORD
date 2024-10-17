@@ -1,0 +1,7 @@
+gguf_core/__init__.py,sha256=rhpeL04Gu5YqMtUHUEr506s_Ehkw_HDQTHNbT6XkSuw,25060
+gguf_core/logo.png,sha256=X7twi2MS2xKVwX-uQV88ar5Bxwt9RiehuOwZE4nktVU,578
+gguf_core-0.0.49.dist-info/entry_points.txt,sha256=8Ugg5L5KVgYe_J07I5r9d6GbMHDwKO_dhfIcKcjbbvA,52
+gguf_core-0.0.49.dist-info/LICENSE,sha256=Dl7IS8rhKesmjItCjQsVP1HgwuG7Ng-FGec_jIM0uUE,1095
+gguf_core-0.0.49.dist-info/WHEEL,sha256=Sgu64hAMa6g5FdzHxXv9Xdse9yxpGGMeagVtPMWpJQY,99
+gguf_core-0.0.49.dist-info/METADATA,sha256=meBeGlo-tI-PnYPU40xzMvAG1rD5Sp9nvQ4k48QTE-M,2319
+gguf_core-0.0.49.dist-info/RECORD,,
