@@ -1,0 +1,12 @@
+README.md
+VERSION
+requirements.txt
+setup.py
+tests/test_doc_parser.py
+texta_parsers_lite/doc_parser.py
+texta_parsers_lite/exceptions.py
+texta_parsers_lite.egg-info/PKG-INFO
+texta_parsers_lite.egg-info/SOURCES.txt
+texta_parsers_lite.egg-info/dependency_links.txt
+texta_parsers_lite.egg-info/requires.txt
+texta_parsers_lite.egg-info/top_level.txt
