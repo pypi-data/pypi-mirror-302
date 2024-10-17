@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: shodafinder
+Version: 1.0.1
+Summary: A tool to hash favicons for Shodan and ZoomEye searches.
+Home-page: https://github.com/logm1lo/Shodafinder
+Author: Thanh Sang
+Author-email: logmilo12@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Requires-Dist: requests
+Requires-Dist: mmh3
+Requires-Dist: favicon
+
+UNKNOWN
+
+
