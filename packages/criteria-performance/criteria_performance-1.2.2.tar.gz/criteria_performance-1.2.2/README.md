@@ -1,0 +1,128 @@
+# Performance Criteria
+
+`criteria_performance` is a Python package that allows you to calculate and visualize performance criteria from CSV data and DataFrames. This module facilitates the evaluation of classification models by calculating essential metrics such as recall, precision, false positive rate (FPR), and false negative rate (FNR), as well as generating ROC, P-R, and DET curves.
+
+## Installation
+
+You can install the package via `pip`:
+
+```bash
+pip install criteria-performance 
+```
+
+or
+
+```bash
+pip install criteria_performance 
+```
+
+## Usage
+
+### Loading Data
+
+To use the module, you need to provide a URL or path to a CSV file containing at least two columns, or a DataFrame:
+
+- The first column must contain the classes (1 for positive, -1 for negative).
+- The second column must contain the prediction scores.
+
+### Example CSV
+
+Example of a CSV file structure compatible with the module:
+
+| Class | Score |
+|-------|-------|
+| 1     | 0.9   |
+| 1     | 0.8   |
+| -1    | 0.4   |
+| -1    | 0.1   |
+
+### Example
+
+Here is an example of using the `PerformanceCriteria` class:
+
+```python
+from criteria import PerformanceCriteria
+
+# Replace 'path_to_your_file.csv' with the path to your CSV file
+performance = PerformanceCriteria('path_to_your_file.csv')
+
+# Access metrics
+print("Recall:", performance.get_recall())
+print("Precision:", performance.get_precision())
+print("False Positives (FP):", performance.get_fp())
+print("False Negatives (FN):", performance.get_fn())
+```
+
+### Visualization
+
+The module includes methods to display performance criteria graphs:
+
+- `dispROC()`: Displays the ROC curve.
+- `dispPR()`: Displays the Precision-Recall curve.
+- `dispDET()`: Displays the DET curve.
+- `displaygraphe()`: Displays all graphs in a single figure.
+
+Example:
+
+```python
+performance.displaygraphe()
+performance.show()  # Displays the figure
+```
+
+### Calculated Metrics
+
+The module calculates and returns the following metrics:
+
+- **PPV (Positive Predictive Value)**: Positive predictive value.
+- **NPV (Negative Predictive Value)**: Negative predictive value.
+- **False Positives (FP)**: Number of false positives.
+- **True Positives (TP)**: Number of true positives.
+- **False Negatives (FN)**: Number of false negatives.
+- **False Negative Rate (FNR)**: False negative rate.
+- **False Positive Rate (FPR)**: False positive rate.
+- **Recall**: Sensitivity or true positive rate.
+- **Precision**: True positives divided by the total predicted positives.
+
+### Practical Tools
+
+Here are two useful functions included in the module:
+
+#### `asarray2D(arrayA, arrayB)`
+
+Combines two arrays into a 2D array.
+
+**Usage:**
+
+```python
+import numpy as np
+from criteria import asarray2D
+
+arrayA = np.array([1, 2, 3])
+arrayB = np.array([0.9, 0.8, 0.7])
+
+combined_array = asarray2D(arrayA, arrayB)
+print(combined_array)
+```
+
+#### `asDataFrame(array)`
+
+Converts a 2D array into a Pandas DataFrame.
+
+**Usage:**
+
+```python
+from criteria import asDataFrame
+import numpy as np
+
+array = np.array([[1, 0.9], [1, 0.8], [-1, 0.4]])
+df = asDataFrame(array)
+print(df)
+```
+
+## Authors
+
+Developed by Olanda-Eyiba Chantry - <chantryolanda85@gmail.com>
+
+## License
+
+This project is licensed under the MIT License.
