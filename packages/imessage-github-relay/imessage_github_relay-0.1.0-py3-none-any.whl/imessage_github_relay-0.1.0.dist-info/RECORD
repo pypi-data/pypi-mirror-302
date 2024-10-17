@@ -1,0 +1,14 @@
+src/imessage_github_relay/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+src/imessage_github_relay/_internal.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+src/imessage_github_relay/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+src/imessage_github_relay/utils/_internet.py,sha256=i3jMfxDYZ-Wt6KmrdVBkKXsieRQshxrjzUL_akCZi1I,375
+src/imessage_github_relay/utils/_internet.pyi,sha256=3dIeW6fSHS_ZkN1olZv6YTDGyGRPnIjUa-UgGhbRtqQ,387
+src/imessage_github_relay/utils/_term_color_fix_win.py,sha256=Y7zxSeKeagADb8g-p3LWxpQR2onYf0jeMhMmu1bGtCw,957
+src/imessage_github_relay/utils/_term_color_fix_win.pyi,sha256=6TqKyrlN13dMh4xotzAl4imWwHrfk0pNUEIZBuQHfpU,875
+src/imessage_github_relay/utils/_toml.py,sha256=MHAG1f9OlvpHWatc6D2_48Wje9MWIDWDb05dKCGdiuE,1276
+src/imessage_github_relay/utils/_toml.pyi,sha256=PviLORVWE5PZIi7MVKLpt7PjoeO6lgGErxUyr8Pb3AM,1216
+imessage_github_relay-0.1.0.dist-info/LICENSE,sha256=S4rDwZvYPJR0ElFfB7WJFdYclKHHcWjEnl8rmul28FE,1074
+imessage_github_relay-0.1.0.dist-info/METADATA,sha256=VniTfnXcgr9fxuYqlZ6_5cWI979k3YE65UsDcc6nOPw,2481
+imessage_github_relay-0.1.0.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+imessage_github_relay-0.1.0.dist-info/top_level.txt,sha256=74rtVfumQlgAPzR5_2CgYN24MB0XARCg0t-gzk6gTrM,4
+imessage_github_relay-0.1.0.dist-info/RECORD,,
