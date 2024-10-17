@@ -1,0 +1,10 @@
+defigraph/Edge.py,sha256=5sf4W9Vde78EnDeMwy_HxSj89l_n03TmnJsOpyFE08g,499
+defigraph/Graph.py,sha256=O3pHEcMXI4QyTem-SUTJehdrhiLON3OhABaznRbg-fk,3024
+defigraph/Pool.py,sha256=mG9w93HeCtcgutYqmESizIITYjO0KyTDQ8TkgTOSuu8,788
+defigraph/Vertex.py,sha256=TFQtbyVtWCCmq0SFMEdIXiBHNOv4rVwzJTEeG9iAhCQ,523
+defigraph/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+defigraph-0.1.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+defigraph-0.1.0.dist-info/METADATA,sha256=r4qNNdwhosYiY0vVZltRNs-TBWoanu6VosSGeb8KvR0,794
+defigraph-0.1.0.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+defigraph-0.1.0.dist-info/top_level.txt,sha256=J0tecgxam-IwGTbwheKxu3pCKDh-hnPtOgk8KP9RluU,10
+defigraph-0.1.0.dist-info/RECORD,,
