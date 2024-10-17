@@ -1,0 +1,12 @@
+LICENCE
+README.md
+pyproject.toml
+./src/audio-libs-tlk/audio_libs_tlk.egg-info/PKG-INFO
+./src/audio-libs-tlk/audio_libs_tlk.egg-info/SOURCES.txt
+./src/audio-libs-tlk/audio_libs_tlk.egg-info/dependency_links.txt
+./src/audio-libs-tlk/audio_libs_tlk.egg-info/top_level.txt
+src/audio-libs-tlk/audio_libs_tlk.egg-info/PKG-INFO
+src/audio-libs-tlk/audio_libs_tlk.egg-info/SOURCES.txt
+src/audio-libs-tlk/audio_libs_tlk.egg-info/dependency_links.txt
+src/audio-libs-tlk/audio_libs_tlk.egg-info/top_level.txt
+tests/test_tlk.py
