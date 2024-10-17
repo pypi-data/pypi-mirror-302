@@ -1,0 +1,14 @@
+README.md
+setup.py
+al360_nlp_feature_extractors/__init__.py
+al360_nlp_feature_extractors/attribute_extractors.py
+al360_nlp_feature_extractors.egg-info/PKG-INFO
+al360_nlp_feature_extractors.egg-info/SOURCES.txt
+al360_nlp_feature_extractors.egg-info/dependency_links.txt
+al360_nlp_feature_extractors.egg-info/requires.txt
+al360_nlp_feature_extractors.egg-info/top_level.txt
+al360_nlp_feature_extractors/data/__init__.py
+al360_nlp_feature_extractors/data/female-words.txt
+al360_nlp_feature_extractors/data/male-words.txt
+al360_nlp_feature_extractors/data/neutral-words.txt
+tests/test_pos_neg_wordcount.py
