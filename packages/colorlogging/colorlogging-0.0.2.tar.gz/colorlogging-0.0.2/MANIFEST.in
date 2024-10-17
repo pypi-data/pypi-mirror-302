@@ -1,0 +1,2 @@
+recursive-include colorlogging/ *.py *.txt py.typed MANIFEST.in
+include docs/*.png

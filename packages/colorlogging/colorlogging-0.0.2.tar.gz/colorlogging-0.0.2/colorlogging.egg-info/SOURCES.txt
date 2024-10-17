@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+colorlogging/__init__.py
+colorlogging/py.typed
+colorlogging/requirements-dev.txt
+colorlogging.egg-info/PKG-INFO
+colorlogging.egg-info/SOURCES.txt
+colorlogging.egg-info/dependency_links.txt
+colorlogging.egg-info/requires.txt
+colorlogging.egg-info/top_level.txt
+docs/example.png
+docs/example2.png
+tests/test_configure.py
