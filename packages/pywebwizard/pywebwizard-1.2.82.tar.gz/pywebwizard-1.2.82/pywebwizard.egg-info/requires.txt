@@ -1,0 +1,6 @@
+selenium
+pyyaml
+requests
+setuptools
+twine
+pykeepass
