@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: cloudicorn-opentofu
+Version: 0.5
+Summary: Replaces terraform backend with opentofu
+Home-page: https://github.com/jumidev/cloudicorn-cli
+Author: krezreb
+Author-email: josephbeeson@gmail.com
+License: MIT
+Description-Content-Type: text/markdown
+Requires-Dist: cloudicorn-cli
+
+# opentofu extension
+
+Replaces `terraform` with [`opentofu`](https://github.com/jumidev/cloudicorn-cli/blob/master/https://opentofu.org/) as a drop in binary alternative
