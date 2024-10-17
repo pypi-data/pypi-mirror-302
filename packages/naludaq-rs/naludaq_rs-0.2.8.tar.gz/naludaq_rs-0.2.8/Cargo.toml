@@ -1,0 +1,73 @@
+[package]
+edition = "2021"
+name = "naludaq_rs"
+version = "0.2.8"
+readme = "README.md"
+license-file = "LICENSE"
+authors = [
+    "Mitchell Matsumori-Kelly <mitchell@naluscientific.com>",
+    "Marcus Luck <marcus@naluscientific.com>",
+]
+description = "Rust backend for NaluDAQ"
+default-run = "server"
+
+[lib]
+name = "naludaq_rs"
+crate-type = ["lib", "cdylib"]
+
+[workspace]
+members = ["logging", "system"]
+
+[dependencies]
+naluacq = "^0.4.5"
+ft60x_rs = "0.1.0"
+# naluacq = { "path" = "../naluacq" }
+# ft60x_rs = { "path" = "../ft60x-rs" }
+logging = {"path" = "./logging"}
+system = {"path" = "./system"}
+axum = "0.6.1"
+chrono = "0.4.23"
+clap = { version = "4.0.18", features = ["derive"] }
+flume = "0.10.14"
+futures = "0.3.25"
+hex = "0.4.3"
+libftd2xx = { version = "0.33", features = ["static"] }
+open = "3.2.0"
+memmap2 = "0.5.8"
+page_size = "0.5.0"
+pyo3 = { version = "0.18.3", features = ["extension-module"] }
+reqwest = { version = "0.11.14", default-features= false, features = ["rustls-tls"] }
+serde = "1.0.151"
+serde_json = "1.0.91"
+thiserror = "1.0.37"
+tokio = { version = "1.21.2", features = [
+    "fs",
+    "rt-multi-thread",
+    "net",
+    "time",
+    "macros",
+    "sync",
+    "signal",
+    "parking_lot",
+] }
+time = "0.3.36"
+tokio-serial = { version = "5.4.4", features = ["bytes", "rt", "tokio-util"] }
+tracing = "0.1"
+utoipa = { version = "3.3.0", features = ["axum_extras"] }
+utoipa-swagger-ui = { version = "3.1.3", features = ["axum"] }
+winapi = "0.3.9"
+zerocopy = "0.6.1"
+
+# https://stackoverflow.com/questions/65553557/why-rust-is-failing-to-build-command-for-openssl-sys-v0-9-60-even-after-local-in
+
+# [target.'cfg(windows)'.dependencies]
+# openssl = { version = "0.10", features = ["vendored"]}
+# openssl-sys = "0.9"
+
+# [target.'cfg(not(windows))'.dependencies]
+# openssl = { version = "0.10", features = ["vendored"] }
+# openssl-sys = "0.9"
+
+[profile.release-with-debug]
+inherits = "release"
+debug = true

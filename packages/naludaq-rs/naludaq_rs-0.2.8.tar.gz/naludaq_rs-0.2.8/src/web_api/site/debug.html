@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Nalu Hardware Server - Debug Panel</title>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<style>
+		body {
+			font-family: Arial, Helvetica, sans-serif;
+		}
+
+		/* Globally style tables */
+		table {
+			border-collapse: collapse;
+			width: 70%;
+			max-width: 1000px;
+			margin: 0 auto;
+			box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+		}
+
+		/* Style table headers */
+		th {
+			background-color: #f2f2f2;
+			color: #333;
+			font-weight: bold;
+			padding: 8px;
+			text-align: left;
+			border: 1px solid #ddd;
+		}
+
+		/* Style table rows */
+		td {
+			padding: 8px;
+			text-align: left;
+			border: 1px solid #ddd;
+		}
+
+		td:first-child {
+			width: 1%;
+			white-space: nowrap;
+		}
+
+		h2,
+		h3 {
+			text-align: center;
+		}
+
+		h2 {
+			position: relative;
+		}
+
+		h2::after {
+			content: "";
+			display: block;
+			height: 3px;
+			width: 50%;
+			background-color: #333;
+			margin: 20px auto 0;
+		}
+
+	</style>
+	<script>
+		window.LAST_DATA = null;
+		INTERVAL = 1000;
+
+		function update() {
+			fetchSystem();
+			fetchAcquisitionInfo();
+			fetchConnectionInfo();
+		}
+
+		/**
+		 * Update system information
+		 */
+		function fetchSystem() {
+			fetch('/server/debug-info')
+				.then(response => response.json())
+				.then(data => {
+					if (window.LAST_DATA == null) {
+						window.LAST_DATA = data;
+					}
+					displayServerData(data);
+					displaySystemData(data);
+					displayNetworksData(data);
+					displayStorageDeviceData(data);
+					displayProcessData(data);
+					LAST_DATA = data;
+				})
+				.catch(error => console.error(error));
+		}
+
+		function fetchConnectionInfo() {
+			fetch('/connection/info')
+				.then(response => response.json())
+				.then(data => {
+					displayConnectionInfo(data);
+				})
+				.catch(error => console.error(error));
+		}
+
+		function fetchAcquisitionInfo() {
+			fetch('/acquisition/output')
+				.then(response => response.json())
+				.then(data => {
+					document.getElementById("acq_current").innerHTML = data["name"] || "<em>(None)</em>"
+				})
+				.catch(error => console.error(error));
+
+			fetch('/acquisition/list')
+				.then(response => response.json())
+				.then(data => {
+					var html = "";
+					for (let acq of data["acquisitions"]) {
+						html += `
+							<tr>
+								<td>${acq["name"]}</td>
+								<td>${acq["start_time"]}</td>
+								<td>${acq["end_time"]}</td>
+								<td>${acq["status"]}</td>
+							</tr>
+						`;
+					}
+					document.getElementById("acq_list").innerHTML = html;
+				})
+		}
+
+		async function fetchAcquisitionInfo() {
+			try {
+				const acqList = await fetch("/acq/list").then(response => response.json());
+				const currentName = await fetch("/acq/output").then(response => response.json());
+				const resultPromises = [];
+				acqList["acquisitions"].forEach((name) => {
+					resultPromises.push(fetch(`/acq/show?name=${name}`).then(response => response.json()));
+				});
+				const results = await Promise.all(resultPromises);
+
+				displayAcquisitionInfo(currentName["name"], results);
+			} catch (error) {
+				console.error(error);
+			}
+		}
+
+		/**
+		 * Display acquisition information
+		 */
+		function displayAcquisitionInfo(currentName, acqs) {
+			var totalSize = acqs.reduce((total, acq) => acq["total_size"] + total, 0)
+			document.getElementById("acq_count").innerHTML = acqs.length;
+			document.getElementById("acq_current").innerHTML = currentName || "<em>(None)</em>"
+			document.getElementById("acq_total_size").innerHTML = formatMemorySize(totalSize);
+		}
+
+		/**
+		 * Display information under the "Server" section.
+		 */
+		function displayServerData(data) {
+			document.getElementById("server_acq_dir").innerHTML = data["working_dir"];
+		}
+
+		/**
+		 * Display information under the "System" section.
+		 */
+		function displaySystemData(data) {
+			sys = data["system"];
+			document.getElementById("os_name").innerHTML = sys["name"] || "Unknown";
+			document.getElementById("os_version").innerHTML = sys["os_version"] || "Unknown";
+			document.getElementById("kernel_version").innerHTML = sys["kernel_version"] || "Unknown";
+			document.getElementById("host_name").innerHTML = sys["host_name"] || "Unknown";
+			document.getElementById("sys_up_time").innerHTML = formatDuration(sys["up_time"]);
+			document.getElementById("processor_type").innerHTML = sys["cpus"][0]["brand"];
+			document.getElementById("processor_cores").innerHTML = sys["cpus"].length;
+			document.getElementById("processor_speed").innerHTML = (sys["cpus"][0]["frequency"] / 1e3).toFixed(2) + " GHz";
+
+			var html = "";
+			sys["cpus"].forEach(function (cpu, i) {
+				html += `
+					<tr>
+						<td><strong>${i}</strong></td>
+						<td>${formatPercent(cpu["usage"] / 100)}</td>
+					</tr>
+				`;
+			})
+			document.getElementById("cores").innerHTML = html;
+		}
+
+		/**
+		 * Display information under the "Storage Devices" section.
+		 */
+		function displayStorageDeviceData(data) {
+			// Number of devices is variable, need to build a table dynamically
+			var html = "";
+			for (let device of data["system"]["disks"]) {
+				total = device["total_space"];
+				available = device["available_space"];
+				used = total - available;
+				html += `
+					<tr>
+						<td><strong>${device["name"]}</strong></td>
+						<td>${formatMemorySize(total)}</td>
+						<td>${formatMemorySize(used)}</td>
+						<td>${formatMemorySize(available)}</td>
+					</tr>
+				`;
+			}
+			document.getElementById("storage_devices").innerHTML = html;
+		}
+
+		/**
+		 * Display information under the "Networks" section.
+		 */
+		function displayNetworksData(data) {
+			var all_speeds = sortDictionary(networkSpeeds(data));
+
+			// Number of network interfaces is variable, need to build a table dynamically
+			var html = "";
+			for (let name in all_speeds) {
+				speeds = all_speeds[name]
+				network = data["system"]["networks"][name];
+				html += `
+					<tr>
+						<td><strong>${name}</strong></td>
+						<td>${speeds["tx"]}</td>
+						<td>${speeds["rx"]}</td>
+						<td>${formatMemorySize(network["total_transmitted"])}</td>
+						<td>${formatMemorySize(network["total_received"])}</td>
+					</tr>
+				`;
+			}
+
+			document.getElementById("networks").innerHTML = html;
+		}
+
+		/**
+		 * Display information under the "Process" section.
+		 */
+		function displayProcessData(data) {
+			speeds = diskSpeeds(data);
+			proc = data["system"]["process"];
+			document.getElementById("process_name").innerHTML = proc["name"];
+			document.getElementById("process_run_time").innerHTML = formatDuration(proc["run_time"]);
+			document.getElementById("process_cpu").innerHTML = formatPercent(proc["cpu_usage"] / 100);
+			document.getElementById("process_memory").innerHTML = formatMemorySize(proc["memory"]);
+			document.getElementById("process_disk_read_speed").innerHTML = speeds["read"];
+			document.getElementById("process_disk_write_speed").innerHTML = speeds["write"];
+			document.getElementById("process_disk_write_amt").innerHTML = formatMemorySize(proc["disk_bytes_written"]);
+			document.getElementById("process_disk_read_amt").innerHTML = formatMemorySize(proc["disk_bytes_read"]);
+		}
+
+		/**
+		 * Fetch network speeds into a dictionary. Example:
+		 *
+		 * {
+		 * 		"eth0": {
+		 * 			"tx": "1.2 MB/s",
+		 * 			"rx": "3.4 MB/s",
+		 * 		},
+		 * }
+		 */
+		function networkSpeeds(data) {
+			const networks = data["system"]["networks"];
+			const result = {};
+			for (let name in networks) {
+				transmitted = networks[name]["total_transmitted"];
+				received = networks[name]["total_received"];
+				last_transmitted = window.LAST_DATA["system"]["networks"][name]["total_transmitted"];
+				last_received = window.LAST_DATA["system"]["networks"][name]["total_received"];
+				result[name] = {
+					// interval is in ms
+					"tx": formatByteRate((transmitted - last_transmitted) / INTERVAL * 1000),
+					"rx": formatByteRate((received - last_received) / INTERVAL * 1000),
+				}
+			}
+			return result;
+		}
+
+		/**
+		 * Fetch disk read/write speeds into a dictionary. Example:
+		 *
+		 * {
+		 * 		"read": "1.2 MB/s",
+		 * 		"write": "3.4 MB/s",
+		 * }
+		 */
+		function diskSpeeds(data) {
+			proc = data["system"]["process"];
+			last_proc = window.LAST_DATA["system"]["process"];
+			written = proc["disk_bytes_written"];
+			read = proc["disk_bytes_read"];
+			last_written = last_proc["disk_bytes_written"];
+			last_read = last_proc["disk_bytes_read"];
+			return {
+				// interval is in ms
+				"write": formatByteRate((written - last_written) / INTERVAL * 1000),
+				"read": formatByteRate((read - last_read) / INTERVAL * 1000),
+			}
+		}
+
+		/**
+		 * Populate a table element with data from a dictionary (non-recursive).
+		 */
+		function displayConnectionInfo(connectionInfo) {
+			connected = connectionInfo["connection_type"] != null && connectionInfo["connection_info"] != null;
+			html = `
+				<tr>
+					<td><strong>Status</strong></td>
+					<td>${connected ? "Connected" : "Disconnected"}</td>
+				</tr>
+			`;
+			if (connected) {
+				rts_cts = connectionInfo["connection_info"]["rts_cts"];
+				if (rts_cts !== null && rts_cts !== undefined) {
+					rts_cts = rts_cts ? "On" : "Off";
+				}
+				fields = {
+					"Connection Type": connectionInfo["connection_type"].toUpperCase(),
+					"Board IP": connectionInfo["connection_info"]["board_ip"],
+					"Board Port": connectionInfo["connection_info"]["board_port"],
+					"Receiver IP": connectionInfo["connection_info"]["receiver_ip"],
+					"Receiver Port": connectionInfo["connection_info"]["receiver_port"],
+					"Serial Number": connectionInfo["connection_info"]["serial_number"],
+					"Serial Port": connectionInfo["connection_info"]["port"],
+					"COM Port": connectionInfo["connection_info"]["com_port"],
+					"Speed": connectionInfo["connection_info"]["baud_rate"].toLocaleString("en-US") + " bps",
+					"RTS/CTS": rts_cts,
+				};
+				html = "";
+				for (const key in fields) {
+					var value = fields[key];
+					if (value === null || value == undefined) {
+						continue;
+					}
+
+					html += `
+					<tr>
+						<td><strong>${key}</strong></td>
+						<td>${value}</td>
+					</tr>
+				`;
+				}
+			}
+			document.getElementById("connection_table").innerHTML = html;
+		}
+
+		/**
+		 * Format Bps into a string with appropriate units
+		 */
+		function formatByteRate(speed) {
+			speed *= 8;
+			if (speed < 1e3) {
+				return speed.toFixed(2) + " bps";
+			} else if (speed <= 1e6) {
+				return (speed / 1e3).toFixed(2) + " Kbps";
+			} else if (speed <= 1e9) {
+				return (speed / 1e6).toFixed(2) + " Mbps";
+			} else {
+				return (speed / 1e9).toFixed(2) + " Gbps";
+			}
+		}
+
+		/**
+		 * Format bytes into a string with appropriate units
+		 */
+		function formatMemorySize(bytes) {
+			if (bytes < 1e3) {
+				return bytes + " B";
+			} else if (bytes <= 1e6) {
+				return (bytes / 1e3).toFixed(2) + " KB";
+			} else if (bytes <= 1e9) {
+				return (bytes / 1e6).toFixed(2) + " MB";
+			} else {
+				return (bytes / 1e9).toFixed(2) + " GB";
+			}
+		}
+
+		/**
+		 * Format seconds into a HH-MM-SS string
+		 */
+		function formatDuration(durationInSeconds) {
+			const days = Math.floor(durationInSeconds / (3600 * 24));
+			const hours = Math.floor(durationInSeconds % (3600 * 24) / 3600);
+			const minutes = Math.floor(durationInSeconds % 3600 / 60);
+			const seconds = durationInSeconds % 60;
+
+			const parts = [];
+			if (days > 0) {
+				parts.push(`${days} day${days === 1 ? '' : 's'}`);
+			}
+			if (hours > 0 || days > 0) {
+				parts.push(`${hours} hour${hours === 1 ? '' : 's'}`);
+			}
+			if (minutes > 0 || hours > 0 || days > 0) {
+				parts.push(`${minutes} minute${minutes === 1 ? '' : 's'}`);
+			}
+			parts.push(`${seconds} second${seconds === 1 ? '' : 's'}`);
+
+			if (parts.length === 0) {
+				return '0 seconds';
+			} else if (parts.length === 1) {
+				return parts[0];
+			} else {
+				return parts.join(', ');
+			}
+		}
+
+		/**
+		 * Format a fraction into a percentage string
+		 */
+		function formatPercent(fraction) {
+			return (fraction * 100).toFixed(2) + "%"
+		}
+
+		/**
+		 * Sort a dictionary by key
+		 */
+		function sortDictionary(d) {
+			return Object.keys(d).sort().reduce((a, k) => (a[k] = d[k], a), {});
+		}
+	</script>
+</head>
+
+<body>
+	<h2>Server</h2>
+	<table>
+		<tbody>
+			<tr>
+				<td><strong>Up Time</strong></td>
+				<td id="process_run_time"></td>
+			</tr>
+		</tbody>
+	</table>
+
+	<h3>Connection</h3>
+	<table>
+		<tbody id="connection_table">
+		</tbody>
+	</table>
+
+	<h3>Acquisitions</h3>
+	<table>
+		<tbody id="acquisitions">
+			<tr>
+				<td><strong>Current Acquisition</strong></td>
+				<td id="acq_current"></td>
+			</tr>
+			<tr>
+				<td><strong>Acquisition Count</strong></td>
+				<td id="acq_count"></td>
+			</tr>
+			<tr>
+				<td><strong>Total Storage Occupied</strong></td>
+				<td id="acq_total_size"></td>
+			</tr>
+			<tr>
+				<td><strong>Acquisition Directory</strong></td>
+				<td id="server_acq_dir"></td>
+			</tr>
+		</tbody>
+	</table>
+
+
+	<h3>Process</h3>
+	<table id="process">
+		<tbody>
+			<tr>
+				<td><strong>Process Name</strong></td>
+				<td id="process_name"></td>
+			</tr>
+			<tr>
+				<td><strong>Memory Usage</strong></td>
+				<td id="process_memory"></td>
+			</tr>
+			<tr>
+				<td><strong>CPU Usage</strong></td>
+				<td id="process_cpu"></td>
+			</tr>
+			<tr>
+				<td><strong>Disk Write Speed</strong></td>
+				<td id="process_disk_write_speed"></td>
+			</tr>
+			<tr>
+				<td><strong>Disk Read Speed</strong></td>
+				<td id="process_disk_read_speed"></td>
+			</tr>
+			<tr>
+				<td><strong>Written to Disk</strong></td>
+				<td id="process_disk_write_amt"></td>
+			</tr>
+			<tr>
+				<td><strong>Read From Disk</strong></td>
+				<td id="process_disk_read_amt"></td>
+			</tr>
+		</tbody>
+	</table>
+
+	<h2>System</h2>
+	<table id="system_table">
+		<tbody>
+			<tr>
+				<td><strong>OS Name</strong></td>
+				<td id="os_name"></td>
+			</tr>
+			<tr>
+				<td><strong>OS Version</strong></td>
+				<td id="os_version"></td>
+			</tr>
+			<tr>
+				<td><strong>Kernel Version</strong></td>
+				<td id="kernel_version"></td>
+			</tr>
+			<tr>
+				<td><strong>Host Name</strong></td>
+				<td id="host_name"></td>
+			</tr>
+			<tr>
+				<td><strong>Up Time</strong></td>
+				<td id="sys_up_time"></td>
+			</tr>
+		</tbody>
+	</table>
+
+	<h3>Processor</h3>
+	<table>
+		<tbody>
+			<tr>
+				<td><strong>Type</strong></td>
+				<td id="processor_type"></td>
+			</tr>
+			<tr>
+				<td><strong>Cores</strong></td>
+				<td id="processor_cores"></td>
+			</tr>
+			<tr>
+				<td><strong>Speed</strong></td>
+				<td id="processor_speed"></td>
+			</tr>
+		</tbody>
+	</table>
+	<br/>
+	<table>
+		<thead>
+			<tr>
+				<th>Core</th>
+				<th>Usage</th>
+			</tr>
+		</thead>
+		<tbody id="cores">
+		</tbody>
+	</table>
+
+	<h3>Storage Devices</h3>
+	<table>
+		<thead>
+			<tr>
+				<th>Device</th>
+				<th>Size</th>
+				<th>Used</th>
+				<th>Free</th>
+			</tr>
+		</thead>
+		<tbody id="storage_devices">
+		</tbody>
+	</table>
+
+	<h3>Network</h3>
+	<table>
+		<thead>
+			<tr>
+				<th>Interface</th>
+				<th>Tx Speed</th>
+				<th>Rx Speed</th>
+				<th>Total Sent</th>
+				<th>Total Received</th>
+			</tr>
+		</thead>
+		<tbody id="networks">
+		</tbody>
+	</table>
+	<script>
+		update();
+		setInterval(update, INTERVAL);
+	</script>
+</body>
+
+</html>

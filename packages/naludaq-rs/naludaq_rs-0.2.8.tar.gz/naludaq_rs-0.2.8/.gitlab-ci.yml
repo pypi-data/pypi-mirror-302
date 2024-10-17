@@ -1,0 +1,55 @@
+# Official language image. Look for the different tagged releases at:
+# https://hub.docker.com/r/library/rust/tags/
+image: "rust:latest"
+
+stages:
+ - test
+ - build
+ - publish
+
+# Optional: Install a C compiler, cmake and git into the container.
+# You will often need this when you (or any of your dependencies) depends on C code.
+# before_script:
+#   - apt-get update -yqq
+#   - apt-get install -yqq --no-install-recommends build-essential
+
+# Use cargo to test the project
+# test:cargo:
+#   script:
+#     - rustc --version && cargo --version  # Print version info for debugging
+#     - cargo test --workspace --verbose
+
+build:windows:
+  stage: build
+  artifacts:
+    paths:
+      # - ./target/x86_64-pc-windows-gnu
+      # - ./target/x86_64-pc-windows-gnu/debug/*.exe
+      - ./target/x86_64-pc-windows-gnu/release/server.exe
+      # - ./target/debug/*.exe
+      # - ./target/release/*.exe
+  script: 
+    - apt update && apt upgrade -y
+    - apt install -y gcc-mingw-w64 g++-mingw-w64-x86-64
+    - rustup target add x86_64-pc-windows-gnu
+    - cargo build --release --target x86_64-pc-windows-gnu
+  only:
+    - main
+
+
+build:linux:
+  stage: build
+  artifacts:
+    paths:
+      # - ./target/x86_64-unknown-linux-gnu/debug/
+      # - ./target/x86_64-unknown-linux-gnu/release/
+      - ./target/x86_64-unknown-linux-gnu/release/server
+
+  script: 
+    - apt update && apt upgrade -y
+    - rustup target add x86_64-unknown-linux-gnu
+    - cargo build --release --target x86_64-unknown-linux-gnu
+  only:
+    - main
+
+
