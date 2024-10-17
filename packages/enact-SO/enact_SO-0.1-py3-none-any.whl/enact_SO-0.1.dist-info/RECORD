@@ -1,0 +1,14 @@
+enact/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+enact/cellassign.py,sha256=bwknflhjza6hnMoG3m471Z4GOd3RtQP-9cCHhXlxx5g,3310
+enact/celltypist.py,sha256=azNV66RNKt3AWVic7jAgAwDc_FBvKe-_99jh1GTDyNg,2915
+enact/package_results.py,sha256=cHa5mXo6RnNso5g9zpoupFzRHx1ZJlh3yaq5nJG6CHA,5451
+enact/pipeline.py,sha256=pfuFVmaXhddTvQGHUhQlnjEW3Hxz2rVr-FsfyqZwngI,39359
+enact/assignment_methods/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+enact/assignment_methods/naive.py,sha256=xYAkN2zfMzJzUTeXkNxdEFI2ZxMPM4sfpJnZTPJ0eYE,365
+enact/assignment_methods/weight_by_area.py,sha256=2fq67keuXxr_a3qKexcUme-0pAIqXsqe0wUZ47ItULE,1421
+enact/assignment_methods/weight_by_gene.py,sha256=0x6MadYHFbsxNNuyPizw3_rsxKFSjHQFTQtohHTXg8U,5940
+enact_SO-0.1.dist-info/LICENSE.md,sha256=sOPWdVfzvuNdJ5G2rYTJ7l_9xP3rffZ68RQLAPJHCYE,1059
+enact_SO-0.1.dist-info/METADATA,sha256=8XGVD6sr3Ua8kATLACqvItX3IPKaPUQk1ZUL2ESSoeY,19364
+enact_SO-0.1.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+enact_SO-0.1.dist-info/top_level.txt,sha256=-cN4Vj2Nt8k3yk65BQyeclJf422suAm5jC5gvuxAsP4,6
+enact_SO-0.1.dist-info/RECORD,,
