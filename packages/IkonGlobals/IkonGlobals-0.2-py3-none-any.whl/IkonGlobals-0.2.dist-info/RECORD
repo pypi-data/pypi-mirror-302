@@ -1,0 +1,17 @@
+IkonGlobals/__init__.py,sha256=ehOpDtVRgVfahD350KZ1MUm0olypZrBpAkjql7pQD7g,293
+IkonGlobals/settings.py,sha256=DcO5hemj_OMN2YhC2r7kzlNdSgPVRjEZpBxkn4dXtnw,364
+IkonGlobals/database/__init__.py,sha256=pEfR5OxiuTNqIwFsh2N1be0znO1JcMOf_GkAqpy7MhA,103
+IkonGlobals/database/campaign.py,sha256=h_00rM56vX5TcODoft3Y9WtRux5MuiwYO64lloU91ig,2450
+IkonGlobals/database/song.py,sha256=knJ6jCGNKCK5gUTUIBqNz-z2Kq1EeS6NB_DqCKq3lVc,791
+IkonGlobals/database/speaker.py,sha256=qDqXgjHTa7UynJmpvGUbylw42DIgdHD_prOF_snkcwI,15944
+IkonGlobals/database/speech.py,sha256=4WLV6ZlanIyBS_HrVjcCAvDLiBHhBjGjXM1RqYtDhyo,3359
+IkonGlobals/database/user.py,sha256=dbnT7QXcG-dfZSBkf2JTlIP4D4LgchUtdgDubx3z9zY,5068
+IkonGlobals/utils/__init__.py,sha256=skfBEs6HsONzzJGg1N5wTwLVr3_PMe5hgcY_RsVYfOs,75
+IkonGlobals/utils/embedding_utils.py,sha256=yJthT3XXMMSe3aEAABZDR9JBQqdVKwFayLVujNUxlXg,9703
+IkonGlobals/utils/sentry_tool.py,sha256=8Jj-alJE0luYC1Zku1xPI5Ix2T2gr6lRZv9WzURK0qk,2866
+IkonGlobals/utils/utils.py,sha256=QPhm9Mg-KBRefd9zARZqkFXZgDRC8NlL7Gr2kjtXk7Y,1570
+IkonGlobals-0.2.dist-info/LICENSE,sha256=nDkhVA8mLvZzgXbtCgCBJai-XKTPKuVw_gurVZGraiI,1070
+IkonGlobals-0.2.dist-info/METADATA,sha256=MGMG6K9Sumj0C5leztyk280yWJ9BdA8Lr9aGZjBZ8Ro,858
+IkonGlobals-0.2.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+IkonGlobals-0.2.dist-info/top_level.txt,sha256=kCOJ_7zFAZ8AzKX4flx3kS4cVHGtZUnfTp0NKr3mdUw,12
+IkonGlobals-0.2.dist-info/RECORD,,
