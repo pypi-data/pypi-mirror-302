@@ -1,0 +1,11 @@
+bs4
+fastapi
+fastapi[standard]
+uvicorn
+pandas
+python-multipart
+pydantic-settings
+structlog
+requests
+rich
+typer
