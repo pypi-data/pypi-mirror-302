@@ -1,0 +1,7 @@
+aws_json_term_matcher/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aws_json_term_matcher/exceptions.py,sha256=7OB1nWzY49ExWrBj5MgOOFC7-TK1ghVm8vwkUgzJTyw,199
+aws_json_term_matcher/matcher.py,sha256=9lvxeYvGrsGQ4dN2Z7TwkeqOUdc3wZIEUGLSyCsx_uA,5323
+aws_json_term_matcher-0.1.0.dist-info/METADATA,sha256=X-YtqvLcDsQtJ4odPC_W03e9IWvzeAXr97vsMDBSihA,425
+aws_json_term_matcher-0.1.0.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+aws_json_term_matcher-0.1.0.dist-info/top_level.txt,sha256=X5xLM7ichIzRq5ferjoDTwBRGUzvNANVif8G_hTg8YA,22
+aws_json_term_matcher-0.1.0.dist-info/RECORD,,
