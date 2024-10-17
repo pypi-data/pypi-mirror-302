@@ -1,0 +1,6 @@
+Metadata-Version: 2.1
+Name: fastpickle
+Version: 0.0.1
+Summary: A pickle module extension
+Author: Yongjoo Park
+Author-email: yongjoo@illinois.edu
