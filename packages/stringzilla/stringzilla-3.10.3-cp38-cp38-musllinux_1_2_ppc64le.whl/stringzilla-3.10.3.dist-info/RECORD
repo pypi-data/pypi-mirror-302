@@ -1,0 +1,10 @@
+stringzilla.cpython-38-powerpc64le-linux-gnu.so,sha256=bKvbl2LkLnMrOhYXIGPAVEoq5x3z-e7RODqQJoviSag,525584
+cli/split.py,sha256=OCc-DsSiOqfk2gPRn31D47OzgF0VS08Hg3d-jI-sMjY,3430
+cli/wc.py,sha256=jvNleQtvxHoPkM0TtZ4-vWrcZE68023DwFKNN4fxpLg,4303
+cli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+stringzilla-3.10.3.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+stringzilla-3.10.3.dist-info/top_level.txt,sha256=U1mcf1aXFqpjrfKgss9_dJWQaMOA-h9IR790RYAeT_Q,16
+stringzilla-3.10.3.dist-info/RECORD,,
+stringzilla-3.10.3.dist-info/entry_points.txt,sha256=Xb61_R-C3KmzJc7YSQ3lf6xJGw-cE8CeeMaFuAGiVRw,64
+stringzilla-3.10.3.dist-info/METADATA,sha256=VHlqj1zu4fN5SwYhUN6YR3h4z8AA30_EWtcc6QxVQ9E,79832
+stringzilla-3.10.3.dist-info/WHEEL,sha256=DgS_ImgSZ17sON1oONeSYjkt9p81v4_F6kRxQ4iQQFM,111
