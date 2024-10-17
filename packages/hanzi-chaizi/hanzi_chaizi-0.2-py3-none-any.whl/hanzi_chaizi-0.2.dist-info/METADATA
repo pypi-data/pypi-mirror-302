@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: hanzi_chaizi
+Version: 0.2
+Summary: The hanzi_chaizi package provides tools for breaking down Chinese characters into basic structural units, such as strokes and components. This decomposition reveals structural similarities between characters with similar shapes. These features can be used in deep learning models to capture character-based attributes, particularly shape-related ones, for applications like natural language processing or character recognition.
+Home-page: https://github.com/howl-anderson/hanzi_chaizi
+Author: Xiaoquan Kong
+Author-email: u1mail2me@gmail.com
+License-File: LICENSE.txt
+
