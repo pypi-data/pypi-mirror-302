@@ -1,0 +1,90 @@
+[build-system]
+build-backend = "setuptools.build_meta"
+requires = [
+  "setuptools",
+]
+
+[project]
+name = "the-trial"
+version = "1.0.0"
+description = "A Python microframework for easy communication with Kafka."
+readme = "README.rst"
+keywords = [ "consumer", "kafka", "microframework", "producer", "python" ]
+authors = [
+  { name = "Michael Loukeris", email = "mloukeris@di.uoa.gr" },
+]
+requires-python = ">=3.8"
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: Console",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Natural Language :: English",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+  "Typing :: Typed",
+]
+dependencies = [
+  "click",
+  "confluent-kafka",
+  "environs",
+]
+urls = { Changelog = "https://github.com/donMichaelL/theTrial", Homepage = "https://github.com/donMichaelL/theTrial", Twitter = "https://twitter.com/MichaelLoukeris" }
+
+[tool.isort]
+force_single_line = true
+profile = "black"
+
+[tool.pytest.ini_options]
+pythonpath = "src"
+addopts = "--cov  --cov-report=term-missing:skip-covered --durations=10"
+
+[tool.coverage.run]
+branch = true
+omit = [
+  "*/site-packages/*",
+  "*/tests/*",
+]
+
+[tool.coverage.report]
+show_missing = true
+
+[tool.bumpversion]
+current_version = "1.0.0"
+parse = "(?P<major>\\d+)\\.(?P<minor>\\d+)\\.(?P<patch>\\d+)"
+serialize = [ "{major}.{minor}.{patch}" ]
+tag = true
+allow_dirty = true
+commit = true
+message = "chore:  Bump version {current_version} → {new_version}"
+
+[[tool.bumpversion.files]]
+filename = "src/theTrial/__init__.py"
+search = "{current_version}"
+
+[[tool.bumpversion.files]]
+filename = "pyproject.toml"
+search = "{current_version}"
+
+[[tool.mypy.overrides]]
+enable_error_code = [
+  "ignore-without-code",
+  "redundant-expr",
+  "truthy-bool",
+]
+mypy_path = "src/"
+warn_unreachable = true
+
+[[tool.mypy.overrides]]
+ignore_errors = true
+mypy_path = "src/"
+
+[tool.bandit.assert_used]
+skips = [ '*_test.py', '*/test_*.py' ]
