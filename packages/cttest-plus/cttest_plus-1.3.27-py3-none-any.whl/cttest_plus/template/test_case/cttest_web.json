@@ -1,0 +1,105 @@
+[
+    {
+        "projectId": 2, "caseId": 2, "caseLevel": "P2", "caseTier": ["项目", "登录"],"caseName": "登录",
+        "caseNodes": [
+            {
+                "nodeType": "Case", "nodeName": "飞熊平台登录", "check": [],
+                "nodeBody": [
+                    {
+                        "stepName": "登录飞熊平台",
+                        "driver": "ui_automation",
+                        "dataId": "userlogin",
+                        "host": "http://ctsp.casstime.com",
+                        "dataSet": {
+                            "version": "",
+                            "user": "g:user2",
+                            "path": "/login",
+                            "request": [
+                                {
+                                    "action": "send_keys",
+                                    "eleName": "用户名",
+                                    "location": [
+                                        [
+                                            "ID",
+                                            "username",
+                                            [
+                                                null,
+                                                null,
+                                                138
+                                            ]
+                                        ],
+                                        [
+                                            "XPATH",
+                                            "//*[@id=\"username\"]",
+                                            [
+                                                null,
+                                                null,
+                                                138
+                                            ]
+                                        ]
+                                    ],
+                                    "input": [
+                                        "auto_test"
+                                    ]
+                                },
+                                {
+                                    "action": "send_keys",
+                                    "eleName": "密码框",
+                                    "location": [
+                                        [
+                                            "ID",
+                                            "password",
+                                            [
+                                                null,
+                                                null,
+                                                139
+                                            ]
+                                        ],
+                                        [
+                                            "XPATH",
+                                            "//*[@id=\"password\"]",
+                                            [
+                                                null,
+                                                null,
+                                                139
+                                            ]
+                                        ]
+                                    ],
+                                    "input": [
+                                        "123456"
+                                    ]
+                                },
+                                {
+                                    "action": "click",
+                                    "eleName": "登录按钮",
+                                    "location": [
+                                        [
+                                            "ID",
+                                            "loginBtn",
+                                            [
+                                                null,
+                                                null,
+                                                140
+                                            ]
+                                        ],
+                                        [
+                                            "XPATH",
+                                            "//*[@id=\"loginBtn\"]",
+                                            [
+                                                null,
+                                                null,
+                                                140
+                                            ]
+                                        ]
+                                    ],
+                                    "input": []
+                                }
+                            ],
+                            "extract": []
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+]

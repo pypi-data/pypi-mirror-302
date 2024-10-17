@@ -1,0 +1,65 @@
+[
+    {
+        "projectId": 29,
+        "caseId": 13019,
+        "caseLevel": "P1",
+        "caseName": "获取资源团队列表",
+        "caseDescribe": "测试用例描述",
+        "caseTier": ["项目", "发布管理"],
+        "parametrize": [
+            {"_title": "参数化数据1", "username":"auto_test","password":"123456"}
+        ],
+        "caseNodes": [
+            {
+                "nodeType": "用例节点", "nodeName": "查询资源团队", "check": [],
+                "nodeBody": [
+                    {
+                        "stepName": "1.1-接口数据",
+                        "driver": "api_request",
+                        "kwPath": "",
+                        "dataId": "devops_get_team_list",
+                        "host": "",
+                        "modelSet":{
+                            "path": "/api/deploy_management/dm_checklist/resource_team/",
+                            "method": "GET",
+                            "modelName": "资源团队下拉框",
+                            "data_type": "json",
+                            "modeID": "fb49110"
+                        },
+                        "dataSet": {
+                            "request": {
+                                "user": "",
+                                "session": "user1",
+                                "test_data": {
+                                    "req_headers": {
+                                        "Content-Type": "application/json"
+                                    },
+                                    "req_query": {},
+                                    "req_params": {},
+                                    "req_body": {}
+                                }
+                            },
+                            "response": {
+                                "variable": [
+                                    {
+                                        "variable_name": "",
+                                        "variable_expression": "",
+                                        "variable_type": ""
+                                    }
+                                ],
+                                "assert": [
+                                    {
+                                        "assert_name": "code",
+                                        "assert_mode": "eq",
+                                        "assert_value": 200
+                                    }
+                                ]
+                            },
+                            "before_hook": false
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+]
