@@ -1,0 +1,52 @@
+Metadata-Version: 2.1
+Name: bigquery-spark-streaming-connector
+Version: 0.7.0
+Summary: spark structured streaming connector utility for gcp bigquery using storage api services.
+Author-email: Indranil Tarafdar <indranil.tarafdar@databricks.com>
+Description-Content-Type: text/markdown
+Requires-Dist: google-cloud-bigquery-storage ==2.25.0
+Requires-Dist: google-cloud-bigquery[fastavro]
+Requires-Dist: pyarrow
+Requires-Dist: fastavro
+
+
+bigquery-streaming-connector
+=======
+<b>This is a library for bigquery streaming connector for pyspark structured streaming</b> <b/>
+
+The underlying connector uses [bigquery storage api services] to pull bigquery table data at scale using spark workers.
+
+[bigquery storage api services]: https://cloud.google.com/bigquery/docs/reference/storage
+
+The storage api services is cheaper and faster than the traditional Bigquery query api services enabling faster & cheaper Bigquery migration incrementally in a continuous fashion.
+
+Pre-requisite
+
+```
+Need spark 4.0.0 or Databricks runtime version 15.3 & above.
+pip install bigquery-spark-streaming-connector
+```
+Pyspark usage:
+
+```
+from streaming_connector import bq_stream_register
+
+query=(spark.readStream.format("bigquery-streaming")
+ .option("project_id", <bq_project_id>)
+ .option("incremental_checkpoint_field",<table_incremental_ts_based_col>)
+ .option("dataset",<bq_dataset_name>)
+ .option("table",<bq_table_name>)
+ .option("service_auth_json_file_name",<service_account_json_file_name>)
+ .option("max_parallel_conn",<max_parallel_threads_to_pull_data>) #defaults max 1000
+ .load()
+ ## The above will ingest table data incrementally using the provided timestamp based field and latest value is checkpointed using offset semantics.
+ ## Without the incremental input field full table ingestion is done.
+ ## The service_account_json files need to be available to every spark executor workers in the '/home' folder using --files /home/<file_name>.json options or using init script (using Databricks spark)
+ 
+ (query.writeStream.trigger(processingTime='30 seconds') 
+ .option("checkpointLocation", "checkpoint_path")
+ .foreachBatch(writeToTable) #your target table write function
+ .start()
+)
+```
+
