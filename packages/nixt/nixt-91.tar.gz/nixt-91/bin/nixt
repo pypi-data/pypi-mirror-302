@@ -1,0 +1,51 @@
+#!/usr/bin/env python3
+# This file is placed in the Public Domain.
+# pylint: disable=C,W0611
+
+
+"cli"
+
+
+import os
+import sys
+
+
+from nixt.main    import Config, command, scan
+from nixt.modules import face
+from nixt.object  import parse
+from nixt.persist import Workdir, modname
+from nixt.runtime import Client, Errors, Event
+
+
+NAME = Client.__module__.split(".", maxsplit=2)[-2]
+Workdir.wdr = os.path.expanduser(f"~/.{NAME}")
+
+
+cfg = Config()
+
+
+class CLI(Client):
+
+    def raw(self, txt):
+        print(txt)
+
+
+def errors():
+    for error in Errors.errors:
+        for line in error:
+            print(line)
+
+
+def main():
+    parse(cfg, " ".join(sys.argv[1:]))
+    scan(face)
+    cli = CLI()
+    evt = Event()
+    evt.txt = cfg.txt
+    command(cli, evt)
+    evt.wait()
+
+
+if __name__ == "__main__":
+    main()
+    errors()
