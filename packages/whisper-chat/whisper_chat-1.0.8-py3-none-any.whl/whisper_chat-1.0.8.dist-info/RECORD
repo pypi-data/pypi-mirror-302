@@ -1,0 +1,9 @@
+whisper_cli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+whisper_cli/api.py,sha256=zpXBvyM3df7iLD3hkSl8fanhutRYuJ9wGCsEq8dEMPk,4245
+whisper_cli/cli.py,sha256=tUJqvrvcvKf6aIvMR9bngAX3PsMd5d-C76ItLnt_BGU,2964
+whisper_cli/utils.py,sha256=xpuVlc5DwBgp5M4NQR8ZoVerL2DKQ9dHyHuYzLpL5EM,1168
+whisper_chat-1.0.8.dist-info/METADATA,sha256=vDy5PATJZ8IcXwtDme-HfwEw8-hZT8MlEHNjeuHdiYs,5410
+whisper_chat-1.0.8.dist-info/WHEEL,sha256=GV9aMThwP_4oNCtvEC2ec3qUYutgWeAzklro_0m4WJQ,91
+whisper_chat-1.0.8.dist-info/entry_points.txt,sha256=ZOZUHNkl_Hl8FO7aqyZyPSt01jCHZ_DbQ-ee45QWsoU,49
+whisper_chat-1.0.8.dist-info/top_level.txt,sha256=nrT_5er7QPnladQoHpCzj36LFz5h0ujm3nxGQcgUI3o,12
+whisper_chat-1.0.8.dist-info/RECORD,,
