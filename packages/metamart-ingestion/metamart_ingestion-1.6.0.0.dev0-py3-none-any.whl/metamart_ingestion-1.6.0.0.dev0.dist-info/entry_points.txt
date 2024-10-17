@@ -1,0 +1,8 @@
+[apache_airflow_provider]
+provider_info = airflow_provider_metamart:get_provider_config
+
+[console_scripts]
+metadata = metadata.cmd:metadata
+
+[pytest11]
+pytest_metamart = _metamart_testutils.pytest_metamart.plugin
