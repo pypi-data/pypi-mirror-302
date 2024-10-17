@@ -1,0 +1,11 @@
+services:
+  #for local development we don't need the image directly.Uncomment if you want to use the image you built and choose local as env
+  mykitchen:
+    image: mykitchen
+    ports:
+    - "8000:8000"
+    volumes:
+      - $HOME/.aws/credentials:/root/.aws/credentials:ro
+    network_mode: host
+    env_file:
+      - .env
