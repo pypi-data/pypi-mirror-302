@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+dytop.egg-info/PKG-INFO
+dytop.egg-info/SOURCES.txt
+dytop.egg-info/dependency_links.txt
+dytop.egg-info/requires.txt
+dytop.egg-info/top_level.txt
