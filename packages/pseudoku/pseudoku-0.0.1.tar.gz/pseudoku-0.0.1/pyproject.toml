@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pseudoku"
+version = "0.0.1"
+authors = [
+    { name="Joe Gretton", email="joegretton96@gmail.com" },
+]
+description = "A Sudoku puzzle solver and generator"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+keywords = ["sudoku", "sudoku solver", "sudoku generator"]
+
+[project.urls]
+Homepage = "https://github.com/Grettz/Pseudoku"
+Issues = "https://github.com/Grettz/Pseudoku/issues"

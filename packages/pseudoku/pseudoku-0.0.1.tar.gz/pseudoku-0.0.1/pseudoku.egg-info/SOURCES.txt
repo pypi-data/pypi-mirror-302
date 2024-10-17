@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+pseudoku/Generator.py
+pseudoku/Solver.py
+pseudoku/__init__.py
+pseudoku.egg-info/PKG-INFO
+pseudoku.egg-info/SOURCES.txt
+pseudoku.egg-info/dependency_links.txt
+pseudoku.egg-info/top_level.txt
