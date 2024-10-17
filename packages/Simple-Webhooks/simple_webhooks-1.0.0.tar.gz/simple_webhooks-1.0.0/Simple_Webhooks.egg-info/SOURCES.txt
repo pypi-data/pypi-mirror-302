@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+pyproject.toml
+Simple_Webhooks.egg-info/PKG-INFO
+Simple_Webhooks.egg-info/SOURCES.txt
+Simple_Webhooks.egg-info/dependency_links.txt
+Simple_Webhooks.egg-info/requires.txt
+Simple_Webhooks.egg-info/top_level.txt
+tests/test_webhook.py
+webhook/__init__.py
+webhook/logging.py
+webhook/webhook_manager.py
+webhook/webhook_sender.py
