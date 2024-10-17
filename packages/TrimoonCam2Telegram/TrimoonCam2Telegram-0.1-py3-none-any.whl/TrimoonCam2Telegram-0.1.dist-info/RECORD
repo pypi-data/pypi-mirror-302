@@ -1,0 +1,14 @@
+TrimoonCam2Telegram/__init__.py,sha256=IKhSGQGn2ciIi5KlD7QeULt974E9e9Ydl0zKDZE9qvY,369
+TrimoonCam2Telegram/cam2telegram_config.py,sha256=pveUTyp4DfDvyLvaF0PPRcRaDJmfvI2AN02FZdKI2B0,2490
+TrimoonCam2Telegram/cams/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+TrimoonCam2Telegram/cams/bongacams2telegram.py,sha256=mr1mWqECWPUcct6GZ9C3vY7cTspvXJBrIMsB2p98ktk,3355
+TrimoonCam2Telegram/cams/camsoda2telegram.py,sha256=lLVWpcINrJlwFxaG74BiJV-xtB3Gf2WoSviNLVIDB58,4008
+TrimoonCam2Telegram/cams/chaturbate2telegram.py,sha256=CBPIdTkpfdrXZy-XvgUqlnDFbm1riJCqg8Bj6PKamZA,3821
+TrimoonCam2Telegram/telegram/TelegramCustom.py,sha256=5qLnfrlzNoAu5oOAEoSo2m9JBYpTwR27hKJN0Ud8bPs,1633
+TrimoonCam2Telegram/telegram/TelegramPublisher.py,sha256=59f7tOuLexnyZ-cnMSWjXqvlWQc5vTkx5vR36oPwV5M,3680
+TrimoonCam2Telegram/telegram/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+TrimoonCam2Telegram-0.1.dist-info/LICENSE.md,sha256=MOE1wKnBAIy9DzriGCoaO3zyULtyZ49vvh0m3Xq_cxI,1091
+TrimoonCam2Telegram-0.1.dist-info/METADATA,sha256=BS62zUCbftQPBaOo2ihULQVL5gCh0YCvG7Yyx5WB-oc,6819
+TrimoonCam2Telegram-0.1.dist-info/WHEEL,sha256=GV9aMThwP_4oNCtvEC2ec3qUYutgWeAzklro_0m4WJQ,91
+TrimoonCam2Telegram-0.1.dist-info/top_level.txt,sha256=c_ne8XSunnkcyuVut5KQVPvxmGFr-qnvwkj9S6R2N_M,20
+TrimoonCam2Telegram-0.1.dist-info/RECORD,,
