@@ -1,0 +1,14 @@
+python-targets:
+  - 3
+max-line-length: 120
+strictness: medium
+pep8:
+  disable:
+    - E501
+pylint:
+  disable:
+    - line-too-long
+    - too-many-arguments
+    - unused-argument
+    - unused-variable
+    - protected-access
