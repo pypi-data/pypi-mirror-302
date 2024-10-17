@@ -1,0 +1,54 @@
+Metadata-Version: 2.1
+Name: bg_samplesheet_file_utils
+Version: 0.1.0
+Summary: Collection of Python modules for reading and writing the comma-separated samplesheet file.
+Home-page: https://github.com/rusty-bioinfo-se/bg-samplesheet-file-utils
+Author: Jaideep Sundaram
+Author-email: sundaram.baylorgenetics@gmail.com
+Keywords: bg_samplesheet_file_utils
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.6
+License-File: AUTHORS.rst
+Requires-Dist: Click>=7.0
+Requires-Dist: Pydantic
+Requires-Dist: PyYAML
+Requires-Dist: Rich
+Requires-Dist: singleton-decorator
+
+=========================
+BG Samplesheet File Utils
+=========================
+
+Collection of Python modules for reading and writing the comma-separated samplesheet file.
+
+
+Features
+--------
+
+* Parser for reading the comma-separated samplesheet file
+* Writer for writing the comma-separated samplesheet file
+* Record class for representing a record in the samplesheet file
+
+Credits
+-------
+
+This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
+
+.. _Cookiecutter: https://github.com/audreyr/cookiecutter
+.. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
+
+
+=======
+History
+=======
+
+0.1.0 (2024-10-16)
+------------------
+
+* First release on PyPI.
