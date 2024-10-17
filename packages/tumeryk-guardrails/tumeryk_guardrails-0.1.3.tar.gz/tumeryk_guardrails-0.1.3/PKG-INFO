@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: tumeryk_guardrails
+Version: 0.1.3
+Summary: API Client for Tumeryk_Guardrails
+Author: Tumeryk
+Author-email: support@tumeryk.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# Tumeryk Guardrails Client
+
+## Overview
+
+The Tumeryk Guardrails Client is an API client for interacting with Tumeryk Guardrails. It helps users to authenticate, retrieve available policies, set policies, and communicate with the Guard service.
+
+## Example Usage
+
+```python
+import tumeryk_guardrails
+
+# Authenticate (replace with valid credentials)
+username = "your_username"
+password = "your_password"
+
+tumeryk_guardrails.login(username, password)
+
+# Get available policies
+policies = tumeryk_guardrails.get_policies()
+print("Available Policies:", policies)
+
+# Set a policy if available
+tumeryk_guardrails.set_policy("hr_policy")
+
+# Send a guard request
+response = tumeryk_guardrails.tumeryk_completions("Example input to guard")
+print("Guard Response:", response)
