@@ -1,0 +1,14 @@
+afstest-0.1.0.dist-info/METADATA,sha256=SsGuPt7HRn3AOZ09QrUS1qQcIfUEmfypDxuplimVKWI,268
+afstest-0.1.0.dist-info/WHEEL,sha256=pM0IBB6ZwH3nkEPhtcp50KvKNX-07jYtnb1g1m6Z4Co,90
+afstest-0.1.0.dist-info/entry_points.txt,sha256=BFWNumoYLZ_DvYHKEp5mwcmCg2kyqO0BsOCwNFlkQ5g,61
+afstest/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+afstest/_select.py,sha256=BcSzEfG5bkBMffCi3VUoEVx1aLm8ZzR1i6O5Hx-CMNM,534
+afstest/cli.py,sha256=WEdAqJIEm70YnEYFrndDtm7070LnMIEWoEnKz4ugAXc,1256
+afstest/webui_frame/commons/kdt.py,sha256=lH-IBnWLeiISCUeEJfRfIZgvcMz-7k8dL7FvYRmpOu0,2368
+afstest/webui_frame/conftest.py,sha256=w3sbGp9MAIZ6Jww0Y8NFooTmTnVdRZHJ7skZd-ZrUpI,1494
+afstest/webui_frame/main.py,sha256=koeyMV2G3e8K8Yh6KtcD2X_6sFXNmqJ6snImZhCOLuY,171
+afstest/webui_frame/pytest.ini,sha256=8EZO19rqyGmlCVI0VQfbd3VEHq4O0R4CzW6aqP1XKuU,337
+afstest/webui_frame/requirements.txt,sha256=gh9Lhv33rCDHSlsAC5Pb1V8ksK3ASBT13mHVA5eojUA,236
+afstest/webui_frame/tests/test_baidu.py,sha256=zVtsr4XNFUQpFEhu81Cgs9ksggDi5Ty4UvwCZmqDUDo,189
+afstest/webui_frame/tests/test_conv.xlsx,sha256=dpkuKBdfEOXITZXBu4NGVaF8gHoAP4F0uAklsy9xPvk,9505
+afstest-0.1.0.dist-info/RECORD,,

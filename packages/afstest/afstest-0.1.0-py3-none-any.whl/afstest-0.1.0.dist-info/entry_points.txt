@@ -1,0 +1,5 @@
+[console_scripts]
+afstest = afstest.cli:main
+
+[gui_scripts]
+
