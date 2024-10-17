@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: pypeliner
+Version: 0.7.0
+Summary: A library for creating informatic workflows or pipelines.
+Home-page: http://bitbucket.org/dranew/pypeliner
+Download-URL: https://bitbucket.org/dranew/pypeliner/get/v0.7.0.tar.gz
+Author: Andrew McPherson
+Author-email: andrew.mcpherson@gmail.com
+Keywords: scientific,framework
+License-File: LICENSE.txt
+Requires-Dist: dill
+Requires-Dist: networkx
+Requires-Dist: pyyaml
+Requires-Dist: six

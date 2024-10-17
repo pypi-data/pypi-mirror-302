@@ -1,0 +1,3 @@
+[console_scripts]
+aws_fetch_run = pypeliner.contrib.aws.fetch_run:main
+pypeliner_delegate = pypeliner.delegator:main
