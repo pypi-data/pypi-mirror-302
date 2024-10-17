@@ -1,0 +1,3 @@
+[console_scripts]
+cchydro=cookiecutter_hydro.cli:main
+
