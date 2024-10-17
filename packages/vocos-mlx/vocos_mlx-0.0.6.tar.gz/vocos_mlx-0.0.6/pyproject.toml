@@ -1,0 +1,41 @@
+[build-system]
+requires = [
+    'setuptools'
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vocos-mlx"
+version = "0.0.6"
+authors = [{name = "Lucas Newman", email = "lucasnewman@me.com"}]
+license = {text = "MIT"}
+description = "Vocos - MLX"
+readme = "README.md"
+keywords = [
+    "artificial intelligence",
+    "asr",
+    "audio-generation",
+    "deep learning",
+    "transformers",
+    "text-to-speech"
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.9",
+]
+requires-python = ">=3.9"
+dependencies = [
+    "huggingface_hub",
+    "mlx",
+    "numpy",
+    "pyyaml"
+]
+
+[project.urls]
+Homepage = "https://github.com/lucasnewman/vocos-mlx"
+
+[tool.setuptools]
+packages = ["vocos_mlx"]
