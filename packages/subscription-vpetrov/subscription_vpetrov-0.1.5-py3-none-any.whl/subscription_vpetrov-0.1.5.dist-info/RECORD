@@ -1,0 +1,13 @@
+subscription_vpetrov/__init__.py,sha256=IX_YdqCMgLumQKkLK8wd6wnf0u9jZ79m_unX2L4_K0g,160
+subscription_vpetrov/config.py,sha256=0va4TS2SwBDGdsHuAuePo62JoXrXhYpDgSx35Gr5O1I,783
+subscription_vpetrov/crud.py,sha256=xTDWySA9IW1P_0ur5yb5q3SMR7PWLC3dIBeQQrP7N_M,2169
+subscription_vpetrov/database.py,sha256=6D3mwOLUoZHuc0qSXl1_LrVPy___t2n2Z3E_8gUYUnU,899
+subscription_vpetrov/exceptions.py,sha256=OKEiG3EYflTlRwZQTfcMohDHCVUMqxPdAwr3uvAu3qw,585
+subscription_vpetrov/models.py,sha256=mk3Hg-6wDQ3nf0UV8kE4KgQt3taV0YCmg8Y-klWfaeE,2837
+subscription_vpetrov/schemas.py,sha256=t-QF-xjZtqESsaR1w3Vvj58H8CvMRtlkTlRNPzIa-S4,582
+subscription_vpetrov/validations.py,sha256=KFZEt8YxU_5E1HDXwgBir1Qy-B4RllQRDNTFLtif26g,520
+subscription_vpetrov-0.1.5.dist-info/LICENSE,sha256=G3CA8aBRFptGo9UYyGxsepiVRWm25NZr7nn2bJqudQU,1072
+subscription_vpetrov-0.1.5.dist-info/METADATA,sha256=opI2JjTwiHgWG8ZQd98aUV1r_SEs_7bz6WPkNZYpA_4,245
+subscription_vpetrov-0.1.5.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+subscription_vpetrov-0.1.5.dist-info/top_level.txt,sha256=Mz58ooAmLUhkt4zueUpzIg1Zn25JtcesvWX5QENbwPk,21
+subscription_vpetrov-0.1.5.dist-info/RECORD,,
