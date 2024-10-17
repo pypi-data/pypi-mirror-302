@@ -1,0 +1,13 @@
+LICENSE
+setup.py
+spideymaps/__init__.py
+spideymaps/spidey_atlas.py
+spideymaps/spideymap.py
+spideymaps/spideymaps_calculation.py
+spideymaps/spideymaps_read.py
+spideymaps/spideymaps_rendering.py
+spideymaps.egg-info/PKG-INFO
+spideymaps.egg-info/SOURCES.txt
+spideymaps.egg-info/dependency_links.txt
+spideymaps.egg-info/requires.txt
+spideymaps.egg-info/top_level.txt

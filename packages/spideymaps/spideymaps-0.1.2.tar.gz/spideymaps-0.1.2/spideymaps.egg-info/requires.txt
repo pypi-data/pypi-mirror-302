@@ -1,0 +1,8 @@
+h5py>=3.0.0
+matplotlib
+numpy
+pandas
+scipy
+seaborn
+shapely>=2.0.0
+scikit-image

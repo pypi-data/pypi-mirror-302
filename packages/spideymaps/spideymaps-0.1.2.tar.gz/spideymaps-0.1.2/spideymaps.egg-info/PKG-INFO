@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: spideymaps
+Version: 0.1.2
+Summary: For generating heat maps of single-molecule localization data in rod-shaped bacteria.
+Author: Daniel Foust
+Author-email: djfoust@umich.edu
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: h5py>=3.0.0
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: scipy
+Requires-Dist: seaborn
+Requires-Dist: shapely>=2.0.0
+Requires-Dist: scikit-image
+
+# Spideymaps
+A system for identifying patterns in single molecule experiments in rod-shaped bacteria.
+
+## Installation
+If git installed:  
+~~~  
+pip install git+https://github.com/d-foust/spideymaps.git#egg=spideymaps  
+~~~  
+
+If git is not installed, use "Download ZIP" and unpack folder somewhere convenient. Navigate to folder and run:
+~~~  
+pip install -e .  
+~~~  
