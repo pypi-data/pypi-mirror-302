@@ -1,0 +1,7 @@
+
+[dev]
+black
+darglint
+ruff
+mypy
+pytest
