@@ -1,0 +1,17 @@
+sphinx_c_autodoc/__init__.py,sha256=H1Nuyo_EeLt4xTUXubx4r84q9tc6_0Gd6woE9NTD8Bw,27094
+sphinx_c_autodoc/loader.py,sha256=DGOG47XvAu3sMpW-aVLnNM_7sXQfqYdFB1ocP8zEFMA,36181
+sphinx_c_autodoc/apidoc/__init__.py,sha256=CPrYMsVxZmFcXvIwd7oWmHG-6Nmk-TNDJd6Pkh2lA3Y,7096
+sphinx_c_autodoc/apidoc/templates/header.rst.jinja2,sha256=wHODQS0iriHJgedZXdqR3EMIsEdUSurwNd8XrAzfDNE,72
+sphinx_c_autodoc/apidoc/templates/source.rst.jinja2,sha256=cYhl1VOjkY7CXSjmVo_cI6FUpAH6RBIJyWLehYFjecQ,57
+sphinx_c_autodoc/apidoc/templates/toc.rst.jinja2,sha256=2iP-xKKuW_xaUwiKt6fxuhTV--lVG_oGv_PnYCJkXzA,131
+sphinx_c_autodoc/clang/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sphinx_c_autodoc/clang/comments.py,sha256=voQlbFclQrZBl6FOsJFePdUbJCOdoCAsVxr77ZntmqM,515
+sphinx_c_autodoc/clang/patches.py,sha256=I0-4Si-LKdJ7zlTTV-UN47-xqm6rf46Udv4jTr7ZSNY,5876
+sphinx_c_autodoc/domains/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sphinx_c_autodoc/domains/c.py,sha256=E9DnkDFhHiPk0D7O7KyMn5MiodNoFdydQHfhYfVATfo,1394
+sphinx_c_autodoc/napoleon/__init__.py,sha256=_x7XxVRD3vTJWWAI1iLCvK5GifFnM0osXstdmZnWK8Y,6376
+sphinx_c_autodoc/viewcode/__init__.py,sha256=ckNf3FCCq34j2BTfvnTucHPxjENUJTvfQm1Ul8y4tkM,15996
+sphinx_c_autodoc-1.4.0.dist-info/entry_points.txt,sha256=5-T8iiIG7aPHvTeuYLtanVhH1CcFD_owwMgpIM1Z9yA,64
+sphinx_c_autodoc-1.4.0.dist-info/WHEEL,sha256=EZbGkh7Ie4PoZfRQ8I0ZuP9VklN_TvcZ6DSE5Uar4z4,81
+sphinx_c_autodoc-1.4.0.dist-info/METADATA,sha256=ie4k_DUCeRusabRIFWHRqykJ9DOML717sH4XZ4TTHXo,3277
+sphinx_c_autodoc-1.4.0.dist-info/RECORD,,
