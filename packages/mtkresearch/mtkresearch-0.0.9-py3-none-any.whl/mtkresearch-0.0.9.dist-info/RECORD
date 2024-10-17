@@ -1,0 +1,8 @@
+mtkresearch/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mtkresearch/llm/__init__.py,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+mtkresearch/llm/chat.py,sha256=IFb9OVSyGsAZHsHOj4lgk1zx1A4A0J0XSB6vetdjQXw,1931
+mtkresearch/llm/prompt.py,sha256=aoR7fTa5W82kbf21juPqJ21JPKFJ85yZLc0XGdDBBAc,17838
+mtkresearch-0.0.9.dist-info/METADATA,sha256=rjQzqaWkcH65jWZV7qmT-s9lWi-N9ztgaXNlYikpQwg,2526
+mtkresearch-0.0.9.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+mtkresearch-0.0.9.dist-info/top_level.txt,sha256=-ph0yYxZdPkpcx87fOhECQT5t5oevz60636H0369tZQ,12
+mtkresearch-0.0.9.dist-info/RECORD,,
