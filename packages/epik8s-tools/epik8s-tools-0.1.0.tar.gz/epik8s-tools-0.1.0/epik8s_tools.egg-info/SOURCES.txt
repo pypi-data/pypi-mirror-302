@@ -1,0 +1,10 @@
+README.md
+setup.py
+epik8s_gen/__init__.py
+epik8s_gen/epik8s_gen.py
+epik8s_tools.egg-info/PKG-INFO
+epik8s_tools.egg-info/SOURCES.txt
+epik8s_tools.egg-info/dependency_links.txt
+epik8s_tools.egg-info/entry_points.txt
+epik8s_tools.egg-info/requires.txt
+epik8s_tools.egg-info/top_level.txt
