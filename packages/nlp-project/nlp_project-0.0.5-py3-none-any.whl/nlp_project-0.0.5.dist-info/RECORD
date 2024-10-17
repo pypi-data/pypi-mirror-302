@@ -1,0 +1,15 @@
+nlp/__init__.py,sha256=RibDPmMhIvZi29kH6XpA_NnZNdBQsvozbcdE4fplRVA,156
+nlp/imit_label_encoder.pkl,sha256=QzLYntz3iT48uVPOGLfO3w-EkrHDJWkvuk7B0ccCgqs,547
+nlp/imit_main.py,sha256=AYwajguE26D-FyQcZA3uM8fLmFiTnHMB57nQ0DJuBB0,2272
+nlp/imit_model.pkl,sha256=7GuFiXXc8EFPSUryT5olLvcWOs1xfwrxzVUn2r5-5KM,4889
+nlp/nlp_main.py,sha256=WsxmAj_IcZqGlrzELwjDq63btvcbNPtkGslqLsD74sw,1255
+nlp/nlpmodel.pkl,sha256=1f9u9rI8H9E2F2kPfP3z8yzxuLU3cW2-e6kcbuPxgy0,1215
+nlp/nlpvectorizer.pkl,sha256=teFFxNYGuRCTYdEnzMe4oSUGnMuq3Ir_16jjOMeEcJ0,598
+nlp/test.py,sha256=Y3t9xuIHpOVT6op55BfXPTyQFcVSZiJ2_qiJzUsVAnA,1958
+nlp/__pycache__/imit_main.cpython-310.pyc,sha256=cc1ROao2wZOcdd2vXdjKJzshEBONdX6d_utdEB1drdw,2587
+nlp/__pycache__/nlp_main.cpython-310.pyc,sha256=BkPyyUXGUCPOMuRXjtatsw0F5Cq3slZEZTTZjnL2aBQ,1531
+nlp_project-0.0.5.dist-info/LICENSE,sha256=w1UKXDXzOM3J1kFMfQxxM7DGKkKOORDkad7Sp9Of8kE,1058
+nlp_project-0.0.5.dist-info/METADATA,sha256=BJTpu5g2-HNAl5TD-M0pLpkMiEnx5MN6GwV1F2GS3Tg,1598
+nlp_project-0.0.5.dist-info/WHEEL,sha256=eOLhNAGa2EW3wWl_TU484h7q1UNgy0JXjjoqKoxAAQc,92
+nlp_project-0.0.5.dist-info/top_level.txt,sha256=Cq1IZPU8aj3pYe8dDQZfMCD5lwuhKtXNYcjU7HuNCaw,4
+nlp_project-0.0.5.dist-info/RECORD,,
