@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: pycrusher
+Version: 0.3.8
+Summary: Generate lossy image compressions for fun!
+Home-page: https://github.com/jonesmartins/pycrusher
+Download-URL: https://github.com/jonesmartins/pycrusher/tarball/0.3.8
+Author: Jones Martins
+Author-email: jonesmvc@hotmail.com
+License: MIT
+Keywords: lossy,compression,compress,jpeg
+License-File: LICENSE.txt
+Requires-Dist: Pillow
+Requires-Dist: argparse
+Requires-Dist: tqdm
+

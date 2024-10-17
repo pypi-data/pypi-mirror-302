@@ -1,0 +1,11 @@
+pycrusher/__init__.py,sha256=WTQfcYCFsNaDClTIEBH4qvCUWYStnn3GlQ5DUXkUXOY,571
+pycrusher/__main__.py,sha256=JNeq7EdlAaRvYtbjHYD49MTY7cB5sD4sE_frmliTGKM,32
+pycrusher/_main.py,sha256=m8EPwoiLsSP_Nay8tKQ8WEv4uuXwYlhM6HY1pm__ikg,526
+pycrusher/core.py,sha256=UEVgS_cEqXsAdCuvLp5lXfcXcrjXjhPoY9B33_nFFZk,6846
+pycrusher/name_generator.py,sha256=5bE0PA0e1qStJP49iw40LtYM_L3hLa1tZZMT5RqpGgg,3792
+pycrusher-0.3.8.dist-info/LICENSE.txt,sha256=z5ZEqGM6HR_yDW8KprfpGKhcl7sxfOArNKB5bNVMqF4,11544
+pycrusher-0.3.8.dist-info/METADATA,sha256=vDol3j-M5kAe41X5z14v19czY_BARL7ASrHpvDlzIxQ,433
+pycrusher-0.3.8.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+pycrusher-0.3.8.dist-info/entry_points.txt,sha256=OOTA_9G38d--iOp9ym33eUgYVW6bPv7k-m8vvY6Beb8,51
+pycrusher-0.3.8.dist-info/top_level.txt,sha256=ixpQ76BGSRqePMNwFhYtZ0qjKc3fjm37sW9ApkNFIc4,10
+pycrusher-0.3.8.dist-info/RECORD,,
