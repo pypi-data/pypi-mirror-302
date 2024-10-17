@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: discordpy-common
+Version: 0.2.0
+Summary: Common tools for discord.py bots
+Home-page: https://github.com/pyPoul/discordpy-common
+Author: pyPoul
+License: MIT
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: discord.py
+Requires-Dist: motor
+Requires-Dist: pymongo
+
+# discordpy-common
+
+Common tools for discord.py bots
