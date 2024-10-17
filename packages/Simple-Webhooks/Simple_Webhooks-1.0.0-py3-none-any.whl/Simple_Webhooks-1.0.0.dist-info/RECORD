@@ -1,0 +1,8 @@
+webhook/__init__.py,sha256=u0Kl7XKWhzsxUBksV3cmJvdbTijwAjvwKY1zi5e2FZw,91
+webhook/logging.py,sha256=7uSKxXxcuIaDm-K0kzvLhIjUk6wGeB4mlmHl7cFKphw,54
+webhook/webhook_manager.py,sha256=BWtl482vvePTDp4UEizmhI3Vh1BMngfHeY2PWwSJSzU,909
+webhook/webhook_sender.py,sha256=ykurpbWDuB9H5Bde8iPI7KHLRfFOhkM24FP412MqyOI,3348
+Simple_Webhooks-1.0.0.dist-info/METADATA,sha256=bIcLj-7OX7BRd6YbQ9izDeh6c_qPd0KXtHkYatetBB0,396
+Simple_Webhooks-1.0.0.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+Simple_Webhooks-1.0.0.dist-info/top_level.txt,sha256=iAX4-NDZ8o0cluSuQH1saf7BzAvgwTu3qmx2eNgNsn4,8
+Simple_Webhooks-1.0.0.dist-info/RECORD,,
