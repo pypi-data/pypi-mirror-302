@@ -1,0 +1,7 @@
+snapr-0.4.2.dist-info/METADATA,sha256=uN1KfNiXHht02EtZSPXJIEnxhIfRrOujb53zRw88TEU,2118
+snapr-0.4.2.dist-info/WHEEL,sha256=JiAb2BT9uKLRmb_WRPhbqslAXBFBPA4iJoLAQueFm2I,90
+snapr/__init__.py,sha256=MZWrSJPzYZk205IZOkwNqrv6r18a4LiRuBASCso6f8Q,103
+snapr/__init__.pyi,sha256=ohKkrOMvEeA6XDUoydjH4WShrFpbijdjliQB1vQaAbw,4495
+snapr/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+snapr/snapr.cp38-win32.pyd,sha256=3imHx7fv0fLJQStU2d7wwkaaSpYoIeuZPVywCG1N7jQ,3096064
+snapr-0.4.2.dist-info/RECORD,,
