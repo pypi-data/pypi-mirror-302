@@ -1,0 +1,3 @@
+[console_scripts]
+anormalratingsystem=anormalratingsystem.main:main
+
