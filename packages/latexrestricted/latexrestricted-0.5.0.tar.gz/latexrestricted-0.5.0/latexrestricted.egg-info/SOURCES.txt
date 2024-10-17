@@ -1,0 +1,16 @@
+CHANGELOG.md
+LICENSE.txt
+README.md
+pyproject.toml
+latexrestricted/__init__.py
+latexrestricted/_anypath.py
+latexrestricted/_latex_config.py
+latexrestricted/_restricted_pathlib.py
+latexrestricted/_restricted_subprocess.py
+latexrestricted/err.py
+latexrestricted/fmtversion.py
+latexrestricted/version.py
+latexrestricted.egg-info/PKG-INFO
+latexrestricted.egg-info/SOURCES.txt
+latexrestricted.egg-info/dependency_links.txt
+latexrestricted.egg-info/top_level.txt
