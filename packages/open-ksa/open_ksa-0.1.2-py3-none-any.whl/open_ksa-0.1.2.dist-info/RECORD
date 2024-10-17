@@ -1,0 +1,15 @@
+open_ksa/__init__.py,sha256=LtmNVhKCXj3Hxmx--LJS9idmusPhlWEHS36rwbR_3_M,428
+open_ksa/download_file.py,sha256=gzTxlOBi8Yns08PzkusSb_xvhoxkhtwZYKEDo1gtbiw,1353
+open_ksa/get_dataset_resource.py,sha256=et_DV0onmy8C2rpVnEQ7CkRDOhmuczQ5RNK0-NOWFmA,5474
+open_ksa/get_dataset_resources.py,sha256=5jnIyGhyttLtll4Ifx13ufl3dgaGUPGlISBBsU4mzUc,1459
+open_ksa/get_org_resources.py,sha256=z9lRsxV3polODqO58_0XH76fgXKCr19g5oZgy_p17e8,1503
+open_ksa/organizations.py,sha256=1w6A0EwT-i-SSnsfFHJlAK0cvwTEcpYm1XH9P_apcDs,3880
+open_ksa/ssl_adapter.py,sha256=xl50dA2bp53nO-66Y4kEKpVxmkXt8m8UcSi4LFU2Ha4,732
+open_ksa/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+open_ksa/tests/test_get_dataset_resource.py,sha256=6dJiPoXKfjWLGWa4SP75CioPkZVfe-FuJUrvXm8ATXk,3257
+open_ksa/tests/test_organizations.py,sha256=azvD9WFJX2gbBGM1oyUZYPL8fKoKtCry0Tdg2Imtd5E,5400
+open_ksa-0.1.2.dist-info/LICENSE,sha256=wQlBb3RdNnwL5Skus7IsRSLSmwP7L0JWez-d89eI4KY,1072
+open_ksa-0.1.2.dist-info/METADATA,sha256=KF8EKuPTFB7WmG0XyXJlNY1ol6PoLZS8IjMjsTjSwYw,4422
+open_ksa-0.1.2.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+open_ksa-0.1.2.dist-info/top_level.txt,sha256=0bsliXech3B4R_CQPwpfkMwyr9DtbAKezCBZaamicPY,9
+open_ksa-0.1.2.dist-info/RECORD,,
