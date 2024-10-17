@@ -1,0 +1,2 @@
+# Include all .pyi files recursively in the package
+recursive-include your_package_name *.pyi
