@@ -1,0 +1,37 @@
+Metadata-Version: 2.3
+Name: my_lib_gens
+Version: 0.0.2
+Summary: Useless library to perform basic computations
+Author-email: Nicolas Gensollen <nicolas.gensollen@inria.fr>
+Maintainer-email: Nicolas Gensollen <nicolas.gensollen@inria.fr>
+License-Expression: MIT
+License-File: LICENSE
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.9
+Requires-Dist: numpy>=2.0.2
+Provides-Extra: dev
+Requires-Dist: awesome-project[crypto]; extra == 'dev'
+Requires-Dist: black; extra == 'dev'
+Provides-Extra: docs
+Requires-Dist: myst-nb; extra == 'docs'
+Requires-Dist: sphinx; extra == 'docs'
+Requires-Dist: sphinx-autoapi; extra == 'docs'
+Requires-Dist: sphinx-autobuild; extra == 'docs'
+Requires-Dist: sphinx-book-theme; extra == 'docs'
+Description-Content-Type: text/markdown
+
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/my_lib_gens)
+[![Documentation Status](https://readthedocs.org/projects/my-lib-gens/badge/?version=latest)](https://my-lib-gens.readthedocs.io/en/latest/?badge=latest)
+
+# MyLib
+
+Toy Python library project.
