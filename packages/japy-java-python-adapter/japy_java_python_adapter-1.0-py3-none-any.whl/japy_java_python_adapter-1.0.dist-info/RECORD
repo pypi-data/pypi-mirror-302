@@ -1,0 +1,10 @@
+japy/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+japy/function_return_value.py,sha256=HjawEGb0d0a1gItLep556rZIKYeUUe-QJ1UOa-DHXPM,916
+japy/japy_file_scanner.py,sha256=qjXM8G7WO10GHDtaGWVU1XxXi7x6trL8s0Nb9JKnNu4,4144
+japy/japy_function.py,sha256=2ThDuhbpRhD-KhsVmZSPLDFuCfEaKReL1zEahl6HUeg,43
+japy/japy_function_wrapper.py,sha256=_tlUCsSlAPyit9r1N5uoJRoKHqO5igREDioXvgd8C_c,722
+japy/japy_server.py,sha256=c0UaBpSpO-ZLqZqWuX0vcW3-ExbRQ4FDC72rsfmoIv4,4922
+japy_java_python_adapter-1.0.dist-info/LICENSE,sha256=SbvpEU5JIU3yzMMkyzrI0dGqHDoJR_lMKGdl6GZHsy4,11558
+japy_java_python_adapter-1.0.dist-info/METADATA,sha256=L63bjwcHjj4v7OV0eBt-nuPmdhgNewuAQ6krfGce4l8,5589
+japy_java_python_adapter-1.0.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+japy_java_python_adapter-1.0.dist-info/RECORD,,
