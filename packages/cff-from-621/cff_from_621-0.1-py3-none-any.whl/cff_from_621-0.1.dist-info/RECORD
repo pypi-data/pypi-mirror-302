@@ -1,0 +1,9 @@
+cff_from_621/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cff_from_621/cli.py,sha256=um4l_EgAcnx4Hiv0vrgxWE0PvrBu6VKK40VTuJeNlGY,3345
+cff_from_621/lib.py,sha256=hCjOAgdhlCU8QtPHsX9NDaVKosX--66eew20ATEoANE,5792
+cff_from_621/version.py,sha256=ItYwuqXXH0myoy07FGwY7WbnVCdvxOrr3DBexKiWNrg,96
+cff_from_621-0.1.dist-info/METADATA,sha256=wMd1Wl5Mr6t6gf4jp0CLULJj1EggDFZ6UsjRN9t_soA,4212
+cff_from_621-0.1.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+cff_from_621-0.1.dist-info/entry_points.txt,sha256=c4oIbl05jyormmolNr47lgTocbrpMQoEDJjLBAIa0To,54
+cff_from_621-0.1.dist-info/top_level.txt,sha256=1uD44SPWhgE6zTRPOhfqBayq4p04gj7F5DHRU3snAfU,13
+cff_from_621-0.1.dist-info/RECORD,,
