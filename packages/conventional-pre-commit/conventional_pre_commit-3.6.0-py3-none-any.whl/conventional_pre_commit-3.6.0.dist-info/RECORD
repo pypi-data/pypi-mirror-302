@@ -1,0 +1,10 @@
+conventional_pre_commit/__init__.py,sha256=JGZyf1r0M_Jr7EyfgBjF5FOP-b1ZvfwSRiiOZkg9JVI,189
+conventional_pre_commit/format.py,sha256=Ffr9e-nwVlX9t9375PHYx6ProClsFZAjANtz6Vxtlck,4530
+conventional_pre_commit/hook.py,sha256=XrooF-gH2srTmV1AACrnKyqMwggsguf_dsh6gKk48g4,2485
+conventional_pre_commit/output.py,sha256=-Er6hzbKkKyUUmqy4vEa15B8f05aA14Iou2ZySLVfUE,3351
+conventional_pre_commit-3.6.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+conventional_pre_commit-3.6.0.dist-info/METADATA,sha256=4S7f41Fh3o8I8pGT6Wp9Q_9y75pwhJ9qwMyCUa2o6ao,19684
+conventional_pre_commit-3.6.0.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+conventional_pre_commit-3.6.0.dist-info/entry_points.txt,sha256=HJvYpAh9Rtb2RFaonPF7vZ01TESK8uajXvrq1cr1Djo,78
+conventional_pre_commit-3.6.0.dist-info/top_level.txt,sha256=iopnlKvod1SgsKlfAGKdsPR4XccSl76VVfgV9Z45JVY,24
+conventional_pre_commit-3.6.0.dist-info/RECORD,,
