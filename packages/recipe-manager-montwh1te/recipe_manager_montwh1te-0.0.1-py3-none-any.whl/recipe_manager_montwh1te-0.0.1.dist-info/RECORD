@@ -1,0 +1,11 @@
+recipe_manager/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+recipe_manager/components/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+recipe_manager/components/ingredients.py,sha256=VxlIaQuyvw069jy4sfDvMuMtd5XEMTZr9DHS1qr8ZVk,239
+recipe_manager/components/recipe.py,sha256=9Wef1Ifc4QmUfR4p338hgnY4-0De4-IbrWK4EMjCPO8,2372
+recipe_manager/metrics/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+recipe_manager/metrics/conversions.py,sha256=2fDsru4RtvKnpGgiq6vyLD9bHRSq8xiCWbIvbb8fLEw,1284
+recipe_manager/metrics/nutrition.py,sha256=KInDUCC5vA_6EOSMCFxnynKgt5bn5TcOIrXOyA6jtkw,663
+recipe_manager_montwh1te-0.0.1.dist-info/METADATA,sha256=deSfjJWaGdklfXsxeTxgZ5QUkyMA40yImy8jWICvx7w,868
+recipe_manager_montwh1te-0.0.1.dist-info/WHEEL,sha256=GV9aMThwP_4oNCtvEC2ec3qUYutgWeAzklro_0m4WJQ,91
+recipe_manager_montwh1te-0.0.1.dist-info/top_level.txt,sha256=7x3VwuN66VXi_9YtFm1SzXTYhOEwpspgqDGHNQ47EhQ,15
+recipe_manager_montwh1te-0.0.1.dist-info/RECORD,,
