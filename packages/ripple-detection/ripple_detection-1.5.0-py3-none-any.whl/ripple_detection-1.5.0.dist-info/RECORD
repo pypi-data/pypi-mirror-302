@@ -1,0 +1,10 @@
+ripple_detection/__init__.py,sha256=6CVH1OKmwsWYdM6BYzsRnLqpobbIs-5frWAd5FeTBMc,273
+ripple_detection/core.py,sha256=0dRmXYdBDAm37Ryc2SdLMDx4DE8_PzmCc_T78jug1ZQ,11846
+ripple_detection/detectors.py,sha256=jSBNgPwbG7cUUsBMBzP3qwi_xAE8dSflUU8mtzE-mtc,15205
+ripple_detection/ripplefilter.mat,sha256=yNUIiJtDtD63fm0uJvyTg1A4_9x-rR7FxXVktMl15Fo,1982
+ripple_detection/simulate.py,sha256=GIeqQ9wD8RD5p5LCJ91YRkEDBU_H5o4ZOsnDjKId8Zc,3199
+ripple_detection-1.5.0.dist-info/LICENSE,sha256=q-Y2M11kXm5RCPG8c6QFezYZ77aL6s_RTVIgnaPuaxM,1071
+ripple_detection-1.5.0.dist-info/METADATA,sha256=HGBWLo_aztiMYoRAUIIPeTsR_Z6NwdWEn6_Ypy4Svm8,382
+ripple_detection-1.5.0.dist-info/WHEEL,sha256=GV9aMThwP_4oNCtvEC2ec3qUYutgWeAzklro_0m4WJQ,91
+ripple_detection-1.5.0.dist-info/top_level.txt,sha256=cyZZnnnWgKhV3sPQK5VTRaeeo17n0PtL_WCzjfhuFBw,17
+ripple_detection-1.5.0.dist-info/RECORD,,
