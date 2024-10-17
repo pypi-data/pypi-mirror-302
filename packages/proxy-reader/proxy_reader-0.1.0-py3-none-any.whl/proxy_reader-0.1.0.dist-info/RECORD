@@ -1,0 +1,14 @@
+proxy_reader/__init__.py,sha256=8_HgszorTyU_0OJmvxgimP9S21y07s9R1n_U-wHMwTs,46
+proxy_reader/_types.py,sha256=OWAYiN91E_IWgs1myPy1Q9l-8XkVVq8uDzjLOTB_Eww,317
+proxy_reader/domains.py,sha256=d4FUb2zw3Kg9bAjtaggEcxZA293WvVcRTgMKKPmYr1A,135662
+proxy_reader/logger.py,sha256=BxaHptwZlPPGdx5mbS8vi77u0N-W6cKhcR-5lG2x93c,710
+proxy_reader/proxy.py,sha256=vkI2vonxlm0x0u3Tojq6xKaw5_7fvSbmICW8b_M4lzY,2645
+proxy_reader/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+proxy_reader/reader.py,sha256=KeaAPhxMI6moYaLmzYj7ZGcn8REXWs-1xBMkXuK2Ff0,12373
+proxy_reader/protocols/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+proxy_reader/protocols/reader.py,sha256=WscEXPpKmJuMF2R7EBqDZTheRh8BIUilukojcPRFyRg,2303
+proxy_reader-0.1.0.dist-info/LICENSE,sha256=8DyHi9RsZXeM8s1DpaXubZSSG44PkzV2oskJE3E09F4,1081
+proxy_reader-0.1.0.dist-info/METADATA,sha256=hsWGBfcZrYHMTZWKY_oQEkWBgYzisQ66sWJkt0AM5JI,1892
+proxy_reader-0.1.0.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+proxy_reader-0.1.0.dist-info/top_level.txt,sha256=NIrKvLf5DF2_oEnj0yg84roFna2-MaJ7zE1jY2CIU0I,13
+proxy_reader-0.1.0.dist-info/RECORD,,
