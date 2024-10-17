@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "rea-copilot-hydro-topic"
+version = "0.0.1"
+description = "Skeleton for rea-copilot-hydro-topic"
+authors = ["REA Group <pip@rea-group.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
