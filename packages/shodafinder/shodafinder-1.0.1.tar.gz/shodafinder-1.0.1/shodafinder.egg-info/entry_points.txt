@@ -1,0 +1,3 @@
+[console_scripts]
+shodafinder = favicon_hash.cli:run
+
