@@ -1,0 +1,8 @@
+LICENSE
+README.md
+minefob.py
+pyproject.toml
+minefob.egg-info/PKG-INFO
+minefob.egg-info/SOURCES.txt
+minefob.egg-info/dependency_links.txt
+minefob.egg-info/top_level.txt
