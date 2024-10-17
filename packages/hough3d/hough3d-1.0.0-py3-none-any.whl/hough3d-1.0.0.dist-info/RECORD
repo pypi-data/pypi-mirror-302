@@ -1,0 +1,9 @@
+hough3d/__init__.py,sha256=yiLTfDSh8Gak5ELxaK2JhtNodHEthu4I9CtOlX1Fc9c,72
+hough3d/basic_hough.py,sha256=NvRtJqaIT4lNyeQzbrB2jE-fsNiaPIiZ9nEtqbCplrA,13322
+hough3d/line_segment_hough.py,sha256=Ml-J-s1eNU6DrZhpKJClH62YrHc9FX2yMOAI43GDZEM,25219
+hough3d/spatial.py,sha256=5aXLu_ZvpUpZY-cNzqKKO-RWUiX35oOO51dl-CGJdjQ,12379
+hough3d/utils.py,sha256=FTBMTKAeXAI4wf_eGEteG7XvxwvdZXAw9Qw8diqFzWg,13951
+hough3d-1.0.0.dist-info/METADATA,sha256=FBFavuWMoM1ulyO-rFal6UcJOnFfAs1Q6mdl8YicGVQ,3172
+hough3d-1.0.0.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+hough3d-1.0.0.dist-info/top_level.txt,sha256=Lxo8e_iKhO9ZqBGdddq44-t2VN7Yd8XqDTs1caU7-8M,8
+hough3d-1.0.0.dist-info/RECORD,,
