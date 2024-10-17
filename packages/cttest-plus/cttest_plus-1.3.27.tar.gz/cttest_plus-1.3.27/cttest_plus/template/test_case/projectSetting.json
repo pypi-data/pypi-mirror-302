@@ -1,0 +1,79 @@
+{
+    "environment": {
+        "default": "http://10.118.71.92:8060/"
+    },
+    "codeString": "pass",
+    "loginSetting": {
+        "httpUser": {
+            "build_type": "yaml",
+            "yaml_user": {
+                "user1":  "${fb_login(url='http://10.118.71.92:8060/api/rbac/auth/login/', username='auto_test', password='123456')}"
+            }
+        },
+        "webUser": {
+            "build_type": "yaml",
+            "yaml_user": {
+                "user1":  "${fb_login(url='http://10.118.71.92:8060/api/rbac/auth/login/', username='auto_test', password='123456')}",
+                "user2": {
+                    "caps": {
+                        "browser": "chrome"
+                    },
+                    "login_step": [
+                        {
+                            "event": "open",
+                            "eventName": "打开飞熊网址",
+                            "url": "http://10.118.71.171:8070/"
+                        },
+                        {
+                            "event": "input",
+                            "eventName": "输入用户名",
+                            "input": "auto_test",
+                            "location": [
+                                [
+                                    "id",
+                                    "username"
+                                ]
+                            ]
+                        },
+                        {
+                            "event": "input",
+                            "eventName": "输入密码",
+                            "input": "123456",
+                            "location": [
+                                [
+                                    "id",
+                                    "password"
+                                ]
+                            ]
+                        },
+                        {
+                            "event": "click",
+                            "eventName": "点击登录",
+                            "location": [
+                                [
+                                    "id",
+                                    "loginBtn"
+                                ]
+                            ]
+                        }
+                    ]
+                }
+            }
+
+        },
+        "appUser": {
+            "build_type": "yaml",
+            "yaml_user": {
+                "user1": {
+                    "caps": {
+                        "platform": "android"
+                    },
+                    "login_step": [
+                    ]
+                }
+            }
+        }
+    },
+    "platformHost": "127.0.0.1",
+    "firstTier": "项目"
+}
