@@ -1,0 +1,15 @@
+README.md
+setup.cfg
+setup.py
+hcb_soap_client/__init__.py
+hcb_soap_client/hcb_soap_client.py
+hcb_soap_client/s1100.py
+hcb_soap_client/s1157.py
+hcb_soap_client/s1158.py
+hcb_soap_client/setup.py
+hcb_soap_client.egg-info/PKG-INFO
+hcb_soap_client.egg-info/SOURCES.txt
+hcb_soap_client.egg-info/dependency_links.txt
+hcb_soap_client.egg-info/top_level.txt
+test/__init__.py
+test/test.py
