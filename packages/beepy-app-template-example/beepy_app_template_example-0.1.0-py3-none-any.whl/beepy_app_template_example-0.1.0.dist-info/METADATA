@@ -1,0 +1,72 @@
+Metadata-Version: 2.1
+Name: beepy_app_template_example
+Version: 0.1.0
+Summary: An example of the output you get when creating a new beepy app from the cookiecutter template.
+Home-page: https://github.com/conor-f/beepy-app-template-example
+License: GPLv3
+Author: conor-f
+Author-email: beepy@randombits.host
+Requires-Python: >=3.9,<4.0
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: textual (>=0.82.0,<0.83.0)
+Description-Content-Type: text/markdown
+
+# beepy-app-template-example
+
+An example of the output you get when creating a new beepy app from the cookiecutter template.
+
+## Installation
+
+To install the application, run:
+
+```bash
+just beepy-install
+```
+
+## Usage
+
+To run the application, use:
+
+```bash
+just run
+```
+
+## Development
+
+To set up the development environment, initialize the application with:
+
+```bash
+just init
+```
+
+## Uninstallation
+
+To remove the application, run:
+
+```bash
+just beepy-remove
+```
+
+## License
+
+This project is licensed under the GPLv3 license.
+
+## Pre-commit Hooks
+
+This template includes pre-commit hooks for linting, formatting, and type-checking.
+
+The hooks will run automatically on every commit, applying the specified checks and auto-formatting without asking for confirmation.
+
+The pre-commit configuration includes:
+- Black (code formatting)
+- isort (import sorting)
+- Flake8 (linting)
+- MyPy (type checking)
+- Various file checks (trailing whitespace, YAML validation, etc.)
+

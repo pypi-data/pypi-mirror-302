@@ -1,0 +1,3 @@
+[console_scripts]
+beepy_app_template_example=src.beepy_app_template_example.main:main
+
