@@ -1,0 +1,12 @@
+README.md
+setup.py
+pacote_hello_world.egg-info/PKG-INFO
+pacote_hello_world.egg-info/SOURCES.txt
+pacote_hello_world.egg-info/dependency_links.txt
+pacote_hello_world.egg-info/top_level.txt
+printe/__init__.py
+printe/hello_world/__init__.py
+printe/hello_world/hello_world_diferentes_linguas.py
+printe/hello_world/hello_world_original.py
+printe/mensagem_propria/__init__.py
+printe/mensagem_propria/mensagem.py

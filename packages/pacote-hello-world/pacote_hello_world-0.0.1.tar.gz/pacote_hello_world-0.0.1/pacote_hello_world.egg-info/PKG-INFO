@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: pacote-hello-world
+Version: 0.0.1
+Summary: Print hello world in different languages
+Home-page: https://github.com/EmanuelSaimon/pacote-hello-world
+Author: Emanuel Saimon
+Author-email: esaimon149@gmail.com
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# package_name
+
+Description. 
+The package hello_world is used to:
+	Printe:
+		- print hello world
+		- print hello world in a lot of languages
+	Mensagem_propria:
+		- print a message of your choice
+
+## Installation
+
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install package_name
+
+```bash
+pip install pacote-hello-world
+```
+
+## Author
+Emanuel Saimon
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
