@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "affectlog360"
+version = "0.1.1"
+description = "A multi-package setup for AffectLog AI modules."
+authors = [{ name = "AffectLog Developers", email = "developer@affectlog.com" }]
+license = { text = "MIT" }
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent"
+]
+
+# Properly define the readme
+readme = { file = "README.md", content-type = "text/markdown" }
+
+# Move homepage under urls
+urls = { homepage = "https://github.com/affectlog/affectlog360" }
+
+dependencies = []
+
+[tool.flake8]
+ignore = "W504"
+enable-extensions = "G,C,B"
+select = "E,F,W,C"
+copyright-check = true
+copyright-regexp = "# Copyright \\(c\\) AffectLog SAS\\n# Licensed under the MIT license."
+exclude = ["node_modules/"]
+
+# Corrected per-file-ignores format
+[tool.flake8.per-file-ignores]
+"al360_tai_core_flask/*" = ["D100", "D107", "B014"]
+"al360_tai_core_flask/tests/*" = ["D100", "D101"]
+
+[tool.pytest.ini_options]
+testpaths = ["al360_trustworthyai/tests", "al360_taiwidgets/tests"]
+
+[tool.isort]
+line_length = 79
+indent = "    "

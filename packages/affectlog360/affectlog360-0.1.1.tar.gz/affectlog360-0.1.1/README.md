@@ -1,0 +1,125 @@
+![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)
+
+![AL360° Trustworthy AI Widgets Python Build](https://img.shields.io/github/actions/workflow/status/affectlog/affectlog360/CI-al360_taiwidgets-pytest.yml?branch=main&label=Trustworthy%20AI%20Widgets%20Python%20Build)
+![UI deployment to test environment](https://img.shields.io/github/actions/workflow/status/affectlog/affectlog360/CD.yml?branch=main&label=UI%20deployment%20to%20test%20environment)
+
+![PyPI al360_taiwidgets](https://img.shields.io/pypi/v/al360_taiwidgets?label=PyPI%20raiwidgets)
+![PyPI al360_trustworthyai](https://img.shields.io/pypi/v/al360_trustworthyai?label=PyPI%20trustworthyai)
+![PyPI al360_erroranalysis](https://img.shields.io/pypi/v/al360_erroranalysis?label=PyPI%20erroranalysis)
+![PyPI al360_taiutils](https://img.shields.io/pypi/v/al360_taiutils?label=PyPI%20raiutils)
+![PyPI al360_tai_test_utils](https://img.shields.io/pypi/v/al360_tai_test_utils?label=PyPI%20al360_tai_test_utils)
+
+![npm model-assessment](https://img.shields.io/npm/v/@affectlog360/model-assessment?label=npm%20%40trustworthy-ai%2Fmodel-assessment)
+
+# AL360° Trustworthy AI Toolbox
+
+The **AL360° Trustworthy AI Toolbox** is an end-to-end suite of tools designed to assess, develop, and deploy AI systems in a safe, trustworthy, and ethical manner. With this toolbox, stakeholders of AI systems can better understand their models, make trustworthy data-driven decisions, and take corrective actions to ensure fairness, transparency, and accountability in AI development.
+
+This toolbox integrates several open-source tools and libraries into a unified experience, enabling users to identify model errors, evaluate fairness, understand predictions, and optimize decision-making. It is aimed at both technical users such as data scientists and engineers and non-technical stakeholders such as business leaders and policy-makers.
+
+---
+
+## Key Features
+
+1. **Error Analysis:** Identify cohorts where models underperform using [Error Analysis](https://github.com/affectlog360/al360-trustworthy-ai-widgets/blob/main/docs/al360_erroranalysis-dashboard-README.md).
+2. **Fairness Assessment:** Evaluate fairness across sensitive attributes with [Fairlearn](https://github.com/fairlearn/fairlearn).
+3. **Model Interpretability:** Understand model predictions through [InterpretML](https://github.com/interpretml/interpret-community).
+4. **Counterfactual Analysis:** Explore counterfactual scenarios with [DiCE](https://github.com/interpretml/DiCE).
+5. **Causal Analysis:** Conduct causal inference with [EconML](https://github.com/affectlog360/EconML).
+6. **Data Balance Diagnostics:** Visualize and mitigate imbalances in datasets.
+
+---
+
+## Repository Overview
+
+| Repository | Description |
+|------------|-------------|
+| [Affectlog360](https://github.com/affectlog360/affectlog360) | Central repository containing the AL360° Trustworthy AI tools including dashboards for model interpretability, fairness, error analysis, and data balance analysis. |
+| [Affectlog360 Mitigations](https://github.com/affectlog360/affectlog360-mitigations) | Library for applying mitigation techniques to improve model fairness and performance. |
+| [Trustworthy-AI-Tracker](https://github.com/affectlog360/affectlog360-tracker) | JupyterLab extension for managing, tracking, and comparing machine learning experiments. |
+| [Affectlog360 GenBit](https://github.com/affectlog360/affectlog360-genbit) | Library to measure and mitigate gender bias in Natural Language Processing (NLP) models. |
+
+---
+
+## Installation
+
+You can install the AL360° Trustworthy AI Toolbox using the following command:
+
+```bash
+pip install al360_taiwidgets
+```
+
+> **Note:** If you're running this in Jupyter, restart the kernel after installation to ensure the tools are loaded correctly.
+
+---
+
+## AL360° Trustworthy AI Dashboard
+
+The **AL360° Trustworthy AI Dashboard** is the core component of the toolbox. It provides an intuitive interface that allows users to explore model performance, errors, fairness, and feature importance, as well as generate actionable insights for decision-making. It integrates multiple tools into a cohesive flow that helps practitioners quickly diagnose issues and improve models.
+
+### Capabilities:
+- **Error Detection:** Find and analyze cohorts where the model exhibits higher error rates.
+- **Fairness:** Understand how the model impacts different demographic groups and mitigate disparities.
+- **Interpretability:** Explain model predictions both globally and locally.
+- **Causal Analysis:** Apply What-If scenarios to see how changes in features impact outcomes.
+- **Data Balance:** Visualize data distributions and feature imbalances.
+
+### Dashboard Flows:
+You can customize the AL360° dashboard to suit different use cases:
+- **Model Overview -> Error Analysis -> Data Explorer:** Identify model errors and diagnose root causes in the data.
+- **Model Overview -> Fairness Assessment -> Data Explorer:** Diagnose fairness issues by understanding feature distributions.
+- **Model Overview -> Error Analysis -> Counterfactuals Analysis:** Use counterfactuals to understand what changes would alter individual predictions.
+- **Data Explorer -> Causal Inference:** Explore causal relationships in the data to make data-driven decisions.
+
+Explore different flows and usage examples in our detailed guides:
+- [Housing Model Debugging](https://github.com/affectlog360/affectlog360/blob/main/notebooks/trustworthyaidashboard/tabular/trustworthyaidashboard-housing-decision-making.ipynb)
+- [Diabetes Progression Model](https://github.com/affectlog360/affectlog360/blob/main/notebooks/trustworthyaidashboard/tabular/trustworthyaidashboard-diabetes-regression-model-debugging.ipynb)
+
+---
+
+## Use Cases
+
+The tools within the AL360° Trustworthy AI Toolbox support various model types and AI use cases, including:
+
+- **Tabular Data Models:** Used in structured datasets like financial records, medical datasets, etc.
+- **Text Models:** NLP models for classification, question-answering, and more.
+- **Vision Models:** Analyze computer vision models for object detection, classification, and more.
+
+Check out the following notebooks for example use cases:
+- [Housing Model Debugging (Tabular)](https://github.com/affectlog360/affectlog360/blob/main/notebooks/trustworthyaidashboard/tabular/trustworthyaidashboard-housing-classification-model-debugging.ipynb)
+- [SQuAD Question Answering (NLP)](https://github.com/affectlog360/affectlog360/blob/main/notebooks/trustworthyaidashboard/text/trustworthyaidashboard-question-answering-model-debugging.ipynb)
+- [Fridge Object Detection (Vision)](https://github.com/affectlog360/affectlog360/blob/main/notebooks/trustworthyaidashboard/vision/trustworthyaidashboard-fridge-object-detection-model-debugging.ipynb)
+
+---
+
+## Supported Models and Frameworks
+
+The AL360° Trustworthy AI Toolbox supports models trained on datasets in the following formats:
+- **Python:** `numpy.ndarray`, `pandas.DataFrame`, `iml.datatypes.DenseData`, `scipy.sparse.csr_matrix`.
+- **Deep Learning:** PyTorch, TensorFlow, Keras models.
+- **Scikit-learn Pipelines:** Any model with a `predict` or `predict_proba` method compatible with Scikit-learn's API.
+
+---
+
+## Jupyter Integration
+
+The AL360° Trustworthy AI Toolbox provides seamless integration with Jupyter notebooks for managing, tracking, and comparing models. You can explore your model's fairness, interpretability, and data balance directly within JupyterLab.
+
+---
+
+## Contributing
+
+We welcome contributions to the AL360° Trustworthy AI Toolbox. Please read our [CONTRIBUTING.md](https://github.com/affectlog/affectlog360/blob/main/CONTRIBUTING.md) guide for more details on how to get involved.
+
+---
+
+## License
+
+This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
+
+---
+
+## Useful Links
+
+- [Get Started with the AL360° Dashboard](https://github.com/affectlog360/affectlog360/blob/main/notebooks/trustworthyaidashboard/tabular/getting-started.ipynb)
+- [Explore the AL360° Toolbox Tour](https://github.com/affectlog360/affectlog360/blob/main/notebooks/trustworthyaidashboard/tabular/tour.ipynb)
