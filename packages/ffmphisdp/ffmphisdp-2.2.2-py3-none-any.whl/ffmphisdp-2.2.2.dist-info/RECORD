@@ -1,0 +1,7 @@
+ffmphisdp/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ffmphisdp/pyav_reader.py,sha256=z2bFW-73VsbXZsWJ_NOsrOhNji4-mGtNQPLCBsoQpWM,4839
+ffmphisdp/utils.py,sha256=yxUfoqGB28fyJqlABpBLZdfaZ9lhZt34hGpv5UPB8Oo,8997
+ffmphisdp/video_reader.py,sha256=23izx449GMlleWLctqPhrYwzBKmsSV75xbk2hHfySKc,5796
+ffmphisdp-2.2.2.dist-info/METADATA,sha256=oXo_gKMs0BRfl2C4RJxZCLpJw9XqwisdJCwjRDbVMlQ,1567
+ffmphisdp-2.2.2.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+ffmphisdp-2.2.2.dist-info/RECORD,,
