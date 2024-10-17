@@ -1,0 +1,7 @@
+README.md
+setup.py
+webkitcorepy.egg-info/PKG-INFO
+webkitcorepy.egg-info/SOURCES.txt
+webkitcorepy.egg-info/dependency_links.txt
+webkitcorepy.egg-info/not-zip-safe
+webkitcorepy.egg-info/top_level.txt
