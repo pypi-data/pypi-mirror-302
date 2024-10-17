@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: gjdatac-api
+Version: 0.1.0
+Summary: 更新dolphinb时间查询匹配格式
+Author: yin
+Author-email: 2018209921@qq.com
+Requires-Python: >3.6
+Description-Content-Type: text/markdown
+Requires-Dist: dolphindb==3.0.1.0
+Requires-Dist: holidays==0.53
+Requires-Dist: numpy==1.26.3
+Requires-Dist: pandas==2.2.0
+
+第一次提交，测试是否可用
