@@ -1,0 +1,16 @@
+README.md
+pyproject.toml
+setup.cfg
+src/inqs.egg-info/PKG-INFO
+src/inqs.egg-info/SOURCES.txt
+src/inqs.egg-info/dependency_links.txt
+src/inqs.egg-info/requires.txt
+src/inqs.egg-info/top_level.txt
+src/search_ai/__init__.py
+src/search_ai/agents/__init__.py
+src/search_ai/agents/base_agent.py
+src/search_ai/huggy_llm/__init__.py
+src/search_ai/huggy_llm/_base_huggy_chat.py
+src/search_ai/huggy_llm/_base_login.py
+src/search_ai/prompts/__init__.py
+src/search_ai/prompts/query_refiner.py
