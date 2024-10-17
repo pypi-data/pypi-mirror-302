@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: rea-copilot-hydro-endpoint
+Version: 0.0.1
+Summary: Skeleton for rea-copilot-hydro-endpoint
+Author: REA Group
+Author-email: pip@rea-group.com
+Requires-Python: >=3.11,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Description-Content-Type: text/markdown
+
+rea-copilot-hydro-endpoint readme
+
