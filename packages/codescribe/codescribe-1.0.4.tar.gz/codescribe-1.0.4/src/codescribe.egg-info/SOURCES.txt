@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+setup.cfg
+src/codescribe/__init__.py
+src/codescribe/formatter.py
+src/codescribe/github_api.py
+src/codescribe.egg-info/PKG-INFO
+src/codescribe.egg-info/SOURCES.txt
+src/codescribe.egg-info/dependency_links.txt
+src/codescribe.egg-info/top_level.txt
+tests/test_codescribe.py

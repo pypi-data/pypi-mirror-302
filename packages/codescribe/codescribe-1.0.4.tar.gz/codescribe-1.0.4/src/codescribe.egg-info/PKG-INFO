@@ -1,0 +1,57 @@
+Metadata-Version: 2.1
+Name: codescribe
+Version: 1.0.4
+Summary: A package to convert GitHub repositories to formatted text.
+Home-page: https://github.com/AashishNandakumar/codescribe
+Author: Aashish Nandakumar
+Author-email: aashishnkumar@gmail.com
+Project-URL: issue_tracker, https://github.com/AashishNandakumar/codescribe/issues
+Project-URL: repository, https://github.com/AashishNandakumar/codescribe
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: Development Status :: 3 - Alpha
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# CodeScribe
+
+CodeScribe is a Python Package that allows you to convert GitHub repositories into formatted text, including a directory structure and file contents.
+
+## Installation
+
+You can install the package using pip:
+
+```
+pip install codescribe
+```
+
+## Usage
+
+Here's a simple example of how to use the package:
+
+```python
+from codescribe import codescribe
+
+repo_url = 'https://github.com/username/repo'
+access_token = 'your_github_access_token'  # optional
+
+formatted_text = codescribe(repo_url, access_token)
+print(formatted_text)
+```
+
+## Features
+
+- Fetches repository contents from GitHub
+- Generated a directory structure
+- Formats file contents with proper seperation
+- Supports private respositories with access token
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+This project is licensed under the MIT License.
