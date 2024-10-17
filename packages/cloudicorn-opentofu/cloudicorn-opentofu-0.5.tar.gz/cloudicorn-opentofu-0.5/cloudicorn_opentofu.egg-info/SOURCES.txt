@@ -1,0 +1,10 @@
+README.md
+__init__.py
+cloudicorn_opentofu.py
+setup.py
+cloudicorn_opentofu.egg-info/PKG-INFO
+cloudicorn_opentofu.egg-info/SOURCES.txt
+cloudicorn_opentofu.egg-info/dependency_links.txt
+cloudicorn_opentofu.egg-info/not-zip-safe
+cloudicorn_opentofu.egg-info/requires.txt
+cloudicorn_opentofu.egg-info/top_level.txt
