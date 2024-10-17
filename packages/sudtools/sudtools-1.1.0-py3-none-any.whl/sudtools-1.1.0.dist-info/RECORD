@@ -1,0 +1,10 @@
+sudtools/__init__.py,sha256=-EVPEyYYlWuY2KPfT-Py92jcQ8AFLd9oa1HYRtBg2vo,727
+sudtools/cmdline.so,sha256=v1U645t1GnQI_kFDXUzdBmnlgT0-xrHUERPcr5uPGMM,404768
+sudtools/execute.so,sha256=91DslImaMPo6OL08JUECaHF0zrLkexvKJimxybFAUBo,1163064
+sudtools/hub_file_utils.so,sha256=KF-rn-xh_dHLeKlAkQcPuYSTFfsdigiN4QIpbXAk1fg,513664
+sudtools/user.so,sha256=Q5rFvCzbalLPm35VxafpIwIrTLbI5aJYgqx6zvGhMDY,697032
+sudtools-1.1.0.dist-info/METADATA,sha256=TZDDUKG3KeWEL0kefHO81tJ4s9LJrQSWoZJNsH9r9iw,99
+sudtools-1.1.0.dist-info/WHEEL,sha256=GV9aMThwP_4oNCtvEC2ec3qUYutgWeAzklro_0m4WJQ,91
+sudtools-1.1.0.dist-info/entry_points.txt,sha256=bYX2I1BOoRhbTp46kVcyAwKjY9M3iR32vd1pPwj-6iw,45
+sudtools-1.1.0.dist-info/top_level.txt,sha256=D_MgYOHwS3e9NQuLxxTUO3ji385jDNRF2ZXcug3BatU,9
+sudtools-1.1.0.dist-info/RECORD,,
