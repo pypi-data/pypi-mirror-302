@@ -1,0 +1,24 @@
+description: Hello world showing model chaining
+text:
+- Hello,
+- model: watsonx/ibm/granite-34b-code-instruct
+  parameters:
+    decoding_method: greedy
+    stop:
+    - '!'
+    include_stop_sequence: false
+  def: NAME
+- |-
+  !
+  Who is${ NAME }?
+- "\n"
+- model: watsonx/google/flan-t5-xl
+  parameters:
+    decoding_method: greedy
+    stop:
+    - '.'
+    include_stop_sequence: true
+    roles:
+      user:
+        pre_message: ""
+        post_message: ""

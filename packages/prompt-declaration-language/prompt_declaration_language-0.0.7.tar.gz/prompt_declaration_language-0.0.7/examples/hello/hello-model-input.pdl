@@ -1,0 +1,8 @@
+description: Hello world with model input
+text:
+- model: watsonx/ibm/granite-34b-code-instruct
+  input: "Hello,"
+  parameters:
+    stop:
+    - '!'
+    include_stop_sequence: true
