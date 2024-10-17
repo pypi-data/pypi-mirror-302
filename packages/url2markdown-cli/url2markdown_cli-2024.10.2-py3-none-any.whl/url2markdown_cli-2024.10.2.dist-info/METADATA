@@ -1,0 +1,64 @@
+Metadata-Version: 2.1
+Name: url2markdown-cli
+Version: 2024.10.2
+Summary: Fetch a url and translate it to markdown in one command.
+Author: Jeff Triplett
+Project-URL: Homepage, https://github.com/jefftriplett/url2markdown-cli
+Project-URL: Issues, https://github.com/jefftriplett/url2markdown-cli/issues
+Project-URL: CI, https://github.com/jefftriplett/url2markdown-cli/actions
+Project-URL: Changelog, https://github.com/jefftriplett/url2markdown-cli/releases
+Keywords: url2markdown,url2markdown-cli
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+License-File: AUTHORS.md
+Requires-Dist: httpx
+Requires-Dist: rich
+Requires-Dist: typer
+
+# url2markdown-cli
+
+Fetch a url and translate it to markdown in one command.
+
+## Usage
+
+To install:
+
+```shell
+$ pip install url2markdown-cli
+```
+
+To use:
+
+```shell
+url2markdown --with-cache https://www.djangoproject.com/
+```
+
+To use your own custom url2markdown server instance (you should):
+
+```shell
+export URL2MARKDOWN_URL='http://markdownplease.com/?url={url}'
+```
+
+## Thanks
+
+Thanks to @kennethreitz for his [url2markdown](https://github.com/kennethreitz/url2markdown) project which this compliments.
+
+## Contact / Social Media
+
+Here are a few ways to keep up with me online. If you have a question about this project, please consider opening a GitHub Issue.
+
+[![](https://jefftriplett.com/assets/images/social/github.png)](https://github.com/jefftriplett)
+[![](https://jefftriplett.com/assets/images/social/globe.png)](https://jefftriplett.com/)
+[![](https://jefftriplett.com/assets/images/social/twitter.png)](https://twitter.com/webology)
+[![](https://jefftriplett.com/assets/images/social/docker.png)](https://hub.docker.com/u/jefftriplett/)

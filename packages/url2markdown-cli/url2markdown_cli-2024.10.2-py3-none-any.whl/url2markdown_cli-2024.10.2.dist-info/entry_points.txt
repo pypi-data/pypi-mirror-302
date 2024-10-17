@@ -1,0 +1,2 @@
+[console_scripts]
+files-to-claude-xml = url2markdown_cli:cli
