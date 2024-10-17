@@ -1,0 +1,32 @@
+# planetool
+planetool is a Python class designed for planetary science calculations, including magnetic fields, tidal forces, heat flow, and more. This class provides a wide range of planetary physics functions, including mathematical models to describe physical phenomena such as magnetic fields, Coriolis forces, tidal forces, wave energy, pressure, and Gibbs energy.
+
+# Requirements
+numpy
+pandas
+sympy
+math
+
+To install the dependencies, run:
+
+    pip install numpy pandas sympy
+
+
+# How to Use
+Create an instance of the planetool class and call the desired method:
+
+from planetool import planetool
+
+tool = planetool()
+
+# Example: Calculate escape velocity for a planet
+R = 6.371e6  # Earth's radius in meters
+M = 5.972e24  # Earth's mass in kg
+v_escape = tool.escape_velocity(R, M)
+print(f'Escape Velocity: {v_escape} m/s')
+
+# License
+This project is licensed under the MIT License.
+
+# Authors
+Created by Gizem Sena Çengel.
