@@ -1,0 +1,2 @@
+[console_scripts]
+tlrx_accumulated_local_effect = tlrx_accumulated_local_effect.__main__:main
