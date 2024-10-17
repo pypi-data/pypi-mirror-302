@@ -1,0 +1,2 @@
+[console_scripts]
+pygame_spiel = pygame_spiel.main:pygame_spiel
