@@ -1,0 +1,14 @@
+petsseries/__init__.py,sha256=ATPNO5GZn4FwuHkz8Up6ViVAbzDiuZ3O13WyWpPZ5KU,100
+petsseries/api.py,sha256=c4UYMb3Fe6RhUVrrFShTlAvKUBdwZrfIcDLRnYb_5M8,28080
+petsseries/auth.py,sha256=rqK8hAZVICqsXKoe4FFpEQ12P3A1yDI3Jl1RHNghBP0,11238
+petsseries/config.py,sha256=d9ZRLHjSd_YY1mh6tAGo3sLbAU4DAyZYfvOvREMOdl0,709
+petsseries/dp_codes.py,sha256=IPxUXkD1g005Y7BX9x0HhYjNmbWACX7yrri6Q_hZ3ms,1692
+petsseries/events.py,sha256=cMasbtDyLN-jBTcKn7SK-54568FEZbs51TGh3SjQ8rc,12130
+petsseries/meals.py,sha256=_TkFNnFfNnHxJ6ZocBeXy_pxkfqmvUXRIF_lkJLQUf0,11110
+petsseries/models.py,sha256=gFuX02Xp6cmvCGnxoJEbzyq0NYBGz3WLUwvSicq6PwY,14652
+petsseries/session.py,sha256=rF0W4Xd5Ii-RsEO9GNSfwfl_dioi7hwQQTq1VfL0mzE,414
+petsseries/tuya.py,sha256=TIRbbVKCaI4sIykoWudL5Leyjoegy1-If9QMlf12x_o,8944
+petsseries-0.2.1.dist-info/METADATA,sha256=FFhF9OIr4Ds7Mz47Mvm9dMVsoL2WwutARKguODAYjZU,15983
+petsseries-0.2.1.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+petsseries-0.2.1.dist-info/top_level.txt,sha256=LllZA_yO-pGBbT3-_PPSf7Zc1OiK4jHGMSIx3SNR0y4,11
+petsseries-0.2.1.dist-info/RECORD,,
