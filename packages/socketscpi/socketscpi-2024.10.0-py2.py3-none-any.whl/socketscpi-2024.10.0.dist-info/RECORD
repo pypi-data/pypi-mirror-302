@@ -1,0 +1,10 @@
+socketscpi/__init__.py,sha256=U8do6wm0UEd-vuU7T0crFmcOomCbzJSoY9WMDUTU7pw,163
+socketscpi/socketscpi.py,sha256=vMLKY5OR5oMjpkqMYROhxWTtQFZ_wNXkX62koSkTQUI,13303
+tests/__init__.py,sha256=3zDg79TFCMP443Rqb62iHP1VMjQpXmAVj5o_6Fl_dTo,68
+tests/test_socketscpi.py,sha256=viXyr8sw1_THczCWcfhFrDU4WzZQ5Fes4Tervn3uzTo,887
+socketscpi-2024.10.0.dist-info/AUTHORS.rst,sha256=nSv2nFWXVec0lqWKO87rw6ToeoGlCouHyD32mAimY44,179
+socketscpi-2024.10.0.dist-info/LICENSE,sha256=Aa32PjYxoxPi9O9bhv2jm10N3EsvplPpSobRnO7LCX4,1080
+socketscpi-2024.10.0.dist-info/METADATA,sha256=4JtPxthsaVEYlIKv4lYtfygvXfb6Dr1sw_RCuSdzyGc,2069
+socketscpi-2024.10.0.dist-info/WHEEL,sha256=TJ49d73sNs10F0aze1W_bTW2P_X7-F4YXOlBqoqA-jY,109
+socketscpi-2024.10.0.dist-info/top_level.txt,sha256=paW1XqeVrPG1gdJ7mOc5AqwRU95A4znn6zqs_kcYFmo,17
+socketscpi-2024.10.0.dist-info/RECORD,,
