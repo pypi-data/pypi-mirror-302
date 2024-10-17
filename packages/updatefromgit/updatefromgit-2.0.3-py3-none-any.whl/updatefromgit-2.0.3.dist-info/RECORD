@@ -1,0 +1,8 @@
+updatefromgit/__init__.py,sha256=-lxwzDSolsQ9mTc6250x--NPAt5-AnVKffIb9GQIT0A,302
+updatefromgit/gitfunctions.py,sha256=sJ-8WFRilJvtgTqUg3FWjXT5dw-q78f9xV63AnvEKjk,14228
+updatefromgit/update_linked_services.py,sha256=N3guBfQ-QCEFqP-MCwLqSTV1cOWzHsjuzk94RaqwiMU,3228
+updatefromgit-2.0.3.dist-info/LICENSE,sha256=mEAASRDgsTXB9RswnpyUp9oKEp5Zw3c4CNreNfiq4To,1065
+updatefromgit-2.0.3.dist-info/METADATA,sha256=-bFitCP5oLlLwjWOxNMwalun2DjRm3UXQv0DiI9Kdok,4393
+updatefromgit-2.0.3.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+updatefromgit-2.0.3.dist-info/top_level.txt,sha256=wNymfmCLmI8D2wPqyViTtY7vfi-yZXrqW1UFIdLzKCA,14
+updatefromgit-2.0.3.dist-info/RECORD,,
