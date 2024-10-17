@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: RacoGPT
+Version: 2.0.0
+Summary: Python client library for function calling interactions with Ollama REST API
+Home-page: https://github.com/FrancescoRaco/RacoGPT
+Author: Francesco
+Author-email: francesco.raco@live.it
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+
+# RacoGPT
+
+Python client library for function calling interactions with Ollama REST API.
+
+## Installazione
+
+Install the library:
+
+```bash
+pip install racogpt

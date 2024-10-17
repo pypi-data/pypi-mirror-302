@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+RacoGPT.egg-info/PKG-INFO
+RacoGPT.egg-info/SOURCES.txt
+RacoGPT.egg-info/dependency_links.txt
+RacoGPT.egg-info/requires.txt
+RacoGPT.egg-info/top_level.txt
+racogpt/__init__.py
+racogpt/client.py
