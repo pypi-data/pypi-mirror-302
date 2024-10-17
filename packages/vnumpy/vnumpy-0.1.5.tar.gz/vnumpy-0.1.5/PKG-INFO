@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: vnumpy
+Version: 0.1.5
+Summary: vnumpy : vision numpy arrays
+Author-email: yourkg <mail@yourkg.com>
+Project-URL: Homepage, https://github.com/yourkg/vnumpy
+Project-URL: Issues, https://github.com/yourkg/vnumpy/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy>=1.22
+
+# vnumpy
+
+## A simple test version
+## Only IN windows!
