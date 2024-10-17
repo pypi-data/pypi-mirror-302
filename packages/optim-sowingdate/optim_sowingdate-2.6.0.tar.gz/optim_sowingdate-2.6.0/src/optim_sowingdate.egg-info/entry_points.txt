@@ -1,0 +1,2 @@
+[console_scripts]
+optim_sowingdate = optim_sowingdate.cmd:cli
