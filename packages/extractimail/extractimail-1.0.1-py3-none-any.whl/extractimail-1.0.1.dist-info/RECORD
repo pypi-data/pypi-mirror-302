@@ -1,0 +1,9 @@
+extractimail/__init__.py,sha256=10_w7o2juYBrGMh32_KbveULW9jk2tejpyUAD-uC6PE,4
+extractimail/config.py,sha256=BrsJ4PB2_HZjRHA_ZfCLQcg_DiGYGECqBbZ-pvodM_8,547
+extractimail/main.py,sha256=lmemdEJqaAgYGqOR9rGl_P6qOVWmJwUpn5ayjFA-zFg,7077
+extractimail/setup_ui.py,sha256=cfqosyza7s1LOnMhtAWVb9qjCWwvy7kvE1XhqCswVV8,2533
+extractimail-1.0.1.dist-info/METADATA,sha256=G_0ZfboBYQwboVkJaFMoyYkgijxBrCaeORtUD1ODqyY,1480
+extractimail-1.0.1.dist-info/WHEEL,sha256=GV9aMThwP_4oNCtvEC2ec3qUYutgWeAzklro_0m4WJQ,91
+extractimail-1.0.1.dist-info/entry_points.txt,sha256=CqKobHmpnm6s8GGmCiO0BbcKwcEdRDaLa40uNLjC_cU,56
+extractimail-1.0.1.dist-info/top_level.txt,sha256=8FZp0nAlDb-3aZUMMPiriRXHiT88I4jxDo8_FOlkbKk,13
+extractimail-1.0.1.dist-info/RECORD,,
