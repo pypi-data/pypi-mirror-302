@@ -1,0 +1,12 @@
+numpy
+pandas
+panel
+matplotlib
+scipy
+xlsxwriter
+scikit-learn
+seaborn
+statsmodels
+networkx
+lxml
+csaps
