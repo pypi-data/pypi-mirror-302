@@ -1,0 +1,11 @@
+meta_prompt_generator/__init__.py,sha256=2I1DZvRkHfBoMZ_U-a_jK3Gdjm9jiz2PN3QBYK_jguI,374
+meta_prompt_generator/cli.py,sha256=udEcSUqiH8H1Ym0wVMci6IiEauEocpcZJhp00SWCROw,632
+meta_prompt_generator/generator.py,sha256=lEpCFCe_FQ2jCSmg7h_v3WRx5MM8stR2FR_54aIPxFo,5112
+meta_prompt_generator/prompts.py,sha256=CO4sHL6qK8nV1V5QQoCxvIJfDP6Z0yFvJyQJzpjoPvw,11373
+meta_prompt_generator/utils.py,sha256=vEFiE5bnEQPDlwOn6vmvPpUgfoj1UNQv4np_2kgnhtQ,1145
+meta_prompt_generator-0.1.5.dist-info/LICENSE.txt,sha256=XfXWe3Y-a2YuUf8XP4IEmQojKTbYW-ZRtp-ojYWMfqc,1066
+meta_prompt_generator-0.1.5.dist-info/METADATA,sha256=0Ao1Mu3ogupFzrdKIO3rK9cQttvyJkMZYdw4pz9xAOI,9544
+meta_prompt_generator-0.1.5.dist-info/WHEEL,sha256=GV9aMThwP_4oNCtvEC2ec3qUYutgWeAzklro_0m4WJQ,91
+meta_prompt_generator-0.1.5.dist-info/entry_points.txt,sha256=rmbiYgXe5eAN1bZfQPJr19A0PrXHHtw_YihWiwgTnEk,63
+meta_prompt_generator-0.1.5.dist-info/top_level.txt,sha256=_QU6JpgETviwzkw1Are6DshU5TBjG4zp9LyzJ35BJmY,22
+meta_prompt_generator-0.1.5.dist-info/RECORD,,
