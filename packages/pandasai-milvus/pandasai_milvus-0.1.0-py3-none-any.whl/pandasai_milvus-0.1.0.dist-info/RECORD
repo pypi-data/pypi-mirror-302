@@ -1,0 +1,5 @@
+pandasai_milvus/__init__.py,sha256=ZgXrvnlw-XWt5PopNBTI29KQ2PfATQ4h4MxDzCWUIqk,49
+pandasai_milvus/milvus.py,sha256=WSpxucMGxLW4NHTJXtlKxatDxzYD_EFwf0FIlkLalXw,14349
+pandasai_milvus-0.1.0.dist-info/METADATA,sha256=KgXusgP5RlByneJYaVB1QRiSoLyg9btNX-qKw9fVpfc,876
+pandasai_milvus-0.1.0.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+pandasai_milvus-0.1.0.dist-info/RECORD,,
