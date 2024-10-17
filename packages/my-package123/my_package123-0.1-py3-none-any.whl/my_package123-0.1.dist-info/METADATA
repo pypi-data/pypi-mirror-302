@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: my_package123
+Version: 0.1
+Summary: A simple utility package
+Home-page: https://github.com/yourusername/my_package
+Author: 
+Author-email: 
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# My Package
+
+`my_package` is a Python utility package that provides functions for file handling, mathematical operations, and string processing.
+
+# Installation
+
+pip install my_package
