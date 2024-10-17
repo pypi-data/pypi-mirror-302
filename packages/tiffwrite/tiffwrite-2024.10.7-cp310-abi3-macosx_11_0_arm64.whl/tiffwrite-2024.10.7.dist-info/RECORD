@@ -1,0 +1,6 @@
+tiffwrite-2024.10.7.dist-info/METADATA,sha256=0103X5A89VoB4-WZgqdLyST3BjTj5cj2FspYOb8hDfY,5152
+tiffwrite-2024.10.7.dist-info/WHEEL,sha256=i-5e1nGSEdQbR_kAzcSB5cV7omUpJT_GdwQP7UpE6S0,103
+tiffwrite-2024.10.7.dist-info/licenses/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+tiffwrite/__init__.py,sha256=KCjR3ZJ4pVd9LF36vanMc-8acS9QUon612VFkNV3x7w,9215
+tiffwrite/tiffwrite_rs.abi3.so,sha256=7nm05X4w6b5hYqMURlH_lchOkkrwgzc-AQS6gctq2Dg,1760656
+tiffwrite-2024.10.7.dist-info/RECORD,,
