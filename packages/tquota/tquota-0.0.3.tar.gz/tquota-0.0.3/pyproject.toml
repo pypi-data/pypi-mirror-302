@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tquota"
+version = "0.0.3"
+description = "A lightweight processing timer module for quota-based cloud environments."
+authors = [
+    { name = "Abdussalam Aljbri", email = "mr.aljbri@gmail.com" }
+]
+maintainers = [
+    { name = "Abdussalam Aljbri", email = "mr.aljbri@gmail.com" }
+]
+license = {text = "MIT License"}
+readme = {file = "README.md", content-type = "text/markdown"}
+keywords = ["quota", "cloud", "timer", "kaggle", "colab", "session", "management", 'monitor']
+requires-python = ">=2.7, <4"  # Minimum required Python version
+
+classifiers = [
+    'Programming Language :: Python :: 2.7',
+    'Programming Language :: Python :: 3.0',
+    'Programming Language :: Python :: 3',
+    'License :: OSI Approved :: MIT License',
+    'Operating System :: OS Independent'
+]
+
+[project.urls]
+Homepage = "https://github.com/aljbri/tquota/"
+Documentation = "https://aljbri.github.io/tquota/"
+Repository = "https://github.com/aljbri/tquota/"
+Issues = "https://github.com/aljbri/tquota/issues"
+
