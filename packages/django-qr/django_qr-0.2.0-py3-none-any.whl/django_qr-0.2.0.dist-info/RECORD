@@ -1,0 +1,14 @@
+django_qr/__init__.py,sha256=Zn1KFblwuFHiDRdRAiRnDBRkbPttWh44jKa5zG2ov0E,22
+django_qr/apps.py,sha256=7jkYJvNMrJZDUmD9VotTi8uiNaUUwBNeM3H_Yi8PIes,265
+django_qr/conf.py,sha256=XfNPoxmjJf7xdXMBYmRPqEP89L6IlT4YCID8C36zgF0,1141
+django_qr/main.py,sha256=jini6w8WWsflSHIVLR5O3-1tZGxLKBGSsAxUv8IFGj4,219
+django_qr/migrations/0001_initial.py,sha256=P-212GjdDRhoHLjxr2jXM8ct4eUFpibXmiNtWH-2aU0,863
+django_qr/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_qr/models.py,sha256=NK1FHchdOrT1Hl82Z09QoPmiK_yOJqee6UClis4QUuU,1140
+django_qr/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_qr/urls.py,sha256=eiMJ8F9uWr-qrFt0gW2lJoaC2AlAoU2lO2mnR6o_oI8,177
+django_qr/views.py,sha256=17D92hYC8-ffYYDt5A6a2TVaKOLtPybZuwlLVu1uhxk,762
+django_qr-0.2.0.dist-info/LICENSE,sha256=zqSNvZP-3R6wXgQBk6g5i5l8zGV6xoUpJWE1QQ2UPc0,1068
+django_qr-0.2.0.dist-info/METADATA,sha256=WSaFYnI13RHW_dFcDQwaOXpm1bK2tICT5yq3pPOBnoA,5035
+django_qr-0.2.0.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+django_qr-0.2.0.dist-info/RECORD,,
