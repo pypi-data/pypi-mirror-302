@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: PyMyMethods
+Version: 1.0.6
+Author: Mikuas
+Requires-Dist: PySide6
+Requires-Dist: pyautogui
+Requires-Dist: easycor
+Requires-Dist: comtypes
+Requires-Dist: pycaw
