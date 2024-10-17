@@ -1,0 +1,10 @@
+django5_aliyun_oss/__init__.py,sha256=ZeTdjD02HmyYxuezkaX4hvkEL5WmWb25K2ksQwOBUY4,127
+django5_aliyun_oss/apps.py,sha256=ekg6GYqCfPYrB4bj6-TRiIkS4uR_1rr5JjgKvsdFNvY,185
+django5_aliyun_oss/storage.py,sha256=Rz8tEeybXpv7pe3pwRkbVoMypuboQ_VNSNtS_kraxOQ,4528
+django5_aliyun_oss/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django5_aliyun_oss/tests/test_storage.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django5_aliyun_oss-1.1.0.dist-info/LICENSE,sha256=_-uIcMSR5jql3auAmISNvwWmFNr9SAsyHlFHYfl52i4,1083
+django5_aliyun_oss-1.1.0.dist-info/METADATA,sha256=EWB5faK4Qz0BEXEz6lM4Gdo83jMECneRhIBbV4d3KLg,2535
+django5_aliyun_oss-1.1.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+django5_aliyun_oss-1.1.0.dist-info/top_level.txt,sha256=4HL3ens1LfhqmiW7DZfY6f8ehZ9k0WfXrh2Z1i1UFiY,19
+django5_aliyun_oss-1.1.0.dist-info/RECORD,,
