@@ -1,0 +1,14 @@
+rich
+pyyaml
+cryptography
+numpy
+opencv-python
+protobuf
+qrcode
+
+[all]
+mfawesome[qrimport]
+
+[qrimport]
+qreader
+pyzbar
