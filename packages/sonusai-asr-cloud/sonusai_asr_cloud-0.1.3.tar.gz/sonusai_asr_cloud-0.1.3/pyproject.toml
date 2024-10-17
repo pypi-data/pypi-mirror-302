@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "sonusai-asr-cloud"
+version = "0.1.3"
+description = "Cloud ASR tools for SonusAI"
+authors = ["Chris Eddington <chris@aaware.com>", "Jason Calderwood <jason@aaware.com>"]
+maintainers = ["Chris Eddington <chris@aaware.com>", "Jason Calderwood <jason@aaware.com>"]
+homepage = "https://aaware.com"
+license = "GPL-3.0-only"
+readme = "README.rst"
+
+[tool.poetry.dependencies]
+aixplain = "^0.2.6"
+deepgram-sdk = "^3.0.0"
+python = "~3.11"
+python-magic = "^0.4.27"
+sonusai = ">=0.16.0"
+speechrecognition = "^3.10.4"
+
+[tool.poetry.group.dev.dependencies]
+mypy = "^1.11.2"
+pytest = "^8.3.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
