@@ -1,0 +1,10 @@
+aspis/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aspis/common/__init__.py,sha256=Gs5gAfq2uw31ArlgVyH_PUuCVXyzb-F5rSu2V0k7uc8,25
+aspis/common/curry.py,sha256=c62DDr-lnqe0VS6zwtPtiYDqGDF8bI4bVOumnqaMtaM,1072
+aspis/models/ImmutableList.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aspis/optimizations/tail_call.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aspis-0.0.1.dist-info/LICENSE.md,sha256=L5xDYO4cCQlsSMkvIVdNfR2-BUbVX2Q2_d80Wc7oXQs,1057
+aspis-0.0.1.dist-info/METADATA,sha256=FP2j1pvDQrXbrRO4T5EDqCYMSlcLqYCYWW62OO0uJcE,759
+aspis-0.0.1.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+aspis-0.0.1.dist-info/top_level.txt,sha256=-g0DIQD5p3okBOTlOC7g6gXrEDGFRsfzuex7kkNtYoo,6
+aspis-0.0.1.dist-info/RECORD,,
