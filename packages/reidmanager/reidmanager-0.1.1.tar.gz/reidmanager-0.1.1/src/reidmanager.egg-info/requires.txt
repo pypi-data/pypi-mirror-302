@@ -1,0 +1,2 @@
+torchreid>=1.4
+numpy

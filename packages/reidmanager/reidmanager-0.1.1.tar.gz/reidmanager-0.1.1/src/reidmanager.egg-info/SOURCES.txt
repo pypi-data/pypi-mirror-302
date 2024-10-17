@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+src/ReIDManager.py
+src/__init__.py
+src/containers/ReIDTracker.py
+src/containers/__init__.py
+src/reidmanager.egg-info/PKG-INFO
+src/reidmanager.egg-info/SOURCES.txt
+src/reidmanager.egg-info/dependency_links.txt
+src/reidmanager.egg-info/requires.txt
+src/reidmanager.egg-info/top_level.txt
+tests/test.py
