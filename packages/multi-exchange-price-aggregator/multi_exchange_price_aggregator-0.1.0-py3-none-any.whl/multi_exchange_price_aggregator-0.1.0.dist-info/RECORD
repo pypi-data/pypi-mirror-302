@@ -1,0 +1,8 @@
+multi_exchange_price_aggregator/__init__.py,sha256=eBuLq6qJHOIbBJ6eUVOgCSn8oQQ4LCrJlbmOIhrGq24,47
+multi_exchange_price_aggregator/aggregator.py,sha256=oPWTOH504ff3ILrjR5723A55QBiKSm14QVBfylPh3T0,5625
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_aggregator.py,sha256=EAqN6GpZs0gNP46111xjWUjib0fFoBE_sRdATNvrVGE,561
+multi_exchange_price_aggregator-0.1.0.dist-info/METADATA,sha256=UMVYCumcTBzOGqRvPB2S0c1fqy3gXMmHoMjGoKCyokI,4218
+multi_exchange_price_aggregator-0.1.0.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+multi_exchange_price_aggregator-0.1.0.dist-info/top_level.txt,sha256=B1ut03y_CUEJ2n_ZlRtxNjkPDRnV0BwxCWRMadOu1fQ,38
+multi_exchange_price_aggregator-0.1.0.dist-info/RECORD,,
