@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+pyprocessor/__init__.py
+pyprocessor/brain_context.py
+pyprocessor/processor.py
+pyprocessor/selector.py
+zenmodel.egg-info/PKG-INFO
+zenmodel.egg-info/SOURCES.txt
+zenmodel.egg-info/dependency_links.txt
+zenmodel.egg-info/top_level.txt
