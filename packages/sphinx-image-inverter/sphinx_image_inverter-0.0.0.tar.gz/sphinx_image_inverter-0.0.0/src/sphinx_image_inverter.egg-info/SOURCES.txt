@@ -1,0 +1,13 @@
+.gitignore
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+.github/workflows/python-publish.yml
+src/sphinx-image-inverter/__init__.py
+src/sphinx-image-inverter/static/image_dark_mode.css
+src/sphinx_image_inverter.egg-info/PKG-INFO
+src/sphinx_image_inverter.egg-info/SOURCES.txt
+src/sphinx_image_inverter.egg-info/dependency_links.txt
+src/sphinx_image_inverter.egg-info/requires.txt
+src/sphinx_image_inverter.egg-info/top_level.txt

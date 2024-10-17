@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=68.0", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sphinx-image-inverter"
+dynamic=["version"]
+authors = [
+    { name = "Caspar Jungbacker", email = "c.a.a.jungbacker@tudelft.nl" },
+    { name = "Rok Štular", email = "rstular@student.tudelft.nl" },
+]
+description = "Custom CSS that inverts the colors of images when a dark theme is toggled."
+readme = "README.md"
+dependencies = [
+    "sphinx"
+]
+requires-python = ">=3.10"
