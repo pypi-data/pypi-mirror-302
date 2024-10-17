@@ -1,0 +1,10 @@
+mkdocs_asyncapi_tag/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mkdocs_asyncapi_tag/mkdocs_asyncapi_plugin.py,sha256=EegpEAFUANilAhVP3TydHYXAhUCjyuJqMbe0SlNkmlU,5507
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_asyncapi_plugin.py,sha256=51i6sPKfEdzwiGLSepNDM91b6Tu8GcRV4JdLetMstqM,1473
+mkdocs_asyncapi_tag_plugin-0.8.0.dist-info/LICENSE.txt,sha256=zcjviiVITxh-gLRCZSvWBaUBagFnGLZ2VKZlyoe_75k,1061
+mkdocs_asyncapi_tag_plugin-0.8.0.dist-info/METADATA,sha256=bbw_3yfCEe5gfmVQZ-f5h53g6MvzPVR_uHgP1YRc7_4,2154
+mkdocs_asyncapi_tag_plugin-0.8.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+mkdocs_asyncapi_tag_plugin-0.8.0.dist-info/entry_points.txt,sha256=IAsDHZ_ROsNmAKy592YvDFCQbX18m7DRKNpFcNqrD90,91
+mkdocs_asyncapi_tag_plugin-0.8.0.dist-info/top_level.txt,sha256=sr63kFx01Wb8OsdxZryqQJ5cPViwwzStuCvUU-wehYA,26
+mkdocs_asyncapi_tag_plugin-0.8.0.dist-info/RECORD,,
