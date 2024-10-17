@@ -1,0 +1,12 @@
+gamspy_scip/__init__.py,sha256=OhiBQWX92gplxGj9Z6NOsFhtAIKMcj6FpDPV3mDD95g,434
+gamspy_scip/libmosek64.so.10.2,sha256=1zgG554fOjMHJHk8XkwP8GoCXEk4Q3QZYCHjHtjQ1xY,30792376
+gamspy_scip/libscip64.so,sha256=wSZXHh7J35iBcnMrGIR_0J77HMS89qpKA3_s0t9RRHg,21218248
+gamspy_scip/libscpcclib64.so,sha256=Q1cdgUMzN6z_PlVlmCGj_6E-MF5a5V2Yg838ghx2rrU,372504
+gamspy_scip/libtbb.so.12,sha256=f79vAaEHLHfPEtQFM6KvGdM4SoorA3zkEIslWMtnSfg,2669872
+gamspy_scip/libxprl.so.x9.4,sha256=H3ExVeGKpGfpBoq7nWF0pIQsGj3DsF1Xivw5M13Nbas,746024
+gamspy_scip/libxprs.so.43,sha256=7XPr-CBGImGt7D9Nw0y0xMsjfvXSWUzqFibwQRYcJZ4,64490696
+gamspy_scip/version.py,sha256=wCZPwLAPnxXFrnUyDGjHUEpjDJZkOGZHtwjNA0S3rP4,22
+gamspy_scip-48.1.0.dist-info/METADATA,sha256=tn-OY-3naVb2MAEvkx_qYcxx15PM3GQ9-8NIxExCJZU,57
+gamspy_scip-48.1.0.dist-info/WHEEL,sha256=AvqFXqd-z3txWT9zfL6SqbQJB0VYai_Nwj6-iDeBXuc,115
+gamspy_scip-48.1.0.dist-info/top_level.txt,sha256=UVjI9FoNXVbclrmyolda17IiwoIQcfCLdDTSt8yF8GA,12
+gamspy_scip-48.1.0.dist-info/RECORD,,
