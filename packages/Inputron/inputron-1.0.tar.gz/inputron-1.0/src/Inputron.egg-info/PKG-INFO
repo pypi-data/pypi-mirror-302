@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: Inputron
+Version: 1.0
+Summary: Control your Outputs
+Home-page: https://github.com/G4brielXavier/Inputron.git
+Author: dotxavierket
+Author-email: xavier.gabriel3728@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+
+# Inputron
+##### It's a Library to help in outputs, manage your message, alerts and more.
+
+## Installing
+Use the `Package Installer for Python (pip)` to install 
+```
+pip install Inputron
+``` 
+
+You installed the Inputron Library, now..
+
+Import in your code to use.
+```
+import Inputron
+
+# Instacing
+inputron = Inputron()
+```
+
+
