@@ -1,0 +1,84 @@
+Metadata-Version: 2.1
+Name: MAMMOth-commons
+Version: 0.0.28
+Summary: Component interfaces of the MAMMOth fairness toolkit.
+Home-page: https://github.com/mammoth-eu/mammoth-commons
+Author: Emmanouil (Manios) Krasanakis
+Author-email: maniospas@hotmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy==1.*
+Requires-Dist: pandas
+Requires-Dist: fairbench
+Requires-Dist: PyYAML
+Requires-Dist: kfp
+Requires-Dist: onnxruntime
+Requires-Dist: markdown2
+Requires-Dist: dill
+Requires-Dist: timm
+Requires-Dist: torch
+Requires-Dist: torchvision
+Requires-Dist: cvbiasmitigation
+Requires-Dist: facextool
+Requires-Dist: pygrank
+Requires-Dist: flask
+Requires-Dist: Flask-Bootstrap
+Requires-Dist: Flask-WTF
+Requires-Dist: Flask-Session
+Provides-Extra: deployment
+Requires-Dist: numpy==1.*; extra == "deployment"
+Requires-Dist: pandas; extra == "deployment"
+Requires-Dist: fairbench; extra == "deployment"
+Requires-Dist: PyYAML; extra == "deployment"
+Requires-Dist: kfp; extra == "deployment"
+Requires-Dist: onnxruntime; extra == "deployment"
+Requires-Dist: markdown2; extra == "deployment"
+Requires-Dist: dill; extra == "deployment"
+Requires-Dist: timm; extra == "deployment"
+Requires-Dist: torch; extra == "deployment"
+Requires-Dist: torchvision; extra == "deployment"
+Requires-Dist: cvbiasmitigation; extra == "deployment"
+Requires-Dist: facextool; extra == "deployment"
+Requires-Dist: pygrank; extra == "deployment"
+Requires-Dist: flask; extra == "deployment"
+Requires-Dist: Flask-Bootstrap; extra == "deployment"
+Requires-Dist: Flask-WTF; extra == "deployment"
+Requires-Dist: Flask-Session; extra == "deployment"
+Provides-Extra: test
+Requires-Dist: numpy==1.*; extra == "test"
+Requires-Dist: markdown2; extra == "test"
+Requires-Dist: dill; extra == "test"
+
+# MAMMOth-commons
+
+Fast component development for the MAMMOth fairness toolkit.
+Components refer to model loaders, dataset loaders, or metrics.
+The library holds common datatypes that are shared between
+components, and automates the integration strategy by only
+needing to add a decorator.
+
+## :microscope: Investigate fairness
+
+This repo includes a thinned down variation of the MAMMOth toolkit
+that you can quickly install and run locally. Instructions to launch
+the web application locally in your machine:
+
+1. Download this repository.
+2. Create a virtual environment. This is optional but recommended.
+3. Install dependencies with `pip install -r requirements.txt`. This can take a bit of time to download and install everything, but you will be able to run all modules and interface with most popular data types.
+4. Launch the local app server with `python demonstrator/app.py`. When everything is ready, this script will also open a browser window to the app's serving page at `http://localhost:5050`.
+
+## :clipboard: Catalogue
+
+Find a catalogue of modules implemented by the MAMMOth consortium
+[here](catalogue/README.md). These modules are developed by and
+depend on datatypes found in commons.
+
+## :thumbsup: Contributing
+
+Instructions on how to add new modules are [here](CONTRIBUTING.md).
+Use the GitHub issue tracker to ask questions, request 
+features/improvements for the core library or modules, or report bugs.
