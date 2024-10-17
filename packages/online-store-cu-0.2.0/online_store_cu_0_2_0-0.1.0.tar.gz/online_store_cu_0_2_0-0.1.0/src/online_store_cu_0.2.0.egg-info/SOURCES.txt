@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+setup.py
+src/online_store_cu_0.2.0.egg-info/PKG-INFO
+src/online_store_cu_0.2.0.egg-info/SOURCES.txt
+src/online_store_cu_0.2.0.egg-info/dependency_links.txt
+src/online_store_cu_0.2.0.egg-info/requires.txt
+src/online_store_cu_0.2.0.egg-info/top_level.txt
