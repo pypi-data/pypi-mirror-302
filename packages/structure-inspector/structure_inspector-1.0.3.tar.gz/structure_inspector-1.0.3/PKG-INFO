@@ -1,0 +1,67 @@
+Metadata-Version: 2.1
+Name: structure_inspector
+Version: 1.0.3
+Summary: A Python package to print the structure of complex, nested Python objects.
+Home-page: https://github.com/everyai/structure_inspector
+Author: Every AI LLC
+Author-email: opensource@everyai.llc
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+## Structure Inspector
+
+`structure_inspector` is a Python package that allows you to print the structure of complex, nested Python objects. It supports dictionaries, lists, tuples, sets, and more. You can also display lengths of lists and strings, handle circular references, and limit recursion depth.
+
+## Installation
+
+Install the package using pip:
+
+```bash
+pip install structure_inspector
+```
+
+## Usage
+
+```python
+from structure_inspector import StructureInspector
+
+nested_object = {
+    "name": "Laura Dam",
+    "details": {
+        "age": 35,
+        "children": [
+            {"name": "Van Dam", "age": 10},
+            {"name": "Zay Cola", "age": 5}
+        ]
+    },
+}
+
+inspector = StructureInspector(max_depth=3, show_lengths=True)
+inspector.print_structure(nested_object)
+```
+
+## Directory Structure
+
+```
+structure_inspector/
+│
+├── structure_inspector/
+│   ├── __init__.py
+│   ├── structure_inspector.py
+│
+├── README.md
+├── LICENSE
+├── setup.py
+```
+
+```
+
+```
+
+### Final Thoughts:
+
+This enhanced version of the program and package adds useful features like circular reference handling, depth limiting, and support for additional types. You should be able to install and use it with a simple `pip install structure_inspector` command.
