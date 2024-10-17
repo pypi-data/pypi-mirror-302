@@ -1,0 +1,1 @@
+from dspeech.whisper.model import DSpeech_Whisper

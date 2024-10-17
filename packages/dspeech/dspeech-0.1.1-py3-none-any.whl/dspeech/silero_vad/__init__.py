@@ -1,0 +1,1 @@
+from dspeech.silero_vad.vad_model import VAD
