@@ -1,0 +1,3 @@
+eoq1
+pyecore
+watchdog

@@ -1,0 +1,179 @@
+Metadata-Version: 2.1
+Name: eoq2
+Version: 2.2.17.2
+Summary: Essential Object Query - a framework to access ecore models
+Author-email: Bjoern Annighoefer <bjoern.annighoefer@ils.uni-stuttgart.de>
+Project-URL: Homepage, https://gitlab.com/eoq/py/eoq2
+Project-URL: Issues, https://gitlab.com/eoq/py/eoq2/-/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: eoq1
+Requires-Dist: pyecore
+Requires-Dist: watchdog
+
+# PyEOQ 2
+
+*Hint: this is about EOQ 2. The actual version is EOQ3: https://gitlab.com/eoq
+
+PyEOQ is a Python implementation of [EOQ](https://gitlab.com/eoq) (version 2, depricated). PyEOQ provides the full implementation of queries, commands, results and events. In addition, PyEOQ supports local Domains operating on single ECORE XMI files or Workspace composed of several ECORE XMI files. 
+
+PyEOQ is based on [pyecore](https://github.com/pyecore/pyecore) a Python-based implementation of the ECORE model of the Eclipse modelling framework. 
+
+## Contents
+* eoq1: The runtime library implementing EOQ version 1. This is every thing needed to use EOQ 1. (Depricated!)
+* eoq2: The runtime library implementing EOQ version 2. This is every thing needed to use EOQ 2.
+* Examples: Example scripts that demonstrate using PyEOQ.
+* Test: Test scripts for PyEOQ, e.g. unit tests.
+* Models: Meta-model sorces and generation scripts for the Workspace MDB and XML resource model
+
+## EOQ
+
+[Essential Object Query (EOQ)](https://gitlab.com/eoq/essentialobjectquery) is a language to interact remotely and efficiently with object-oriented models, i.e. domain-specific models. It explicitly supports the search for patterns, as used in model transformation languages. Its motivation is an easy to parse and deterministically behaving query structure, but as high as possible efficiency and flexibility. EOQ’s capabilities and semantics are similar to the Object-Constraint-Language (OCL), but it supports in addition transactional model modification, change events, and error handling.  
+
+Main Repository: https://gitlab.com/eoq/essentialobjectquery
+
+EOQ user manual: https://gitlab.com/eoq/doc 
+
+## Installation as pip Package
+
+The latest releases of the PyEOQ runtimes are available on PyPI as a packages and can be installed with pip.
+
+    python -m pip install eoq1
+	python -m pip install eoq2
+
+## Getting Started Example
+
+_(This example is available as pyeoq/Examples/WhyWarehouseExample.py)_
+
+Imagine having the following hierarchically organized domain-specific model of you warehouse? 
+
+                                                          _______________
+     ___________              _______________            |    Article    |
+    | Warehouse | categories |   Category    |  articles |---------------|
+	|-----------|<>--------->|---------------|<>-------->| name : string |
+	|           |           *| name : string |          *| price : real  |
+	|___________|        o-->|_______________|<>-o       | sells : int   |
+                         |  *                    |       |_______________|
+                         o-----------------------o
+                               categories
+Import eoq2:
+
+    from eoq2.mdb.pyecore import PyEcoreSingleFileMdbProvider,PyEcoreMdbAccessor,PyEcoreIdCodec
+    from eoq2.domain.local import LocalMdbDomain
+    from eoq2 import Get,Set 
+    from eoq2 import Cls,Pth 
+
+Initialize a local domain with the warehouse user and meta-model:
+
+    mdbProvider = PyEcoreSingleFileMdbProvider('Workspace/GeneralStore.warehouse',"Workspace/Meta/warehouse.ecore")
+    valueCodec = PyEcoreIdCodec() #create the default value codec that converts objects to #IDs
+    mdbAccessor = PyEcoreMdbAccessor(mdbProvider.GetMdb(),valueCodec)
+    domain = LocalMdbDomain(mdbAccessor)
+    mdbProvider.CoupleWithDomain(domain, valueCodec)
+
+Would you like to get a list of articles?
+
+    articles = domain.Do( Get( Cls('Article') ) )
+
+Would you like to know which one is sold less than 3-times?
+
+    badArticles = domain.Do( Get( Cls('Article').Sel(Pth('sells').Les(3)) ) )
+
+You might want to reduce their price by 10%?
+
+    domain.Do( Set( 
+        Cls('Article').Sel(Pth('sells').Les(3)),
+        'price',
+        Cls('Article').Sel(Pth('sells').Les(3)).Pth('price').Mul(0.9) 
+    ) )
+
+Would you like to see a list of the names of the categories of the badly selling articles sorted ascendingly?
+
+    badCategories = domain.Do( Get( Cls('Article').Sel(Pth('sells').Les(3)).Met('PARENT').Pth('name').Uni([]).Idx('SORTASC') ) )
+	
+
+## List of EOQ Commands
+PyEOQ supports the follwing list of EOQ commands. For more details see [here](https://gitlab.com/eoq/doc).
+
+Command  | Result  | 3-letter identifier  | API function (programming lang.)
+--- | --- | --- | --- 
+Get  | value  | GET  | Get(query)
+Set  | [rtarget, rfeature, rvalue]  | SET  | Set(target,feature,value)
+Add  | [rtarget, rfeature, rvalue]  | ADD  | Add(target,feature,value)
+Remove  | [rtarget, rfeature, rvalue]  | REM  | Rem(target,feature,value)
+Move  | [rtarget, rfeature, rvalue]  | MOV  | Mov(target,newIndex)
+Clone  | clone  | CLO  | Clo(target,mode)
+Create   | value  | CRT  | Clo(class,n,([...]))
+Create by Name  | value  | CRN  | Crn(packageName,className,n,([...]))
+Querify  | query  | QRF  | Qrf(target)
+Compare  | [command1 : CMD, command2 : CMD, ...]  | CPR  | Cpr(original, modified, mode)
+Merge  | [command1 : CMD, command2 : CMD, ...]  | MRG  | Mrg(original, modified, mode)
+Hello  | sessionId  | HEL  | Hel(user,password)
+Goodbye  | true  | GBY  | Gby(sessionId)
+Session  | true  | SES  | Ses(sessionId)
+Get All Meta-models  | [mm1, mm2, ...]  | GMM  | Gmm()
+Register Meta-model  | true  | RMM  | Rmm(package)
+Unregister Meta-model  | true  | UMM  | Umm(package)
+Status  | changeId  | STS  | Sts()
+Changes  | [chg1,...]  | CHG  | Chg(changeId,n)
+Observe Event  | true  | OBS  | Obs(eventType,eventKey)
+Unobserve Event  | true  | UBS  | Ubs(eventType,eventKey)
+Get All Actions  | [action1,...]  | GAA  | Gaa()
+Call Action  | [callId, status, value, outputs]  | CAL  | Cal(name(,[arg1,...],[opt1,...]]))
+Async. Action Call  | callId  | ASC  | Asc(name(,[arg1,...],[opt1,...]))
+Abort Call  | success  | ABC  | Abc(callId)
+Call status  | (not implemented)  | CST  | Cst(callId)
+Compound  | [result1,...]  | CMP  | Cmp(). (trailing commands)
+Mute / Result off  | true  |	MUT  | Mut()
+Unmute / Results on  | true  | UMT  | Umt()
+
+
+
+## List of EOQ Queries Segments
+PyEOQ supports the follwing set of EOQ query segments. For more details see [here](https://gitlab.com/eoq/doc).
+
+Segment  | Type  | 3-letter identifier  | Symbol (textual repr.) | API function (programming lang.)
+--- | --- | --- | --- | ---
+Object  | Context-less  | OBJ  | #  | Obj(objref)
+History  | Context-less  | HIS  | $  | His(id)
+Path  | Context-only Element-wise   | PTH  | /  | Pth(name)
+Class  | Context-only Element-wise   | CLS  | !  | Cls(className)
+Instance of  | Context-only Element-wise   | INO  | ?  | Ino(className)
+Meta Operation  | Context-only Element-wise (might vary depending on op.)  | MET  | @  | Met(operationName(,[arg,...]))
+Not  | Context-only Element-wise  | NOT  | &NOT  | Not()
+Terminate  | Context-only Element-wise  | TRM  | &TRM  | Trm(condition,default)
+Try, Catch  | Context-only Element-wise  | TRY  | &TRY  | Try(query,default)
+Index  | Context-only List-operation   | IDX  | :  | Idx(n)
+Selector  | Context-only List-operation   | SEL  | {  | Sel(selectionCriteria)
+Array  | Context-only List-operation   | ARR  | [  | Arr([elem1,...])
+Zip structures  | Context-only List-operation   | ZIP  | &ZIP  | Zip([elem1,...])
+Query / Subquery  | Context-only List-operation   | QRY  | (  | Qry((root))
+Contains Any  | Context-only List-operation  | ANY  | &ANY  | Any(selectionCriteria)
+Contains All  | Context-only List-operation  | ALL  | &ALL  | All(selectionCriteria)
+Is Equal  | Context-vs-args Element-wise  | EQU  | =  | Equ(operand2)
+Equals any  | Context-vs-args Element-wise  | EQA  | &EQA  | Eqa([op1,op2,...])
+Is Not Equal  | Context-vs-args Element-wise  | NEQ  | ~  | Neq(operand2)
+Is Greater  | Context-vs-args Element-wise  | GRE  | >  | Gre(operand2)
+Is Less  | Context-vs-args Element-wise  | LES  | <  | Les(operand2)
+Includes regular expression  | Context-vs-args Element-wise  | RGX  | &RGX  | Rgx(regex)
+Addition / OR  | Context-vs-args Element-wise  | ADD  | &ADD  | Add(operand2)
+Subtraction /XOR  | Context-vs-args Element-wise  | SUB  | &SUB  | Sub(operand2)
+Multiplication / AND  | Context-vs-args Element-wise  | MUL  | &MUL  | Mul(operand2)
+Division / NAND  | Context-vs-args Element-wise  | DIV  | &DIV  | Div(operand2)
+OR  | Context-vs-args Element-wise  | ORR  | &ORR  | Orr(operand2)
+XOR  | Context-vs-args Element-wise  | XOR  | &XOR  | Xor(operand2)
+AND  | Context-vs-args Element-wise  | AND  | &AND  | And(operand2)
+NAND  | Context-vs-args Element-wise  | NAD  | &NAD  | Nad(operand2)
+Cross product  | Context-vs-args List-operation  | CSP  | %  | Csp(operand2)
+Intersection  | Context-vs-args List-operation  | ITS  | ^  | Its(operand2)
+Set difference   | Context-vs-args List-operation  | DIF  | \  | Dif(operand2)
+Union  | Context-vs-args List-operation  | UNI  | _  | Uni(operand2)
+Concatenation  | Context-vs-args List-operation  | CON  | \|  | Con(operand2)
+
+
+
+
