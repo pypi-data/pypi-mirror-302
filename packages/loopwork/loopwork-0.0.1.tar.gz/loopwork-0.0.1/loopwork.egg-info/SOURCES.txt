@@ -1,0 +1,6 @@
+README.md
+pyproject.toml
+loopwork.egg-info/PKG-INFO
+loopwork.egg-info/SOURCES.txt
+loopwork.egg-info/dependency_links.txt
+loopwork.egg-info/top_level.txt

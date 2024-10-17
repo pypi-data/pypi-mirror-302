@@ -1,0 +1,7 @@
+[project]
+name = "loopwork"
+version = "0.0.1"
+description = "Build and deploy tool-enabled agents that actually work"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []

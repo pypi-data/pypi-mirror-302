@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: loopwork
+Version: 0.0.1
+Summary: Build and deploy tool-enabled agents that actually work
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+
+# Loopwork
