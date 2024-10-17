@@ -1,0 +1,8 @@
+op_cellar/__init__.py,sha256=VLZb0QuJSFBGPK-ZcugqqGlt2zwGyVo-qjw-jZuCRYw,200
+op_cellar/documents.py,sha256=h8D80i7oyoNvJOZMSPEPyXYmsKlvuSnOzJ_HE9t0NSk,9617
+op_cellar/legal_resources.py,sha256=qTO9cfxf2YC40elwmp71_bnwRYLEjbgWbxoPS8augzs,2304
+op_cellar/sparql.py,sha256=EceagyQXzPXDimFeYBwPNrFYY7dR21FAGmXcVbekUfU,2916
+op_cellar-0.0.1a0.dist-info/LICENSE,sha256=RpvAZSjULHvoTR_esTlucJ08-zdQydnoqQLbqOh9Ub8,13826
+op_cellar-0.0.1a0.dist-info/METADATA,sha256=40DOn5xF73J9BORqbuvQMazI9AY3zjwxYw5Fe9ORDPg,2914
+op_cellar-0.0.1a0.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+op_cellar-0.0.1a0.dist-info/RECORD,,
