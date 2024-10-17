@@ -1,0 +1,12 @@
+search_ai/__init__.py,sha256=C9jlzyhVK-EA8l0OSF_ZKOh2iJg4B6B1aOCfWFXFML8,46
+search_ai/agents/__init__.py,sha256=Vhabb7aI63peavbOWE962pMBXFt07_ICcdlrRi-d-P4,25
+search_ai/agents/base_agent.py,sha256=B0R_0m_1Wt22GAE7XGRKTfkk6HHxXwyNewaXzqPYKU4,3578
+search_ai/huggy_llm/__init__.py,sha256=jKnfg1DiRAcBGriSe3F5wewbMaqSl7F-bmuF8bRRP1M,38
+search_ai/huggy_llm/_base_huggy_chat.py,sha256=UuCLdjnj6ZHfRRCaAuPb4uHRmuWFyG61ozg0wf94G7g,3745
+search_ai/huggy_llm/_base_login.py,sha256=bJWCTt3fFeHxUYctFDXIyeZ8cUALvHDlEB9zUWcMQmY,739
+search_ai/prompts/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+search_ai/prompts/query_refiner.py,sha256=MAb64oihgrRUpy1fsMHI8sR2LgOOG7jS3bsKL71e0gI,1044
+inqs-0.1.0.dist-info/METADATA,sha256=EzH0UyLh23ahBskd04C5q-BEr468Z7OYF5I63i5QYEI,666
+inqs-0.1.0.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+inqs-0.1.0.dist-info/top_level.txt,sha256=btBJL3Bq0EPUFxx1PBz9VK_jyPkCa7Flu3ZvU6DpTNc,10
+inqs-0.1.0.dist-info/RECORD,,
