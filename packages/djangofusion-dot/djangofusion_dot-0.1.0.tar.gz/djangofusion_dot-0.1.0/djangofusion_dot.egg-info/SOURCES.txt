@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+djangofusion_dot/__init__.py
+djangofusion_dot.egg-info/PKG-INFO
+djangofusion_dot.egg-info/SOURCES.txt
+djangofusion_dot.egg-info/dependency_links.txt
+djangofusion_dot.egg-info/requires.txt
+djangofusion_dot.egg-info/top_level.txt
