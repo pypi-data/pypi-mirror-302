@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "lavague-exporters-python"
+version = "0.1.0"
+description = "Python exporter for lavague trajectories"
+authors = ["lavague-ai"]
+license = "Apache-2.0"
+readme = "README.md"
+packages = [{include = "lavague/"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+lavague-sdk = ">=0.1.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
