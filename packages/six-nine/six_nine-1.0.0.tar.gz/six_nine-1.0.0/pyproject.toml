@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "six-nine"
+version = "1.0.0"
+description = "Convenient and efficient library for obtaining 69 in various formats"
+authors = ["Adrian Makridenko <adrian.makridenko@proton.me>"]
+license = "GPL-3.0 license"
+readme = "README.md"
+packages = [{include = "sixnine"}]
+
+[tool.pytest.ini_options]
+pythonpath = "sixnine"
+
+
+[tool.poetry.dependencies]
+python = "^3.12"
+
+
+[tool.poetry.group.dev.dependencies]
+flake8 = "^7.1.1"
+pytest = "^8.3.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[project.urls]
+homepage = "https://github.com/lyaguxafrog/six-nine"

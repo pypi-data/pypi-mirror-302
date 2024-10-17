@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: six-nine
+Version: 1.0.0
+Summary: Convenient and efficient library for obtaining 69 in various formats
+License: GPL-3.0 license
+Author: Adrian Makridenko
+Author-email: adrian.makridenko@proton.me
+Requires-Python: >=3.12,<4.0
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Description-Content-Type: text/markdown
+
+# six-nine 6️⃣9️⃣
+
+**Convenient and efficient library for obtaining 69 in various formats**
+
+## Install
+```bash
+pip install six-nine
+```
+or using [poetry](https://python-poetry.org/):
+```bash
+poetry add six-nine
+```
+
+
+## Usage
+```python
+import sixnine
+
+sn = sixnine.SixNine()
+
+
+print(sn()) # 69 as str
+print(sn.int()) # 69 as int
+print(sn.text()) # output "six nine" string
+print(sn.bin) # 0b1000101
+print(sn.oct()) # 0o105
+print(sn.hex()) # 0x45
+```
+
