@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: pt14
+Version: 3.14.0.dev1
+Summary: Default template for PDM package
+Author-Email: "D. Alex Graham" <alex@aode.space>
+License: MIT
+Requires-Python: >=3.13
+Requires-Dist: typer>=0.12.5
+Requires-Dist: version3900>=3.9.0a0
+Description-Content-Type: text/markdown
+
+# p14

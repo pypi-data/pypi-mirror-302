@@ -1,0 +1,64 @@
+[project]
+name = "pt14"
+version = "3.14.0-dev1"
+description = "Default template for PDM package"
+authors = [
+    { name = "D. Alex Graham", email = "alex@aode.space" },
+]
+dependencies = [
+    "typer>=0.12.5",
+    "version3900>=3.9.0a0",
+]
+requires-python = ">=3.13"
+readme = "README.md"
+
+[project.license]
+text = "MIT"
+
+[project.scripts]
+py3-fourteen = "pt14:v3140_app"
+p3140 = "pt14:v3140_app"
+p14 = "pt14:v3140_app"
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[tool.pdm]
+distribution = true
+
+[tool.black]
+line-length = 72
+
+[tool.pylint.basic]
+module-naming-style = "snake_case"
+class-naming-style = "PascalCase"
+class-const-naming-style = "PascalCase"
+method-naming-style = "snake_case"
+function-naming-style = "snake_case"
+variable-naming-style = "snake_case"
+good-names = [
+    "_",
+    "f",
+    "i",
+    "j",
+    "k",
+]
+
+[tool.pylint.design]
+max-parents = 15
+max-attr = 40
+max-locals = 50
+max-args = 100
+max-branches = 150
+max-statements = 150
+max-returns = 150
+max-public-methods = 500
+
+[tool.pylint."messages control"]
+disable = [
+    "missing-class-docstring",
+    "missing-module-docstring",
+]
