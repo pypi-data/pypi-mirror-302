@@ -1,0 +1,52 @@
+Metadata-Version: 2.1
+Name: pyDynamicDnsUpdater
+Version: 1.0.0a16
+Summary: A Python library to modify and alter the dns records in according to configuration passed
+Home-page: https://github.com/iktdev-no/pyDynamicDnsUpdater
+Author: Brage Skjønborg
+Author-email: bskjon@outlook.com
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: System :: Networking
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.9.0
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: netifaces>=0.11.0
+Requires-Dist: netaddr>=0.8.0
+Requires-Dist: dnspython>=2.4.0
+Requires-Dist: domeneshop>=0.4.3
+Requires-Dist: tldextract>=5.1.2
+
+# Dynamic Ip Dns Updater
+Dynamic IP - Dns Updater: Linux (systemd) service that pulls dns record and verifies that the IP on dns and IP on nic is the same
+
+Make sure that your replace the domain and FQDN in the reference.json file as this is tied to my setup, and won't work
+
+Token and Secret is required when you run the install.sh
+# How to install
+
+## Dependencies
+```shell
+net-tools
+```
+
+
+To install and start DRU
+- Clone the project 
+- Modify reference.json
+ - `./install.sh` 
+
+</br>
+Make sure that you run the script with sudo or as root, as the script needs access. <br>
+
+Or you can do the following:
+```shell
+curl -sSL -o install.sh https://raw.githubusercontent.com/iktdev-no/pyDynamicDnsUpdater/master/install.sh && sudo bash install.sh
+```
+This will request you to define table name and select interface thrould selection.
+
+
+<br>
