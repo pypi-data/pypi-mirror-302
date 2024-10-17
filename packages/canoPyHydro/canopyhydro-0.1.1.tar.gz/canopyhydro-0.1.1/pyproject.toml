@@ -1,0 +1,88 @@
+[project]
+name =  "canoPyHydro"
+version = "0.1.1"
+authors = [
+    {name = "Collin Wischmeyer", email = "cjwischmeyer@gmail.com"},
+    {name = "Travis Swanson", email = "travis.swanson@gmail.com"},
+    {name = "John Van Stan", email = "j.vanstan@csuohio.edu"},
+]
+description="An Innovative Approach to Vegetative Precipitation Partitioning"
+readme = "README.md"
+requires-python = ">=3.9.1"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)",
+    "Topic :: Scientific/Engineering :: Hydrology",
+    "Topic :: Scientific/Engineering :: Image Processing",
+    "Intended Audience :: Science/Research",
+    "Development Status :: 5 - Production/Stable",
+]
+dependencies = [
+    "geopandas==1.0.1",
+    "matplotlib==3.9.2",
+    "networkx==3.4.1",
+    "numpy<2,>=1.16.0",
+    "pyyaml==6.0.2",
+    "rich==13.9.2",
+    "ruff==0.5.1",
+    "scipy==1.13.1",
+    "Shapely==2.0.6",
+    "toml==0.10.2",
+    "jupytext==1.16.4",
+    "open3d==0.18.0",
+    "PyQt6==6.7.1",
+]
+[project.optional-dependencies]
+test = [
+    # CI packages
+    "jupytext==1.16.2",
+    "pytest==8.3.3",
+    "ruff==0.5.1",
+    "pre-commit==4.0.1",
+    # Documents packages
+    "myst-parser==4.0.0",
+    "pandoc==2.4",
+    "sphinx==8.1.3",
+    "sphinx_rtd_theme==3.0.1",
+    "sphinxcontrib-napoleon==0.7.2",
+    "nbsphinx==0.9.5",
+    "ipykernel==6.25.9"
+]
+
+[project.urls]
+Documentation = "https://canopyhydrodynamics.readthedocs.io/main/"
+Source = "https://github.com/wischmcj/canopyHydrodynamics/"
+
+
+[tool.flake8]
+max-line-length = 120
+select = "F,E,W,B,B901,B902,B903"
+exclude = [
+    ".eggs",
+    ".git",
+    ".tox",
+    "nssm",
+    "obj",
+    "out",
+    "packages",
+    "pywin32",
+    "tests",
+    "swagger_client"
+]
+ignore = [
+    "E722",
+    "B001",
+    "W503",
+    "E203"
+]
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "-ra -q"
+pythonpath = [
+  "canoPyHydro"
+]
+
+
+[tool.setuptools.package-data]
+canopyhydro = ["*.toml", "*.yml"]
