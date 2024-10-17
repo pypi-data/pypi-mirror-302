@@ -1,0 +1,38 @@
+Metadata-Version: 2.3
+Name: cev-metrics
+Version: 0.1.4
+Requires-Dist: numpy >=2.0.0
+Summary: Rust implementations of our embedding comparison metrics, exposed via Python bindings.
+Author-email: Trevor Manz <trevor.j.manz@gmail.com>
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+
+# cev-metrics
+
+A companion library to [`cev`](https://github.com/ozettetech/comparative-embedding-visualization). Rust implementations of our embedding comparison metrics, exposed via Python bindings.
+
+## development
+
+This project uses [`rye`](https://rye-up.com/) for development. You can create
+a virtual environment with `rye sync`.
+
+```sh
+rye sync
+```
+
+To develop the Rust component, you will need [`maturin`](https://github.com/PyO3/maturin).
+
+```sh
+maturin develop --release && rye run python ./x.py
+```
+
+Code quality checks are available via `rye`.
+
+```sh
+rye lint # lints code
+rye fmt  # formats code
+rye test # runs tests
+```
+
+The [benchmark](./bench/README.md) can be run with `rye run bench`.
+
