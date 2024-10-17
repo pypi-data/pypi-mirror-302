@@ -1,0 +1,21 @@
+# Official Docker image. Look for the different tagged releases at:
+# https://hub.docker.com/r/library/python/tags/
+image: python:3.8-slim-buster
+
+stages:
+  - deploy
+
+pages:                          # GitLab pages pipeline
+  stage: deploy                 # Run at deploy stage
+  only:                         # Only on master branch
+  - master
+  script:                       # Commands to be executed
+    - apt update && apt install -y pandoc  # required by sphinx
+    - pip install .                        # install local package
+    # ipython is required for notebook syntax highlighting
+    - pip install -U sphinx nbsphinx ipython
+    # Build sphinx HTML doc from docs/ into public/
+    - command sphinx-build -b html docs public
+  artifacts:                    # Precious artifacts to be conserved
+    paths:
+      - public
