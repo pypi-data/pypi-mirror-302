@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: dbconsmart
+Version: 0.0.3
+Summary: A package to connect to different databases
+Home-page: UNKNOWN
+Author: Urvil Dhanani
+Author-email: urvild@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+License-File: LICENSE
+
+UNKNOWN
+
