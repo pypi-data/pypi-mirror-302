@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fasttext_reducer"
+version = "0.1.3"
+authors = [
+  { name="Ramtin Yazdanian", email="ramtin.yazdanian@epfl.ch" }
+]
+description = "Lightweight package that allows for downloading fasttext models to any location and reducing their dimensions through a one-liner."
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+  "fasttext-wheel"
+]
+
+[project.scripts]
+fasttext-reduce = "fasttext_reducer.reduce_fasttext_models:_main"
+
+[project.urls]
+"Homepage" = "https://github.com/RamtinYazdanian/fasttext-reducer"
+"Bug Tracker" = "https://github.com/RamtinYazdanian/fasttext-reducer/issues"
