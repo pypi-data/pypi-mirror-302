@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vnumpy"
+authors = [
+  { name="yourkg", email="mail@yourkg.com" },
+]
+description = "vnumpy : vision numpy arrays"
+version = "0.1.6"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = ["numpy>=1.22"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/yourkg/vnumpy"
+Issues = "https://github.com/yourkg/vnumpy/issues"
+
+[tool.setuptools]
+package-data = { "vnumpy" = ["v_dll/*.dll"] }

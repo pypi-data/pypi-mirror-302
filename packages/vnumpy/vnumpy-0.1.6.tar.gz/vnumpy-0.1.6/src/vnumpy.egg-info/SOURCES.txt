@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+src/vnumpy/__init__.py
+src/vnumpy/v3d.py
+src/vnumpy.egg-info/PKG-INFO
+src/vnumpy.egg-info/SOURCES.txt
+src/vnumpy.egg-info/dependency_links.txt
+src/vnumpy.egg-info/requires.txt
+src/vnumpy.egg-info/top_level.txt
+src/vnumpy/v_dll/v.dll
