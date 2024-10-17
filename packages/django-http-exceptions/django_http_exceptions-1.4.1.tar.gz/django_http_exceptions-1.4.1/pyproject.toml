@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "django_http_exceptions"
+version = "1.4.1"
+description = "Django raisable HTTP exceptions"
+readme = "README.md"
+license = {text = "MIT LICENSE"}
+authors = [
+  {name = "isik-kaplan", email = "isik.kaplan.social@outlook.com"}
+]
+requires-python = ">=3.5"
+dependencies = [
+  "django>=2.0"
+]
+
+classifiers = [
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Framework :: Django",
+  "Development Status :: 5 - Production/Stable"
+]
+
+[project.urls]
+Homepage = "https://github.com/isik-kaplan/django_http_exceptions"
