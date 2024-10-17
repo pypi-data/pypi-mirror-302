@@ -1,0 +1,174 @@
+Metadata-Version: 2.1
+Name: ToBaCco_Modified
+Version: 3.1.2
+Summary: Topological MOF generator by molecular block alignment.
+Home-page: https://github.com/ovillegasb/tobacco
+Author: Orlando Villegas
+Author-email: ovillegas.bello0317@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: ase==3.23.0
+Requires-Dist: certifi==2024.8.30
+Requires-Dist: cffi==1.17.1
+Requires-Dist: charset-normalizer==3.4.0
+Requires-Dist: contourpy==1.3.0
+Requires-Dist: cryptography==43.0.1
+Requires-Dist: cycler==0.12.1
+Requires-Dist: docutils==0.21.2
+Requires-Dist: fonttools==4.54.1
+Requires-Dist: idna==3.10
+Requires-Dist: importlib_metadata==8.5.0
+Requires-Dist: jaraco.classes==3.4.0
+Requires-Dist: jaraco.context==6.0.1
+Requires-Dist: jaraco.functools==4.1.0
+Requires-Dist: jeepney==0.8.0
+Requires-Dist: joblib==1.4.2
+Requires-Dist: keyring==25.4.1
+Requires-Dist: kiwisolver==1.4.7
+Requires-Dist: latexcodec==3.0.0
+Requires-Dist: markdown-it-py==3.0.0
+Requires-Dist: matplotlib==3.9.2
+Requires-Dist: mdurl==0.1.2
+Requires-Dist: monty==2024.7.30
+Requires-Dist: more-itertools==10.5.0
+Requires-Dist: mpmath==1.3.0
+Requires-Dist: networkx==3.4.1
+Requires-Dist: nh3==0.2.18
+Requires-Dist: numpy==2.1.2
+Requires-Dist: packaging==24.1
+Requires-Dist: palettable==3.3.3
+Requires-Dist: pandas==2.2.3
+Requires-Dist: pillow==10.4.0
+Requires-Dist: pkginfo==1.10.0
+Requires-Dist: plotly==5.24.1
+Requires-Dist: pybtex==0.24.0
+Requires-Dist: pycparser==2.22
+Requires-Dist: Pygments==2.18.0
+Requires-Dist: pymatgen==2024.10.3
+Requires-Dist: pyparsing==3.2.0
+Requires-Dist: python-dateutil==2.9.0.post0
+Requires-Dist: pytz==2024.2
+Requires-Dist: PyYAML==6.0.2
+Requires-Dist: readme_renderer==44.0
+Requires-Dist: requests==2.32.3
+Requires-Dist: requests-toolbelt==1.0.0
+Requires-Dist: rfc3986==2.0.0
+Requires-Dist: rich==13.9.2
+Requires-Dist: ruamel.yaml==0.18.6
+Requires-Dist: ruamel.yaml.clib==0.2.8
+Requires-Dist: scipy==1.14.1
+Requires-Dist: SecretStorage==3.3.3
+Requires-Dist: setuptools==75.1.0
+Requires-Dist: six==1.16.0
+Requires-Dist: spglib==2.5.0
+Requires-Dist: sympy==1.13.3
+Requires-Dist: tabulate==0.9.0
+Requires-Dist: tenacity==9.0.0
+Requires-Dist: tqdm==4.66.5
+Requires-Dist: twine==5.1.1
+Requires-Dist: tzdata==2024.2
+Requires-Dist: uncertainties==3.2.2
+Requires-Dist: urllib3==2.2.3
+Requires-Dist: wheel==0.44.0
+Requires-Dist: zipp==3.20.2
+
+
+# TOBACCO modified version
+
+*Orlando Villegas* - **2024**
+
+Python module tobacco or Topologically Based Crystal Constructor was developed to rapidly produce molecular representations of porous crystals as crystallographic information (.cif) files, which can then be used for molecular simulation or for materials characterization.
+
+This version has as starting point the tobacco_3.0 (https://github.com/tobacco-mofs/tobacco_3.0) version, I have made different modifications to make it executable from command line.
+
+This version keeps the same license (General Public License v3.0) and is modifiable. What I have done is to adapt it to my PostDoc work and share it with the community.
+
+The main use I gave it was as a topological MOF generator. Topological MOF generator by molecular block alignment (ToMOFGen)
+
+## Installation
+
+You can start from a virtual environment local:
+
+```
+python -m venv .venv --copies --prompt Tobacco
+source .venv/bin/activate
+pip install ToBaCco-Modified
+```
+
+## Pre-use
+
+Show installation information:
+
+```
+pip show tobacco
+```
+
+To check that tobacco is installed correctly you can run:
+
+```
+tobacco -h
+```
+
+Before you can use tobacco you must download the topology database. To do this, execute, this may take a few minutes:
+
+```
+tobacco --get_topols_db
+```
+
+## Example of uses
+
+To generate a cif file where a block is built with the metal in the center with dummy atoms forming the indicated geometry:
+
+    tobacco -m Sc -pg Oh -d 1.0 -o 6X_Sc.cif
+
+
+Show available punctual groups.
+
+    tobacco --show_pgs
+
+
+Generate all available geometries for a metal core:
+
+    tobacco --gen_geometries Sc -d 1.0
+
+
+Convert `.com` file (Gaussian format) to SBU (Secundary Building Unit) ToBaCco, used to create a structure with dummy atoms to be removed (X-->Fr):
+
+    tobacco --build_sbu node -i 4X_C2.com -o 4X_C2.cif
+
+
+Method to generate cif files used for edges, and used to preserve the dummy atom:
+
+    tobacco --build_sbu edge -i 2X_SCN.com -X 1 2 -o 2X_SCN.cif
+
+
+Generate an edge without ligand, X--X. It functions as a connector to more complex topologies.
+
+    tobacco --make_XX_edge
+
+
+Check if the topology exists:
+
+    tobacco --check_top -t pcu
+
+
+To generate MOF using ToBaCco:
+
+    tobacco --make_MOF -t pcu
+
+
+Run using all topologies en Parallel
+
+    tobacco --make_MOF --all_topols --run_parallel
+
+## Remove
+
+For remove tobacco, use:
+
+```
+pip uninstall tobacco
+```
