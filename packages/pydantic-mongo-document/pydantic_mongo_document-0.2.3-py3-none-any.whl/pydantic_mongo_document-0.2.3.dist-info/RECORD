@@ -1,0 +1,15 @@
+pydantic_mongo_document/__init__.py,sha256=gB-EsRpT_mmyW8u8WeWEPVWy5OlbOYidw-E3_w-zxN0,270
+pydantic_mongo_document/config.py,sha256=pTsNLUnswPiJpjKrmVWfYLDG_H4El0udGlubrWDAKLA,468
+pydantic_mongo_document/cursor.py,sha256=iUUCjv_D9oA-9CHpRLcIhxdp5J597ZL1HKkTOW-5_cU,1253
+pydantic_mongo_document/document/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pydantic_mongo_document/document/asyncio.py,sha256=Ydy1gqGpWayByw6zR23u3VPcOL0Ft5pAOWvcrBVuC2I,3142
+pydantic_mongo_document/document/base.py,sha256=B3kh1l3LIk7NBDTdBcj8RU1VFeWQ7gc6DyhdWEN-ta0,5269
+pydantic_mongo_document/document/sync.py,sha256=TqsY9cUExreeJmfQEnsa-5_uxUoHOlc3tpG61kbcFOI,2983
+pydantic_mongo_document/encoder.py,sha256=sPaASDXyUJ787IKPWSPrgRlaftySK37qRYMsyedmIuA,1478
+pydantic_mongo_document/exceptions.py,sha256=oW3wKMZbjJyOoAy9cBErhtkZPArZvjuG4MLl-kmMTa4,168
+pydantic_mongo_document/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pydantic_mongo_document/types.py,sha256=QO8POojKrzFxOOthxpf4v__tx3dC9dIWBa0s2s6Uw14,292
+pydantic_mongo_document-0.2.3.dist-info/LICENCE,sha256=YzLSPNxPt4pFGP7ZpAha-B2-k2MfhPfJPW5AtzZOz10,1067
+pydantic_mongo_document-0.2.3.dist-info/METADATA,sha256=gXsF-atgVNRi-bTkkFnVddksON3BJm1_0uDJgm4zuLo,2488
+pydantic_mongo_document-0.2.3.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+pydantic_mongo_document-0.2.3.dist-info/RECORD,,
