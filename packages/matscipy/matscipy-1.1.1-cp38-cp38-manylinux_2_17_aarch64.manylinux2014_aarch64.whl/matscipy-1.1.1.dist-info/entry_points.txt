@@ -1,0 +1,11 @@
+[console_scripts]
+matscipy-rms = matscipy.cli.diffusion.rms:main
+matscipy-quench = matscipy.cli.glasses.quench:main
+matscipy-continuous2discrete = matscipy.cli.electrochemistry.continuous2discrete:main
+matscipy-poisson-nernst-planck = matscipy.cli.electrochemistry.poisson_nernst_planck_solver:main
+matscipy-stericify = matscipy.cli.electrochemistry.stericify:main
+matscipy-quasistatic-crack = matscipy.cli.fracture_mechanics.quasistatic_crack:main
+matscipy-sinclair-continuation = matscipy.cli.fracture_mechanics.sinclair_continuation:main
+matscipy-sinclair-crack = matscipy.cli.fracture_mechanics.sinclair_crack:main
+matscipy-average-eam-potential = matscipy.cli.calculators.average_eam_potential:main
+
