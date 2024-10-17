@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "Semenar_Task_3"
+version = "1.0.0"
+description = "task_3"
+authors = [{name = "Gleb", email = "glebnikolenko9@gmail.com"}]
+requires-python = ">=3.6"
+dependencies = ["pandas"]
+
+[tool.setuptools]
+py-modules = ["main"]
+
+
