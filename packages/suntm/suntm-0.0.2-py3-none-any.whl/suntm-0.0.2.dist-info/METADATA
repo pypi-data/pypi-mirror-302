@@ -1,0 +1,23 @@
+Metadata-Version: 2.3
+Name: suntm
+Version: 0.0.2
+Summary: A Python package for the SUN topic model
+Project-URL: Homepage, https://github.com/tillrs/suntopicmodel
+Project-URL: Issues, https://github.com/tillrs/suntopicmodel/issues
+Author-email: Till Raphael Saenger <till.saenger@gmail.com>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Requires-Dist: cvxpy>=1.2.0
+Requires-Dist: joblib>=1.4.2
+Requires-Dist: matplotlib>=3.3.0
+Requires-Dist: numpy>=1.19.0
+Requires-Dist: scikit-learn>=1.1.0
+Requires-Dist: tqdm>=4.1.0
+Provides-Extra: test
+Requires-Dist: ipykernel>=6.29.5; extra == 'test'
+Requires-Dist: pytest-cov>=2.9.0; extra == 'test'
+Requires-Dist: pytest>=8.3.3; extra == 'test'
+Requires-Dist: statsmodels>=0.14.2; extra == 'test'
