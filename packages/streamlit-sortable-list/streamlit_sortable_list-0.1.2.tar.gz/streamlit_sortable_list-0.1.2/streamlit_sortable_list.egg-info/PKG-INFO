@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: streamlit-sortable-list
+Version: 0.1.2
+Summary: Streamlit component to sort a list based on provided input.
+Home-page: https://github.com/renshou753/streamlit-sortable-list
+Author: tonyli
+Author-email: renshou753@gmail.com
+Requires-Python: >=3.6
+Description-Content-Type: text/plain
+License-File: LICENSE
+Requires-Dist: streamlit>=0.63
+
+A Streamlit component to sort a list, for more information please check https://github.com/renshou753/streamlit-sortable-list
