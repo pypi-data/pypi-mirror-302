@@ -1,0 +1,9 @@
+numpy
+opencv-python
+mediapipe
+scipy
+pyrealsense2
+pyspacemouse
+pynput
+matplotlib
+gym
