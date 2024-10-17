@@ -1,0 +1,8 @@
+llm_static_assert/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+llm_static_assert/llm_static_assert.py,sha256=e0DG_MeIyYk7TrhD8P2kUfvzQyqXcHL4l0MYoWQzfCo,5494
+llm_static_assert/llm_static_assert_options.py,sha256=RiD-6KasKE06ExNfZX-o1IqZh0SlZZNuz7hgNPeZBBM,1004
+llm_static_assert/prompts.py,sha256=lpcRLlzoV4lIZyD2hW2jFYwSr1E4oqXyVkzKsgwTnfc,1587
+llm_static_assert-0.1.0.dist-info/LICENSE,sha256=Auzd7JfAIMjBp-s3Kt0V13JdR-3kkeDaZzzXR-UEEZ0,1072
+llm_static_assert-0.1.0.dist-info/METADATA,sha256=QPG2cmeduu1LOkgPIo_aCY7L0z1xRRLogCzVBlWEjpY,5197
+llm_static_assert-0.1.0.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+llm_static_assert-0.1.0.dist-info/RECORD,,
