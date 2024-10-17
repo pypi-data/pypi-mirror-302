@@ -1,0 +1,17 @@
+[project]
+name = "uncoupled"
+version = "0.1.0"
+description = "Modern Dependency Injection Container for Python 3.12+"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = []
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv]
+dev-dependencies = [
+    "pytest>=8.3.3",
+    "ruff>=0.6.9",
+]
