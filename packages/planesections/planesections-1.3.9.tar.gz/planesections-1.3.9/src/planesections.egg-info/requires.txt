@@ -1,0 +1,7 @@
+numpy
+matplotlib
+PyniteFEA==0.0.96
+textalloc==0.0.10
+
+[opensees]
+openseespy
