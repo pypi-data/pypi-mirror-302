@@ -1,0 +1,6 @@
+setup.py
+cometSrv.egg-info/PKG-INFO
+cometSrv.egg-info/SOURCES.txt
+cometSrv.egg-info/dependency_links.txt
+cometSrv.egg-info/requires.txt
+cometSrv.egg-info/top_level.txt
