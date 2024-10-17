@@ -1,0 +1,9 @@
+README.md
+order_management.py
+pyproject.toml
+user_management.py
+Online_magazin52.egg-info/PKG-INFO
+Online_magazin52.egg-info/SOURCES.txt
+Online_magazin52.egg-info/dependency_links.txt
+Online_magazin52.egg-info/requires.txt
+Online_magazin52.egg-info/top_level.txt
