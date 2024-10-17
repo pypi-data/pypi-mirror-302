@@ -1,0 +1,2 @@
+[console_scripts]
+pulserver = pulserver._cli:cli
