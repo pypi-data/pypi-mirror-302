@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: api_emissions_tracker
+Version: 0.0.7
+Summary: Estimates emissions linked to AI cloud services.
+Home-page: https://github.com/borisruf/api_emissions_tracker
+Author: Boris Ruf
+License-File: LICENSE
+Requires-Dist: wrapt
+
+A Python library that estimates the carbon emissions linked to cloud-based API services, such as AI cloud services, for demonstration purposes.
