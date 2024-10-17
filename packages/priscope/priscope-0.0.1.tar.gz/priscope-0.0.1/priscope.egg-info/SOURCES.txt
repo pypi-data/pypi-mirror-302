@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+priscope.egg-info/PKG-INFO
+priscope.egg-info/SOURCES.txt
+priscope.egg-info/dependency_links.txt
+priscope.egg-info/top_level.txt
