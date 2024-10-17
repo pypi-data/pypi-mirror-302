@@ -1,0 +1,53 @@
+---
+name: CI
+on:
+  pull_request:
+  workflow_dispatch:
+  workflow_call:
+
+jobs:
+  CI:
+    name: Continuous Integration
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.9", "3.10", "3.11", "3.12"]
+    continue-on-error: false
+    timeout-minutes: 5
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install --upgrade flake8
+
+      - name: Report versions
+        run: |
+          python --version
+          pip --version
+          flake8 --version
+
+      - name: Build and install lppn
+        run: |
+          pip install .
+          
+      - name: lppn version
+        run: |
+          lppn --version
+
+      - name: Style guide enforcement
+        run: |
+          flake8 --verbose src tests
+
+      - name: Unit tests
+        run: |
+          python -m unittest --verbose
