@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+cbase64.egg-info/PKG-INFO
+cbase64.egg-info/SOURCES.txt
+cbase64.egg-info/dependency_links.txt
+cbase64.egg-info/requires.txt
+cbase64.egg-info/top_level.txt
+src/base64c/__init__.py
+src/base64c/base64c.c
+src/base64c/base64c.pyi
+tests/test_base64c.py
