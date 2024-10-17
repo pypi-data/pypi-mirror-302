@@ -1,0 +1,2 @@
+# Include all .pyi files recursively in the package
+recursive-include imessage_github_relay *.pyi

@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "imessage-github-relay"
+version = "0.1.1"
+description = "iMessage send-refresh-recieve messages OS independently through a GitHub Actions Relay."
+requires-python = ">=3.8"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+keywords = ['d33p0st', 'iMessage', 'relay', 'github', 'python']
+readme = {file = "README.md", content-type = "text/markdown"}
+license = { file = "LICENSE" }
+authors = [
+    {name = "Soumyo Deep Gupta", email = "deep.main.ac@gmail.com"}
+]
+maintainers = [
+    {name = "Soumyo Deep Gupta", email = "deep.main.ac@gmail.com"}
+]
+dependencies = ["toml", "colorama", "requests"]
+
+[tool.setuptools]
+packages = { find = {} }
+
+[project.urls]
+GitHub = 'https://github.com/d33p0st/iMessage-github-relay'
+Issues = 'https://github.com/d33p0st/iMessage-github-relay/issues'
+"Pull Requests" = 'https://github.com/d33p0st/iMessage-github-relay/pulls'
