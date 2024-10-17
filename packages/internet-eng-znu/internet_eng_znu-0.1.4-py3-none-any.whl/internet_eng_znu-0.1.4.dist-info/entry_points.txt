@@ -1,0 +1,3 @@
+[console_scripts]
+internet-eng-znu = internet_eng_znu.main:app
+
