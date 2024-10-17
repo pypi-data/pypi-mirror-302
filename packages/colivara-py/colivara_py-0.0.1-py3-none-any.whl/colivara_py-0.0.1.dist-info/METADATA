@@ -1,0 +1,56 @@
+Metadata-Version: 2.1
+Name: colivara-py
+Version: 0.0.1
+Summary: The official Python SDK for the ColiVara API
+Author: tjmlabs
+License: Apache-2.0
+Project-URL: Homepage, https://github.com/tjmlabs/colivara-py
+Project-URL: Changelog, https://github.com/tjmlabs/colivara-py/releases
+Project-URL: Issues, https://github.com/tjmlabs/colivara-py/issues
+Project-URL: CI, https://github.com/tjmlabs/colivara-py/actions
+Classifier: License :: OSI Approved :: Apache Software License
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: httpx ==0.27.2
+Requires-Dist: pydantic ==2.9.2
+Requires-Dist: requests ==2.32.3
+
+# colivara-py
+
+[![PyPI](https://img.shields.io/pypi/v/colivara-py.svg)](https://pypi.org/project/colivara-py/)
+[![Tests](https://github.com/tjmlabs/colivara-py/actions/workflows/test.yml/badge.svg)](https://github.com/tjmlabs/colivara-py/actions/workflows/test.yml)
+[![Changelog](https://img.shields.io/github/v/release/tjmlabs/colivara-py?include_prereleases&label=changelog)](https://github.com/tjmlabs/colivara-py/releases)
+[![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/tjmlabs/colivara-py/blob/main/LICENSE)
+
+The official Python SDK for the ColiVara API
+
+## Installation
+
+Install this library using `pip`:
+```bash
+pip install colivara-py
+```
+## Usage
+
+Usage instructions go here.
+
+## Development
+
+To contribute to this library, first checkout the code. Then create a new virtual environment:
+
+We use uv, but you can use the pip interface if you prefer:
+
+```bash
+cd colivara-py
+uv .venv
+source .venv/bin/activate
+```
+Now install the dependencies and test dependencies:
+```bash
+uv sync --extra dev-dependencies
+```
+To run the tests:
+```bash
+pytest
+```
