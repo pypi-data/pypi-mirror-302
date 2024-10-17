@@ -1,0 +1,3 @@
+[console_scripts]
+ggghhhrrr = ggghhhrrr.__init__:notify
+
