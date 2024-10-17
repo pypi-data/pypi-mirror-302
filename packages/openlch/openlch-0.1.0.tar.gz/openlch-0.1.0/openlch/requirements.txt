@@ -1,0 +1,9 @@
+# requirements.txt
+
+# For communicating with the board.
+websockets
+pydantic
+grpcio
+
+# For the CLI.
+click

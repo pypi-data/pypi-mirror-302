@@ -1,0 +1,12 @@
+websockets
+pydantic
+grpcio
+click
+
+[dev]
+black
+darglint
+mypy
+pytest
+ruff
+grpcio-tools
