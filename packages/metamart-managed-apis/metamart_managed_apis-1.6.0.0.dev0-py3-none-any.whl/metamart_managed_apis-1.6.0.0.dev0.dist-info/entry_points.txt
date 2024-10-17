@@ -1,0 +1,2 @@
+[airflow.plugins]
+metamart_managed_apis = metamart_managed_apis.plugin:RestApiPlugin
