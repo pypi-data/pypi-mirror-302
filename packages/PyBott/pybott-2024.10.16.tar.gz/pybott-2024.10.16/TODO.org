@@ -1,0 +1,23 @@
+** DONE Integrate bott index
+CLOSED: [2024-09-18 Wed 21:33]
+** DONE Integrate example on Haldane model and unit tests
+CLOSED: [2024-09-18 Wed 21:33]
+** DONE Integrate example of photonic and unit tests
+CLOSED: [2024-09-18 Wed 21:33]
+** DONE Integrate the spin bott index
+CLOSED: [2024-09-18 Wed 23:49]
+** TODO Integrate example on Kane-Mele model and unit tests
+** TODO Fix coherence energy <-> frequencies
+** TODO Integrate example on kekule model and unit tests
+** TODO Function phase diagram te/tp
+** TODO Integrate vector left treatment
+** TODO Localizer index
+** TODO Spin chern number
+** TODO Write tutorial
+*** Bott on Haldane
+*** Bott on photonic
+*** all_bott
+*** Spin Bott on Kane-Mele
+*** Part on pbc
+*** Explain limitations
+
