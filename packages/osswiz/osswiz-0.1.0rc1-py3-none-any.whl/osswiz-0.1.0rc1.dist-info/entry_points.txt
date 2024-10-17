@@ -1,0 +1,8 @@
+[console_scripts]
+osswiz = repo_review.__main__:main
+
+[repo_review.checks]
+osswiz = osswiz.checks:repo_review_checks
+
+[repo_review.fixtures]
+license_files = osswiz.checks.fixtures:license_files

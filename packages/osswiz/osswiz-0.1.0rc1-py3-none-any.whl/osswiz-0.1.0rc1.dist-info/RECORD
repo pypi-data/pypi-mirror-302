@@ -1,0 +1,12 @@
+osswiz/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+osswiz/_version.py,sha256=_Gv0rTnIEeMON52pnf2UpACvc354vQ3O--7t_b-_2aM,414
+osswiz/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+osswiz/util.py,sha256=hr5pLdRYG93ygslAV3k7UYzcS6AxKwhMuM0t-tNXiGQ,2374
+osswiz/checks/__init__.py,sha256=XV-HSfl81fVQoyB36zplUW07aEQXaJ_8MHt6WZLpR2o,560
+osswiz/checks/fixtures.py,sha256=EQyhiRQSveILw0Axmw2rvH9mpowAzt58h3JXHG__r_0,265
+osswiz/checks/licenses.py,sha256=lwr-O9aeYNnrPBG3pPnw97c0x4Hsl4uvZleMmyA79c8,4221
+osswiz-0.1.0rc1.dist-info/METADATA,sha256=7zAkmcsEymuxMvGYAtLkCdYi7LaYsKgBbRGP2NbOKKE,1530
+osswiz-0.1.0rc1.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+osswiz-0.1.0rc1.dist-info/entry_points.txt,sha256=eSGzOjzB2bPAUZrdvqXA6p__79KThc_rgKYPB9oVD0Q,194
+osswiz-0.1.0rc1.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+osswiz-0.1.0rc1.dist-info/RECORD,,
