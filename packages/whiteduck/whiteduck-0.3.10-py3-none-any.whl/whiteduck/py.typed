@@ -1,0 +1,7 @@
+whiteduck/
+├── config/
+├── core/
+├── exceptions/
+├── serializers/
+├── utils/
+└── py.typed
