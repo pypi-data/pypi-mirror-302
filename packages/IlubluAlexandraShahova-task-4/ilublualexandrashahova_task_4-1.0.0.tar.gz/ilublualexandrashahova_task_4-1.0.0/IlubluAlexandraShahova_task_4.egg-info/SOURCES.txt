@@ -1,0 +1,7 @@
+README.md
+main.py
+pyproject.toml
+IlubluAlexandraShahova_task_4.egg-info/PKG-INFO
+IlubluAlexandraShahova_task_4.egg-info/SOURCES.txt
+IlubluAlexandraShahova_task_4.egg-info/dependency_links.txt
+IlubluAlexandraShahova_task_4.egg-info/top_level.txt
