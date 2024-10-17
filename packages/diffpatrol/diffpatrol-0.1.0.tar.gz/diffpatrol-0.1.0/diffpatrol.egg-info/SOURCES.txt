@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+diffpatrol.egg-info/PKG-INFO
+diffpatrol.egg-info/SOURCES.txt
+diffpatrol.egg-info/dependency_links.txt
+diffpatrol.egg-info/entry_points.txt
+diffpatrol.egg-info/top_level.txt
