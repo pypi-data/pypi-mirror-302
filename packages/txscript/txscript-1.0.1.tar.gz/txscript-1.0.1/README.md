@@ -1,0 +1,73 @@
+# Rossum Transaction Scripts
+
+The Rossum platform for automating document-based business transactions can
+evaluate snippets of Python code that can manipulate such transactions:
+Transaction Scripts (or TxScripts).  The principal use of these TxScript
+snippets is to automatically fill in computed values of formula type fields.
+The code can be also evaluated in serverless function based extensions.
+
+This is a user-friendly Python "extended runtime" that allows for code snippets
+in the Rossum platform (formula fields or serverless functions) that are very
+short, easy to read and follow, and easy to write (possibly in a recipe-like
+way for non-programmers).
+
+See `https://elis.rossum.ai/api/docs/#rossum-transaction-scripts`
+for reference documentation.
+
+## How it looks like in practice
+
+Various examples are part of the test suite.
+
+You can execute the runtime locally on a sample annotation by running
+the `standalone.py` script.
+
+## Python 3.8
+
+Note that the module code must be compatible with Python 3.8, since that's
+the serverless runtime. This mainly means that `| None` and `type[...]`
+constructs are not available.
+
+## Benchmarking
+
+```
+curl -H "Authorization: Bearer ..." -H "Content-Type: application/json" "https://us.api.rossum.ai/v1/annotations/5565949/content" >examples/standalone/annotation-5565949.json
+curl -H "Authorization: Bearer ..." -H "Content-Type: application/json" https://us.api.rossum.ai/v1/schemas/1488014 >examples/standalone/schema-1488014.json
+time ./benchmark.py examples/standalone/annotation-5565949.json examples/standalone/schema-1448014.json
+```
+
+## Fields data model
+
+We have three levels of data:
+* `attrs` stored in `FlatData._content` dict indexed by `schema_id`.
+* `Field` (and descendants) instances that provide a typed interface
+  to attrs as well as the logic to work with complex data types and
+  generating values and tracking updates.
+* `FieldValueBase` (and descendants) instances that provide the
+  user-facing interface to Field objects and emulate native Python
+  types backed ultimately by attrs content.
+
+User changes are tracked as such:
+* When changing datapoints, the datapoint is added to the `Fields._updates`
+  backlog, together with the information about which attributes changed.
+  The datapoint itself (that's also stored in the `Fields._content` dict)
+  is updated with the new value. Removed datapoints are removed from
+  `all_objects`.
+* Newly added datapoints can be identified by the missing `id` attribute.
+
+## Publishing updates to PyPI
+
+In the txscript package root directory, run:
+
+```
+pip install build twine
+python3 -m build
+```
+
+Next, inspect the `dist/txscript*.tar.gz` tarball of source distribution
+to make sure it looks sane and doesn't contain any surprising extra files.
+
+Finally, run:
+
+```
+python3 -m twine upload dist/*
+```
