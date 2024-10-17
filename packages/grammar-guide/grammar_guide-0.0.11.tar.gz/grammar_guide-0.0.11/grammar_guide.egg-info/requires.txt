@@ -1,0 +1,7 @@
+guidance>=0.1.16
+numpy<2
+exrex
+lark
+colorama
+pygtrie
+ipython
