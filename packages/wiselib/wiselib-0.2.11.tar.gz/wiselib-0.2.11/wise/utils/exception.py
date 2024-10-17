@@ -1,0 +1,51 @@
+import logging
+from rest_framework.views import exception_handler
+from rest_framework import status
+from rest_framework.response import Response
+from requests.exceptions import RequestException
+
+logger = logging.getLogger(__name__)
+
+RETURN_TO_USER = "__return_to_user"
+
+
+class NotLockedError(Exception):
+    pass
+
+
+class UserErrorResponse(Response):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        user_error_response(self)
+
+
+def wise_exception_handler(exc, context):
+    if isinstance(exc, RequestException):
+        try:
+            data = exc.response.json()
+            if data.get(RETURN_TO_USER):
+                return Response(data, status=exc.response.status_code)
+        except Exception as e:
+            logger.error(f"Request exception parsing error: {e=}, {exc.response=}.")
+
+        logger.exception(
+            f"Request exception: {exc=}, url={exc.response.url}, "
+            f"status={exc.response.status_code}, response={exc.response.text}"
+        )
+        return Response(status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+    # Default behaviour
+    return exception_handler(exc, context)
+
+
+def user_error_response(response: Response) -> Response:
+    data = response.data or {}
+    if isinstance(data, str):
+        data = {"message": data}
+
+    data[RETURN_TO_USER] = True
+    response.data = data
+
+    if response.status_code // 100 not in (4, 5):
+        response.status_code = status.HTTP_400_BAD_REQUEST
+    return response
