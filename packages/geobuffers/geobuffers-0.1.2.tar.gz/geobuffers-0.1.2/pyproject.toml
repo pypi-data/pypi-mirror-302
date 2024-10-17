@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "geobuffers"
+version = "0.1.2"
+authors = [
+  { name="Mikolaj Czerkawski", email="mczerkawski96@gmail.com" },
+]
+description = "geobuffers - a minipackage for computing areas around points"
+readme = "README.md"
+requires-python = ">=3"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "shapely",
+    "pyproj"
+]
+
+[project.urls]
+Homepage = "https://github.com/mikonvergence/geobuffers"
+Issues = "https://github.com/mikonvergence/geobuffers/issues"
