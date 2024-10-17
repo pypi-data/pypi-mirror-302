@@ -1,0 +1,3 @@
+[console_scripts]
+generate-cert = octotail.main:generate_cert
+octotail = octotail.main:_main
