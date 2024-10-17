@@ -1,0 +1,6 @@
+README.md
+setup.py
+codeine.egg-info/PKG-INFO
+codeine.egg-info/SOURCES.txt
+codeine.egg-info/dependency_links.txt
+codeine.egg-info/top_level.txt
