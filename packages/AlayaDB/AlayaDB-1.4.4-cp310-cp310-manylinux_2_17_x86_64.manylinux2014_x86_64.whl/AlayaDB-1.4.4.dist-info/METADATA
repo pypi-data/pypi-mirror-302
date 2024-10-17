@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: AlayaDB
+Version: 1.4.4
+Author: DBGroup@SUSTech
+Requires-Python: >=3.8
+License-File: LICENSE
+Requires-Dist: tqdm
+Requires-Dist: numpy==1.24.2
+Requires-Dist: h5py==3.8.0
+
