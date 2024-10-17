@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: evalscope-perf
+Version: 0.1.2
+Summary: 大模型性能压测可视化
+Home-page: http://www.wangjunjian.com
+Author: Junjian Wang
+Author-email: vwarship@163.com
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: typer
+Requires-Dist: pandas
+Requires-Dist: matplotlib
+
+file: README.md
