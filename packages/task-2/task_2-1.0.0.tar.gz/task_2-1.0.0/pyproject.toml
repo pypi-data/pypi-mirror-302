@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "task_2"
+version = "1.0.0"
+description = "task_2"
+authors = [{name = "Gleb", email = "glebnikolenko9@gmail.com"}]
+requires-python = ">=3.6"
+dependencies = ["pandas"]
+
+[tool.setuptools]
+py-modules = ["main"]
+
+
+
+
