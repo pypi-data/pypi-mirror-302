@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: vector-sdk
+Version: 0.0.1
+Summary: Universal SDK for Vector DBs
+Author: Dhruv Anand
+Author-email: dhruv.anand@ainorthstartech.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
