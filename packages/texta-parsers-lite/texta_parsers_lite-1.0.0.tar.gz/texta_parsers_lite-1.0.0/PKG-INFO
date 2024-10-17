@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: texta-parsers-lite
+Version: 1.0.0
+Summary: texta-parsers-lite
+Author: TEXTA
+Author-email: info@texta.ee
+License: GPLv3
+Description-Content-Type: text/markdown
+Requires-Dist: tika
+Requires-Dist: texta-tools
+
+# TEXTA Parsers Lite
