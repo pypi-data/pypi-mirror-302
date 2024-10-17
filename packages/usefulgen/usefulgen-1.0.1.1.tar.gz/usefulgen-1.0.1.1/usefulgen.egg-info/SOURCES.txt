@@ -1,0 +1,10 @@
+README.md
+setup.py
+usefulgen/__init__.py
+usefulgen.egg-info/PKG-INFO
+usefulgen.egg-info/SOURCES.txt
+usefulgen.egg-info/dependency_links.txt
+usefulgen.egg-info/requires.txt
+usefulgen.egg-info/top_level.txt
+usefulgen/modules/__init__.py
+usefulgen/modules/basic.py
