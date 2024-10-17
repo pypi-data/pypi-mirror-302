@@ -1,0 +1,6 @@
+setup.py
+wisedb/__init__.py
+wisedb.egg-info/PKG-INFO
+wisedb.egg-info/SOURCES.txt
+wisedb.egg-info/dependency_links.txt
+wisedb.egg-info/top_level.txt
