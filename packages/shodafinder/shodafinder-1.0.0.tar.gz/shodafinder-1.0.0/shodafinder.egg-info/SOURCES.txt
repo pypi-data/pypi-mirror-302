@@ -1,0 +1,8 @@
+LICENSE
+README.md
+get_favicon_hash.py
+pyproject.toml
+shodafinder.egg-info/PKG-INFO
+shodafinder.egg-info/SOURCES.txt
+shodafinder.egg-info/dependency_links.txt
+shodafinder.egg-info/top_level.txt
