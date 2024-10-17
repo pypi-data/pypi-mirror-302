@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: aws-json-term-matcher
+Version: 0.1.1
+Summary: A Python library for advanced filtering and matching of AWS JSON logs, designed to simplify log parsing and enhance filtering capabilities.
+Author-email: Cristopher Pinzon <cristopher.pinzon@localstack.cloud>
+Project-URL: Repository, https://github.com/pinzon/aws-json-term-matcher.git
+Requires-Python: >=3.8
+Requires-Dist: lark
+Provides-Extra: dev
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: ruff ; extra == 'dev'
+Requires-Dist: black ; extra == 'dev'
+Provides-Extra: test
+Requires-Dist: pytest ; extra == 'test'
+
