@@ -1,0 +1,10 @@
+al360_nlp_feature_extractors/__init__.py,sha256=GhC-GdoO4YshDX0DvwijwjA1WhcrtXnNFoz91XvYBcY,64
+al360_nlp_feature_extractors/attribute_extractors.py,sha256=w8gkrE8nyQVvjNr0Z4XTyI36-fCsQYKAIFmzIzJyNIE,5137
+al360_nlp_feature_extractors/data/__init__.py,sha256=GhC-GdoO4YshDX0DvwijwjA1WhcrtXnNFoz91XvYBcY,64
+al360_nlp_feature_extractors/data/female-words.txt,sha256=V1U-OX5z3oiy9zoLeM7orl1kuIUvd-9g9Dsi9A_sLUc,22
+al360_nlp_feature_extractors/data/male-words.txt,sha256=9FP_MXz2hWyD8-bexf4ovXHf_p3hgS3U_zISW7FNVVc,20
+al360_nlp_feature_extractors/data/neutral-words.txt,sha256=-Se2tFRVAU5ZecoCs1qz4xWODqq3rCg-Xai--qxLGiU,28
+al360_nlp_feature_extractors-0.1.0.dist-info/METADATA,sha256=_GvaEpV5CmBrUBRUgS8QCzuhqDC5pMR-0EJkVj8f_ZI,1256
+al360_nlp_feature_extractors-0.1.0.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+al360_nlp_feature_extractors-0.1.0.dist-info/top_level.txt,sha256=2cKpbXwSCOFcevc7h9jInJXTPdLYB-6_LwG6n-RgXZI,29
+al360_nlp_feature_extractors-0.1.0.dist-info/RECORD,,
