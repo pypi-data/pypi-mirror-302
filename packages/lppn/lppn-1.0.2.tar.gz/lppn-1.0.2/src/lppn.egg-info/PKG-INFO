@@ -1,0 +1,82 @@
+Metadata-Version: 2.1
+Name: lppn
+Version: 1.0.2
+Summary: Print the latest Python patch number of a given major and minor version
+Author-email: President Not Sure <144360653+president-not-sure@users.noreply.github.com>
+License: MIT License
+        
+        Copyright (c) 2024 president-not-sure
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Project-URL: Homepage, https://github.com/president-not-sure/lppn
+Project-URL: Repository, https://github.com/president-not-sure/lppn.git
+Project-URL: Issues, https://github.com/president-not-sure/lppn/issues
+Keywords: get,latest,python,patch,version
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests>=2.32.3
+Provides-Extra: dev
+
+# lppn
+| master | dev |
+| :----: | :-: |
+| [![CI](https://github.com/president-not-sure/lppn/actions/workflows/CI.yaml/badge.svg?branch=master)](https://github.com/president-not-sure/lppn/actions/workflows/CD.yaml) | [![CI](https://github.com/president-not-sure/lppn/actions/workflows/CI.yaml/badge.svg?branch=dev)](https://github.com/president-not-sure/lppn/actions/workflows/CD.yaml) |
+
+lppn, or Latest Python Patch Number, parses the Python FTP download page for the latest Python patch number of a given major and minor version. It can be used as a cli command or imported as a library. This was developped as a way to atomate the download the most recent python of an older but still supported version.
+
+## Install
+```shell
+python3 -m venv venv
+. venv/bin/activate
+pip install lppn
+```
+
+## Usage (python)
+```python
+import lppn
+
+major = 3
+minor = 12
+patch = lppn.get(major, minor)
+
+print(f"{major}.{minor}.{patch}")
+```
+
+## Usage (cli)
+```shell
+$ lppn -h
+usage: lppn [-h] [-v] [-f] [-g MAJOR MINOR]
+
+Print the latest Python patch number of a given major and minor version
+
+options:
+  -h, --help            show this help message and exit
+  -v, --version         Print lppn version
+  -f, --full-version    Print full python version
+  -g MAJOR MINOR, --get MAJOR MINOR
+                        Major and minor python version e.g. 3 12
+```
+
