@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: xphn_discord_components
+Version: 1.1
+Summary: Fork of discord_components, an unofficial library for discord components.
+Home-page: https://debxylen.github.io/discord_components/
+Author: Xylen
+Author-email: priyanshudeb3@gmail.com
+License: MIT License
+Keywords: python,discord,discord.py,discord-components
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Internet
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Utilities
+Requires-Python: >=3.6
+License-File: LICENSE
+Requires-Dist: discord.py
+Requires-Dist: aiohttp
+
+Original Author: kiki7000 (devkiki7000@gmail.com)
+- Fixed requirement-related errors during installation with pip.
+- More functionality and features added.
+- Improvements and updates will be released.
