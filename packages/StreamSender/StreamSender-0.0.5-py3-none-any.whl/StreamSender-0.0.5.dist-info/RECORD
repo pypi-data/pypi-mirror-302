@@ -1,0 +1,7 @@
+streamers/__init__.py,sha256=wR9qFbq1H3s66n60Xl6nEoizysdmCz342FQEM3kjKPI,69
+streamers/rtmp_sender.py,sha256=QZh_x1QU7v5w4kGkXfRTDkz4AH7gN5wNjbrtd3K8W8s,16758
+streamers/rtp_sender.py,sha256=CB4XulTVAB-hayZL0aZKr_9yesfcINCsNhFRI2QnNC0,19014
+StreamSender-0.0.5.dist-info/METADATA,sha256=NMjgfGXl1Gv087odnr4UIh7gz-uFsV8XUdO9vHz15x4,3516
+StreamSender-0.0.5.dist-info/WHEEL,sha256=Z4pYXqR_rTB7OWNDYFOm1qRk0RX6GFP2o8LgvP453Hk,91
+StreamSender-0.0.5.dist-info/top_level.txt,sha256=4w7mZbhgnQaGaa-GY-klBqnzFObAyTH4MrsBJ3dU75o,10
+StreamSender-0.0.5.dist-info/RECORD,,
