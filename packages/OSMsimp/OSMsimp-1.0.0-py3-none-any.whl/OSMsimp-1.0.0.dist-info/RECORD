@@ -1,0 +1,17 @@
+OSMsimp/__init__.py,sha256=h9Oh4YxMFY17OQyKaBKPkI4Zxe5J-Y0xFtMwTvSUGLg,183
+OSMsimp/extract_OSM.py,sha256=byO5FOiD2dAgb4mPzGHHw0nrQB1xSbdEHaitTjdeMpE,2843
+OSMsimp/main.py,sha256=4jSKVLf5vs8-Yccf1jkKpaylzSUnJ5PNS4dkSTByI0U,724
+OSMsimp/merging_networks.py,sha256=9eDLbGSa3v_uYaG-XwgY0dmXMQIHI5hOHPDhQFGhPvY,6028
+OSMsimp/simplification_A.py,sha256=Se6txOVGJZs7AK1FJy9y6T3LM8KHObuKT6pH5Lm9EEE,6777
+OSMsimp/simplification_B.py,sha256=Hpe4FvpNUw8PN2Uj7fIwPBffCc0AFvpJ6pTVv73uPYE,14084
+netsimp/__init__.py,sha256=h9Oh4YxMFY17OQyKaBKPkI4Zxe5J-Y0xFtMwTvSUGLg,183
+netsimp/extract_OSM.py,sha256=byO5FOiD2dAgb4mPzGHHw0nrQB1xSbdEHaitTjdeMpE,2843
+netsimp/main.py,sha256=4jSKVLf5vs8-Yccf1jkKpaylzSUnJ5PNS4dkSTByI0U,724
+netsimp/merging_networks.py,sha256=9eDLbGSa3v_uYaG-XwgY0dmXMQIHI5hOHPDhQFGhPvY,6028
+netsimp/simplification_A.py,sha256=Se6txOVGJZs7AK1FJy9y6T3LM8KHObuKT6pH5Lm9EEE,6777
+netsimp/simplification_B.py,sha256=Hpe4FvpNUw8PN2Uj7fIwPBffCc0AFvpJ6pTVv73uPYE,14084
+OSMsimp-1.0.0.dist-info/LICENCE,sha256=9_KLjHoa92uYdMptBA6LHrZ2j9EEMQbJ0xUJDqlnVOc,19126
+OSMsimp-1.0.0.dist-info/METADATA,sha256=4z6oygCm4vAsl0q0d1MtoakYqe-14v3I7WN90ZKgYbc,445
+OSMsimp-1.0.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+OSMsimp-1.0.0.dist-info/top_level.txt,sha256=xHE29ylR04pRMzVBgGtlbdOrOsnjSFL_rs5t27vQs1E,8
+OSMsimp-1.0.0.dist-info/RECORD,,
