@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: verificar-cpf
+Version: 0.0.1
+Summary: Verifica se o número do CPF é válido
+Author: Leonardo Diniz
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# verificar_cpf
+
+Description. 
+The package verificar_cpf is used to:
+    Inserir:
+	    - Solicita que usuÃ¡rio digite o CPF.
+    Verificar:
+        - Calcula os dÃ­gitos verificadores.
+        - Compara com os nÃºmeros do CPF informado e retorna se Ã© vÃ¡lido.
+
+## Installation
+
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install verificar_cpf
+
+```bash
+pip install verificar_cpf
+```
+
+## Author
+Leonardo Diniz
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)

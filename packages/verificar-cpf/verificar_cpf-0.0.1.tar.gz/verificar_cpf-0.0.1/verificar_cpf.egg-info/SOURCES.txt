@@ -1,0 +1,8 @@
+README.md
+setup.py
+verficar_cpf/__init__.py
+verficar_cpf/verificar_cpf.py
+verificar_cpf.egg-info/PKG-INFO
+verificar_cpf.egg-info/SOURCES.txt
+verificar_cpf.egg-info/dependency_links.txt
+verificar_cpf.egg-info/top_level.txt
