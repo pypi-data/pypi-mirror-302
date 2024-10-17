@@ -1,0 +1,70 @@
+# ref https://github.com/python-poetry/poetry/blob/main/pyproject.toml
+[tool.poetry]
+name = "bioat"
+version = "0.12.14"
+description = "bioat, a python package & command line toolkit for Bioinformatics and data science!"
+license = "AGPL-3.0-only"
+authors = ["Huanan Herman Zhao <hermanzhaozzzz@gmail.com>"]
+maintainers = ["Huanan Herman Zhao <hermanzhaozzzz@gmail.com>"]
+readme = "README.md"
+documentation = "https://bioat.readthedocs.io/en/latest/"
+repository = "https://github.com/hermanzhaozzzz/bioat"
+homepage = "https://github.com/hermanzhaozzzz/bioat"
+keywords = ["bioat", "python", "data-science", "bioinformatics", "bioinformatics-tool"]
+
+[tool.poetry.dependencies]
+python = ">=3.10.0"
+pandas = ">=1.5"
+numpy = ">=1.24.1"
+tqdm = ">=4.64.1"
+fire = ">=0.5.0"
+biopython = ">=1.80"
+matplotlib = ">=3.7.1"
+tabulate = ">=0.9.0"
+statsmodels = ">=0.13.5"
+requests = ">=2.31.0"
+coloredlogs = ">=15.0.1"
+psutil = ">=5.9.8"
+openpyxl = ">=3.1.2"
+matplotlib-inline = ">=0.1.7"
+scikit-learn = {version = ">=1.0.2", optional = true}
+scipy = {version = ">=1.7.3", optional = true}
+beautifulsoup4 = {version = ">=4.12.3", optional = true}
+playwright = {version = ">=1.19.0", optional = true}
+selenium = {version = ">=4.1.3", optional = true}
+
+[tool.poetry.extras]
+bio = ["pysam", "pybedtools"]
+ai = ["scikit-learn", "scipy"]
+web = ["beautifulsoup4", "playwright", "selenium"]
+
+
+[tool.poetry.group.dev.dependencies]
+toml = ">=0.10.2"
+black = ">=22.3.0"
+isort = ">=5.10.1"
+flake8 = ">=4.0.1"
+
+[tool.poetry.group.typing.dependencies]
+mypy = ">=0.942"
+
+[tool.mypy]
+exclude = "^(tests|build|scripts)/.*$"
+
+
+[tool.poetry.group.test.dependencies]
+pytest = ">=7.1.3"
+pytest-cov = ">=3.0"
+
+[tool.poetry.group.github-actions]
+optional = true
+
+[tool.poetry.group.github-actions.dependencies]
+pytest-github-actions-annotate-failures = "^0.1.7"
+
+[tool.poetry.scripts]
+bioat = "bioat.__main__:main"
+
+[build-system]
+requires = ["poetry-core>=1.5.0"]
+build-backend = "poetry.core.masonry.api"
