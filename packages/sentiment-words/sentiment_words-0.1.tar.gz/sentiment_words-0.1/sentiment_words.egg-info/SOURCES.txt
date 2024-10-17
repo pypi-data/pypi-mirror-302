@@ -1,0 +1,7 @@
+README.md
+sentiment_words_arabic.py
+setup.py
+sentiment_words.egg-info/PKG-INFO
+sentiment_words.egg-info/SOURCES.txt
+sentiment_words.egg-info/dependency_links.txt
+sentiment_words.egg-info/top_level.txt
