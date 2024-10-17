@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "rea-hydro-tooling"
+version = "0.0.1"
+description = "Skeleton for rea-hydro-tooling"
+authors = ["REA Group <pip@rea-group.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
