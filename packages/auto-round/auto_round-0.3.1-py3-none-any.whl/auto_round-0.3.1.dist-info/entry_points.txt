@@ -1,0 +1,3 @@
+[console_scripts]
+auto-round = auto_round.__main__:run
+auto_round = auto_round.__main__:run
