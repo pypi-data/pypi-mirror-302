@@ -1,0 +1,35 @@
+Metadata-Version: 2.3
+Name: scikit-statistics
+Version: 0.1.0
+Summary: Community driven collection of statistical distributions for SciPy
+Project-URL: homepage, https://github.com/scikit-stats/scikit-stats
+Project-URL: documentation, https://github.com/scikit-stats/scikit-stats
+Project-URL: source, https://github.com/scikit-stats/scikit-stats
+Author: Pamphile Roy, Matt Haberland
+Maintainer: Scikit-Stats maintainers
+License-Expression: BSD-3-Clause
+License-File: LICENSE.txt
+Keywords: QMC,distributions,random numbers,scipy,statistics
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Python: >=3.11
+Requires-Dist: numpy
+Requires-Dist: scipy
+Provides-Extra: doc
+Requires-Dist: accessible-pygments; extra == 'doc'
+Requires-Dist: myst-nb; extra == 'doc'
+Requires-Dist: numpydoc; extra == 'doc'
+Requires-Dist: pydata-sphinx-theme; extra == 'doc'
+Requires-Dist: sphinx; extra == 'doc'
+Description-Content-Type: text/markdown
+
+# Scikit-Stats
+
+
