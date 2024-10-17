@@ -1,0 +1,2 @@
+[console_scripts]
+kaag-evaluate = scripts.evaluation:main
