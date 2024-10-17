@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+kson/__init__.py
+kson/decoder.py
+kson/encoder.py
+kson/exceptions.py
+kson_irs.egg-info/PKG-INFO
+kson_irs.egg-info/SOURCES.txt
+kson_irs.egg-info/dependency_links.txt
+kson_irs.egg-info/top_level.txt
