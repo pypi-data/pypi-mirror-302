@@ -1,0 +1,61 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "fedora-image-uploader-messages"
+description = "A schema package for messages sent by fedora-image-uploader"
+readme = "README.md"
+license = "GPL-2.0-or-later"
+license-files = { paths = ["LICENSE"] }
+dynamic = ["version"]
+requires-python = ">=3.8"
+keywords = ["fedora-messaging"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: System Administrators",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Operating System :: POSIX :: Linux",
+    "Topic :: Communications",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+
+dependencies = [
+    "fedora-messaging",
+]
+
+[project.optional-dependencies]
+dev = [
+    "black",
+    "isort",
+    "flake8",
+]
+test = [
+    "coverage",
+    "pytest",
+    "pytest-cov",
+]
+
+[project.entry-points."fedora.messages"]
+"fedora_image_uploader.published.v1.aws" = "fedora_image_uploader_messages.publish:AwsPublishedV1"
+"fedora_image_uploader.published.v1.azure" = "fedora_image_uploader_messages.publish:AzurePublishedV1"
+"fedora_image_uploader.published.v1.container" = "fedora_image_uploader_messages.publish:ContainerPublishedV1"
+
+[tool.hatch.version]
+path = "fedora_image_uploader_messages/__init__.py"
+
+[tool.black]
+line-length = 100
+
+[tool.isort]
+profile = "black"
+
+[tool.coverage.run]
+source = [
+    "fedora_image_uploader_messages/",
+]
