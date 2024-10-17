@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: python-sapcommissions
+Version: 2.4.6
+Summary: sapcommissions is now sapimclient
+Author-email: Niels Perfors <niels.perfors1987@gmail.com>
+License: MIT
+Project-URL: Homepage, https://github.com/niro1987/sapimclient
+Project-URL: Repository, https://github.com/niro1987/sapimclient.git
+Project-URL: Issues, https://github.com/niro1987/sapimclient/issues
+Keywords: SAP,Incentive Management
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Development Status :: 7 - Inactive
+Requires-Python: >=3.11
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+Requires-Dist: sapimclient
+
+Python SAP Commissions®
+=======================
+
+# python-sapcommissions is now sapimclient
+
+.. note::
+    This package has been renamed. Use `pip install sapimclient` instead.
+
+    New package: https://pypi.org/project/sapimclient/
+
+Legal Disclamer
+---------------
+
+This software is designed for use with SAP Commissions®. It is not affiliated with SAP® and the developers
+take no legal responsibility for the functionality or security of your Commissions environment.
+
+SAP Commissions is a registered trademark of SAP SE or its affiliates in Germany and in other countries.
