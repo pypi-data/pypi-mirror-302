@@ -1,0 +1,6 @@
+pyproject.toml
+britinsurance/__init__.py
+britinsurance.egg-info/PKG-INFO
+britinsurance.egg-info/SOURCES.txt
+britinsurance.egg-info/dependency_links.txt
+britinsurance.egg-info/top_level.txt
