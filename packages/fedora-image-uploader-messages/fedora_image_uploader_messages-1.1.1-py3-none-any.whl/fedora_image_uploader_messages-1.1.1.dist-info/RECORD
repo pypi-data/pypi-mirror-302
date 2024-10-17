@@ -1,0 +1,7 @@
+fedora_image_uploader_messages/__init__.py,sha256=9EX_TSQcJsU0on_YkkxhK5K1ZyMMtaYsIRWhtfE35ow,130
+fedora_image_uploader_messages/publish.py,sha256=gBTAAjtkm7ErB4XSx1Awt9m7ouVektlVjRdGMlweNoY,9120
+fedora_image_uploader_messages-1.1.1.dist-info/METADATA,sha256=3wzHTaglqBEutb7oUq4AX0rtfsILjtxFIGeoqM_fmm0,1332
+fedora_image_uploader_messages-1.1.1.dist-info/WHEEL,sha256=TJPnKdtrSue7xZ_AVGkp9YXcvDrobsjBds1du3Nx6dc,87
+fedora_image_uploader_messages-1.1.1.dist-info/entry_points.txt,sha256=QSbkyD5dQujUQr_E-P7_hX33_e1t1XDiwMazvO1GEic,319
+fedora_image_uploader_messages-1.1.1.dist-info/licenses/LICENSE,sha256=gXf5dRMhNSbfLPYYTY_5hsZ1r7UU1OaKQEAQUhuIBkM,18092
+fedora_image_uploader_messages-1.1.1.dist-info/RECORD,,

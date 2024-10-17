@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: fedora-image-uploader-messages
+Version: 1.1.1
+Summary: A schema package for messages sent by fedora-image-uploader
+License-Expression: GPL-2.0-or-later
+License-File: LICENSE
+Keywords: fedora-messaging
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: System Administrators
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Communications
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.8
+Requires-Dist: fedora-messaging
+Provides-Extra: dev
+Requires-Dist: black; extra == 'dev'
+Requires-Dist: flake8; extra == 'dev'
+Requires-Dist: isort; extra == 'dev'
+Provides-Extra: test
+Requires-Dist: coverage; extra == 'test'
+Requires-Dist: pytest; extra == 'test'
+Requires-Dist: pytest-cov; extra == 'test'
+Description-Content-Type: text/markdown
+
+# fedora-image-uploader-messages
+
+AMQP messages emitted by the fedora-image-uploader package. Consumer can use this package to validate messages against a schema.

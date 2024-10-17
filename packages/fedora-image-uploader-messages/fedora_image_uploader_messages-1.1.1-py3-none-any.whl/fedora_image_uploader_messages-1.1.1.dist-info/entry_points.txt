@@ -1,0 +1,4 @@
+[fedora.messages]
+fedora_image_uploader.published.v1.aws = fedora_image_uploader_messages.publish:AwsPublishedV1
+fedora_image_uploader.published.v1.azure = fedora_image_uploader_messages.publish:AzurePublishedV1
+fedora_image_uploader.published.v1.container = fedora_image_uploader_messages.publish:ContainerPublishedV1
