@@ -1,0 +1,10 @@
+pyramid>=1.7
+boto3<2
+zope.interface
+
+[linting]
+ruff~=0.7.0
+
+[testing]
+pytest~=8.3
+webtest~=3.0
