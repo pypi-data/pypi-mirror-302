@@ -1,0 +1,8 @@
+README.md
+setup.py
+InfoGerm/__init__.py
+InfoGerm/main.py
+InfoGerm.egg-info/PKG-INFO
+InfoGerm.egg-info/SOURCES.txt
+InfoGerm.egg-info/dependency_links.txt
+InfoGerm.egg-info/top_level.txt
