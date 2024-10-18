@@ -1,0 +1,34 @@
+[tool.poetry]
+
+name = "plain.staff"
+packages = [
+    { include = "plain" },
+]
+
+version = "0.4.0"
+description = "Staff dashboard and tools for Plain."
+authors = ["Dave Gaeddert <dave.gaeddert@dropseed.dev>"]
+license = "BSD-3-Clause"
+# readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+sqlparse = ">=0.2.2"
+plain = "<1.0.0"
+"plain.auth" = "<1.0.0"
+"plain.htmx" = "<1.0.0"
+"plain.tailwind" = "<1.0.0"
+
+[tool.poetry.group.dev.dependencies]
+plain = {path = "../plain", develop = true}
+"plain.auth" = {path = "../plain-auth", develop = true}
+"plain.sessions" = {path = "../plain-sessions", develop = true}
+"plain.models" = {path = "../plain-models", develop = true}
+"plain.htmx" = {path = "../plain-htmx", develop = true}
+"plain.tailwind" = {path = "../plain-tailwind", develop = true}
+"plain.pytest" = {path = "../plain-pytest", develop = true}
+coverage = "^7.6.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
