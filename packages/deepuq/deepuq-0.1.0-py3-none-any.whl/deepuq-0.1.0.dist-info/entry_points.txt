@@ -1,0 +1,4 @@
+[console_scripts]
+UQder=src.scripts.DeepEvidentialRegression:main
+UQensemble=src.scripts.DeepEnsemble:main
+
