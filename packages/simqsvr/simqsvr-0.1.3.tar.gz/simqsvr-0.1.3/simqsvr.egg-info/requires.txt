@@ -1,0 +1,8 @@
+PyYAML
+pydantic
+requests
+django
+django-apis
+django-redis
+django-app-requires
+django-environ-settings
