@@ -1,0 +1,25 @@
+Metadata-Version: 2.3
+Name: graphs_kpineiro
+Version: 1.1.4
+Summary: Homework 4 CS3250
+Project-URL: Homepage, https://github.com/pypa/sampleproject
+Project-URL: Bug Tracker, https://github.com/pypa/sampleproject/issues
+Author-email: Kyle Pineiro <kpineiro@msudenver.edu>
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+Overview
+
+* Heap: A special kind of binary tree where the parent node is always smaller than its child nodes.
+* The smallest element is always at the top (heap[0]).
+* Heaps are useful for efficiently managing priority queues.
+
+Key Functions
+* heappush(heap, item): Adds an item to the heap while maintaining its order.
+* heappop(heap): Removes and returns the smallest item from the heap.
+* heapify(x): Converts a list into a heap in place.
+* heappushpop(heap, item): Adds an item to the heap, then removes and returns the smallest item.
+* heapreplace(heap, item): Removes and returns the smallest item, then adds the new item to the heap.
