@@ -1,0 +1,16 @@
+LICENCE.txt
+README.md
+setup.py
+msdacode/__init__.py
+msdacode/alexnet.py
+msdacode/autoencoder.py
+msdacode/cnn.py
+msdacode/filter.py
+msdacode/opt.py
+msdacode/pre_model.py
+msdacode/reg.py
+msdacode/rnn.py
+msdacode.egg-info/PKG-INFO
+msdacode.egg-info/SOURCES.txt
+msdacode.egg-info/dependency_links.txt
+msdacode.egg-info/top_level.txt
