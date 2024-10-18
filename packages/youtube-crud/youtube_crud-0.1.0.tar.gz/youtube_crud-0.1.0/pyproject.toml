@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "youtube-crud"
+version = "0.1.0"
+description = "A Python package to perform CRUD operations on YouTube videos"
+authors = ["Gayathri H <gayathrih2108@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "3.12.7"
+pytest = "^8.3.3"
+google-api-python-client = "^2.149.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

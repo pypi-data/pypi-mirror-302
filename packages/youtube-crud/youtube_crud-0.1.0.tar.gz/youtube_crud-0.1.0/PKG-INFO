@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: youtube-crud
+Version: 0.1.0
+Summary: A Python package to perform CRUD operations on YouTube videos
+License: MIT
+Author: Gayathri H
+Author-email: gayathrih2108@gmail.com
+Requires-Python: ==3.12.7
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: google-api-python-client (>=2.149.0,<3.0.0)
+Requires-Dist: pytest (>=8.3.3,<9.0.0)
+Description-Content-Type: text/markdown
+
+# YouTube CRUD
+
+A Python package to perform CRUD operations on YouTube videos.
+
+## Installation
+
+```bash
+pip install youtube_crud
+
