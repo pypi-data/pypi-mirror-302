@@ -1,0 +1,2 @@
+[console_scripts]
+gilbert = gilbert.cli:main
