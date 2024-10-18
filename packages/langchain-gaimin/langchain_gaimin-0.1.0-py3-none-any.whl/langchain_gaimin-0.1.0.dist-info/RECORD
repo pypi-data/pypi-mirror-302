@@ -1,0 +1,8 @@
+langchain_gaimin/__init__.py,sha256=QPWNQeYuNRNp9Ipcwd8U7i-1DPxz42OpqvCeMjkBN68,204
+langchain_gaimin/langchain_embeddings.py,sha256=aSgSpSwn4CSfu7CwJ0nec5k-5Q_b-lK6-GPjmhhTPEo,860
+langchain_gaimin/langchain_gaimin_ai.py,sha256=aDm3AUlVJtDfbSpN2azZFbRAZPZeuzhUh2YxL7PjkaI,1153
+langchain_gaimin-0.1.0.dist-info/LICENSE,sha256=aq4aP8D57U2hBwNlZaAX-oiiRG2GAFscvyRNCdbwFU0,1515
+langchain_gaimin-0.1.0.dist-info/METADATA,sha256=Tp3YZN5jmf6bB0w8CfdqTAydcyd_919lIVR6KjjctMc,878
+langchain_gaimin-0.1.0.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+langchain_gaimin-0.1.0.dist-info/top_level.txt,sha256=nsZu1e-bD1zGrW8Xf8VIACjPBtdqDo6nhY-YuX2zCaE,17
+langchain_gaimin-0.1.0.dist-info/RECORD,,
