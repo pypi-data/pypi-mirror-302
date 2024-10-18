@@ -1,0 +1,14 @@
+aw_client/__init__.py,sha256=YXza4pUEot0ajDbGd3vOn9MZRLGWqoDvS4r6tbs4tTc,75
+aw_client/__main__.py,sha256=5CAe30I2WPrShQInIQd7oQlAw1qFQDYZeSNlTUlGIJI,38
+aw_client/classes.py,sha256=1BRA1QZmJ1HQNrIsLCF6zpNX3j0y7cBvxt7PEzEKdw0,2469
+aw_client/cli.py,sha256=Evmuup42XQLJnE_UyQRgrLAZar9GjYLX5Wm1rowtovw,8178
+aw_client/client.py,sha256=k_zBw7Q5f0kmeHPmif7BZXW6HmnYmHMJZf6mbJrU8cM,18139
+aw_client/config.py,sha256=Ykd0u69WQKcyQeKUqEs5hcb_J3aFXYPO1zCJc5blJAI,326
+aw_client/py.typed,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+aw_client/queries.py,sha256=l7YA6mEimJgzrvoWpJ0ir1W4nHDp89MhYqKTsjWMUkg,9537
+aw_client/singleinstance.py,sha256=6GOhatzPrpnvWSRNbEUR5rjNLceHt6nyof9hBbxSIjA,1605
+aw_client-0.5.14.dist-info/LICENSE.txt,sha256=Pz2eACSxkhsGfW9_iN60pgy-enjnbGTj8df8O3ebnQQ,16726
+aw_client-0.5.14.dist-info/METADATA,sha256=ocFPBo0T-XDUTR-FsjSfGAkodj7w9Y2G0Z8f_b8DVBg,4288
+aw_client-0.5.14.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+aw_client-0.5.14.dist-info/entry_points.txt,sha256=GfBf16Qefzh4KZMYvgWnztyP5Uy5QJMa6W9BRZn6AWo,48
+aw_client-0.5.14.dist-info/RECORD,,
