@@ -1,0 +1,7 @@
+setup.py
+pytensar/__init__.py
+pytensar/main.py
+pytensar.egg-info/PKG-INFO
+pytensar.egg-info/SOURCES.txt
+pytensar.egg-info/dependency_links.txt
+pytensar.egg-info/top_level.txt
