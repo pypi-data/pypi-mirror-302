@@ -1,0 +1,7 @@
+LICENSE
+README.md
+pyproject.toml
+src/online_store_python_hw_w5.egg-info/PKG-INFO
+src/online_store_python_hw_w5.egg-info/SOURCES.txt
+src/online_store_python_hw_w5.egg-info/dependency_links.txt
+src/online_store_python_hw_w5.egg-info/top_level.txt

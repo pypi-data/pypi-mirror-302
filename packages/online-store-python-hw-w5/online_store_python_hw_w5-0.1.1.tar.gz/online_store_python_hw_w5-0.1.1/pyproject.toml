@@ -1,0 +1,17 @@
+[build-system]
+requires = ['setuptools>=42', 'wheel']
+build-backend = 'setuptools.build_meta'
+
+[project]
+name = 'online-store-python-hw-w5'
+version = '0.1.1'
+description = 'Исполняемый пакет для управления пользователями и заказами в онлайн-магазине'
+authors = [
+  {name = 'Artem Ostapenko'}
+]
+readme = 'README.md'
+license = {file = 'LICENSE'}
+requires-python = '>=3.10'
+
+[tool.setuptools.packages.find]
+where = ["src"]
