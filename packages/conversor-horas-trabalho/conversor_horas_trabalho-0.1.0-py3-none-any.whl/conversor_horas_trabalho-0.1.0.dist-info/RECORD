@@ -1,0 +1,10 @@
+conversor_horas_trabalho/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+conversor_horas_trabalho/cli.py,sha256=bU0O5NtdSlniaF9Ag-WqFaP6NLPLA1qBkkgL-262Q34,2539
+conversor_horas_trabalho/converte_horas.py,sha256=Ni58qgM9uauAr0e8CVinhT35lwGekp3X9_QGLsCEWjA,1654
+conversor_horas_trabalho/converte_horas_semanais.py,sha256=IxE-QObL39kqQGB8L9tEa6AKGwAMALPOSXRKa8A_Q2w,3715
+conversor_horas_trabalho/total_horas_mes.py,sha256=BtbI8hCIrfNFK68D63M8uZnzCmx8DLRGE63yVk66fXk,3092
+conversor_horas_trabalho-0.1.0.dist-info/entry_points.txt,sha256=hNiWM6A1kCZsBqjtbpE8AbrGWRNPjv-c6Ur20mZ_ycw,76
+conversor_horas_trabalho-0.1.0.dist-info/LICENSE,sha256=LPZSexgmOHGmPT236UtRB2UuPYZrrpRF_0M8vLcCywA,168
+conversor_horas_trabalho-0.1.0.dist-info/METADATA,sha256=LI7fC-w4w7Vzr6Aorp18GtQHQ6MMEHW1-YewQcG70_Y,15111
+conversor_horas_trabalho-0.1.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+conversor_horas_trabalho-0.1.0.dist-info/RECORD,,
