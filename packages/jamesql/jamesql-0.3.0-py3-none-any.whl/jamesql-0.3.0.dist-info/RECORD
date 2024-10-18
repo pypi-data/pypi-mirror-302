@@ -1,0 +1,10 @@
+jamesql/__init__.py,sha256=9nSuOb-UioBzFTs8M-njSVNYxzJmGVM2JFNtBDouJWo,50
+jamesql/index.py,sha256=mGot0CjbLawLWFRONM3HoUopEcBBhoud-vzSjNKV5h0,47401
+jamesql/query_simplifier.py,sha256=pjhlvd9GQpXW3JHjoqe68JeEKkgwcfvQJ6vGfOb1em0,1478
+jamesql/rewriter.py,sha256=Cfs5kkPFK1aUEb8oqD_Lv6VWr1YdT1GFSNEOxzSgTuk,8663
+jamesql/script_lang.py,sha256=0ZtFjgSulX12yLGB8nxLj04o7iWqclbcHudzkNnDKKU,1584
+jamesql-0.3.0.dist-info/LICENSE,sha256=qhphJZzgmbC51d5cDTsNCc8CFWC710umb1Y47Ps28QQ,1062
+jamesql-0.3.0.dist-info/METADATA,sha256=71m6WALMzRgn5jqFYTrSZHwuVZvl9xQ9gD9x9o-JjiA,28594
+jamesql-0.3.0.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+jamesql-0.3.0.dist-info/top_level.txt,sha256=OAOk1GlLu-bvTBG1OMaMLMbxa3HryQB21LczW1g97q0,8
+jamesql-0.3.0.dist-info/RECORD,,
