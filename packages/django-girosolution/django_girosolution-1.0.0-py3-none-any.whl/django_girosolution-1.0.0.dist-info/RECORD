@@ -1,0 +1,17 @@
+django_girosolution/LICENSE,sha256=TrNCsfuzwCUudFnsCsAhDNbHa0KMLX5FXANYjvIfkgY,1077
+django_girosolution/__init__.py,sha256=RsZjRjMprNcDm97wqRRSk6rTLgTX8N0GyicZyZ8OsBQ,22
+django_girosolution/admin.py,sha256=SjKYdg2ECUMmaUTQo2WvdqV_flEanISbzYKLdsKCiwg,483
+django_girosolution/constants.py,sha256=hYTpJHIw71Fmlbg4HsB81WPPMSEEjuuKerYdDjIPHP4,1650
+django_girosolution/dump.rdb,sha256=Me8Z8eb9qJc9FzXqKCxlWD3fakD0yeQspORlfAplmIE,92
+django_girosolution/models.py,sha256=bxLp8XXeOCp6op75gH20lhWyGwbJmXehLUD6uR9xJRU,2356
+django_girosolution/settings.py,sha256=8a9gzjrTyEa_5HOqzjJVDZxOLPzLBvYdnnynxc5noXc,1044
+django_girosolution/urls.py,sha256=SqLA9eP5xa7yxUBO__A3enbPiwCY4_ovCIMbgtzVeec,283
+django_girosolution/views.py,sha256=cUD2ETT6NhJuWoPFrSPeUyCgqd5GSGLezJukwSQmmco,4575
+django_girosolution/wrappers.py,sha256=Ar8ZK7Ii16UKhQOuOuV3WLdejjZhNSVkYoLRqfXvYcM,11652
+django_girosolution/migrations/0001_initial.py,sha256=XcGJnzGKX-lGyAYxDO-7c3ytN2l_sHpGrkIrsps7aWM,2558
+django_girosolution/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_girosolution-1.0.0.dist-info/LICENSE,sha256=TrNCsfuzwCUudFnsCsAhDNbHa0KMLX5FXANYjvIfkgY,1077
+django_girosolution-1.0.0.dist-info/METADATA,sha256=LOGhYEJhyzBozfV56SkDbkZF2b2GG7_ne_0s0t6Roqg,948
+django_girosolution-1.0.0.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+django_girosolution-1.0.0.dist-info/top_level.txt,sha256=PEdouIvGkEJdcsQ-qEv_9kSBtvwgCVHxKUtoh4zz1ZU,51
+django_girosolution-1.0.0.dist-info/RECORD,,
