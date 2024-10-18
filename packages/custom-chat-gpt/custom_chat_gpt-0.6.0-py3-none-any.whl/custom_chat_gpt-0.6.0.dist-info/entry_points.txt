@@ -1,0 +1,2 @@
+[console_scripts]
+chat-gpt = chat_gpt.main:app
