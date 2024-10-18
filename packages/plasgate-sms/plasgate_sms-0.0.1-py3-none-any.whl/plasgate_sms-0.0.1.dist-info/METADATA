@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: plasgate-sms
+Version: 0.0.1
+Summary: Plasgate SMS API client
+Home-page: https://github.com/plasgateCoLTD/python
+Author: PlasgateCoLtd
+Keywords: plasgate,sms-api,plasgate-otp
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Communications :: Telephony
+Requires-Python: >=3.7.0
+Description-Content-Type: text/markdown
+Requires-Dist: requests >=2.0.0
+Requires-Dist: aiohttp >=3.8.4
+Requires-Dist: aiohttp-retry >=2.8.3
+Requires-Dist: marshmallow >=3.22.0
+
+# Plasgate SMS API Client
+
+`plasgate` is a Python library for interacting with the Plasgate SMS API, providing a simple and efficient way to send SMS messages and manage OTPs (One-Time Passwords).
+
+## Features
+
+- Send SMS messages easily
+- Handle OTP generation and validation
+
+## Installation
+
+You can install the `plasgate` library using pip. Open your terminal and run:
+
+```bash
+pip install plasgate
+```
