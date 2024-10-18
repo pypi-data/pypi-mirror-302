@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: pfund-plot
+Version: 0.0.1.dev1
+Summary: A wrapper of the existing plotting libraries for financial data analysis.
+Home-page: https://pfund.ai
+License: Apache-2.0
+Keywords: trading,plotting,wrapper,pfund
+Author: stephenyau
+Author-email: softwareentrepreneer+pfund-plot@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Financial and Insurance Industry
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Office/Business :: Financial :: Investment
+Classifier: Topic :: Scientific/Engineering :: Visualization
+Classifier: Topic :: Software Development :: Libraries
+Provides-Extra: app
+Provides-Extra: big-data
+Requires-Dist: dash (>=2.18.1,<3.0.0) ; extra == "app"
+Requires-Dist: datashader (>=0.16.3,<0.17.0) ; extra == "big-data"
+Requires-Dist: great-tables (>=0.13.0,<0.14.0)
+Requires-Dist: hvplot (>=0.11.1,<0.12.0) ; extra == "big-data"
+Requires-Dist: numba (>=0.60.0,<0.61.0) ; extra == "big-data"
+Requires-Dist: panel (>=1.5.2,<2.0.0) ; extra == "app"
+Requires-Dist: plotly (>=5.24.1,<6.0.0)
+Requires-Dist: streamlit (>=1.39.0,<2.0.0) ; extra == "app"
+Requires-Dist: taipy (>=4.0.0,<5.0.0) ; extra == "app"
+Project-URL: Documentation, https://pfund-plot-docs.pfund.ai
+Project-URL: Repository, https://github.com/PFund-Software-Ltd/pfund-plot
+Description-Content-Type: text/markdown
+
+# pfund-plot
+
+A wrapper of the existing plotting libraries for financial data analysis.
