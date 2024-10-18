@@ -1,0 +1,7 @@
+frozendict>=2.4.6
+marimo>=0.9.10
+networkx>=3.2.1
+polars
+numpy>=2.0.2
+xxhash>=3.5.0
+pandas>=2.2.3
