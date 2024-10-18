@@ -1,0 +1,36 @@
+# --------------------------------------------------------------------------- #
+# Collection 5
+
+- uuid: foobar--eee
+  uuid_collection: eee-eee-eee
+  uuid_document: foobar-spam
+
+# --------------------------------------------------------------------------- #
+# Collection 6
+- uuid: ex--foo-ool
+  uuid_document: ex-parrot
+  uuid_collection: foo-ooo-ool
+
+
+- uuid: petshopfool
+  uuid_document: petshoppe--
+  uuid_collection: foo-ooo-ool
+
+- uuid: barspamfool
+  uuid_document: foobar-spam
+  uuid_collection: foo-ooo-ool
+
+- uuid: draculafool
+  uuid_document: draculaflow
+  uuid_collection: foo-ooo-ool
+
+# --------------------------------------------------------------------------- #
+# Document 5
+- uuid: aaa-aaa-eee
+  uuid_document: aaa-aaa-aaa
+  uuid_collection: eee-eee-eee
+
+- uuid: aaa-foo-ool
+  uuid_document: aaa-aaa-aaa
+  uuid_collection: foo-ooo-ool
+  
