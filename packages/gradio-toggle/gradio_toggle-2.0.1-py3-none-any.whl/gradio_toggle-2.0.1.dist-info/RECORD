@@ -1,0 +1,6 @@
+gradio_toggle/__init__.py,sha256=i74n1iR68QVNs8lQihi3ZJpXHqw7H8cW3hyDPpGFxCU,50
+gradio_toggle/toggle.py,sha256=UwrHEeY-kSdBg0YI09YzHwSQsSHTE1I22JmuCTPjXD8,5098
+gradio_toggle/toggle.pyi,sha256=Xlp-pi7lWO18-Ny7JXRDHcFKQ7N8CrZOwudQDukkkBs,21550
+gradio_toggle-2.0.1.dist-info/METADATA,sha256=PrQ9JQe3cc5y9bd_wl09xRWIS1DuXVZy35KDeKezXsc,9237
+gradio_toggle-2.0.1.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+gradio_toggle-2.0.1.dist-info/RECORD,,
