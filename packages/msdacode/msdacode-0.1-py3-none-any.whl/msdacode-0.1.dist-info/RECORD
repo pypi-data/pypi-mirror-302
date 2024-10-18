@@ -1,0 +1,14 @@
+msdacode/__init__.py,sha256=fb4_lTBV8fNjyiI-K8NA6nMDBoUiZhP9QrCdZYdqr74,665
+msdacode/alexnet.py,sha256=ciJcVSQAANGzuRLxwqxZmACWS8JhAAOghIowtxiNKr4,1777
+msdacode/autoencoder.py,sha256=88EuerJN66YAmlL5FoL9Az7K0ORErMO-dFfIP6gEUIk,7978
+msdacode/cnn.py,sha256=z79fMCFRCDHOV7Xr55OJnVtJzWsi7qhh_3oGpiE2TVQ,1967
+msdacode/filter.py,sha256=jJrsW5dQzU_YSWU3OShWETLwzTb4GzZDhXIMZnzmUmE,7315
+msdacode/opt.py,sha256=UGFTUpmwNpWdMAE8kavtZoHqaBwv9awJesfLhqz7HnA,4286
+msdacode/pre_model.py,sha256=z0UvkYoE7teWTBQjBNY99nBMKDXlmWyGgWgAf6APiM8,2175
+msdacode/reg.py,sha256=xtCOR1gzl2LAqQqdAqvFdcgoTL1MfaBLztKnWKxH9kg,3357
+msdacode/rnn.py,sha256=aE5HkYgfK3hX1LncLn_f96rDQLUg7QHfutwJxXHmRM4,2725
+msdacode-0.1.dist-info/LICENCE.txt,sha256=J93P6S6xeslkrjyBgAjW7Wd-vEiDnoB7u4ztqH9ZQJk,1061
+msdacode-0.1.dist-info/METADATA,sha256=s0neLUZcn4CotnojI9maZdZM6BW1WF8nUN-rcG84hrE,488
+msdacode-0.1.dist-info/WHEEL,sha256=UvcQYKBHoFqaQd6LKyqHw9fxEolWLQnlzP0h_LgJAfI,91
+msdacode-0.1.dist-info/top_level.txt,sha256=obzJcqbDEi_LB4pTm3BylpwbsMnLG7iWOFS_ppItlpw,9
+msdacode-0.1.dist-info/RECORD,,
