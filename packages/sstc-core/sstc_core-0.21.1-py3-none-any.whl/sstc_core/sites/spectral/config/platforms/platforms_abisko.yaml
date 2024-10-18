@@ -1,0 +1,58 @@
+PhenoCams:
+  P_RTBH_1:
+    aoi: Forest in Alpine Montain - Abiskojaure at Abisko National Park
+    backups:
+      aurora02_dirpath: /home/aurora02/data/SITES/Spectral/data/catalog/abisko/locations/RTBH_FOR/platforms/PhenoCam/P_RTBH_1/
+    description: Rooftop (RT) Building H (BH) at ANS. Lars Eklundh custom optical camera.
+    ecosystem_of_interest: FOR
+    geolocation:
+      point:
+          epsg: "epsg:4326"
+          latitude_dd: 68.353729
+          longitude_dd: 18.816522
+    height_in_meters_above_ground: 4.5
+    legacy_acronym: ANS-FOR-P01
+    location_id: RTBH_FOR
+    maintainance_log_filepath: '/home/aurora02/data/SITES/Spectral/code/pycode/SSTC/sstc-core/src/sstc_core/sites/spectral/maintainance/Abisko-RTBH_FOR-P_RTBH_1-mantainance_log.yaml'
+    status: Active
+    phenocam_rois:
+      ROI_01: {'points': [[100, 1800], [2700, 1550], [2500, 2700], [100, 2700]],
+        'color': [0, 255, 0],
+        'thickness': 7}
+      ROI_02: {'points': [[100, 930], [3700, 1050], [3700, 1150], [100, 1300]],   # + 50
+        'color': [0, 0, 255],
+        'thickness': 7}
+      ROI_03: {'points': [[750, 600], [3700, 650], [3500, 950], [100, 830]],
+        'color': [255, 0, 0],
+        'thickness': 7}
+    platform_id: P_RTBH_1
+    platform_type: PhenoCam    
+    sftp_dirpath: abisko/data/PhenoCam/ANS-FOR-P01/
+    station_acronym: ANS
+    station_name: Abisko
+    viewing_direction': West (270 degrees)
+    metadata:
+      'TITLE': 'Phenocamera RGB image collection from Abisko Observatory, north-western Sweden.'
+      'SITES STATION': 'Abisko Scientific Research Station'
+      'TIME PERIOD': null
+      'TIME RESOLUTION': null
+      'TIME ZONE': 'UTC+1'
+      'SAMPLING POINT': 'Abisko Scientific Research Station, on rooftop of Building H at 4.5m, Phenocam 01 :  platform_id=P_RTBH_1'
+      'LATITUDE': '68.353729'
+      'LONGITUDE': '18.816522'
+      'ALTITUDE': '381 m.a.s.l'
+      'FILE RETRIEVED FROM': 'https://data.fieldsites.se Link to metadata landing page is available in separate file in the downloaded zip.'
+      'DATA POLICY': 'SITES data is licensed under a Creative Commons Attribution 4.0 international license (http://creativecommons.org/licenses/by/4.0/).'
+      'PARAMETERS & UNITS': 'Digital Numbers (DN)'
+      'DESCRIPTION': 'Collection of quality filtered phenocamera RGB images every half an hour from 10:00 to 14:30 UTC+1. The phenocamera pointed to Mount Nuolja. The ecosystems in the images are subalpine birch forest (Betula pubescens var. czerepan) and alpine shrubland (mainly Salix spp., Empetrum nigrum, and Vaccinium vitis–idaea) in the upper slope of Mount Nuolja.'
+      'SENSOR DESCRIPTION': 'Data acquired with Nikon D300s RGB phenology camera, with wide field of view (FOV) angle of 60 degrees. Images stored in JPG format.'
+      'DATA ACQUISITION': "The original photos were acquired with phenology camera mounted on the rooftop of the observation house, at a height of 4.5 m above ground, looking west (270 degrees) and an off-nadir angle of 59 degrees. The phenocamera acquired images from 10:00 to 14:30 every half an hour. The phenocamera operates between April and November. The area surveyed by the phenocamera projects a footprint on the ground, the centroid of which is approximately defined by the following coordinate (latitude, longitude in GCS WGS84, decimal degrees): 68.353729, 18.816522'."
+      'PROCESSING METHODS': 
+        L1_QFI: 'Data processing Level 1 Quality Filtered Images (QFI) were selected by filtered out manually from the original image collection. Individual flags were used to flag regions of interest (ROIs) that contain haze, shadows, sun glare, rain droplets, fog, or represent low-light, blurry conditions or obstacles in the image regions of interest.'
+        L2_RGB_CIMV: 'Data processing level 2 Red Green Blue (RGB) Composite Image Mean Values, daily'
+        L2_GCC_CIMV: 'Data processing level 2 Green Chromatic Coordinates  (GCC) Composite Image Mean Values, daily'
+        L2_RCC_CIMV: 'Data processing level 2 Red Chromatic Coordinates  (RCC) Composite Image Mean Values, daily' 
+        L3_ROI_TS: 'Data processing level 3 Phenocam - Green and Red Chromatic Coordinates time series of the RGB Composite Image of Mean Values - Region of Interest (ROI) Mean and Standard Deviation, daily values with QFLAG values and individual flags assesment per ROI'
+      'DATA PRODUCT TYPE': 'L1_QFI'
+      'DATA PRODUCT DESCRIPTION': 'Data Processing Level 1 Quality Filtered Images'
+       

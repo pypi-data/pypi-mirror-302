@@ -1,0 +1,21 @@
+Abisko: 
+  db_dirpath: '/home/aurora02/data/SITES/Spectral/data/catalog/abisko/'
+  db_filename: 'abisko_catalog.db'
+Asa:
+  db_dirpath: '/home/aurora02/data/SITES/Spectral/data/catalog/asa/'
+  db_filename: 'asa_catalog.db'
+Grimso:
+  db_dirpath: '/home/aurora02/data/SITES/Spectral/data/catalog/grimso/'
+  db_filename: 'grimso_catalog.db'
+Lonnstorp:
+  db_dirpath: '/home/aurora02/data/SITES/Spectral/data/catalog/lonnstorp/'
+  db_filename: 'lonnstorp_catalog.db'
+Robacksdalen:
+  db_dirpath: '/home/aurora02/data/SITES/Spectral/data/catalog/robacksdalen/'
+  db_filename: 'robacksdalen_catalog.db'
+Skogaryd:
+  db_dirpath: '/home/aurora02/data/SITES/Spectral/data/catalog/skogaryd/'
+  db_filename: 'skogaryd_catalog.db'
+Svartberget:
+  db_dirpath: '/home/aurora02/data/SITES/Spectral/data/catalog/svartberget/'
+  db_filename: 'svartberget_catalog.db'

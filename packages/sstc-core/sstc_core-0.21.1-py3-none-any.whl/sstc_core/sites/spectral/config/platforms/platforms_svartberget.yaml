@@ -1,0 +1,52 @@
+PhenoCams:
+  P_XXXX_1:
+    aoi: Svartberget
+    backups:
+      aurora02_dirpath: /home/aurora02/data/SITES/Spectral/data/catalog/XXXX/locations/SVB_FOR/platforms/PhenoCam/P_XXXX_1/
+    description: Svartberget
+    ecosystem_of_interest: 
+    geolocation:
+      point:
+          epsg: "epsg:4326"
+          latitude_dd: 
+          longitude_dd: 
+    height_in_meters_above_ground: 
+    legacy_acronym: 
+    location_id: 
+    maintainance_log_filepath: '/home/aurora02/data/SITES/Spectral/code/pycode/SSTC/sstc-core/src/sstc_core/sites/spectral/maintainance/Skogaryd-XXXX_1-mantainance_log.yaml'
+    status: Active
+    phenocam_rois:
+      ROI_01: {'points': [[], [], [], []],
+        'color': [0, 255, 0],
+        'thickness': 7}    
+    platform_id: P_XXXX_1
+    platform_type: PhenoCam    
+    sftp_dirpath: svartberget/data/PhenoCam/
+    station_acronym: SVB
+    station_name: Svartberget
+    viewing_direction': 
+    metadata:
+      'TITLE': ''
+      'SITES STATION': ''
+      'TIME PERIOD': null
+      'TIME RESOLUTION': null
+      'TIME ZONE': 'UTC+1'
+      'SAMPLING POINT': 'Phenocam 01 :  platform_id=P_XXXX_1'
+      'LATITUDE': ''
+      'LONGITUDE': ''
+      'ALTITUDE': 'm.a.s.l'
+      'FILE RETRIEVED FROM': 'https://data.fieldsites.se Link to metadata landing page is available in separate file in the downloaded zip.'
+      'DATA POLICY': 'SITES data is licensed under a Creative Commons Attribution 4.0 international license (http://creativecommons.org/licenses/by/4.0/).'
+      'PARAMETERS & UNITS': 'Digital Numbers (DN)'
+      'DESCRIPTION': 'Collection of quality filtered phenocamera RGB images every half an hour from 10:00 to 14:30 UTC+1. The phenocamera pointed to Mount Nuolja. The ecosystems in the images are subalpine birch forest (Betula pubescens var. czerepan) and alpine shrubland (mainly Salix spp., Empetrum nigrum, and Vaccinium vitis–idaea) in the upper slope of Mount Nuolja.'
+      'SENSOR DESCRIPTION': 'Images stored in JPG format.'
+      'DATA ACQUISITION': ""
+      'PROCESSING METHODS': 
+        L1_QFI: 'Data processing Level 1 Quality Filtered Images (QFI) were selected by filtered out manually from the original image collection. Individual flags were used to flag regions of interest (ROIs) that contain haze, shadows, sun glare, rain droplets, fog, or represent low-light, blurry conditions or obstacles in the image regions of interest.'
+        L2_RGB_CIMV: 'Data processing level 2 Red Green Blue (RGB) Composite Image Mean Values, daily'
+        L2_GCC_CIMV: 'Data processing level 2 Green Chromatic Coordinates  (GCC) Composite Image Mean Values, daily'
+        L2_RCC_CIMV: 'Data processing level 2 Red Chromatic Coordinates  (RCC) Composite Image Mean Values, daily' 
+        L3_ROI_TS: 'Data processing level 3 Phenocam - Green and Red Chromatic Coordinates time series of the RGB Composite Image of Mean Values - Region of Interest (ROI) Mean and Standard Deviation, daily values with QFLAG values and individual flags assesment per ROI'
+      'DATA PRODUCT TYPE': 'L1_QFI'
+      'DATA PRODUCT DESCRIPTION': 'Data Processing Level 1 Quality Filtered Images'
+       
