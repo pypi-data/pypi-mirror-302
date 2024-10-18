@@ -1,0 +1,20 @@
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "pop-up-ide"
+version = "0.1"
+description = "A brief description of your package"
+authors = ["Markus Lähde <markuslahde@gmail.com>"]
+license = "GPL-3.0-or-later"
+readme = "README.md"
+homepage = "https://github.com/markuslahde/pop-up-ide"
+repository = "https://github.com/markuslahde/pop-up-ide"
+
+[tool.poetry.dependencies]
+python = ">=3.7"
+dill = "*"
+prompt_toolkit = "*"
+pygments = "*"
+
