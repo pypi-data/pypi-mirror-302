@@ -1,0 +1,2 @@
+[console_scripts]
+joft = joft.cli:main

@@ -1,0 +1,33 @@
+[project]
+name = "joft"
+version = "0.1.1"
+description = "CLI tool for automation of user actions on a JIRA instance"
+authors = [
+    {name = "Martin Curlej", email = "mcurlej@redhat.com"},
+]
+requires-python = ">=3.11"
+readme = "README.md"
+
+dependencies = [
+    "jira>=3.6.0",
+    "click>=8.1.7",
+    "pyyaml>=6.0.1",
+    "tabulate>=0.9.0",
+    "platformdirs>=4.2.2",
+]
+
+[project.optional-dependencies]
+dev = ["tox>=4.16.0"]
+lint = ["ruff>=0.6.2"]
+test = ["pytest>=8.1.1"]
+type = ["mypy>=1.11.1", "types-PyYAML>=6.0.12.20240724", "types-tabulate>=0.9.0.20240106"]
+
+[project.scripts]
+joft = "joft.cli:main"
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["joft"]
