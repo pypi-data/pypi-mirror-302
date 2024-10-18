@@ -1,0 +1,2 @@
+[console_scripts]
+spacejar_cli = spacejar.cli:main
