@@ -1,0 +1,2 @@
+[console_scripts]
+capibaraent = capibara.cli.capibaraent_cli:main
