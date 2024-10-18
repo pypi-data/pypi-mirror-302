@@ -1,0 +1,7 @@
+six
+execnet
+pytest
+termcolor
+
+[tests]
+pytest
