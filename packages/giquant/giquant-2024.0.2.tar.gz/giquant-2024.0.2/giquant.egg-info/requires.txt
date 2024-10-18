@@ -1,0 +1,11 @@
+requests
+wget
+pandas
+numpy
+duckdb
+pyarrow
+fastparquet
+pyyaml
+lark
+pyreadr
+py_vollib

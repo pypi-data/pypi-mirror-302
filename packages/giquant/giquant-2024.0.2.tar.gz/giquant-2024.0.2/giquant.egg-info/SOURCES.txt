@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+giquant.egg-info/PKG-INFO
+giquant.egg-info/SOURCES.txt
+giquant.egg-info/dependency_links.txt
+giquant.egg-info/requires.txt
+giquant.egg-info/top_level.txt
+giquant/trade/__init__.py
+giquant/trade/cc.py
+giquant/trade/cl.py
+giquant/trade/dwnl.py
+giquant/tsl/__init__.py
+giquant/tsl/expr.py
+giquant/tsl/helpers.py

@@ -1,0 +1,66 @@
+Metadata-Version: 2.1
+Name: giquant
+Version: 2024.0.2
+Summary: Quant & Trading tools.
+Author: GiQuant
+Author-email: quant@gizur.com
+Maintainer-email: GiQuant <quant@gizur.com>
+License: ISC License 
+        
+        Copyright (c) 2024, Jonas Colmsjö 
+        
+        Permission to use, copy, modify, and/or distribute this software for any 
+        purpose with or without fee is hereby granted, provided that the above 
+        copyright notice and this permission notice appear in all copies. 
+        
+        THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES 
+        WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF 
+        MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY 
+        SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES 
+        WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN 
+        ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR 
+        IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE. 
+        
+Project-URL: Repository, https://github.com/giquant/giquant.git
+Keywords: quant,quantative finance,trading,Commitment Of Traders Report
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Requires-Python: >=3.9.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+Requires-Dist: wget
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: duckdb
+Requires-Dist: pyarrow
+Requires-Dist: fastparquet
+Requires-Dist: pyyaml
+Requires-Dist: lark
+Requires-Dist: pyreadr
+Requires-Dist: py_vollib
+
+# GiQuant
+
+This Python package contain various tools for Quantative Finance and Trading.
+It should be considered an alpha version but feel free to try it out!
+
+Install from PyPi with: `python3 -m pip install giquant`
+
+
+## TimeSeriesLanguage
+
+`giquiant.tsl` is a DSL (domain specific language) for manipulation of time series.
+
+Show the help with: `python3 -m giquant.tsl.expr --help`
+
+
+## Trading
+
+The trade subpackage has some tools related to trading.
+
+Show the help with:
+
+* `python3 -m giquant.trade.dwnl --help`
+* `python3 -m giquant.trade.cl --help`
+* `python3 -m giquant.trade.cc --help`
