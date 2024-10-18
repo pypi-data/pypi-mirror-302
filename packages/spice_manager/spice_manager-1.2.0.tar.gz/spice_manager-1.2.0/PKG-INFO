@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: spice_manager
+Version: 1.2.0
+Summary: Package to deal with Solar Orbiter SPICE kernels
+Home-page: https://gitlab.obspm.fr/ROC_PUBLIC/spice_manager
+License: CeCILL 2.1
+Author: Xavier Bonnin
+Author-email: xavier.bonnin@obspm.fr
+Requires-Python: >=3.9,<4
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: spiceypy (<7)
+Project-URL: Repository, https://gitlab.obspm.fr/ROC_PUBLIC/spice_manager
+Description-Content-Type: text/markdown
+
+spice_manager
+==============
+
+Python Package to handle SPICE kernels.
+
+## Quickstart
+
+To install package using [pip](https://pypi.org/project/pip-tools/):
+
+```
+pip install spice_manager
+```
+
+## User guide
+
+Package modules can be then imported into codes with line `import spice_manager`.
+
+## Authors
+
+- xavier dot bonnin at obspm dot fr
+
