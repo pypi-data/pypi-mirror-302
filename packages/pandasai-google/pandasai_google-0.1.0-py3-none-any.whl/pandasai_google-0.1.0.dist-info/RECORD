@@ -1,0 +1,7 @@
+pandasai_google/__init__.py,sha256=INI6DeOQcArDcMJ1gepw379IcW4p1dTrinN0dzYSgYQ,129
+pandasai_google/base.py,sha256=eUtw76We4XWcpXI1UyODI8VImz9D7E2AI4tP-8x6eB0,2773
+pandasai_google/google_gemini.py,sha256=pUae9sYDDMTSzPM39RE-sCP7-lNmf55Twi3QO6v406w,2687
+pandasai_google/google_vertexai.py,sha256=ei-0mWjyjTZ_lN7nrMn2w472bjMIjTEqltAoVI8KYVY,5414
+pandasai_google-0.1.0.dist-info/METADATA,sha256=tKWR80w24E9N0Qip2MFvcUN0U18-dc6NhYEDTPOzyBg,938
+pandasai_google-0.1.0.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+pandasai_google-0.1.0.dist-info/RECORD,,
