@@ -1,0 +1,3 @@
+[console_scripts]
+infogerm hello = InfoGerm:hello
+infogerm intro = InfoGerm:intro
