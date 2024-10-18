@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: lkingland-test-pylib
+Version: 0.1.2
+Summary: Test Python Library
+Author: Luke Kingland
+Author-email: luke@lukekingland.com
+Requires-Python: >=3.12,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Description-Content-Type: text/markdown
+
+# Test Python Library
+
