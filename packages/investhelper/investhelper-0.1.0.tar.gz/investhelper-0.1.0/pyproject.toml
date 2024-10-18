@@ -1,0 +1,13 @@
+[build-system]
+requires = ['setuptools>=42', 'wheel']
+[project]
+name = 'investhelper'
+version = '0.1.0'
+description = 'Описание моего Python-пакета'
+authors = [
+  {name = 'Your Name', email = 'youremail@example.com'}
+]
+readme = 'README.md'
+license = {text = 'MIT'}
+requires-python = '>=3.12'
+dependencies = []
