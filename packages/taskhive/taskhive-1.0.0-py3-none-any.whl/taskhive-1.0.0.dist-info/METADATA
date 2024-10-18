@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: taskhive
+Version: 1.0.0
+Summary: A library for paralleling the execution of functions in python
+Author: Akshit Sharma
+Author-email: akshitsharma@mines.edu
+
