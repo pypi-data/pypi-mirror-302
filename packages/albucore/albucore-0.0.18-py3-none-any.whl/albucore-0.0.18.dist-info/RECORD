@@ -1,0 +1,9 @@
+albucore/__init__.py,sha256=c3OsXu3voqYQdYVenz40MpbyMlOuQ46WFgi3Ca1AMjw,96
+albucore/decorators.py,sha256=xH6CpzLUHMO7_WxamTsVU7U9BP3kUPz5Cz32P54EsWU,1765
+albucore/functions.py,sha256=QJSvvqq0A8TMLXUy0tw1GwJMxs_MVRvAEHNRnGOmkHM,25644
+albucore/utils.py,sha256=E8IjyRduw6Ks36puI7HjDVU0mXAoqwYWLpvkBw9__KQ,5465
+albucore-0.0.18.dist-info/LICENSE,sha256=ZFt7q2eQj-af8QB3lH5kWdPgPTyyGTngjJVZLQ6eNRY,1075
+albucore-0.0.18.dist-info/METADATA,sha256=3uZmgRN7sXRrc82WpKW6T-hUcLqtei9kAbFmmEVTjCI,5220
+albucore-0.0.18.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+albucore-0.0.18.dist-info/top_level.txt,sha256=IcS0O8IgkfW6Jlh0jON2MsghR2jNy9y1aAZdVgKI-hc,9
+albucore-0.0.18.dist-info/RECORD,,
