@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: fluidattacks-core
+Version: 2.0.0
+Summary: Fluid Attacks Core Library
+License: MPL-2.0
+Author: Development
+Author-email: development@fluidattacks.com
+Requires-Python: >=3.11,<4.0
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved
+Classifier: License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Software Development :: Libraries
+Description-Content-Type: text/markdown
+
+# Fluid Attacks Core Library
+
+<p align="center">
+  <img alt="logo" src="https://res.cloudinary.com/fluid-attacks/image/upload/f_auto,q_auto/v1/airs/menu/Logo?_a=AXAJYUZ0.webp" />
+</p>
+
+Get more information about this library on the
+[official documentation](https://dev.fluidattacks.com/components/common/core-library/)
+
