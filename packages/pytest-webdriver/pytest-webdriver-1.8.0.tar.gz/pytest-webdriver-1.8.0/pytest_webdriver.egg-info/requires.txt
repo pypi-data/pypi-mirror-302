@@ -1,0 +1,7 @@
+py
+pytest
+pytest-fixture-config
+selenium
+
+[tests]
+mock; python_version<"3.3"
