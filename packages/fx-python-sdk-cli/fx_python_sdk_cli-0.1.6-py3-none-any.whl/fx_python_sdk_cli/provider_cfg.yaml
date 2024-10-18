@@ -1,0 +1,11 @@
+provider-edc-control-plane:
+  endpoint: https://your-edc-control-plane-endpoint
+  header:
+    Authorization: Bearer your-authorization-token
+
+trusted-consumers-bpn:
+  consumer_A: your-consumer-bpn
+
+submodel-repository:
+  endpoint: https://your-submodel-repository-endpoint
+  authtoken: your-authentication-token

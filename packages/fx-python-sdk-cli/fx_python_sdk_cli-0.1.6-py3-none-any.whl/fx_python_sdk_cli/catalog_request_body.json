@@ -1,0 +1,21 @@
+{  
+    "@context": {
+        "@vocab": "https://w3id.org/edc/v0.0.1/ns/",
+        "odrl":   "http://www.w3.org/ns/odrl/2/",
+        "cx-taxo": "https://w3id.org/catenax/taxonomy#"
+    },
+    "@type": "CatalogRequest",
+    "counterPartyId":      "bpn_placeholder",
+    "counterPartyAddress": "url_edc_provider_control_plane_base_placeholder",
+    "protocol": "dataspace-protocol-http", 
+    "querySpec": {
+        "@type": "QuerySpec",
+        "filterExpression": [
+            {
+                "operandLeft": "'http://purl.org/dc/terms/type'.'@id'",
+                "operator": "=",
+                "operandRight": "https://w3id.org/catenax/taxonomy#Submodel" 
+            }
+        ]
+    }
+}
