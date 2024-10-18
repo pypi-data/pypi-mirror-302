@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: test-package-bikarnap
+Version: 0.1
+Summary: A test python package
+Home-page: UNKNOWN
+Author: Bikarna Pokharel
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: requests
+
+UNKNOWN
+
+
