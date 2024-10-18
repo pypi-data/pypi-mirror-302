@@ -1,0 +1,2 @@
+odoo12-addon-account_payment_order
+odoo<12.1dev,>=12.0a
