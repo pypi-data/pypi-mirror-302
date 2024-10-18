@@ -1,0 +1,8 @@
+MANIFEST.in
+README.md
+setup.py
+mac_batch_screenshot_renamer_ai.egg-info/PKG-INFO
+mac_batch_screenshot_renamer_ai.egg-info/SOURCES.txt
+mac_batch_screenshot_renamer_ai.egg-info/dependency_links.txt
+mac_batch_screenshot_renamer_ai.egg-info/requires.txt
+mac_batch_screenshot_renamer_ai.egg-info/top_level.txt
