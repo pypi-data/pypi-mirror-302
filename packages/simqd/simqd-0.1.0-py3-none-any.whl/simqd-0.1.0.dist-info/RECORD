@@ -1,0 +1,10 @@
+simqdsvr/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+simqdsvr/debug.py,sha256=DSElydHazGW4jRcg9bfQ4NWmACvM_1Mvs4H_I9067ww,356
+simqdsvr/service_providers.py,sha256=iMh9YN_Hf7kTXporvfnDeX5Yn5Yq2vzLva-iz_m94_g,1930
+simqdsvr/simqd.py,sha256=REhG_6crnBoXJMz3j-8CsX9AWHbmWfDzMWXFCc3TsNA,3122
+simqd-0.1.0.dist-info/LICENSE,sha256=HrhfyXIkWY2tGFK11kg7vPCqhgh5DcxleloqdhrpyMY,11558
+simqd-0.1.0.dist-info/METADATA,sha256=rlmOaMR6gIPJRjcYuUerivZxnLB5TIfNIgZFju2r-l0,1720
+simqd-0.1.0.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+simqd-0.1.0.dist-info/entry_points.txt,sha256=Id4Ufx10MUbKDDqyow-NZC-Fo2NlvcvbB0xxOFtjDIY,46
+simqd-0.1.0.dist-info/top_level.txt,sha256=o3NUEXay0oA2ssDbJcMdCuJLMt4Zlc_sweTwnXAtfDs,9
+simqd-0.1.0.dist-info/RECORD,,
