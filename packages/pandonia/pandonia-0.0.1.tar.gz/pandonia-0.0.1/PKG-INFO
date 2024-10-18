@@ -1,0 +1,16 @@
+Metadata-Version: 2.3
+Name: pandonia
+Version: 0.0.1
+Summary: Placeholder package for pandonia
+Project-URL: Homepage, https://github.com/LuftBlick/pandora-data-handler
+Project-URL: Issues, https://github.com/LuftBlick/pandora-data-handler
+Author-email: Bernhard Eder <bernhard.eder@luftblick.at>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+
+# pandora-data-handler
+This repository is a placeholder for the development of a utility interface for interacting with the Pandora network.
