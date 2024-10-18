@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: senren
+Version: 0.1.1
+Summary: Senren Python SDK
+Author: Aleksandr Bogdanov
+Author-email: alex@senren.io
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: grpcio (>=1.66.1,<2.0.0)
+Requires-Dist: isodate (>=0.6.1,<0.7.0)
+Requires-Dist: protobuf (==5.27.2)
+Requires-Dist: pydantic (>=2.8.2,<3.0.0)
+Requires-Dist: pydantic-settings (>=2.6.0,<3.0.0)
+Requires-Dist: typer[all] (>=0.12.3,<0.13.0)
+Description-Content-Type: text/markdown
+
+# Senren Python SDK
+
+Test.

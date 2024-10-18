@@ -1,0 +1,3 @@
+[console_scripts]
+senren=senren.cli.senren_cli:app
+
