@@ -1,0 +1,13 @@
+libclang==18.1.1
+click
+
+[dev]
+build
+pre-commit
+
+[docs]
+sphinx
+myst-parser
+
+[test]
+pytest
