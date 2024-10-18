@@ -1,0 +1,10 @@
+psr1983_mymath_package/__init__.py,sha256=x5s7HxGki-4ePQ6r7wqN2IOAKCjnl6xv4QZH5b6ZuXQ,56
+psr1983_mymath_package/add.py,sha256=Q8hzB2R0FDlFtEmCG0EUuKfGCs2CVy5Wsb3ffwChnus,66
+psr1983_mymath_package/subtract.py,sha256=TiaA8uTr8iULLAkbZa1-i-d4roGmyelI0WOewhtePaE,78
+psr1983_mymath_package/misc/__init__.py,sha256=i-hhu8z6VNj7mEkgR4f60FDnmHBhComsWkpEJTD5VmI,64
+psr1983_mymath_package/misc/divide.py,sha256=Vvr3tH-vUHdlVXIlGfIpsMczWsbmkJnFEcVVdqeYByE,71
+psr1983_mymath_package/misc/multiply.py,sha256=Ybymv2JziLOSl_0_F3sKje4QcW-Zou618IXyhGNsrRI,76
+psr1983_mymath_package-1.0.dist-info/METADATA,sha256=wR4BL4erV9ONuF9WO6kY0Xj89w0AFxdXtNEz63JK5W4,520
+psr1983_mymath_package-1.0.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+psr1983_mymath_package-1.0.dist-info/top_level.txt,sha256=nH15SoeZ1nYBgvG2Mm1M_bmNOn_tI0y4S9sK2TsYxJU,23
+psr1983_mymath_package-1.0.dist-info/RECORD,,
