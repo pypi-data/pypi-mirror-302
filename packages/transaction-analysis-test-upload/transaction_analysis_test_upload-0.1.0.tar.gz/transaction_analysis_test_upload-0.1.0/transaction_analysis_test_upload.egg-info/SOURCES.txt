@@ -1,0 +1,8 @@
+pyproject.toml
+transaction_analysis_module.py
+transaction_analysis_test_upload.egg-info/PKG-INFO
+transaction_analysis_test_upload.egg-info/SOURCES.txt
+transaction_analysis_test_upload.egg-info/dependency_links.txt
+transaction_analysis_test_upload.egg-info/entry_points.txt
+transaction_analysis_test_upload.egg-info/requires.txt
+transaction_analysis_test_upload.egg-info/top_level.txt

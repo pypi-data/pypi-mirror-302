@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "transaction_analysis_test_upload"
+version = "0.1.0"
+description = "Python package for analyzing financial transactions"
+authors = [{name = "Твое Имя", email = "your-email@example.com"}]
+requires-python = ">=3.8"
+dependencies = ["pandas>=1.1"]
+
+[project.scripts]
+analyze-transactions = "transaction_analysis_module:main"

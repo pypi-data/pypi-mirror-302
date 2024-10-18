@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: transaction_analysis_test_upload
+Version: 0.1.0
+Summary: Python package for analyzing financial transactions
+Author-email: Твое Имя <your-email@example.com>
+Requires-Python: >=3.8
+Requires-Dist: pandas>=1.1
