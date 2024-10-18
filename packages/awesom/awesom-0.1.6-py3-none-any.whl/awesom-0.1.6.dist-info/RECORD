@@ -1,0 +1,16 @@
+awesom/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+awesom/datasets.py,sha256=3Zt0tJqj3FbHrCRr63WbaRZqGfGCFX0uJjhAefiMlA8,1520
+awesom/defaults.py,sha256=Urb5MofpZOq3z32l2800lITNktV3N6L1Y9xeRAO8G_w,113
+awesom/exceptions.py,sha256=KRLTYZQTocojjlRXorwiJTYAYYt7oMLy0_Bw2i5qLzo,124
+awesom/grid.py,sha256=0shVa6FbyUonBoc_7GGWtHXxOIVn7l3dHBXXXmHA8Jc,2358
+awesom/neighbors.py,sha256=JM9R3_4WmObAxce6XMuqwMV_m47ho2Z1okFxLc4--Mk,4337
+awesom/plot.py,sha256=V7WT95hEJ2-m7FtRGSwvC7rXT0p5k0rtjwJayoQVITU,7395
+awesom/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+awesom/som.py,sha256=hfHmP_YWh0mHqHyQWcdX-vxjIOXeDDjqhfG4mGhteeo,10179
+awesom/typing.py,sha256=YbDznO6cuadbc2_VZjkPJLZjr3Ju7X-jBILcUBYM3ks,589
+awesom/utilities.py,sha256=N8H49yVBPM1__pBpAhToNKNjBFpeaO3ACSUbYGrZ23A,6942
+awesom/weights.py,sha256=FRhQBJ2Y2yK0VQv5EEUDLp1IIF_FIeKodwjoV9Vt5Ak,4184
+awesom-0.1.6.dist-info/LICENSE,sha256=e-9T5SGFNDMH8xwE-TFGsKZOZQxCMEjVmHrviju96FM,1521
+awesom-0.1.6.dist-info/METADATA,sha256=M8kohPVq21AHJfDvXsBPnyf-M7BPPgR_iyNt-KkkbjA,2009
+awesom-0.1.6.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+awesom-0.1.6.dist-info/RECORD,,
