@@ -1,0 +1,11 @@
+[build-system]
+requires = [
+    "cmake",
+    "oldest-supported-numpy",
+    "setuptools",
+    "wheel",
+]
+build-backend = "setuptools.build_meta"
+
+[tool.pytest.ini_options]
+testpaths = ["python/tests"]
