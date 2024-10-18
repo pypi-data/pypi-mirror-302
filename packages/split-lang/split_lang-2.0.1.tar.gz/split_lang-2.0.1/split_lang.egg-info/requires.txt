@@ -1,0 +1,5 @@
+fast_langdetect
+pydantic
+budoux
+wordfreq
+wordfreq[cjk]
