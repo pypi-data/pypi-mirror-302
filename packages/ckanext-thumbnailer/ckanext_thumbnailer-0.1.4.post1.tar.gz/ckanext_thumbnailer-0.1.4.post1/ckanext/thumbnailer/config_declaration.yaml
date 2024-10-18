@@ -1,0 +1,23 @@
+version: 1
+groups:
+  - annotation: ckanext-thumbnailer
+    options:
+
+      - key: ckanext.thumbnailer.width
+        type: int
+        default: 256
+        description: |
+          Max width of the thumbnail
+
+      - key: ckanext.thumbnailer.height
+        type: int
+        default: 256
+        description: |
+          Max height of the thumbnail
+
+      - key: ckanext.thumbnailer.max_remote_size
+        type: int
+        default: 0
+        description: |
+          Generate thumbnails for remote resource if its size does not exceeds
+          this limit

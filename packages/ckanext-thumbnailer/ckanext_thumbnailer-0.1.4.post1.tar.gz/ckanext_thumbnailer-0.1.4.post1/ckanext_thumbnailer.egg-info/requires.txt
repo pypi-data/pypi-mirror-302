@@ -1,0 +1,7 @@
+typing_extensions
+preview-generator
+ckanext-toolbelt
+ckanext-files<2.0,>=1.0.0a0
+
+[all]
+preview-generator[all]
