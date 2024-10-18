@@ -1,0 +1,8 @@
+setup.py
+kindness/__init__.py
+kindness/core.py
+kindness.egg-info/PKG-INFO
+kindness.egg-info/SOURCES.txt
+kindness.egg-info/dependency_links.txt
+kindness.egg-info/entry_points.txt
+kindness.egg-info/top_level.txt
