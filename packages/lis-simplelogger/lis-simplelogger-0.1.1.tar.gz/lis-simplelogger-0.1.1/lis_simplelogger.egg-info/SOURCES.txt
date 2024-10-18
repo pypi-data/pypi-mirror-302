@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+lis_simplelogger/__init__.py
+lis_simplelogger/lis_simplelogger.py
+lis_simplelogger.egg-info/PKG-INFO
+lis_simplelogger.egg-info/SOURCES.txt
+lis_simplelogger.egg-info/dependency_links.txt
+lis_simplelogger.egg-info/top_level.txt
