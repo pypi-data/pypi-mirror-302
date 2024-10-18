@@ -1,0 +1,8 @@
+pyramid>=1.7
+
+[linting]
+ruff~=0.7.0
+
+[testing]
+pytest~=8.3
+webtest~=3.0
