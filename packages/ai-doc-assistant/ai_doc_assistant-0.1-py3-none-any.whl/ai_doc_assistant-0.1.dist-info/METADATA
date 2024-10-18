@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: ai-doc-assistant
+Version: 0.1
+Summary: AI-Powered Documentation Assistant for generating code documentation
+Home-page: UNKNOWN
+Author: Your Name
+Author-email: thamimansari358@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: markdown
+Requires-Dist: scikit-learn
+Requires-Dist: transformers
+
+1. Create a virtual environment:
+   ```
+   python -m venv venv
+   ```
+2. Activate the virtual environment:
+   - On Windows:
+     ```
+     venv\Scripts\activate
+     ```
+   - On macOS and Linux:
+     ```
+     source venv/bin/activate
+     ```
+3. Install the required Python packages:
+   ```
+   pip install -r requirements.txt
+
