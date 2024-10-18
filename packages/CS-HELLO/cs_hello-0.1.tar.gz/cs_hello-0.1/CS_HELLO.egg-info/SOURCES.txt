@@ -1,0 +1,8 @@
+README.md
+setup.py
+CS_HELLO/__init__.py
+CS_HELLO/main.py
+CS_HELLO.egg-info/PKG-INFO
+CS_HELLO.egg-info/SOURCES.txt
+CS_HELLO.egg-info/dependency_links.txt
+CS_HELLO.egg-info/top_level.txt
