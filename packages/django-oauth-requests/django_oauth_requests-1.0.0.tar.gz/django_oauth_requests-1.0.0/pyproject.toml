@@ -1,0 +1,51 @@
+[project]
+name = "django-oauth-requests"
+version = "1.0.0"
+authors = [
+  { name="Pavel Mises", email="id@dqd.cz" },
+]
+description = "Package for OAuth 2.0 authentication with requests"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "requests",
+    "django>=5.0"
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Repository = "https://github.com/dqd/django-oauth-requests"
+Issues = "https://github.com/dqd/django-oauth-requests/issues"
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.ruff]
+line-length = 120
+target-version = "py38"
+
+[tool.ruff.lint]
+# see https://docs.astral.sh/ruff/rules/
+select = [
+    "F", # pyflakes
+    "E", # pycodestyle errors
+    "W", # pycodestyle warnings
+    "I", # isort
+    "N", # pep8-naming
+    "UP", # pyupgrade
+    "DJ", # flake8-django
+    "B", # flake8-bugbear
+    "A", # flake8-builtins
+    "SIM", # flake8-simplify
+    "TCH", # flake8-type-checking
+    "PTH", # flake8-use-pathlib
+    "RUF", # ruff-specific rules
+]
+ignore = [
+    "RUF012", # mandatory ClassVar in mutable class attributes
+]
