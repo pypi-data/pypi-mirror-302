@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+PyMergers/__init__.py
+PyMergers/main.py
+PyMergers.egg-info/PKG-INFO
+PyMergers.egg-info/SOURCES.txt
+PyMergers.egg-info/dependency_links.txt
+PyMergers.egg-info/entry_points.txt
+PyMergers.egg-info/requires.txt
+PyMergers.egg-info/top_level.txt
+PyMergers/models/pymerger_model.tflite
