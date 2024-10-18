@@ -1,0 +1,87 @@
+[tool.poetry]
+name = "tomtom-apis"
+version = "v0.0.1a2"
+description = "Asynchronous Python client for the TomTom APIs"
+authors = ["Sander Gols <developer@golles.nl>"]
+license = "MIT"
+readme = "README.md"
+documentation = "https://github.com/golles/tomtom-apis-python"
+homepage = "https://github.com/golles/tomtom-apis-python"
+repository = "https://github.com/golles/tomtom-apis-python"
+packages = [{ include = "tomtom_apis", from = "src" }]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Framework :: AsyncIO",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+
+[tool.poetry.urls]
+"Bug Tracker" = "https://github.com/golles/tomtom-apis-python/issues"
+
+[tool.poetry.dependencies]
+aiohttp = "^3.10.0"
+geojson = "^3.1.0"
+mashumaro = "^3.13"
+orjson = "^3.10.5"
+python = "^3.12"
+
+[tool.poetry.group.dev.dependencies]
+aresponses = "^3.0.0"
+mypy = "^1.11.1"
+pre-commit = "^4.0.0"
+pylint = "^3.2.3"
+pytest = "^8.2.2"
+pytest-asyncio = "^0.24.0"
+pytest-cov = "^5.0.0"
+ruff = "^0.6.3"
+shellcheck-py = "^0.10.0.1"
+yamllint = "^1.35.1"
+
+[tool.coverage.run]
+source = ["tomtom_apis"]
+
+[tool.mypy]
+python_version = "3.12"
+enable_incomplete_feature = ["NewGenericSyntax"]
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = "aresponses.*"
+ignore_missing_imports = true
+
+[tool.pylint]
+max-line-length=150
+
+[tool.pytest.ini_options]
+addopts = "--cov --cov-report=term --cov-report=xml"
+asyncio_mode = "auto"
+log_cli = true
+log_cli_level = "DEBUG"
+
+[tool.ruff]
+line-length = 150
+target-version = "py312"
+
+[tool.ruff.lint]
+extend-select = [
+  "UP",  # pyupgrade
+  "D",  # pydocstyle
+  "ANN",  # flake8-annotations
+]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.ruff.lint.isort]
+known-first-party = ["tomtom_apis"]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
