@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+eagle_downloader.egg-info/PKG-INFO
+eagle_downloader.egg-info/SOURCES.txt
+eagle_downloader.egg-info/dependency_links.txt
+eagle_downloader.egg-info/entry_points.txt
+eagle_downloader.egg-info/requires.txt
+eagle_downloader.egg-info/top_level.txt
+tests/__init__.py
+tests/main.py
