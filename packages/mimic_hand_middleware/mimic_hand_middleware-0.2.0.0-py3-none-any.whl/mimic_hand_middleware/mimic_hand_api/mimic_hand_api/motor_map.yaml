@@ -1,0 +1,42 @@
+# Motor map of the P04 hand
+# Links the motor wiring ids specified in the README.md
+# to the uart and motor ids used in the communication
+# pipeline with the RP2040 boards.
+motor_map:
+  1: {uart_id : 1, motor_id : 1}
+  2: {uart_id : 1, motor_id : 2}
+  3: {uart_id : 1, motor_id : 3}
+  4: {uart_id : 2, motor_id : 2}
+  5: {uart_id : 2, motor_id : 3}
+  6: {uart_id : 1, motor_id : 0}
+  7: {uart_id : 2, motor_id : 0}
+  8: {uart_id : 2, motor_id : 1}
+  9: {uart_id : 4, motor_id : 2}
+  10: {uart_id : 4, motor_id : 3}
+  11: {uart_id : 3, motor_id : 3}
+  12: {uart_id : 3, motor_id : 2}
+  13: {uart_id : 4, motor_id : 1}
+  14: {uart_id : 3, motor_id : 0}
+  15: {uart_id : 4, motor_id : 0}
+  16: {uart_id : 3, motor_id : 1}
+
+# motor wiring id to ros middleware convention map
+middleware_convention_map:
+  0: 4
+  1: 16
+  2: 5
+  3: 8
+  4: 12
+  5: 14
+  6: 4
+  7: 3
+  8: 1
+  9: 7
+  10: 13
+  11: 10
+  12: 6
+  13: 15
+  14: 9
+  15: 2
+# uart ids of the motor boards
+motor_board_uart_ids: [1, 2, 3, 4]
