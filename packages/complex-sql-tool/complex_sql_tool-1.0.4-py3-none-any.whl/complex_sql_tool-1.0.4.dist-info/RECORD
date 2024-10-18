@@ -1,0 +1,11 @@
+mylib/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mylib/extract.py,sha256=vEK3XB-_BC5GWoYfoDUBMowoKrWlJukq06yVNGvj99M,735
+mylib/main.py,sha256=SBYXIc3avxI2s02kXPTcVqizE9tpNS3RH1Cblq5y1JE,1194
+mylib/query.py,sha256=3HDvKxJQbREJbqVLopiyWnVCZgScMdvZq7Fk9Ypv9f8,1182
+mylib/transform_load.py,sha256=opBoxeiDUqh_hqayCb2hQlGISc3PXWpPEIZIGkJlSps,3555
+complex_sql_tool-1.0.4.dist-info/LICENSE,sha256=hEGmhGUF760lI0S2STESInkS004rvVmedHNfKQdS6h4,1074
+complex_sql_tool-1.0.4.dist-info/METADATA,sha256=qBjc09iFxISfDZtOlwdvlclSAUzE8P4gRxi7Bt_WJRs,8750
+complex_sql_tool-1.0.4.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+complex_sql_tool-1.0.4.dist-info/entry_points.txt,sha256=7emdk6BGek1EmNec9hmQuWKw1MwaVm04HmARH1siC_g,53
+complex_sql_tool-1.0.4.dist-info/top_level.txt,sha256=1LTp5GCQdxcjv7rqviaVv6ASBqjeO5ypxYUQOgqm0LM,6
+complex_sql_tool-1.0.4.dist-info/RECORD,,
