@@ -1,0 +1,13 @@
+CHANGELOG.md
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+mlcvzoo_mmocr/__init__.py
+mlcvzoo_mmocr/configuration.py
+mlcvzoo_mmocr/mlcvzoo_mmocr_dataset.py
+mlcvzoo_mmocr/model.py
+mlcvzoo_mmocr/py.typed
+mlcvzoo_mmocr/structs.py
+mlcvzoo_mmocr/text_detection_model.py
+mlcvzoo_mmocr/text_recognition_model.py
