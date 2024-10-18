@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: zeconfig
+Version: 0.0.5
+Summary: Configuration Manager Package
+License: AGPL-3.0
+Author: Uadson Feitosa
+Author-email: uadsonpy@gmail.com
+Requires-Python: >=3.11
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: tomli (>=2.0.0,<3.0.0) ; python_version < "3.11"
+Description-Content-Type: text/markdown
+
+
