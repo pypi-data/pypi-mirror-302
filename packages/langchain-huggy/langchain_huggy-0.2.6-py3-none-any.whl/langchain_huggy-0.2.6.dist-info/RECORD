@@ -1,0 +1,15 @@
+langchain_huggy/__init__.py,sha256=uyb9_dAcrBb9eVH7EY4vk-y2ulG8WpZWdnsZy2Npr6A,87
+langchain_huggy/core/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+langchain_huggy/core/_base_huggy_chat.py,sha256=vk2heLvntkXtznyjc7zb7YE9893GtHpv8Mxs6lxHOY0,4001
+langchain_huggy/core/_base_llm.py,sha256=5gyBRwbGDyY9VKhxGtKmvWXoe5HwAXCuAjxHdVKZUzM,680
+langchain_huggy/core/_base_login.py,sha256=oBLqSfzN8AdS1XOvbNVEJPunEE4GsbgpmAVSzRdmGN4,584
+langchain_huggy/server/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+langchain_huggy/server/api.py,sha256=se2-3CBcOs4vz75vywhVtjtpso5seYNa0HSZ58BZ0Mo,7365
+langchain_huggy/server/simple_streamlit_app.py,sha256=hTEPQy5iSjccVuUtqnk-Q39_eO5MuBDOZq8cRdofUZg,1242
+langchain_huggy/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+langchain_huggy/utils/const.py,sha256=ZidIfsB1cDf4NXT06_QF8O4Nnd3tK9sdjS-KtrYXvgE,373
+langchain_huggy-0.2.6.dist-info/LICENSE,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+langchain_huggy-0.2.6.dist-info/METADATA,sha256=jLoQtz4JRH7OOUYYFQacvCmwqUNnz0B1nfZZhAxS22k,3904
+langchain_huggy-0.2.6.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+langchain_huggy-0.2.6.dist-info/top_level.txt,sha256=i23p9ZEvWU-P1Uyu7Ekz29BusnuwV0veGov7TY3A0-4,16
+langchain_huggy-0.2.6.dist-info/RECORD,,
