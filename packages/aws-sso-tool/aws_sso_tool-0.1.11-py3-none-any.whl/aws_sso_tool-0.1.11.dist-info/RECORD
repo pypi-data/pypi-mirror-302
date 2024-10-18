@@ -1,0 +1,12 @@
+aws_sso_tool/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aws_sso_tool/auth.py,sha256=9xzDzGfX_x94rLQZ6tZ2TSO2AHXtshiMkENDHrOhIts,3837
+aws_sso_tool/cli.py,sha256=NSg0bGZEnaxkSB6UcRfj7Fo4f8BFzwYdJLf6A6EWRLc,1403
+aws_sso_tool/ec2_operations.py,sha256=hvkzjX4fIrTPXArVzNMYi-1fKGuCVFH2nr5WSrNFJy8,983
+aws_sso_tool/s3_operations.py,sha256=QMQ-Bdda3HnxeHx5xPsbE11h8hTdMGlAzXMRoUj5lcg,2205
+aws_sso_tool/utils.py,sha256=-GITGMgSIY6efJkm7IkGoCwsrtKPZy3-ef1IpT_yz58,2763
+aws_sso_tool-0.1.11.dist-info/LICENSE,sha256=gMTom44gUAJQjFXL5agGBFNx_3O3tmn1H-NuDIsCUDk,1068
+aws_sso_tool-0.1.11.dist-info/METADATA,sha256=b5bBOwtHwBYsl_5pK6vyqptFqoq73QpWtbi-29IqPW0,5916
+aws_sso_tool-0.1.11.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+aws_sso_tool-0.1.11.dist-info/entry_points.txt,sha256=QBnOO5prx8WuXfHOOfTC4IRJyqEpfbr-KTHRPbSBgz0,55
+aws_sso_tool-0.1.11.dist-info/top_level.txt,sha256=KfEY4Zhp7n9YeCb-bBiKsYR0Ik2hACFfXxKAfd00pYc,13
+aws_sso_tool-0.1.11.dist-info/RECORD,,
