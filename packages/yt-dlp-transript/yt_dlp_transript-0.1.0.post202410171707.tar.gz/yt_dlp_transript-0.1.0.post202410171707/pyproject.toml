@@ -1,0 +1,11 @@
+[project]
+name = "yt-dlp-transript"
+version = "0.1.0-202410171707"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "yt_dlp",
+    "ConfigArgParse",
+    "srt",
+]

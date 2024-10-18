@@ -1,0 +1,6 @@
+pyproject.toml
+yt_dlp_transript.egg-info/PKG-INFO
+yt_dlp_transript.egg-info/SOURCES.txt
+yt_dlp_transript.egg-info/dependency_links.txt
+yt_dlp_transript.egg-info/requires.txt
+yt_dlp_transript.egg-info/top_level.txt
