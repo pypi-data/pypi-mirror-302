@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+src/Inputron/__init__.py
+src/Inputron/main.py
+src/Inputron.egg-info/PKG-INFO
+src/Inputron.egg-info/SOURCES.txt
+src/Inputron.egg-info/dependency_links.txt
+src/Inputron.egg-info/top_level.txt
