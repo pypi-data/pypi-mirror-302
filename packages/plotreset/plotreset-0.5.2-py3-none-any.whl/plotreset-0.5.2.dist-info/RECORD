@@ -1,0 +1,11 @@
+plotreset/__init__.py,sha256=4TR3kDQdipNBGju7Xy7SAmQ7aZeqB1lMM3OIf7NJW-E,248
+plotreset/custom.py,sha256=CUvpk9dYB3VZLtPuAWdCPwdOFPU2NYrIZCmwHJUAdIY,752
+plotreset/defaults.py,sha256=gMgmOT1EUwCohPgMJFR4SLLmk2kbaV3vY3MvdetryFI,1410
+plotreset/json_operations.py,sha256=jqI1Fc_dRlfbRgQgVIQ3x4NOCRSI_JDWDMjyPglzlSs,1173
+plotreset/styles.py,sha256=XjmzV-umYETCcNAjk6DFkIH-x1v_feIv6elg-tcqdjg,7259
+plotreset/templates.py,sha256=B5eUMDS3MWog9iWg6BAFDSFEa7snkl0ybNB-RH1UWZs,2999
+plotreset-0.5.2.dist-info/LICENSE,sha256=wffJb0FcWTHqV0Nr7Fp9MbBWjo1dlzVtig7wvSWDUVE,1074
+plotreset-0.5.2.dist-info/METADATA,sha256=heGzWP_LvMQX-uUG9AQD8vhwDwvb4g2oKxQcXNTlBQo,8875
+plotreset-0.5.2.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+plotreset-0.5.2.dist-info/top_level.txt,sha256=61XPhdSKC_uX2UYj9KKrcEc0lXjhsAGGQA5AkBs0NI4,10
+plotreset-0.5.2.dist-info/RECORD,,
