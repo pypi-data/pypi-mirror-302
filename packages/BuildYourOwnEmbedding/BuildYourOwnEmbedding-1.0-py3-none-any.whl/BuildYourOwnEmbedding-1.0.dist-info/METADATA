@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: BuildYourOwnEmbedding
+Version: 1.0
+License-File: LICENSE
+Requires-Dist: numpy >=1.24.0
+Requires-Dist: matplotlib >=3.9.1
+Requires-Dist: matplotlib-inline >=0.1.6
+Requires-Dist: typing-extensions >=4.4.0
+Requires-Dist: mplcursors >=0.5.3
+Requires-Dist: scikit-learn >=1.3.0
+
