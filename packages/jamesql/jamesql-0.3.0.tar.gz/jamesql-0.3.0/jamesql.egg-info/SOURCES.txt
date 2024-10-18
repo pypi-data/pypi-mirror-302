@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.py
+jamesql/__init__.py
+jamesql/index.py
+jamesql/query_simplifier.py
+jamesql/rewriter.py
+jamesql/script_lang.py
+jamesql.egg-info/PKG-INFO
+jamesql.egg-info/SOURCES.txt
+jamesql.egg-info/dependency_links.txt
+jamesql.egg-info/requires.txt
+jamesql.egg-info/top_level.txt
+tests/test.py
