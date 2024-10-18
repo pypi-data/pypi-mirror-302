@@ -1,0 +1,6 @@
+pytest==7.1.2
+pydash>=7.0.3
+pydantic==1.10.17
+pytz==2024.2
+workalendar==17.0.0
+setuptools_scm
