@@ -1,0 +1,8 @@
+"""text-structurizer package."""
+
+from amplifai.examples import Example
+from amplifai.amplifier import Amplifier
+
+
+__version__ = "0.0.1"
+__all__ = ["Amplifier", "Example"]

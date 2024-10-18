@@ -1,0 +1,9 @@
+amplifai/__init__.py,sha256=6g7o00TBgBRet8cEBqwZmyN1tR2di_rVrkqIzzWHNgM,172
+amplifai/amplifier.py,sha256=Te3Ef_kkI0WdFT_FiZ4VVohrtLc-hg8EWIfXx2eIzUo,7253
+amplifai/examples.py,sha256=sszGeIFI3gSI7wBO7kWIOKnpHV1KkK3KSrIMzOJCGrE,632
+amplifai/prompt.py,sha256=JAwCHXos1bAPmq_aIpb9SvRGBeZ6vId3p_j1NqyS9Lo,913
+amplifai/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+amplifai-0.0.1.dist-info/METADATA,sha256=i3Eqrb99OSYio-Zif6oO-LKoMf9lirRNVO6qAvpYvmQ,1312
+amplifai-0.0.1.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+amplifai-0.0.1.dist-info/top_level.txt,sha256=DU-27Y3xSGS1l1EUuQcjib95nbmXv9Uf17clw6QPN4I,9
+amplifai-0.0.1.dist-info/RECORD,,
