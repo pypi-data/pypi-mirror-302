@@ -1,0 +1,16 @@
+django_temporalio/__init__.py,sha256=h8PP0-3YBcKNSe81Cq6UaAKCfUnuvUeTlGK0SfYruRk,269
+django_temporalio/apps.py,sha256=dXHtbDSskIAKkSRwvBnPXeabt8_7enVR3LxS26tk-Cg,156
+django_temporalio/client.py,sha256=rlNL_GBzmW4KqWsQCscx6ZXuXU26dkOZyESo4vnmNR8,247
+django_temporalio/conf.py,sha256=mY2jgzB53BXFFEi5l_3q4k4Yw9k8O00fTwSrwAxl97I,1609
+django_temporalio/registry.py,sha256=Wfrkv83Bnoc9aOyma59sKJJzzy66pTwNpPX7HxsBf5Q,3280
+django_temporalio/utils.py,sha256=b3LgpGxi2b-5QPpWvnbs1bePaoGePtJDisNcUbGDMYU,1303
+django_temporalio/management/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_temporalio/management/commands/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_temporalio/management/commands/show_temporalio_queue_registry.py,sha256=lr865j6heabXpNBPdgmLdBiauPpYvxZa1BkUap5VngY,825
+django_temporalio/management/commands/start_temporalio_worker.py,sha256=3KCJcpWLImgKbnAQKdKVp6YaMDAhic7mikiFHUL3Ifc,2889
+django_temporalio/management/commands/sync_temporalio_schedules.py,sha256=KA-agRDHu9edt-RZYdgrVDAyuAcw1FeydZUTaVcD3NU,2360
+django_temporalio-1.2.0.dist-info/LICENSE,sha256=zBdKrsfeBfTnu6-vX8xzZiY3MtuixudqbUBeINu_W6w,1073
+django_temporalio-1.2.0.dist-info/METADATA,sha256=RPRtudBTrj_vmgROqDfDc7e0MjU5ilvvVp8KT7jm9Qg,4674
+django_temporalio-1.2.0.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+django_temporalio-1.2.0.dist-info/top_level.txt,sha256=5NOHTnvgNeknC07sRsh0LMn2GJFPNixX8iXNZjLy4hY,18
+django_temporalio-1.2.0.dist-info/RECORD,,
