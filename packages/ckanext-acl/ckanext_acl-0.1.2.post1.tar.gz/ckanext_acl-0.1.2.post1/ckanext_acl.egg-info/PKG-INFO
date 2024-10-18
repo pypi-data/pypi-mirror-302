@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: ckanext-acl
+Version: 0.1.2.post1
+Author-email: Sergey Motornyuk <sergey.motornyuk@linkdigital.com.au>
+License: AGPL
+Project-URL: Homepage, https://github.com//ckanext-acl
+Keywords: CKAN
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
