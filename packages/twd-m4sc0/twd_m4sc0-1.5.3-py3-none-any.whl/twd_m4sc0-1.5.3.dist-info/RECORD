@@ -1,0 +1,12 @@
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_twd.py,sha256=XrxOo99oqida_7qZ48pA6BCazZekDmG5syw9NvjZWDU,484
+twd/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+twd/__main__.py,sha256=gM_Py51pQFH3CXdDIuPzBW6eNlFH1UHeRAmgAPWQyik,61
+twd/logger.py,sha256=Pmhh4sOB-HyJAVBSwiESGRJElJoJ4Anhn-HVF8vxXzY,1595
+twd/twd.py,sha256=rxJfgwCxIe9_FJoIqW6YVxDexJ0cQLZwgpt29yo18Ac,10329
+twd_m4sc0-1.5.3.dist-info/LICENSE,sha256=eQSDjcD_fvOwfjmrzxKJhtZsSI39seMawuvsgeD_dfw,1062
+twd_m4sc0-1.5.3.dist-info/METADATA,sha256=_pAPojkgAayJcfM1_35OtAOJIsZYihiR9anNp5TCecg,3009
+twd_m4sc0-1.5.3.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+twd_m4sc0-1.5.3.dist-info/entry_points.txt,sha256=QfYDHHjipkVN4oalpACFmIeYHb7GQCJY4SC12bTsiQQ,37
+twd_m4sc0-1.5.3.dist-info/top_level.txt,sha256=PXToru2Yr2Xh3F_F-pHXtuOQVp5x7KKCPFf94P_VI5U,10
+twd_m4sc0-1.5.3.dist-info/RECORD,,
