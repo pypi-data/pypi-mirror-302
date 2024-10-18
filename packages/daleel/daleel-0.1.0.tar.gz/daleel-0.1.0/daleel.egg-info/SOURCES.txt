@@ -1,0 +1,8 @@
+MANIFEST.in
+README.md
+setup.py
+daleel/__init__.py
+daleel.egg-info/PKG-INFO
+daleel.egg-info/SOURCES.txt
+daleel.egg-info/dependency_links.txt
+daleel.egg-info/top_level.txt
