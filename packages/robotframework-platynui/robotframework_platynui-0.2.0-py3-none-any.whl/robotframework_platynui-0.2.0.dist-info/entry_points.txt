@@ -1,0 +1,2 @@
+[console_scripts]
+PlatynUI.UiAutomation.Spy = PlatynUI.Extension.Win32.UiAutomation.spy.__main__:main
