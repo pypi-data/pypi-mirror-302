@@ -1,0 +1,2 @@
+[console_scripts]
+lab-DM-control = asgard_lab_DM_tools.asgard_lab_DM_controller:start_gui
