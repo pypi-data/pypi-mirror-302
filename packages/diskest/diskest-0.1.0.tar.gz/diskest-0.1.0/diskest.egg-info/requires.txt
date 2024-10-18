@@ -1,0 +1,13 @@
+click==8.1.7
+distro==1.9.0
+rich==13.9.2
+pyyaml==6.0.2
+psutil==6.0.0
+reportlab==4.2.5
+
+[dev]
+pytest==8.3.3
+pytest-cov==5.0.0
+pytest-mock==3.14.0
+black==24.10.0
+flake8==7.1.1
