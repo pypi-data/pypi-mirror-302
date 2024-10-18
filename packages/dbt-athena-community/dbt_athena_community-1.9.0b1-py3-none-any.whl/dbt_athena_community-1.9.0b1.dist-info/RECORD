@@ -1,0 +1,4 @@
+dbt/adapters/athena_community/__init__.py,sha256=stuQw2rI2sCBabh6ZVSq0ImMTVuWO28urkBk5vwGs4k,87
+dbt_athena_community-1.9.0b1.dist-info/METADATA,sha256=IXWlDBMXPhh31MGMHUT4fBzDmeiG8lE5mruSgQwBXr0,36140
+dbt_athena_community-1.9.0b1.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+dbt_athena_community-1.9.0b1.dist-info/RECORD,,
