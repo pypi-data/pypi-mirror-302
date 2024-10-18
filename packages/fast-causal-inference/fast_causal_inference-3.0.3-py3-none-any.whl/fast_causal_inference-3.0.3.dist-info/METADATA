@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: fast-causal-inference
+Version: 3.0.3
+Summary: fast causal inference package
+Home-page: 
+Author: ['cooperxiong', 'easonsliu', 'fhbai', 'broccozhang']
+Author-email: ['cooperxiong@tencent.com', 'easonsliu@tencent.com', 'fhbai@tencent.com', 'broccozhang@tencent.com']
+License: Apache License 2.0
+Platform: all
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.6.0
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pandas
+Requires-Dist: matplotlib
+Requires-Dist: clickhouse-driver
+Requires-Dist: seaborn
+Requires-Dist: requests
+Requires-Dist: graphviz
+Requires-Dist: statsmodels
+Requires-Dist: pyyaml
+Requires-Dist: py4j>=0.10.9
+Requires-Dist: scikit-Learn
+Requires-Dist: pypinyin
+Requires-Dist: protobuf>=3.20.0
+Requires-Dist: pytest
+Requires-Dist: pytest-xdist
+Requires-Dist: pymysql
+
+causal inference package.
+contain ols, ttest, delta-method etc...
+
+install:
+yum install -y libjpeg-devel
+yum install python3-devel -y
+yum install python-devel -y
+yum install postgresql-devel* -y
+yum install gcc-c++ -y
+
+pip3.6 install requests
