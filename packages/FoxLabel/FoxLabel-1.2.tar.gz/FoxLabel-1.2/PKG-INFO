@@ -1,0 +1,51 @@
+Metadata-Version: 2.1
+Name: FoxLabel
+Version: 1.2
+Summary: Thư viện hữu ích của Tuấn Anh.
+Home-page: https://pypi.org/project/FoxLabel/
+Author: Tuấn Anh - Foxconn
+Author-email: nt.anh.fai@gmail.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: lxml
+Requires-Dist: opencv-python
+Requires-Dist: ruamel.yaml
+Requires-Dist: pyyaml
+Requires-Dist: ntanh
+
+# Giới thiệu
+FoxLabel là một công cụ đánh nhãn hình ảnh đồ họa chuyên cho training Yolo.
+
+# Cài đặt bằng các cách sau:
+
+```bash
+pip install FoxLabel
+
+``` 
+
+# Cách dùng:
+
+Chạy bằng 1 trong 2 cách sau:
+
+```bash
+ntanh_foxlabel
+FoxLabel
+```
+
+### 1. Chạy chương trình
+Command: `ntanh_foxlabel`, `FoxLabel`
+
+### 1. Help
+Command: `ntanh`, 
+
+Lệnh này sẽ hiển thị help có các trường hợp sử dụng cơ bản
+
+
+# Version changed
+- Version 1.0:
+    - Release date: 2024-10-18
+    - Khởi tạo dự án, đẩy lên môi trường cài đặt
+

@@ -1,0 +1,3 @@
+[console_scripts]
+FoxLabel = FoxLabel:start_program
+ntanh_foxlabel = FoxLabel:start_program
