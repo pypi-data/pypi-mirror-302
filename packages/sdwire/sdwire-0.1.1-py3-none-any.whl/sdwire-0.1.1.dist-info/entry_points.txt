@@ -1,0 +1,3 @@
+[console_scripts]
+sdwire=main:main
+
