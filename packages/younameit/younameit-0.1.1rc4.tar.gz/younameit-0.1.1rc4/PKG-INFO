@@ -1,0 +1,62 @@
+Metadata-Version: 2.1
+Name: younameit
+Version: 0.1.1rc4
+Summary: Pseudo random word generator
+Home-page: https://gitlab.com/kamichal/younameit
+Author: Michał Kaczmarczyk
+Author-email: michal.s.kaczmarczyk@gmail.com
+Maintainer: Michał Kaczmarczyk
+Maintainer-email: michal.s.kaczmarczyk@gmail.com
+License: Custom MIT license
+Keywords: random word generator hash translator naming labeler
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: System Administrators
+Classifier: Intended Audience :: Telecommunications Industry
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Programming Language :: Python
+Classifier: Topic :: Database :: Front-Ends
+Classifier: Topic :: Documentation
+Classifier: Topic :: Internet :: WWW/HTTP :: Browsers
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Scientific/Engineering :: Visualization
+Classifier: Topic :: Software Development :: Code Generators
+Classifier: Topic :: Utilities
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pyyaml
+
+# You name it
+
+This is SHA-256 hash value of a phrase `"you name it"`, typed in hex characters set:
+> 2b0aeafda2a056cd4d48628c1cb5405897698c1ca924a04e57d8ab0948a8b4a3
+
+Imagine, could you ever say?
+
+> Yes, I've seen this hash before.
+
+Probably not. Hashes for human brains are extremely hard to memorize.
+
+
+But `you name it` is a python package that translates data into a pseudo-random word. 
+Those are readable and memorable words that mean rather nothing.
+
+Our brains are much better in remembering words, even the
+weirdest ones. When run multiple times with the same data, it will return the same name each time,
+on each python interpreter, on different machines. You can expect strict reproduction of the
+translation results.
+
+This package converts the object you provide into bytes, then feeds `sha` algorithm with it. The input data can be anything complex that can be converted to `bytes` object.
+
+
