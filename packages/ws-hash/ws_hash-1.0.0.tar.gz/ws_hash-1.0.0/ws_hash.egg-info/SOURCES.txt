@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+ws_hash/__init__.py
+ws_hash/ws_hash.py
+ws_hash.egg-info/PKG-INFO
+ws_hash.egg-info/SOURCES.txt
+ws_hash.egg-info/dependency_links.txt
+ws_hash.egg-info/top_level.txt
