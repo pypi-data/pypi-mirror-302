@@ -1,0 +1,7 @@
+pytest
+six
+
+[tests]
+mock; python_version<"3.3"
+pytest-virtualenv
+coverage
