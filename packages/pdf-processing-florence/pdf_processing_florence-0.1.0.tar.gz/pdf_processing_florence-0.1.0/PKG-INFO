@@ -1,0 +1,83 @@
+Metadata-Version: 2.1
+Name: pdf_processing_florence
+Version: 0.1.0
+Summary: A library for processing PDFs with Florence
+Home-page: https://github.com/yourusername/pdf_processing_florence
+Author: Carlos Rosas
+Author-email: carlos@pleias.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pdf2image
+Requires-Dist: Pillow
+Requires-Dist: torch
+Requires-Dist: transformers
+Requires-Dist: PyMuPDF
+
+# PDF Processing Florence
+
+PDF Processing Florence is a Python library designed to streamline the process of converting, analyzing, and extracting information from PDF documents
+
+## Features
+
+- **PDF to JPG Conversion**: Easily convert PDF files to high-quality JPG images.
+- **AI-Powered Document Analysis**: Utilize the Florence model to analyze document structure and content.
+- **Intelligent Text Extraction**: Extract text from PDFs while preserving document structure and layout information.
+
+## Installation
+
+You can install PDF Processing Florence using pip:
+
+```bash
+pip install pdf_processing_florence
+```
+
+## Usage
+
+Here are some basic examples of how to use PDF Processing Florence:
+
+### Converting PDF to JPG
+
+```python
+from pdf_processing_florence import convertpdf_jpg
+
+input_directory = "/path/to/your/pdfs"
+convertpdf_jpg(input_directory)
+```
+
+### Applying Florence AI Analysis
+
+```python
+from pdf_processing_florence import apply_florence
+
+image_directory = "/path/to/your/images"
+output_file = "/path/to/output/annotations.json"
+checkpoint = "/path/to/florence/model"
+
+apply_florence(image_directory, output_file, checkpoint)
+```
+
+### Extracting Text with Structure
+
+```python
+from pdf_processing_florence import extract_text
+
+document_folder = "/path/to/your/pdfs"
+coco_file = "/path/to/annotations.json"
+output_json_file = "/path/to/output/extracted_text.json"
+
+extract_text(document_folder, coco_file, output_json_file)
+```
+
+## Requirements
+
+- Python 3.6+
+- pdf2image
+- Pillow
+- PyTorch
+- Transformers
+- PyMuPDF
+

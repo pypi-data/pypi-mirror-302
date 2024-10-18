@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+src/pdf_processing_florence/__init__.py
+src/pdf_processing_florence/apply_florence.py
+src/pdf_processing_florence/convert.py
+src/pdf_processing_florence/extract_text.py
+src/pdf_processing_florence.egg-info/PKG-INFO
+src/pdf_processing_florence.egg-info/SOURCES.txt
+src/pdf_processing_florence.egg-info/dependency_links.txt
+src/pdf_processing_florence.egg-info/requires.txt
+src/pdf_processing_florence.egg-info/top_level.txt
+tests/test_pdf_processing_florence.py
