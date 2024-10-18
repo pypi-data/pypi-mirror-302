@@ -1,0 +1,2 @@
+[console_scripts]
+complex_sql_tool = main:main
