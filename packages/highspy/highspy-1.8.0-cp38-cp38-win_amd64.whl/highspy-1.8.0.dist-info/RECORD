@@ -1,0 +1,12 @@
+highspy/__init__.py,sha256=byknfT7CiB-YVx1UlyUCXX7CEveCPu7hYN9SN0gez4Y,1903
+highspy/__init__.pyi,sha256=wEn75gn-akrWWpocdsYuvKPMN0p59vA6qF4tKkB8900,2108
+highspy/_core/__init__.pyi,sha256=N3nZPKahrZ19QQr31VgkbAvO8PnEOTjI4cEqE8mTQL4,35766
+highspy/_core/cb.pyi,sha256=cKWZ9myp2HlshoiwxrrIw30eK4-WPx22qpZ3NfcRm10,3342
+highspy/_core/simplex_constants.pyi,sha256=AkIK-9wis7XlCGywllfxIXYDtBYlhBT3OR8_1WtCHtA,18052
+highspy/_core.cp38-win_amd64.pyd,sha256=l3yXOKmdaCHkgwFmEH-trGVwWhN2wn7Pj_Rk37xTtdk,4719104
+highspy/highs.py,sha256=Aj305AwfebzLfijXjRfPndOOdbwsSr35yx3GGWY02SM,91298
+highspy-1.8.0.dist-info/METADATA,sha256=4aWgwoezq0cDOYc7FgjyekjV1oeIsloXP7a43E-9pA8,10424
+highspy-1.8.0.dist-info/WHEEL,sha256=kwS-TzWMc793MQ545g1AsDhyMUJrOZEAGChkok6pUJs,104
+highspy-1.8.0.dist-info/licenses/AUTHORS,sha256=Dk_3o2OsHxDbtDH9S7dlx6Tlz8_vGMvqT7DozpCs2Zk,92
+highspy-1.8.0.dist-info/licenses/LICENSE.txt,sha256=BLbdcGfqzh-cF-k9havwwup6x1fFDZfuHlK2Vv5QsV0,1083
+highspy-1.8.0.dist-info/RECORD,,
