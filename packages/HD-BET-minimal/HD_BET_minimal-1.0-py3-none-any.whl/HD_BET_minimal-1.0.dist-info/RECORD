@@ -1,0 +1,13 @@
+HD_BET_minimal/__init__.py,sha256=2SQRBRkOPX0iMr3uRDOiKyXli5HzVhrrlJQ9f94MTKA,79
+HD_BET_minimal/config.py,sha256=3KR9ODeaXjOOt5Mbd1d3tuG2JrE_Q66WBatL4uXiWig,3753
+HD_BET_minimal/data_loading.py,sha256=7c1BJvZB6EBsPobN7eM4aJFWAgJMj-so8AYjuHJbODs,2919
+HD_BET_minimal/network_architecture.py,sha256=XCvzeweGIJD9xAgh1lwTOjrb3ZZGwxjaCQStjdftqNM,10650
+HD_BET_minimal/padorcut.py,sha256=Gtrf9xyjr8KjP4-mFkeE9cCVF2MA7IAxDGZLkFKZXNE,2763
+HD_BET_minimal/predict_case.py,sha256=PuEVnzDjuFrbSb-YXS-xv49IzuKE2Oud_1UTuVtoZ38,5558
+HD_BET_minimal/run.py,sha256=CK_eL7avNA1OcgHXWorVdgVNnqEg-4LcISYs4d96wTw,3321
+HD_BET_minimal/utils.py,sha256=wvxEx579kSDmYGHbc5Bwsn_pIbdOxGg3uP0KOm_0Vys,5263
+HD_BET_minimal-1.0.dist-info/LICENSE,sha256=xazLvYVG6Uw0rtJK_miaYXYn0Y7tWmxIJ35I21fCOFE,11356
+HD_BET_minimal-1.0.dist-info/METADATA,sha256=qC4Eu5MQUanh57caBE3KFf1Ukej43CT5WQfEsiI3Xt0,605
+HD_BET_minimal-1.0.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+HD_BET_minimal-1.0.dist-info/top_level.txt,sha256=WTKMhy1HGbK2O966ANek1VAR3qIKXAZIhMMZJI6Om3U,15
+HD_BET_minimal-1.0.dist-info/RECORD,,
