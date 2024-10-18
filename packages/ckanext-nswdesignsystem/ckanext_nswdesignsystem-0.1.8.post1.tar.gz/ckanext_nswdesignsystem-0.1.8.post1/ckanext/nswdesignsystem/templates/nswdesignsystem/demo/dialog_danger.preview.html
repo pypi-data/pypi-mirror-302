@@ -1,0 +1,23 @@
+{% from "macros/nswdesignsystem/dialog.html" import dialog with context  %}
+
+{% set id = "dialog" %}
+
+<div class="nsw-block">
+  <button class="nsw-button nsw-button--dark js-open-dialog-{{ id }}" aria-haspopup="dialog">Launch dialog</button>
+</div>
+
+{% call(part) dialog(id) %}
+    {% if part == "title" %}
+        <h2>
+            Delete file permanently?
+        </h2>
+
+    {% elif part == "content" %}
+        <p>If you delete this file, you will not be able to recover it. Do you want to delete?</p>
+
+    {% elif part == "footer" %}
+        <button class="nsw-button nsw-button--dark nsw-button--danger js-close-dialog">Delete</button>
+        <button class="nsw-button nsw-button--dark-outline-solid js-close-dialog">Cancel</button>
+
+    {% endif %}
+{% endcall %}
