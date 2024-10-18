@@ -1,0 +1,8 @@
+README.md
+setup.py
+bobr_tools/__init__.py
+bobr_tools/test.py
+bobr_tools.egg-info/PKG-INFO
+bobr_tools.egg-info/SOURCES.txt
+bobr_tools.egg-info/dependency_links.txt
+bobr_tools.egg-info/top_level.txt

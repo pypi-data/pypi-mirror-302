@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: bobr_tools
+Version: 0.1.0
+Summary: A simple package with a test function
+Home-page: https://github.com/yourusername/bobr_tools
+Author: Artyom Bobr
+Author-email: artyombobr@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+
+# bobr_tools
+
+This is a simple Python package that contains a `test` function that prints "Hello, World!".
