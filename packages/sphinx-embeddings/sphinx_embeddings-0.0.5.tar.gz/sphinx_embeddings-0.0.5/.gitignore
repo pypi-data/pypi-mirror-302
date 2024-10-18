@@ -1,0 +1,10 @@
+GEMINI_API_KEY
+VOYAGE_API_KEY
+build
+dist
+docs/_build
+docs/sphinx-embeddings.log
+sphinx_embeddings.egg-info
+venv
+__pycache__
+.env
