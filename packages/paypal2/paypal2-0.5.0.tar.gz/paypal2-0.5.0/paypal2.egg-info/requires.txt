@@ -1,0 +1,13 @@
+aiohttp
+certifi
+pycryptodome
+pydantic>=2
+ttldict2
+
+[test]
+fastapi
+pytest
+pytest-asyncio
+pytest-httpserver
+pytest-order
+pytest-selenium
