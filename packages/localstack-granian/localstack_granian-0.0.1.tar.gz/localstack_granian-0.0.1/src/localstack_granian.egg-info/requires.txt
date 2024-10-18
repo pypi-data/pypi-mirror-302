@@ -1,0 +1,4 @@
+granian
+
+[dev]
+localstack>=0.0.0.dev

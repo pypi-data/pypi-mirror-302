@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: localstack_granian
+Version: 0.0.1
+Summary: Implementation of localstack with granian gateway
+Author-email: LocalStack contributors <info@localstack.cloud>
+Project-URL: Homepage, https://github.com/localstack/localstack-granian
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.11
+Requires-Dist: granian
+Provides-Extra: dev
+Requires-Dist: localstack>=0.0.0.dev; extra == "dev"

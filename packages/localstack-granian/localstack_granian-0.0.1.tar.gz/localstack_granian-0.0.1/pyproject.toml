@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools", 'wheel']
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "localstack_granian"
+version = "0.0.1"
+authors = [
+  { name="LocalStack contributors", email="info@localstack.cloud" },
+]
+description = "Implementation of localstack with granian gateway"
+requires-python = ">=3.11"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+  "granian"
+]
+
+[project.urls]
+Homepage = "https://github.com/localstack/localstack-granian"
+
+[project.optional-dependencies]
+dev = [
+    "localstack>=0.0.0.dev"
+]
+
+[project.entry-points."localstack.runtime.server"]
+noop = "localstack_granian.noop:NoopRuntimeServerPlugin"
