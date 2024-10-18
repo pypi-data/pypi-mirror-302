@@ -1,0 +1,16 @@
+pipeline2app/xnat/__init__.py,sha256=ZFJvqSOBEIhzNQWD-zwfP9ej054Nl4hW377bq3Awh4s,98
+pipeline2app/xnat/_version.py,sha256=akvr8ObxvMF-aaLBzW41juT4_KL3BjQUrjbwkIuQXMk,411
+pipeline2app/xnat/command.py,sha256=er8vXuRtUexUFygk7_FyuybqHUt2rkcgzHlHjRX-rmY,14381
+pipeline2app/xnat/deploy.py,sha256=QaVIDMjQ-HaCBMZvRUdC0iWhy_ceTg8PkNN72-fjUkw,10312
+pipeline2app/xnat/image.py,sha256=NVUORjZ8Y9XldS2EyQU9DuVRXT5O8n_hERUO9HYd7M4,5489
+pipeline2app/xnat/cli/__init__.py,sha256=sdC8LFAQLipPep2V4JOHOcu099MtPyL0eLAw9JFvM0g,150
+pipeline2app/xnat/cli/base.py,sha256=yp-_HhIA3slvC3eCtOLdBrE52S1ufWV7xYzkDn9amzA,91
+pipeline2app/xnat/cli/entrypoint.py,sha256=82E-Z4kN65KdrokPWr1t5N1ZN31gvU0tYVpaF44hyHQ,1487
+pipeline2app/xnat/cli/release.py,sha256=VovLa0mU7uDGM4LH4uNglFssZK-zNgp2mTjj3AZsll8,11681
+pipeline2app/xnat/tests/test_app.py,sha256=YqAzzq9vEKXbW3R_HMdMZUuSEHlVVQWT85mWtEWDBQw,13456
+pipeline2app/xnat/tests/test_cli_xnat_images.py,sha256=UhG1oxUGlqRigTm9fWvK0fQ0PXfl6ox-hHRgSpLbkfY,5056
+pipeline2app/xnat/tests/test_command.py,sha256=FVCCGVPNafJEY75Y9zdgR0galZtHqoLAL0HrAlEdmGg,1984
+pipeline2app_xnat-0.7.0.dist-info/METADATA,sha256=cOEie3IZFVpxFo5ZKR5KD8APzWNgcFp-u9-eysdV4A0,21316
+pipeline2app_xnat-0.7.0.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+pipeline2app_xnat-0.7.0.dist-info/licenses/LICENSE,sha256=YvHlhl0Z71CeLbT-BjXQa_R4_7sXfKtStdlqe_jftqA,16577
+pipeline2app_xnat-0.7.0.dist-info/RECORD,,
