@@ -1,0 +1,2 @@
+class ChattyContentInteractive(dict):
+    pass
