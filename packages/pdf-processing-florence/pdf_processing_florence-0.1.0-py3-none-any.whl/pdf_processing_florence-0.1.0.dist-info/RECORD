@@ -1,0 +1,9 @@
+pdf_processing_florence/__init__.py,sha256=VwF0K9PksdD4RiSyK__BMmZQk_nY4WhvxHZZEYQHZrI,160
+pdf_processing_florence/apply_florence.py,sha256=ixO8_AHHCMG7Tg1H532IkjGh7kd0vDRlHpHBfW_Yf1Y,8870
+pdf_processing_florence/convert.py,sha256=XaqA_2t6UkNBwHOcNBcJuS3Hixnm7xEOv2vz_PKyMwE,1437
+pdf_processing_florence/extract_text.py,sha256=gvaGtJzWMRwU-B7Ajtl5ddb3IzgbLZfQiFCnarR_7gQ,8054
+pdf_processing_florence-0.1.0.dist-info/LICENSE,sha256=5dz_6Da27IpY5JJBm1UOZfuMvcMIUDl55drLM6x-o7c,3
+pdf_processing_florence-0.1.0.dist-info/METADATA,sha256=7WOKexxQjra3QcZ5JRAleNhxz2u42g4V4eGdzFOSRWI,2126
+pdf_processing_florence-0.1.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+pdf_processing_florence-0.1.0.dist-info/top_level.txt,sha256=VJVcJaY_08rAl7tDsrhE7Q52YDM1UcXVlAqbpQpJy80,24
+pdf_processing_florence-0.1.0.dist-info/RECORD,,
