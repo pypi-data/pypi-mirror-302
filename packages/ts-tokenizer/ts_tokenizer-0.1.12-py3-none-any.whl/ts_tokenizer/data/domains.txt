@@ -1,0 +1,10 @@
+.com
+.org
+.net
+.gov
+.edu
+.ai
+.xyz
+.info
+.site
+.live
