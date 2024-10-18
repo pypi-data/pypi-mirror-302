@@ -1,0 +1,2 @@
+[console_scripts]
+kathara-lab-checker = kathara_lab_checker:main
