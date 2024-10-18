@@ -1,0 +1,31 @@
+[tool.poetry]
+name = "play-bracket-django"
+version = "0.1.0"
+description = ""
+authors = ["Roberto Himmelbauer <robertoh89@gmail.com>"]
+readme = "README.md"
+license = "MIT"
+classifiers = [
+    "Development Status :: 1 - Planning",
+    "Framework :: Django",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python"
+]
+package-mode = true
+packages = [
+    { include = "playbracket", from = 'src'},
+]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+Django = "^5.1.2"
+djangorestframework = "^3.15.2"
+
+[tool.poetry.group.dev.dependencies]
+django-allauth = "^65.0.2"
+ruff = "^0.7.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
