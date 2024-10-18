@@ -1,0 +1,9 @@
+pywrappers/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pywrappers/pymongo/CollectionWrapper.py,sha256=X9Si28_Xev5Wyn92m-IE7nk5iaz6n0QbLbTDXbtdGc4,11705
+pywrappers/pymongo/DatabaseWrapper.py,sha256=docS1uGnH0ca2x7V8vHPjkvGmrbdPKs9qjXJZP7W0bU,11565
+pywrappers/pymongo/MongoClientWrapper.py,sha256=mqexOCyyWPDN_RSnMRuhy5krCKre-feqK4nAjYt8Xsg,10705
+pywrappers/pymongo/__init__.py,sha256=5mkB-6kbXqNXVmOCFWqmX19Kbn_b8EgH9WOB4vnr5vY,4613
+pywrappers-1.0.5.dist-info/METADATA,sha256=5jiyzFVcK0ZeaOJanC8ynqhvcxcUYcWXWIY0RDl06ys,21853
+pywrappers-1.0.5.dist-info/WHEEL,sha256=oiQVh_5PnQM0E3gPdiz09WCNmwiHDMaGer_elqB3coM,92
+pywrappers-1.0.5.dist-info/top_level.txt,sha256=cIUZxIB3T9L7eyT7zNJ99SIej6JlVqkPRP31fj1HYKA,11
+pywrappers-1.0.5.dist-info/RECORD,,
