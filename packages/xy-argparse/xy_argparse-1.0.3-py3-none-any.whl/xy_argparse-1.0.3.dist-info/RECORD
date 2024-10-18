@@ -1,0 +1,12 @@
+xy_argparse/ArgParse.py,sha256=wqHiBE4r6QE_kwmPiaIZZNfACAJ7pp8_ZAsYYqBnlIY,3850
+xy_argparse/ModuleData.py,sha256=RMYkJXNW0GPxmxxwG-8_DUCtxcuyOyI3W-5jpDsmcEg,485
+xy_argparse/Resource.py,sha256=0JxtEW8ZBw3qQO5JzQBNcMbZdnFWk04CPyXkm4NbSUQ,399
+xy_argparse/Runner.py,sha256=z5Y0RO33xn27BNM4n0OGOev2S5wiPhCpiMnYujTjimc,471
+xy_argparse/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+xy_argparse/execute/Main.py,sha256=ToDKnXNgzR1pVejNzc-VCxx7Blth5HkDe7Q0Jrpl8So,697
+xy_argparse/execute/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+xy_argparse-1.0.3.dist-info/LICENSE,sha256=BqXSbHfE3ic4JYcsTPACKxcqLvyP37u__1RgHN9ciSI,1064
+xy_argparse-1.0.3.dist-info/METADATA,sha256=vqsCMcUvrH3kZx2QK5VQHDnIT-e79x82UPT6QGZLPH0,2738
+xy_argparse-1.0.3.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+xy_argparse-1.0.3.dist-info/top_level.txt,sha256=ycGmzqpV0psupoR3-m-h75tcHiebejJtuxx-9XdIuJw,12
+xy_argparse-1.0.3.dist-info/RECORD,,
