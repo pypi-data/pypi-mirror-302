@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: simple-bank-package
+Version: 0.0.1
+Summary: Simple functions for bank operation
+Home-page: https://github.com/rvfalves/simple-package-template
+Author: Rafael Alves
+Author-email: rvf_alves@yahoo.com.br
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# SIMPLE BANK PACKAGE
+
+Description. 
+The package simple-bank-package is used to:
+	- Simulate a simple bank system
+	- There are bank operation functions and account register functions
+
+## Installation
+
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install simple-bank-package
+
+```bash
+pip install simple-bank-package
+```
+
+## Usage
+
+```python
+from simple-bank-package import bank_operations
+bank_operations.deposit()
+```
+
+## Author
+Rafael Alves
