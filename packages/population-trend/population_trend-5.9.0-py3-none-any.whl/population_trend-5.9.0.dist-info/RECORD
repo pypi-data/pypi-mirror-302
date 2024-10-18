@@ -1,0 +1,13 @@
+population_trend/__init__.py,sha256=8PILFcMhthYOWPSs7LL974J3weCz9FMXRRVUCiea2vo,359
+population_trend/calculate_growth_rates.py,sha256=FzgAFt2NWc7jZW-v9qG8UCeqfMjyXzp_FT8b5mByNUw,7947
+population_trend/cli.py,sha256=KfIeLpr4uHHIeFMAfyjV_iKAdAVwXzVK4EglVQz8HcY,5419
+population_trend/filter_data.py,sha256=D0Y1vztcbbo98af9q7wRhlHfH__bNFI8tnVOdJY6hu0,403
+population_trend/plotter_growth_rate.py,sha256=4QWuCB_cKF4yWBzuNvtv1jadrT1GNstQ7cjgWXDL8ag,1174
+population_trend/plotter_population_trend_from_cpue.py,sha256=US8h948Mtb9AQpDYfvt1c-35i2if9HxqcOp1q_R-rio,1351
+population_trend/population_growth_model.py,sha256=LWgMyEJqHY9M5Xuv9nVFSfX5_X61tXCBS2n-kvY8pNk,6002
+population_trend/regional_lambdas.py,sha256=Hk1BWWqHjqf9zYarjt1Y7VNebeFmlX3xFpUFaMVdeoI,5222
+population_trend-5.9.0.dist-info/entry_points.txt,sha256=qVw9tnlMx7q2AnksVC2H4oK4ufQrdrbBzSODLH-bcac,61
+population_trend-5.9.0.dist-info/LICENSE,sha256=hIahDEOTzuHCU5J2nd07LWwkLW7Hko4UFO__ffsvB-8,34523
+population_trend-5.9.0.dist-info/WHEEL,sha256=EZbGkh7Ie4PoZfRQ8I0ZuP9VklN_TvcZ6DSE5Uar4z4,81
+population_trend-5.9.0.dist-info/METADATA,sha256=EnUbDSSifnPzSAF_PPJn33ZCqMVUsAkE_4Pwcnv59A8,1332
+population_trend-5.9.0.dist-info/RECORD,,
