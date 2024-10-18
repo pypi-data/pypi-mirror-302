@@ -1,0 +1,2 @@
+[console_scripts]
+TurtleMol = TurtleMol.__main__:main
