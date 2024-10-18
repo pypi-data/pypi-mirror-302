@@ -1,0 +1,8 @@
+protobuf_relocate-0.1.dev1.dist-info/METADATA,sha256=uFXwq1Cim-bT6xTNvizxJFUa4y99m1W77O5lzO6l2hU,549
+protobuf_relocate-0.1.dev1.dist-info/WHEEL,sha256=pM0IBB6ZwH3nkEPhtcp50KvKNX-07jYtnb1g1m6Z4Co,90
+protobuf_relocate-0.1.dev1.dist-info/entry_points.txt,sha256=fz3dudI62hI-dVH1DLA4WP4_A5FlPgjZIYqvwhEUhJU,92
+protobuf_relocate-0.1.dev1.dist-info/licenses/LICENSE,sha256=HZJlEyA_PW3krl7c_SYqqrf9-8Q6te45hRdhJojCiLQ,1079
+protobuf_relocate/__init__.py,sha256=x9tPSPXdanrhnilI_F45HB9Y57NFPfkNA-dkCBgU-fw,53
+protobuf_relocate/_version.py,sha256=gGM0C18mw-JMS7QIcfGQ0IlwqmvZpGn0g6Yj2xC6QLY,21
+protobuf_relocate/command.py,sha256=H7sq8pQik7cczUohJmM4V7vdpdcTeohjlepaKdayTnU,117
+protobuf_relocate-0.1.dev1.dist-info/RECORD,,

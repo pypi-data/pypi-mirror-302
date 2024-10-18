@@ -1,0 +1,5 @@
+[console_scripts]
+python-protobuf-relocate = protobuf_relocate.command:main
+
+[gui_scripts]
+
