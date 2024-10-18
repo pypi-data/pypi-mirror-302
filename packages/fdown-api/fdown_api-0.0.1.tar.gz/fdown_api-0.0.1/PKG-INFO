@@ -1,0 +1,109 @@
+Metadata-Version: 2.1
+Name: fdown-api
+Version: 0.0.1
+Summary: Unofficial Python wrapper for fdown.net
+Home-page: https://github.com/Simatwa/fdown-api
+Author: Smartwa
+Author-email: simatwacaleb@proton.me
+Maintainer: Smartwa
+License: GPLv3
+Project-URL: Bug Report, https://github.com/Simatwa/fdown-api/issues/new
+Project-URL: Homepage, https://github.com/Simatwa/fdown-api
+Project-URL: Source Code, https://github.com/Simatwa/fdown-api
+Project-URL: Issue Tracker, https://github.com/Simatwa/fdown-api/issues
+Project-URL: Download, https://github.com/Simatwa/fdown-api/releases
+Project-URL: Documentation, https://github.com/Simatwa/fdown-api/
+Keywords: facebook,fdown
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: License :: Free For Home Use
+Classifier: Intended Audience :: Customer Service
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: cloudscraper==1.2.71
+Requires-Dist: bs4==0.0.1
+Provides-Extra: cli
+Requires-Dist: tqdm==4.66.3; extra == "cli"
+Requires-Dist: colorama==0.4.6; extra == "cli"
+
+# fdown-api
+Download facebook videos with ease.
+
+## Installation
+
+```sh
+$ pip install fdown-api[cli]
+```
+
+## Usage
+ 
+### Developers
+
+```python
+from fdown_api import Fdown
+
+f = Fdown()
+video_links = f.get_links(
+    "https://www.facebook.com/reel/916344720334368?mibextid=rS40aB7S9Ucbxw6v"
+)
+saved_to = f.download_video(video_links)
+print(saved_to)
+
+```
+
+### CLI
+
+`$ python -m fdown_api <facebook-video-url>`
+
+<details>
+<summary>
+<code>$ fdown --help</code>
+
+</summary>
+
+```
+usage: fdown [-h] [-d DIR] [-o OUTPUT] [-q normal|hd] [-t TIMEOUT]
+             [-c chunk-size] [-p PROTOCOL ADDRESS PROTOCOL ADDRESS] [--resume]
+             [--quiet] [--version]
+             url
+
+Download Facebook videos seamlessly.
+
+positional arguments:
+  url                   Link to the target facebook video
+
+options:
+  -h, --help            show this help message and exit
+  -d, --dir DIR         Directory for saving the video to -
+                        /home/smartwa/
+  -o, --output OUTPUT   Filename under which to save the video to - random
+  -q, --quality normal|hd
+                        Video download quality - hd
+  -t, --timeout TIMEOUT
+                        Http request timeout in seconds - 20
+  -c, --chunk-size chunk-size
+                        Chunk-size for downloading files in KB - 512
+  -p, --proxy PROTOCOL ADDRESS PROTOCOL ADDRESS
+                        Http request proxy - None
+  --resume              Resume an incomplete download - False
+  --quiet               Do not stdout any informational messages - False
+  --version             show program's version number and exit
+
+This script has no official relation with fdown.net.
+```
+</details>
+
+# Disclaimer
+
+This repository contains an unofficial Python wrapper for fdown.net. It is not affiliated with or endorsed by the official fdown.net service or its developers.
+This wrapper is intended for personal use and education only. The author(s) of this repository are not responsible for any misuse of this code or any damages caused by its use.
