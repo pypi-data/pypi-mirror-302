@@ -1,0 +1,5 @@
+[console_scripts]
+createbids=launchcontainers.create_bids:main
+launchcontainers=launchcontainers.launch:main
+zip_configs=build_scripts.zip_example_config:zip_example_config
+
