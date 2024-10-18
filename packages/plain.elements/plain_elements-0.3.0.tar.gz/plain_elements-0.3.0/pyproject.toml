@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "plain.elements"
+packages = [
+    { include = "plain" },
+]
+
+version = "0.3.0"
+description = "HTML-style includes for Plain."
+authors = ["Dave Gaeddert <dave.gaeddert@dropseed.dev>"]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+plain = "<1.0.0"
+
+[tool.poetry.group.dev.dependencies]
+plain = { path = "../plain", develop = true }
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
