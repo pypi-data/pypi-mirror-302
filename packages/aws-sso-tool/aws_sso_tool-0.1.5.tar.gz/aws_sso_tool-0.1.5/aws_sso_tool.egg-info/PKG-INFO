@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: aws_sso_tool
+Version: 0.1.5
+Summary: CLI tool to simplify AWS SSO login and operations
+Home-page: https://github.com/mosiko1234/aws_sso_tool
+Author: Moshe Eliya
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: boto3
+Requires-Dist: click
+
+# AWS SSO Tool
+
+A simple CLI tool to help developers connect to AWS via SSO and perform basic AWS operations.
+
+## Installation
+
