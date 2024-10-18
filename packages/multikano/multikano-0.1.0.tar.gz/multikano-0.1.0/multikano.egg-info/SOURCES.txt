@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+multikano/__init__.py
+multikano/data_processing.py
+multikano/model.py
+multikano/utils.py
+multikano.egg-info/PKG-INFO
+multikano.egg-info/SOURCES.txt
+multikano.egg-info/dependency_links.txt
+multikano.egg-info/requires.txt
+multikano.egg-info/top_level.txt
