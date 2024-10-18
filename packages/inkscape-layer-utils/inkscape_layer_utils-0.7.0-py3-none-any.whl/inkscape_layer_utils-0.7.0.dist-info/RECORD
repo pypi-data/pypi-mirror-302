@@ -1,0 +1,16 @@
+inkscape_layer_utils/__init__.py,sha256=orWNVfFQb6Cj-Cy0s-rOOF-Kd9M9asQT0MPDqWauxGg,629
+inkscape_layer_utils/__main__.py,sha256=PJDrDXQzhLolRQIgk4V-nAIgVFZ92GuqprwZTx11i2c,79
+inkscape_layer_utils/_version.py,sha256=lZFsZ5eNYiTY3-nyJz56Tji_a2OPfjUjUukPNmJwi0k,497
+inkscape_layer_utils/image.py,sha256=NelXfZrBvDZvod6pduLAQeb8FwQSho6obCw39DfMbwc,28737
+inkscape_layer_utils/main.py,sha256=vz6zbEa-VR2g3XdUpBS3fGLWXvegGBwJE1n3d-WAwHk,3918
+inkscape_layer_utils/py.typed,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/image_test_case.py,sha256=MXxYy3d-PUA7O1fqdTAm5LQZderxM2uxnOUjeY32VQw,2119
+tests/test_image_coloring.py,sha256=rp6yMNbR8IhezkCjCPamLy9u5l6yZ_spRJBNyfNdCZU,1683
+tests/test_image_layer_extraction.py,sha256=PVeX-DNhypQlGm6KZWCZEEC3nW-GqcMsmhkq6fb0ovE,8332
+inkscape_layer_utils-0.7.0.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+inkscape_layer_utils-0.7.0.dist-info/METADATA,sha256=tL9cHV8vlXMZk0C7sgfh44QzgnGHkKycMC3H-eEox2A,1406
+inkscape_layer_utils-0.7.0.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+inkscape_layer_utils-0.7.0.dist-info/entry_points.txt,sha256=RNyL_AS3vyk3wldens8sisEtzefNZA8P3zWnA5_HQ1o,72
+inkscape_layer_utils-0.7.0.dist-info/top_level.txt,sha256=Sx5297LcC2KDSqhnbf-SL0Yzoq7TvnDTBzRq9YBZsHY,27
+inkscape_layer_utils-0.7.0.dist-info/RECORD,,
