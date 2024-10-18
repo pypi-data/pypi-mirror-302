@@ -1,0 +1,20 @@
+name: lidarwind
+
+channels:
+  - defaults
+  - conda-forge
+
+dependencies:
+ - numpy
+ - xarray
+ - pandas
+ - matplotlib
+ - nbsphinx
+ - sphinx-gallery
+ - pip
+ - pip:
+     - pooch
+     - gdown
+     - xrft
+     - lidarwind
+     - xarray-datatree==0.0.11
