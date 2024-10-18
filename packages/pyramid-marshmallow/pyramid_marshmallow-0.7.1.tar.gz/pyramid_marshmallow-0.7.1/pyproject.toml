@@ -1,0 +1,23 @@
+[build-system]
+requires = [
+    "setuptools>=42",
+    "wheel"
+]
+build-backend = "setuptools.build_meta"
+
+[tool.ruff]
+line-length = 79
+target-version = "py38"
+
+[tool.ruff.lint]
+select = [
+	"E",  # flake8
+	"F",  # pyflakes
+	"T20",  # flake8-print
+	"I",   # isort
+]
+
+[tool.pytest.ini_options]
+filterwarnings = [
+	"error::marshmallow.warnings.RemovedInMarshmallow4Warning",
+]

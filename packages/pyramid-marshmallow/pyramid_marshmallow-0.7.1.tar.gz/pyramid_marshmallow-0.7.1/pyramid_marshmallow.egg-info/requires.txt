@@ -1,0 +1,14 @@
+pyramid>=1.7
+marshmallow~=3.0
+zope.interface>=3.8.0
+
+[linting]
+ruff~=0.7.0
+
+[openapi]
+apispec<7,>=3.0
+PyYAML<7,>=5.4
+
+[testing]
+pytest~=6.2
+webtest~=2.0
