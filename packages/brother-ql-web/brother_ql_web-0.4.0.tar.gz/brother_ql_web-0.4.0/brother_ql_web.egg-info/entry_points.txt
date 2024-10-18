@@ -1,0 +1,2 @@
+[console_scripts]
+brother_ql_web = brother_ql_web.__main__:main
