@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: grscheller.untyped
+Version: 0.4.1
+Summary: ### Untyped Modules - OBSOLETED!
+Author-email: "Geoffrey R. Scheller" <geoffrey@scheller.com>
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Classifier: Development Status :: 7 - Inactive
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: Apache Software License
+Project-URL: Changelog, https://github.com/grscheller/untyped/blob/main/CHANGELOG.md
+Project-URL: Documentation, https://github.com/grscheller/untyped/tree/main/docs/API
+Project-URL: Source, https://github.com/grscheller/untyped
+
+# Python modules geared to code that is not strictly typed
+
+Class Nada represents a missing value. Unlike None, it accepts almost
+all methods and returns itself. See [grscheller.experimental][2] on PyPI
+for the current maintained version.
+
+* **Repositories**
+  * obsoleted PyPI project [grscheller.untyped][1]
+  * replaced by PyPI project [grscheller.experimental][2]
+  * [Source code][3] on *GitHub*
+
+### Modules
+
+* grscheller.untyped.nada
+  * singleton representing the absence of a value
+  * failed attempt to give Python a bottom type
+
+---
+
+[1]: https://pypi.org/project/grscheller.untyped/
+[2]: https://pypi.org/project/grscheller.experimental/
+[3]: https://github.com/grscheller/untyped/
+
