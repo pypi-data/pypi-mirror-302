@@ -1,0 +1,14 @@
+/attic/
+/.nox/
+/.tox/
+/.venv/
+
+.coverage
+.mypy*
+.pytest*
+.python-version
+.ruff*
+
+__pycache__/
+
+*.pyz
