@@ -1,0 +1,3 @@
+include src/data *.txt
+include src/dict/data *.txt
+include src/train_tools/data *.bin

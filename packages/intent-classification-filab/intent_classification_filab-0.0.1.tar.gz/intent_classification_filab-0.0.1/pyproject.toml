@@ -1,0 +1,22 @@
+[build-system]
+requires = [
+	"setuptools>=42",
+	"wheel"
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "intent_classification_filab"
+version = "0.0.1"
+authors = [
+  { name="jackaa", email="jackaa@filab.co.kr" },
+]
+description="사용자 입력에 대하여 의도 분석을 하는 프로그램입니다."
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
