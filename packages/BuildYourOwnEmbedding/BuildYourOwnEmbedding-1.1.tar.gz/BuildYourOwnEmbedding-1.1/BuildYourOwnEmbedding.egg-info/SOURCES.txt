@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+BuildYourOwnEmbedding/__init__.py
+BuildYourOwnEmbedding/functional.py
+BuildYourOwnEmbedding/generate_docs.py
+BuildYourOwnEmbedding/parameters.py
+BuildYourOwnEmbedding/responses.py
+BuildYourOwnEmbedding.egg-info/PKG-INFO
+BuildYourOwnEmbedding.egg-info/SOURCES.txt
+BuildYourOwnEmbedding.egg-info/dependency_links.txt
+BuildYourOwnEmbedding.egg-info/requires.txt
+BuildYourOwnEmbedding.egg-info/top_level.txt
