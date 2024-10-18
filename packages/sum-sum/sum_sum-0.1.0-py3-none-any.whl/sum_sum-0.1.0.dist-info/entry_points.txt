@@ -1,0 +1,2 @@
+[console_scripts]
+sumsum = sum_sum.main:main
