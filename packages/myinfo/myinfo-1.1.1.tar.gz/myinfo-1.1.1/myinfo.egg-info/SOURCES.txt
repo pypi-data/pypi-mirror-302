@@ -1,0 +1,10 @@
+README.md
+setup.py
+myinfo/__init__.py
+myinfo/ip_info.py
+myinfo/whois_info.py
+myinfo.egg-info/PKG-INFO
+myinfo.egg-info/SOURCES.txt
+myinfo.egg-info/dependency_links.txt
+myinfo.egg-info/requires.txt
+myinfo.egg-info/top_level.txt
