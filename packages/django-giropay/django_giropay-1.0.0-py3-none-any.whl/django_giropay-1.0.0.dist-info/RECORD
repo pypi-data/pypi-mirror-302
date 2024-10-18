@@ -1,0 +1,16 @@
+django_giropay/__init__.py,sha256=RsZjRjMprNcDm97wqRRSk6rTLgTX8N0GyicZyZ8OsBQ,22
+django_giropay/admin.py,sha256=KSsV7XlgYmdu7QyM2MG0Ms758aIpxHvoJye2lt7y6N8,410
+django_giropay/constants.py,sha256=hYTpJHIw71Fmlbg4HsB81WPPMSEEjuuKerYdDjIPHP4,1650
+django_giropay/models.py,sha256=yVrL7gjiNziEaQA5erqrMdHeQldUBdo7CQDCZDIllj0,2931
+django_giropay/settings.py,sha256=f37u7FcUpqmaMAjWvfQij5F4KnL9YYlPPZdWapz4cWk,1370
+django_giropay/urls.py,sha256=IFQGafEvFuFUqJWMIizKJEXvaHL5MRHgHbJNXplgT4s,244
+django_giropay/utils.py,sha256=hMJG1DRP1CIt_O2W_mZffDGRQ7zknlc6s0UGzHjhc90,218
+django_giropay/views.py,sha256=TcLV0xgNjxbx4Td3cGGybZta7-K8aOZgKbQ31ywDXww,5028
+django_giropay/wrappers.py,sha256=oYPh9bzO3MOn_Ch10Y7NNTShoPqkoDRTSwV4qOjC-gs,6845
+django_giropay/migrations/0001_initial.py,sha256=CPCytqonLga6BB1TV2se93iXuEJ-SOJKQdiYJQPuTRM,3947
+django_giropay/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_giropay-1.0.0.dist-info/LICENSE,sha256=xuCIUuhYiCKZ3wYlwaFKrjF73kePgpWdT1svMumoqCg,1077
+django_giropay-1.0.0.dist-info/METADATA,sha256=8moTnl3tPpc8s39wgkYERfthI_uyF4fYvjPdb0nGJJc,850
+django_giropay-1.0.0.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+django_giropay-1.0.0.dist-info/top_level.txt,sha256=--68_f0zy20q2kyTJJ47JQdUAqbvPqC-Qu4ASlWEPho,41
+django_giropay-1.0.0.dist-info/RECORD,,
