@@ -1,0 +1,12 @@
+simon_library/__init__.py,sha256=jdRsCmrBvJYnrq_jp5kq9cE2D_AwBBtAPJsghBDZ7E8,220
+simon_library/clean_data.py,sha256=zrwX6Vj-O06M4oaj3Dq8IOjkQd3uTB5VEvX7Pyz6kn8,1027
+simon_library/create_features.py,sha256=Nr1Urf3aXX4CKvLSw2reb9WvAuSPsXVHObJY4D_HSos,1646
+simon_library/get_data.py,sha256=Per3iVJ-TXBbYL8mpOUPNN-uinFihsLr4gC59nEsyQk,1415
+simon_library/get_roc_auc.py,sha256=GKnFgg4Fz51r1r_C8brqB8PRnkMaIvJJJrIcaucurLc,2439
+simon_library/split_data.py,sha256=-RWZAO5nLqYHcYdS-zqhDc-Zx_wmyC7IfHC5DRQd1VQ,1316
+simon_library/train_model.py,sha256=TEAVqCHVMBfw4dDyi3-ZNh4ywhnwH0vdWVJ_4niTTOw,1984
+simon_library-0.4.0.dist-info/LICENSE,sha256=h1lrAQnYZLnIeDmUe2Hw1cl4OKRmRray0woVmJW_9Wg,1064
+simon_library-0.4.0.dist-info/METADATA,sha256=JBxipFhC7QtutvD7zMlSwItCDWioqbHpVKKQeWM4V4o,2852
+simon_library-0.4.0.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+simon_library-0.4.0.dist-info/top_level.txt,sha256=qyblEc2MHy7dg0MDMqwn0BMDF0yyCKPImQdEET0zUwA,14
+simon_library-0.4.0.dist-info/RECORD,,
