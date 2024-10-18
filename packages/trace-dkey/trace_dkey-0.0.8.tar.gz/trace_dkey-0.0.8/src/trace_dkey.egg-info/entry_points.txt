@@ -1,0 +1,2 @@
+[console_scripts]
+trace-dkey = trace_dkey.cli:main
