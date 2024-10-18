@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: py_network_apis
+Version: 0.0.1
+Summary: Python Libraries for Netbox, LibreNMS, FreeIPA, and SNMP
+Author-email: Daniel Feldman <dfeldman@ringsquared.com>
+Project-URL: Homepage, https://github.com/danfeldm/py-network-apis
+Requires-Python: >=3.11.1
+License-File: LICENSE
+Requires-Dist: certifi==2024.8.30
+Requires-Dist: charset-normalizer==3.4.0
+Requires-Dist: idna==3.10
+Requires-Dist: packaging==24.1
+Requires-Dist: pyasn1==0.6.1
+Requires-Dist: pynetbox==7.4.0
+Requires-Dist: pysnmp==7.1.8
+Requires-Dist: python-slugify==8.0.4
+Requires-Dist: PyYAML==6.0.2
+Requires-Dist: requests==2.32.3
+Requires-Dist: text-unidecode==1.3
+Requires-Dist: urllib3==2.2.3

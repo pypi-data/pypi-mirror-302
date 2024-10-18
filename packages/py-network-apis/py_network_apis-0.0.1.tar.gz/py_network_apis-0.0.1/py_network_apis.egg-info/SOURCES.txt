@@ -1,0 +1,16 @@
+.gitignore
+LICENSE
+README.md
+pyproject.toml
+requirements.txt
+py_network_apis/__init__.py
+py_network_apis/ipa_client.py
+py_network_apis/libre_client.py
+py_network_apis/netbox_client.py
+py_network_apis/netbox_setup.py
+py_network_apis/snmp_client.py
+py_network_apis.egg-info/PKG-INFO
+py_network_apis.egg-info/SOURCES.txt
+py_network_apis.egg-info/dependency_links.txt
+py_network_apis.egg-info/requires.txt
+py_network_apis.egg-info/top_level.txt
