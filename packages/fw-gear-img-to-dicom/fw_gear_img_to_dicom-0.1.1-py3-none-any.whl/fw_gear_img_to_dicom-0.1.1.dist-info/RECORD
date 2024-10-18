@@ -1,0 +1,8 @@
+fw_gear_img_to_dicom/__init__.py,sha256=5NvVuWjt4PNLzyd7iTbawgNh00wB5t7XMhkzq7FgcZA,156
+fw_gear_img_to_dicom/convert_img_to_dcm.py,sha256=2wt0ID4VFnH-uoWnb0wsXRZjET9ysVisf-D5uiwI8Zw,7817
+fw_gear_img_to_dicom/main.py,sha256=wm78ld5Wj1n_A-8OITCKN_afDqYrWYPqCuKASO7gHJA,937
+fw_gear_img_to_dicom/parser.py,sha256=iWWJ4Nh1u3inqc7F0UV1pDVgZkC5EF3XSLa-0cTVLV4,457
+fw_gear_img_to_dicom-0.1.1.dist-info/LICENSE,sha256=NNC8xrLtqnhvmkJdOB71ctPp2jBi_2V5u9RzRVEpBcs,1092
+fw_gear_img_to_dicom-0.1.1.dist-info/METADATA,sha256=iDarnJWp8aTlagXWkhFi-Vgi-A2RCaDONLw2tV_gmx0,1961
+fw_gear_img_to_dicom-0.1.1.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+fw_gear_img_to_dicom-0.1.1.dist-info/RECORD,,

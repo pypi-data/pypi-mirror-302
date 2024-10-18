@@ -1,0 +1,68 @@
+Metadata-Version: 2.1
+Name: fw-gear-img-to-dicom
+Version: 0.1.1
+Summary: Encapsulates multiple two-dimensional image formats (e.g. png, jpg, gif, bmp) in a dicom archive.
+Home-page: https://gitlab.com/flywheel-io/scientific-solutions/gears/img-to-dicom
+License: MIT
+Keywords: Flywheel,Gears
+Author: Flywheel
+Author-email: support@flywheel.io
+Requires-Python: >=3.10,<3.12
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Scientific/Engineering
+Requires-Dist: flywheel-gear-toolkit (>=0.6,<0.7)
+Requires-Dist: flywheel-sdk (>=19.2.0,<20.0.0)
+Requires-Dist: fw-file (>=3,<4)
+Requires-Dist: numpy (>=1.23.3,<2.0.0)
+Requires-Dist: pathvalidate (>=2.5.2,<3.0.0)
+Requires-Dist: pillow (>=10.0.0,<11.0.0)
+Requires-Dist: pydicom (>=2.3.0,<3.0.0)
+Project-URL: Repository, https://gitlab.com/flywheel-io/scientific-solutions/gears/img-to-dicom
+Description-Content-Type: text/markdown
+
+# Image to DICOM
+
+Encapsulates multiple two-dimensional image formats (e.g. png, jpg, gif, bmp)
+in a dicom archive.
+
+## Website
+
+<https://gitlab.com/flywheel-io/scientific-solutions/gears/img-to-dicom>
+
+## Installation
+
+## Usage
+
+The Image to DICOM gear is executed by ensuring the following required inputs and
+configuration parameters are provided. Additional optional inputs are indicated below.
+
+### Inputs
+
+* *image*
+  * **Type**: `image`
+  * **Optional**: `false`
+  * **Description**: Image to wrap in dicom format.
+  * **Notes**: Input image file can be of type png or jpeg.
+
+### Config
+
+* *debug*
+  * **Type**: `boolean`
+  * **Optional**: `true`
+  * **Default**: `false`
+  * **Description**: Log debug messages.  Default level is `INFO`.
+
+### Cite
+
+**
+
+*License:* MIT
+
+## Contributing
+
+For more information about how to get started contributing to that gear,
+checkout [CONTRIBUTING.md](CONTRIBUTING.md).
+
