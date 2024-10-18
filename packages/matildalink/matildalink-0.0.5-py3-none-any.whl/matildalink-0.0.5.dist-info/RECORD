@@ -1,0 +1,15 @@
+matildalink/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+matildalink/catalog.py,sha256=R3a_A9Qu5ZAIwlCkcrVa-e7qQALcJijsl9QRl901omM,2338
+matildalink/cloud.py,sha256=aY2kJ_RUFR6mGiHKVBPKFkcxSwARpbgGS_jwM_TWNNo,1551
+matildalink/eenv.py,sha256=NMAga4rDf3J9xkVkJVf0h7ljO2tQet_7bSLf6LYUUxU,819
+matildalink/estimator.py,sha256=q5bMEWDnlvqyN5-FKqjjijehUz5QhVMQAYxsI3X6q58,5450
+matildalink/executor.py,sha256=VbtbTm-i3oyoRYPG7QtrjqLp196fm-kD2Tt2yYgcek8,138
+matildalink/feat.py,sha256=HfmBDj3CqeCuzIFnVyoGEhO2G5-FHXj5WpQBnFb9fUA,5550
+matildalink/optimizer.py,sha256=jUp4mCMcP2VsuzfB2kNQy4IVpT1XdZ6QOyEQEOpwBSk,6800
+matildalink/predictor.py,sha256=kfoNgMcCxkEO5OVxjfA6YKZcdP2cREPShBqrBWjbE8E,3791
+matildalink/provisioner.py,sha256=4DcLi3GuAHXpCXiT1oPCp613fYTfWznCSBAloxFOpLA,148
+matildalink/work.py,sha256=yeFb0OPXC-bu4J9g8rjCO_-4xPMgmvTcuRevfI5dL70,4638
+matildalink-0.0.5.dist-info/METADATA,sha256=_s4vEel37yZ0SN5www43N5zE8gWSN3mI17LHu7q-WJ0,801
+matildalink-0.0.5.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+matildalink-0.0.5.dist-info/licenses/LICENSE,sha256=GtoY3wtgnF86KfOFgt0yc8tVCy4XoVlSEeUv8416qZE,53
+matildalink-0.0.5.dist-info/RECORD,,
