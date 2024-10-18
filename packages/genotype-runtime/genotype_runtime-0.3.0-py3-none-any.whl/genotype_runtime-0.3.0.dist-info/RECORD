@@ -1,0 +1,5 @@
+genotype/__init__.py,sha256=kv-z4s2pHhGUA-P7KDUunOu0J_xFH5cZyXuQwMEbsYI,47
+genotype/model.py,sha256=-LcVRc8r6a7sOfv3R5oYUSJ4x1dHF_TYIcXuAcUcy6g,572
+genotype_runtime-0.3.0.dist-info/METADATA,sha256=1Ai0pI41qLMXTEgtTYgLqKK-8Xom_Jelqs7BkhsLh00,749
+genotype_runtime-0.3.0.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+genotype_runtime-0.3.0.dist-info/RECORD,,
