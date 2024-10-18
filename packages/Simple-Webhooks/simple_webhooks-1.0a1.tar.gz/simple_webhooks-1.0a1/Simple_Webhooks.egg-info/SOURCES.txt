@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+Simple_Webhooks.egg-info/PKG-INFO
+Simple_Webhooks.egg-info/SOURCES.txt
+Simple_Webhooks.egg-info/dependency_links.txt
+Simple_Webhooks.egg-info/requires.txt
+Simple_Webhooks.egg-info/top_level.txt
+tests/test_webhook.py
+webhooks/__init__.py
+webhooks/logging.py
+webhooks/webhook_sender.py
