@@ -1,0 +1,10 @@
+LICENSE.md
+README.md
+setup.py
+woopyMysql/__init__.py
+woopyMysql/woopymysql.py
+woopyMysql.egg-info/PKG-INFO
+woopyMysql.egg-info/SOURCES.txt
+woopyMysql.egg-info/dependency_links.txt
+woopyMysql.egg-info/requires.txt
+woopyMysql.egg-info/top_level.txt
