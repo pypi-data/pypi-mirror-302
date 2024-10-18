@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "turbofiles"
+version = "0.1.0"
+description = "TurboFiles client for Python"
+authors = ["junhsss <junhsssr@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+aiohttp = "^3.10.10"
+asyncio = "^3.4.3"
+
+[tool.poetry.scripts]
+test = 'scripts:test'
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
