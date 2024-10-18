@@ -1,0 +1,107 @@
+[project]
+name = "df2img"
+version = "0.2.20"
+description = "Save a Pandas DataFrame as image"
+authors = [
+    { name = "Andreas Vester", email = "info@df2img.dev" },
+]
+requires-python = ">=3.9"
+readme = "README.md"
+keywords = [
+    "pandas",
+    "dataframe",
+    "image",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Programming Language :: Python",
+    "Operating System :: OS Independent",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+dependencies = [
+    "kaleido==0.2.1; platform_system != 'Windows'",
+    "kaleido==0.1.0post1; platform_system == 'Windows'",
+    "pandas<3.0.0",
+    "plotly",
+    "ipython",
+    "nbformat",
+]
+
+[project.license]
+file = "LICENSE"
+
+[project.urls]
+BugTracker = "https://github.com/andreas-vester/df2img/issues?q=label%3Abug+"
+homepage = "https://df2img.dev"
+repository = "https://github.com/andreas-vester/df2img"
+documentation = "https://df2img.dev"
+
+[tool.uv]
+dev-dependencies = [
+    "coverage[toml]",
+    "esbonio",
+    "mkdocs-jupyter",
+    "mkdocs-material",
+    "mkdocstrings[python]",
+    "mypy",
+    "nox",
+    "pre-commit",
+    "pytest",
+    "pytest-cov",
+    "python-kacl",
+    "ruff",
+]
+
+[tool.coverage.paths]
+source = [
+    "src",
+    "*/site-packages",
+]
+tests = [
+    "tests",
+    "*/tests",
+]
+
+[tool.coverage.run]
+branch = true
+source = [
+    "df2img",
+    "tests",
+]
+
+[tool.coverage.report]
+show_missing = true
+fail_under = 100
+exclude_lines = [
+    "if TYPE_CHECKING:",
+    "pragma: no cover",
+]
+
+[tool.pytest.ini_options]
+minversion = "8.0"
+addopts = "--cov df2img --cov tests --cov-report term-missing --no-cov-on-fail --strict-markers\n    --doctest-modules\n"
+doctest_optionflags = "NORMALIZE_WHITESPACE IGNORE_EXCEPTION_DETAIL NUMBER"
+
+[tool.mypy]
+ignore_missing_imports = true
+disallow_untyped_defs = true
+no_implicit_optional = true
+strict_equality = true
+warn_unused_ignores = true
+warn_redundant_casts = true
+check_untyped_defs = true
+show_error_codes = true
+show_column_numbers = true
+show_error_context = true
+follow_imports = "skip"
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
