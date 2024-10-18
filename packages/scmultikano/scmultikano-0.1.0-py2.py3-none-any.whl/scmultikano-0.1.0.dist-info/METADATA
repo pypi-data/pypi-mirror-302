@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: scmultikano
+Version: 0.1.0
+Summary: MultiKano: an automatic cell type annotation tool for single-cell multi-omics data based on Kolmogorov–Arnold network and data augmentation
+Home-page: https://github.com/BioX-NKU/MultiKano
+Author: Siyu Li, Xinhao Zhuang, Songbo Jia
+License: MIT License
+Keywords: pip,MultiKano,single-sell,Multi-omics
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Requires-Python: >3.6.0
+License-File: LICENSE
+Requires-Dist: numpy>=1.22.3
+Requires-Dist: pandas>=1.4.3
+Requires-Dist: scipy>=1.9.0
+Requires-Dist: scikit-learn>=1.1.2
+Requires-Dist: numba>=0.57.1
+Requires-Dist: scanpy>=1.9.1
+Requires-Dist: anndata>=0.8.0
+Requires-Dist: episcanpy>=0.3.2
+Requires-Dist: torch>=1.11.0
+
+MultiKano provides an accurate and efficient way to automatically annotate cell typesin multi-omics datasets. All MultiKano wheels distributed on PyPI are MIT licensed.
