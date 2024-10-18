@@ -1,0 +1,12 @@
+typing_extensions
+
+[dev]
+pytest-ckan
+ckanext-scheming
+
+[test]
+pytest-ckan
+ckanext-scheming
+
+[xlsx]
+openpyxl
