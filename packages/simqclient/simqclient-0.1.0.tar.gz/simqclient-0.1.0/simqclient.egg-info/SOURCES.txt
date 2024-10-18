@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+simqclient/__init__.py
+simqclient/client.py
+simqclient/debug.py
+simqclient/exceptions.py
+simqclient/service.py
+simqclient.egg-info/PKG-INFO
+simqclient.egg-info/SOURCES.txt
+simqclient.egg-info/dependency_links.txt
+simqclient.egg-info/not-zip-safe
+simqclient.egg-info/requires.txt
+simqclient.egg-info/top_level.txt
