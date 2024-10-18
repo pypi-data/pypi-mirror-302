@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=61.0",
+            ]
+                   
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ir-sim"
+version = "2.2.5"
+authors = [
+  { name="Han Ruihua", email="hanrh@connect.hku.hk" },
+]
+description = "Open-source, lightweight robot 2D simulator based on Python, specifically designed for intelligent robotics navigation and learning."
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = ['matplotlib',
+                'numpy',
+                'scipy',
+                'pyyaml',
+                'pynput',
+                'imageio',
+                'pathlib',
+                'shapely==2.0.6',
+                'scikit-image',
+                'loguru',]
+
+
+[tool.setuptools.packages.find]
+where = ["./"]
+
+[tool.setuptools.package-data]
+"*" = ["*.png", "*.yaml"]
+
+[project.urls]
+"Homepage" = "https://github.com/hanruihua/ir-sim"
