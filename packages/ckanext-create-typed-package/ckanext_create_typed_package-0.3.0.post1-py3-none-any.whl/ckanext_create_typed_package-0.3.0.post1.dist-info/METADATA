@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: ckanext-create_typed_package
+Version: 0.3.0.post1
+Summary: Select dataset type when adding new data
+Author-email: DataShades <datashades@linkdigital.com.au>, Sergey Motornyuk <sergey.motornyuk@linkdigital.com.au>
+Maintainer-email: DataShades <datashades@linkdigital.com.au>
+Project-URL: Homepage, https://github.com/DataShades/ckanext-collection
+Keywords: CKAN
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.8
+License-File: LICENSE
+Requires-Dist: ckantoolkit
+
