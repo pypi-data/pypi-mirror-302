@@ -1,0 +1,8 @@
+README.md
+setup.py
+src/finance/__init__.py
+src/finance/__main__.py
+src/finance_calc.egg-info/PKG-INFO
+src/finance_calc.egg-info/SOURCES.txt
+src/finance_calc.egg-info/dependency_links.txt
+src/finance_calc.egg-info/top_level.txt
