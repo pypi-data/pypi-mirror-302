@@ -1,0 +1,14 @@
+highspy/__init__.pyi,sha256=96WLxvO-EEFN24mPXIzAMyJ5RM40z_xc03cdxagnI8A,2019
+highspy/_core.cpython-312-x86_64-linux-musl.so,sha256=2rpq33dafSYte_QFPDgL35R-GQgEQTnN_8vVZi-fnyI,5682169
+highspy/highs.py,sha256=T8gEkFnGu9vjzbV9JEyZlZsoeq7hig1CJY1sa5V95qY,88931
+highspy/__init__.py,sha256=4ai8kdJ5pfmjlItCTauZMVhtLxAEo2YChKa1jvI_nKs,1814
+highspy/_core/simplex_constants.pyi,sha256=MgZmYwvFmK-nA5-s7JOMKLWOvc5_8sBkDmveZuJVfcU,17580
+highspy/_core/__init__.pyi,sha256=I4FduxxifAZPLemGUpF3XL6Rvo9gCa8DtMTNmnJVMWM,34725
+highspy/_core/cb.pyi,sha256=WXihzWeiuNrjlvAISIn9iPYTbTWhtqZXdjMLeQT3tD0,3240
+highspy-1.8.0.dist-info/RECORD,,
+highspy-1.8.0.dist-info/METADATA,sha256=4aWgwoezq0cDOYc7FgjyekjV1oeIsloXP7a43E-9pA8,10424
+highspy-1.8.0.dist-info/WHEEL,sha256=3zA1ZuXZm16YEeXghxfkMxAdI01btIGLecr0IEG4IxU,117
+highspy-1.8.0.dist-info/licenses/LICENSE.txt,sha256=ELOdunt3MRdfBwU5i220MgtkrdG9Ltn57FtRKp7xvZU,1062
+highspy-1.8.0.dist-info/licenses/AUTHORS,sha256=FsZ2uj0GyU6ZGGzuRVLNM3I4SVpse9aiusthpnuUtkg,85
+highspy.libs/libstdc++-496613c0.so.6.0.32,sha256=AwZhL5WFT99I2Q6vIxXOhW7qddfuOZ1xecxiP9QTVY4,3494361
+highspy.libs/libgcc_s-a3a07607.so.1,sha256=5ptIUeAzZweNZrFehN0_Bb5B0FcJgux7NbAFoU8vwwo,148041
