@@ -1,0 +1,12 @@
+[project]
+name = "report_generator_plavist"
+version = "0.1.0"
+authors = [{name = "Plavist Games"}]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+  "pandas"
+]
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
