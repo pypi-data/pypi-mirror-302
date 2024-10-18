@@ -1,0 +1,84 @@
+# Topological Sort Python Package
+
+## Overview
+
+This package helps with sorting arrays based on the info a 2d-array provides. It uses topological sorting and Kahn's algorithm to sort the given Array by which Item comes after which other Item, given by the 2d-array. The package also includes cycle detection, and an optional filtering function to display only the required elements. The output is color-coded for clarity, with red for cycle detection errors and green for valid filtered outputs.
+
+## Features
+
+- **Graph Creation**: Converts input data into a directed graph and an in-degree dictionary.
+- **Topological Sorting**: Implements Kahn's algorithm to perform topological sorting.
+- **Cycle Detection**: Detects and flags cyclic dependencies in the graph.
+- **Result Filtering**: Filters the sorted result based on a user-provided list.
+- **Color-Coded Output**: 
+  - **Red** for cycle errors.
+  - **Green** for valid filtered lists.
+
+## Installation
+
+```bash
+pip install kahn-topo-sort
+```
+
+## Example
+
+```python
+from kahn-topo-sort import Topo_Sort as ToSo
+
+# The dependecies are provided in this 2D Array
+twoD_Array = [
+    ['B', 'A', 'D', 'F'],
+    ['D', 'F'],
+    ['A', 'E', 'D', 'C'],
+    ['F', 'C'],
+]
+
+# The items that need to be sorted are listed in this Array
+Array = [
+    'B', 'C', 'D', 'F'
+]
+
+# A graph and in_degree dictionary are created. Those are used to sort the 2D Array. Then the all the items that are not in the Array are removed from the sorted List.
+graph, in_degree = ToSo.createGraph(twoD_Array)
+sorted_list = ToSo.sort(graph=graph, in_degree=in_degree)
+result = ToSo.filterList(sorted_list, Array)
+
+print(result)
+
+result = [
+    'B', 'D', 'F', 'C'
+]
+```
+
+## Methods
+
+### `createGraph(data)`
+
+- **Input**: A list of lists representing dependencies, e.g., `[['A', 'B'], ['B', 'C']]`.
+- **Output**:
+  - `graph`: A dictionary representing the directed graph.
+  - `in_degree`: A dictionary mapping each node to its in-degree.
+
+### `sort(graph, in_degree)`
+
+- **Input**:
+  - `graph`: The directed graph.
+  - `in_degree`: The in-degree dictionary.
+- **Output**: 
+  - A list of nodes in topological order or `'CYCLE IN DATA'` if a cycle is detected.
+
+### `filterList(ls, use)`
+
+- **Input**:
+  - `ls`: The list to be filtered (either a sorted list or `'CYCLE IN DATA'`).
+  - `use`: A list of nodes to filter the result by.
+- **Output**: 
+  - A filtered, color-coded list.
+
+## Error Handling
+
+- **Cycle Detection**: The `sort` method returns `'CYCLE IN DATA'` if the graph contains cycles. This is displayed in red to alert the user of cyclic dependencies.
+
+## License
+
+This package is available under the MIT License.
