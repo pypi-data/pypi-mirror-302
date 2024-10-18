@@ -1,0 +1,20 @@
+
+[package]
+name = "solders-token"
+version = "0.22.0"
+edition = "2021"
+include = ["/src"]
+license = "MIT"
+repository = "https://github.com/kevinheavey/solders"
+description = "Solders SPL Token crate."
+
+[dependencies]
+pyo3 = { version = "0.20.2", default-features = false , features = ["macros"] }
+serde = "^1.0.188"
+derive_more = "0.99.17"
+solana-program = { git = "https://github.com/anza-xyz/agave.git", rev = "3628c03" }
+solders-macros = { path = "../solders-macros" }
+solders-pubkey = { path = "../solders-pubkey" }
+solders-traits-core = { path = "../solders-traits-core" }
+spl-associated-token-account-client = { git = "https://github.com/kevinheavey/solana-program-library.git", rev = "e4865e21b7b7927b3dec49737ffbd2f8f942a05f" }
+spl-token = { git = "https://github.com/kevinheavey/solana-program-library.git", rev = "e4865e21b7b7927b3dec49737ffbd2f8f942a05f" }
