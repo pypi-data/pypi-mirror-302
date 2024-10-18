@@ -1,0 +1,3 @@
+[console_scripts]
+pfolio=pfolio.main:run_cli
+
