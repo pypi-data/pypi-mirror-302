@@ -1,0 +1,31 @@
+[tool.poetry]
+name = "screamer"
+version = "0.1.0"
+description = "Screamingly fast streaming indicators with C++ performance and Python simplicity."
+
+authors = ["Thijs van den Berg <thijs@sitmo.com>, Mohammadjavad Vakili <Mohammadjavad.Vakili@shell.com>"]
+
+maintainers = [
+    "Thijs van den Berg <thijs@sitmo.com>", 
+    "Mohammadjavad Vakili <Mohammadjavad.Vakili@shell.com>" 
+]
+
+
+license = "MIT"
+readme = "README.md"
+packages = [{ include = "screamer" }]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+pybind11 = "^2.9"
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.0"
+
+[tool.poetry.group.dev.dependencies]
+wheel = "^0.44.0"
+build = "^1.2.2.post1"
+
+[build-system]
+requires = ["setuptools", "wheel", "scikit-build", "cmake", "pybind11"]
+build-backend = "setuptools.build_meta"
