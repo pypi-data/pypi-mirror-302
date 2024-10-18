@@ -1,0 +1,10 @@
+README.md
+setup.py
+CutstomWidgetLoader/CustomWidgetLoaderUpload.py
+CutstomWidgetLoader/File_dialog_box.py
+CutstomWidgetLoader/__init__.py
+Streamlit_Filepath_Loader.egg-info/PKG-INFO
+Streamlit_Filepath_Loader.egg-info/SOURCES.txt
+Streamlit_Filepath_Loader.egg-info/dependency_links.txt
+Streamlit_Filepath_Loader.egg-info/requires.txt
+Streamlit_Filepath_Loader.egg-info/top_level.txt
