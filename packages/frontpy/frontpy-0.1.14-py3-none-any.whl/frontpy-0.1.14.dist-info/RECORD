@@ -1,0 +1,17 @@
+frontpy/__init__.py,sha256=v34K_-IzzFi_-DFftW5VeAoIR7UCRUH6Qrt8cexLzMw,508
+frontpy/calc_tfp.py,sha256=gcXLoVM3Cy9hjQiLi9hEYqKZT3X2JKEO8kYHUE6XcLU,4302
+frontpy/cli.py,sha256=8sf_-L0G_WBXwz0ghnJFexUntxi2p0KTFDtiRhMvPCc,5046
+frontpy/color_palette.py,sha256=OKu8QZGgdFb_s5Zc23OY2isIiYCvUIqbnE-cC6-oRJE,1511
+frontpy/download_data.py,sha256=7FdGj0stoBASalHpEoGLITDi_xDtddjO3sc_Oq8B3jw,5970
+frontpy/front_ident.py,sha256=BX6arZkalb5-1igd6aFXachhNcH-4pBaMXG2ULRaYcE,7921
+frontpy/main.py,sha256=vpSGy-rARw8q0NYWUJO-3BJNm3oQu1sXAdWDM_dF2Uk,4368
+frontpy/make_gif.py,sha256=TB7tnMNhj3ftBB_p-slSYDdEI9O_rod5NGz_fi6qgDY,2403
+frontpy/plot_fronts.py,sha256=W79naCi0BZCSA_vUCJy_oRN_u0Jq_4xEbIF6bPMpUZA,7146
+frontpy/utils.py,sha256=L4DteI5aL2jInH8AV08AatWoUZ51hKQWTisyrK_QsGs,4096
+frontpy/resources/IR_colormap.cpt,sha256=XdkEwj3xFb73lK-WIMQvBM_MUXy_umzCNAJA-nCiwzw,8660
+frontpy-0.1.14.dist-info/LICENSE,sha256=PYlJmvZFYENybMveL0BkRk4PFSTFpuX3FxvaYLbYX_Y,11355
+frontpy-0.1.14.dist-info/METADATA,sha256=S9p3Wj5y8aec_fwddqqpReTq6qfkKtf5ziSs7DEKigw,8425
+frontpy-0.1.14.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+frontpy-0.1.14.dist-info/entry_points.txt,sha256=uksZfswpNAl2FsMWp1h1qC99SVsNpmJjXLhElWrEfL0,48
+frontpy-0.1.14.dist-info/top_level.txt,sha256=UGZpd45dptwkk53plGTl_D0u5CSeZM1Qp9-310SJfRo,8
+frontpy-0.1.14.dist-info/RECORD,,
