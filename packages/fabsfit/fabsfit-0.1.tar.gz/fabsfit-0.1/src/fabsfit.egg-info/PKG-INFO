@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: fabsfit
+Version: 0.1
+Summary: Fitting absorptive scattering factors
+Home-page: https://github.com/pzeiger/fabsfit
+Author: Paul Zeiger
+Author-email: paul.zeiger@physics.uu.se
+License: GNU General Public License v3.0
+License-File: LICENSE
+Requires-Dist: scipy
+Requires-Dist: numpy
+Requires-Dist: periodictable
+Requires-Dist: numba
+Requires-Dist: requests
