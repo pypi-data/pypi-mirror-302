@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+fasttea/__init__.py
+fasttea/bootstrap.py
+fasttea/html.py
+fasttea/picocss.py
+fasttea_web.egg-info/PKG-INFO
+fasttea_web.egg-info/SOURCES.txt
+fasttea_web.egg-info/dependency_links.txt
+fasttea_web.egg-info/requires.txt
+fasttea_web.egg-info/top_level.txt
