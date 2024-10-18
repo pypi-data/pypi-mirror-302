@@ -1,0 +1,8 @@
+test_package_bikarnap/__init__.py,sha256=o9Cy4OlfYy24d2x0rMK_8hjuaqDI7mqHD2oD7V5BreU,51
+test_package_bikarnap/module1.py,sha256=pPef7TnSnBHIx7KYPYm1TLy5-gmZgLmpD9Vtm8WAsxk,45
+test_package_bikarnap/module2.py,sha256=j3WmhkbIef0M_1wCcIwBD7HAHWfvmTDU5BkQb-t4l6o,31
+test_package_bikarnap-0.3.dist-info/LICENSE,sha256=2bm9uFabQZ3Ykb_SaSU_uUbAj2-htc6WJQmS_65qD00,1073
+test_package_bikarnap-0.3.dist-info/METADATA,sha256=HdG8skqw8zr_RJMBucc4SBgpWPcI1AaoNIie2nNY3Gg,230
+test_package_bikarnap-0.3.dist-info/WHEEL,sha256=eOLhNAGa2EW3wWl_TU484h7q1UNgy0JXjjoqKoxAAQc,92
+test_package_bikarnap-0.3.dist-info/top_level.txt,sha256=4MF9sT7VPxUuI0tWfl1K-_8hhyxqI3M5l_Alc_AVaDM,22
+test_package_bikarnap-0.3.dist-info/RECORD,,
