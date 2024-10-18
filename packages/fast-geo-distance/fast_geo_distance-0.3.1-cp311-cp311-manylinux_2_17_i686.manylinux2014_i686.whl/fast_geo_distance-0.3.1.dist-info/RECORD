@@ -1,0 +1,5 @@
+fast_geo_distance-0.3.1.dist-info/METADATA,sha256=YIvj5FZUmMxHTFD0dlA0tLOTl1b9kOP1OVS0XFj5wjg,356
+fast_geo_distance-0.3.1.dist-info/WHEEL,sha256=QrIt7fd9GDQ0EALgKP42cSuiLoISvp1RMlwhH7ccP94,125
+fast_geo_distance/__init__.py,sha256=XEisPXpvMeP6YfmUL6FtuvRzwRmn4MB1vAv9FXmp0pM,151
+fast_geo_distance/fast_geo_distance.cpython-311-i386-linux-gnu.so,sha256=X3HS8unzB5DYDwqIWsz4VMqROJMJNin7ovq2-5oxtkg,739716
+fast_geo_distance-0.3.1.dist-info/RECORD,,
