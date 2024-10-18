@@ -1,0 +1,11 @@
+# CS_HELLO
+
+CS_HELLO is a simple Python package for printing "Hello, World!" with additional customization options.
+
+This package provides a customizable function to print "Hello, World!" to the console. You can modify the greeting message, choose different languages, and even include emojis!
+
+**Key Features:**
+- Print "Hello, World!" in different languages.
+- Customize the greeting message.
+- Add emojis to the greeting.
+- Easy to use with minimal setup.
