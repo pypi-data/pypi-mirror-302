@@ -1,0 +1,8 @@
+hydra_plugins/hydra_aws_batch_launcher/__init__.py,sha256=-PYTKPEkq2aGJHOdzkgu5oKZIPKSq6MCqGrFyy4QQXc,21
+hydra_plugins/hydra_aws_batch_launcher/aws_batch_launcher.py,sha256=5JJsAPz4tM7kH4FySTGqqyqdJegsboA4DoDX1i-H3bo,4547
+hydra_plugins/hydra_aws_batch_launcher/config.py,sha256=LBszZIlcgFXuylDAcHisYVtQgOmKUTr8LtmUm_xglFk,1099
+hydra_aws_batch_launcher-1.0.3.dist-info/LICENSE,sha256=oi_oCQDm_8nA2Zg-hdme3SAIh8ljFXmV_lLxF9Ts8kQ,1065
+hydra_aws_batch_launcher-1.0.3.dist-info/METADATA,sha256=G5RUJ0Hy_SWuKHWf1sjIqbtDfpKGCOBq-205GJm0FvM,905
+hydra_aws_batch_launcher-1.0.3.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+hydra_aws_batch_launcher-1.0.3.dist-info/top_level.txt,sha256=0-LcYpEmzatUy2K5F7jmqcMfBL2RdB7k9nM_8zGFzhI,14
+hydra_aws_batch_launcher-1.0.3.dist-info/RECORD,,
