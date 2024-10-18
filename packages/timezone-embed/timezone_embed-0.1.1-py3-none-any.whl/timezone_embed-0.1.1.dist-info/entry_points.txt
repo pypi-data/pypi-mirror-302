@@ -1,0 +1,3 @@
+[console_scripts]
+timezone-embed=timezone_embed.__main__:main
+

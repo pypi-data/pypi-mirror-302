@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: timezone-embed
+Version: 0.1.1
+Summary: 
+Author: Waterbread
+Author-email: markfulton.102@gmail.com
+Requires-Python: >=3.12,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: pytz (>=2024.2,<2025.0)
+Requires-Dist: timezonefinder (>=6.5.3,<7.0.0)
+Description-Content-Type: text/markdown
+
+
