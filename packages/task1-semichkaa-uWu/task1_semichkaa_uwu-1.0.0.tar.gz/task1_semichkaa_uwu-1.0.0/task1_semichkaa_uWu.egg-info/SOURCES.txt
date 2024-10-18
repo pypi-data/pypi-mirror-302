@@ -1,0 +1,7 @@
+README.md
+setup.py
+task1_semichkaa_uWu.egg-info/PKG-INFO
+task1_semichkaa_uWu.egg-info/SOURCES.txt
+task1_semichkaa_uWu.egg-info/dependency_links.txt
+task1_semichkaa_uWu.egg-info/entry_points.txt
+task1_semichkaa_uWu.egg-info/top_level.txt
