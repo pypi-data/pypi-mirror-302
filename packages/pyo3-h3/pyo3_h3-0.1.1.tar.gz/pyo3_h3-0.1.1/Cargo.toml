@@ -1,0 +1,17 @@
+[package]
+name = "pyo3-h3"
+version = "0.1.1"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[lib]
+name = "pyo3_h3"
+crate-type = ["cdylib"]
+
+[dependencies]
+h3o = "0.6.4"
+polars = "0.43.1"
+polars-core = "0.43.1"
+pyo3 = "0.22.0"
+pyo3-polars = "0.17.0"
+rayon = "1.10.0"
