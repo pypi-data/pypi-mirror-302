@@ -1,0 +1,33 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "kaslcred"
+version = "0.1.6"
+authors = [
+    {name="Kent Bull", email="kent@tetraveda.com"}
+]
+description = "A credential schema linker for the KERI and ACDC ecosystem."
+readme = "README.md"
+requires-python = ">=3.12.3"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent"
+]
+dependencies=[
+    "keri >= 1.1.20"
+]
+
+
+[project.urls]
+"Homepage" = "https://github.com/tetraveda/kaslcred"
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "-ra -q"
+testpaths = [
+    "tests",
+    "integration",
+]
