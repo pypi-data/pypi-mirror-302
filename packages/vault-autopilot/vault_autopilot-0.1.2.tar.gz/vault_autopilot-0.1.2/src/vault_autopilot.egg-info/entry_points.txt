@@ -1,0 +1,2 @@
+[console_scripts]
+vault-autopilot = vault_autopilot.__main__:cli
