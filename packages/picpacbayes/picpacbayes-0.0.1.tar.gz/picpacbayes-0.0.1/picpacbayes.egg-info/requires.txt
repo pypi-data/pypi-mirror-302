@@ -1,0 +1,7 @@
+apicutils>=0.0.3
+picoptim>=0.0.3
+picproba
+pandas
+faiss-cpu
+scipy>=1.7.0
+numpy<=1.26

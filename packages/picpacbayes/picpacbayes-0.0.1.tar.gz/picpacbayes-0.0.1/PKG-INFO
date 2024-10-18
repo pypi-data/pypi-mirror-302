@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: picpacbayes
+Version: 0.0.1
+Summary: PAC-Bayes learning routines
+Author: Antoine Picard-Weibel
+Author-email: apicard.w@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+License-File: LICENSE
+Requires-Dist: apicutils>=0.0.3
+Requires-Dist: picoptim>=0.0.3
+Requires-Dist: picproba
+Requires-Dist: pandas
+Requires-Dist: faiss-cpu
+Requires-Dist: scipy>=1.7.0
+Requires-Dist: numpy<=1.26
+
+PAC-Bayes learning routines
+This package provides implementations of PAC-Bayes learning routines Note: faiss-cpu version is currently pinned to 1.7.3 for security.We plan to allow more versions in ulterior version of the package.
