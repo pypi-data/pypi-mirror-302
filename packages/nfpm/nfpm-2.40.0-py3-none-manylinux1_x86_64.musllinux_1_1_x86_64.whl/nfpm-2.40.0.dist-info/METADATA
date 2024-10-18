@@ -1,0 +1,23 @@
+Metadata-Version: 2.3
+Name: nfpm
+Version: 2.40.0
+Summary: nFPM is Not FPM - a zero dependencies, simple deb, rpm, apk, ipk, and arch linux packager written in Go
+Project-URL: Issues, https://gitlab.com/vmeurisse/python-nfpm/-/issues
+Project-URL: Source, https://gitlab.com/vmeurisse/python-nfpm
+License-Expression: MIT
+License-File: LICENSE.txt
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Topic :: Software Development
+Classifier: Topic :: System :: Archiving :: Packaging
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+
+# nFPM for python
+
+Pre-build version of [nFPM](https://nfpm.goreleaser.com/) available as a python package.
