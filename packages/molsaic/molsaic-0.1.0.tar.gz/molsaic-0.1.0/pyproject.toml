@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "molsaic"
+version = "0.1.0"
+description = "Python package for performing cluster-cutout calculations"
+authors = ["Fabian Zills <fzills@icp.uni-stuttgart.de>"]
+license = "Apache-2.0"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+networkx = "^3.4.1"
+ase = "^3.23.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
