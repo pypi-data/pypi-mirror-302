@@ -1,0 +1,8 @@
+sar_apps/SAROceanDetectors.py,sha256=2_DpdrAAdt-ZoEbWeUU9PsPDmoLQtfIjJ1IPIqrBiyw,6266
+sar_apps/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sar_apps/convolution.py,sha256=dXL69BK4RSxwmigx6jKHK5aapcHZvpVom17ympXvx2k,3924
+sar_apps/filters.py,sha256=yRQ6zQIEpLoKmTRnWPa4_DcM_RhWl-0h5Yt2Hz1hC_M,15769
+sar_apps-0.0.1.dist-info/METADATA,sha256=IyiiGNtJZMIouApCkfSbSX6mowXludvlZ7M9HEO5Jb0,1326
+sar_apps-0.0.1.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+sar_apps-0.0.1.dist-info/licenses/LICENSE,sha256=2bm9uFabQZ3Ykb_SaSU_uUbAj2-htc6WJQmS_65qD00,1073
+sar_apps-0.0.1.dist-info/RECORD,,
