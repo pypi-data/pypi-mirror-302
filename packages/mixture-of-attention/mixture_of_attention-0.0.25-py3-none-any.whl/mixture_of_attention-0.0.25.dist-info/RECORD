@@ -1,0 +1,11 @@
+mixture_of_attention/__init__.py,sha256=FY6Zs4FImF0naz2GGtlpqGsGJjTKGRFyg__DtBDiS5E,134
+mixture_of_attention/attend.py,sha256=Ajhou28AbFUOfkidfoZwhAf1Dgqul1Ia7tcqwjaY-Aw,3965
+mixture_of_attention/autoregressive_wrapper.py,sha256=u1VCLmZ-8BhIzTdxCwxO__opVnSfZUrNy-RUdc5C2Sg,1750
+mixture_of_attention/mixture_of_attention.py,sha256=b63LfSX7AG31HXnKfGeg8JZiT79zIEZ3yywYDegP7p8,19508
+mixture_of_attention/rotary_emb.py,sha256=oxEYG7hyo2ckYLMA2CDdMYqewp8UzxGAPd9XcCuZPSI,847
+mixture_of_attention/transformer.py,sha256=TWCmyOLQnCLSqO_GR7uTaR_2RZZXig6vVz06gzj7Rfo,2880
+mixture_of_attention-0.0.25.dist-info/LICENSE,sha256=JCo3d2HvOFPGYvaXfnYX4-qjRyQvVElop5ZRITXMg-U,1066
+mixture_of_attention-0.0.25.dist-info/METADATA,sha256=aSZC5EXaEz9gki_0k_1s9NVCEGTovHxEv-9Oqn82WoA,799
+mixture_of_attention-0.0.25.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+mixture_of_attention-0.0.25.dist-info/top_level.txt,sha256=zJHGHYigbskDij5tdboIBI23RNCP1ruKcSTHRqVW-GE,21
+mixture_of_attention-0.0.25.dist-info/RECORD,,
