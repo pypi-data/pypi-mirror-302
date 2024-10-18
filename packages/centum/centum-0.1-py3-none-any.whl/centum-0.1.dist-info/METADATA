@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: centum
+Version: 0.1
+Summary: A Python package for water accounting using energy and water balance modeling.
+Home-page: https://github.com/yourusername/centum
+Author: Your Name
+Author-email: your.email@example.com
+License: GPL-3.0-or-later  # Use the SPDX identifier
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Centum
+
+Centum is a Python package that facilitates water accounting through energy and water balance modeling. It provides tools for analyzing and modeling water use efficiency, illegal pumping detection, and the protection of mountain ecosystems.
+
+## Features
+
+- Water accounting using energy balance modeling.
+- Tools for calculating water use efficiency (WUE).
+- Methods for detecting illegal water pumping.
+- Support for ecosystem drought resilience assessments.
+
+## Installation
+
+You can install the package using pip:
+
+```bash
+pip install centum
+
+
+
