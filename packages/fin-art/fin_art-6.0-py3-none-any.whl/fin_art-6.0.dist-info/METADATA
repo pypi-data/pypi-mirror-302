@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: fin-art
+Version: 6.0
+Summary: A module for generating stylistic images
+Home-page: UNKNOWN
+Author: madvasik
+Author-email: ma2sic@yandex.ru
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Requires-Dist: torch
+Requires-Dist: transformers
+Requires-Dist: diffusers
+Requires-Dist: matplotlib
+Requires-Dist: peft
+Requires-Dist: deep-translator
+
+UNKNOWN
+
+
