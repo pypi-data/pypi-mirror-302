@@ -1,0 +1,8 @@
+
+[dev]
+asv==0.6.1
+jupyter
+pre-commit
+pylint
+pytest
+pytest-cov
