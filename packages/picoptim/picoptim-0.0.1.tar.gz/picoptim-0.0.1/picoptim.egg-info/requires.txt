@@ -1,0 +1,4 @@
+apicutils>=0.0.3
+pandas
+scipy>=1.7.0
+numpy<=1.26
