@@ -1,0 +1,44 @@
+Metadata-Version: 2.3
+Name: custom-chat-gpt
+Version: 0.6.0
+Summary: Use chapgpt from your terminal
+Requires-Python: >=3.12
+Requires-Dist: langchain-anthropic>=0.2.3
+Requires-Dist: langchain-community>=0.3.2
+Requires-Dist: langchain-openai>=0.2.2
+Requires-Dist: langchain>=0.3.3
+Requires-Dist: openai>=1.51.2
+Requires-Dist: rich>=13.9.2
+Requires-Dist: typer>=0.12.5
+Requires-Dist: youtube-transcript-api>=0.6.2
+Description-Content-Type: text/markdown
+
+# Use LLMs inside your terminal 
+
+## Install
+
+```
+pip install custom-chat-gpt
+```
+
+## Usage
+
+```
+chat-gpt --help
+chat-gpt chat               # chat with the default model
+chat-gpt chat --markdown    # chat with the default model and markdown output
+chat-gpt youtube            # chat with a youtube video transcript
+```
+
+
+## Dev commands
+
+```
+poetry init
+poetry add openai rich typer
+poetry shell
+poetry install
+poetry run chat-gpt
+poetry build
+poetry publish
+```
