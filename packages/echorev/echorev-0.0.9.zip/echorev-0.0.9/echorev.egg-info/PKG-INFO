@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: echorev
+Version: 0.0.9
+Summary: a GUI tool to help you reverse your input text
+Home-page: https://github.com/cycleuser/EchoRev
+Author: cycleuser
+Author-email: cycleuser@cycleuser.org
+License-File: LICENSE
+Requires-Dist: PyQt5
