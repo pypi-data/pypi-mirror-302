@@ -1,0 +1,51 @@
+[tool.poetry]
+name = "postgresql-notification-listener"
+version = "2.0.2"
+description = "Execute functions on PostgreSQL notifications"
+authors = ["Tero Vuotila <tero.vuotila@falcony.io>"]
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/tvuotila/postgresql-notification-listener"
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+
+[tool.poetry.dependencies]
+python = ">=3.10"
+psycopg = "<4"
+
+
+[tool.poetry.group.dev.dependencies]
+mypy = "*"
+ruff = "*"
+black = "*"
+pytest = "*"
+pytest-timeout = "*"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.mypy]
+exclude = ["dist"]
+warn_unused_ignores = true
+show_error_codes = true
+strict = true
+
+[[tool.mypy.overrides]]
+module = "tests.*"
+check_untyped_defs = true
+disallow_untyped_defs = false
+disallow_untyped_calls = false
+
+[tool.pytest.ini_options]
+filterwarnings = ["error"]
+addopts = ["-ra", "--showlocals", "--strict-markers", "--strict-config"]
+xfail_strict = true
+log_cli_level = "info"
+testpaths = [
+  "tests",
+]
