@@ -1,0 +1,51 @@
+!<tag:y4.managarm.org:preamble>
+import:
+    - !std
+    - !jq
+    - !xbstrap
+    - !meson
+    - !ninja
+    - !foo
+rule:
+  !on_arch :
+    !std::fn
+    return:
+      !std::contains
+      list: !arg
+      item: !std::opt architecture
+    extends: !!seq
+---
+!std::let
+rule:
+  !average : !jq::fn ".list | add / length"
+in:
+  average_of_1_to_4:
+    !average
+    list: [1, 2, 3, 4, 5]
+---
+packages:
+  - !xbstrap::package
+    name: !foo::name
+    labels: [aarch64]
+    foo: !on_arch [x86_64]
+    bar: !std::opt architecture
+    source:
+      subdir: 'ports'
+      git: 'https://github.com/managarm/libasync.git'
+      branch: 'master'
+      rolling_version: true
+      version: '0.0pl@ROLLING_ID@'
+    tools_required:
+      - !std::splice_if
+        - item: system-gcc
+          if: true
+    pkgs_required:
+      - boost
+    revision: 7
+    configure:
+       - !meson::setup
+         defines:
+            install_headers: true
+    build:
+      - !ninja::build
+      - !ninja::install
