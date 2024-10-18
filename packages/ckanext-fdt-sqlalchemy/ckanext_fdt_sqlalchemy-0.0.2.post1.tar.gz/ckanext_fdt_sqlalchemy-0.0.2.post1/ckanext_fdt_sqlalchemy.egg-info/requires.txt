@@ -1,0 +1,10 @@
+
+[deps]
+flask-sqlalchemy~=2.5
+
+[dev]
+flask-sqlalchemy~=2.5
+pytest-ckan
+
+[test]
+pytest-ckan
