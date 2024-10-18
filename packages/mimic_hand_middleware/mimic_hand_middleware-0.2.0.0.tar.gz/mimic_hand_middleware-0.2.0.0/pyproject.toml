@@ -1,0 +1,33 @@
+[tool.poetry]
+name = "mimic_hand_middleware"
+version = "0.2.0.0"
+description = "Joint-to-motor level control API for mimic robotics AG's robotic hands."
+authors = ["Ben Forrai <ben.forrai@mimicrobotics.com>"]
+readme = "README.md"
+license = "Closed source"
+
+[tool.poetry.dependencies]
+python = "3.10.12"
+numpy = "^1.26.4"
+click = "^8.0.0"
+opencv-python = "*"
+matplotlib = "^3.0.0"
+pandas = "^2.0.0"
+protobuf = "^5.28.0"
+pyyaml = "^6.0.0"
+pyserial = "^3.5"
+
+[tool.poetry.dev-dependencies]
+bandit = "^1.7.8"
+pre-commit = "^3.7.1"
+pytest = "^8.2.2"
+ruff = "0.4.8"
+
+[[tool.poetry.source]]
+name = "pytorch-gpu-src"
+url = "https://download.pytorch.org/whl/cu118"
+priority = "explicit"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
