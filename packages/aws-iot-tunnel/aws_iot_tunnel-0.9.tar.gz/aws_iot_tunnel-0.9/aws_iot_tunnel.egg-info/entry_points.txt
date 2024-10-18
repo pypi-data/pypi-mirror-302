@@ -1,0 +1,2 @@
+[console_scripts]
+aws-iot-tunnel = aws_iot_tunnel.aws_iot_tunnel:main
