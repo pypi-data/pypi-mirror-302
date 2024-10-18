@@ -1,0 +1,6 @@
+[console_scripts]
+Spyogenes_typer = Strep_typer.Spyogenes_typer:cli
+core_hello_world = Strep_typer.core:cli
+
+[nbdev]
+Strep_typer = Strep_typer._modidx:d

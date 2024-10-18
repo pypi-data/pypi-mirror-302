@@ -1,0 +1,10 @@
+Strep_typer
+_proc
+config
+examples
+input
+nbs
+output
+output_from_folder
+output_from_samplesheet
+resources
