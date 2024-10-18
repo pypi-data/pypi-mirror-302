@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+simqd.egg-info/PKG-INFO
+simqd.egg-info/SOURCES.txt
+simqd.egg-info/dependency_links.txt
+simqd.egg-info/entry_points.txt
+simqd.egg-info/not-zip-safe
+simqd.egg-info/requires.txt
+simqd.egg-info/top_level.txt
+simqdsvr/__init__.py
+simqdsvr/debug.py
+simqdsvr/service_providers.py
+simqdsvr/simqd.py
