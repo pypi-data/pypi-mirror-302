@@ -1,0 +1,8 @@
+pollux_application/__init__.py,sha256=OxZOXAgc85ZvtZipY_xdzN1tQUrBorWVVFzf4WdoDr8,24
+pollux_application/application_abstract.py,sha256=_Rku5vfHCyR2_fDqpuS5QV9zS96RkDMd_jB6ZPEk6oc,1278
+pollux_application/power2hydrogen/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pollux_application/power2hydrogen/p2h2_solver.py,sha256=hbH1xGBKIgQXLfHEmdzeF2Fl1XllwhgR81io84ORStA,13480
+pollux_application-0.1.0.dist-info/LICENSE,sha256=Y_zDMUosI56de95GVglpC19GilDg_0qu5kgmy4XiwKE,33092
+pollux_application-0.1.0.dist-info/METADATA,sha256=2zxof7pp9z59k-v50HFizfOvLBfafRkrTDX6dyvcIPw,2524
+pollux_application-0.1.0.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+pollux_application-0.1.0.dist-info/RECORD,,
