@@ -1,0 +1,13 @@
+click<9.0,>=8.0
+psycopg[binary]<4.0,>=3.2
+langchain-openai<1.0,>=0.1
+langchain-text-splitters<1.0,>=0.2
+pydantic<3.0,>=2.0
+openai<2.0,>=1.44
+python-dotenv<2.0,>=1.0
+structlog<25.0,>=24.0
+pgvector<1.0,>=0.3
+tiktoken<1.0,>=0.7
+typing_extensions<5.0,>=4.0
+datadog_lambda<7.0,>=6.9
+pytimeparse<2.0,>=1.1
