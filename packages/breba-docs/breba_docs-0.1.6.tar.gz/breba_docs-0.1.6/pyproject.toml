@@ -1,0 +1,66 @@
+[tool.poetry]
+name = "breba-docs"
+version = "0.1.6"
+description = "Documentation assistant will proof read your docs"
+authors = ["Yason Khaburzaniya <yason@hey.com>"]
+license = "MIT"
+readme = "README.md"
+
+homepage = "https://github.com/breba-apps/breba-docs"
+repository = "https://github.com/breba-apps/breba-docs"
+documentation = "https://github.com/breba-apps/breba-docs"
+keywords = ["gpt", "assistant", "documentation"]
+
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+packages = [ { include = "breba_docs" } ]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+docker = "^7.1.0"
+openai = "^1.38.0"
+python-dotenv = "^1.0.1"
+requests = "^2.32.3"
+pexpect = "^4.9.0"
+
+
+[tool.poetry.group.test.dependencies]
+pytest = "^8.3.2"
+
+
+[tool.pytest.ini_options]
+pythonpath = [
+  "breba_docs"
+]
+
+markers = [
+    "integration: marks the test as an integration test (deselect with '-m \"not integration\"')",
+]
+# log_cli = "True"
+# log_cli_level = "INFO"
+
+
+
+
+
+
+
+
+
+
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.2"
+pytest-mock = "^3.14.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+breba_docs = "breba_docs.cli:run"
