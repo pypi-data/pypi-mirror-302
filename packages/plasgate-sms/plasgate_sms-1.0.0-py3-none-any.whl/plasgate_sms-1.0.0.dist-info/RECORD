@@ -1,0 +1,9 @@
+plasgate/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+plasgate/api/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+plasgate/api/message.py,sha256=6epDBeoT6Tnp6jKwqdAlVRUBaYxEGbpkeFWRk2j_a-w,6471
+plasgate/api/schema.py,sha256=fraLJ8l6TPVXib9vKPJvr0Nzd38KG1mL_5hfjUGhfxU,3765
+plasgate/rest/__init__.py,sha256=W69mnv26eIavacn1NqOseTz6g-Hp_h_23mp0cESPLUI,1888
+plasgate_sms-1.0.0.dist-info/METADATA,sha256=iJ2CXApm6ik4swagTrlf0u-OLXQDToq8QCNSvnGXkSc,4742
+plasgate_sms-1.0.0.dist-info/WHEEL,sha256=oiQVh_5PnQM0E3gPdiz09WCNmwiHDMaGer_elqB3coM,92
+plasgate_sms-1.0.0.dist-info/top_level.txt,sha256=HeAfDSbDZ5zCgOmkGTxYGfRcv9-KMo1snOtXc7xXUvM,9
+plasgate_sms-1.0.0.dist-info/RECORD,,
