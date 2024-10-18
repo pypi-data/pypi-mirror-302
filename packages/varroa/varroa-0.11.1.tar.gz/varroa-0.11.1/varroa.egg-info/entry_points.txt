@@ -1,0 +1,14 @@
+[console_scripts]
+varroa-api = varroa.cmd.api:main
+varroa-manage = varroa.cmd.manage:cli
+varroa-notification = varroa.cmd.notification:main
+varroa-worker = varroa.cmd.worker:main
+
+[oslo.config.opts]
+varroa = varroa.common.config:list_opts
+
+[oslo.policy.enforcer]
+varroa = varroa.policy:get_enforcer
+
+[oslo.policy.policies]
+varroa = varroa.common.policies:list_rules

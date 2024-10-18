@@ -1,0 +1,10 @@
+[run]
+omit =
+   varroa/wsgi.py
+   varroa/cmd/*
+   varroa/worker/consumer.py
+   varroa/worker/endpoints.py
+   varroa/common/service.py
+   varroa/worker/api.py
+   varroa/common/rpc.py
+   varroa/notification/consumer.py
