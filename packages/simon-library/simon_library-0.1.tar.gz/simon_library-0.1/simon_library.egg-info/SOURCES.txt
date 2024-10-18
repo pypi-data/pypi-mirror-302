@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+simon_library/__init__.py
+simon_library/core.py
+simon_library.egg-info/PKG-INFO
+simon_library.egg-info/SOURCES.txt
+simon_library.egg-info/dependency_links.txt
+simon_library.egg-info/top_level.txt
+tests/test_core.py
