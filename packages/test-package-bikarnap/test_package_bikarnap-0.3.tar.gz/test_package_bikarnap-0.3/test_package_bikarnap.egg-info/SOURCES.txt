@@ -1,0 +1,10 @@
+README.md
+setup.py
+test_package_bikarnap/__init__.py
+test_package_bikarnap/module1.py
+test_package_bikarnap/module2.py
+test_package_bikarnap.egg-info/PKG-INFO
+test_package_bikarnap.egg-info/SOURCES.txt
+test_package_bikarnap.egg-info/dependency_links.txt
+test_package_bikarnap.egg-info/requires.txt
+test_package_bikarnap.egg-info/top_level.txt
