@@ -1,0 +1,14 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "omnifuel"
+version = "0.0.1"
+authors = [
+  { name="Adileo Barone", email="adileob@gmail.com" },
+]
+description = "Omnifuel SDK"
+readme = "README.md"
+requires-python = ">=3.12"
+classifiers = []

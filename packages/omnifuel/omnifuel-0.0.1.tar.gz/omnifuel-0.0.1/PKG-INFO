@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: omnifuel
+Version: 0.0.1
+Summary: Omnifuel SDK
+Author-email: Adileo Barone <adileob@gmail.com>
+License-File: LICENSE
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+
+https://packaging.python.org/en/latest/tutorials/packaging-projects/
