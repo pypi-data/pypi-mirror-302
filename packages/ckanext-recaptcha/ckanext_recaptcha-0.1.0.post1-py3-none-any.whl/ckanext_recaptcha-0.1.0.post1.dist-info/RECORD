@@ -1,0 +1,16 @@
+ckanext/__init__.py,sha256=Tcx7oJQTHK5ILke57YCG1IbLx_gAgo2fNHRp9HOWtZs,221
+ckanext/recaptcha/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ckanext/recaptcha/config.py,sha256=slkUNaGJPpfmbg7kl2StRLVyX-kSM4BcfMp7aEskVKg,1449
+ckanext/recaptcha/plugin.py,sha256=fKVIil-lX2mXg9QgrJrjqEBCpIMZT8iAke-XeMHnf1s,2348
+ckanext/recaptcha/assets/recaptcha-v2.js,sha256=AYtdkQ9UrGMZCkjNTQ3T4qoEwsN_Mc67Pobszwuztaw,1759
+ckanext/recaptcha/assets/recaptcha-v3.js,sha256=8sHOQxkprKEfdABKvMYlRrh0ZVukTbAh84mJb8X_jN0,1474
+ckanext/recaptcha/assets/webassets.yml,sha256=UlTl-VxCOXWHge9By-vY9EADyJVmgUd2rDgVYbyN55c,330
+ckanext/recaptcha/templates/page.html,sha256=ReAnp6sPoStD8PLX0ytENYciNM3rZk56u03ShEq6pZM,552
+ckanext/recaptcha/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ckanext/recaptcha/tests/test_plugin.py,sha256=FkwwQKMWk-m8kkLx2W7cU6cLyCktuJ1fA0tLM8REbuU,1384
+ckanext_recaptcha-0.1.0.post1.dist-info/LICENSE,sha256=2lWcRAHjsQhqavGNnR30Ymxq3GJ9BaYL_dnfGO_-WFA,34500
+ckanext_recaptcha-0.1.0.post1.dist-info/METADATA,sha256=3vzxDERlnAgYtNX69WkB5ibjN1c_atSGlE6w_XDTcBk,4092
+ckanext_recaptcha-0.1.0.post1.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+ckanext_recaptcha-0.1.0.post1.dist-info/entry_points.txt,sha256=6GBqJkCP6ihnU3R7EFEDUEwHaKmyiZCk_M0rwVVFDsk,125
+ckanext_recaptcha-0.1.0.post1.dist-info/top_level.txt,sha256=5yjNwq-s42weaiMMUuA5lZ45g99ANsfcRBCvac1JMS4,8
+ckanext_recaptcha-0.1.0.post1.dist-info/RECORD,,
