@@ -1,0 +1,17 @@
+click
+tomli
+GitPython
+mistletoe
+typing_extensions<5,>=4.12
+
+[:python_version >= "3.10"]
+importlib-metadata
+
+[dev]
+build
+twine
+pytest
+pytest-cov
+mypy
+ruff
+tox
