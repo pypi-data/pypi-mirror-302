@@ -1,0 +1,13 @@
+torchrun --nproc_per_node 1 nosync-forward-backward.py 2>&1 | tee log1/nosync-forward-backward-gpu1.log
+
+['nosync-forward-backward.py']
+Training with config: {'lr': 2e-05, 'num_epochs': 1, 'seed': 42, 'batch_size': 16, 'gradient_accumulation_steps': 4}
+/home/gwonsoo/.local/lib/python3.8/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Map:   0%|          | 0/1725 [00:00<?, ? examples/s]Map:  58%|█████▊    | 1000/1725 [00:00<00:00, 7551.10 examples/s]Map: 100%|██████████| 1725/1725 [00:00<00:00, 4832.88 examples/s]
+Some weights of BertForSequenceClassification were not initialized from the model checkpoint at bert-base-cased and are newly initialized: ['classifier.bias', 'classifier.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/gwonsoo/.local/lib/python3.8/site-packages/accelerate/utils/dataclasses.py:301: FutureWarning: The `TPU` of `<enum 'DistributedType'>` is deprecated and will be removed in v1.0.0. Please use the `XLA` instead.
+  warnings.warn(
+You're using a BertTokenizerFast tokenizer. Please note that with a fast tokenizer, using the `__call__` method is faster than using a method to encode the text followed by a call to the `pad` method to get a padded encoding.
+Average batch time: 0.40s, Num batches: 58

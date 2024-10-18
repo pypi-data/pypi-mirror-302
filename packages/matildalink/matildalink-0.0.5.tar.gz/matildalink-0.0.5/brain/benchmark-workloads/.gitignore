@@ -1,0 +1,11 @@
+.DS_Store/
+__pycache__/
+
+trained_model/
+checkpoints/
+logs/
+
+*.swp
+*.pkl
+*.txt
+

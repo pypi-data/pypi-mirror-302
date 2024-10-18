@@ -1,0 +1,260 @@
+% This is samplepaper.tex, a sample chapter demonstrating the
+% LLNCS macro package for Springer Computer Science proceedings;
+% Version 2.21 of 2022/01/12
+%
+\documentclass[runningheads]{llncs}
+%
+\usepackage[T1]{fontenc}
+% T1 fonts will be used to generate the final print and online PDFs,
+% so please use T1 fonts in your manuscript whenever possible.
+% Other font encondings may result in incorrect characters.
+%
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{stmaryrd}
+\usepackage{proof}
+\usepackage{a4wide}
+\usepackage{bbm}
+\usepackage{dsfont}
+\usepackage{color}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+\renewcommand{\algorithmicensure}{\textbf{Output:}}
+\usepackage{hyperref}
+
+\allowdisplaybreaks
+
+\input{math_commands}
+\input{macro}
+
+%\usepackage{graphicx}
+% Used for displaying a sample figure. If possible, figure files should
+% be included in EPS format.
+%
+% If you use the hyperref package, please uncomment the following two lines
+% to display URLs in blue roman font according to Springer's eBook style:
+%\usepackage{color}
+%\renewcommand\UrlFont{\color{blue}\rmfamily}
+%\urlstyle{rm}
+%
+\begin{document}
+%
+\title{Automatically Generating Optimal Execution Plans for Machine Learning Workflows in the Hybrid- and Multi-Cloud Environments (Working Notes)}
+%
+\titlerunning{Automatically Generating Optimal Execution Plans}
+% If the paper title is too long for the running head, you can set
+% an abbreviated paper title here
+%
+\author{Matilda-Link Working Group}
+%
+%\authorrunning{F. Author et al.}
+% First names are abbreviated in the running head.
+% If there are more than two authors, 'et al.' is used.
+%
+\institute{MegazoneCloud}
+%
+\maketitle              % typeset the header of the contribution
+
+\section{Introduction}
+Hybrid- and multi-cloud computing techniques present both opportunities and challenges in terms of how and where to run machine learning workflows. We aim at developing an algorithm that automatically generates a hybrid- and multi-cloud execution plan that is optimal with respect to the specified user requirements for the given machine learning workflow. This document contains working notes, which might not always be correct or consistent. Our intention here is that we write important observations and ideas, and work effectively with clear presentation.
+
+\begin{algorithm}[h]
+	\caption{AIML-SkyPilot Algorithm (cost-optimal version)}
+	\label{alg:aiml-skypilot}
+	\begin{algorithmic}[1]
+		%\Require user-defined weights $w_{1:l}$, learned neural network $\nn_{\theta_{\it best}}$, set $\cD$ of triples of workflow $c$, infrastructure setup $\pi$, and network route $\psi$
+		%\Ensure an optimal execution plan ($c_{\it best}$, $\pi_{\it best}$, $\psi_{\it best}$)
+		\Require user-defined task $\task$, target instances $\targetinstances$, learned time estimator $\timepredictor$, ILP-optimizer $\optimizer$ for minimizing the cost, cloud service catalog $\catalog$
+		\Ensure best instance $\instance$%, expected total cost $c$, expected total time $t$
+		
+		\State $\instance_{\it best} \gets \pi_{\it null}$
+		\State $\widehat{\targetinstances} \gets \filter(\task, \catalog, \targetinstances)$
+		\Comment{filter feasible instances among the target instances}
+		\If{$\widehat{\targetinstances}$ = $\emptyset$}
+		\State \textbf{return} $\instance_{\it best}$
+		\EndIf
+
+		%\State $c_{\it best}, t_{\it best} \gets \infty, -1$
+		\State $\predictions \gets \emptyset$
+		\ForAll{$\instance \in \widehat{\targetinstances}$}
+		\State $c_\instance, t_\instance \gets \predict(\task, \instance, \timepredictor)$
+		\Comment{predict expected cost and time using the learned time estimator}
+		\State $\predictions \gets \predictions \cup \{(\instance, c_\instance, t_\instance)\}$
+		\EndFor
+		\State $\instance_{\it best}  \gets \optimize(\optimizer, \predictions)$
+		\Comment{identify the best instance (w.r.t. cost)  via 0-1 ILP optimization}
+		\State \textbf{return} $\instance_{\it best}$%, c_{\it best}, t_{\it best}$
+	\end{algorithmic}
+\end{algorithm}
+
+\section{Brain Algorithm}
+We support two optimization targets, time and cost. The user chooses only one of the two targets. In this section, we describe several variants of the cost-optimal Brain Algorithm. Note that the nearly identical descriptions apply to their time-optimal counterparts.
+
+\subsection{AIML-SkyPilot Algorithm}
+
+An important question is how we should combine the SkyPilot and AI/ML parts, so that the combined algorithm generates the best execution plan effectively and automatically. Our answer to the question is use the learned AI/ML model as the time estimator for the SkyPilot optimizer. Algorithm~\ref{alg:aiml-skypilot} realizes that idea.
+
+\subsection{AIML-Roofline-SkyPilot Algorithm}
+Though Algorithm~\ref{alg:aiml-skypilot} sheds light on how the SkyPilot optimizer and AI/ML may synergize, it lacks the explicit guidelines for deriving (or learning) the time estimator. In fact, the algorithm assumes the learned time estimator $\timepredictor$ to be given as an input. We improve the algorithm leveraging the prior knowledge of performance modeling. In particular, we first identify the key computational blocks under the Roofline performance modeling~\cite{williams09roofline}, and then pinpoint the spots carefully in order to apply AI/ML minimally while exploiting direct computation as much as possible. In this respect, we have at least the following two variants:
+\begin{itemize}
+	\item $\textbf{Method 1:}$ AI/ML predicts the operational intensity of the given workload. The result is Algorithm~\ref{alg:aiml-roofline-skypilot-1}.
+	\item $\textbf{Method 2:}$ AI/ML predicts the memory traffic (the denominator of the operational intensity). The result is Algorithm~\ref{alg:aiml-roofline-skypilot-2}.
+\end{itemize}
+
+\begin{algorithm}[h]
+	\caption{AIML-Roofline-SkyPilot Algorithm 1 (cost-optimal version)}
+	\label{alg:aiml-roofline-skypilot-1}
+	\begin{algorithmic}[1]
+		\Require user-defined task $\task$, target instances $\targetinstances$, \blue{roofline models $\rooflinemodels$ for the target instances}, \blue{learned predictor $\oipredictor$ for operational intensity}, ILP-optimizer $\optimizer$ for minimizing the cost, cloud service catalog $\catalog$
+		\Ensure best instance $\instance$%, expected total cost $c$, expected total time $t$
+		
+		\State $\instance_{\it best} \gets \pi_{\it null}$
+		\State $\widehat{\targetinstances} \gets \filter(\task, \catalog, \targetinstances)$
+		\Comment{filter feasible instances among the target instances}
+		\If{$\widehat{\targetinstances}$ = $\emptyset$}
+		\State \textbf{return} $\instance_{\it best}$
+		\EndIf
+		
+		\State $\predictions \gets \emptyset$
+		\State $\blue{\tau \gets \computetotalflops(\task)}$
+		\ForAll{$\instance \in \widehat{\targetinstances}$}
+		\State $\blue{\Theta \gets \genfeats(\tau, \task, \instance)}$
+		\Comment{total \#FLOPs $\tau$ becomes a feature for the predictor $\oipredictor$}
+		\State $\blue{\rho \gets \predict(\oipredictor, \Theta)}$
+		\Comment{compute operational intensity}
+		\State $\blue{\sigma \gets \computegflops(\rooflinemodels, \instance, \rho)}$
+		\Comment{compute the expected throughput in GFLOPS}
+		\State $\blue{c_\instance, t_\instance \gets \computetimecost(\tau, \sigma, \instance)}$
+		\Comment{estimated time = total \#FLOPs / GFLOPS}
+		\State $\predictions \gets \predictions \cup \{(\instance, c_\instance, t_\instance)\}$
+		\EndFor
+		\State $\instance_{\it best}  \gets \optimize(\optimizer, \predictions)$
+		\Comment{identify the best instance (w.r.t. cost)  via 0-1 ILP optimization}
+		\State \textbf{return} $\instance_{\it best}$%, c_{\it best}, t_{\it best}$
+	\end{algorithmic}
+\end{algorithm}
+
+\begin{algorithm}[h]
+	\caption{AIML-Roofline-SkyPilot Algorithm 2 (cost-optimal version)}
+	\label{alg:aiml-roofline-skypilot-2}
+	\begin{algorithmic}[1]
+		\Require user-defined task $\task$, target instances $\targetinstances$, roofline models $\rooflinemodels$ for the target instances, \blue{learned predictor $\mtpredictor$ for total memory transfers}, ILP-optimizer $\optimizer$ for minimizing the cost, cloud service catalog $\catalog$
+		\Ensure best instance $\instance$%, expected total cost $c$, expected total time $t$
+		
+		\State $\instance_{\it best} \gets \pi_{\it null}$
+		\State $\widehat{\targetinstances} \gets \filter(\task, \catalog, \targetinstances)$
+		\Comment{filter feasible instances among the target instances}
+		\If{$\widehat{\targetinstances}$ = $\emptyset$}
+		\State \textbf{return} $\instance_{\it best}$
+		\EndIf
+		
+		\State $\predictions \gets \emptyset$
+		\State $\tau \gets \computetotalflops(\task)$
+		\ForAll{$\instance \in \widehat{\targetinstances}$}
+		\State $\blue{\Theta \gets \genfeats(\task, \instance)}$
+		\Comment{total \#FLOPs $\tau$ is not a feature}
+		\State $\blue{\chi \gets \predict(\mtpredictor, \Theta)}$
+		\Comment{compute total bytes of memory transfers}
+		\State $\blue{\rho \gets \tau / \chi}$
+		\Comment{Operational intensity = \#FLOPs / total \#bytes of memory transfers}
+		\State $\sigma \gets \computegflops(\rooflinemodels, \instance, \rho)$
+		\Comment{compute the expected throughput in GFLOPS}
+		\State $c_\instance, t_\instance \gets \computetimecost(\tau, \sigma, \instance)$
+		\Comment{estimated time = total \#FLOPs / GFLOPS}
+		\State $\predictions \gets \predictions \cup \{(\instance, c_\instance, t_\instance)\}$
+		\EndFor
+		\State $\instance_{\it best}  \gets \optimize(\optimizer, \predictions)$
+		\Comment{identify the best instance (w.r.t. cost)  via 0-1 ILP optimization}
+		\State \textbf{return} $\instance_{\it best}$%, c_{\it best}, t_{\it best}$
+	\end{algorithmic}
+\end{algorithm}
+
+
+
+
+
+
+
+\iffalse
+\section{Old Trial}
+
+\paragraph{Data}
+We consider a set $ \cD$ of triples of the following items:
+\begin{itemize}
+	\item a machine learning workflow;
+	\item a set of statistics that descirbes a cloud infrastructure setup; and
+	\item another set of statistics for a network route.
+\end{itemize}
+Let $p_\cD$ denote the uniform distribution over $\cD$.
+
+\paragraph{User Requirements}
+Let $l$ be a positive integer. We support $l$ performance factors in terms of which the generated execution plan is optimal. We introduce weights each of which encodes the importance of the corresponding performance factor:
+\[
+w_{1:l} \in \sR_{\ge 0}^l,\ \sum_{i=1}^{l} w_i = 1.
+\]
+Then, the user specifies their requirements using the performance factors and the weights. We will show how the requirements encoding is used to compute an optimal execution plan in Section~\ref{sec:scoring}. The weighting mechanism facilitates precise encodings of the technical and business requirements by enabling the user to prioritize a factor over others or to ignore some of the factors completely.
+
+\begin{example}
+	\label{ex:weights}
+	Suppose we support the following performance factors: utilization, price, response time, latency, mean time to detection (MTTD), mean time to resolution (MTTR), and mean time between failures (MTBF). Here we have $l=7$, and then the user has $w_{1:7}$ to encode their requirements in the form of weights that add up to $1$. If utilization and price are equally important and it is known that the other factors are of no importance, then the user may encode their requirements by $w_{1:7}=(0.5, 0.5, 0.0, 0.0, 0.0, 0.0, 0.0)$.
+\end{example}
+
+The rest of the document assumes that we support exactly the seven user requirements shown in Example~\ref{ex:weights}. We also follow the order of the weights; that is, $w_1$ represents utilization and $w_7$ MTBF.
+
+\paragraph{Prediction of the Performance Factors}
+For our approach to be useful, the user should be able to obtain precise information about the performance factors without running the machine learning workflow in the actual computing environment.
+
+We introduce a parameterized function $\nn_\theta(c, \pi, \psi)$ that takes a machine learning workflow $c$, the statistics $\pi$ for a cloud infrastructure setup, and the statistics $\psi$ for a network route, and then computes the $l$ performance factors that are approximations of the results obtained by running $c$ in the environment that $\pi$ and $\psi$ represent. We design $\nn_\theta$ so that it somehow normalizes the prediction values instead of returning the values of the performance factors directly; that is, for any prediction $r_{1:l}$, it satisfies the following condition:
+\[
+r_{1:l} \in [0, 1]^l.
+\]
+We do this because the performance factors have different ranges, and the differences are likely to distort the user intention (encoded by the weights $w_{1:l}$) when computing the score (see the scoring function in Section~\ref{sec:scoring}). In our experiments, we will implement $\nn_\theta$ as a neural network, and then $\theta$ represents the parameters of the neural network.
+
+\paragraph{Scoring}
+\label{sec:scoring}
+We define a scoring function $\cS(w_{1:l}, r_{1:l})$ that takes the weights $w_{1:l}$ for the relative importance of the user requirements and the prediction $r_{1:l}$ by the parameterized function $\nn_\phi$, and computes the corresponding score as follows:
+\[
+\cS(w_{1:l}, r_{1:l}) := w_1 \times r_1 - \sum_{i=2}^{l} w_i \times r_i 
+\]
+The user would like to find the triple $(c, \pi, \psi)$ that maximizes $\cS(w_{1:l}, \nn_\theta(c, \pi, \psi)))$.
+
+\begin{algorithm}[t]
+	\caption{Execution Plan Generation}
+	\label{alg:overall}
+	\begin{algorithmic}[1]
+		\Require user-defined weights $w_{1:l}$, learned neural network $\nn_{\theta_{\it best}}$, set $\cD$ of triples of workflow $c$, infrastructure setup $\pi$, and network route $\psi$
+		\Ensure an optimal execution plan ($c_{\it best}$, $\pi_{\it best}$, $\psi_{\it best}$)
+		
+		\State $K \gets |\cD|$
+		\State $s_{\it best} \gets -1$
+		\State $c_{\it best}, \pi_{\it best}, \psi_{\it best} \gets c_{\it null}, \pi_{\it null}, \psi_{\it null}$
+		\For{$k \gets 1$ to $K$}
+			\State $c, \pi, \psi \gets \kth(\cD, k)$
+			\State $r_{1:l} \gets \nn_{\theta_{\it best}}(c, \pi, \psi)$
+			\State $s \gets \cS(w_{1:l}, r_{1;l})$
+			\If{$s >  s_{\it best}$}
+				\State $s_{\it best} \gets s$
+				\State $c_{\it best}, \pi_{\it best}, \psi_{\it best} \gets c, \pi, \psi$
+			\EndIf
+		\EndFor
+		
+		\State \textbf{return} $c_{\it best}, \pi_{\it best}, \psi_{\it best}$
+	\end{algorithmic}
+\end{algorithm}
+
+\paragraph{Full Algorithm}
+\label{sec:algorithm}
+We collect all the components that we have defined in the previous sections, and describe the full algorithm that generates an optimal execution plan for the given machine learning workflow, assuming that we have learned the neural network $nn_{\theta_{\it best}}$. Algorithm~\ref{alg:overall} describes it.
+
+\paragraph{Training of the Neural Network}
+Now we describe the training process for learning $\nn_{\theta_{\it best}}$.
+\gc{Specify.}
+
+\fi
+
+\bibliographystyle{splncs04}
+\bibliography{refs}
+
+\end{document}

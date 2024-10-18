@@ -1,0 +1,7 @@
+*model/
+*logs/
+*metrics/
+__pycache__/
+
+*.swp
+exp_cmds.txt

@@ -1,0 +1,5 @@
+packaging==24.1
+tensorflow==2.17
+tensorflow_datasets==4.9.6
+tensorflow_text==2.17
+tf_models_official==2.17.0

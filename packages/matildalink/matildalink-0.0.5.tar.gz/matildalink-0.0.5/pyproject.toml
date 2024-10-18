@@ -1,0 +1,32 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "matildalink"
+version = "0.0.5"
+authors = [
+  { name="Gwonsoo Che", email="gwonsoo.che@megazone.com" },
+  { name="Do Il Yoon", email="diyoon@megazone.com" },
+  { name="Frodo Hong", email="frodohong@megazone.com" },
+  { name="Sangkuk Cha", email="skcha@megazone.com" },
+  { name="Minjoo Kang", email="kangmj@megazone.com" },
+]
+description = ""
+readme = "README.md"
+requires-python = ">=3.10" # SkyPilot (>=3.7, <=3.11), match-case (>=3.10)
+dependencies = [
+  #"skypilot[all]>=0.6.1"
+  "skypilot[all]"
+]
+classifiers = [
+  "Programming Language :: Python :: 3.10",
+]
+#keywords = []
+
+[project.urls]
+#Homepage = ""
+#Documentation = ""
+Repository = "https://github.com/matildalab-private/matilda-link"
+#Issues = ""
+#Changelog = ""

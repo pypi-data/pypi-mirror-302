@@ -1,0 +1,4 @@
+keras==3.4.1
+tensorflow==2.16.2
+tensorflow_datasets==4.9.6
+tf_models_official==2.16.0

@@ -1,0 +1,183 @@
+\newcommand*{\task}{S}
+\newcommand*{\targetinstances}{\Pi}
+\newcommand*{\instance}{\pi}
+\newcommand*{\timepredictor}{R_\mathrm{time}} % predictor for expected execution time
+\newcommand*{\oipredictor}{R_\mathrm{intensity}} % predictor for operational intensity
+\newcommand*{\mtpredictor}{R_\mathrm{traffic}} % predictor for memory traffic
+\newcommand*{\rooflinemodels}{P}
+\newcommand*{\optimizer}{F}
+\newcommand*{\catalog}{H}
+\newcommand*{\predictions}{\Psi}
+
+\newcommand{\filter}{{\sf filter}}
+\newcommand{\genfeats}{{\sf generate\_features}}
+\newcommand{\predict}{{\sf predict}}
+%\newcommand{\computeoi}{{\sf compute\_operational\_intensity}}
+\newcommand{\computegflops}{{\sf compute\_gflops}}
+\newcommand{\computetimecost}{{\sf compute\_time\_cost}}
+\newcommand{\computetotalflops}{{\sf compute\_total\_flops}}
+%\newcommand{\computemt}{{\sf compute\_memory\_traffic}}
+\newcommand{\optimize}{{\sf optimize}}
+
+\newcommand{\blue}[1]{{\color{blue} #1}}
+
+% =====
+
+\newcommand{\cmt}[2]{{\bf [}{\bf #1:} {\it #2}{\bf ]}}
+\newcommand{\gc}[1]{{\color{red}{\cmt{GC}{#1}}}}
+
+\newcommand{\commentout}[1]{}
+
+\newcommand*{\nl}{\mathrm{nl}}
+\newcommand*{\mm}{\mathrm{mm}}
+\newcommand*{\normalise}{\textsc{sort}}
+
+% Syntactic domains
+%\newcommand*{\Var}{\mathtt{Var}}
+\newcommand*{\VarI}{\mathtt{VarI}}
+\newcommand*{\VarA}{\mathtt{VarA}}
+\newcommand*{\VarE}{\mathtt{VarE}}
+\newcommand*{\Str}{\mathtt{Str}}
+\newcommand*{\StrC}{\mathtt{StrC}}
+\newcommand*{\DistC}{\mathtt{DistC}}
+\newcommand*{\RExp}{\mathtt{Rexp}}
+\newcommand*{\BExp}{\mathtt{Bexp}}
+\newcommand*{\SExp}{\mathtt{Sexp}}
+
+% Semantic domains
+\newcommand*{\B}{\mathbb{B}}
+%\newcommand*{\E}{\mathbb{E}}
+\newcommand*{\F}{\mathbb{F}}
+\newcommand*{\N}{\mathbb{N}}
+\newcommand*{\Q}{\mathbb{Q}}
+%\newcommand*{\R}{\mathbb{R}}
+\newcommand*{\Rp}{\mathbb{R}_+}
+\newcommand*{\T}{\mathbb{T}}
+\newcommand*{\Z}{\mathbb{Z}}
+
+
+\newcommand*{\cNa}{\mathbf{Name}}
+\newcommand*{\cSt}{\mathbf{State}}
+\newcommand*{\cVa}{\mathbf{V}}
+\newcommand*{\cDist}{\mathbf{Dist}}
+
+\newcommand*{\sPr}{\mathrm{sPr}}
+
+\newcommand*{\aB}{\mathbf{Brep}}
+\newcommand*{\aD}{\mathbf{D}^\sharp}
+\newcommand*{\aDist}{\mathbf{Dist}^\sharp}
+\newcommand*{\aE}{\mathbf{Erep}}
+\newcommand*{\aG}{\mathbf{G}^\sharp}
+\newcommand*{\aK}{\mathbf{K}^\sharp}
+\newcommand*{\aO}{\mathbf{O}^\sharp}
+\newcommand*{\aR}{\mathbf{R}^\sharp}
+\newcommand*{\aRV}{\mathbf{RV}^\sharp}
+\newcommand*{\aS}{\mathbf{S}^\sharp}
+\newcommand*{\aStr}{\mathbf{Srep}}
+\newcommand*{\aT}{\mathbf{T}^\sharp}
+\newcommand*{\aV}{\mathbf{V}^\sharp}
+\newcommand*{\aZ}{\mathbf{Z}^\sharp}
+
+\newcommand*{\aSm}{\mathbf{S}^\sharp_1}
+
+\newcommand*{\cB}{\mathcal{B}}
+\newcommand*{\cD}{\mathcal{D}}
+\newcommand*{\cN}{\mathcal{N}}
+\newcommand*{\cP}{\mathcal{P}}
+\newcommand*{\cT}{\mathcal{T}}
+\newcommand*{\cS}{\mathcal{S}}
+
+\newcommand*{\fix}{\mathrm{fix}}
+
+% Syntax
+\newcommand*{\code}[1]{{\mathtt{#1}}}
+
+\newcommand*{\notnumeric}{\mathit{not\_numeric}?}
+\newcommand*{\getsize}{\mathit{get\_size\_ex}}
+\newcommand*{\isreal}{\mathit{is\_real\_ex}?}
+\newcommand*{\isbool}{\mathit{is\_bool\_ex}?}
+
+\newcommand*{\type}{\mathit{get\_t}}
+
+\newcommand*{\bool}{\mathit{bool\_t}}
+\newcommand*{\real}{\mathit{real\_t}}
+\newcommand*{\tensor}{\mathit{tensor\_t}}
+\newcommand*{\unknown}{\mathit{unknown\_t}}
+
+\newcommand*{\fv}{\mbox{FV}}
+\newcommand*{\lk}{\code{lk}}
+
+\newcommand*{\triple}[3]{\left\{{#1}\right\}{#2}\left\{{#3}\right\}}
+\newcommand*{\btriple}[3]{\left[{#1}\right]{#2}\left[{#3}\right]}
+
+% Semantics
+\newcommand*{\extract}{\mathit{extract}}
+\newcommand*{\rencode}{\mathrm{renc}}
+\newcommand*{\bencode}{\mathrm{benc}}
+\newcommand*{\sencode}{\mathrm{senc}}
+\newcommand*{\trans}{\mathrm{tr}}
+\newcommand*{\post}{\mathrm{post}}
+\newcommand*{\upost}{\mathrm{upost}}
+\newcommand*{\agen}{\mathrm{gen}}
+\newcommand*{\asum}{\mathrm{sum}}
+\newcommand*{\aprob}{\mathrm{pr}}
+\newcommand*{\aexp}{\mathrm{ex}}
+\newcommand*{\amix}{\mathrm{mix}}
+
+\newcommand*{\nn}{\mathit{nn}}
+\newcommand*{\Normal}{\mathrm{Normal}}
+
+\newcommand*{\sample}{\mathrm{sa}}
+\newcommand*{\observe}{\mathrm{ob}}
+\newcommand*{\cond}{\mathrm{if}}
+\newcommand*{\call}{\mathrm{ca}}
+\newcommand*{\decode}{\mathrm{de}}
+\newcommand*{\assign}{{:=}}
+\newcommand*{\integral}{\mathrm{intg}}
+
+\newcommand*{\assume}{\mathrm{assume}}
+\newcommand*{\glob}{\mathrm{global}}
+
+\newcommand*{\var}{\mathrm{var}}
+\newcommand*{\const}{\mathrm{const}}
+\newcommand*{\idx}{\mathrm{index}}
+
+\newcommand*{\true}{\mathrm{true}}
+\newcommand*{\false}{\mathrm{false}}
+
+% Custom math notations
+%\newcommand*{\defeq}{\stackrel{\mathrm{def}}{=}}
+\newcommand*{\defeq}{=}
+\newcommand*{\dd}{\mathrm{d}}
+%\newcommand*{\ind}[1]{\ensuremath{[{#1}]}}
+\newcommand*{\ind}[1]{\mathbbm{1}(#1)}
+
+\newcommand*{\db}[1]{\ensuremath{\llbracket #1 \rrbracket}}
+\newcommand*{\dbp}[1]{\ensuremath{\llbracket #1 \rrbracket}'}
+
+\newcommand*{\dbb}[1]{\ensuremath{\llparenthesis #1 \rrparenthesis}}
+\newcommand*{\dbbp}[1]{\ensuremath{\llparenthesis #1 \rrparenthesis}'}
+
+\newcommand*{\dbc}[1]{\ensuremath{\llbracket #1 \rrbracket}_c}
+\newcommand*{\dbbc}[1]{\ensuremath{\llparenthesis #1 \rrparenthesis}_c}
+\newcommand*{\dbbcp}[1]{\ensuremath{\llparenthesis #1 \rrparenthesis}'_c}
+
+\newcommand*{\LebM}{\mu_L}
+\newcommand*{\CountM}{\mu_C}
+\newcommand*{\KL}{\mathrm{KL}}
+
+%\DeclareMathOperator*{\argmax}{arg\,max}
+%\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator*{\cvar}{cv}
+\DeclareMathOperator*{\prior}{prior}
+\DeclareMathOperator*{\prj}{prj}
+\DeclareMathOperator*{\Mea}{Mea}
+\DeclareMathOperator*{\EE}{\mathbb{E}}
+\DeclareMathOperator*{\fst}{fst}
+\DeclareMathOperator*{\snd}{snd}
+
+\newcommand*{\postinfer}{\textsc{infer}}
+\newcommand*{\postinferp}{\widehat{\textsc{infer}}}
+\newcommand*{\metainfer}{\textsc{Meta-infer}}
+
+\newcommand*{\kth}{\mathsf{get\_kth}}

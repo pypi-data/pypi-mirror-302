@@ -1,0 +1,23 @@
+torchrun --nproc_per_node 2 nosync-backward.py 2>&1 | tee log1/nosync-backward-gpu2.log
+
+W0603 14:10:20.717560 140347025786688 torch/distributed/run.py:757] 
+W0603 14:10:20.717560 140347025786688 torch/distributed/run.py:757] *****************************************
+W0603 14:10:20.717560 140347025786688 torch/distributed/run.py:757] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W0603 14:10:20.717560 140347025786688 torch/distributed/run.py:757] *****************************************
+['nosync-backward.py']
+Training with config: {'lr': 2e-05, 'num_epochs': 1, 'seed': 42, 'batch_size': 16, 'gradient_accumulation_steps': 4}
+/home/gwonsoo/.local/lib/python3.8/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+/home/gwonsoo/.local/lib/python3.8/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Some weights of BertForSequenceClassification were not initialized from the model checkpoint at bert-base-cased and are newly initialized: ['classifier.bias', 'classifier.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Some weights of BertForSequenceClassification were not initialized from the model checkpoint at bert-base-cased and are newly initialized: ['classifier.bias', 'classifier.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/gwonsoo/.local/lib/python3.8/site-packages/accelerate/utils/dataclasses.py:301: FutureWarning: The `TPU` of `<enum 'DistributedType'>` is deprecated and will be removed in v1.0.0. Please use the `XLA` instead.
+  warnings.warn(
+You're using a BertTokenizerFast tokenizer. Please note that with a fast tokenizer, using the `__call__` method is faster than using a method to encode the text followed by a call to the `pad` method to get a padded encoding.
+/home/gwonsoo/.local/lib/python3.8/site-packages/accelerate/utils/dataclasses.py:301: FutureWarning: The `TPU` of `<enum 'DistributedType'>` is deprecated and will be removed in v1.0.0. Please use the `XLA` instead.
+  warnings.warn(
+You're using a BertTokenizerFast tokenizer. Please note that with a fast tokenizer, using the `__call__` method is faster than using a method to encode the text followed by a call to the `pad` method to get a padded encoding.
+Average batch time: 0.43s, Num batches: 29
