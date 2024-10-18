@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: cuda-selector
+Version: 0.1.0
+Summary: A simple tool to select the optimal CUDA device based on memory, power, or utilization.
+Home-page: https://github.com/samermakni/cuda-selector
+Author: Samer Makni
+Author-email: samermakni@outlook.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+License-File: LICENSE
