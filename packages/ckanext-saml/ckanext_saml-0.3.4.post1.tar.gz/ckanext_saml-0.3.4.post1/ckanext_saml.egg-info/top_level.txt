@@ -1,0 +1,4 @@
+bin
+ckanext
+dist
+saml_example
