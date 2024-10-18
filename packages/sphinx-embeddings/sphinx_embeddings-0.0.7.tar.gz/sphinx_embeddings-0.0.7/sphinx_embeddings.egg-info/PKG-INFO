@@ -1,0 +1,6 @@
+Metadata-Version: 2.1
+Name: sphinx-embeddings
+Version: 0.0.7
+Requires-Dist: Sphinx>=2.0.0
+Requires-Dist: google-generativeai==0.3.2
+Requires-Dist: voyageai==0.2.4
