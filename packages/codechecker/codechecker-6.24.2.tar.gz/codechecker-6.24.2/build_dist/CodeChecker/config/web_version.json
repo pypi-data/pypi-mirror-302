@@ -1,0 +1,14 @@
+{
+    "git_describe": {
+        "dirty": "6.24.2-8-gad41702e-tainted",
+        "tag": "6.24.2"
+    },
+    "git_hash": "ad41702e3108e4b92ae5d0143a5b961cc34195eb",
+    "package_build_date": "2024-10-18T12:23",
+    "version": {
+        "major": "6",
+        "minor": "24",
+        "rc": "",
+        "revision": "2"
+    }
+}
