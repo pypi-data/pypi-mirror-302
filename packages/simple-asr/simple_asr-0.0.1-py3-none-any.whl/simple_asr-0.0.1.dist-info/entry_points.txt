@@ -1,0 +1,8 @@
+[console_scripts]
+simple-asr-blank-elan = simple_asr.blank:cli
+simple-asr-cv = simple_asr:cli_cv
+simple-asr-elan = simple_asr:cli_elan
+simple-asr-evaluate = simple_asr:cli_eval
+simple-asr-predict = simple_asr:cli_predict
+simple-asr-split = simple_asr:cli_split
+simple-asr-train = simple_asr:cli_train

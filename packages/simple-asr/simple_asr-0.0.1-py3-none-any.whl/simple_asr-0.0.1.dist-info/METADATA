@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: simple-asr
+Version: 0.0.1
+Summary: Wrapper module around wav2vec2 designed for ease of use
+Home-page: http://github.com/mr-martian/simple-asr
+Author: Daniel Swanson
+Author-email: asr@dangswan.com
+License: MIT
+Keywords: asr,wav2vec2
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: datasets
+Requires-Dist: evaluate
+Requires-Dist: jiwer
+Requires-Dist: torchaudio
+Requires-Dist: transformers[torch] ~=4.35
+Requires-Dist: pyAudioAnalysis ==0.3.14
+Requires-Dist: eyeD3 >=0.9.6
+Requires-Dist: hmmlearn >=0.2.5
+Requires-Dist: imblearn
+Requires-Dist: plotly >=5.3.1
+
+# simple-asr
+Wrapper module around wav2vec2 designed for ease of use
+
+# Installation
+
+Ensure that [`ffmpeg`](https://ffmpeg.org/download.html) is installed.
+
+Then do `pip install simple-asr`
+
+# Collab Notebook
+```
+from google.colab import drive
+drive.mount('/content/drive/', force_remount=True)
+!pip install simple-asr
+!simple-asr-elan /content/drive/MyDrive/path/to/audio.wav /content/drive/MyDrive/path/to/elan.eaf /content/data default
+!simple-asr-split /content/data
+!simple-asr-train /content/data /content/model -e 140
+!simple-asr-evaluate /content/data /content/model
+```
+
+This will result in there being model checkpoints in `/content/model` which can then be copied to your drive.
