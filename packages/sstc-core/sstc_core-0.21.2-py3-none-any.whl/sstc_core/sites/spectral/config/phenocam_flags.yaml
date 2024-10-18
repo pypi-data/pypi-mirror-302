@@ -1,0 +1,90 @@
+iflag_disable_for_processing: 
+  value: False
+  penalty_value: 1
+iflag_bluish_dominated:
+  value: False
+  penalty_value: 1
+iflag_sunny: 
+  value: False
+  penalty_value: 0.0
+iflag_cloudy: 
+  value: False
+  penalty_value: 0.0
+iflag_full_overcast: 
+  value: False
+  penalty_value: 0.0
+iflag_heterogeneous_illumination:
+  value: False
+  penalty_value: 0.5
+iflag_haze: 
+  value: False
+  penalty_value: 0.5
+iflag_shadows: 
+  value: False
+  penalty_value: 0.5
+iflag_clouds: 
+  value: False
+  penalty_value: 1
+iflag_fog:
+  value: False
+  penalty_value: 1
+iflag_heavy_rain: 
+  value: False
+  penalty_value: 1
+iflag_obstructions:
+  value: False
+  penalty_value: 0.25
+iflag_lens_water_drops:
+  value: False
+  penalty_value: 1
+iflag_lens_snow: 
+  value: False
+  penalty_value: 1
+iflag_lens_ice:
+  value: False 
+  penalty_value: 1
+iflag_lens_dirt: 
+  value: False
+  penalty_value: 1
+iflag_initial_green_up: 
+  value: False
+  penalty_value: 0.0
+iflag_initial_peak_greeness: 
+  value: False
+  penalty_value: 0.0
+iflag_initial_leaf_discoloration: 
+  value: False
+  penalty_value: 0.0
+iflag_initial_leaf_fall: 
+  value: False
+  penalty_value: 0.0                
+iflag_sun_altitude_low_20deg:
+  value: False
+  penalty_value: 0.25
+iflag_high_brightness:
+  value: False
+  penalty_value: 0.25
+iflag_low_brightness:
+  value: False
+  penalty_value: 0.25
+iflag_birds: 
+  value: False
+  penalty_value: 1
+iflag_insects: 
+  value: False
+  penalty_value: 1
+iflag_glare: 
+  value: False
+  penalty_value: 0.5
+iflag_blur:
+  value: False
+  penalty_value: 1
+iflag_mount_loose:
+  value: False
+  penalty_value: 1
+iflag_camera_error:
+  value: False
+  penalty_value: 1
+iflag_other: 
+  value: False
+  penalty_value: 1

@@ -1,0 +1,8 @@
+# used for the SSTC core app. Ensure naminga are correct
+Abisko: '/home/aurora02/data/SITES/Spectral/data/catalog/abisko/abisko_catalog.db'
+Asa: '/home/aurora02/data/SITES/Spectral/data/catalog/asa/asa_catalog.db'
+Grimsö: '/home/aurora02/data/SITES/Spectral/data/catalog/grimso/grimso_catalog.db'
+Lonnstorp: '/home/aurora02/data/SITES/Spectral/data/catalog/lonnstorp/lonnstorp_catalog.db'
+Robacksdalen: '/home/aurora02/data/SITES/Spectral/data/catalog/robacksdalen/robacksdalen_catalog.db'
+Skogaryd: '/home/aurora02/data/SITES/Spectral/data/catalog/skogaryd/skogaryd_catalog.db'
+Svartberget: '/home/aurora02/data/SITES/Spectral/data/catalog/svartberget/svartberget_catalog.db'

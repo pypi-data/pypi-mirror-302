@@ -1,0 +1,14 @@
+# Ensure you do not use hyppens "-" better to use `double__underscore`
+
+RBD_AGR:
+  location_id: 'RBD_AGR'
+  description: ''
+  legacy_acronym: 'RBD-AGR'
+  is_active: True
+  mantainance_status: active
+  platforms: 
+    PhenoCams:
+      - 'P_RBD_AGR_1'
+      - 'P_RBD_AGR_2'
+
+    

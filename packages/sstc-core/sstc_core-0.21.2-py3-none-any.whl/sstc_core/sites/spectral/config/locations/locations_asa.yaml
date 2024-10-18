@@ -1,0 +1,12 @@
+# Ensure you do not use hyppens "-" better to use `double__underscore`
+
+NYB_FOR:
+  location_id: 'NYB_FOR'
+  description: 'NYB_FOR'
+  legacy_acronym: 'NYB-FOR'
+  is_active: True
+  mantainance_status: active
+  platforms: 
+    PhenoCams:
+      - 'P_NYB_FOR_1'
+    
