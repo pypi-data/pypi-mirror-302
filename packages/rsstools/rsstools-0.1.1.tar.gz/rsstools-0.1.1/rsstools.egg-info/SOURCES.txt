@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+rsstools/__init__.py
+rsstools/__main__.py
+rsstools/cli.py
+rsstools/feed_manager.py
+rsstools/utils.py
+rsstools.egg-info/PKG-INFO
+rsstools.egg-info/SOURCES.txt
+rsstools.egg-info/dependency_links.txt
+rsstools.egg-info/entry_points.txt
+rsstools.egg-info/requires.txt
+rsstools.egg-info/top_level.txt
