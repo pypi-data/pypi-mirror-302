@@ -1,0 +1,15 @@
+macrostrat/auth_system/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+macrostrat/auth_system/legacy/__init__.py,sha256=DYfQ6Bo2L9g78M3bRTR99gBDYW-_n50WUl9kLyPfuAg,666
+macrostrat/auth_system/legacy/api.py,sha256=ZMCRrm_6hJ96HE-OzNtrmHIRyaMKmp53dV5n0mRrKec,2355
+macrostrat/auth_system/legacy/backend.py,sha256=RPcg8Q1Fe22qmMvZzSh6_mTnT_a2itszmn-Oz1T3xHk,4708
+macrostrat/auth_system/legacy/context.py,sha256=jgk35d4kUKT_BNqIhmD2AP-oT0C46OdjbowY0nqohkI,937
+macrostrat/auth_system/legacy/identity.py,sha256=pUDj1DlAfSEe6obtQnMdScVrxDfLT1L9f0kYD85HoOQ,872
+macrostrat/auth_system/legacy/test_auth.py,sha256=nNZcdkr1vows3dCqKNrrzy14w2YottgPhMCnhUInzJ4,7363
+macrostrat/auth_system/orcid/__init__.py,sha256=jC2YW-fB6RArtzAudo9YLUX_oHDX4K9eabJri-l6nL0,136
+macrostrat/auth_system/orcid/database.py,sha256=uGFWlWXP7zGIthAcVvGgo7aoEWjvFTiMk4h2VhOKrIg,1843
+macrostrat/auth_system/orcid/main.py,sha256=A0WB2GoojIxdt8AksmWwVo0Jhaw0meCyuxtYO-Yw48M,3718
+macrostrat/auth_system/orcid/model.py,sha256=60512P52kS0_KxJLayZlC6RP8joTIWWP2AJHJD0g_pU,377
+macrostrat/auth_system/orcid/schema.py,sha256=pwM7QDN9VmQD4oTyMJiixPtY75g0yYNgKku5_wUQaLU,2599
+macrostrat_auth_system-0.1.0.dist-info/METADATA,sha256=QeXYEfui8TSEaOVBqN4BbXWyJ74YxjN2c5AbIhEweSY,2021
+macrostrat_auth_system-0.1.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+macrostrat_auth_system-0.1.0.dist-info/RECORD,,
