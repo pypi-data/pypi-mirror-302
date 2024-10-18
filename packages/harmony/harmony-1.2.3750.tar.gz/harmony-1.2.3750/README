@@ -1,0 +1,7 @@
+How to figure out if there are interesting paths?
+While an edge may have been visited, it may lead to edges
+that haven't.  Given two visited edges, you don't know
+which, if any, is worth pursuing.
+
+One option: do a search each time there is no unvisited
+edge to explore.  Seems expensive.
