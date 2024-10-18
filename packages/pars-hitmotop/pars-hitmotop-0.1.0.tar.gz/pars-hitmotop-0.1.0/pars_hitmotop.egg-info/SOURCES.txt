@@ -1,0 +1,7 @@
+README.md
+setup.py
+pars_hitmotop.egg-info/PKG-INFO
+pars_hitmotop.egg-info/SOURCES.txt
+pars_hitmotop.egg-info/dependency_links.txt
+pars_hitmotop.egg-info/requires.txt
+pars_hitmotop.egg-info/top_level.txt
