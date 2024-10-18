@@ -1,0 +1,7 @@
+apicutils>=0.0.3
+picproba
+picoptim>=0.0.3
+picpacbayes>=0.0.2
+pandas
+scipy>=1.7.0
+numpy<=1.26
