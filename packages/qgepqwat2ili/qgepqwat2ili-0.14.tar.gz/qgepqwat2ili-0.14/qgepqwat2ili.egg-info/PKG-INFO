@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: qgepqwat2ili
+Version: 0.14
+Summary: Toolkit to import/export between QGEP/QWAT and their counterpart SIA405 interlis model exchange files
+Home-page: https://github.com/QGEP/qgepqwat2ili
+Author: Olivier Dalang
+Author-email: olivier@opengis.ch
+Requires-Dist: sqlalchemy~=1.3.22
+Requires-Dist: geoalchemy2>=0.9.0
+Requires-Dist: psycopg2
+Requires-Dist: jinja2
+Requires-Dist: sqlacodegen
