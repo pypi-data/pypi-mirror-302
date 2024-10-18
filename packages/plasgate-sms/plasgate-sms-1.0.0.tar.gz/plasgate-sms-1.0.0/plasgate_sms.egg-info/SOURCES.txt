@@ -1,0 +1,12 @@
+README.md
+setup.py
+plasgate/__init__.py
+plasgate/api/__init__.py
+plasgate/api/message.py
+plasgate/api/schema.py
+plasgate/rest/__init__.py
+plasgate_sms.egg-info/PKG-INFO
+plasgate_sms.egg-info/SOURCES.txt
+plasgate_sms.egg-info/dependency_links.txt
+plasgate_sms.egg-info/requires.txt
+plasgate_sms.egg-info/top_level.txt
