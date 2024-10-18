@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: deco_mllm
+Version: 1.0.1
+Home-page: https://github.com/zjunlp/DeCo
+Author: wcx
+Author-email: 2015248488@qq.com
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: tokenizers==0.13.3
+Requires-Dist: huggingface-hub==0.25.0
+Requires-Dist: accelerate==0.34.2
+Requires-Dist: torch==2.4.1
+Requires-Dist: torchvision==0.19.1
