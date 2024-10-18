@@ -1,0 +1,3 @@
+microfs
+uflash
+python-minimizer
