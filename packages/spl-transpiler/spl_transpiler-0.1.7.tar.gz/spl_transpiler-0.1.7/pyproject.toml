@@ -1,0 +1,37 @@
+[build-system]
+requires = ["maturin>=1,<2"]
+build-backend = "maturin"
+
+[tool.maturin]
+python-source = "python"
+
+[project]
+name = "spl_transpiler"
+requires-python = ">=3.7"
+description = "Convert Splunk SPL queries into PySpark code"
+readme = "README.md"
+license = { file = "LICENSE" }
+classifiers = [
+    "Programming Language :: Rust",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python :: Implementation :: PyPy",
+]
+dependencies = [
+    "black",
+    "pydantic>=2",
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest",
+    "pytest-dependency",
+    "tabulate",
+    "pyparsing",
+]
+cli = [
+    "textual[syntax]"
+]
+
+[tool.pytest.ini_options]
+# Ignore the bulk query test by default (it can still be run directly)
+addopts = "--ignore=tests/test_sample_files_parse.py"
