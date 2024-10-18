@@ -1,0 +1,4 @@
+python-decouple
+pyotp
+qrcode
+pillow
