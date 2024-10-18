@@ -1,0 +1,12 @@
+class_registry/__init__.py,sha256=rDkAW3e_EcxzELhweeP0jBb933sMmQe7WiJI9t1sMUM,120
+class_registry/auto_register.py,sha256=iatqZDlCgo9MqZJoakaigEL4P4LkYyj0bz2LojLGjAc,2423
+class_registry/base.py,sha256=4wL18pp6gtGY4bSZuBXMQ4QN_4P38K7uWeD3HFjbLuM,11958
+class_registry/cache.py,sha256=BZ_gG_KOT4KRB2t6cNa50jNMbw37ypdYQISH76YC2Is,3994
+class_registry/entry_points.py,sha256=c_RL2Rg3dlqIfySGg75VARhzxj5MYzgDt5MTeeHEjK4,3176
+class_registry/patcher.py,sha256=L3pvfVgu3lIW0TCcc57WYBDMz2qzj4OnXvrTRd2Rgts,3712
+class_registry/py.typed,sha256=t_pobQUvxt8ALxxEL6eRqQ7qTGwMgpdGn1ZuYXTE48Q,89
+class_registry/registry.py,sha256=Z2rbUde20BUeWNnO20_wKcDIlRn1gogRdt6n0m5IrT4,5653
+phx_class_registry-5.1.1.dist-info/LICENCE.txt,sha256=rTbcD3zh_ukeoLJZFMFjiqdJXy07tgxB5ZGAl3N9HWo,1067
+phx_class_registry-5.1.1.dist-info/METADATA,sha256=zkPNalUBdAagh6FmFt29IZdLfGTnkzR3dq8Jau1DXFU,7682
+phx_class_registry-5.1.1.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+phx_class_registry-5.1.1.dist-info/RECORD,,
