@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: lis-simplelogger
+Version: 0.1
+Summary: Simple Logger for LIS.
+Home-page: https://github.com/timothyjchun/lis-simplelogger
+Author: Timothy Chun
+Author-email: timchun0212@gmail.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# lis-simplelogger
+
+
+Simple Logger for LIS.
+Simultaneous setup for console logs and file log saves.
