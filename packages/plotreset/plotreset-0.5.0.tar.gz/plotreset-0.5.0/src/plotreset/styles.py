@@ -1,0 +1,262 @@
+import json
+from typing import Any, Dict, Optional
+
+import matplotlib.pyplot as plt
+from cycler import Cycler, cycler
+
+from plotreset import custom, cycles, templates
+from plotreset.json_operations import load_custom_settings
+
+
+class TemplatePathError(Exception):
+    """Exception raised when a path is not provided for template operations."""
+
+    pass
+
+
+class StyleProxy:
+    def __init__(self, styles, prefix=""):
+        self._styles = styles
+        self._prefix = prefix
+
+    def __getattr__(self, name):
+        full_name = f"{self._prefix}.{name}" if self._prefix else name
+        if full_name in self._styles.style:
+            return self._styles.style[full_name]
+        return StyleProxy(self._styles, full_name)
+
+    def __setattr__(self, name, value):
+        if name.startswith("_"):
+            super().__setattr__(name, value)
+        else:
+            full_name = f"{self._prefix}.{name}" if self._prefix else name
+            self._styles.style[full_name] = value
+            plt.rcParams[full_name] = value
+
+
+class Styles:
+    def __init__(self, template_name: str = "default", path: Optional[str] = None):
+        """
+        Initialize a Style object with the specified template.
+
+        Args:
+            template_name (str): Name of the template to be applied. Defaults to "default".
+            path (Optional[str]): Path to a JSON file containing the custom template. Defaults to None.
+
+        Raises:
+            ValueError: If the provided template_name is not valid or if the file cannot be loaded.
+        """
+        self.style_name = template_name
+        self.style: Dict[str, Any] = {}
+        self.path = path
+
+        if path:
+            self.apply_template(template_name, path)
+        elif template_name == "default" or template_name in plt.style.available:
+            self.style = dict(plt.rcParams)
+            plt.style.use(template_name)
+        elif (
+            template_name in templates.available
+            or template_name in custom.user_templates
+        ):
+            stylesheet = self._get_template(template_name)
+            self.style = stylesheet
+            plt.style.use(stylesheet)
+        else:
+            raise ValueError(f"Invalid template name: {template_name}")
+
+        self.proxy = StyleProxy(self)
+        self.apply_changes()
+
+    @staticmethod
+    def _convert_axes_prop_cycle(template):
+        if "axes.prop_cycle" in template and isinstance(
+            template["axes.prop_cycle"], dict
+        ):
+            template["axes.prop_cycle"] = cycler(**template["axes.prop_cycle"])
+
+    def _get_template(self, template_name: str) -> Dict[str, Any]:
+        """
+        Get the template stylesheet for the given template name.
+
+        Args:
+            template_name (str): Name of the template.
+
+        Returns:
+            Dict[str, Any]: The stylesheet for the template.
+
+        Raises:
+            ValueError: If the provided template_name is not valid.
+        """
+        if template_name in templates.available:
+            template = getattr(templates, template_name)
+        elif template_name in custom.user_templates:
+            template = custom.get_custom_template(template_name)
+            if template is None:
+                raise ValueError(
+                    f"Custom template '{template_name}' is not properly defined"
+                )
+        else:
+            raise ValueError(f"Invalid template name: {template_name}")
+
+        self._convert_axes_prop_cycle(template)
+        return template
+
+    @staticmethod
+    def _cycler_to_dict(cy):
+        return {key: list(value) for key, value in cy.by_key().items()}
+
+    def cycle(self, cycle_name: str) -> Cycler:
+        """
+        Get the specified cycle.
+
+        Args:
+            cycle_name (str): Name of the cycle to be used.
+
+        Returns:
+            Cycler: The specified cycle.
+
+        Raises:
+            ValueError: If the provided cycle_name is not valid.
+        """
+        if cycle_name in cycles.AVAILABLE_CYCLES:
+            cycle_func = getattr(cycles, cycle_name)
+            return cycle_func()
+        elif cycle_name in custom.user_cycles:
+            custom_cycle = custom.get_custom_cycle(cycle_name)
+            if custom_cycle is None:
+                raise ValueError(f"Custom cycle '{cycle_name}' is not properly defined")
+            return custom_cycle()
+        else:
+            raise ValueError(f"Invalid cycle name: {cycle_name}")
+
+    @staticmethod
+    def load_template(name: str, path: str) -> Dict[str, Any]:
+        """
+        Load a specific template from a JSON file.
+
+        Args:
+            name (str): Name of the template to load.
+            path (str): Path to the JSON file containing the templates.
+
+        Returns:
+            Dict[str, Any]: The loaded template.
+
+        Raises:
+            FileNotFoundError: If the specified file is not found.
+            KeyError: If the specified template name is not found in the file.
+        """
+        try:
+            with open(path, "r") as f:
+                templates = json.load(f)
+        except FileNotFoundError:
+            raise FileNotFoundError(f"File not found: {path}")
+
+        if "templates" not in templates or name not in templates["templates"]:
+            raise KeyError(f"Template '{name}' not found in {path}")
+
+        template = templates["templates"][name]
+        Styles._convert_axes_prop_cycle(template)
+        return template
+
+    def apply_template(self, name: str, path: str) -> None:
+        """
+        Load and apply a specific template.
+
+        Args:
+            name (str): Name of the template to load and apply.
+            path (str): Path to the JSON file containing the templates.
+        """
+        template = self.load_template(name, path)
+        self.style_name = name
+        self.style = template
+        self.path = path
+        plt.style.use(template)
+        print(f"Loaded and applied template '{name}' from {path}")
+
+    @classmethod
+    def load_custom_settings(cls, file_path: str) -> None:
+        """Load custom templates from a JSON file."""
+        templates = load_custom_settings(file_path)
+        for name, template in templates.items():
+            cls._convert_axes_prop_cycle(template)
+            custom.register_template(name, template)
+
+    def save_current_template(
+        self,
+        name: str,
+        path: str,
+        overwrite: bool = False,
+    ) -> None:
+        """
+        Save the current template to a JSON file.
+
+        Args:
+            name (str): Name for the template. Required when saving a new template.
+            path (Optional[str]): Path to save the JSON file. If None, uses the path from initialization.
+            overwrite (bool): If True, overwrite existing template with the same name. Defaults to False.
+
+        Raises:
+            TemplatePathError: If no path is provided and no path was set during initialization.
+
+        Returns:
+            None
+        """
+        if self.style is None:
+            print("No active style to save.")
+            return
+
+        if name is None:
+            raise ValueError("A name must be provided when saving a template.")
+
+        save_path = path if path is not None else self.path
+        if save_path is None:
+            raise TemplatePathError(
+                "Error: File path is required when saving a template."
+            )
+
+        # Load existing templates
+        try:
+            with open(save_path, "r") as f:
+                existing_templates = json.load(f)
+        except (FileNotFoundError, json.JSONDecodeError):
+            existing_templates = {"templates": {}}
+
+        if name in existing_templates["templates"] and not overwrite:
+            print(
+                f"Template '{name}' already exists. Use overwrite=True to replace it."
+            )
+            return
+
+        template_dict = {name: self.style.copy()}
+
+        # Convert Cycler to dict for JSON serialization
+        if "axes.prop_cycle" in template_dict[name]:
+            template_dict[name]["axes.prop_cycle"] = self._cycler_to_dict(
+                template_dict[name]["axes.prop_cycle"]
+            )
+
+        # Add or update the template
+        existing_templates["templates"].update(template_dict)
+
+        # Save updated templates
+        with open(save_path, "w") as f:
+            json.dump(existing_templates, f, indent=2)
+
+        # Update plt.rcParams with the current style
+        plt.rcParams.update(self.style)
+
+        action = (
+            "updated"
+            if overwrite and name in existing_templates["templates"]
+            else "saved"
+        )
+        print(f"Template '{name}' {action} successfully in {save_path}.")
+
+    def __getattr__(self, name):
+        return getattr(self.proxy, name)
+
+    def apply_changes(self):
+        """Apply the current style settings to plt.rcParams."""
+        if self.style is not None:
+            plt.rcParams.update(list(self.style.items()))
