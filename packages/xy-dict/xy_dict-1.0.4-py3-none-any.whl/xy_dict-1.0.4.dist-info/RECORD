@@ -1,0 +1,12 @@
+xy_dict/Dict.py,sha256=Gaixjo4hKCTvTGyrDR8fU4AT2c74og__JDYXGLu8oEU,12183
+xy_dict/ModuleData.py,sha256=0D2KlQ44HXEHSpeIcKUQ0N1p_PUzIJ1eKWZOS9OMHMI,481
+xy_dict/Resource.py,sha256=4GX8oL1p9l79eYRnQMiwI8W0utp7A4FJ9KXa7Ir3JHg,398
+xy_dict/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+xy_dict/utils.py,sha256=VDg7H9ir_fk2lpaRd2EDk4-4XoF27Q6qfW5DLA81RVY,769
+xy_dict/execute/Main.py,sha256=6ceBlsp_u9wKop_Q0mUFlJSQ9zweMpEyUgn1Zko9r00,685
+xy_dict/execute/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+xy_dict-1.0.4.dist-info/LICENSE,sha256=BqXSbHfE3ic4JYcsTPACKxcqLvyP37u__1RgHN9ciSI,1064
+xy_dict-1.0.4.dist-info/METADATA,sha256=7cNzlo229kmCB9yMfkLZkvuQVDK9dr-hEPyAaxyRh8c,2239
+xy_dict-1.0.4.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+xy_dict-1.0.4.dist-info/top_level.txt,sha256=xCXJYfVJNOxWMnoGcJVQjoeNQ0gjyevOwXry0a2LzOc,8
+xy_dict-1.0.4.dist-info/RECORD,,
