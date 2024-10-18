@@ -1,0 +1,12 @@
+highspy/_core.cpython-38-i386-linux-gnu.so,sha256=D_Kd4xXb1dZbE0Ou1FWsEceGUIBPplSkPsbwfqTkN-I,5662212
+highspy/__init__.pyi,sha256=96WLxvO-EEFN24mPXIzAMyJ5RM40z_xc03cdxagnI8A,2019
+highspy/highs.py,sha256=T8gEkFnGu9vjzbV9JEyZlZsoeq7hig1CJY1sa5V95qY,88931
+highspy/__init__.py,sha256=4ai8kdJ5pfmjlItCTauZMVhtLxAEo2YChKa1jvI_nKs,1814
+highspy/_core/simplex_constants.pyi,sha256=MgZmYwvFmK-nA5-s7JOMKLWOvc5_8sBkDmveZuJVfcU,17580
+highspy/_core/__init__.pyi,sha256=I4FduxxifAZPLemGUpF3XL6Rvo9gCa8DtMTNmnJVMWM,34725
+highspy/_core/cb.pyi,sha256=WXihzWeiuNrjlvAISIn9iPYTbTWhtqZXdjMLeQT3tD0,3240
+highspy-1.8.0.dist-info/RECORD,,
+highspy-1.8.0.dist-info/METADATA,sha256=4aWgwoezq0cDOYc7FgjyekjV1oeIsloXP7a43E-9pA8,10424
+highspy-1.8.0.dist-info/WHEEL,sha256=NxQuSYYrgoSNWxR0drnBlKEsnWNp62CuS5RFvJLZMyY,148
+highspy-1.8.0.dist-info/licenses/LICENSE.txt,sha256=ELOdunt3MRdfBwU5i220MgtkrdG9Ltn57FtRKp7xvZU,1062
+highspy-1.8.0.dist-info/licenses/AUTHORS,sha256=FsZ2uj0GyU6ZGGzuRVLNM3I4SVpse9aiusthpnuUtkg,85
