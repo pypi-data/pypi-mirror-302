@@ -1,0 +1,2 @@
+[console_scripts]
+fronts = frontpy.cli:main_cli
