@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: animepipeline
+Version: 0.0.1
+Summary: auto encode new anime episode
+Home-page: https://github.com/TensoRaws/AnimePipeline
+License: MIT
+Author: Tohrusky
+Requires-Python: >=3.9,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: feedparser
+Requires-Dist: httpx
+Requires-Dist: loguru
+Requires-Dist: pydantic
+Requires-Dist: pymediainfo-tensoraws (==6.1.0)
+Requires-Dist: tenacity
+Project-URL: Repository, https://github.com/TensoRaws/AnimePipeline
+Description-Content-Type: text/markdown
+
+# AnimePipeline
+
+auto encode new anime episode
+
