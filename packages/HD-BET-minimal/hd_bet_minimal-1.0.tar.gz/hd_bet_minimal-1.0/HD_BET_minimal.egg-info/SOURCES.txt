@@ -1,0 +1,16 @@
+LICENSE
+setup.py
+HD_BET_minimal/__init__.py
+HD_BET_minimal/config.py
+HD_BET_minimal/data_loading.py
+HD_BET_minimal/network_architecture.py
+HD_BET_minimal/padorcut.py
+HD_BET_minimal/predict_case.py
+HD_BET_minimal/run.py
+HD_BET_minimal/utils.py
+HD_BET_minimal.egg-info/PKG-INFO
+HD_BET_minimal.egg-info/SOURCES.txt
+HD_BET_minimal.egg-info/dependency_links.txt
+HD_BET_minimal.egg-info/not-zip-safe
+HD_BET_minimal.egg-info/requires.txt
+HD_BET_minimal.egg-info/top_level.txt
