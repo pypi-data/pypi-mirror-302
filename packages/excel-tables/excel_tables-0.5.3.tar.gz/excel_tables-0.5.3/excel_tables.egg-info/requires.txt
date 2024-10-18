@@ -1,0 +1,10 @@
+pandas
+pydantic
+openpyxl
+xlsxwriter
+rich
+babel
+webcolors
+
+[:sys_platform == "win32"]
+pywin32

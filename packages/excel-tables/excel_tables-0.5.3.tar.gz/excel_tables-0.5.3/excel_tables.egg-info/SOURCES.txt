@@ -1,0 +1,15 @@
+LICENCE
+README.md
+pyproject.toml
+excel_tables/__init__.py
+excel_tables/df_util.py
+excel_tables/excel_util.py
+excel_tables.egg-info/PKG-INFO
+excel_tables.egg-info/SOURCES.txt
+excel_tables.egg-info/dependency_links.txt
+excel_tables.egg-info/requires.txt
+excel_tables.egg-info/top_level.txt
+test/test_df.py
+test/test_excel_db.py
+test/test_main.py
+test/test_xl.py

@@ -1,0 +1,28 @@
+[project]
+name = "excel_tables"
+version = "0.5.3"
+description = "Python library to quickly export pandas tables to pretty, sensible Excel workbooks."
+readme = "README.md"
+requires-python = ">=3.6"
+license = { text = "MIT" }
+authors = [
+    { name = "Fralau", email = "fralau@bluewin.ch" }
+]
+dependencies = [
+    "pandas",
+    "pydantic",
+    # Excel:
+    "openpyxl",
+    "xlsxwriter", # clarify why it is still needed?
+    # presentation:
+    "rich",
+    "babel",
+    "webcolors",
+    # platform specific
+    "pywin32; sys_platform == 'win32'"
+]
+urls = { "Homepage" = "https://github.com/fralau/excel_tables" }
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
