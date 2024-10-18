@@ -1,0 +1,7 @@
+setup.py
+pymscode/__init__.py
+pymscode/main.py
+pymscode.egg-info/PKG-INFO
+pymscode.egg-info/SOURCES.txt
+pymscode.egg-info/dependency_links.txt
+pymscode.egg-info/top_level.txt
