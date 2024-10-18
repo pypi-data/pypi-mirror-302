@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+VERSION
+pyproject.toml
+setup.py
+xy_dict/Dict.py
+xy_dict/ModuleData.py
+xy_dict/Resource.py
+xy_dict/__init__.py
+xy_dict/utils.py
+xy_dict.egg-info/PKG-INFO
+xy_dict.egg-info/SOURCES.txt
+xy_dict.egg-info/dependency_links.txt
+xy_dict.egg-info/top_level.txt
+xy_dict/execute/Main.py
+xy_dict/execute/__init__.py
