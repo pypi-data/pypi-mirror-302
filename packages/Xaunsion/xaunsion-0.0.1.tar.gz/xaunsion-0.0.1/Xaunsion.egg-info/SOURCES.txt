@@ -1,0 +1,7 @@
+setup.py
+Xaunsion/Xaunsion.py
+Xaunsion/__init__.py
+Xaunsion.egg-info/PKG-INFO
+Xaunsion.egg-info/SOURCES.txt
+Xaunsion.egg-info/dependency_links.txt
+Xaunsion.egg-info/top_level.txt
