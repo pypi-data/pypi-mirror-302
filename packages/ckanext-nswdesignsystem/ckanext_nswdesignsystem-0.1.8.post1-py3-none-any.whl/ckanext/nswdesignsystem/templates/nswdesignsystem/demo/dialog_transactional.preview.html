@@ -1,0 +1,24 @@
+{% from "macros/nswdesignsystem/dialog.html" import dialog, trigger with context  %}
+
+{% set id = "transactional" %}
+
+<div class="nsw-block">
+    {{ trigger(id, "Launch dialog") }}
+</div>
+
+
+{% call(part) dialog(id, title="Changes will be lost") %}
+{% if part == "title" %}
+    <h2>
+        Delete file permanently?
+    </h2>
+
+{% elif part == "content" %}
+    <p>Thank you for your submission, it has been successfully received. We aim to respond within 3 business days by your preferred contact method. You can now make another submission or view your active submission.</p>
+
+{% elif part == "footer" %}
+    <button class="nsw-button nsw-button--dark js-close-dialog">Make new submission</button>
+    <button class="nsw-button nsw-button--dark-outline-solid js-close-dialog">View submissions</button>
+
+{% endif %}
+{% endcall %}

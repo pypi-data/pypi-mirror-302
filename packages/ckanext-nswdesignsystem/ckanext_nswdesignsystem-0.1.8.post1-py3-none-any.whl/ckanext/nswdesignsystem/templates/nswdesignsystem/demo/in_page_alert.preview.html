@@ -1,0 +1,32 @@
+{% from "macros/nswdesignsystem/in_page_alert.html"
+import in_page_alert, in_page_info, in_page_warning, in_page_error, in_page_success
+with context  %}
+
+
+{% call in_page_alert("Rockdale Service Centre is coming soon") %}
+    <p>Rockdale Agency will close on 9 March 2018 and re-open in April. Please visit <a href='#'>Kogarah Service Centre</a> during this closure.</p>
+{% endcall %}
+
+{% call in_page_alert(compact=true) %}
+    <p class="nsw-small">
+        <strong>Rockdale Agency will close on 9 March 2018 and re-open in April.</strong>
+        Please visit <a href='#'>Kogarah Service Centre</a> during this closure.
+    </p>
+{% endcall %}
+
+
+{% call in_page_info() %}
+    {{ lipsum(1) }}
+{% endcall %}
+
+{% call in_page_error() %}
+    {{ lipsum(1) }}
+{% endcall %}
+
+{% call in_page_warning() %}
+    {{ lipsum(1) }}
+{% endcall %}
+
+{% call in_page_success() %}
+    {{ lipsum(1) }}
+{% endcall %}
