@@ -1,0 +1,3 @@
+[console_scripts]
+realitydb=cli:run_server
+
