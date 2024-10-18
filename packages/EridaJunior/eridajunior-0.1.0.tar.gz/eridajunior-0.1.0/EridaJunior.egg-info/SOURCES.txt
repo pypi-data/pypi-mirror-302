@@ -1,0 +1,4 @@
+EridaJunior.egg-info/PKG-INFO
+EridaJunior.egg-info/SOURCES.txt
+EridaJunior.egg-info/dependency_links.txt
+EridaJunior.egg-info/top_level.txt
