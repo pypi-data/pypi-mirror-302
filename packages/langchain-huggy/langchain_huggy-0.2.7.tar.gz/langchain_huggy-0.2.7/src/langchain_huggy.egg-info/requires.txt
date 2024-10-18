@@ -1,0 +1,7 @@
+langchain_core
+hugchat
+
+[dev]
+pytest
+black
+isort
