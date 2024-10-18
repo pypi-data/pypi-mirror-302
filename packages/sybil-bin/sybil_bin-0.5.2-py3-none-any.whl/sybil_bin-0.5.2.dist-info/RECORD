@@ -1,0 +1,10 @@
+sybil_bin/__init__.py,sha256=Hjot3ug6Win6y2YIC1vy4vBwdff3eR0TFF2G7tcgSy8,63
+sybil_bin/main.py,sha256=0Y7h1Chsj17VW6NkEkRmbJSZlktPvGQ8Qda1kkFduns,447
+sybil_bin/setup.py,sha256=fmqBXHVm8XIzGV27dBdIX92-iwgx_8UMi2yNrwozywA,748
+sybil_bin/binaries/linux/sybil.amd64,sha256=jzld4oZs4aebqTatHL6lMD6evTNVh5LPX9ZNaQ-z5Ds,3576440
+sybil_bin/binaries/mac/sybil.arm64,sha256=syGhpyouCnxzLMrJZX8fRj5KtlyBPhiUhpPOeIgN-as,4369058
+sybil_bin-0.5.2.data/data/sybil_bin/binaries/linux/sybil.amd64,sha256=jzld4oZs4aebqTatHL6lMD6evTNVh5LPX9ZNaQ-z5Ds,3576440
+sybil_bin-0.5.2.dist-info/METADATA,sha256=9KcwjEYqf7-uEXiNVZkWRiIw1enQD9qLlg_8B25c5Ac,220
+sybil_bin-0.5.2.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+sybil_bin-0.5.2.dist-info/top_level.txt,sha256=b7EQwgnqcQRr3BpUW_Nz3joKmUb3Fi0683v8btZDqpY,10
+sybil_bin-0.5.2.dist-info/RECORD,,
