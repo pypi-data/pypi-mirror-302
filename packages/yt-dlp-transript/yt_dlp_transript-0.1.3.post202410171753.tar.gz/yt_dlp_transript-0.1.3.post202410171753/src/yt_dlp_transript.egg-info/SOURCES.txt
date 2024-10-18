@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+src/yt_dlp_transript/__init__.py
+src/yt_dlp_transript.egg-info/PKG-INFO
+src/yt_dlp_transript.egg-info/SOURCES.txt
+src/yt_dlp_transript.egg-info/dependency_links.txt
+src/yt_dlp_transript.egg-info/requires.txt
+src/yt_dlp_transript.egg-info/top_level.txt
