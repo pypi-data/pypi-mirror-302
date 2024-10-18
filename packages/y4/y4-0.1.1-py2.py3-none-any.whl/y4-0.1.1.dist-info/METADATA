@@ -1,0 +1,4 @@
+Metadata-Version: 2.3
+Name: y4
+Version: 0.1.1
+Requires-Dist: pyyaml
