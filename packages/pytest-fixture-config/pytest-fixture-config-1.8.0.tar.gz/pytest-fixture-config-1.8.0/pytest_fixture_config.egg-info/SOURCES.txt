@@ -1,0 +1,16 @@
+CHANGES.md
+LICENSE
+MANIFEST.in
+README.md
+VERSION
+common_setup.py
+pytest_fixture_config.py
+setup.cfg
+setup.py
+pytest_fixture_config.egg-info/PKG-INFO
+pytest_fixture_config.egg-info/SOURCES.txt
+pytest_fixture_config.egg-info/dependency_links.txt
+pytest_fixture_config.egg-info/requires.txt
+pytest_fixture_config.egg-info/top_level.txt
+tests/unit/test_fixture_config.py
+tests/unit/__pycache__/test_fixture_config.cpython-36-pytest-7.0.1.pyc
