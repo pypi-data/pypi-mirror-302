@@ -1,0 +1,9 @@
+consumer-edc-control-plane:
+  endpoint: https://your-edc-control-plane-endpoint
+  header:
+    Authorization: Bearer your-authorization-token
+
+trusted-providers:
+  provider_A:
+    BPN: your-provider-bpn
+    endpoint-control-plane: https://your-provider-control-plane-endpoint
