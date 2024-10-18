@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "ib1-directory"
+version = "0.1.1"
+description = "A library to simplify working with the IB1 Trust Framework directory"
+authors = ["Kip Parker <kip.parker@icebreakerone.org>"]
+readme = "README.md"
+packages = [{include = "ib1", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+cryptography = "^43.0.1"
+asn1crypto = "^1.5.1"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.3"
+mypy = "^1.12.0"
+ruff = "^0.6.9"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
