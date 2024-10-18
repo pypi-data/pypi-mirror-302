@@ -1,0 +1,11 @@
+faceangle/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+faceangle/math.py,sha256=i6iZ5QUL7XVQoIfNDpnRDF8eqLyiXuwwIWTrIX-ijSk,1224
+faceangle/model.py,sha256=jJUyY6ikGp62RLPFy232mrxeAB8jo_IrvKgd4s4_TiY,14756
+faceangle/models/.gitignore,sha256=RNqqJk3aFthnX5J60wMRxyT2xfcdOsxwjSUFDG2c2rk,6
+faceangle/notebook.py,sha256=egBFLQM1kAA-DEdxJHXsl0pnhQKK1641bAWj3spOVBo,4871
+faceangle/pca.py,sha256=UgP6kDwZ5N7aj51dSexBFTSxFbGdOVi7MOc0GGFiJ58,1010
+faceangle/preprocessing.py,sha256=NBacPPpE2WRt3WeU-XAsLign41PoXP0Y8uzxG5cVZgo,1324
+faceangle/visualization.py,sha256=QZrMQMGJoxccKbp6Hy2nCruX1coxatLFezHgL3tusGQ,5107
+faceangle-0.3.2.dist-info/METADATA,sha256=11ixHTIfkwmFi3bNACQ5iHP8CR3lH3w99-mLpMVtYf4,638
+faceangle-0.3.2.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+faceangle-0.3.2.dist-info/RECORD,,

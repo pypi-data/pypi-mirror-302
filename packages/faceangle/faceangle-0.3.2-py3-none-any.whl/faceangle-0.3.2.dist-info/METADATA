@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: faceangle
+Version: 0.3.2
+Summary: 
+Author: radik
+Author-email: radik@td.ru
+Requires-Python: >=3.10,<3.11
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Requires-Dist: insightface (==0.7.3)
+Requires-Dist: matplotlib (==3.6)
+Requires-Dist: numpy (==1.23.5)
+Requires-Dist: onnxruntime (==1.18.1)
+Requires-Dist: onnxruntime-gpu (==1.18.0)
+Requires-Dist: opencv-python (==4.10.0.84)
+Requires-Dist: pandas (==2.0)
+Requires-Dist: pip (==24.2)
+Requires-Dist: scikit-learn (==1.5.1)
+Requires-Dist: tqdm (==4.66.4)
+Description-Content-Type: text/markdown
+
+# FaceAngle
