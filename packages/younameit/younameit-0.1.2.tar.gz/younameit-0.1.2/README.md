@@ -1,0 +1,202 @@
+# You name it
+
+> A hash function that outputs pseudo-random words.
+
+Intended for use in machine-to-human interfaces.
+
+Can convert any data into words that are:
+
+* readable
+* memorable
+* rigorously reproducible across multiple platforms
+* have a parameterized length (approximately 1-5 syllables)
+* come in the style of several languages (e.g. English, Finnish, German)
+* don't mean anything, but random generation of real words can happen very rarely
+
+Not suitable for any security applications.
+
+This algorithm will tell you with a very high probability that two data sets are different because
+they produce different results, but the probability is not high enough to rely on it for security.
+
+In this case, please use one of the modern hash functions, e.g. SHA-512.
+
+### Mitigating the security
+
+There is a non-zero risk that a hash collision happen, i.e. two different datasets result with the
+same word.
+
+There is a method for to increase the reliability by, e.g. by concatenating a result of `younameit`
+of certain data with a result of `younameit` of a different hash function, e.g. `SHA-515` of the data, like:
+
+```python
+from hashlib import sha512
+from younameit import Nomenclator
+
+data = b"Any data"
+data_hash = sha512(data).hexdigest()
+
+nomen = Nomenclator("finnish")
+first_word = nomen.from_any_to_word(data)
+confirmation_word = nomen.from_any_to_word(data_hash)
+
+readable_id = f"{first_word}-{confirmation_word}"
+```
+
+The generated `readable_id` in the code above is `homäen-kyyskionpa` for the provided input `data`.
+
+In case of such an algorithm, the risk of result hash results collision is very low.
+Even if a hash-collision happens for the used HASH-256 in the `first_word` it's very unlikely that it will occur
+for the second time for a different hash algorithm used, here `SHA-512`.
+
+However, do not use it if the security of data is a concern:
+
+### Liability warning
+
+> THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+> IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+> FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+> AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+> LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+> OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+> SOFTWARE.
+
+### Brief explanation
+
+A hash function is any function that can be used to map data of arbitrary size to fixed size values.
+Whether you feed it a single byte or a 10MB chunk of data, the output of a hash function is
+relatively short.
+
+For example, you can use the `SHA-256` algorithm to shorten a sentence:
+
+```bash
+$ echo "give me a short name for this statement" | sha256sum
+4dd4b6086d8700df41a41c401d650a1366273296b1b5665a5c89d848ae625cee  -
+```
+
+The result in the case of SHA-256, called a `hexdigest`, has a fixed length, but it's almost
+impossible for a human being to remember.
+
+Imagine, could you ever say?
+
+> Yes, I've seen this hash before.
+
+Probably not. Hex digests are extremely difficult for the human brain to remember.
+
+But `younameit` is a python package that translates data into a pseudo-random word.
+
+```bash
+$ echo "give me a short name for this statement" | younameit
+dore
+```
+So younameit converted the sentence into a single word `dore`. Its results are readable and
+memorable words that mean rather nothing.
+
+Our brains are much better at remembering words, even the weirdest ones.
+
+As soon as the input data changes, the resulting word is also different:
+```bash
+$ echo "give me another short name for this statement" | younameit 
+daden
+```
+
+And then it's very easy for us to notice that `dore` is different from `daden`.
+
+### Any serializable object as an input
+
+The tool will convert any serializable object into a word. It can be a JSON or YAML file (dictionary
+order matters however), a large text file or a serialized binary message.
+
+When run multiple times with the same data, it will return the same name every time, on any
+contemporary python interpreter, on different machines. You can expect a strict reproduction of the
+translation results, as long as the serialization of the data into bytes is reproducible (note that
+the order of the elements changes the result).
+
+This package will take the object you provide, convert it to bytes, and then feed it to the `sha256`
+algorithm.
+The input data can be anything complex that can be converted to a `bytes` object.
+
+## Installation
+
+It's a standard `pypi` package:
+
+```bash
+pip install younameit
+```
+
+## Parametrization
+
+### Language
+
+You can select one of several languages, i.e.:
+
+- american-english
+- british-english
+- finnish
+- french
+- german
+- italian
+- spanish
+
+The hashing results of american and british english are quite similar.
+
+### Number of groups and parity
+
+Composes words from alternating groups consisting of vowels and consonants.
+Each group can contain one or more letters of a given type.
+If the first group used in a word is a consonant group, its parity is called `even`.
+In the opposite case, the parity is called `odd`, i.e., when the word starts with a group of vowels.
+
+The available number of groups may vary, but so far, in October 2024 it is between 2 and 8.
+
+During word generation, you can specify the number of groups and parity. Otherwise, they will be
+chosen pseudo-randomly from the probability of their occurrence in the selected language.
+
+## Usage
+
+This python package provides importable python library and a bash entrypoint.
+
+### In a shell
+
+```bash
+# take data from stdin:
+$ echo "anything you can imagine" | younameit
+
+# list available languages:
+$ younameit --list-languages
+
+# assign the result to a variable:
+$ READABLE_ID=$(echo "anything you can imagine" | younameit)
+
+# read the data from text file:
+$ READABLE_ID=$(younameit -f ./path/to/the/file.txt)
+
+# read the data from binary file:
+$ READABLE_ID=$(younameit -b ./path/to/the/file.bin)
+
+# output Finnish-alike language
+$ READABLE_ID=$(younameit -f ./path/to/the/file.txt -l finnish)
+
+# define certain number of groups, here 5,6,7 and odd word parity:
+$ READABLE_ID=$(younameit -f ./path/to/the/file.txt -g 5,6,7 -p odd)
+```
+
+### In python
+
+```py
+from younameit import Nomenclator
+
+# create a hashing object
+nomen = Nomenclator("american-english")
+
+# convert the word "one" with default settings
+assert nomen.from_any_to_word("one") == "tappents"
+
+# convert the word "one" to a word with two groups
+assert nomen.from_any_to_word("one", 2) == "id"
+
+# convert the word "one" to a word with three or four groups
+assert nomen.from_any_to_word("one", 3, 4) == "wag"
+
+# convert the word "one" to a word of odd parity
+assert nomen.from_any_to_word("one", parity="odd") == "enasiar"
+```
