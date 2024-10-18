@@ -1,0 +1,8 @@
+README.md
+setup.py
+Internationalization.egg-info/PKG-INFO
+Internationalization.egg-info/SOURCES.txt
+Internationalization.egg-info/dependency_links.txt
+Internationalization.egg-info/top_level.txt
+library/__init__.py
+library/internationalization.py
