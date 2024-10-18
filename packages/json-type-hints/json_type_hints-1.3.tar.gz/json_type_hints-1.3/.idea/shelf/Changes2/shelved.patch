@@ -1,0 +1,53 @@
+Index: tests/tests.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import unittest\n\nfrom test_data import (\n    CLS_NAME_1,\n    CLS_NAME_2,\n    CLS_NAME_3,\n    DUMPS_STR,\n    INPUT_DICT,\n    LOADS_CLS_1_ONLY,\n    LOADS_DEFAULT_ONLY,\n    LOADS_STR_BAD_PROP,\n    TYPE_DICT_CLS1,\n    TYPE_DICT_FULL,\n    TYPE_DICT_PARTIAL,\n)\n\nfrom src.json_hints import dumps, loads\n\n\ndef encode_classes(obj):\n    if isinstance(obj, TYPE_DICT_FULL[CLS_NAME_3]):\n        return {\"__type__\": CLS_NAME_3}\n    if type(obj) in TYPE_DICT_FULL.values():\n        return {\"__type__\": type(obj).__name__, \"__data__\": obj.__dict__}\n    return obj\n\n\ndef encode_classes_incomplete(obj):\n    types = TYPE_DICT_FULL.copy()\n    types.pop(CLS_NAME_3)\n    if type(obj) in types.values():\n        return {\"__type__\": type(obj).__name__, \"__data__\": obj.__dict__}\n    return obj\n\n\ndef decode_classes(obj):\n    if \"__type__\" in obj and (_type := obj[\"__type__\"]) in TYPE_DICT_FULL:\n        return TYPE_DICT_FULL[_type](**obj.get(\"__data__\", {}))\n    return obj\n\n\ndef decode_class1(obj):\n    if \"__type__\" in obj and obj[\"__type__\"] == CLS_NAME_1:\n        return TYPE_DICT_FULL[CLS_NAME_1](**obj[\"__data__\"])\n    return obj\n\n\nclass MyTestCase(unittest.TestCase):\n    def assert_exception_msg(self, exception, expected_msg=\"__type__\"):\n        self.assertTrue(expected_msg in str(exception))\n\n    def test_dumps(self):\n        self.assertEqual(DUMPS_STR, dumps(INPUT_DICT, encode_types=encode_classes))\n\n    def test_dumps_partially_encoded(self):\n        self.assertEqual(DUMPS_STR, dumps(LOADS_DEFAULT_ONLY, encode_types=encode_classes))\n\n    def test_dumps_no_encoder(self):\n        with self.assertRaises(expected_exception=TypeError) as cm:\n            dumps(INPUT_DICT)\n        self.assert_exception_msg(cm.exception, CLS_NAME_2)\n\n    def test_dumps_incomplete_encoder(self):\n        with self.assertRaises(expected_exception=TypeError) as cm:\n            dumps(INPUT_DICT, encode_types=encode_classes_incomplete)\n        self.assert_exception_msg(cm.exception, CLS_NAME_3)\n\n    def test_loads_no_parsers_raise(self):\n        with self.assertRaises(TypeError) as cm:\n            loads(DUMPS_STR)\n        self.assert_exception_msg(cm.exception)\n\n    def test_loads_no_parsers_no_raise(self):\n        self.assertEqual(LOADS_DEFAULT_ONLY, loads(DUMPS_STR, raise_on_unknown=False))\n\n    def test_loads_bad_data(self):\n        with self.assertRaises(TypeError) as cm:\n            loads('{\"__type__\":\"tuple\",\"__data__\":null}')\n        self.assert_exception_msg(cm.exception, \"invalid '__data__'\")\n\n    def test_loads_hook(self):\n        self.assertEqual(INPUT_DICT, loads(DUMPS_STR, object_hook=decode_classes))\n\n    def test_loads_hook_cls1_raise(self):\n        with self.assertRaises(TypeError) as cm:\n            loads(DUMPS_STR, object_hook=decode_class1)\n        self.assert_exception_msg(cm.exception)\n\n    def test_loads_hook_cls1_no_raise(self):\n        self.assertEqual(\n            LOADS_CLS_1_ONLY, loads(DUMPS_STR, object_hook=decode_class1, raise_on_unknown=False)\n        )\n\n    def test_loads_dict(self):\n        self.assertEqual(INPUT_DICT, loads(DUMPS_STR, hinted_types=TYPE_DICT_FULL))\n\n    def test_loads_dict_bad_data(self):\n        with self.assertRaises(TypeError) as cm:\n            loads(LOADS_STR_BAD_PROP, hinted_types=TYPE_DICT_FULL)\n        self.assert_exception_msg(cm.exception, \"invalid '__data__'\")\n\n    def test_loads_dict_cls1_raise(self):\n        with self.assertRaises(TypeError) as cm:\n            loads(DUMPS_STR, hinted_types=TYPE_DICT_CLS1)\n        self.assert_exception_msg(cm.exception)\n\n    def test_loads_dict_cls1_no_raise(self):\n        self.assertEqual(\n            LOADS_CLS_1_ONLY, loads(DUMPS_STR, hinted_types=TYPE_DICT_CLS1, raise_on_unknown=False)\n        )\n\n    def test_loads_dict_and_hook(self):\n        self.assertEqual(\n            INPUT_DICT, loads(DUMPS_STR, hinted_types=TYPE_DICT_PARTIAL, object_hook=decode_class1)\n        )\n\n    def test_dumps_and_loads(self):\n        self.assertEqual(\n            INPUT_DICT,\n            loads(dumps(INPUT_DICT, encode_types=encode_classes), hinted_types=TYPE_DICT_FULL),\n        )\n\n\nif __name__ == \"__main__\":\n    unittest.main()\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/tests/tests.py b/tests/tests.py
+--- a/tests/tests.py	(revision 761d2cfb73b8e9c1cd3969e22e92ac25fa401da8)
++++ b/tests/tests.py	(date 1729006145743)
+@@ -12,6 +12,7 @@
+     TYPE_DICT_CLS1,
+     TYPE_DICT_FULL,
+     TYPE_DICT_PARTIAL,
++    MyClass3,
+ )
+ 
+ from src.json_hints import dumps, loads
+@@ -33,6 +34,12 @@
+     return obj
+ 
+ 
++def encode_default(obj):
++    if isinstance(obj, MyClass3):
++        return obj.prop1
++    raise TypeError()
++
++
+ def decode_classes(obj):
+     if "__type__" in obj and (_type := obj["__type__"]) in TYPE_DICT_FULL:
+         return TYPE_DICT_FULL[_type](**obj.get("__data__", {}))
+@@ -49,6 +56,10 @@
+     def assert_exception_msg(self, exception, expected_msg="__type__"):
+         self.assertTrue(expected_msg in str(exception))
+ 
++    def test_dumps_default(self):
++        encoded = dumps({"key": MyClass3()}, default=encode_default)
++        self.assertEqual('{"key":1}', encoded)
++
+     def test_dumps(self):
+         self.assertEqual(DUMPS_STR, dumps(INPUT_DICT, encode_types=encode_classes))
+ 
+@@ -65,6 +76,10 @@
+             dumps(INPUT_DICT, encode_types=encode_classes_incomplete)
+         self.assert_exception_msg(cm.exception, CLS_NAME_3)
+ 
++    def test_dumps_incomplete_encoder_and_default(self):
++        encoded = dumps(INPUT_DICT, encode_types=encode_classes_incomplete, default=encode_default)
++        self.assertEqual(DUMPS_STR, encoded)
++
+     def test_loads_no_parsers_raise(self):
+         with self.assertRaises(TypeError) as cm:
+             loads(DUMPS_STR)

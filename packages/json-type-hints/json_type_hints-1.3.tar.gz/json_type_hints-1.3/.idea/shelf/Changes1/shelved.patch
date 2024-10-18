@@ -1,0 +1,170 @@
+Index: src/json_hints/__init__.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import base64\nimport json\nfrom collections.abc import Callable\nfrom typing import Any\n\nfrom .encoder import ExtendedJSONEncoder\n\n\ndef dumps(\n    obj: Any,\n    *,\n    encode_types: Callable[[Any], Any] | None = None,\n    default: Callable[[Any], Any] | None = None,\n    separators: tuple[str, str] = (\",\", \":\"),\n) -> str:\n    \"\"\"\n    Serialize ``obj`` to a JSON formatted ``str``. Encode ``tuple`` to\n    ``{'__type__': 'tuple', '__data__': [...]}`` and ``bytes`` to\n    ``{'__type__': 'bytes', '__data__': 'base64 encoded bytes'}``.\n    :param obj: a Python object.\n    :param encode_types: a function that should convert ``obj`` into a\n        ``{'__type__': 'name', '__data__': ...}`` dict or return it unchanged. ``'__data__'``\n        will then be encoded recursively. If recursion is not needed, ``default`` should be used\n        instead.\n    :param default: a function that should return a serializable version of ``obj`` or raise\n        ``TypeError``. The default simply raises ``TypeError``.\n    :param separators: ``(item_separator, key_separator)`` tuple. The default is ``(',', ':')``.\n    :return: ``obj`` as a JSON formatted ``str``.\n    \"\"\"\n    return json.dumps(\n        obj=obj,\n        cls=ExtendedJSONEncoder,\n        default=default,\n        separators=separators,\n        encode_types=encode_types,\n    )\n\n\ndef loads(\n    s: str | bytes | bytearray,\n    *,\n    raise_on_unknown: bool = True,\n    object_hook: Callable[[dict[Any, Any]], Any] | None = None,\n    hinted_types: dict[str, type] | None = None,\n) -> Any:\n    \"\"\"\n    Deserialize a ``str``, ``bytes`` or ``bytearray`` instance containing a JSON document\n    to a Python object. Decode objects encoded to ``{'__type__': 'name', '__data__': ...}`` dict\n    if ``'__type__'`` is ``'tuple'`` or ``'bytes'``.\n    :param s: a ``str``, ``bytes`` or ``bytearray`` instance containing a JSON document.\n    :param raise_on_unknown: ``True`` - a ``TypeError`` will be raised when a ``'__type__'`` can't\n        be decoded (not in ``hinted_types`` and not decoded by ``object_hook``), ``False`` - the\n        ``{'__type__': 'name', '__data__': ...}`` dict will be left as is.\n    :param object_hook: an optional function that will be called with the result of any object\n        literal decode (a ``dict``). The return value of ``object_hook`` will be used instead of the\n        ``dict``. This feature can be used to implement custom decoders (e.g. for types encoded to\n        ``{'__type__': 'name', '__data__': ...}`` dict).\n    :param hinted_types: a ``{'name': class}`` dict, used to decode\n        ``{'__type__': 'name', '__data__': ...}`` dict. Objects will be created by unpacking\n        ``'__data__'`` into keyword arguments.\n    :return: a Python object.\n    \"\"\"\n\n    def decode_hinted(obj):\n        if object_hook:\n            backup = obj\n            obj = object_hook(obj)\n            if obj != backup:\n                return obj\n        if \"__type__\" not in obj:\n            return obj\n        _type = obj[\"__type__\"]\n        if \"__data__\" not in obj:\n            raise TypeError(f\"'__type__':'{_type}' has no '__data__'\")\n        try:\n            if _type == \"bytes\":\n                return base64.b64decode(obj[\"__data__\"])\n            if _type == \"tuple\":\n                return tuple(obj[\"__data__\"])\n            if hinted_types and _type in hinted_types:\n                return hinted_types[_type](**obj[\"__data__\"])\n        except TypeError as e:\n            raise TypeError(f\"invalid '__data__' for '__type__':'{_type}'. {e}\")\n        if not raise_on_unknown:\n            return obj\n        raise TypeError(f\"'__type__':'{_type}' is not a supported data type\")\n\n    return json.loads(s=s, object_hook=decode_hinted)\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/json_hints/__init__.py b/src/json_hints/__init__.py
+--- a/src/json_hints/__init__.py	(revision 30065671d20b2363bae4830658c015a8546139ab)
++++ b/src/json_hints/__init__.py	(date 1727881894547)
+@@ -57,7 +57,8 @@
+         ``{'__type__': 'name', '__data__': ...}`` dict).
+     :param hinted_types: a ``{'name': class}`` dict, used to decode
+         ``{'__type__': 'name', '__data__': ...}`` dict. Objects will be created by unpacking
+-        ``'__data__'`` into keyword arguments.
++        ``'__data__'`` (if present) into keyword arguments, or using it as a positional argument,
++        if ``'__data__'`` is not a dict.
+     :return: a Python object.
+     """
+ 
+@@ -70,15 +71,17 @@
+         if "__type__" not in obj:
+             return obj
+         _type = obj["__type__"]
+-        if "__data__" not in obj:
+-            raise TypeError(f"'__type__':'{_type}' has no '__data__'")
++        _data = obj.get("__data__", {})
++        _hinted_types = {"tuple": tuple}
++        if hinted_types:
++            _hinted_types.update(hinted_types)
+         try:
+             if _type == "bytes":
+-                return base64.b64decode(obj["__data__"])
+-            if _type == "tuple":
+-                return tuple(obj["__data__"])
+-            if hinted_types and _type in hinted_types:
+-                return hinted_types[_type](**obj["__data__"])
++                return base64.b64decode(_data)
++            if _type in _hinted_types:
++                if isinstance(_data, dict):
++                    return _hinted_types[_type](**_data)
++                return _hinted_types[_type](_data)
+         except TypeError as e:
+             raise TypeError(f"invalid '__data__' for '__type__':'{_type}'. {e}")
+         if not raise_on_unknown:
+Index: tests/tests.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import unittest\n\nfrom test_data import (\n    CLS_NAME_1,\n    CLS_NAME_2,\n    DUMPS_STR,\n    INPUT_DICT,\n    LOADS_CLS_1_ONLY,\n    LOADS_DEFAULT_ONLY,\n    LOADS_STR_BAD_PROP,\n    TYPE_DICT_CLS1,\n    TYPE_DICT_CLS2,\n    TYPE_DICT_FULL,\n)\n\nfrom src.json_hints import dumps, loads\n\n\ndef encode_classes(obj):\n    if type(obj) in TYPE_DICT_FULL.values():\n        return {\"__type__\": type(obj).__name__, \"__data__\": obj.__dict__}\n    return obj\n\n\ndef encode_classes_incomplete(obj):\n    if isinstance(obj, TYPE_DICT_FULL[CLS_NAME_2]):\n        return {\"__type__\": type(obj).__name__, \"__data__\": obj.__dict__}\n    return obj\n\n\ndef decode_classes(obj):\n    if \"__type__\" in obj and (_type := obj[\"__type__\"]) in TYPE_DICT_FULL:\n        return TYPE_DICT_FULL[_type](**obj[\"__data__\"])\n    return obj\n\n\ndef decode_class1(obj):\n    if \"__type__\" in obj and obj[\"__type__\"] == CLS_NAME_1:\n        return TYPE_DICT_FULL[CLS_NAME_1](**obj[\"__data__\"])\n    return obj\n\n\nclass MyTestCase(unittest.TestCase):\n    def assert_exception_msg(self, exception, expected_msg=\"__type__\"):\n        self.assertTrue(expected_msg in str(exception))\n\n    def test_dumps(self):\n        self.assertEqual(dumps(INPUT_DICT, encode_types=encode_classes), DUMPS_STR)\n\n    def test_dumps_partially_encoded(self):\n        self.assertEqual(dumps(LOADS_DEFAULT_ONLY, encode_types=encode_classes), DUMPS_STR)\n\n    def test_dumps_no_encoder(self):\n        with self.assertRaises(expected_exception=TypeError) as cm:\n            dumps(INPUT_DICT)\n        self.assert_exception_msg(cm.exception, CLS_NAME_2)\n\n    def test_dumps_incomplete_encoder(self):\n        with self.assertRaises(expected_exception=TypeError) as cm:\n            dumps(INPUT_DICT, encode_types=encode_classes_incomplete)\n        self.assert_exception_msg(cm.exception, CLS_NAME_1)\n\n    def test_loads_no_parsers_raise(self):\n        with self.assertRaises(TypeError) as cm:\n            loads(DUMPS_STR)\n        self.assert_exception_msg(cm.exception)\n\n    def test_loads_no_parsers_no_raise(self):\n        self.assertEqual(loads(DUMPS_STR, raise_on_unknown=False), LOADS_DEFAULT_ONLY)\n\n    def test_loads_no_data(self):\n        with self.assertRaises(TypeError) as cm:\n            loads('{\"__type__\":\"tuple\"}')\n        self.assert_exception_msg(cm.exception, \"no '__data__'\")\n\n    def test_loads_bad_data(self):\n        with self.assertRaises(TypeError) as cm:\n            loads('{\"__type__\":\"tuple\",\"__data__\":null}')\n        self.assert_exception_msg(cm.exception, \"invalid '__data__'\")\n\n    def test_loads_hook(self):\n        self.assertEqual(loads(DUMPS_STR, object_hook=decode_classes), INPUT_DICT)\n\n    def test_loads_hook_cls1_raise(self):\n        with self.assertRaises(TypeError) as cm:\n            loads(DUMPS_STR, object_hook=decode_class1)\n        self.assert_exception_msg(cm.exception)\n\n    def test_loads_hook_cls1_no_raise(self):\n        self.assertEqual(\n            loads(DUMPS_STR, object_hook=decode_class1, raise_on_unknown=False), LOADS_CLS_1_ONLY\n        )\n\n    def test_loads_dict(self):\n        self.assertEqual(loads(DUMPS_STR, hinted_types=TYPE_DICT_FULL), INPUT_DICT)\n\n    def test_loads_dict_bad_data(self):\n        with self.assertRaises(TypeError) as cm:\n            loads(LOADS_STR_BAD_PROP, hinted_types=TYPE_DICT_FULL)\n        self.assert_exception_msg(cm.exception, \"invalid '__data__'\")\n\n    def test_loads_dict_cls1_raise(self):\n        with self.assertRaises(TypeError) as cm:\n            loads(DUMPS_STR, hinted_types=TYPE_DICT_CLS1)\n        self.assert_exception_msg(cm.exception)\n\n    def test_loads_dict_cls1_no_raise(self):\n        self.assertEqual(\n            loads(DUMPS_STR, hinted_types=TYPE_DICT_CLS1, raise_on_unknown=False), LOADS_CLS_1_ONLY\n        )\n\n    def test_loads_dict_and_hook(self):\n        self.assertEqual(\n            loads(DUMPS_STR, hinted_types=TYPE_DICT_CLS2, object_hook=decode_class1), INPUT_DICT\n        )\n\n    def test_dumps_and_loads(self):\n        self.assertEqual(\n            loads(dumps(INPUT_DICT, encode_types=encode_classes), hinted_types=TYPE_DICT_FULL),\n            INPUT_DICT,\n        )\n\n\nif __name__ == \"__main__\":\n    unittest.main()\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/tests/tests.py b/tests/tests.py
+--- a/tests/tests.py	(revision 30065671d20b2363bae4830658c015a8546139ab)
++++ b/tests/tests.py	(date 1727883806918)
+@@ -3,20 +3,23 @@
+ from test_data import (
+     CLS_NAME_1,
+     CLS_NAME_2,
++    CLS_NAME_3,
+     DUMPS_STR,
+     INPUT_DICT,
+     LOADS_CLS_1_ONLY,
+     LOADS_DEFAULT_ONLY,
+     LOADS_STR_BAD_PROP,
+     TYPE_DICT_CLS1,
+-    TYPE_DICT_CLS2,
+     TYPE_DICT_FULL,
++    TYPE_DICT_PARTIAL,
+ )
+ 
+ from src.json_hints import dumps, loads
+ 
+ 
+ def encode_classes(obj):
++    if isinstance(obj, TYPE_DICT_FULL[CLS_NAME_3]):
++        return {"__type__": CLS_NAME_3}
+     if type(obj) in TYPE_DICT_FULL.values():
+         return {"__type__": type(obj).__name__, "__data__": obj.__dict__}
+     return obj
+@@ -30,7 +33,7 @@
+ 
+ def decode_classes(obj):
+     if "__type__" in obj and (_type := obj["__type__"]) in TYPE_DICT_FULL:
+-        return TYPE_DICT_FULL[_type](**obj["__data__"])
++        return TYPE_DICT_FULL[_type](**obj.get("__data__", {}))
+     return obj
+ 
+ 
+@@ -68,11 +71,6 @@
+     def test_loads_no_parsers_no_raise(self):
+         self.assertEqual(loads(DUMPS_STR, raise_on_unknown=False), LOADS_DEFAULT_ONLY)
+ 
+-    def test_loads_no_data(self):
+-        with self.assertRaises(TypeError) as cm:
+-            loads('{"__type__":"tuple"}')
+-        self.assert_exception_msg(cm.exception, "no '__data__'")
+-
+     def test_loads_bad_data(self):
+         with self.assertRaises(TypeError) as cm:
+             loads('{"__type__":"tuple","__data__":null}')
+@@ -111,7 +109,7 @@
+ 
+     def test_loads_dict_and_hook(self):
+         self.assertEqual(
+-            loads(DUMPS_STR, hinted_types=TYPE_DICT_CLS2, object_hook=decode_class1), INPUT_DICT
++            loads(DUMPS_STR, hinted_types=TYPE_DICT_PARTIAL, object_hook=decode_class1), INPUT_DICT
+         )
+ 
+     def test_dumps_and_loads(self):
+Index: tests/test_data.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>from dataclasses import dataclass\n\n\n@dataclass\nclass MyClass1:\n    prop1: int\n    prop2: tuple[str, bytes]\n\n\n@dataclass\nclass MyClass2:\n    prop1: list[MyClass1]\n    prop2: str\n\n\nCLS_NAME_1 = \"MyClass1\"\nCLS_NAME_2 = \"MyClass2\"\nTYPE_DICT_CLS1 = {CLS_NAME_1: MyClass1}\nTYPE_DICT_CLS2 = {CLS_NAME_2: MyClass2}\nTYPE_DICT_FULL = {CLS_NAME_1: MyClass1, CLS_NAME_2: MyClass2}\nCLASS_1_OBJ_1 = MyClass1(prop1=1, prop2=(\"bytes1\", b\"\\x01\"))\nCLASS_1_OBJ_2 = MyClass1(prop1=2, prop2=(\"bytes2\", b\"\\x01\\x00\"))\nCLASS_2_OBJ_1 = MyClass2(prop1=[CLASS_1_OBJ_1, CLASS_1_OBJ_2], prop2=\"cls2\")\nINPUT_DICT = {\"key1\": 1, \"key2\": CLASS_2_OBJ_1}\nDUMPS_STR = (\n    '{\"key1\":1,\"key2\":{\"__type__\":\"MyClass2\",\"__data__\":{\"prop1\":[{\"__type__\":\"MyClass1\",'\n    '\"__data__\":{\"prop1\":1,\"prop2\":{\"__type__\":\"tuple\",\"__data__\":[\"bytes1\",'\n    '{\"__type__\":\"bytes\",\"__data__\":\"AQ==\"}]}}},{\"__type__\":\"MyClass1\",'\n    '\"__data__\":{\"prop1\":2,\"prop2\":{\"__type__\":\"tuple\",\"__data__\":[\"bytes2\",'\n    '{\"__type__\":\"bytes\",\"__data__\":\"AQA=\"}]}}}],\"prop2\":\"cls2\"}}}'\n)\nLOADS_DEFAULT_ONLY = {\n    \"key1\": 1,\n    \"key2\": {\n        \"__type__\": CLS_NAME_2,\n        \"__data__\": {\n            \"prop1\": [\n                {\"__type__\": CLS_NAME_1, \"__data__\": {\"prop1\": 1, \"prop2\": (\"bytes1\", b\"\\x01\")}},\n                {\n                    \"__type__\": CLS_NAME_1,\n                    \"__data__\": {\"prop1\": 2, \"prop2\": (\"bytes2\", b\"\\x01\\x00\")},\n                },\n            ],\n            \"prop2\": \"cls2\",\n        },\n    },\n}\nLOADS_CLS_1_ONLY = {\n    \"key1\": 1,\n    \"key2\": {\n        \"__type__\": CLS_NAME_2,\n        \"__data__\": {\n            \"prop1\": [CLASS_1_OBJ_1, CLASS_1_OBJ_2],\n            \"prop2\": \"cls2\",\n        },\n    },\n}\nLOADS_STR_BAD_PROP = f'{{\"__type__\":\"{CLS_NAME_1}\",\"__data__\":{{\"bad_prop\":1}}}}'\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/tests/test_data.py b/tests/test_data.py
+--- a/tests/test_data.py	(revision 30065671d20b2363bae4830658c015a8546139ab)
++++ b/tests/test_data.py	(date 1727883832400)
+@@ -13,21 +13,29 @@
+     prop2: str
+ 
+ 
++@dataclass
++class MyClass3:
++    prop1: int = 1
++
++
+ CLS_NAME_1 = "MyClass1"
+ CLS_NAME_2 = "MyClass2"
++CLS_NAME_3 = "MyClass3"
+ TYPE_DICT_CLS1 = {CLS_NAME_1: MyClass1}
+ TYPE_DICT_CLS2 = {CLS_NAME_2: MyClass2}
+-TYPE_DICT_FULL = {CLS_NAME_1: MyClass1, CLS_NAME_2: MyClass2}
++TYPE_DICT_PARTIAL = {CLS_NAME_1: MyClass1, CLS_NAME_2: MyClass2, CLS_NAME_3: MyClass3}
++TYPE_DICT_FULL = {CLS_NAME_1: MyClass1, CLS_NAME_2: MyClass2, CLS_NAME_3: MyClass3}
+ CLASS_1_OBJ_1 = MyClass1(prop1=1, prop2=("bytes1", b"\x01"))
+ CLASS_1_OBJ_2 = MyClass1(prop1=2, prop2=("bytes2", b"\x01\x00"))
+-CLASS_2_OBJ_1 = MyClass2(prop1=[CLASS_1_OBJ_1, CLASS_1_OBJ_2], prop2="cls2")
++CLASS_3_OBJ_1 = MyClass3()
++CLASS_2_OBJ_1 = MyClass2(prop1=[CLASS_1_OBJ_1, CLASS_1_OBJ_2, CLASS_3_OBJ_1], prop2="cls2")
+ INPUT_DICT = {"key1": 1, "key2": CLASS_2_OBJ_1}
+ DUMPS_STR = (
+     '{"key1":1,"key2":{"__type__":"MyClass2","__data__":{"prop1":[{"__type__":"MyClass1",'
+     '"__data__":{"prop1":1,"prop2":{"__type__":"tuple","__data__":["bytes1",'
+     '{"__type__":"bytes","__data__":"AQ=="}]}}},{"__type__":"MyClass1",'
+     '"__data__":{"prop1":2,"prop2":{"__type__":"tuple","__data__":["bytes2",'
+-    '{"__type__":"bytes","__data__":"AQA="}]}}}],"prop2":"cls2"}}}'
++    '{"__type__":"bytes","__data__":"AQA="}]}}},{"__type__":"MyClass3"}],"prop2":"cls2"}}}'
+ )
+ LOADS_DEFAULT_ONLY = {
+     "key1": 1,
+@@ -40,6 +48,7 @@
+                     "__type__": CLS_NAME_1,
+                     "__data__": {"prop1": 2, "prop2": ("bytes2", b"\x01\x00")},
+                 },
++                {"__type__": CLS_NAME_3},
+             ],
+             "prop2": "cls2",
+         },
+@@ -50,7 +59,7 @@
+     "key2": {
+         "__type__": CLS_NAME_2,
+         "__data__": {
+-            "prop1": [CLASS_1_OBJ_1, CLASS_1_OBJ_2],
++            "prop1": [CLASS_1_OBJ_1, CLASS_1_OBJ_2, {"__type__": CLS_NAME_3}],
+             "prop2": "cls2",
+         },
+     },
