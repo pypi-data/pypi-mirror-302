@@ -1,0 +1,37 @@
+Metadata-Version: 2.3
+Name: snappy_gpt
+Version: 0.0.1
+Summary: Another Wrapper for ESA Snap Graph Processing Tool
+Project-URL: Homepage, https://gitlab.com/SteffenME1/snappy-gpt
+Project-URL: Issues, https://gitlab.com/SteffenME1/snappy-gpt/-/issues
+Author-email: Steffen Merseburg <steffen.merseburg@space-eye.org>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# SnappyGPT
+
+Python Module that creates and applies graph processing functions for ESAs SNAP graph processing tool (GPT)
+
+## Requirements
+
+* SNAP must be installed and snappy configured for your python enviroment
+* numpy is requiered for utils.py
+
+## Example
+
+```python
+from SnappyGPT import utils, GPT
+
+product=utils.read('filename.zip')
+
+preProcessGraph = GPT.Graph()
+preProcessGraph.add_calibration(outputImageScaleInDb=True, outputSigmaBand=True)
+preProcessGraph.add_thermal_noise_removal()
+preProcessGraph.add_topsar_deburst()
+
+processedProduct=preProcessGraph.create_product(product)
+```
