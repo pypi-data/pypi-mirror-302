@@ -1,0 +1,10 @@
+edds_process/__init__.py,sha256=JOGlc2jJujYQSLZ_AArlNMNsL-s10iaNjxAkF5DCubY,81
+edds_process/globals.py,sha256=VZ8wRuQjk32B2NLQlY1UXbW-9RQHM3h-9ZSjnLPpp3Q,812
+edds_process/request/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+edds_process/response/__init__.py,sha256=HJYc341-lNXnuGCSNc6OK_y6PgJM0VkwbGERROFg5L4,129
+edds_process/response/make.py,sha256=HmaBO4db0BIDvLXCAxXYMouevX5Y2YLXed6VKrynQ1M,5874
+edds_process/response/parse.py,sha256=evFxGagds4BtjZ6pooMIzHK4NoIgOrqhM9SD-RvQzwM,8872
+edds_process-0.10.0.dist-info/LICENSE,sha256=TqI0k3vHsKpSR-Q2aQ0euTJIdbx1kOzeUL79OONRkKU,21778
+edds_process-0.10.0.dist-info/METADATA,sha256=H4cZjxHK1lQQA7Ede5h1RfMljqu14IX8TeVuIS5CuuM,1333
+edds_process-0.10.0.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+edds_process-0.10.0.dist-info/RECORD,,
