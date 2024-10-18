@@ -1,0 +1,4 @@
+colander<3,>=2
+pytz
+netaddr
+six
