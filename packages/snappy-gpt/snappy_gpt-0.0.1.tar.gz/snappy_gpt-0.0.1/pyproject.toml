@@ -1,0 +1,22 @@
+[build-system]
+requires = ["hatchling","numpy","shapely","pyproj"]
+build-backend = "hatchling.build"
+
+[project]
+name = "snappy_gpt"
+version = "0.0.1"
+authors = [
+  { name="Steffen Merseburg", email="steffen.merseburg@space-eye.org" },
+]
+description = "Another Wrapper for ESA Snap Graph Processing Tool"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://gitlab.com/SteffenME1/snappy-gpt"
+Issues = "https://gitlab.com/SteffenME1/snappy-gpt/-/issues"
