@@ -1,0 +1,2 @@
+[console_scripts]
+sowing = sowing.cli.__main__:run
