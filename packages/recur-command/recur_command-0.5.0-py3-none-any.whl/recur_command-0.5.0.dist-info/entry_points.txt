@@ -1,0 +1,2 @@
+[console_scripts]
+recur = recur_command.main:main
