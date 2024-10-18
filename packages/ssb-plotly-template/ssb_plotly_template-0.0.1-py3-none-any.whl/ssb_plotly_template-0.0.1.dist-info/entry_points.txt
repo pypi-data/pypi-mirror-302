@@ -1,0 +1,3 @@
+[console_scripts]
+ssb-plotly-template=ssb_plotly_template.__main__:main
+
