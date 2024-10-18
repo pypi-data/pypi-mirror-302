@@ -1,0 +1,2 @@
+[console_scripts]
+DiagramTool = diagramTool.__main__:main
