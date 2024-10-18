@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+pypriority/__init__.py
+pypriority.egg-info/PKG-INFO
+pypriority.egg-info/SOURCES.txt
+pypriority.egg-info/dependency_links.txt
+pypriority.egg-info/requires.txt
+pypriority.egg-info/top_level.txt
