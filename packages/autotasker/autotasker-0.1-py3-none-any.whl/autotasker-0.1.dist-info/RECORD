@@ -1,0 +1,13 @@
+autotasker/__init__.py,sha256=MLHjHB0dya3UW5MGIayrl440L3EZ8vVkPfWwub8pbP0,1961
+autotasker/__main__.py,sha256=plZScY1OpoBqxZKLmFFUnEbWoJ-8AQ6GgIC9CgfHYyY,35
+autotasker/managers/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+autotasker/managers/docker_manager.py,sha256=uTHM8F6CWDXsnWgAVk5tO_xY49gkr_fqjblxsS6iEKA,4780
+autotasker/scripts/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+autotasker/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+autotasker/utils/dockerfile_templates.py,sha256=rsNAhh9Ofk2iqoZO84ik6MDDnjtjmH0IF3EWJtqXCJM,1422
+autotasker-0.1.dist-info/LICENSE,sha256=gcuuhKKc5-dwvyvHsXjlC9oM6N5gZ6umYbC8ewW1Yvg,35821
+autotasker-0.1.dist-info/METADATA,sha256=obnIJpoi56Hp9V8rQwd2tnUIubYmiVdwFZvAAbqC0lM,1472
+autotasker-0.1.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+autotasker-0.1.dist-info/entry_points.txt,sha256=yMrEyaBckgVQaoe1QuBOLdV8ObsMBJV5tsPOr5IvGb4,46
+autotasker-0.1.dist-info/top_level.txt,sha256=MS2xIpJmzoO33m_w1MyI2dk3hmVts7V74YlCVNAaWms,11
+autotasker-0.1.dist-info/RECORD,,
