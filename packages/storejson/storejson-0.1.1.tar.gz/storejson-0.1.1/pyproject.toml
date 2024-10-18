@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "storejson"
+version = "0.1.1"
+description = "Easiest way to Store JSON typed data using a Pydantic models and database-like structure."
+authors = ["Izak57 <izak57k@gmail.com>"]
+readme = "README.md"
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+pydantic = "^2.8.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
