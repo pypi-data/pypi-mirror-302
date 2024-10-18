@@ -1,0 +1,33 @@
+Metadata-Version: 2.3
+Name: fabsfit
+Version: 0.1
+Summary: Fitting absorptive scattering factors
+Project-URL: Homepage, https://github.com/pzeiger/fabsfit
+Author-email: Paul Zeiger <paul.zeiger@physics.uu.se>
+License-Expression: GPL-3.0-only
+License-File: LICENSE
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.10
+Requires-Dist: matplotlib
+Requires-Dist: numba
+Requires-Dist: numpy
+Requires-Dist: periodictable
+Requires-Dist: requests
+Requires-Dist: scipy
+Description-Content-Type: text/markdown
+
+# pengfit
+A small program to fit parameters of the absorptive potential by Peng et al.
+
+## Installation
+
+`git clone `
+
+followed by
+
+`./bin/download_data.py`
+

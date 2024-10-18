@@ -1,0 +1,16 @@
+fabsfit/__init__.py,sha256=LX5c4CoUg6h4m7sqHKA1Eq153TEAjZJvxXSoLY7ZSXk,21
+fabsfit/constants.py,sha256=7O9tWtrOFaXS8519kEHgDRt831G8aAFGBP4DhlV2Nn8,346
+fabsfit/doyleturner.py,sha256=xfuSXocURCK2c6-Gh_hVQKTxvcK-wwiaacix8eKEV-Q,1085
+fabsfit/miscfcns.py,sha256=cXigHRAlAh3E2aVRcVVZ26q1HObkLLJzphZyocmLF7U,333
+fabsfit/parametrization.py,sha256=uVzwqqKrseNDV-gbrXIbLXJg6LSTcKLZk0c8YtWS-XQ,10691
+fabsfit/cui/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fabsfit/cui/download.py,sha256=UOtc7v2o6msO1XptqIY6LwWvTgsVp6Ec7xZzM8TF5EE,1250
+fabsfit/cui/fabsfit_script.py,sha256=_C0cd8BkJIsUH3FeDD45MVD1FfK6y-EdqK_UiK5F9pM,3359
+fabsfit/cui/fit.py,sha256=en7ujy31vyFBif9b6SgwlIkI-VpY6_dE5qo52lNkPU8,1210
+fabsfit/cui/plot.py,sha256=NBEFgBy6M2wmW08WbiG_MAEU16AJ0wpLm3RGKTGDB-4,310
+fabsfit/data/__init__.py,sha256=Q-qEEGAAivGJsIKHDjiTjeIy9PvIUzhE-63roVdT5sk,302
+fabsfit-0.1.dist-info/METADATA,sha256=ES-5dyNOM1nuRzLVAF3_mp-JkSdhs3T3HWPgd3QXZco,867
+fabsfit-0.1.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+fabsfit-0.1.dist-info/entry_points.txt,sha256=DlYi1fCsfMpQYSYG8tUXcKlgk9NCNazy-lqlttTF130,60
+fabsfit-0.1.dist-info/licenses/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+fabsfit-0.1.dist-info/RECORD,,
