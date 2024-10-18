@@ -1,0 +1,16 @@
+httprest/__init__.py,sha256=Cq_jgg1V1q8ZzYw66uHlmpRsCgW9AtROyWbYoAj_D_Q,75
+httprest/api.py,sha256=lHBeNJT3M71G-tbIg4h1D-r_PIat0SBidIneQVOfLTM,1876
+httprest/http/__init__.py,sha256=5rKHbXV_1L7RBnNpVmKKNr9rpG5zS_hSqI_ImtRIi90,158
+httprest/http/auth.py,sha256=yb3iKWxghOO2Hk-41ShGv1ygxrLcPu6r8LY5exNaRtE,751
+httprest/http/base.py,sha256=iJuZhjbc1csHNVVdo9eqhd8vfplMLXg7A3BcB35HN_s,2103
+httprest/http/cert.py,sha256=vgdXNmphOtfM3U8SrWoL9hWUdBtaz1bGTPadxbjuUOc,255
+httprest/http/errors.py,sha256=1yC56brqneck3yf_Vgt78qxOXBSs2RWqrqoI-5QhP50,431
+httprest/http/fake_client.py,sha256=gvYHb46qrcvPGH2Sbi92c1DVJOEdfz0L8PO-fIrg0ig,1298
+httprest/http/requests_client.py,sha256=v7YZbVwASQQh-9AjP7CcUpKIdlY1ywxGP0iZCJz5BFA,1870
+httprest/http/response.py,sha256=bbLkHgf0klK00XZxK-Dmhza3BXj4PlnFgYH9KngyxY8,1796
+httprest/http/timeout.py,sha256=DpAaTI5JopyPPMOIJ-ztTZcd-3OkL2XvZJTQP42IZLg,402
+httprest/http/urllib_client.py,sha256=7wswYinVkqiCSR9Gfoq3fbupbBpyYcbV_FZcUfJQYeQ,1819
+httprest-0.3.0.dist-info/LICENSE,sha256=Fz2wBg189T0BPQMczcNcTafmw9iRHZHyfhsdN8_264I,1072
+httprest-0.3.0.dist-info/METADATA,sha256=uS7oKD2FTvQSFVsXP9eSO1jVsZgvo53QrumkiZ40lG0,2975
+httprest-0.3.0.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+httprest-0.3.0.dist-info/RECORD,,
