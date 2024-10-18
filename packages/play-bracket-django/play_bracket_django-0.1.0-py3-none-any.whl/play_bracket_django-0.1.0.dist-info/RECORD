@@ -1,0 +1,16 @@
+playbracket/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+playbracket/__version__.py,sha256=IntUIUng_5CZTqHEPLf6RpCzZsSqkDjWQfgT1IKYBMY,412
+playbracket/admin.py,sha256=suMo4x8I3JBxAFBVIdE-5qnqZ6JAZV0FESABHOSc-vg,63
+playbracket/api/v1/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+playbracket/api/v1/serializers.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+playbracket/api/v1/urls.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+playbracket/api/v1/views.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+playbracket/apps.py,sha256=3giz4T9TeVvwA8529mf8xWaGp9OXW6S99Onuwkqq9-g,154
+playbracket/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+playbracket/models.py,sha256=2J6dVnTeV_qVhAQll-f6kTKvolfPBH0QCTkpMz8d4Jk,561
+playbracket/tests.py,sha256=mrbGGRNg5jwbTJtWWa7zSKdDyeB4vmgZCRc2nk6VY-g,60
+playbracket/views.py,sha256=xc1IQHrsij7j33TUbo-_oewy3vs03pw_etpBWaMYJl0,63
+play_bracket_django-0.1.0.dist-info/LICENSE,sha256=mCXBi4pMQdI5VGkYaMCRA4k-nIJZUmFwYSTR-BEHB1I,1076
+play_bracket_django-0.1.0.dist-info/METADATA,sha256=TODi_eI4_xgZpsZISTktdtY09TNh8kPWVfaoffbOeqc,780
+play_bracket_django-0.1.0.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+play_bracket_django-0.1.0.dist-info/RECORD,,

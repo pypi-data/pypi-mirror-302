@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: play-bracket-django
+Version: 0.1.0
+Summary: 
+License: MIT
+Author: Roberto Himmelbauer
+Author-email: robertoh89@gmail.com
+Requires-Python: >=3.12,<4.0
+Classifier: Development Status :: 1 - Planning
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: Django (>=5.1.2,<6.0.0)
+Requires-Dist: djangorestframework (>=3.15.2,<4.0.0)
+Description-Content-Type: text/markdown
+
+# play-bracket-django
+Django project intended to serve as a API endpoint using Django REST Framework
+
