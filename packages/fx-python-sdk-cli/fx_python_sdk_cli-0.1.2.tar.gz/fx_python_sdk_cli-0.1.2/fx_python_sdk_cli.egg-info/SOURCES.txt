@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+fx_python_sdk_cli/__init__.py
+fx_python_sdk_cli/cli.py
+fx_python_sdk_cli/consumer.py
+fx_python_sdk_cli/provider.py
+fx_python_sdk_cli/utils.py
+fx_python_sdk_cli.egg-info/PKG-INFO
+fx_python_sdk_cli.egg-info/SOURCES.txt
+fx_python_sdk_cli.egg-info/dependency_links.txt
+fx_python_sdk_cli.egg-info/requires.txt
+fx_python_sdk_cli.egg-info/top_level.txt
