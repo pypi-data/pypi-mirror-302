@@ -1,0 +1,14 @@
+fakturace/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fakturace/cli.py,sha256=dkQY1-sa4OWWUVnmqI3aJIBBPh_7Qz36SYyBxWjOkFc,15982
+fakturace/data.py,sha256=dsXAsawxG-K6GvhBpeQ_-KSr64Yh9h1Ii_NJr2jpVXg,469
+fakturace/invoices.py,sha256=53iswJAEbioxC4eIXvg1MYkq7toooP9F86qwD5MBK8s,7839
+fakturace/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fakturace/rates.py,sha256=B2gtJ9H1HZsKkebXRbI9FbHP8yh1FkW0A8NCofaSnuM,2109
+fakturace/storage.py,sha256=Veyxg0YrvY1-N7xaLz3H4AX23yyyT6QaUg4OVmI6cYw,8101
+fakturace/test_storage.py,sha256=wi7pJ0Yo1ZP7Kl4IJ9WTELdyww_0_xAXPFcxWOs2YsA,1118
+fakturace-0.7.2.dist-info/LICENSE,sha256=vqERbCwG_I9N-hqfnl_stxpR4sMObXAFQGYYqAYis_E,1071
+fakturace-0.7.2.dist-info/METADATA,sha256=McwSo_7iT5jC_SVqopokKt6xkmqyhTuSqAFTZ_m7tII,1216
+fakturace-0.7.2.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+fakturace-0.7.2.dist-info/entry_points.txt,sha256=qqP8wkHo5EINl_gv0U0et5ClQH4tQvqa4bvP9CCoAVA,49
+fakturace-0.7.2.dist-info/top_level.txt,sha256=hDiq_fHwLxcCPoH5mVvzeXwGokGoFraLYo5qi0ONcbo,10
+fakturace-0.7.2.dist-info/RECORD,,
