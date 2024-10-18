@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: task_5_popkamuravia
+Version: 1.0.0
+Summary: .
+Author-email: Victor <logday2017@gmail.com>
+Requires-Python: >=3.6
+Requires-Dist: pandas
