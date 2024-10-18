@@ -1,0 +1,15 @@
+articast/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+articast/__main__.py,sha256=8hDtWlaFZK24KhfNq_ZKgtXqYHsDQDetukOCMlsbW0Q,59
+articast/article.py,sha256=tFcS4f9P4v7eP_5AoJs6uEAN8vasewWnNeIVrPKTbfY,4638
+articast/chunks.py,sha256=AuCEr6QO2cgdiJKuvJ0i3mJHjvLe2mXCeabqvzE88tM,761
+articast/cli.py,sha256=TRzHHBPMsJiT03wj4RKAs6kdaEthwMgRn-MvboDn76k,4119
+articast/common.py,sha256=tHcetAE3btb9qh3GM8lstM6a2PT7t6wk9tA11t8i5iY,2929
+articast/elevenlabs.py,sha256=Hymr8nUgftQQpCuSoReeiAjW8_nPo2p_QQPXiqno6VU,1606
+articast/filename.py,sha256=l7V8b8UsAIpudlU8w8VyMzpgGfozI2jH5-XV5fiIa9c,680
+articast/openai.py,sha256=SiZ1C7JElPN78rKz-qvTXxb5OE_65C-N5niIazy-TM0,2741
+articast-0.1.25.dist-info/LICENSE.md,sha256=CVMGcR_ruD4oSJgklfdWcyAWZP_JmGRIfLoVPk6kse0,1102
+articast-0.1.25.dist-info/METADATA,sha256=7U78VIwEcjydns2oNdtwk-RG65Ujq4Wsc0onvg3B8gQ,5222
+articast-0.1.25.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+articast-0.1.25.dist-info/entry_points.txt,sha256=JoGzSQaNoX5BMyvNIdS7jmP9LggkxWt2DsFW85kYsQU,46
+articast-0.1.25.dist-info/top_level.txt,sha256=yx_PnpS1s4bwqblzJgx789JWS81npcErCk4T7ng1hqo,9
+articast-0.1.25.dist-info/RECORD,,
