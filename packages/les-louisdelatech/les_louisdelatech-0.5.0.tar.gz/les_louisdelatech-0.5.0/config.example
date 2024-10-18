@@ -1,0 +1,94 @@
+sentry_dsn = ""
+log_level = "DEBUG"
+
+[teams]
+    [teams.ca]
+        discord = "Membres du CA"
+        google_email = ""
+        message_template = "ca.j2"
+        team_role = false
+    [teams.marketing]
+        discord = "Equipe Marketing"
+        google_email = ""
+        message_template = "marketing.j2"
+        team_role = true
+    [teams.tournoi]
+        discord = "Equipe Tournoi"
+        google_email = ""
+        message_template = "tournoi.j2"
+        team_role = true
+    [teams.technique]
+        discord = "Equipe Technique"
+        google_email = ""
+        message_template = "technique.j2"
+        team_role = true
+    [teams."scène"]
+        discord = "Equipe Scène"
+        google_email = ""
+        message_template = "scene.j2"
+        team_role = true
+    [teams.logistique]
+        discord = "Equipe Logistique"
+        google_email = ""
+        message_template = "logistique.j2"
+        team_role = true
+
+[to_skip]
+    [[to_skip.teams]]
+    discord = "Alumnis"
+    google = "alumnis"
+    [[to_skip.teams]]
+    discord = "others"
+    google = "others"
+
+[discord]
+    token = ""
+    initial_cogs = [
+        "les_louisdelatech.extensions.config",
+        "les_louisdelatech.extensions.task",
+        "les_louisdelatech.extensions.management",
+        "les_louisdelatech.extensions.otp",
+        "les_louisdelatech.extensions.user",
+        "les_louisdelatech.extensions.hello_asso",
+        "les_louisdelatech.extensions.cats",
+    ]
+    command_prefix = "!"
+    bot_activity = [
+        "En train de parler sur le stream de jiji",
+        "En train de regarder Nami sur la scène",
+        "En train de sertir des câbles parce que c'est fun",
+    ]
+    [discord.roles]
+        default = [
+            "Membres de l'association",
+            "_Marketing",
+            "_Tournoi",
+            "_Technique",
+            "_Spectacle & streaming",
+            "_Logistique",
+        ]
+    [voice_channel_creation]
+        trigger_channel_name = "Créer un salon vocal"
+        new_channel_name = "🤝 Réunion"
+        bitrate = 96000
+
+[google]
+    subject = ""
+    [google.scopes]
+        admin = [
+            "https://www.googleapis.com/auth/admin.directory.user",
+            "https://www.googleapis.com/auth/admin.directory.group",
+        ]
+        gmail = [
+            "https://www.googleapis.com/auth/gmail.settings.basic",
+            "https://www.googleapis.com/auth/gmail.settings.sharing",
+        ]
+
+[hello_asso]
+organization = ""
+client_id = ""
+client_secret = ""
+
+[db]
+filename = "db.sqlite3"
+secret_key = ""
