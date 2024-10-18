@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+mapchiral/__init__.py
+mapchiral/mapchiral.py
+mapchiral.egg-info/PKG-INFO
+mapchiral.egg-info/SOURCES.txt
+mapchiral.egg-info/dependency_links.txt
+mapchiral.egg-info/top_level.txt
