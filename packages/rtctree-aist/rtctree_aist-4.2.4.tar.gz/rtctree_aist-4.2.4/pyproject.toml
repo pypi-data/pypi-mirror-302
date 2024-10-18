@@ -1,0 +1,5 @@
+[build-system]
+requires = ["rtctree-build-idl@git+https://github.com/OpenRTM/rtctree-build-idl", "wheel", "setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools_scm]
