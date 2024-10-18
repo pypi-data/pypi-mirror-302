@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+simple_asr/__init__.py
+simple_asr/blank.py
+simple_asr.egg-info/PKG-INFO
+simple_asr.egg-info/SOURCES.txt
+simple_asr.egg-info/dependency_links.txt
+simple_asr.egg-info/entry_points.txt
+simple_asr.egg-info/requires.txt
+simple_asr.egg-info/top_level.txt
