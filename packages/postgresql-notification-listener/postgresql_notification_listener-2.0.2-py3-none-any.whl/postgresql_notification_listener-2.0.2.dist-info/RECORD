@@ -1,0 +1,8 @@
+postgresql_notification_listener/__init__.py,sha256=816arqtUgConCtyInXOLmZ0rLcvBYlyE29jDUPEo5jE,80
+postgresql_notification_listener/listener.py,sha256=05Kq3fmmJ1u1ZChVTbSLlSfFAq-P2AcMCOXWYI37-lM,4449
+postgresql_notification_listener/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+postgresql_notification_listener/types.py,sha256=LpynLNwnFeCoaCkVVeJKDuS8v9TTT9fRBrLqcBl8scA,64
+postgresql_notification_listener-2.0.2.dist-info/LICENSE,sha256=etOeoQ0xCcCcPP58eKEuUk3ohHxZ0aYoHSv0GP3dESk,1052
+postgresql_notification_listener-2.0.2.dist-info/METADATA,sha256=OUoqxXfx6HgeVfjWOwKVw0yA8I6ZhOmaCIu6uvrlKso,3217
+postgresql_notification_listener-2.0.2.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+postgresql_notification_listener-2.0.2.dist-info/RECORD,,
