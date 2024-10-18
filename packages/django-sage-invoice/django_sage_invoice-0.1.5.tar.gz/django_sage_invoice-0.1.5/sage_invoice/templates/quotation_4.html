@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+{% load static custom_filters humanize i18n %}
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ title }}</title>
+  <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+
+</head>
+
+<body>
+  <div class="tm_container">
+    <div class="tm_invoice_wrap">
+      <div class="tm_invoice tm_style1" id="tm_download_section">
+        <div class="tm_invoice_in">
+          <div class="tm_invoice_head tm_align_center tm_mb20">
+            <div class="tm_invoice_left">
+              {% if invoice.logo %}
+              <div class="tm_logo">
+                <img src="{{ invoice.logo.url }}" alt="Logo">
+              </div>
+              {% endif %}
+            </div>
+            <div class="tm_invoice_right tm_text_right">
+              <div class="tm_primary_color tm_f50 tm_text_uppercase">{{ invoice.title }}</div>
+            </div>
+          </div>
+          <div class="tm_invoice_info tm_mb20">
+            <div class="tm_invoice_seperator tm_gray_bg"></div>
+            <div class="tm_invoice_info_list">
+              <p class="tm_invoice_number tm_m0">
+                {% trans "Invoice No: " %}
+                <b class="tm_primary_color">{{ invoice.tracking_code }}</b>
+              </p>
+              <p class="tm_invoice_date tm_m0">
+                {% trans "Date: " %}
+                <b class="tm_primary_color">{{ invoice.invoice_date }}</b>
+              </p>
+            </div>
+          </div>
+          <div class="tm_invoice_head tm_mb10">
+            <div class="tm_invoice_left">
+              <p class="tm_mb2">
+                <b class="tm_primary_color">
+                  {% trans "Invoice To:" %}
+                </b>
+              </p>
+              <p>
+                {{ invoice.customer_name }} <br>
+                {% if customer_email %}
+                  {{ customer_email|default:'' }}
+                {% else %}
+                  {{ customer_phone|default:'' }}
+                {% endif %}
+              </p>
+            </div>
+            <div class="tm_invoice_right tm_text_right">
+
+            </div>
+          </div>
+
+          <!-- Items Section -->
+          <div class="tm_table tm_style1 tm_mb30">
+            <div class="tm_round_border">
+              <div class="tm_table_responsive">
+                <table>
+                  <thead>
+                    <tr>
+                      <th class="tm_width_1 tm_semi_bold tm_primary_color tm_gray_bg">{% trans "Item" %}</th>
+                      <th class="tm_width_12 tm_semi_bold tm_primary_color tm_gray_bg">{% trans "Description" %}</th>
+                      <th class="tm_width_1 tm_semi_bold tm_primary_color tm_gray_bg">
+                        {% trans "Qty" %}
+                      </th>
+                      {% for column in invoice.columns.all %}
+                        <th class="tm_width_2 tm_semi_bold tm_primary_color tm_gray_bg">
+                          {{ column }}
+                        </th>
+                      {% endfor %}
+                      <th class="tm_width_2 tm_semi_bold tm_primary_color tm_gray_bg">
+                        {% trans "Price" %}
+                      </th>
+
+                      <th class="tm_width_2 tm_semi_bold tm_primary_color tm_gray_bg tm_text_right">
+                        {% trans "Total" %}
+                      </th>
+
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {% for item in invoice.items.all %}
+                    <tr>
+                      <td class="tm_width_3">{{ forloop.counter }}. </td>
+                      <td class="tm_width_4">{{ item.description }}</td>
+                      <td class="tm_width_1">
+                        {% if item.quantity %}
+                          {{ item.quantity }}
+                        {% else %}
+                        -
+                        {% endif %}
+                        {{ item.measurement|default:'' }}
+                      </td>
+                      {% for column in invoice.columns.all %}
+                      <td class="tm_width_2">
+                        {% if column.item == item %}
+                          {{ column.value }}
+                        {% else %}
+                          -
+                        {% endif %}
+                      </td>
+                      {% endfor %}
+                      <td class="tm_width_2">
+                        {{ item.unit_price|intcomma }} {{ invoice.currency  }}
+                      </td>
+                      <td class="tm_width_2 tm_text_right">
+                        {{ item.total_price|intcomma }} {{ invoice.currency }}
+                      </td>
+                    </tr>
+                    {% endfor %}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- Payment and Totals -->
+          <div class="tm_invoice_footer">
+            <div class="tm_left_footer">
+              <p class="tm_mb2">
+                <b class="tm_primary_color">
+                  {% trans "Payment info:" %}
+                </b>
+              </p>
+              <p class="tm_m0">{{ status }}</p>
+              {% if invoice.signature %}
+              <img src="{{ invoice.signature.url }}" style="max-width: 20%;" alt="Sign">
+              {% else %}
+              <img src="{% static 'assets/img/default_signature.png' %}" alt="Sign">
+              {% endif %}
+            </div>
+            <div class="tm_right_footer">
+              <table>
+                <tbody>
+                  <tr>
+                    <td class="tm_width_3 tm_primary_color tm_border_none tm_bold">
+                      {% trans "Subtotal" %}
+                    </td>
+                    <td class="tm_width_3 tm_primary_color tm_text_right tm_border_none tm_bold">
+                      {{ invoice.expense.subtotal|intcomma }}
+                      {{ invoice.currency }}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="tm_width_3 tm_primary_color tm_border_none tm_pt0">
+                      {% trans "Tax" %} ({{ invoice.expense.tax_percentage }}%)
+                    </td>
+                    <td class="tm_width_3 tm_primary_color tm_text_right tm_border_none tm_pt0">
+                      {{ invoice.expense.tax_amount }}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="tm_width_3 tm_primary_color tm_border_none tm_pt0">
+                      {% trans "Discount" %} ({{ invoice.expense.discount_percentage }}%)
+                    </td>
+                    <td class="tm_width_3 tm_primary_color tm_text_right tm_border_none tm_pt0">
+                      - {{ invoice.expense.discount_amount }}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="tm_width_3 tm_primary_color tm_border_none tm_pt0">
+                      {% trans "Concession" %}
+                      ({{ invoice.expense.concession_percentage }}%)</td>
+                    <td class="tm_width_3 tm_primary_color tm_text_right tm_border_none tm_pt0">
+                      -{{ invoice.expense.concession_amount }}
+                    </td>
+                  </tr>
+                  <tr class="tm_border_top tm_border_bottom">
+                    <td class="tm_width_3 tm_border_top_0 tm_bold tm_f16 tm_primary_color">
+                      {% trans "Grand Total" %}
+                    </td>
+                    <td class="tm_width_3 tm_border_top_0 tm_bold tm_f16 tm_primary_color tm_text_right">
+                      {{ invoice.expense.total_amount|intcomma }} {{ invoice.currency}}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          {% for field in additional_fields %}
+          <div class="tm_padd_15_20 tm_round_border tm_mb15">
+            <div class="tm_note_section">
+              <p class="tm_mb5"><b class="tm_primary_color">{{ field.label }}:</b></p>
+              <ul class="tm_m0 tm_note_list">
+                {% for sentence in field.content|split_by_period %}
+                <li>{{ sentence }}</li>
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="tm_invoice_btns tm_hide_print">
+        <a href="javascript:window.print()" class="tm_invoice_btn tm_color1">
+          <span class="tm_btn_icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+              <path
+                d="M384 368h24a40.12 40.12 0 0040-40V168a40.12 40.12 0 00-40-40H104a40.12 40.12 0 00-40 40v160a40.12 40.12 0 0040 40h24"
+                fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32" />
+              <rect x="128" y="240" width="256" height="208" rx="24.32" ry="24.32" fill="none" stroke="currentColor"
+                stroke-linejoin="round" stroke-width="32" />
+              <path d="M384 128v-24a40.12 40.12 0 00-40-40H168a40.12 40.12 0 00-40 40v24" fill="none"
+                stroke="currentColor" stroke-linejoin="round" stroke-width="32" />
+              <circle cx="392" cy="184" r="24" fill="currentColor" /></svg>
+          </span>
+          <span class="tm_btn_text">Print</span>
+        </a>
+      </div>
+    </div>
+  </div>
+  <script src="{% static 'assets/js/jquery.min.js' %}"></script>
+  <script src="{% static 'assets/js/jspdf.min.js' %}"></script>
+  <script src="{% static 'assets/js/html2canvas.min.js' %}"></script>
+  <script src="{% static 'assets/js/main.js' %}"></script>
+</body>
+
+</html>
