@@ -1,0 +1,12 @@
+LICENSE
+README.md
+README.rst
+pyproject.toml
+royalflush/__init__.py
+royalflush.egg-info/PKG-INFO
+royalflush.egg-info/SOURCES.txt
+royalflush.egg-info/dependency_links.txt
+royalflush.egg-info/entry_points.txt
+royalflush.egg-info/requires.txt
+royalflush.egg-info/top_level.txt
+tests/test_main_script.py
