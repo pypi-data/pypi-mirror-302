@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+Slicer_Utils/slicerutil.egg-info/PKG-INFO
+Slicer_Utils/slicerutil.egg-info/SOURCES.txt
+Slicer_Utils/slicerutil.egg-info/dependency_links.txt
+Slicer_Utils/slicerutil.egg-info/requires.txt
+Slicer_Utils/slicerutil.egg-info/top_level.txt
