@@ -1,0 +1,15 @@
+README.md
+setup.py
+ai_doc_assistant/__init__.py
+ai_doc_assistant/code_analyzer.py
+ai_doc_assistant/doc_generator.py
+ai_doc_assistant/documentation_generator.py
+ai_doc_assistant/model_training.py
+ai_doc_assistant/summary_generator.py
+ai_doc_assistant/your_code.py
+ai_doc_assistant.egg-info/PKG-INFO
+ai_doc_assistant.egg-info/SOURCES.txt
+ai_doc_assistant.egg-info/dependency_links.txt
+ai_doc_assistant.egg-info/requires.txt
+ai_doc_assistant.egg-info/top_level.txt
+tests/test_ai_doc_assistant.py
