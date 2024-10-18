@@ -1,0 +1,10 @@
+wcgw/__init__.py,sha256=okSsOWpTKDjEQzgOin3Kdpx4Mc3MFX1RunjopHQSIWE,62
+wcgw/__main__.py,sha256=MjJnFwfYzA1rW47xuSP1EVsi53DTHeEGqESkQwsELFQ,34
+wcgw/basic.py,sha256=o_iyg3Rmqz08LTWzgO7JIA0u_5l6GGaXyJe0zw73v8w,15085
+wcgw/common.py,sha256=gHiP1RVHkvp10jPc1Xzg5DtUqhGbgQ7pTJK7OvUXfZQ,1764
+wcgw/openai_utils.py,sha256=YNwCsA-Wqq7jWrxP0rfQmBTb1dI0s7dWXzQqyTzOZT4,2629
+wcgw/tools.py,sha256=ozJtcuOlMrdGoDmSv4UpolnStdY7Xz8Z7JyrRllKA7s,17088
+wcgw-0.0.8.dist-info/METADATA,sha256=XebadIrzit30OJD3F1e1llsu2z_0B_9x8lI6T-R3Q8I,2028
+wcgw-0.0.8.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+wcgw-0.0.8.dist-info/entry_points.txt,sha256=T-IH7w6Vc650hr8xksC8kJfbJR4uwN8HDudejwDwrNM,59
+wcgw-0.0.8.dist-info/RECORD,,
