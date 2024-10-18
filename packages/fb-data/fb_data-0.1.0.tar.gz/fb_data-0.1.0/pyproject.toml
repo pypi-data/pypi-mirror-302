@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "fb-data"
+version = "0.1.0"
+description = "Python package with helper functions for the Data team."
+authors = ["markostefanovic1 <marko.stefanovic@fishingbooker.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "fb_data"}]
+
+[tool.poetry.dependencies]
+python = ">=3.9, <4.0"
+snowflake-connector-python = ">=3.7.0, <4.0"
+snowflake-sqlalchemy = ">=1.4.7, <2.0"
+SQLAlchemy = ">=1.4.32, <2.0"
+pandas = ">=1.3.0, <3.0"
+google-api-python-client = ">=2.0, <3.0"
+google-auth= ">=2.0, <3.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

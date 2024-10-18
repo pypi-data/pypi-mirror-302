@@ -1,0 +1,67 @@
+Metadata-Version: 2.1
+Name: fb-data
+Version: 0.1.0
+Summary: Python package with helper functions for the Data team.
+License: MIT
+Author: markostefanovic1
+Author-email: marko.stefanovic@fishingbooker.com
+Requires-Python: >=3.9,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: SQLAlchemy (>=1.4.32,<2.0)
+Requires-Dist: google-api-python-client (>=2.0,<3.0)
+Requires-Dist: google-auth (>=2.0,<3.0)
+Requires-Dist: pandas (>=1.3.0,<3.0)
+Requires-Dist: snowflake-connector-python (>=3.7.0,<4.0)
+Requires-Dist: snowflake-sqlalchemy (>=1.4.7,<2.0)
+Description-Content-Type: text/markdown
+
+# fb_data
+
+A Python package for working with Snowflake data.
+
+## Installation
+
+You can install this package using pip:
+
+```
+pip install git+https://github.com/yourusername/fb_data.git
+```
+
+## Usage
+
+```python
+from fb_data import Snowflake
+
+# Initialize Snowflake connection
+sf = Snowflake(
+    user="your_username",
+    password="your_password",
+    account='your_account',
+    warehouse='your_warehouse',
+    database='your_database',
+    schema='your_schema',
+    role='your_role'
+)
+
+# Execute a query
+result = sf.execute_query("SELECT * FROM your_table LIMIT 10")
+
+# Execute a query and get results as a DataFrame
+df = sf.execute_query_to_dataframe("SELECT * FROM your_table LIMIT 10")
+
+# Write a DataFrame to Snowflake
+import pandas as pd
+df = pd.DataFrame(...)  # Your data here
+sf.write_dataframe_to_table(df, 'your_table', if_exists='replace')
+
+# Close the connection
+sf.close()
+```
+
+## Contributing
+
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
