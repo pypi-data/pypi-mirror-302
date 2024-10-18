@@ -1,0 +1,79 @@
+[tool.poetry]
+name = "awesom"
+version = "0.1.6"
+description = "Self-organizing map framework for Python"
+authors = ["Michael Blaß <mblass@posteo.net>"]
+license = "BSD-3-Clause"
+readme = "README.md"
+homepage = "https://github.com/Teagum/awesom"
+classifiers = [
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Topic :: Education",
+    "Topic :: Scientific/Engineering",
+    "Typing :: Typed",
+    "License :: OSI Approved :: BSD License",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Education",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Information Technology"
+]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+numpy = "^2.0.0"
+scipy = "^1.14.0"
+matplotlib = "^3.6.1"
+tox = "^4.9.0"
+
+[tool.poetry.group.development]
+optional = true
+
+[tool.poetry.group.development.dependencies]
+mypy = "^1.10"
+pylint = "^3.2.3"
+hypothesis = "^6.82.3"
+pytest = "^7.4.0"
+coverage = "^7.3.0"
+
+[tool.poetry.group.notebook]
+optional = true
+
+[tool.poetry.group.notebook.dependencies]
+ipykernel = "^6.19.4"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.mypy]
+plugins = "numpy.typing.mypy_plugin"
+
+[[tool.mypy.overrides]]
+module = "scipy.*"
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = "matplotlib.*"
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = "mpl_toolkits.*"
+ignore_missing_imports = true
+
+[tool.pylint.basic]
+good-names = ["i", "j", "k", "n", "t", "x", "y", "_", "ax", "dx", "dy", "dw", "ix", "iy"]
+
+[tool.pylint.typecheck]
+ignored-argument-names = "_.*|data"
+
+[tool.pylint.design]
+max-locals = 20
+
+[tool.pytest.ini_options]
+testpaths = "tests"
