@@ -1,0 +1,2 @@
+[console_scripts]
+pinhook = pinhook.cli:cli
