@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: protobuf-relocate
+Version: 0.1.dev1
+Summary: Relocate the *_pb2.py files to correct package.
+Author-Email: Jiangge Zhang <tonyseek@gmail.com>
+License: MIT
+Classifier: Development Status :: 1 - Planning
+Classifier: Environment :: Console
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Requires-Dist: click>=8.1.7
+Description-Content-Type: text/markdown
+
+# protobuf-relocate
+
+Relocate `*_pb2.py`, `*_pb2.pyi` and `*_pb2_grpc.py` to correct package.
