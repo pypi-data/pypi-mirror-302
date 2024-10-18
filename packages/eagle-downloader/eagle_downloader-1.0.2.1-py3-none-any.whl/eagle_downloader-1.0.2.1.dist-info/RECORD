@@ -1,0 +1,10 @@
+eagle_downloader/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+eagle_downloader/main.py,sha256=E3ByBuXtlW36Kof5D2-7j7xy8IsRmHeR6P1Vet45xxY,17172
+eagle_downloader/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+eagle_downloader/tests/main.py,sha256=CW0hgGEQjGp50vxPA4r83XNtgJ8MqQLGkcN8r41nTF8,19437
+eagle_downloader-1.0.2.1.dist-info/LICENSE,sha256=wzKESv6EX1QsdxU5eS5G0vbWWr6WrVQYMJIpfLhy-ps,1071
+eagle_downloader-1.0.2.1.dist-info/METADATA,sha256=ArJ3mmEx2ymjY5EGB1QQeoCTZCYYDFp6WMbhK8w7ZFo,11386
+eagle_downloader-1.0.2.1.dist-info/WHEEL,sha256=eOLhNAGa2EW3wWl_TU484h7q1UNgy0JXjjoqKoxAAQc,92
+eagle_downloader-1.0.2.1.dist-info/entry_points.txt,sha256=V5HN9IrjsBVG_p-4pju-fEzbokUzb6nFRZS2gujlqaU,53
+eagle_downloader-1.0.2.1.dist-info/top_level.txt,sha256=Wee1x2MCAvqdY04J0tsv3dg4EVG8-3KuigJ_CORl520,17
+eagle_downloader-1.0.2.1.dist-info/RECORD,,
