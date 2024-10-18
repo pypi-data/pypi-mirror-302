@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: pypriority
+Version: 0.0.0rc0
+Summary: You gotta wait for it
+Home-page: https://github.com/pavanreddy-ml/pypriority
+Author: Pavan Reddy
+Author-email: preddy.osdev@gmail.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pytest
+Requires-Dist: pytest-cov
+Requires-Dist: flake8
+Requires-Dist: mypy
+Requires-Dist: Sphinx
+Provides-Extra: testing
+Requires-Dist: pytest; extra == "testing"
+Requires-Dist: pytest-cov; extra == "testing"
+
