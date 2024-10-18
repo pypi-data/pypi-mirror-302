@@ -1,0 +1,10 @@
+continuedfractions-0.17.7.dist-info/METADATA,sha256=siTZbmtnsFvDhMAADlHxwBilhQfEYstzxn0QMy5m6Ls,24991
+continuedfractions-0.17.7.dist-info/WHEEL,sha256=pM0IBB6ZwH3nkEPhtcp50KvKNX-07jYtnb1g1m6Z4Co,90
+continuedfractions-0.17.7.dist-info/entry_points.txt,sha256=6OYgBcLyFCUgeqLgnvMyOJxPCWzgy7se4rLPKtNonMs,34
+continuedfractions-0.17.7.dist-info/licenses/LICENSE,sha256=HyVuytGSiAUQ6ErWBHTqt1iSGHhLmlC8fO7jTCuR8dU,16725
+continuedfractions/continuedfraction.py,sha256=7v1VbuH4aHjYYgk016HRLFWoAS3Mu3gWeCuW4wT3Mgg,45538
+continuedfractions/lib.py,sha256=Zgd7gLf7BQRbEQ9NF43i06LXL86H-l8EVc-QGqlERTU,27770
+continuedfractions/sequences.py,sha256=0BayHZK7UgBbfozzm7fuiBMIUVbRxEwFz0aRrqilUAM,39540
+continuedfractions/utils.py,sha256=YRAl0badpdPtVuyYoGaWsw0Yifh2d3CQLVJxmQlbo_Q,2077
+continuedfractions/version.py,sha256=_9A_jQb7KUl9K8At8l-nfzMi9odK4IQSyRft9V3xoYs,23
+continuedfractions-0.17.7.dist-info/RECORD,,
