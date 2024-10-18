@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: midplot
+Version: 0.0.2
+Summary: Plotting margingales
+Home-page: https://github.com/microprediction/midplot
+Author: microprediction
+Author-email: peter.cotton@microprediction.com
+License: MIT
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: pytest
+
+# midplot
