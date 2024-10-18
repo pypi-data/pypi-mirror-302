@@ -1,0 +1,50 @@
+Metadata-Version: 2.1
+Name: outputs
+Version: 1.12
+Summary: This is a Python library designed to extend CLI printing functionalities, primarily focusing on logging features similar to logging, but also exploring other directions. Additionally, it supports a high-fidelity style akin to PinkShell.
+Author-email: Pinpe <813233375@qq.com>
+Project-URL: blog-url, https://pinpe.top
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Environment :: Console
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: POSIX :: Linux
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: conkits
+
+# Output模块
+
+**项目名称**：outputs
+
+**作者**：Pinpe（[https://pinpe.top](https://pinpe.top)）
+
+**编码**：UTF-8
+
+**许可证**：MIT License
+
+**依赖库**：`conkits`（可选）
+
+**版本**：1.12（2024年10月17日更新）
+
+**介绍：**
+这是一个用于扩展CLI打印功能的Python库，主要发展方向是类似`logging`的日志记录功能，但也发展其它方向，而且还支持PinkShell的高仿样式。
+
+**优点：**
+- 简单易学，也支持一些自定义。
+- 功能多合一，支持日志输出、加载文字、颜色类、光标控制等功能。
+- 配置简单，无需改变项目结构。
+- 极度轻量，只有一个文件，只需要两个标准库和一个可选的第三方库。
+- 完全开源，绝无后门。
+- 完备的错误捕获、类型检查、文档字符串。
+
+**快速开始：**
+1. 在终端输入此命令以安装：`pip install outputs`
+2. 在你的程序里导入此库：`from outputs import *`
+
+**更新内容：**
+- 新增更多emoji映射。
+- 新增更多GUI窗口。
+- 修改了README文档和配置文件。

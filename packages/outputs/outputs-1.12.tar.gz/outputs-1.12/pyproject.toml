@@ -1,0 +1,23 @@
+[project]
+name = "outputs"
+version = "1.12"
+description = "This is a Python library designed to extend CLI printing functionalities, primarily focusing on logging features similar to logging, but also exploring other directions. Additionally, it supports a high-fidelity style akin to PinkShell."
+dependencies = ["conkits"]
+authors = [{ name = "Pinpe", email = "813233375@qq.com"}]
+readme = "README.md"
+requires-python = ">=3.6"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Environment :: Console",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: MacOS",
+    "Operating System :: POSIX :: Linux",
+]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project.urls]
+"blog-url" = "https://pinpe.top"
