@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: yt-dlp-transript
+Version: 0.1.5
+Summary: Handy yt-dlp wrapper to download Youtube videos transcripts
+Author-email: Alexander Ryabov <alex.ryabov@gmail.com>
+Project-URL: Homepage, https://github.com/haron/yt-dlp-transript
+Project-URL: Issues, https://github.com/haron/yt-dlp-transript/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+Requires-Dist: yt-dlp
+Requires-Dist: ConfigArgParse
+Requires-Dist: srt
+
+# yt-dlp-transript
+
+A handy wrapper for yt-dlp to download transcripts for YouTube videos.
+
+## Usage
+
+    uvx yt-dlp-transript.py https://www.youtube.com/watch?v=dQw4w9WgXcQ
+
+Options:
+
+    > ./yt-dlp-transript.py -h
+    usage: yt-dlp-transript.py [-h] [-l LANGUAGE] [-v] url
+
+    positional arguments:
+      url
+
+    options:
+      -h, --help            show this help message and exit
+      -l LANGUAGE, --language LANGUAGE
+                            subtitles language (default: en)
+      -v, --verbose         verbose mode (default: False)
+
+## Requirements
+
+`uv` installed ([docs](https://docs.astral.sh/uv/#getting-started)).
