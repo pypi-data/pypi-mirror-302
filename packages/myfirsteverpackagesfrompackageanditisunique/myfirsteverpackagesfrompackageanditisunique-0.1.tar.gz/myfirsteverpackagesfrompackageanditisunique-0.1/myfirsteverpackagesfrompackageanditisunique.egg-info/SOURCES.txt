@@ -1,0 +1,8 @@
+README.md
+setup.py
+myfirsteverpackagesfrompackageanditisunique/myfirstmodule.py
+myfirsteverpackagesfrompackageanditisunique/setup.py
+myfirsteverpackagesfrompackageanditisunique.egg-info/PKG-INFO
+myfirsteverpackagesfrompackageanditisunique.egg-info/SOURCES.txt
+myfirsteverpackagesfrompackageanditisunique.egg-info/dependency_links.txt
+myfirsteverpackagesfrompackageanditisunique.egg-info/top_level.txt
