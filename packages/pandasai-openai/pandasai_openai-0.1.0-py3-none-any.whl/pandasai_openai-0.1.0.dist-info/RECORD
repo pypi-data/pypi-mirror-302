@@ -1,0 +1,7 @@
+pandasai_openai/__init__.py,sha256=5LMyOk5Wi3OEnwXRhK5N0PV7kAXbIrXUYjxEs5G5FY4,102
+pandasai_openai/azure_openai.py,sha256=mEyVZjIX6tB4aiyQH4WVr8JNFh0f8m5aCxC_To1LGYQ,5690
+pandasai_openai/base.py,sha256=FEyR0MQOf5GJi0c4C8aFvv6sk1hWUbvaks3B9XDKU60,5362
+pandasai_openai/openai.py,sha256=tskjtUT8KrY-vDz37HBQ7sYuygrO7kMLIKH0yuiJ7Mo,3216
+pandasai_openai-0.1.0.dist-info/METADATA,sha256=8DaGRY0w4BsCtpLIlHB6yjuFazRwSZEpOuCUfq4nixA,848
+pandasai_openai-0.1.0.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+pandasai_openai-0.1.0.dist-info/RECORD,,
