@@ -1,0 +1,8 @@
+build
+dist
+
+qiplot.egg-info/
+*__pycache__*
+*bak*
+*bak*
+testdata
