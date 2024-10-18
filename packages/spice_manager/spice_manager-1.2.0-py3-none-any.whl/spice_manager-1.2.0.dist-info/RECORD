@@ -1,0 +1,7 @@
+spice_manager/__init__.py,sha256=vfy2-mQ466H0VClEi-iPEipnjo8nJKHiplGTX8W8McM,41
+spice_manager/constants.py,sha256=rPsTEdYdD4JKIwIMPlFOwXSRO2jCfWNoCWQrI-vE4W8,425
+spice_manager/spicemanager.py,sha256=tkg8Zsi08a3EAGV5tzmBlcZZtJq9cvfVlZ4JkC7Bil4,10060
+spice_manager-1.2.0.dist-info/LICENSE,sha256=TqI0k3vHsKpSR-Q2aQ0euTJIdbx1kOzeUL79OONRkKU,21778
+spice_manager-1.2.0.dist-info/METADATA,sha256=RGyc61QfR9Qq0ZMKG2z6grVF61sjFnApZSYonQ4nbTw,1113
+spice_manager-1.2.0.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+spice_manager-1.2.0.dist-info/RECORD,,
