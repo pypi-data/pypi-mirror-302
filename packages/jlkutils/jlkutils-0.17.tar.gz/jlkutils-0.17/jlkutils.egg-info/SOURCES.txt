@@ -1,0 +1,8 @@
+setup.py
+eezrizzjkramerjlk/__init__.py
+eezrizzjkramerjlk/hello.py
+jlkutils.egg-info/PKG-INFO
+jlkutils.egg-info/SOURCES.txt
+jlkutils.egg-info/dependency_links.txt
+jlkutils.egg-info/requires.txt
+jlkutils.egg-info/top_level.txt
