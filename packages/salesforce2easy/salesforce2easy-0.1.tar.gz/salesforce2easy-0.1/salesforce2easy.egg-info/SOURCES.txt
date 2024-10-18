@@ -1,0 +1,9 @@
+README.md
+setup.py
+salesforce2easy.egg-info/PKG-INFO
+salesforce2easy.egg-info/SOURCES.txt
+salesforce2easy.egg-info/dependency_links.txt
+salesforce2easy.egg-info/requires.txt
+salesforce2easy.egg-info/top_level.txt
+sf2easy/__init__.py
+sf2easy/sf2easy.py
