@@ -1,0 +1,13 @@
+mlcvzoo_mmocr/__init__.py,sha256=g0VbCgSEgsnKywb_381mrQQjBQ4mVBf3ll44SX7qE8g,305
+mlcvzoo_mmocr/configuration.py,sha256=wbLV7wOroxHZwXL3SjbzYlABhmyMEycbhIRTPOmUQhA,4336
+mlcvzoo_mmocr/mlcvzoo_mmocr_dataset.py,sha256=bBVDgT2cNYmnvC5ymzhon2JF_a9QrvwWyXiz8FFUcnE,5831
+mlcvzoo_mmocr/model.py,sha256=2XgOe_qmaZ_dUXHf_xaEhecwdA6FLNCDeF_8YflBbXY,10993
+mlcvzoo_mmocr/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mlcvzoo_mmocr/structs.py,sha256=X-JXPqNOlI_EBz7p-VWmlayjw5L8RH9ix4GBvGYN8iY,421
+mlcvzoo_mmocr/text_detection_model.py,sha256=gdFaRMb53aKEjxLQCRe-cKBH0dKfBGJtqHaTOSU_qI8,3908
+mlcvzoo_mmocr/text_recognition_model.py,sha256=J0FjuEjMJYkT8_pDAd8ZepIOE23XVeVv1nMLhmf0O6k,3278
+mlcvzoo_mmocr-6.3.0.dist-info/LICENSE,sha256=5n7x8h2jvQ38agEyj2nda3Jw3zg18B1BKF5WPiU4rJ0,11412
+mlcvzoo_mmocr-6.3.0.dist-info/METADATA,sha256=_5heB7SoepsP_fUv1jUSNhrZrOKblrvPo8BDBZa1f1c,4042
+mlcvzoo_mmocr-6.3.0.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+mlcvzoo_mmocr-6.3.0.dist-info/top_level.txt,sha256=KA9oGCrrH_1xAWLeIWJCKScXtzzyj2df9xv-xyMf1iw,14
+mlcvzoo_mmocr-6.3.0.dist-info/RECORD,,
