@@ -1,0 +1,10 @@
+fx_python_sdk_cli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fx_python_sdk_cli/cli.py,sha256=9lcHqEiS08UPhdhjmJW7SePuscUQNPbu8go6CH6_gfg,3017
+fx_python_sdk_cli/consumer.py,sha256=qQnlTF-8m1to9nJOZKR_AOrMt-gbaqCr_HKxLpzuN6w,5248
+fx_python_sdk_cli/provider.py,sha256=WktA9fZOV8zZHbVw1ykjHB9o43_6gbitcvwzc3oq-W8,6884
+fx_python_sdk_cli/utils.py,sha256=xelOTYenTnBGOpNoYE_lkrI6wr0TLTWbfIG0JWMGEyk,19532
+fx_python_sdk_cli-0.1.1.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+fx_python_sdk_cli-0.1.1.dist-info/METADATA,sha256=Sv-W9RwYKBkQuNpIIHA7nKhPEeWyGo_9FTewO33gW0c,1016
+fx_python_sdk_cli-0.1.1.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+fx_python_sdk_cli-0.1.1.dist-info/top_level.txt,sha256=hR1Fr6aKOEkmD5M_CuB_oham2j2DaW374z80g0jlt84,18
+fx_python_sdk_cli-0.1.1.dist-info/RECORD,,
