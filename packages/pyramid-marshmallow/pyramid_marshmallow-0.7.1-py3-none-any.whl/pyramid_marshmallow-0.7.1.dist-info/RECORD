@@ -1,0 +1,10 @@
+pyramid_marshmallow/__init__.py,sha256=UA3VRcVDd03wye2japwt2ARfseCECQeB_otNmgosalY,2107
+pyramid_marshmallow/openapi/__init__.py,sha256=JXYZr_hm_gTRP4bbggJAm2l3AxnqM6WG--iLAI97Nh8,3357
+pyramid_marshmallow/openapi/generate.py,sha256=aAe_MNzGzt6L1rSOU8flklY9p9DnOdMZconRnM8Ld7E,2026
+pyramid_marshmallow/openapi/serve.py,sha256=yl0bLYYHXy6nOG1ICojp4wXkQfEIQ_CIcqeIsSN0Zzk,2389
+pyramid_marshmallow/openapi/spec.py,sha256=wFAkTY4CaV9MPIiIXCPQ7P3oFCp1Ij6PIbsxPGmba1s,8594
+pyramid_marshmallow-0.7.1.dist-info/METADATA,sha256=jeQPNIukuam1Ze-5ojPZU9pVZx26VHvOWNelyRXWSWU,10332
+pyramid_marshmallow-0.7.1.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+pyramid_marshmallow-0.7.1.dist-info/entry_points.txt,sha256=v-pPlnw6vlnQx-Xw8amU5-TOHlOlRZnMnlNK9_9RTsA,133
+pyramid_marshmallow-0.7.1.dist-info/top_level.txt,sha256=7tnfch6_qC8ZPhkz8qy490vUHQMoWcjtlvY48EBBamg,20
+pyramid_marshmallow-0.7.1.dist-info/RECORD,,
