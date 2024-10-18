@@ -1,0 +1,96 @@
+[build-system]
+requires = [
+  "setuptools", 
+  "wheel"
+]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "GaiaCone"
+dynamic = ["version"]
+dependencies = [
+    "numpy",
+]
+
+description = "A library for GaiaCone."
+readme = "README.md"
+license = {file = "LICENSE"}
+
+authors = [
+  {name = "Matt Lehnert", email = "matthew.lehnert@axleinfo.com"},
+]
+
+maintainers = [
+  {name = "Matt Lehnert", email = "matthew.lehnert@axleinfo.com"},
+]
+
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+] 
+
+requires-python = ">=3.9"
+
+
+
+[project.urls]
+Documentation = "https://gaiacone.readthedocs.io/en/latest/"
+Repository = "https://github.com/PolusAI/CONE"
+
+
+[tool.setuptools.dynamic]
+version = {attr = "gaiacone.__version__"}
+
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+include-package-data = true
+
+
+[tool.setuptools.packages.find]
+where = ["src"]
+namespaces = false
+
+
+[tool.setuptools.package-data]
+"*" = [
+    "VERSION"
+]
+
+
+[tool.bumpversion]
+current_version = "0.0.1"
+commit = true
+tag = true
+commit_args = "--no-verify"
+parse = "(?P<major>\\d+)\\.(?P<minor>\\d+)\\.(?P<patch>\\d+)(\\-(?P<release>[a-z]+)(?P<build>\\d+))?"
+serialize = [
+    "{major}.{minor}.{patch}-{release}{build}",
+    "{major}.{minor}.{patch}"
+]
+
+[tool.bumpversion.parts.release]
+optional_value = "_"
+first_value = "dev"
+values = [
+    "dev",
+    "_"
+]
+
+[[tool.bumpversion.files]]
+filename = "src/gaiacone/VERSION"
+search = "{current_version}"
+replace = "{new_version}"
+
+[[tool.bumpversion.files]]
+filename = "README.md"
+search = "{current_version}"
+replace = "{new_version}"
+
+
+[tool.codespell]
+skip = "*.svg,*.html"
+ignore-words-list = "utput"
