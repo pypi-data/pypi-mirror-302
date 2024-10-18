@@ -1,0 +1,2 @@
+[console_scripts]
+phonon_to_json = phonon_to_json.cli.phonon_to_json_main:main
