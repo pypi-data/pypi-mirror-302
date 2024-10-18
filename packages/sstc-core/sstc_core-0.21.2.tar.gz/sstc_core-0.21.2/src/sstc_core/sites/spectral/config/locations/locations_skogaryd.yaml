@@ -1,0 +1,35 @@
+# Ensure you do not use hyppens "-" better to use `double__underscore`
+
+CEM_FOR:
+  location_id: 'CEM_FOR'
+  description: ''
+  legacy_acronym: 'CEM01-FOR, CEM02-FOR, CEM03-FOR'  
+  is_active: True
+  mantainance_status: active
+  platforms: 
+    PhenoCams:
+      - 'P_CEM01_FOR_1'
+      - 'P_CEM02_FOR_2'
+      - 'P_CEM03_FOR_3'
+ERS_LAK:
+  location_id: 'ERS_LAK'
+  description: ''
+  legacy_acronym: 'ERS-LAK'
+  is_active: True
+  mantainance_status: active
+  platforms: 
+    PhenoCams:
+      - 'P_ERS-LAK_1'
+FOL_WET:
+  location_id: 'FOL_WET'
+  description: ''
+  legacy_acronym: 'FOL-WET'
+  is_active: False
+  mantainance_status: active
+  platforms: 
+    PhenoCams:
+      - 'P_FOL_WET_1'
+      - 'P_FOL_WET_2'
+
+
+
