@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: ttldictionary
+Version: 0.1.0
+Summary: Basic TTL system for Python dictionaries.
+Home-page: https://github.com/notaussie/ttldict
+License: MIT
+Keywords: ttl
+Author: NotAussie
+Author-email: NotAussie@duck.com
+Requires-Python: >=3.10,<4.0
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Project-URL: Repository, https://github.com/notaussie/ttldict
+Description-Content-Type: text/markdown
+
+# TTL-Dictionary
+
+A basic yet useful module made to streamline projects that need a basic TTL system that also is compatible with most serializers.
+
+```python
+ttl_dict = TTLDict()
+ttl_dict.set('a', 1, ttl=5)  # Key 'a' will expire in 5 seconds
+print(ttl_dict.get('a'))  # Output: 1
+time.sleep(6)
+print(ttl_dict.get('a'))  # Output: None (expired)
+
+# Serialize to JSON
+ttl_dict.set('b', 2, ttl=10)
+json_data = json.dumps(ttl_dict)  # Output: {"b": 2}
+```

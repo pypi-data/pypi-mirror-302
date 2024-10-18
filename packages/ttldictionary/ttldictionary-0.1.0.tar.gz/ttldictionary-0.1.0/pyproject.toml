@@ -1,0 +1,31 @@
+[tool.poetry]
+name = "ttldictionary"
+version = "0.1.0"
+description = "Basic TTL system for Python dictionaries."
+authors = ["NotAussie <NotAussie@duck.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [
+    { include = "ttldict" }
+]
+keywords = ["ttl"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers"
+]
+repository = "https://github.com/notaussie/ttldict"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.3"
+
+[tool.pytest.ini_options]
+testpaths = [
+    "tests",
+]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
