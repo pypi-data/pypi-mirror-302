@@ -1,0 +1,2 @@
+[console_scripts]
+nfpm = nfpm.__main__:_main
