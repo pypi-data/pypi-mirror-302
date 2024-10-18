@@ -1,0 +1,16 @@
+chcldemo/ConstructHW.py,sha256=CFVqslgWDywjIxpXrWyboSRmg0SzqUk6cCN_EfFSC9Y,498
+chcldemo/DataProcess.py,sha256=xkt9OHQrS62_MMVMuazYsKTrmWj8aL-Co1kdOWTYAIM,8821
+chcldemo/DataSet.py,sha256=cjIPj9UKZOSO-LTOfdUee5qGdkSoCopxO8U1ey1aKyI,1336
+chcldemo/HypergraphConstructKNN.py,sha256=_JfX55zWXrBsbZeq5PVQQAGEJxLZB727x4S4G99DG00,3606
+chcldemo/HypergraphConstructKmeans.py,sha256=pH5uncd2huwJX_v9qtbT2nql4tjh4DxHWYhRJ82vrFA,2485
+chcldemo/Module.py,sha256=Nsc5vhPWPc-i5yiqx6XfFXoyiUdbF1LcG4kVHBe44HA,4615
+chcldemo/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+chcldemo/main.py,sha256=QMdWlgSEKZOF2PLMAWWGD9F37PXqWir8e5Sq_1upf-A,1960
+chcldemo/param.py,sha256=CdFgae_j2DTxYP8-IJNISHWMgJLAGCz-ZLkq-HPOyTw,2924
+chcldemo/trainer.py,sha256=D6pEzdasQ8QscuVrjCag4QIfy7mZW-DjLDlrH3HOsDY,10192
+chcldemo/utils.py,sha256=rtlYLekL63UWYC586J_4G3oDmd6r9kUf9fKATOmHNAA,567
+chcldemo-0.0.3.dist-info/LICENSE,sha256=cpg-IArEZ4nUif5wZDR56pC03B5COIUapwH5oJbDLbs,1067
+chcldemo-0.0.3.dist-info/METADATA,sha256=aB0Pmu7WstKA0TdNnnk_wAiY8jqpIA-MkGNWBX5ZtFY,948
+chcldemo-0.0.3.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+chcldemo-0.0.3.dist-info/top_level.txt,sha256=jKzEI2cVifVRsublYbruwvjXX8u4gySn8eoYY4u2kB4,9
+chcldemo-0.0.3.dist-info/RECORD,,
