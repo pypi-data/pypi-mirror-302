@@ -1,0 +1,2 @@
+[console_scripts]
+journey2md = journey2md.__main__:main
