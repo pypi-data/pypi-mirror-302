@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+__version__.py
+setup.py
+django_client_ip/__init__.py
+django_client_ip/ip.py
+django_client_ip.egg-info/PKG-INFO
+django_client_ip.egg-info/SOURCES.txt
+django_client_ip.egg-info/dependency_links.txt
+django_client_ip.egg-info/requires.txt
+django_client_ip.egg-info/top_level.txt
