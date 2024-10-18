@@ -1,0 +1,7 @@
+requests
+beautifulsoup4
+python-docx
+reportlab
+
+[:platform_system == "Windows"]
+pywin32
