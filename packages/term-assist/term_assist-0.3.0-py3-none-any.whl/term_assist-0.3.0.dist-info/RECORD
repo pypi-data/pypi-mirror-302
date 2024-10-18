@@ -1,0 +1,14 @@
+term_assist/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+term_assist/main.py,sha256=mIRDgOy816Aa5lldewGlgevXqElZhjWWed5uvCZUszs,3697
+term_assist/data/config_default.yaml,sha256=xTSAppdvX0WZ7RkHkEvDoBVFD4SCRnliRwZN_rTc8Fw,361
+term_assist/data/models.yaml,sha256=RPtAsW6IAnFzkBP3mbUi-IcuVSE3hweHte5HhfGk5Fo,450
+term_assist/models/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+term_assist/models/anthropic_model.py,sha256=AveGXY6kXiUOpgvT4_aP3e-1Jor_6oPOACDIVmeLO6w,733
+term_assist/models/model.py,sha256=0Mquxl0x9MseyIC9buZR6IaXOU5rK33En9jeTZtysUE,317
+term_assist/models/openai_model.py,sha256=prYWWN5odStdaHUSddK3NBRcDf70ny6Fy38FRymMIEA,899
+term_assist-0.3.0.dist-info/COPYING,sha256=DZak_2itbUtvHzD3E7GNUYSRK6jdOJ-GqncQ2weavLA,34523
+term_assist-0.3.0.dist-info/METADATA,sha256=oxSs4wDMNQVvB6z0f1zeIz3HYxEmU-0HJGiITkLHzys,43474
+term_assist-0.3.0.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+term_assist-0.3.0.dist-info/entry_points.txt,sha256=5gPV6Oj0yLT3X1q1WY82X-sZ9e_Qc-yMx-qaQz0uy1w,45
+term_assist-0.3.0.dist-info/top_level.txt,sha256=qmT4xp-7v4VDAHvstJDnxZoTsA1j4R7ZbdLZRIEDRo8,12
+term_assist-0.3.0.dist-info/RECORD,,
