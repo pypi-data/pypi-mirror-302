@@ -1,0 +1,7 @@
+taskiq_psqlpy/__init__.py,sha256=GYTLZhS88fe7GCiI8qLxOf0E_V60-9ADNypr94vgeuk,103
+taskiq_psqlpy/exceptions.py,sha256=e_s_1mZ7slkv53pw5OwJk_SZLglRdbFr3fzp8g8JzQI,212
+taskiq_psqlpy/queries.py,sha256=OE0Vat3wzGRQYS1eRySC9rE3Bqos7P_iRuAZsMxG_jI,492
+taskiq_psqlpy/result_backend.py,sha256=Zgn76unRR8XRjT-19hU20ncR4pfRJk8PGnrYARJSFvo,4727
+taskiq_psqlpy-0.1.3.dist-info/METADATA,sha256=ENzsL4Px2D-zJHhLbAtXw8-Wp9LhenA-Vg8ApD403W0,2737
+taskiq_psqlpy-0.1.3.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+taskiq_psqlpy-0.1.3.dist-info/RECORD,,
