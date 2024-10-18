@@ -1,0 +1,7 @@
+starlette_cramjam/__init__.py,sha256=MfKHmrK3yuQ9IGOcprJRHF3mkqwBQbfJL30XLjMsn-g,48
+starlette_cramjam/compression.py,sha256=rBRx5tnGj8Okqo06uAss5qLxZsByKiBloV54ijNdUgY,610
+starlette_cramjam/middleware.py,sha256=7K2lbOgx0aUlKhjueatkJw4MH-UYm4O6Pbv49LYgHHo,8147
+starlette_cramjam-0.4.0.dist-info/LICENSE,sha256=Ttu8yPoLeat9h4UYKdnHxN45HDPVKqRa6Zs6j0WUSTQ,1073
+starlette_cramjam-0.4.0.dist-info/WHEEL,sha256=EZbGkh7Ie4PoZfRQ8I0ZuP9VklN_TvcZ6DSE5Uar4z4,81
+starlette_cramjam-0.4.0.dist-info/METADATA,sha256=hf1mcLZMUZpy8Ki9phsgTFALdIrOv_B4E8fjZTKe3gg,7671
+starlette_cramjam-0.4.0.dist-info/RECORD,,
