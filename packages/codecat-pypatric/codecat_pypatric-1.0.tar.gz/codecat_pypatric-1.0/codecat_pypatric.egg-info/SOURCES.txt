@@ -1,0 +1,12 @@
+README.md
+setup.py
+codecat_pypatric/classes.py
+codecat_pypatric/deck_tools.py
+codecat_pypatric/electric.py
+codecat_pypatric/keys.py
+codecat_pypatric/magnetic.py
+codecat_pypatric/units.py
+codecat_pypatric.egg-info/PKG-INFO
+codecat_pypatric.egg-info/SOURCES.txt
+codecat_pypatric.egg-info/dependency_links.txt
+codecat_pypatric.egg-info/top_level.txt
