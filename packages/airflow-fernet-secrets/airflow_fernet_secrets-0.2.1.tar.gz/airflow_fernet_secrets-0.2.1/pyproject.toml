@@ -1,0 +1,106 @@
+[project]
+name = "airflow-fernet-secrets"
+dynamic = ["version"]
+description = "airflow filesystem secret backend using fernet"
+authors = [{ name = "phi", email = "phi.friday@gmail.com" }]
+readme = "README.md"
+license = { file = "LICENSE" }
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Framework :: Apache Airflow",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+]
+requires-python = ">=3.8, <3.14"
+dependencies = [
+    "typing-extensions>=4.4.0",
+    "sqlalchemy>=1.4",
+    "filelock>=3.15",
+    "jsonschema",
+    "pyyaml",
+    "cryptography",
+]
+
+[project.optional-dependencies]
+test = [
+    # support pep440
+    "apache-airflow>=2.9.3; python_version != '3.13'",
+    "pytest>=7",
+    # async
+    "anyio",
+    "uvloop; platform_system != 'Windows'",
+    "psycopg2>=2",
+    "pyodbc>=5.1",
+    "pymssql>=2",
+    "pytest-xdist>=3.5.0",
+]
+asyncio = [
+    "sqlalchemy[asyncio]>=1.4",
+    "aiosqlite",
+]
+
+[project.urls]
+Repository = "https://github.com/phi-friday/airflow-fernet-secrets"
+
+[tool.uv]
+managed = true
+dev-dependencies = [
+    "apache-airflow[odbc,mssql,postgres]==2.10.2; python_version != '3.13'",
+    "ruff==0.6.8",
+    "ipykernel>=6.29.4",
+    "sqlalchemy2-stubs>=0.0.2a38",
+    "pre-commit>=3.5.0",
+    "poethepoet>=0.27.0",
+    "airflow-fernet-secrets[test,asyncio]"
+]
+
+[tool.poe.tasks]
+lint = ["_lint:check", "_lint:format"]
+"_lint:check" = "ruff check src tests --fix"
+"_lint:format" = "ruff format src tests"
+check = "pre-commit run --all-files --show-diff-on-failure"
+
+[tool.poe.tasks.constraint]
+env = { UV_CONSTRAINT = "https://raw.githubusercontent.com/apache/airflow/constraints-${SERVER_AIRFLOW_VERSION}/constraints-no-providers-${SERVER_PYTHON_VERSION}.txt" }
+uses = { SERVER_PYTHON_VERSION = "_python_version", SERVER_AIRFLOW_VERSION = '_airflow_version' }
+sequence = [
+    { cmd = "echo python: $SERVER_PYTHON_VERSION, airflow: $SERVER_AIRFLOW_VERSION" },
+    { cmd = "uv sync --upgrade" }
+]
+
+[tool.poe.tasks."_airflow_version"]
+script = "importlib.metadata:version('apache-airflow')"
+print_result = true
+
+[tool.poe.tasks."_python_version"]
+cmd = "python -c 'import sys; print(f\"{sys.version_info.major}.{sys.version_info.minor}\")'"
+
+[project.entry-points."apache_airflow_provider"]
+provider_info = "airflow_fernet_secrets.info:get_provider_info"
+
+[build-system]
+requires = ["hatchling", "hatch-vcs"]
+build-backend = "hatchling.build"
+
+[tool.hatch.version]
+source = "vcs"
+
+[tool.hatch.build.targets.sdist]
+include = ["src/airflow_fernet_secrets", "src/airflow"]
+exclude = ["src/**/.gitignore"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/airflow_fernet_secrets", "src/airflow"]
+artifacts = ["src/**/.gitignore"]
+
+[tool.pytest.ini_options]
+addopts = "-n 4 -m 'not airflow'"
+testpaths = ["src/tests"]
+markers = [
+    "airflow: mark airflow tests"
+]
