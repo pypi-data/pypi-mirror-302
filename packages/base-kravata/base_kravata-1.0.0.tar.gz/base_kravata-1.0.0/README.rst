@@ -1,0 +1,1 @@
+Este es el proyecto base que contiene conexiones de uso con las APIS, flujo de ORM

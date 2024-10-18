@@ -1,0 +1,14 @@
+__pycache__
+desktop.ini
+env
+**/__pycache__/**
+.env
+*.env
+**/.env
+**/.venv
+**/Secrets
+**/.DS_Store
+*.test
+*.pdf
+*.coverage
+*.toml
