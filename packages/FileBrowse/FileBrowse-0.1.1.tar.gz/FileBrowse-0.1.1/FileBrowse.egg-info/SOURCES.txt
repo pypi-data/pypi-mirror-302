@@ -1,0 +1,9 @@
+LICENSE.txt
+README.md
+setup.py
+FileBrowse.egg-info/PKG-INFO
+FileBrowse.egg-info/SOURCES.txt
+FileBrowse.egg-info/dependency_links.txt
+FileBrowse.egg-info/top_level.txt
+filebrowse/__init__.py
+filebrowse/filebrowse.py
