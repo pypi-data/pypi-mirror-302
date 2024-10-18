@@ -1,0 +1,173 @@
+Metadata-Version: 2.1
+Name: infila-python
+Version: 0.1.3
+Summary: A library for file information and manipulation
+Author: whysisisis
+Author-email: whysisisis@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# infila
+
+**infila** is a Python library designed for file operations. It provides various functions to retrieve information about files, including their size, creation and modification times, type, line count, and encoding.
+
+## Installation
+
+You can install the `infila` library using pip:
+
+```bash
+pip install infila
+```
+
+# What's new in version 0.1.3?
+
+**infila** received the final update for its full release 0.1.3, which includes standard features:
+
+- File size in specified unit via get_size
+- File creation time via get_creation_time
+- File modification time via get_modification_time
+- File type via get_file_type
+- Number of lines in the file via count_lines
+- File encoding via detect_encoding
+- File attributes via get_attributes
+- Previous versions via get_previous_versions (temporarily unavailable)
+- File security via get_security
+- SHA-256 sum via get_sha256
+
+# Manual
+
+### Initialization
+
+To begin, create an instance of `infila` by passing the file path as a parameter:
+
+```python
+file = infila("path/to/your/file")
+```
+
+### Methods
+
+Below are the main methods available in the `infila` class:
+
+
+`get_size(unit='bytes')`
+
+Description: Returns the size of the file in the specified unit.
+Parameters:
+
+- unit (str): Unit for file size. Options include 'bits', 'bytes', 'kilobytes', 'megabytes', 'gigabytes', and 'terabytes'.
+
+Returns: File size in the specified unit.
+Example:
+
+`size_in_kb = file.get_size('kb')`
+
+
+`get_creation_time()`
+
+Description: Retrieves the creation time of the file.
+Returns: Creation time as a formatted string.
+Example:
+
+`creation_time = file.get_creation_time()`
+
+
+`get_modification_time()`
+
+Description: Retrieves the last modification time of the file.
+Returns: Modification time as a formatted string.
+Example:
+
+`modification_time = file.get_modification_time()`
+
+
+`get_file_type()`
+
+Description: Returns the file extension type.
+Returns: File extension as a string.
+Example:
+
+`file_type = file.get_file_type()`
+
+
+`count_lines()`
+
+Description: Counts the number of lines in the file (assumes UTF-8 encoding).
+Returns: Integer count of lines in the file.
+Example:
+
+`line_count = file.count_lines()`
+
+
+`detect_encoding()`
+
+Description: Detects the encoding of the file using the chardet library.
+Returns: Detected file encoding as a string.
+Example:
+
+`encoding = file.detect_encoding()`
+
+
+`get_attributes()`
+
+Description: Retrieves attributes of the file, such as readability, writability, executability, owner ID, and permissions.
+Returns: Dictionary containing file attributes.
+Example:
+
+`attributes = file.get_attributes()`
+
+
+`get_previous_versions()`
+
+Description: Placeholder method to retrieve previous file versions. Currently unsupported.
+Returns: String stating that previous versions are not supported.
+Example:
+
+`previous_versions = file.get_previous_versions()`
+
+
+`check_security()`
+
+Description: A convenience method to check file security attributes.
+Returns: Security-related attributes (similar to get_attributes).
+Example:
+
+`security_attributes = file.check_security()`
+
+
+`get_sha256()`
+
+Description: Calculates and returns the SHA-256 checksum of the file for verification purposes.
+Returns: SHA-256 hash as a hexadecimal string.
+Example:
+
+`file_hash = file.get_sha256()`
+
+
+### Example Usage
+
+```
+file = infila("example.txt")
+
+# Get file size in kilobytes
+print("Size (KB):", file.get_size('kb'))
+
+# Get creation and modification times
+print("Creation Time:", file.get_creation_time())
+print("Modification Time:", file.get_modification_time())
+
+# Get file type and line count
+print("File Type:", file.get_file_type())
+print("Line Count:", file.count_lines())
+
+# Detect encoding
+print("Encoding:", file.detect_encoding())
+
+# Get file attributes
+print("Attributes:", file.get_attributes())
+
+# Calculate SHA-256 checksum
+print("SHA-256 Checksum:", file.get_sha256())
+```
