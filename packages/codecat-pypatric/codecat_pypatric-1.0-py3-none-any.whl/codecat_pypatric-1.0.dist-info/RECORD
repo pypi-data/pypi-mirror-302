@@ -1,0 +1,10 @@
+codecat_pypatric/classes.py,sha256=DDfrgVjXjdiD1a_f9rTXl6rBqA6BWEOrZazMhWcrngU,5313
+codecat_pypatric/deck_tools.py,sha256=BPzvPGmb3SQiBP_Ko8pbhSsQLKF0oKca1pgTGzsA9_U,6180
+codecat_pypatric/electric.py,sha256=MCqwFQ0oQZq5A5icAYOCm02zqpreUWEg87pLUZKIDno,1729
+codecat_pypatric/keys.py,sha256=gD4oVH-Z186goxW6kR4U66i9PG1p45Pl1Kib7Mc_ySY,1271
+codecat_pypatric/magnetic.py,sha256=e0fLlkUBCyE3GLymXPzM4LtA9iSiXkEpIF1oiEOMrN4,1390
+codecat_pypatric/units.py,sha256=U1aBrq9s78q1iKg2nvHUgJ9nOZQag5MZuN1-SExqVWo,874
+codecat_pypatric-1.0.dist-info/METADATA,sha256=1ZXmr0ixi8d4spE2XCB2jIopeZHNHYqcZ3l2ndqpT98,2663
+codecat_pypatric-1.0.dist-info/WHEEL,sha256=oiQVh_5PnQM0E3gPdiz09WCNmwiHDMaGer_elqB3coM,92
+codecat_pypatric-1.0.dist-info/top_level.txt,sha256=7ilv4nIoRCV2FTUqztSRfgAiU4YknGpPPDlCeUQ3LZk,17
+codecat_pypatric-1.0.dist-info/RECORD,,
