@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: pyui-design
+Version: 0.0.3
+Summary: A Python User Interface package
+Author-email: yuanjun <yj@shenkuan.com.cn>
+Project-URL: Homepage, https://pyui.design
+Project-URL: Issues, https://pyui.design/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.4
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# pyui-design - Python User Interface Design Solution
+
+This is pyui-design package.
+
+This is not UI framework.
+
+This is UI solution for python application.
+
+- CLI
+- WEB
+- DESKTOP
+- MOBILE
+- AI
+- 
+
+#### 0.0.2 2024/10/17
+* Add some defination from other project.
+
+#### 0.0.1 2024/10/17
+* Init project.
+* Create __pyui-design__ PyPI package name and domain __pyui.design__ .
