@@ -1,0 +1,9 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+potato_client.egg-info/PKG-INFO
+potato_client.egg-info/SOURCES.txt
+potato_client.egg-info/dependency_links.txt
+potato_client.egg-info/top_level.txt

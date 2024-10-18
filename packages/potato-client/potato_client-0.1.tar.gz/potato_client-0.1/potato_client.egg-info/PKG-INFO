@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: potato-client
+Version: 0.1
+Summary: Potato Brower Python Client
+Home-page: https://github.com/usepotato/potato-python-client
+Author: Rob Farlow
+Author-email: rob@usepotato.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Potato Python Client
+
