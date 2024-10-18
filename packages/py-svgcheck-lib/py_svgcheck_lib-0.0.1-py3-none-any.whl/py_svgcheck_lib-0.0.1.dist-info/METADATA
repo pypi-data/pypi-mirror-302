@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: py_svgcheck_lib
+Version: 0.0.1
+Summary: Python Library for SVG Validation (fork of the svgcheck cli)
+Home-page: https://github.com/anton-yablonovsky/svgchecklib.git
+Author: Anton Yablonovsky
+Author-email: anton.yablonovsky@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: lxml
+Requires-Dist: xml2rfc
+
+# svgchecklib
+Python Library for SVG Validation (fork of the svgcheck cli, designed for seamless integration into Python codebases).
+
+## Usage as Python library
+
+```python
+from svgchecklib import validate_svg
+
+validation_results = validate_svg("path_to_svg_file")
+print(validation_results)
+
+"""
+Result looks like the next list: 
+[
+"2: The attribute 'red' does not allow the value 'fill', replaced with 'black'.", 
+'File does not conform to SVG requirements'
+]
+"""
+```
+
+### Thanks svgcheck project (https://github.com/ietf-tools/svgcheck.git)
+
