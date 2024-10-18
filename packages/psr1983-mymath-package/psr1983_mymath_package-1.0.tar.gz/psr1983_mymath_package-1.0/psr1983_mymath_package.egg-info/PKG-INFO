@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: psr1983_mymath_package
+Version: 1.0
+Summary: My Math Python Package
+Author: Shunmuga
+Author-email: psr@gmail.com
+Keywords: python,math
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Education
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+
+My Math Python Package for add/subtract/multiply/divide

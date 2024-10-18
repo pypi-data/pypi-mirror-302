@@ -1,0 +1,11 @@
+setup.py
+psr1983_mymath_package/__init__.py
+psr1983_mymath_package/add.py
+psr1983_mymath_package/subtract.py
+psr1983_mymath_package.egg-info/PKG-INFO
+psr1983_mymath_package.egg-info/SOURCES.txt
+psr1983_mymath_package.egg-info/dependency_links.txt
+psr1983_mymath_package.egg-info/top_level.txt
+psr1983_mymath_package/misc/__init__.py
+psr1983_mymath_package/misc/divide.py
+psr1983_mymath_package/misc/multiply.py
