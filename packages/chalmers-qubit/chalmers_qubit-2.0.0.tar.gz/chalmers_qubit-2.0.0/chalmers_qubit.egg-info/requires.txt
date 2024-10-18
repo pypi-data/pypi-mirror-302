@@ -1,0 +1,9 @@
+qutip
+qutip-qip
+qutip-qtrl
+
+[full]
+matplotlib
+
+[graphics]
+matplotlib
