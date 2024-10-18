@@ -1,0 +1,7 @@
+build
+ckanext
+cypress
+dist
+docs
+node_modules
+site
