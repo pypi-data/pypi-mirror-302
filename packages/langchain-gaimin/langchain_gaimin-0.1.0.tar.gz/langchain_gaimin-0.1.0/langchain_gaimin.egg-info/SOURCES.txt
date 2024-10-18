@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+langchain_gaimin/__init__.py
+langchain_gaimin/langchain_embeddings.py
+langchain_gaimin/langchain_gaimin_ai.py
+langchain_gaimin.egg-info/PKG-INFO
+langchain_gaimin.egg-info/SOURCES.txt
+langchain_gaimin.egg-info/dependency_links.txt
+langchain_gaimin.egg-info/requires.txt
+langchain_gaimin.egg-info/top_level.txt
+tests/test_client.py
