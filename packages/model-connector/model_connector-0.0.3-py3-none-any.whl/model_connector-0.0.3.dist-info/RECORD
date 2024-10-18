@@ -1,0 +1,8 @@
+model_connector/__init__.py,sha256=JZ1scWEPQm3FClI3M500KZnOSIJQnl9kFAjlji8erm8,64
+model_connector/common.py,sha256=LxBwx7OUifs33zQQGRHqTMiPmG3U_NBAnHbmGVwpH3g,403
+model_connector/read_ffb.py,sha256=E4vfol1JtitilIB2fT-2aFy5WQ7cSGV4KI_lwhJ9cdA,8837
+model_connector/write_ffb.py,sha256=Bqk8yCLMZXwp995HlLmI5aFXKeqBT3ce5mk2Y5wZqyM,14174
+model_connector-0.0.3.dist-info/METADATA,sha256=a5Srj7UHUrNrMBRRhGnO7395Mf4_4Oky2dN7FuhWJYc,1653
+model_connector-0.0.3.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+model_connector-0.0.3.dist-info/licenses/LICENSE,sha256=q8Hfr1YkpCVM5e4mL7SdTTxNAUKcGmUKG_2i_NPyIlY,1089
+model_connector-0.0.3.dist-info/RECORD,,
