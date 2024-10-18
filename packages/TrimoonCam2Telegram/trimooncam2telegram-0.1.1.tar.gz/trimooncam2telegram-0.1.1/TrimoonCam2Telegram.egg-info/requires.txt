@@ -1,0 +1,7 @@
+Pillow
+python-dotenv
+sockets
+pycountry
+pycountry-convert
+requests
+pyTelegramBotAPI
