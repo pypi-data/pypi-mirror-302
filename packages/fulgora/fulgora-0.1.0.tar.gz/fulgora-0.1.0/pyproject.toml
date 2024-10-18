@@ -1,0 +1,33 @@
+[project]
+name = "fulgora"
+version = "0.1.0"
+description = "A Python package for calculating molecular energy using Gaussian."
+authors = [
+    { name="Jordan Dialpuri", email="jordan.dialpuri@york.com" }
+]
+readme = "README.md"
+license = { text = "LGPLv3" }
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)",
+    "Operating System :: OS Independent"
+]
+dependencies = [
+    "gemmi",
+    "polars"
+]
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pylint.main]
+jobs = 4
+
+[project.scripts]
+fulgora = "fulgora.cli:main"
+fulgora-vis = "fulgora.visualise.energy:main"

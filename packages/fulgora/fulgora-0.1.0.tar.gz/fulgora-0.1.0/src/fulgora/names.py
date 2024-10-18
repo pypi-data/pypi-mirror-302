@@ -1,0 +1,6 @@
+GJF_NAME = "input.gjf"
+LOG_NAME = "gaussian.log"
+CHECKPOINT_NAME = "job.chk"
+FORMATTED_CHECKPOINT_NAME = "job.fchk"
+ENERGY_CSV_NAME = "energies.csv"
+TIME_NAME = "time.txt"

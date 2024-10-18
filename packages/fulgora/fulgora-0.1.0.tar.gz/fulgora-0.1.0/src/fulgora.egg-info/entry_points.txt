@@ -1,0 +1,3 @@
+[console_scripts]
+fulgora = fulgora.cli:main
+fulgora-vis = fulgora.visualise.energy:main
