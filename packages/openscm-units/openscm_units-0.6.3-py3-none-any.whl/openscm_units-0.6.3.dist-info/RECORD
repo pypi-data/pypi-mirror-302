@@ -1,0 +1,11 @@
+LICENCE,sha256=SO8M3ZAW0k59_8NPtIVNnztchRy6YoTRSOcw2DGNh9s,1557
+openscm_units-0.6.3.dist-info/METADATA,sha256=j82Ze-caT7TMu-j5nvq0VW0CHDSD29bSLhKRop3fx1g,7177
+openscm_units-0.6.3.dist-info/WHEEL,sha256=pM0IBB6ZwH3nkEPhtcp50KvKNX-07jYtnb1g1m6Z4Co,90
+openscm_units-0.6.3.dist-info/entry_points.txt,sha256=6OYgBcLyFCUgeqLgnvMyOJxPCWzgy7se4rLPKtNonMs,34
+openscm_units-0.6.3.dist-info/licenses/LICENCE,sha256=SO8M3ZAW0k59_8NPtIVNnztchRy6YoTRSOcw2DGNh9s,1557
+openscm_units/__init__.py,sha256=JugfULwX4t_jRr5-49TxMPC6gyY2Sm8Q0KqGJZelIww,660
+openscm_units/_unit_registry.py,sha256=5TVz2xkjSNfRQ7WZFtWioZAhsH0WQwZZsGfuW2CqZLo,16936
+openscm_units/data/__init__.py,sha256=NZqle_GGWMOQRSEAf2mwl9m6tJdL0DIFxUlSAuFGRVU,134
+openscm_units/data/mixtures.py,sha256=ctq-h34tKtCK0vJvDW4fdxxrCKi61Tj8SYtwWLhk6f8,14685
+openscm_units/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+openscm_units-0.6.3.dist-info/RECORD,,
