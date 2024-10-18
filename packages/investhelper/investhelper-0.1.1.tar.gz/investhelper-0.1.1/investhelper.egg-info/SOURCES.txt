@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+investhelper/__init__.py
+investhelper/__main__.py
+investhelper/proc.py
+investhelper.egg-info/PKG-INFO
+investhelper.egg-info/SOURCES.txt
+investhelper.egg-info/dependency_links.txt
+investhelper.egg-info/entry_points.txt
+investhelper.egg-info/top_level.txt

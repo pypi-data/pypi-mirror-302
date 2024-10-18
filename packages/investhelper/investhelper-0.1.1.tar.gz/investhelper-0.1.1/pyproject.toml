@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "investhelper"
+version = "0.1.1"
+description = "A package for calculating profit and ROI"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [
+    { name = "Dusya", email = "Lev.khrobostov@mail.ru" }
+]
+dependencies = []
+
+[project.scripts]
+investhelper = "investhelper.__main__:__main__"
