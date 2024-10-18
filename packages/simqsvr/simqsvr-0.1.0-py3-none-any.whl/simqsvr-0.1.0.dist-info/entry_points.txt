@@ -1,0 +1,2 @@
+[console_scripts]
+manage-simqsvr = manage_simqsvr:main
