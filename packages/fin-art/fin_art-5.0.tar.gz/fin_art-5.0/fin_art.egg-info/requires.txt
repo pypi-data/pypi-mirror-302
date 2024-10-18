@@ -1,0 +1,6 @@
+torch
+transformers
+diffusers
+matplotlib
+peft
+deep_translator
