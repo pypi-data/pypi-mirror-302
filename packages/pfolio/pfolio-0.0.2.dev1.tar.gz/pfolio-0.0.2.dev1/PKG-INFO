@@ -1,0 +1,48 @@
+Metadata-Version: 2.1
+Name: pfolio
+Version: 0.0.2.dev1
+Summary: Portfolio Management Library, including analysis, analytics and optimization
+Home-page: https://pfund.ai
+License: Apache-2.0
+Keywords: portfolio management,investment,analytics,fundamental analysis
+Author: Stephen Yau
+Author-email: softwareentrepreneer+pfolio@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Financial and Insurance Industry
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Office/Business :: Financial :: Investment
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: Topic :: Software Development :: Libraries
+Provides-Extra: all
+Provides-Extra: data
+Provides-Extra: plot
+Requires-Dist: pfeed[core,dataops,dfs] (>=0.0.2,<0.0.3) ; extra == "data" or extra == "all"
+Requires-Dist: pfund (>=0.0.2,<0.0.3)
+Requires-Dist: pfund-plot[all] (>=0.0.1.dev2,<0.0.2) ; extra == "plot" or extra == "all"
+Requires-Dist: scikit-learn (>=1.3.1,<2.0.0)
+Requires-Dist: statsmodels (>=0.14.0,<0.15.0)
+Project-URL: Documentation, https://pfolio-docs.pfund.ai
+Project-URL: Repository, https://github.com/PFund-Software-Ltd/pfolio
+Description-Content-Type: text/markdown
+
+# pfolio
+
+> **still designing, NOT WORKING YET**
+
+It is a wrapper of the existing portfolio management packages, eventually it will be a true package on its own.
+
+
+> Ultimate Goal: It will be the backend of an open-source version of a portfolio analysis tool, like Two Sigma's Venn, or Bloomberg's PORT.
+
+Refereces: \
+[Portfolio Visualizer](https://www.portfoliovisualizer.com) \
+[Portfolio Performance](https://www.portfolio-performance.info/en/)
