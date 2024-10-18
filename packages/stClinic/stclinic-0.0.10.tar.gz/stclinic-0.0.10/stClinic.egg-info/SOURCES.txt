@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+stClinic/Module.py
+stClinic/Utilities.py
+stClinic/__init__.py
+stClinic/gat_conv.py
+stClinic/mnn_utils.py
+stClinic.egg-info/PKG-INFO
+stClinic.egg-info/SOURCES.txt
+stClinic.egg-info/dependency_links.txt
+stClinic.egg-info/requires.txt
+stClinic.egg-info/top_level.txt
