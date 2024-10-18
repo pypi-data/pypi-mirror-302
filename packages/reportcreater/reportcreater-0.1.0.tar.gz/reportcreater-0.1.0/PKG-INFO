@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: reportcreater
+Version: 0.1.0
+Summary: A package for create report
+Author-email: Dusya <Lev.khrobostov@mail.ru>
+License: MIT
+Description-Content-Type: text/markdown
+
+hello, that second task

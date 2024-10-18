@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+reportcreater/__init__.py
+reportcreater/__main__.py
+reportcreater/proc.py
+reportcreater.egg-info/PKG-INFO
+reportcreater.egg-info/SOURCES.txt
+reportcreater.egg-info/dependency_links.txt
+reportcreater.egg-info/entry_points.txt
+reportcreater.egg-info/top_level.txt
