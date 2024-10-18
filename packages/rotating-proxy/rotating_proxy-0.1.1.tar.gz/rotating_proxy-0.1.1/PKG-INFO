@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: rotating_proxy
+Version: 0.1.1
+Summary: A Python package for managing and using rotating proxies
+Home-page: https://github.com/Will6855/rotating_proxy
+Author: Will
+Author-email: 
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Internet :: Proxy Servers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Rotating Proxy
+
+A Python package for managing and using rotating proxies.
+
+## Installation
+
+You can install the package using pip:
+
+```bash
+pip install rotating_proxy
+```
+
+## Usage
+```python
+from rotating_proxy import ProxyPool
+
+# Example usage
+pool = ProxyPool()
+proxy = pool.rotate_proxy()
+```
+
+
