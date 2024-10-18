@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: reese-mysql-utils
+Version: 0.0.2
+Summary: A toolkit for operating MySQL's add, delete, modify, and query actions using Python
+Home-page: https://github.com/reeseimk22021/mysql_utils
+Author: reese
+Author-email: reeseimk@163.com
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: re
+Requires-Dist: json
+Requires-Dist: pymysql
+Requires-Dist: pandas
+
