@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "funalone"
+version = "0.4.0"
+description = "Unittest functions isolated."
+authors = ["Borja Martinena"]
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/aafrecct/funalone"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
+
+[tool.poetry.group.dev.dependencies]
+ipdb = "^0.13.13"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
