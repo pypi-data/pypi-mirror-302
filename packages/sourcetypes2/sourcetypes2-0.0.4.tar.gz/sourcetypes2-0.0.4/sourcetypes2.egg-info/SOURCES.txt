@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+sourcetypes.py
+sourcetypes2.egg-info/PKG-INFO
+sourcetypes2.egg-info/SOURCES.txt
+sourcetypes2.egg-info/dependency_links.txt
+sourcetypes2.egg-info/requires.txt
+sourcetypes2.egg-info/top_level.txt
