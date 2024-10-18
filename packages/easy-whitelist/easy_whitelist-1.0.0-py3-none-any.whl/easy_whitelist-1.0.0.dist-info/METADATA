@@ -1,0 +1,63 @@
+Metadata-Version: 2.1
+Name: easy_whitelist
+Version: 1.0.0
+Summary: Easy_whitelist is a small tool that detects the local Internet IP address and automatically updates the local Internet IP address to the cloud security group whitelist.
+Home-page: https://xxx.com
+Author: qiqilelebaobao
+Author-email: qiqilelebaobao@163.com
+Maintainer-email: qiqilelebaobao@163.com
+License: Apache License 2.0
+Platform: any
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+License-File: LICENSE
+Requires-Dist: tencentcloud-sdk-python
+
+# Easy_whitelist
+
+Easy_whitelist ������������������������������ IP ������������������������������IP������������������������������������������������������������������������ Python ���������
+
+Easy_whitelist is a small tool that detects the local Internet IP address and automatically updates the local Internet IP address to the cloud security group whitelist. The tool is written in Python.
+
+���������������������
+* ��������������������������� IP ������
+* ������������������������������������������������������
+* ���������������������������������
+
+Main functions include:
+* Automatically detect the local Internet IP address
+* Support security group whitelist updates for Alibaba Cloud and Tencent Cloud
+* Tencent Cloud supports address template updates
+
+## ������������ Applicable Scenarios
+
+* ������������������������������������������������IP��������������������������������������������� IP���������������������������������
+* ������������IP ������������ NAT ������������������������������������������������������������������ IP ������������������������������������������������������
+* ���������������������������������������������������������������������������������������������
+
+* Scene1: Users who do not know how to detect the public IP of their local machine can use this tool to automatically detect the public IP and add it to the cloud security group whitelist
+* Scene2: IP addresses often change due to NAT environments, including home environments or broadband environments without fixed export IPs in companies, which require safe use of cloud environment resources
+* Scene3: Test scenarios, frequent changes in client environments, which require safe use of cloud environment resources
+
+## ������������ Installation Guide
+
+������ Python3 ������
+Python3 is required
+
+```shell
+$ pip3 install -i https://mirrors.tencent.com/pypi/simple/ --upgrade tencentcloud-sdk-python
+```
+
+## ������������ Instructions
+
+```shell
+$ python3 easy.py -t template list
+```
