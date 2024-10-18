@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: edds_process
+Version: 0.10.0
+Summary: Package to process data from the EGOS Data Dissemination System (EDDS) of ESA
+Home-page: https://gitlab.obspm.fr/ROC_PUBLIC/edds_process
+License: CeCILL 2.1
+Author: Xavier Bonnin
+Author-email: xavier.bonnin@obspm.fr
+Requires-Python: >=3.8,<4
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: xmltodict (>=0.13,<0.14)
+Project-URL: Repository, https://gitlab.obspm.fr/ROC_PUBLIC/edds_process
+Description-Content-Type: text/markdown
+
+edds_process
+============
+
+Python Package to handle EGOS Data Dissemination System (EDDS) Data.
+
+## Quickstart
+
+To install package using [pip](https://pypi.org/project/pip-tools/):
+
+```
+pip install edds_process
+```
+
+## User guide
+
+Package modules can be then imported into codes with line `import edds_process`.
+
+Especially, `edds_process.response` module contains methods to parse/create TmRaw/TcReport EDDS XML files.
+
+## Authors
+
+- xavier dot bonnin at obspm dot fr
+

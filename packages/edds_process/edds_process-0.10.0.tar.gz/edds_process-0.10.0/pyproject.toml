@@ -1,0 +1,32 @@
+[build-system]
+requires = [ "setuptools==54", "wheel", "poetry==1.1.8", "poetry-core==1.0.4" ]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+skip-string-normalization = true
+line-length = 79
+include = "\\.pyi?$"
+exclude = "/(\n    \\.git\n  | \\.hg\n  | \\.mypy_cache\n  | \\.tox\n  | \\.venv\n  | _build\n  | buck-out\n  | build\n  | dist\n)/\n"
+
+[tool.poetry]
+name = "edds_process"
+version = "0.10.0"
+readme = "README.md"
+license = "CeCILL 2.1"
+repository = "https://gitlab.obspm.fr/ROC_PUBLIC/edds_process"
+description = "Package to process data from the EGOS Data Dissemination System (EDDS) of ESA"
+authors = [ "Xavier Bonnin <xavier.bonnin@obspm.fr>", "ROC Team <roc.support@sympa.obspm.fr>",]
+exclude = ["bump_version.py"]
+[[tool.poetry.packages]]
+include = "edds_process"
+
+[tool.poetry.dependencies]
+python = ">=3.8,<4"
+xmltodict = "^0.13"
+
+[tool.poetry.dev-dependencies]
+pytest = "<9"
+pytest-cov = "<6"
+pytest-timeout = "<3"
+pre-commit = "^3"
+ruff = "*"
