@@ -1,0 +1,11 @@
+williamtoolbox/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+williamtoolbox/version.py,sha256=xy5icTVL_-T_uZleOq5SPoLjDLVLWIK0U8whN-ij6kI,21
+williamtoolbox/williamtoolbox_command.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+williamtoolbox/server/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+williamtoolbox/server/backend_server.py,sha256=8iC8AvjIiQi6OMFEF9Y1Yf3PBj0hlze98Gu_S3j5_K0,14984
+williamtoolbox/server/proxy_server.py,sha256=jx4Z8uA5HDDkzo3vT0egP8pNkujzg4VCeE6TxKOYjoo,3838
+williamtoolbox-0.0.2.dist-info/METADATA,sha256=NTz-iR8LLCU37Ri4bOfAXqjBhs7Psza7c3iTrJ6ag_M,2562
+williamtoolbox-0.0.2.dist-info/WHEEL,sha256=GV9aMThwP_4oNCtvEC2ec3qUYutgWeAzklro_0m4WJQ,91
+williamtoolbox-0.0.2.dist-info/entry_points.txt,sha256=Id74SK99DcgCxggP5psF6uF5K0zmrJBhsMjFlo4QYAQ,214
+williamtoolbox-0.0.2.dist-info/top_level.txt,sha256=r2jcnL-bu5cYXU15eaOcdgacnb-bT1M7q7krmvmAWrE,15
+williamtoolbox-0.0.2.dist-info/RECORD,,
