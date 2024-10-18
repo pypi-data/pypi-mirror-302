@@ -1,0 +1,22 @@
+[build-system]
+requires = ["hatchling","numpy","scipy"]
+build-backend = "hatchling.build"
+
+[project]
+name = "sar_apps"
+version = "0.0.1"
+authors = [
+  { name="Steffen Merseburg", email="steffen.merseburg@space-eye.org" },
+]
+description = "Basic Synthetic Aperature Radar Applications"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://gitlab.com/SteffenME1/sar_apps"
+Issues = "https://gitlab.com/SteffenME1/sar_apps/-/issues"
