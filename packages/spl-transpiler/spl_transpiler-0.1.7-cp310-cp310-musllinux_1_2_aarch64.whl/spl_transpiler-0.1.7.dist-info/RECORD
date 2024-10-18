@@ -1,0 +1,15 @@
+spl_transpiler-0.1.7.dist-info/METADATA,sha256=9T1a_y1aAQ7BtrH-8qUEJzI_O7QxTez0J3pnfWjXOG0,27693
+spl_transpiler-0.1.7.dist-info/WHEEL,sha256=q_z5GuKjBphHBXdeiiGR5EGezy19e5gUan_7r82MC9c,108
+spl_transpiler-0.1.7.dist-info/licenses/LICENSE,sha256=-j7Uzui4A2FGnSMKEU7rp07V8j89q7xmjYWM9STBE3c,1053
+spl_transpiler.libs/libgcc_s-e52197c3.so.1,sha256=vkPW1Auw6CH9Bjk7frmX3hry_1H9c0tRI0Ncyg71WUI,724137
+spl_transpiler/utils.py,sha256=H95VF_kHCHyz6udRhRLVS4DI962N2ZOS3QTCQeyfcSo,188
+spl_transpiler/live_translator.tcss,sha256=d_Lwua2j5tqEQQM-og672K7ui1ujc7T5oLDOmrE_6mM,197
+spl_transpiler/__init__.py,sha256=IezQTKiTT26WvflW8-t0vIy0XclA5FgkDbg1veb-Wpo,291
+spl_transpiler/udfs/cidr_match.py,sha256=DcBI_jOKR3kj2dVNXMJrKBh4p_1kiNwSTAW8Uds5qb4,35
+spl_transpiler/udfs/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+spl_transpiler/udfs/tonumber.py,sha256=AF8kGqHv_BcXiDe0jn5QfohsRTgHIAeiUwW9ZopHdzE,55
+spl_transpiler/__main__.py,sha256=-oS64QPdRry4wcQvfgkJJfKrRWn9u2c96RJ5PwQskMU,315
+spl_transpiler/live_translator.py,sha256=k1JqQeo2oC4Sep1R8FBBKYaTkF0L8wdpv45-5-iuCgc,4982
+spl_transpiler/macros.py,sha256=ceBGw2hRSktzo__U-1xge9FKjEePn3AKCUxNHWmLF78,4608
+spl_transpiler/spl_transpiler.cpython-310-aarch64-linux-gnu.so,sha256=V-kVVNkUey-Qf6Ppr8Z7V9nNyYOooKHX8GZfSBhkxsg,4197177
+spl_transpiler-0.1.7.dist-info/RECORD,,
