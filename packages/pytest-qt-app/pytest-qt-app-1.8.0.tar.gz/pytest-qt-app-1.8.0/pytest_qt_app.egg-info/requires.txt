@@ -1,0 +1,6 @@
+pytest
+pytest-server-fixtures
+pytest-shutil
+
+[tests]
+pytest-cov
