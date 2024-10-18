@@ -1,0 +1,11 @@
+rsclassifier/__init__.py,sha256=U5qLD_SVoytQ2aenOwEtDFlVEOeHNMTDlBAB9VxyYyA,50
+rsclassifier/entropy_based_discretization.py,sha256=jaD0-4Tj9rJMZ4SDxR8WnyvOeQDrE440214cp86PeaY,5027
+rsclassifier/feature_selection.py,sha256=rL2wr_fASQ_Z6KxpfHoa9dwAIlu3583OdfhSbrLAPww,1155
+rsclassifier/information_theory.py,sha256=mV6BMYFZBMGEY9SKr4Ll9oO5_OWpjjyT2Z4nB6xoC74,1183
+rsclassifier/quine_mccluskey.py,sha256=rtXw428_as_ndkazmMoMTaqDzwN_8tpOkHHtPMcPVeI,5952
+rsclassifier/rule_set_classifier.py,sha256=-ddUVfIhO5nbpANp82njwTKZ7T49HnTYbmHLKPgEQ9Q,21858
+rsclassifier-1.1.dist-info/LICENSE,sha256=BZCq6rw7zjpY33cQNwV12QrfhmvLsSzuAhVge8ks4bY,1092
+rsclassifier-1.1.dist-info/METADATA,sha256=Jdc8tUQuFlIUrxVwaeCJUod1LP8EhnAwN8A0OEqJHZ0,6855
+rsclassifier-1.1.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+rsclassifier-1.1.dist-info/top_level.txt,sha256=PMEUUe8xB5PceU2nTnip_2gwSJ68cGRoMue10vTX2NM,13
+rsclassifier-1.1.dist-info/RECORD,,
