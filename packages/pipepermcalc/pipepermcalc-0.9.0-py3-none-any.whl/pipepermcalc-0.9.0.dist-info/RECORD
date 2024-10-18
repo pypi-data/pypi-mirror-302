@@ -1,0 +1,10 @@
+pipepermcalc/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pipepermcalc/pipe.py,sha256=KMHHPT8o0feyu-IFZRZLMHKTRCnmXSnPhNZyyREtFIw,54196
+pipepermcalc/segment.py,sha256=nU83GwnKuEljR-UclGZncZ0AwIt3yHFZ2atXigBDg_E,27574
+pipepermcalc/database/__init__.py,sha256=UP25IL6a6MWXMtJvvpqAPjI2L8M46pWASAVRNA2u41Y,47
+pipepermcalc/database/ppc_database.csv,sha256=bP4b1Eh8FUX8BnOhOKG2s9A-YShJXNtTuyhomzYGnIk,28521
+pipepermcalc-0.9.0.dist-info/LICENSE,sha256=lBgZKK-jm7pWemJZ_YZFj33PED6b14uBzypVPwRSmp8,1066
+pipepermcalc-0.9.0.dist-info/METADATA,sha256=QfMW3iFbhgTbj3BOuaK_91gCQiYb0hOGikGPuDilIbQ,1641
+pipepermcalc-0.9.0.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+pipepermcalc-0.9.0.dist-info/top_level.txt,sha256=24X_Sm4u6Jl7Ha3WEdJCeF0qM06UZF-mJouvE0Ltlys,13
+pipepermcalc-0.9.0.dist-info/RECORD,,

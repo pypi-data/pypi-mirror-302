@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: pipepermcalc
+Version: 0.9.0
+Summary: A python package to 
+Home-page: https://github.com/KWR-Water/pipepermcalc
+Author: KWR Water Research Institute
+Author-email: alex.hockin@kwrwater.nl, bram.hillebrand@kwrwater.nl
+License: All rights reserved
+Project-URL: Source, https://github.com/KWR-Water/pipepermcalc
+Project-URL: Documentation, http://pipepermcalc.readthedocs.io/en/latest/
+Project-URL: Tracker, https://github.com/KWR-Water/pipepermcalc/issues
+Project-URL: Help, https://github.com/KWR-Water/pipepermcalc/issues
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.7
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+Requires-Dist: pandas
+Requires-Dist: openpyxl
+Requires-Dist: pytest
+Requires-Dist: fuzzywuzzy
+Requires-Dist: python-levenshtein
+
+PIPEPERMCALC
+=============
+.. image:: https://badge.fury.io/py/pipepermcalc.svg
+    :target: https://badge.fury.io/py/pipepermcalc
+.. image:: https://readthedocs.org/projects/pipepermcalc/badge/?version=latest&style=flat
+                    :target: https://pipepermcalc.readthedocs.io
+
+
+PIPEPERMCALC or PipePermeationCalculator is a python package to calculate the permeation through pipes
+
+Installation
+-------------
+To get the latest stable version, use::
+
+  pip install pipepermcalc
+  
+License
+--------
+
+This package is MIT licensed See `License File <https://github.com/KWR-Water/pipepermcalc/blob/main/LICENSE>`__.
+
+.. _documentation: https://pipepermcalc.readthedocs.io/en/latest/
