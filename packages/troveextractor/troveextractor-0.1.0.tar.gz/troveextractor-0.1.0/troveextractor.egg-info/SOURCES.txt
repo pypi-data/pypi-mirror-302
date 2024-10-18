@@ -1,0 +1,8 @@
+README.md
+setup.py
+troveextractor/__init__.py
+troveextractor/main.py
+troveextractor.egg-info/PKG-INFO
+troveextractor.egg-info/SOURCES.txt
+troveextractor.egg-info/dependency_links.txt
+troveextractor.egg-info/top_level.txt

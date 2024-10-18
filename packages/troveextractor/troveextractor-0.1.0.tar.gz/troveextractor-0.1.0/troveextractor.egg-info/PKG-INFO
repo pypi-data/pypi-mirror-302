@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: troveextractor
+Version: 0.1.0
+Summary: A simple library to return greeting messages.
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# HelloWorld
+
+HelloWorld is a simple Python library that provides a greeting message for a given name.
+
+## Features
+
+- Greet users with their names.
+
+## Installation
+
+To install, use pip:
+
+```bash
+pip install helloworld
