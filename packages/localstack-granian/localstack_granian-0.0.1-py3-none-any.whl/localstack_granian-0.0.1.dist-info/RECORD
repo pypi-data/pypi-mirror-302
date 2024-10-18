@@ -1,0 +1,8 @@
+localstack_granian/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+localstack_granian/granian.py,sha256=qqwGwGBfaVzt9B7iXVo1MH3zyERd9e9zjY_c-uWle5A,1466
+localstack_granian/noop.py,sha256=8DiDC5ZSQK213-fr6JfFWWSFPnKjomo65tEwArmjWWw,802
+localstack_granian-0.0.1.dist-info/METADATA,sha256=XYTTbQf6Tep94ByhHV-zWVKohs1i5XqzGkXZodEDVSk,522
+localstack_granian-0.0.1.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+localstack_granian-0.0.1.dist-info/entry_points.txt,sha256=lo2EvD8i7MJ60nGs7Ow47Dv1-179zDjdMJCsOmiNeJk,83
+localstack_granian-0.0.1.dist-info/top_level.txt,sha256=TxmeuI6VKBx8CKrAOKSYHAC75jt0R81zT_fyvXZSTWk,19
+localstack_granian-0.0.1.dist-info/RECORD,,
