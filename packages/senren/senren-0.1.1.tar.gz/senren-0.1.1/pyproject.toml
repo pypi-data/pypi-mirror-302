@@ -1,0 +1,50 @@
+[tool.poetry]
+name = "senren"
+version = "0.1.1"
+description = "Senren Python SDK"
+authors = ["Aleksandr Bogdanov <alex@senren.io>"]
+readme = "README.md"
+packages = [
+    { include = "senren", from = "src" },
+]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pydantic = "^2.8.2"
+pydantic-settings = "^2.6.0"
+typer = { extras = ["all"], version = "^0.12.3" }
+grpcio = "^1.66.1"
+protobuf = "5.27.2"
+isodate = "^0.6.1"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.3.0"
+black = "^23.3.0"
+isort = "^5.12.0"
+flake8 = "^6.0.0"
+mypy = "^1.2.0"
+types-protobuf = "^4.23.0.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0", "poetry-grpc-plugin"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+senren = "senren.cli.senren_cli:app"
+
+[tool.poetry-grpc-plugin]
+python_out = "src"
+grpc_python_out = "src"
+proto_path = "protos"
+
+[tool.black]
+line-length = 120
+target-version = ['py310', 'py311', 'py312']
+
+[tool.isort]
+profile = "black"
+line_length = 120
+
+[tool.mypy]
+ignore_missing_imports = true
+strict_optional = true
