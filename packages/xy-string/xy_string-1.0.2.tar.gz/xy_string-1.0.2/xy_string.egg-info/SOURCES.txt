@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+VERSION
+pyproject.toml
+setup.py
+xy_string/__init__.py
+xy_string/utils.py
+xy_string.egg-info/PKG-INFO
+xy_string.egg-info/SOURCES.txt
+xy_string.egg-info/dependency_links.txt
+xy_string.egg-info/requires.txt
+xy_string.egg-info/top_level.txt
