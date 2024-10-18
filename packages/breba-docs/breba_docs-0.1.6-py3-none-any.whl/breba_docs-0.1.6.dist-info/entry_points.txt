@@ -1,0 +1,3 @@
+[console_scripts]
+breba_docs=breba_docs.cli:run
+
