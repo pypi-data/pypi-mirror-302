@@ -1,0 +1,10 @@
+simqclient/__init__.py,sha256=e2qTzZzdeXAOMH3sYJNKc9z8yliM_InWtxNhy6e0oYQ,47
+simqclient/client.py,sha256=LTkJA9gG75xex6RtICs2wDzddLcL8R585rjv7lL7ba8,4407
+simqclient/debug.py,sha256=nniEvZzZW7FRrfS2Py7L0LoeityUiu3qxfUZWUB5nVk,439
+simqclient/exceptions.py,sha256=CkQELHBzQDo0X4S559Wm3ZNkO0Bjz1YAv1p6UQ7caks,266
+simqclient/service.py,sha256=J0-LQryf4kRmcSlprnphnnJkwvjr7mtgy8hCUmVo_m4,1824
+simqclient-0.1.0.dist-info/LICENSE,sha256=HrhfyXIkWY2tGFK11kg7vPCqhgh5DcxleloqdhrpyMY,11558
+simqclient-0.1.0.dist-info/METADATA,sha256=bG7IybCWqP4Q79GJe_tGGsEGk8NSQ1SV2MdchYq91tw,1448
+simqclient-0.1.0.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+simqclient-0.1.0.dist-info/top_level.txt,sha256=50-3uuS3YGATVi6Vh2DYhlGXzLNlq0bgBcubecwPFUE,11
+simqclient-0.1.0.dist-info/RECORD,,
