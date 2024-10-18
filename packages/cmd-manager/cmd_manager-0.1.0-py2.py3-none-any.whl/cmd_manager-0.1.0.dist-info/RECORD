@@ -1,0 +1,8 @@
+cmd_manager/__init__.py,sha256=g9-Q8w2UA-1UT1Mdz-yF2Y6BeootfJjNcPgTKbTe4MY,151
+cmd_manager/argument.py,sha256=ekQsmDatQJNLARr2X5ti-ZoyFFozNmhZG1nA46rXiUE,1063
+cmd_manager/command.py,sha256=VfwTZvnFPxk_x1YxFHcfSZQrKrh_K0zisx3hDRVkIwA,513
+cmd_manager/management.py,sha256=m9Wu9SOONAU-hys2QlmfbKh-nPZjgNKvI27xvCvvlac,2086
+cmd_manager-0.1.0.dist-info/LICENSE,sha256=_ts5veTG61NFQzm9tIDBMgoyFM1N0g2rcQqH6eNpffs,1080
+cmd_manager-0.1.0.dist-info/METADATA,sha256=ApkFMhKAqJQ8RSpULwn_fZ97eF3ARqTKIRtkAvnXRLA,5363
+cmd_manager-0.1.0.dist-info/WHEEL,sha256=IrRNNNJ-uuL1ggO5qMvT1GGhQVdQU54d6ZpYqEZfEWo,92
+cmd_manager-0.1.0.dist-info/RECORD,,
