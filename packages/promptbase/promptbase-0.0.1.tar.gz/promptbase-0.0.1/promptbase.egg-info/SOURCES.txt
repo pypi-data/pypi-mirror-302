@@ -1,0 +1,6 @@
+README.md
+setup.py
+promptbase.egg-info/PKG-INFO
+promptbase.egg-info/SOURCES.txt
+promptbase.egg-info/dependency_links.txt
+promptbase.egg-info/top_level.txt
