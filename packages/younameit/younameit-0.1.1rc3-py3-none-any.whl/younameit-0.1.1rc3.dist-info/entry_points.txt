@@ -1,0 +1,2 @@
+[console_scripts]
+younameit = younameit.__main__:cli_main
