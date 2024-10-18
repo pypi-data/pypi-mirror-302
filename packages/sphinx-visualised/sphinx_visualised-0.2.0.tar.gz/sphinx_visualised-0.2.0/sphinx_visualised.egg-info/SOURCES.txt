@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+requirements_dev.txt
+setup.cfg
+sphinx_visualised/__init__.py
+sphinx_visualised.egg-info/PKG-INFO
+sphinx_visualised.egg-info/SOURCES.txt
+sphinx_visualised.egg-info/dependency_links.txt
+sphinx_visualised.egg-info/requires.txt
+sphinx_visualised.egg-info/top_level.txt
