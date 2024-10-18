@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: FlavorDM
+Version: 0.0.2
+Summary: Compute hadron decays, focus on dark final states.
+Author-email: resonhou <resonhou@163.com>
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+
