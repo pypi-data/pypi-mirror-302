@@ -1,0 +1,21 @@
+{
+  "template": "https://github.com/sphinx-notes/cookiecutter",
+  "commit": "c4f14dab2840eeff6352647a923642b6377d1f49",
+  "checkout": null,
+  "context": {
+    "cookiecutter": {
+      "namespace": "sphinxnotes",
+      "name": "fasthtml",
+      "full_name": "sphinxnotes-fasthtml",
+      "author": "Shengyu Zhang",
+      "description": "Sphinx builder specialized for fast incremental HTML build",
+      "version": "1.0a0",
+      "github_owner": "sphinx-notes",
+      "github_repo": "fasthtml",
+      "pypi_name": "sphinxnotes-fasthtml",
+      "pypi_owner": "SilverRainZ",
+      "_template": "https://github.com/sphinx-notes/cookiecutter"
+    }
+  },
+  "directory": null
+}
