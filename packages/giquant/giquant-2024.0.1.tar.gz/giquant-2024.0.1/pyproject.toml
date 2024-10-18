@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "giquant"
+version = "2024.0.1"
+dependencies = [
+  "requests",
+  "wget",
+  "pandas",
+  "numpy",
+  "duckdb",
+  "pyarrow",
+  "fastparquet",
+  "pyyaml",
+  "lark",
+  "pyreadr",
+  "py_vollib"
+]
+requires-python = ">=3.9.7"
+authors = [
+  {name = "GiQuant"},
+  {email = "quant@gizur.com"},
+]
+maintainers = [
+  {name = "GiQuant", email = "quant@gizur.com"}
+]
+description = "Quant & Trading tools."
+readme = "README.md"
+license = {file = "LICENSE"}
+keywords = ["quant", "quantative finance", "trading", "Commitment Of Traders Report"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python"
+]
+
+[project.urls]
+Repository = "https://github.com/giquant/giquant.git"
