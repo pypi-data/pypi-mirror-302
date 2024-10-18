@@ -1,0 +1,3 @@
+[console_scripts]
+pk-extractor=pk_extractor.cli:main
+

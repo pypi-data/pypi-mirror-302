@@ -1,0 +1,52 @@
+Metadata-Version: 2.1
+Name: pk-extractor
+Version: 0.2.3
+Summary: Project Knowledge Extractor
+Author: TomoyaFujita2016
+Author-email: fujita.t.2016c@gmail.com
+Requires-Python: >=3.9,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: gitignore-parser (>=0.1.11,<0.2.0)
+Requires-Dist: tqdm (>=4.66.5,<5.0.0)
+Description-Content-Type: text/markdown
+
+# pk-extractor
+
+pk-extractor (Project Knowledge Extractor) is a tool that generates a comprehensive knowledge base from a given repository, including the project structure and file contents. It respects `.gitignore` rules and allows for additional exclusion patterns.
+
+## Features
+
+- Generates a markdown file containing the project structure and file contents
+- Respects `.gitignore` rules
+- Allows for additional file/directory exclusion via command-line arguments
+- Provides progress information during processing
+- Handles binary files and errors gracefully
+
+
+## Easy to use
+1. Install the package globally
+```
+$ pip install pk-extractor
+$ pk-extractor .
+
+```
+
+2. Using pipx
+```
+$ pipx run pk-extractor .
+```
+
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
