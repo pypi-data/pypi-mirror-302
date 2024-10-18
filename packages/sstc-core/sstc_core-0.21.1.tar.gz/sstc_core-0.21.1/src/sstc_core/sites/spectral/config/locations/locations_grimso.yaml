@@ -1,0 +1,12 @@
+# Ensure you do not use hyppens "-" better to use `double__underscore`
+
+GRI_FOR:
+  location_id: 'GRI_FOR'
+  description: ''
+  legacy_acronym: 'GRI-FOR'
+  is_active: True
+  mantainance_status: active
+  platforms: 
+    PhenoCams:
+      - 'P_GRI_FOR_1'
+    

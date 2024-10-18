@@ -1,0 +1,15 @@
+# Ensure you do not use hyppens "-" better to use `double__underscore`
+
+SAFEA_AGR:
+  location_id: 'SAFEA_AGR'
+  description: ''
+  legacy_acronym: 'SFA-AGR'
+  is_active: True
+  mantainance_status: active
+  platforms: 
+    PhenoCams:
+      - 'P_SAFEA_AGR_1'
+      - 'P_SAFEA_AGR_2'
+      - 'P_SAFEA_AGR_3'
+
+    

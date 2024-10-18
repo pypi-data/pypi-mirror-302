@@ -1,0 +1,52 @@
+PhenoCams:
+  P_NYB_FOR_1: 
+    aoi: Asa High Yield Experimental Forest
+    backups:
+      aurora02_dirpath: /home/aurora02/data/SITES/Spectral/data/catalog/abisko/locations/NYB_FOR/platforms/PhenoCam/P_NYB_FOR_1/
+    description: 
+    ecosystem_of_interest: FOR
+    geolocation:
+      point:
+          epsg: "epsg:4326"
+          latitude_dd:  57.149750  
+          longitude_dd: 14.738164
+    height_in_meters_above_ground: 7.25
+    legacy_acronym: NYB
+    location_id: NYB_FOR
+    maintainance_log_filepath: '/home/aurora02/data/SITES/Spectral/code/pycode/SSTC/sstc-core/src/sstc_core/sites/spectral/maintainance/-P_NYB_FOR_1-mantainance_log.yaml'
+    status: Active
+    phenocam_rois:    
+      ROI_01: {'points': [[100, 1200], [100, 400], [2500, 400], [2500, 1200]],
+        'color': [0, 0, 255],
+        'thickness': 7}      
+    platform_id: P_NYB_FOR_1
+    platform_type: PhenoCam    
+    sftp_dirpath: asa/data/PhenoCam/NYB-FOR-P01/
+    station_acronym: ASA
+    station_name: Asa
+    viewing_direction': South (180 degrees), off-nadir angle of 55 degrees
+    metadata:
+      'TITLE': 'Phenocamera RGB daily average image composite collection from Nybygget, Southern Sweden.'
+      'SITES STATION': 'Asa Research Station'
+      'TIME PERIOD': null
+      'TIME RESOLUTION': null
+      'TIME ZONE': 'UTC+1'
+      'SAMPLING POINT': ''
+      'LATITUDE': 57.149034   # '57.149750'
+      'LONGITUDE': 14.738967   # '14.738164'
+      'ALTITUDE': '255.8 m.a.s.l'
+      'FILE RETRIEVED FROM': 'https://data.fieldsites.se Link to metadata landing page is available in separate file in the downloaded zip.'
+      'DATA POLICY': 'SITES data is licensed under a Creative Commons Attribution 4.0 international license (http://creativecommons.org/licenses/by/4.0/).'
+      'PARAMETERS & UNITS': 'Digital Numbers (DN)'
+      'DESCRIPTION': 'Collection of phenocamera RGB image composites averaged daily from quality-filtered images from 10 a.m. to 2 p.m. The phenocamera pointed to a coniferous forest composed by Norway spruce (Picea abies). The forest is part of the Asa High Yield Experimental Forest, which addresses questions regarding intensive forest management on a landscape level such as fertilization and water quality, introduces tree species and their influence on flora and fauna, intended to study the forest growth under different management regimes. The stand at Nybygget was planted in 2006 and it has been fertilized every second year since 2016.'
+      'SENSOR DESCRIPTION': 'Data acquired with Mobotix M25 RGB phenology camera, with wide field of view (FOV) angle of 60 degrees. Images stored in JPG format.'
+      'DATA ACQUISITION': "The original images were acquired with a phenology camera on an observation mast, at a height of 7.25 m above ground, looking south (180 degrees) and an off-nadir angle of 55 degrees. The phenocamera acquired images from 5 a.m. to 8 p.m. every hour. The phenocamera operates all year long. The area surveyed by the phenocamera projects a footprint on the ground, the centroid of which is approximately defined by the following coordinate (latitude, longitude in GCS WGS84, decimal degrees): 57.149034, 14.738967."
+      'PROCESSING METHODS': 
+        L1_QFI: 'Data processing Level 1 Quality Filtered Images (QFI) were selected by filtered out manually from the original image collection. Individual flags were used to flag regions of interest (ROIs) that contain haze, shadows, sun glare, rain droplets, fog, or represent low-light, blurry conditions or obstacles in the image regions of interest.'
+        L2_RGB_CIMV: 'Data processing level 2 Red Green Blue (RGB) Composite Image Mean Values, daily'
+        L2_GCC_CIMV: 'Data processing level 2 Green Chromatic Coordinates  (GCC) Composite Image Mean Values, daily'
+        L2_RCC_CIMV: 'Data processing level 2 Red Chromatic Coordinates  (RCC) Composite Image Mean Values, daily' 
+        L3_ROI_TS: 'Data processing level 3 Phenocam - Green and Red Chromatic Coordinates time series of the RGB Composite Image of Mean Values - Region of Interest (ROI) Mean and Standard Deviation, daily values with QFLAG values and individual flags assesment per ROI'
+      'DATA PRODUCT TYPE': 'L1_QFI'
+      'DATA PRODUCT DESCRIPTION': 'Data Processing Level 1 Quality Filtered Images'
+      'REFERENCES': 'Richardson, Andrew D., Koen Hufkens, Tom Milliman, Donald M. Aubrecht, Min Chen, Josh M. Gray, Miriam R. Johnston et al. "Tracking vegetation phenology across diverse North American biomes using PhenoCam imagery." Scientific data 5 (2018): 180028.'
