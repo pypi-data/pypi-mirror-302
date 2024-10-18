@@ -1,0 +1,2 @@
+[console_scripts]
+hd-bet = HD_BET.hd_bet_cli:main

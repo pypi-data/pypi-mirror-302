@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: HD_BET
+Version: 1.1
+Summary: Tool for brain extraction
+Author-email: Fabian Isensee <f.isensee@dkfz.de>
+License: Apache-2.0
+Project-URL: Homepage, https://github.com/MIC-DKFZ/hd-bet
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python
+Classifier: Topic :: Scientific/Engineering
+Classifier: Operating System :: Unix
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: torch>=0.4.1
+Requires-Dist: scikit-image
+Requires-Dist: SimpleITK
