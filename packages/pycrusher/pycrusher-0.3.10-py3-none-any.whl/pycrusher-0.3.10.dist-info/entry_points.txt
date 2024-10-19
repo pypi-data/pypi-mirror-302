@@ -1,0 +1,2 @@
+[console_scripts]
+pycrusher = pycrusher.cli:main
