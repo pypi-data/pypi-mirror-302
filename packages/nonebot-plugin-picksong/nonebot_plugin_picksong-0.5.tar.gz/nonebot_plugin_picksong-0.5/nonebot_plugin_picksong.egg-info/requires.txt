@@ -1,0 +1,6 @@
+nonebot>=2.2.0
+nonebot_plugin_localstore>=0.7
+httpx>=0.18
+requests>=2.25
+pydub>=0.25
+graiax>=0.3
