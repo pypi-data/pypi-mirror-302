@@ -1,0 +1,8 @@
+README.md
+setup.py
+src/clients_report_gen/__init__.py
+src/clients_report_gen/__main__.py
+src/clients_report_gen.egg-info/PKG-INFO
+src/clients_report_gen.egg-info/SOURCES.txt
+src/clients_report_gen.egg-info/dependency_links.txt
+src/clients_report_gen.egg-info/top_level.txt
