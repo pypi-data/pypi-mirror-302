@@ -1,0 +1,12 @@
+webkitflaskpy/__init__.py,sha256=JRCD0wbd3hnlAEWiDY0HOzbPpx8wYXcRGBcBWQI1yVc,3535
+webkitflaskpy/authed_blueprint.py,sha256=AFseQbGkW1js2fzwOAdBP1_VrRo8crxCjgsMofPcq6k,2806
+webkitflaskpy/database.py,sha256=hGFJ_8XzOkajgvsxxToHWj_ubA-bPpJ0QvfIRhOUnbo,3257
+webkitflaskpy/ipc_manager.py,sha256=ls-9lQZGhhnVZoBS54A0zxxLgb3lwO6WpxjBqSS-KVw,5085
+webkitflaskpy/mock_app.py,sha256=RrZ-5pMvfRLPtfsROuxqKJjvHTXAsn01_L-oTArWU_Y,1784
+webkitflaskpy/response.py,sha256=VJA-k9iz2rm5qOT05cO4tUIjBvw7sEaqmWk9Ej6Mb2Y,1623
+webkitflaskpy/util.py,sha256=xSUIR8G2kYaoLUgnniPjC_WC9Xpun_jhBCoMYnwLZm0,6398
+webkitflaskpy-0.7.1.dist-info/LICENSE,sha256=ncOKSeeG3fd9iFuw26taRn7g2Dty_aXm-gFb_OnpcP0,1287
+webkitflaskpy-0.7.1.dist-info/METADATA,sha256=OoABxwmjH6ieDHscIZAQKZdlrqJgDldUjMnF9p5D1wY,1067
+webkitflaskpy-0.7.1.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+webkitflaskpy-0.7.1.dist-info/top_level.txt,sha256=TlJJsW88BIh6HW8HLCiaAHSRtOr03bsX8AIYUTjL20E,14
+webkitflaskpy-0.7.1.dist-info/RECORD,,
