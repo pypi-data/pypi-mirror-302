@@ -1,0 +1,31 @@
+package:
+  name: lmoments3
+  version: {{ environ.get('GIT_DESCRIBE_TAG', '0.0.0')[1:] }}
+
+build:
+  number: {{ environ.get('GIT_DESCRIBE_NUMBER', 0) }}
+
+source:
+  git_url: ..
+
+requirements:
+  build:
+    - python
+    - setuptools
+    - numpy
+    - scipy
+
+  run:
+    - python
+    - numpy
+    - scipy
+
+test:
+  imports:
+    - lmoments3
+
+about:
+  home: https://github.com/Ouranosinc/lmoments3
+  license: GPLv3
+  license_file: LICENSE
+  summary: Python library for estimating linear moments for statistical distributions
