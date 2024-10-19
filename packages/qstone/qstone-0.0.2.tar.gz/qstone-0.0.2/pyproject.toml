@@ -1,0 +1,80 @@
+[tool.poetry]
+
+name = "qstone"
+authors = ["Riverlane  <team@riverlane.com>"]
+description = "Benchmarking suite for Quantum Computers integration into HPC Systems"
+readme = "README.md"
+version = "0.0.2"
+license = "Apache 2.0"
+packages = [{include = "qstone"}]
+
+
+[tool.poetry.dependencies]
+python = ">=3.8, <3.13"
+matplotlib = "*"
+pyGSTi = "*"
+PyMatching = "2.2.1"
+numpy = "^1.22"
+json5 = "*"
+pandera = "*"
+stim = "1.14.0"
+jinja2 = "*"
+simple_slurm = "*"
+protobuf = "*"
+requests = "*"
+click = "*"
+waiting = "*"
+grpcio = {version = "*", optional = true, markers = "platform_machine == 'amd64'" }
+pytest-cov = {version = "^3.0.0", optional = true}
+ochrona = { version = "^2.0.2", optional = true }
+safety = { version = "^2.3.5", optional = true }
+bandit = { version = "^1.7.5", optional = true }
+pylint = { version = "^2.15.9", optional = true }
+mypy =  { version = "^1.0.0", optional = true }
+pytest = { version = "^7.2.0", optional = true }
+pytest-mock = { version = "^3.12.0", optional = true }
+black = { version = "*", optional = true} 
+grpcio-tools = { version = "*", optional = true }
+types-protobuf = { version = "*", optional = true }
+requests-mock = { version = "*", optional = true }
+flask = {version = "*", optional = true} 
+pandas-stubs = "*"
+
+[tool.poetry.extras]
+test = ["pytest", "pytest-cov", "pytest-depends", "requests-mock", "types-protobuf", "grpcio-tools", "imageio", "nbmake", "ipython", "pytest-xdist", "pytest-mock"]
+lint = ["pylint", "mypy", "pycodestyle", "black", "isort"]
+security = ["ochrona", "safety", "bandit"]
+
+[tool.pylint.MASTER]
+ignore-paths = 'qstone/connectors/riverlane/grpc.*$'
+
+[tool.pylint."MESSAGES CONTROL"]
+disable = """
+    line-too-long,
+    duplicate-code,
+    too-many-locals,
+    too-many-arguments,
+    too-few-public-methods,
+    too-many-instance-attributes
+"""
+
+
+[tool.poetry.scripts]
+qstone = "qstone.__main__:main"
+
+[tool.mypy]
+exclude = "(qstone/connectors/riverlane/grpc.*$)|(qstone/generators/slurm/schedmd)|(tests)|(my_venv)"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.setuptools.packages.find]
+where = ["qstone/conf/steps"]
+
+[tool.setuptools.package-data]
+"*" = ["*.json"]
+
+
+ignore_missing_imports = true
+disallow_any_unimported = true
