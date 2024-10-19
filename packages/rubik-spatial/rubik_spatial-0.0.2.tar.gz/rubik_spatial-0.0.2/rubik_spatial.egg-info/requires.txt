@@ -1,0 +1,7 @@
+numpy
+scikit-image
+scanpy
+squidpy
+tqdm
+matplotlib
+Pseudovisium

@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: rubik_spatial
+Version: 0.0.2
+Summary: Python package for rapid spatial alignment of spatial transcriptomic datasets
+Author: Bence Kover
+Author-email: <kover.bence@gmail.com>
+Keywords: spatial,transcriptomics,visium,xenium,rubik
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: MacOS :: MacOS X
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: scikit-image
+Requires-Dist: scanpy
+Requires-Dist: squidpy
+Requires-Dist: tqdm
+Requires-Dist: matplotlib
+Requires-Dist: Pseudovisium

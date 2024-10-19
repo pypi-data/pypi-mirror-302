@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+rubik/__init__.py
+rubik/align.py
+rubik_spatial.egg-info/PKG-INFO
+rubik_spatial.egg-info/SOURCES.txt
+rubik_spatial.egg-info/dependency_links.txt
+rubik_spatial.egg-info/requires.txt
+rubik_spatial.egg-info/top_level.txt
