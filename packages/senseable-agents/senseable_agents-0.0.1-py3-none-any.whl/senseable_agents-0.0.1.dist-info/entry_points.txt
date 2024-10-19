@@ -1,0 +1,3 @@
+[console_scripts]
+senseable-agents-cli=senseable-agents.cli:main
+
