@@ -1,0 +1,2 @@
+[console_script]
+business-metrics = business_metrics:main
