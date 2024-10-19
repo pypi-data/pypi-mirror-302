@@ -1,0 +1,46 @@
+[project]
+name = "omie-py"
+dynamic = ["version"]
+description = "Client não oficial da Omie API em Python"
+authors = [
+    { name = "Murillo Bianconi", email = "murillo.bianconi@buser.com.br" } 
+]
+readme = "README.md"
+keywords = ["omie", "api", "client", "python"]
+requires-python = ">=3.11"
+
+classifiers = [
+  #   3 - Alpha
+  #   4 - Beta
+  #   5 - Production/Stable
+  "Development Status :: 3 - Alpha",
+
+  "Intended Audience :: Developers",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+
+  "License :: OSI Approved :: MIT License",
+
+  "Programming Language :: Python :: 3.11"
+]
+
+dependencies = [
+    "zeep>=4.3.1",
+]
+
+[project.urls]
+homepage = "https://github.com/buserbrasil/omie-py"
+repository = "https://github.com/buserbrasil/omie-py"
+
+
+[tool.hatch.version]
+path = "src/omie_py/__about__.py"
+
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv]
+dev-dependencies = [
+    "ruff>=0.6.9",
+]
