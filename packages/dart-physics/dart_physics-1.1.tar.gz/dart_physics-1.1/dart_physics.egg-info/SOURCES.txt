@@ -1,0 +1,7 @@
+README.md
+setup.py
+dart_physics.egg-info/PKG-INFO
+dart_physics.egg-info/SOURCES.txt
+dart_physics.egg-info/dependency_links.txt
+dart_physics.egg-info/requires.txt
+dart_physics.egg-info/top_level.txt
