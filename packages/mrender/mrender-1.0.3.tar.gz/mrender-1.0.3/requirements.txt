@@ -1,0 +1,9 @@
+rich_click
+beautifulsoup4
+pytest
+pytest-mock
+pytest-asyncio
+chardet
+rich
+requests
+lager
