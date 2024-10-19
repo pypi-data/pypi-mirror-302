@@ -1,0 +1,16 @@
+custom_circle_plot/__init__.py,sha256=-TUjTUZeiNlnPHxPPw6bVJL9aipTG41ht0Wq0AVVoG4,757
+custom_circle_plot/example.py,sha256=G647aZtI5CyEruTdgr6mncOOSSexW4dkD8i99bxBjKw,1207
+custom_circle_plot/frontend/build/asset-manifest.json,sha256=IqUJZTVnvNeyainyDx4ohJhg_5-bL5pHdyTBQHb-nqg,374
+custom_circle_plot/frontend/build/bootstrap.min.css,sha256=X9ITP3t3djkRs4SffIkA1Q2WMy-oYl6au5HFYTVShe0,206960
+custom_circle_plot/frontend/build/bootstrap.min.css.map,sha256=8SM4U2NQpCLGTQLW5D_x3qSTwxVq2CP-GXYc3V1WwFs,589892
+custom_circle_plot/frontend/build/index.html,sha256=P_aG2FVbSJtzo0h3OnEumbu1KRK4OOydrRP68MkRvKo,553
+custom_circle_plot/frontend/build/static/css/main.0672809a.css,sha256=fRYjEcEqBjw7JQhBNzVNZZiitiFDvo8sKS_oNgftkiY,2939
+custom_circle_plot/frontend/build/static/css/main.0672809a.css.map,sha256=KPyv4Vg_SViLXX7WTae7tLXZhs6BOhrn0vd5PGZN2Ts,4572
+custom_circle_plot/frontend/build/static/js/main.1997eb7e.js,sha256=8r5PkkedX-f9PEvalfR6sn8HBvJNkd1VTD3lQYBWZRM,380518
+custom_circle_plot/frontend/build/static/js/main.1997eb7e.js.LICENSE.txt,sha256=NVg_xX7uJeMONytZUcILJQX3fKCxxwdigyGjBfS0PCU,1540
+custom_circle_plot/frontend/build/static/js/main.1997eb7e.js.map,sha256=rvWHXPJIsY53vJg2SNrl6k6hsmyUIlIcqeXe5_FnTQo,1522506
+streamlit_circle_plot_component-0.0.3.dist-info/LICENSE,sha256=SHkHX-qiNZt-ACArrZP67jppVYPvF8xuUDRjJw_E3L0,1082
+streamlit_circle_plot_component-0.0.3.dist-info/METADATA,sha256=LAee-mMyOaqGB_rC6kcPooAfn4jo8xx5gZB3r2tR6zY,552
+streamlit_circle_plot_component-0.0.3.dist-info/WHEEL,sha256=cpQTJ5IWu9CdaPViMhC9YzF8gZuS5-vlfoFihTBC86A,91
+streamlit_circle_plot_component-0.0.3.dist-info/top_level.txt,sha256=AJBKl_rrTCzmUevuQOnnAXEUy8_Ne8PZkj-EMMdkGHA,19
+streamlit_circle_plot_component-0.0.3.dist-info/RECORD,,
