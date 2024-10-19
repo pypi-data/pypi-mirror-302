@@ -1,0 +1,12 @@
+xssbase/__init__.py,sha256=PUPSncMhhTnpVlR2xQ171CxJMEV9CL7QhjihoE5dvZo,220
+xssbase/cli.py,sha256=0QoWrvF80uLTAasfY_vitl0W9Q8RLpY9bVszdVidsZU,1129
+xssbase/main.py,sha256=QHg-N7OqKPCsL7vbl-uuTJGHSfYjIyk5i5yVz_YtSis,5095
+xssbase/payload.txt,sha256=Li7286gvj_rgvkV24-7lItaixiAdh8qvioBzdz23S8U,734
+xssbase/utils.py,sha256=1vQuEwJtz7VBMVmiF-yWtv60dn7r-kwKElb7gRxsp9Q,999
+xssbase/xss.py,sha256=yiPaYI_MaV6r8LMSR_14T5HV7087qQBSadgIvRq4MzU,1639
+xssbase-5.0.1.dist-info/LICENSE,sha256=CmbH9ppfL0wJ5lmyqWyAHdFvcoSQpBDw1sAwuZ_dM1M,1065
+xssbase-5.0.1.dist-info/METADATA,sha256=mEzo1cWukL0JzeHImA2qGX3WcShgL-DQhvgS-GwAkMs,4086
+xssbase-5.0.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+xssbase-5.0.1.dist-info/entry_points.txt,sha256=aySNEpILr_b1eFlt8mvaNsFYfT5yLEdEoxPJoPxvJl4,45
+xssbase-5.0.1.dist-info/top_level.txt,sha256=Fwhx8fG0Bz7gv6YOc2JcnkTBJQRGazA9KCY6265hdA4,8
+xssbase-5.0.1.dist-info/RECORD,,
