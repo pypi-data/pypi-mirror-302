@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+VERSION
+pyproject.toml
+setup.py
+xy_conda/Conda.py
+xy_conda/Runner.py
+xy_conda/__init__.py
+xy_conda.egg-info/PKG-INFO
+xy_conda.egg-info/SOURCES.txt
+xy_conda.egg-info/dependency_links.txt
+xy_conda.egg-info/entry_points.txt
+xy_conda.egg-info/requires.txt
+xy_conda.egg-info/top_level.txt
+xy_conda/execute/Main.py
+xy_conda/execute/__init__.py

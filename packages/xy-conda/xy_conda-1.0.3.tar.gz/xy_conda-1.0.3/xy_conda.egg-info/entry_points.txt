@@ -1,0 +1,2 @@
+[console_scripts]
+xy_conda = xy_conda.execute.Main:main

@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+
+requires-python = ">=3.8"
+
+name = "xy_conda"
+
+authors = [{ name = "helios", email = "yuyang.0515@qq.com" }]
+description = "xy_conda 模块"
+
+dynamic = ["version"]
+
+readme = "README.md"
+
+classifiers = ["Programming Language :: Python :: 3.8"]
+
+dependencies = ["xy_console", "xy_argparse"]
+
+[project.scripts]
+xy_conda = "xy_conda.execute.Main:main"
+
+[tool.setuptools.packages.find]
+where = ["./"]
+include = ["xy_conda"] # alternatively: `exclude = ["additional*"]`
+namespaces = false
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.dynamic]
+version = { file = "VERSION" }
+
