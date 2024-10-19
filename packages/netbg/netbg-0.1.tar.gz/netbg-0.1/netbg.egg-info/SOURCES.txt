@@ -1,0 +1,8 @@
+LICENCE.txt
+README.md
+setup.py
+netbg/__init__.py
+netbg.egg-info/PKG-INFO
+netbg.egg-info/SOURCES.txt
+netbg.egg-info/dependency_links.txt
+netbg.egg-info/top_level.txt
