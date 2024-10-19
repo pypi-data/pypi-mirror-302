@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: bodo-iceberg-connector
+Version: 0.0.0a0
+Summary: Bodo Connector for Iceberg
+Author: Bodo.ai
+Project-URL: Homepage, https://bodo.ai
+Project-URL: Documentation, https://docs.bodo.ai
+Keywords: data,analytics,cluster
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Software Development :: Compilers
+Classifier: Topic :: System :: Distributed Computing
+Requires-Python: <3.13,>=3.10
+Requires-Dist: py4j==0.10.9.7
+
