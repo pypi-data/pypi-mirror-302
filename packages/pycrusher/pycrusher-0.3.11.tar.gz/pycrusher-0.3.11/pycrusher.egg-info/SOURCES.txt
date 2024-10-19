@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+pycrusher/__init__.py
+pycrusher/__main__.py
+pycrusher/cli.py
+pycrusher/core.py
+pycrusher.egg-info/PKG-INFO
+pycrusher.egg-info/SOURCES.txt
+pycrusher.egg-info/dependency_links.txt
+pycrusher.egg-info/entry_points.txt
+pycrusher.egg-info/requires.txt
+pycrusher.egg-info/top_level.txt
+tests/test_cli.py
+tests/test_core.py
