@@ -1,0 +1,13 @@
+caep/__init__.py,sha256=DolPlTKeU5F5UTxbZzhmWPS2O_g0DlDgt0A6OVebZa4,369
+caep/config.py,sha256=7anu6EqxasoLlHzflmWpUevV__ymvlHaf8NrInD9z3k,8503
+caep/example.py,sha256=CUr9JPjydvfF7jwpnm6QaebEzTtBvHsS9qGwWffXrvs,967
+caep/helpers.py,sha256=PWEfgoBy4AcyoqW6-Okj15SMtdtVXd_LWx67g41Xe3w,1875
+caep/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+caep/schema.py,sha256=DMXi8dLaeBDu3aBqf48KBHL7wfRepvr48ZCbMbpuASI,11630
+caep/xdg.py,sha256=Ai1-gHNnZbEKhPBLHC9r9ZY7bhywaPKjU2a7Ivmm7tI,1535
+caep-1.2.0.dist-info/LICENSE,sha256=WXYf8su-xlDAu0sjfRGDdeQp6d_vioJ5SSbmyU2H1nE,773
+caep-1.2.0.dist-info/METADATA,sha256=QzAHWT5pwhyCPbHG8NNZmVy_qDv9q10VvgpXOH0FOKc,12184
+caep-1.2.0.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+caep-1.2.0.dist-info/top_level.txt,sha256=JmzBoYecekhr_elMr3cEGnsrU4HkgrYuS3N10k42VJI,5
+caep-1.2.0.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+caep-1.2.0.dist-info/RECORD,,
