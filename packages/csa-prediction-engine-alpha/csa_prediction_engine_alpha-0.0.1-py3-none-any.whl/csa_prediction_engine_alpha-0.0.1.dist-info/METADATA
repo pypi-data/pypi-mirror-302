@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: csa-prediction-engine-alpha
+Version: 0.0.1
+Requires-Dist: numpy>=2.1
+Requires-Dist: requests
+Requires-Dist: csa-common-lib-alpha
+
