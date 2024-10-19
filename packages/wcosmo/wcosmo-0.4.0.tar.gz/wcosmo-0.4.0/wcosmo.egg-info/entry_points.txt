@@ -1,0 +1,13 @@
+[gwpopulation.other]
+wcosmo-taylor = wcosmo.taylor:scipy.linalg.toeplitz
+
+[gwpopulation.scs]
+wcosmo-analytic = wcosmo.analytic
+
+[gwpopulation.xp]
+wcosmo = wcosmo.wcosmo
+wcosmo-analytic = wcosmo.analytic
+wcosmo-astropy = wcosmo.astropy
+wcosmo-integrate = wcosmo.integrate
+wcosmo-taylor = wcosmo.taylor
+wcosmo-utils = wcosmo.utils

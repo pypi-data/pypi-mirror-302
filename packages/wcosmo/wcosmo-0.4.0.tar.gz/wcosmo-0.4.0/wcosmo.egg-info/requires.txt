@@ -1,0 +1,9 @@
+numpy
+scipy
+astropy>=6.1
+
+[test]
+pytest-cov
+gwpopulation
+jax>=0.4.16
+unxt
