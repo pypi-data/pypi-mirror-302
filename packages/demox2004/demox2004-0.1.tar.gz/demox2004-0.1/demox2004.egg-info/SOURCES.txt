@@ -1,0 +1,8 @@
+LICENSE
+setup.py
+demox2004/__init__.py
+demox2004/demox2004.py
+demox2004.egg-info/PKG-INFO
+demox2004.egg-info/SOURCES.txt
+demox2004.egg-info/dependency_links.txt
+demox2004.egg-info/top_level.txt
