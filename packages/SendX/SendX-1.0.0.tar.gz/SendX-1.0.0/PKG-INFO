@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: SendX
+Version: 1.0.0
+Summary: SendX REST API
+Home-page: UNKNOWN
+Author: SendX Dev Team
+Author-email: support@sendx.io
+License: UNKNOWN
+Description:         # Introduction 
+                The SendX API is organized around REST. Our API has predictable resource-oriented URLs, accepts form-encoded request bodies, returns JSON-encoded responses, and uses standard HTTP response codes, authentication, and verbs. The SendX Rest API doesn’t support bulk updates. You can work on only one object per request. &lt;br&gt; 
+            
+Keywords: SendX,email marketing,SendX REST API,email,marketing
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
