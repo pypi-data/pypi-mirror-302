@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "otter_api_wrapper"
+version = "0.0.3"
+authors = [
+  { name="Pedro L. Ballester", email="pedro.lemosballester@sickkids.ca" },
+]
+description = "This is a Python wrapper for the Otter API. This wrapper helps you run the API available at https://otter.ccm.sickkids.ca/."
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://otter.ccm.sickkids.ca"
+Issues = "https://github.com/shlienlab/otter-api-wrapper/issues"
