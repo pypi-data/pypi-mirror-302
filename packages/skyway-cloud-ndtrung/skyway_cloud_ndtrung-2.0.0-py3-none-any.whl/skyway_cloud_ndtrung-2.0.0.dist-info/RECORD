@@ -1,0 +1,14 @@
+skyway-cloud_ndtrung/__init__.py,sha256=n4VIc1R1DI83Tmxxy-60bbnh3GvU6KZ6ZLIPj-xpl8s,1369
+skyway-cloud_ndtrung/account.py,sha256=-sB-oFJtlaJmkc3VIJ9DSBf_uTWzCSP-NLFW97kf7_Q,2687
+skyway-cloud_ndtrung/utils.py,sha256=SRLhC0ZdGs061jkVfY9A2g6Ql2n8fMFU9xW96LtHYgw,1891
+skyway-cloud_ndtrung/cloud/aws.py,sha256=uUeaxx-PTydluRaWKkZoG4p4zOQBAVE7XHWvKokOcLg,34023
+skyway-cloud_ndtrung/cloud/azure.py,sha256=FAKi8gg1wA21xXHQq83RW_pLJwPOT7OtZpn38lhSix0,28150
+skyway-cloud_ndtrung/cloud/core.py,sha256=oHuQWsZeNtgysxHREb8d_HNyvm5IebQk1BpXU9Yh6s0,4680
+skyway-cloud_ndtrung/cloud/gcp.py,sha256=dtreURSANAgR0u8Qvp1lzGeXQyTnQFbB3GjLutiVzjk,27148
+skyway-cloud_ndtrung/cloud/oci.py,sha256=teP51-C8XIsDq4JFf_vjXRyvMbOuXO7TqJT0vajrWZE,26760
+skyway-cloud_ndtrung/cloud/slurm.py,sha256=7xqkIsqELp56ljCBprrDYZnlBHbUK8P56Hh7OXB4neY,23423
+skyway_cloud_ndtrung-2.0.0.dist-info/LICENSE,sha256=HkAnRbU3IPhNLR0UWeo8l4TgOcjNodM3Gqt1C7LHlkM,1499
+skyway_cloud_ndtrung-2.0.0.dist-info/METADATA,sha256=asL8A4s-MdwW61VmPdHlX48v469iij54cM-UNt_iBTY,2044
+skyway_cloud_ndtrung-2.0.0.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+skyway_cloud_ndtrung-2.0.0.dist-info/top_level.txt,sha256=8JadB9kiu9wpubmCI6gmALrEMICEORQn0qTUsNVVoEY,21
+skyway_cloud_ndtrung-2.0.0.dist-info/RECORD,,
