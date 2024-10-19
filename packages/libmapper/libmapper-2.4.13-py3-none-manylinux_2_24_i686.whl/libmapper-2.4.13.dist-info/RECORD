@@ -1,0 +1,8 @@
+libmapper/__init__.py,sha256=taOSrP87OPU6Ek88FDo-HuFfmZSiWmLng5kDyDT4PAY,2307
+libmapper/mapper.py,sha256=5rTqZTnAuQ-ymV9hB9yFIux_-0XrMeeidVVe_C7d13M,73900
+libmapper/libmapper.so,sha256=IufHPUTicyv1CDxplDf_YZeYgRIms-WuPO3gno14dXI,797293
+libmapper.libs/liblo-a47550d1.so.7.5.0,sha256=deb_8MfBQ55KpVZeEZXDN1-AenUwoS3J7yljWs0DHUg,210317
+libmapper-2.4.13.dist-info/top_level.txt,sha256=6NhuX6V2qKGof7O_dob1tiBYom8io0XPim20P0rTerk,10
+libmapper-2.4.13.dist-info/RECORD,,
+libmapper-2.4.13.dist-info/METADATA,sha256=MtR9Vd0QLoTEkSC2JSQ_cJBOsBfr0SXQSnlh34zFNKQ,405
+libmapper-2.4.13.dist-info/WHEEL,sha256=rHPopllrTa8rmbbf9cSKR8Vk5bLNOsor53dcl0FzCFs,131
