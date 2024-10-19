@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: pyaedt-lib
+Version: 0.0.1.3
+Summary: pyaedt library for power electronics
+Home-page: https://github.com/Schwalbe262/pyaedt_lib
+Author: NEC
+Author-email: r1jae262@uos.ac.kr
+License: MIT
+Requires-Python: >=3
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: pyaedt ==0.10.1
+
