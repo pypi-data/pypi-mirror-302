@@ -1,0 +1,10 @@
+wsdatautil/__init__.py,sha256=ErHoNOHrGWwyRU8TfCeYrtPkz3sUVPyo9DUg2GEZsr0,19531
+wsdatautil/_wsframecoder.c,sha256=K6HADSuIGUEy5mD3YZGRRPzJs68Vk0sVDEk5jmAasQo,14143
+wsdatautil/_wsframecoder.pyi,sha256=LdoiDv9zYwogD90WJ967RU_F4iaAGcr6zfeX1pj254s,1902
+wsdatautil/_wsframecoder.pypy310-pp73-win_amd64.pyd,sha256=ADxjwHSaZJRLq_GyEU2HAIonNB8i4gqRYHMUdsQoeAw,15360
+wsdatautil/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+wsdatautil-0.2.dist-info/LICENSE,sha256=w3AL-PDO_sVGJoT8thLeBGnbhAsWL5QIdohQ9NyGUJY,1110
+wsdatautil-0.2.dist-info/METADATA,sha256=P9FGhEoVAnLc_yOMOL7GWMqP71z8zr1z1D3OHorhea4,4338
+wsdatautil-0.2.dist-info/WHEEL,sha256=0EIdtn2HNaVb-6r7UXhaGTRWZsuXgoLjqIP1kRHijc0,108
+wsdatautil-0.2.dist-info/top_level.txt,sha256=D6AOREi66zIuDMa1Cuzwxa0ikc0sW3xRrnHvkLgXOcA,11
+wsdatautil-0.2.dist-info/RECORD,,
