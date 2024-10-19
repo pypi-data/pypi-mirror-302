@@ -1,0 +1,9 @@
+telextron/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+telextron/t42view.py,sha256=MLfZeM00ooSaTLSVkGQdsRjTEH_HVX9YNLa0XHMTWGc,9384
+telextron/ttiparse.py,sha256=zuk4-wNq3L6_VNxXDDzzgtfVPRdI-77urwkrifH3qW8,3389
+telextron/ttiview.py,sha256=7sYwJi3E2JpF0GSiLQOZTwdiGxC1_gSDGgCLjQDeh6s,839
+telextron-0.0.2.dist-info/LICENSE,sha256=y-aMBUwVox33Ed4Hh9C7KzboHLNwUNHfFzajQCab5M4,11344
+telextron-0.0.2.dist-info/METADATA,sha256=f7Dinp2st_RBi7UyJkVfZiC_bAQK3vw2z7K7TzHD5f8,368
+telextron-0.0.2.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+telextron-0.0.2.dist-info/top_level.txt,sha256=Fmab3kvUoqLBW6c_YwnNBzhueGG-MPKYJk5soUSGcFE,10
+telextron-0.0.2.dist-info/RECORD,,
