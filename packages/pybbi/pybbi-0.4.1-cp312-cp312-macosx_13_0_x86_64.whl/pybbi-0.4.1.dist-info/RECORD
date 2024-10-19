@@ -1,0 +1,14 @@
+pybbi-0.4.1.dist-info/RECORD,,
+pybbi-0.4.1.dist-info/LICENSE,sha256=6lUHh9f9eQEWeWtV-tH69_0Kd4wr5HjnG59GIwXTEgw,1080
+pybbi-0.4.1.dist-info/WHEEL,sha256=y4Fd6WVBND1v4_o8A-f9tQoUAsk_P9vPY39-kFgEa-Y,110
+pybbi-0.4.1.dist-info/top_level.txt,sha256=mQkPCuvnpo83TgbbT24n0j_Nq7hGqok3nISOu-G3xOA,4
+pybbi-0.4.1.dist-info/METADATA,sha256=y4ADwtWcgA6x7wwrswFYOJXT-ztBehuk_LNiaoOF4B4,7705
+bbi/cbbi.pyx,sha256=RQISWrIjAlRWkZ3pqdabQnqxl4S1NodcfubrVnEGkvg,36714
+bbi/__init__.py,sha256=bsVDWlN5V11tmfspXH7RAceu2U1dc6vFshGqw_xTKz0,386
+bbi/cbbi.c,sha256=07iis77ciBF3JYEXQc817HfkDOUmuzBn-XaBxO0W48g,1210851
+bbi/cbbi.cpython-312-darwin.so,sha256=MjpjdGYFIIVxdEJ5XYUbUIUuovY3_lNWZoFfG7EF7KE,846448
+bbi/_bbi.py,sha256=MmZV1Pro5NbbrjpXA2YlTY42BiAP5P0xnB5FtNFLFxE,2243
+bbi/cbbi.pxd,sha256=FkRNuwdpCR1AosH_BZxAtrDufcyfz5fVMGXiWpMItsA,10307
+bbi/.dylibs/libpng16.16.dylib,sha256=A8F5OgVVTiFHTLj1u-I_The0m6N8zI_Tvlx-llGjLJI,209040
+bbi/.dylibs/libssl.3.dylib,sha256=dsgrbNyFGCIM_vrvSJCmXB_InmZ1fzXMtNltsAc5wzM,871888
+bbi/.dylibs/libcrypto.3.dylib,sha256=L3nxMe97nvos_v7ORGvKc1QtTnZ0ar0BwNCv_RWy6Pk,4594688
