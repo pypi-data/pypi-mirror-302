@@ -1,0 +1,9 @@
+xltree/__init__.py,sha256=PC-uIqEFVRTTOw-z9lXPYH50JFuBoXasvVXAx5-VT6w,6314
+xltree/database.py,sha256=7Jp_D_fBdlhCQ7NH8FRnUGQdaqIoLs78n50giaSdWUQ,13730
+xltree/library.py,sha256=Adf7f3hvMW41wkhtyolarQq1Z_6f7CDBlnLxYTYcEl8,478
+xltree/models.py,sha256=08XvwND8RDjaluG95bZDo-kli5gCbDon25xYPMJKQ9k,3386
+xltree/workbooks.py,sha256=sB92ANp4D2a-kAwIlkpQGOdh1GbDwMskio6dUtS2ud0,26213
+xltree-0.0.7.dist-info/METADATA,sha256=_SZpxQ1D7x7PdcHLbELlYYlQazQBPGXAXMxsf3ZIeHQ,6324
+xltree-0.0.7.dist-info/WHEEL,sha256=fl6v0VwpzfGBVsGtkAkhILUlJxROXbA3HvRL6Fe3140,105
+xltree-0.0.7.dist-info/licenses/LICENSE,sha256=AYfTXSITdofJrS2nAfb9tSFOpCMsCg97CyJkA0a-ccs,1090
+xltree-0.0.7.dist-info/RECORD,,
