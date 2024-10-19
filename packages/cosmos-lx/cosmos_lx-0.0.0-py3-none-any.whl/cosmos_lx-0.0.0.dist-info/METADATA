@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: cosmos-lx
+Version: 0.0.0
+Summary: The software is to implement the COSMOS. Please see the website for details.
+Home-page: https://github.com/Lin-Xu-lab/COSMOS.git
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.8
+License-File: LICENSE
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: scanpy
+Requires-Dist: matplotlib
+Requires-Dist: umap-learn
+Requires-Dist: scikit-learn
+Requires-Dist: seaborn
+Requires-Dist: torch
+Requires-Dist: networkx
+Requires-Dist: gudhi
+Requires-Dist: anndata
+Requires-Dist: cmcrameri
+Requires-Dist: torch-geometric
+
