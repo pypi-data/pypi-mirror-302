@@ -1,0 +1,15 @@
+README.md
+pyproject.toml
+src/gprmaxui/__init__.py
+src/gprmaxui/commands_parser.py
+src/gprmaxui/domain_commands.py
+src/gprmaxui/geometry_commands.py
+src/gprmaxui/gprmax_model.py
+src/gprmaxui/plotter.py
+src/gprmaxui/sources_commands.py
+src/gprmaxui/utils.py
+src/gprmaxui.egg-info/PKG-INFO
+src/gprmaxui.egg-info/SOURCES.txt
+src/gprmaxui.egg-info/dependency_links.txt
+src/gprmaxui.egg-info/requires.txt
+src/gprmaxui.egg-info/top_level.txt
