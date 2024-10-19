@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: cli-text-tool
+Version: 0.2
+Summary: Инструмент командной строки для поиска и замены текста в файлах с поддержкой регулярных выражений.
+Home-page: https://pypi.org/project/cli-text-tool/
+Author: Klorri
+Author-email: trosticplk@gmail.com
