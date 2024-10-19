@@ -1,0 +1,17 @@
+pandas
+jsonschema
+requests
+plotly
+reportlab
+streamlit
+pyyaml
+watchdog
+kaleido>=0.1.0
+tqdm
+Pillow
+scikit-learn
+fancyimpute
+
+[test]
+pytest
+unittest
