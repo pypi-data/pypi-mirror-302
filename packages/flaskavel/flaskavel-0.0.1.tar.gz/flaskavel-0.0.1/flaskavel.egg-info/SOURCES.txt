@@ -1,0 +1,8 @@
+LICENCE
+README.md
+setup.py
+flaskavel.egg-info/PKG-INFO
+flaskavel.egg-info/SOURCES.txt
+flaskavel.egg-info/dependency_links.txt
+flaskavel.egg-info/requires.txt
+flaskavel.egg-info/top_level.txt
