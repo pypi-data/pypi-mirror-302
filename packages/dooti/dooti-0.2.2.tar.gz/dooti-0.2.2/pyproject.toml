@@ -1,0 +1,138 @@
+[build-system]
+requires = [
+    "wheel",
+    "setuptools>=50.3.2",
+    "setuptools_scm[toml]>=3.4",
+]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools_scm]
+write_to = "src/dooti/version.py"
+write_to_template = "__version__ = \"{version}\""
+
+[project]
+name = "dooti"
+description = "Manage default file and URI scheme handlers on macOS 12.0+"
+authors = [
+    {name = "jeanluc", email = "lkubb@protonmail.com"},
+]
+keywords = [
+    "salt-extension",
+]
+license = {text = "Apache Software License"}
+classifiers = [
+    "Programming Language :: Python",
+    "Programming Language :: Cython",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Development Status :: 4 - Beta",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Operating System :: MacOS",
+    "Intended Audience :: End Users/Desktop",
+    "Topic :: System :: Systems Administration",
+    "Topic :: Utilities"
+]
+requires-python = ">= 3.10"
+dynamic = ["version"]
+dependencies = [
+    "pyobjc-core>=7.2",
+    "pyobjc-framework-UniformTypeIdentifiers>=7.2",
+    "pyyaml>=6.0",
+    "xdg>=5.1.1",
+]
+
+[project.readme]
+file = "README.rst"
+content-type = "text/x-rst"
+
+[project.urls]
+Homepage = "https://github.com/lkubb/dooti"
+Documentation = "https://lkubb.github.io/dooti/"
+Source = "https://github.com/lkubb/dooti"
+Tracker = "https://github.com/lkubb/dooti/issues"
+
+[project.optional-dependencies]
+changelog = ["towncrier==22.12.0"]
+dev = [
+    "nox[uv]>=2024.3",
+    "pre-commit>=2.21.0",
+    "pylint==3.3.1",
+]
+docs = [
+  "sphinx",
+  "sphinx-rtd-theme",
+]
+docsauto = ["sphinx-autobuild"]
+lint = [
+    "pylint==3.3.1",
+]
+tests = [
+    "pytest>=7.2.0",
+    "coverage",
+    "pytest-skip-markers",
+]
+
+[project.scripts]
+dooti = "dooti.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+exclude = ["tests"]
+
+[tool.distutils.sdist]
+owner = "root"
+group = "root"
+
+[tool.build_sphinx]
+source_dir = "docs"
+build_dir = "build/sphinx"
+
+[tool.towncrier]
+package = "dooti"
+filename = "CHANGELOG.rst"
+directory = "changelog/"
+title_format = "{version} ({project_date})"
+underlines = ["-", "~", "^"]
+
+[[tool.towncrier.type]]
+directory = "removed"
+name = "Removed"
+showcontent = true
+
+[[tool.towncrier.type]]
+directory = "deprecated"
+name = "Deprecated"
+showcontent = true
+
+[[tool.towncrier.type]]
+directory = "changed"
+name = "Changed"
+showcontent = true
+
+[[tool.towncrier.type]]
+directory = "fixed"
+name = "Fixed"
+showcontent = true
+
+[[tool.towncrier.type]]
+directory = "added"
+name = "Added"
+showcontent = true
+
+[[tool.towncrier.type]]
+directory = "security"
+name = "Security"
+showcontent = true
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+
+[tool.rstcheck]
+ignore_directives = [
+    "automodule"
+]
