@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: pypushoverreceiver
+Version: 0.0.3
+Summary: API to receive pushover messages
+Home-page: https://github.com/hawky358/pypushoverreceiver
+Author: hawky358
+Author-email: hawky358@users.github.com
+License: Apache Software License 2.0
+Requires-Python: >=3.6
+License-File: LICENSE
+Requires-Dist: requests
+Requires-Dist: websocket-client
+Requires-Dist: rel
+
+API to receive pushover messages. With use with Home assistant
