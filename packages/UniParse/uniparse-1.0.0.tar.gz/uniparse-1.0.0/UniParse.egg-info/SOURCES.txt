@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+UniParse/__init__.py
+UniParse/parser.py
+UniParse/resume_parser.py
+UniParse/resume_summary.py
+UniParse.egg-info/PKG-INFO
+UniParse.egg-info/SOURCES.txt
+UniParse.egg-info/dependency_links.txt
+UniParse.egg-info/requires.txt
+UniParse.egg-info/top_level.txt
+tests/test.py
+tests/test_parser.py
