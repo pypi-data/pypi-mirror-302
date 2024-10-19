@@ -1,0 +1,7 @@
+fastapi_tj_tpauth_jwt/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fastapi_tj_tpauth_jwt/jwt_utils.py,sha256=w0FVcNH03z9b8jP9PrT6PfHVnM9iLvGhjTYaT90M6OI,715
+fastapi_tj_tpauth_jwt/tpauth_jwt.py,sha256=MbGeKaLfwZxBiwuaopBm1IWmlAlTLJ9i_KR1NfvHwW0,5801
+fastapi_tj_tpauth_jwt-1.0.0.dist-info/LICENSE,sha256=5kpB0UDI1sIxkMkU7fkQRnyur5-UUBXebU-OX1FVh6g,1066
+fastapi_tj_tpauth_jwt-1.0.0.dist-info/METADATA,sha256=Sep29eRrPi0CDW5YdYX7TxsxpVdx5_Ru1iUAEPW3rts,3171
+fastapi_tj_tpauth_jwt-1.0.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+fastapi_tj_tpauth_jwt-1.0.0.dist-info/RECORD,,
