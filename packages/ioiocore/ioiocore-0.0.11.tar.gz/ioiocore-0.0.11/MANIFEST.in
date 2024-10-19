@@ -1,0 +1,1 @@
+include README.md LICENSE .\\ioiocore\\requirements.txt CHANGELOG
