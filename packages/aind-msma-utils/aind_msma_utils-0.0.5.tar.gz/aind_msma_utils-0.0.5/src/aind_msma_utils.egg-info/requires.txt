@@ -1,0 +1,17 @@
+aind-data-schema>=1.0.0
+aind-data-schema-models==0.4.4
+aind-smartsheet-api==0.1.1
+openpyxl
+pydantic-settings>=2.0
+pandas
+numpy
+pytz
+
+[dev]
+black
+coverage
+flake8
+interrogate
+isort
+Sphinx
+furo
