@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+VERSION
+pyproject.toml
+setup.py
+xy_singleton/Decorators.py
+xy_singleton/Singleton.py
+xy_singleton/__init__.py
+xy_singleton.egg-info/PKG-INFO
+xy_singleton.egg-info/SOURCES.txt
+xy_singleton.egg-info/dependency_links.txt
+xy_singleton.egg-info/top_level.txt

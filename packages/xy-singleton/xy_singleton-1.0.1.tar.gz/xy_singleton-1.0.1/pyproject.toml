@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+
+name = "xy_singleton"
+
+authors = [
+    {name = "helios", email = "yuyang.0515@qq.com"},
+]
+description = "Python单例的几种实现方式"
+
+dependencies = []
+
+requires-python = ">=3.11.3"
+
+dynamic = ["version"]
+
+readme = "README.md"
+
+classifiers = [
+    "Programming Language :: Python :: 3",
+]
+
+[project.scripts]
+
+[tool.setuptools.packages]
+find = {}  
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.dynamic]
+version = {file = "VERSION"}
