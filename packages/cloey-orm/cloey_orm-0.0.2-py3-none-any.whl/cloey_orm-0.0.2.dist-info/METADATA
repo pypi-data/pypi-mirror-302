@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: cloey-orm
+Version: 0.0.2
+Summary: cloey orm is a simple ORM for Fastapi, flask and other python framework
+Home-page: UNKNOWN
+Author: Jose Machava
+Author-email: jose.machava@xindiri.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: psycopg2-binary
+
+UNKNOWN
+
