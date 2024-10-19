@@ -1,0 +1,6 @@
+fakeredis
+Flask
+Flask-Cors
+gunicorn
+redis
+webkitcorepy
