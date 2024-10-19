@@ -1,0 +1,9 @@
+_atoti_server_directquery_databricks/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+_atoti_server_directquery_databricks/__resources__/plugin.jar,sha256=NelXB2GVXiwhhPvdLzDh6X3B45OZJbcO1MWvXrQFJdY,24928240
+_atoti_server_directquery_databricks/_plugin.py,sha256=EFsvenWahlG7nkNDUQviAJX3bwAUH3xY6cwVFQEZ07c,826
+_atoti_server_directquery_databricks/_resources_directory.py,sha256=kOOsXoN0C2-JZbbg3vJcW18ypPwrF0p-ELc2H6Dlo6k,88
+_atoti_server_directquery_databricks/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+atoti_server_directquery_databricks-0.9.1.dist-info/METADATA,sha256=Kg6_BUhHxrR5eMfeVs4ktdEKb4eLJYGQJI_oqJb4bYk,857
+atoti_server_directquery_databricks-0.9.1.dist-info/WHEEL,sha256=FMvqSimYX_P7y0a7UY-_Mc83r5zkBZsCYPm7Lr0Bsq4,88
+atoti_server_directquery_databricks-0.9.1.dist-info/entry_points.txt,sha256=6AiGveeZMFFCTYdRoEoyXvgZxGZFrx1ZT3xxqnxI7CM,102
+atoti_server_directquery_databricks-0.9.1.dist-info/RECORD,,
