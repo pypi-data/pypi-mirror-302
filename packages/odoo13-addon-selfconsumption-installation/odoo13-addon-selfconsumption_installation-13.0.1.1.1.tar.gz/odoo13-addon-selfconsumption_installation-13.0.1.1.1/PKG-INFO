@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: odoo13-addon-selfconsumption_installation
+Version: 13.0.1.1.1
+Requires-Python: >=3.5
+Requires-Dist: odoo13-addon-photovoltaic_products
+Requires-Dist: odoo>=13.0a,<13.1dev
+Summary: Self-consumption Installation
+Author: Librecoop
+Classifier: Programming Language :: Python
+Classifier: Framework :: Odoo
+Classifier: Framework :: Odoo :: 13.0
+
+
+        This module extends Odoo project management capabilities to adapt it to use for Ecooo's autoconsumption project needs.
+    
