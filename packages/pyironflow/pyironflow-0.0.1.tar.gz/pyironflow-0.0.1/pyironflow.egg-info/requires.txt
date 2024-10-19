@@ -1,0 +1,9 @@
+anywidget
+traitlets
+ipython
+ipywidgets
+pyiron_workflow
+
+[dev]
+watchfiles
+jupyterlab
