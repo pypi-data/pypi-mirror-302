@@ -1,0 +1,2 @@
+[console_scripts]
+buisness_metrick = buisness_metrick:main
