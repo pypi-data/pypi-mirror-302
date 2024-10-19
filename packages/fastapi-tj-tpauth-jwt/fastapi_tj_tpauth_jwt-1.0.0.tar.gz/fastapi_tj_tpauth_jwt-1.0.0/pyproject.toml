@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "fastapi-tj-tpauth-jwt"
+version = "1.0.0"
+description = "Integrate JWT into FastAPI using TP Servers authentication."
+authors = ["Duy Nguyen <duynguyen02.dev@gmail.com>"]
+readme = "README.md"
+packages = [{ include = "fastapi_tj_tpauth_jwt" }]
+repository = "https://github.com/duynguyen02/fastapi-tj-tpauth-jwt"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+tj-tpauth = "^1.1.0"
+pydantic = "^2.9.2"
+fastapi = { extras = ["standard"], version = "^0.115.2" }
+pyjwt = "^2.9.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
