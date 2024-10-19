@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: transformers_module
+Version: 0.1.0
+Summary: transformers version compatibility hack
+Home-page: 
+Author: 
+Author-email: 
+Requires-Python: >= 3.8, != 3.11.*
+Description-Content-Type: text/markdown
+
+transformers version compatibility hack
