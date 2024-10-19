@@ -1,0 +1,12 @@
+cotdantic/__init__.py,sha256=RD28Bhxg8iIvjnThUGCJNZHIucpGCwpH1n4Uth2Cgl8,568
+cotdantic/converters.py,sha256=aZz2e9LKXwiT41RsXPI9lV_OSC0QWnt_cvXTDyqrsL8,6570
+cotdantic/cot_types.py,sha256=54IrHeCtkXZHc7cT_zmNgCcc2juT0ju36h0PftgnRa8,6575
+cotdantic/listener.py,sha256=u_Kmt7TAdY_9lnWhMD5CtCB9cfq7WLS9ziRgN7pmoV4,4590
+cotdantic/models.py,sha256=cKIQQDOMtGL5Ygy3f9Ibd0bIojYsc7vJksprGzWgkXg,7562
+cotdantic/multicast.py,sha256=zzfV1sGQehIMBXN6hDv_QQTdqsW3V00muADW55lRMl0,5918
+cotdantic-1.0.4.2.dist-info/LICENSE,sha256=B5JaufNIMAuD89iqHEqelmcoAtoKKzuMvOaH9O1JNJU,1091
+cotdantic-1.0.4.2.dist-info/METADATA,sha256=M6pDzlPhhyzPBTF3TGc_lMKR745RHpk7pIRRbX4kKQI,7410
+cotdantic-1.0.4.2.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+cotdantic-1.0.4.2.dist-info/entry_points.txt,sha256=p3pealxR8PCtcGOLrpI3W9YwC_rmkw58HsjB5SKMhCc,65
+cotdantic-1.0.4.2.dist-info/top_level.txt,sha256=q_idLaNzY7hT_QV100IlKpihuNUkC49xQNp2R07xqeI,10
+cotdantic-1.0.4.2.dist-info/RECORD,,
