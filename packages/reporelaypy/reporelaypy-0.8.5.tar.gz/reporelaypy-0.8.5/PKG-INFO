@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: reporelaypy
+Version: 0.8.5
+Summary: Library for visualizing, processing and storing test results.
+Home-page: https://github.com/WebKit/WebKit/tree/main/Tools/Scripts/libraries/reporelaypy
+Author: Jonathan Bedard
+Author-email: jbedard@apple.com
+License: Modified BSD
+Keywords: git hook mirror webkit
+Classifier: Development Status :: 4 - Beta
+Classifier: Framework :: Flask
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: MacOS
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Software Development :: Version Control :: Git
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: xmltodict
+Requires-Dist: webkitcorepy
+Requires-Dist: webkitscmpy
+Requires-Dist: webkitflaskpy
+
+# reporelay
+
+Library implementing https://commits.webkit.org for the WebKit project.

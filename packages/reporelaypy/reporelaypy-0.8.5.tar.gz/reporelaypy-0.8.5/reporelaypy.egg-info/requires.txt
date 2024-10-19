@@ -1,0 +1,4 @@
+xmltodict
+webkitcorepy
+webkitscmpy
+webkitflaskpy
