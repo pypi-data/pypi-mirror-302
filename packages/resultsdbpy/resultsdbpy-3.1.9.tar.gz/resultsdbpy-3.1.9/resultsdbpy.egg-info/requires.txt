@@ -1,0 +1,11 @@
+boto3
+cassandra-driver
+fakeredis
+lupa
+pycryptodome
+redis
+xmltodict
+selenium
+webkitcorepy
+webkitscmpy
+webkitflaskpy
