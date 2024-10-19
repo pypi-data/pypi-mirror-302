@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: cli-text-tool
+Version: 0.1
+Summary: Инструмент командной строки для поиска и замены текста в файлах с поддержкой регулярных выражений.
+Home-page: https://github.com/Klorri/cli-text-tool.git
+Author: Klorri
+Author-email: trosticplk@gmail.com
+
