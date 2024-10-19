@@ -1,0 +1,4 @@
+click
+websockets
+requests
+typing-extensions
