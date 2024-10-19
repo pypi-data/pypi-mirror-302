@@ -1,0 +1,16 @@
+logicblocks/event/store/__init__.py,sha256=LIxIPNRu9jhh1YO-zeHi-jTZr0LlNAiKc_T5q80O_4Q,44
+logicblocks/event/store/adapters/__init__.py,sha256=3XQAouyDYFdEPsgb-s-IiC4S4G2twVxw3VmFS4SdGow,123
+logicblocks/event/store/adapters/base.py,sha256=yO35oq6ZvpQOGsAs8-uOGBeBgDSFkPM5Dd1iRJ3Qg80,709
+logicblocks/event/store/adapters/in_memory.py,sha256=vIYAEebHzRmxxwWDdu00LxWKcW6RL3RqsS1S0_36v84,2645
+logicblocks/event/store/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+logicblocks/event/store/store.py,sha256=K3RKXKk9te1Kpwwry6lyypCkE55IzFeSJdErpt5LEqI,5255
+logicblocks/event/store/testing/__init__.py,sha256=dh3FMuiCas3NAx4csAJN7LMUEm2c96wwUkgkxBL8Urg,147
+logicblocks/event/store/testing/builders.py,sha256=v5wQpRlo2OokZADojDpbw_cGzSVS0FBzyWFHtMlnDis,5746
+logicblocks/event/store/testing/data.py,sha256=lSGF3lYw16oyG0ROlZJVf8vQ_TfxprLm451NhrCvX8o,1888
+logicblocks/event/store/types/__init__.py,sha256=tnepzhIJs8Pb_8cwSVmyCqoCFtFXjWC-CP0OalnRKys,86
+logicblocks/event/store/types/event.py,sha256=tP2iRDSO7X80Sa4Oci49UQFUpsaYjMo2L9nTf5tqamc,3362
+logicblocks/event/store/utils.py,sha256=nxnvS6CYo76YEf1O17bZP88O0_64GOKg-oVj-bBTr5s,535
+logicblocks_event_store-0.1.3a2.dist-info/LICENSE.md,sha256=jJsa6nhmmQUQvEnfncTBQV-TPqZ00G26RKN8IlChKNA,1082
+logicblocks_event_store-0.1.3a2.dist-info/METADATA,sha256=U8m0c3_o70NdF9__sI8DhapBZGSpTjeHk6oLQ3r6WDo,572
+logicblocks_event_store-0.1.3a2.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+logicblocks_event_store-0.1.3a2.dist-info/RECORD,,
