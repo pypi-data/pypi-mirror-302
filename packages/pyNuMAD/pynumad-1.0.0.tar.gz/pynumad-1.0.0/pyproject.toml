@@ -1,0 +1,60 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pyNuMAD"
+description = "Numerical Manufacturing and Design Tool"
+readme = "README.md"
+version = "1.0.0"
+authors = [
+  {name = "Kirk Bonney", email = "klbonne@sandia.gov"},
+  {name = "Ernesto Camarena", email = "ecamare@sandia.gov"},
+  {name = "Evan Anderson", email = "evaande@sandia.gov"},
+]
+maintainers = [
+  {name = "Kirk Bonney", email = "klbonne@sandia.gov"},
+  {name = "Ernesto Camarena", email = "ecamare@sandia.gov"},
+  {name = "Evan Anderson", email = "evaande@sandia.gov"},
+]
+requires-python = ">=3.8"
+
+dependencies = [
+  "numpy", 
+  "scipy", 
+  "pandas", 
+  "matplotlib", 
+  "pyyaml", 
+  "plotly", 
+  "openpyxl",
+  ]
+
+# [project.optional-dependencies]
+# test = [
+#   "pytest >=6.0",
+# ]
+
+classifiers = [
+  "License :: OSI Approved :: BSD License",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+]
+
+[project.urls]
+Homepage = "https://github.com/sandialabs/pynumad"
+Documentation = "https://sandialabs.github.io/pyNuMAD/"
+"Bug Tracker" = "https://github.com/sandialabs/pyNuMAD/issues"
+Changelog = "https://sandialabs.github.io/pyNuMAD/release-notes.html"
+
+[tool.black]
+line-length = 140
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["src"]

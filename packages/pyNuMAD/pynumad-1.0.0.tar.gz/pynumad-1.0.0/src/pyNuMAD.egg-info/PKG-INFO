@@ -1,0 +1,55 @@
+Metadata-Version: 2.1
+Name: pyNuMAD
+Version: 1.0.0
+Summary: Numerical Manufacturing and Design Tool
+Author-email: Kirk Bonney <klbonne@sandia.gov>, Ernesto Camarena <ecamare@sandia.gov>, Evan Anderson <evaande@sandia.gov>
+Maintainer-email: Kirk Bonney <klbonne@sandia.gov>, Ernesto Camarena <ecamare@sandia.gov>, Evan Anderson <evaande@sandia.gov>
+Project-URL: Homepage, https://github.com/sandialabs/pynumad
+Project-URL: Documentation, https://sandialabs.github.io/pyNuMAD/
+Project-URL: Bug Tracker, https://github.com/sandialabs/pyNuMAD/issues
+Project-URL: Changelog, https://sandialabs.github.io/pyNuMAD/release-notes.html
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+License-File: NOTICE
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: pandas
+Requires-Dist: matplotlib
+Requires-Dist: pyyaml
+Requires-Dist: plotly
+Requires-Dist: openpyxl
+
+ # pyNuMAD
+[pyNuMAD (Python Numerical Manufacturing And Design)](https://github.com/sandialabs/pyNuMAD) is an object-oriented, open-source software program written in Python which simplifies the process of creating a three-dimensional model of a wind turbine blade. The tool organizes all blade information including aerodynamic and material properties as well as material placement into an
+intuitive API for use with other softwares. The purpose of pyNuMAD is to provide an intermediary between raw blade data in the form of yaml, excel, xml files and analytical platforms
+(ANSYS, Cubit, openFAST, etc).
+
+For any questions or support [create a new issue](https://github.com/sandialabs/pyNuMAD/issues/new) on GitHub.
+
+## Documentation
+Documentation for pynumad is accessible at https://sandialabs.github.io/pyNuMAD/.
+
+![](docs/_static/images/pyNuMAD_overview.png)
+
+## Examples
+
+Step-by-step examples are located in the [examples](https://github.com/sandialabs/pyNuMAD/tree/main/examples) folder. Follow allong in the documentation.
+
+## License
+
+pyNuMAD is licensed under BSD 3-clause license. Please see the
+[LICENSE](https://github.com/sandialabs/pyNuMAD/blob/main/LICENSE) included in
+the source code repository for more details.
+
+## Acknowledgements 
+
+pyNuMAD is currently being developed with funding from Department of Energy's
+(DOE) Energy Efficiency and Renewable Energy (EERE) Wind Energy Technology Office (WETO). 
