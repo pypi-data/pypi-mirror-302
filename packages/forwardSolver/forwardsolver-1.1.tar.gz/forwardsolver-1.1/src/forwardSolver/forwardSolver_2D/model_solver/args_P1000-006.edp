@@ -1,0 +1,94 @@
+/*
+    P1000-006 Parameters
+*/
+
+// Mesh size (mm)
+real h = getARGV("h", 0.05);
+// Domain width (mm)
+real xDomainW = getARGV("xDomainW", 70.0);
+// Domain height (mm)
+real xDomainH = getARGV("xDomainH", 30.0);
+
+// Electrode width (mm)
+real xElecW = getARGV("xElecW", 0.5);
+// Electrode height (mm) - 17um copper & 17um ENIC
+real xElecH = getARGV("xElecH", 0.017*2.0);
+// Separation of electrodes from centre to centre (mm)
+real xElecSep = getARGV("xElecSep", 1.5);
+
+// Length of material under test (mm)
+real xMaterialW = getARGV("xMaterialW", 18.0);
+// Height of material under test (mm)
+real xMaterialH = getARGV("xMaterialH", 4.0);
+// Gap between substrate and material under test (mm)
+real xMaterialGap = getARGV("xMaterialGap", 0.3);
+
+// Radius of curvature from surface of board (mm)
+real rCurvature = getARGV("rCurvature", 100000000.0);
+
+// Thickness (mm) of the solder coat
+real xSolderH = getARGV("xSolderH", 0.2);
+// Board/Membrane width (mm)
+real xSubstrateW = getARGV("xSubstrateW", 53.0);
+// Board/Membrane height (mm)
+real xSubstrateH = getARGV("xSubstrateH", 1.6);
+// Grounded wing length (mm)
+real xWingW = getARGV("xWingW", 6.28);
+// Grounded wing to electrode edge (mm)
+real xWingGap = getARGV("xWingGap", 9.66);
+
+
+// Permittivity of board substrate (-)
+real eSubstrate = getARGV("eSubstrate", 4.4);
+// Conductivity of board substrate (-)
+real sSubstrate = getARGV("sSubstrate", 0.0);
+// Permittivity of solder coat
+real eSolderCoat = getARGV("eSolderCoat", 3.0);
+// Conductivity of solder coat
+real sSolderCoat = getARGV("sSolderCoat", 0.0);
+
+
+// Mesh number ratio for wing widths (-)
+real rWingW = getARGV("rWingW", 0.3);
+
+// Mesh number ratio for material under test (-)
+real rMaterialStandard = getARGV("rMaterial", 0.3);
+// Mesh number ratio for material bottom under test (-)
+real rMaterialBottom = getARGV("rMaterial", 1.0);
+
+// Labels
+int labelDomain = 0;
+int labelWingTL = 100;
+int labelWingTR = 101;
+int labelWingBL = 102;
+int labelWingBR = 103;
+int labelBoard = 200;
+
+// Number of electrodes
+int NE = 11;
+
+real[int] regionEpsilons = [eBackground, eSubstrate, eSolderCoat];
+real[int] regionSigmas = [sBackground, sSubstrate, sSolderCoat];
+int[int] groundLabels = [labelWingTL, labelWingTR, labelWingBL, labelWingBR];
+int[int] electrodeLabels = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+
+// Derived domain parameters
+real xOriginx = -0.5*xDomainW;
+real xOriginy = -0.5*xDomainH;
+// Derived board parameters
+real xSubstratex = -0.5*xSubstrateW;
+real xSubstratey = -0.5*xSubstrateH - (1.0/6.0)*xDomainH;
+// Derived electrode parameters
+real[int] xElecCenterx(NE); xElecCenterx = 0.0;
+for(int i=0; i<NE; i++)
+{
+    xElecCenterx[i] = -(int(NE/2) * xElecSep) + (i * xElecSep);
+}
+real xElecCenterY = xSubstratey+xSubstrateH;
+real xElecGap = xElecSep - xElecW;
+// Derived wing parameters
+// Gap between wings and board edge
+real xWingBGap = xSubstrateW/2 - (xElecCenterx[NE-1]+xElecW*0.5) - xWingGap - xWingW;
+
+// Derived curvature parameters
+real yCurvatureCentre = xSubstratey + xSubstrateH + rCurvature;

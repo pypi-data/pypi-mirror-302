@@ -1,0 +1,51 @@
+/*
+    ADJUSTABLE PARAMETERS
+*/
+
+include "getARGV.idp";
+
+// Boolean to specify plots are shown (-)
+bool BPlot = getARGV("BPlot", 1);
+// Set order of integration for charge estimation
+real NChargeIntegration = getARGV("NChargeIntegration", 2);
+// Boolean to specify if each pixel is plotted sequentially (for debugging) (-)
+bool BPlotCheckEachPixel = getARGV("BPlotCheckEachPixel", 0);
+// Check the input permittivity maps
+bool BCheckInputs = getARGV("BCheckInputs", 0);
+// Permittivity of background material at STP (-)
+real eBackground = getARGV("eBackground", 1.0006);
+real sBackground = getARGV("sBackground", 0.0);
+real epsilon0 = 8.854e-3; // pF/mm
+
+// Mesh number ratio for domain (-)
+real rDomain = getARGV("rDomain", 0.1);
+// Mesh number ratio for board (-)
+real rBoard = getARGV("rBoard", 0.3);
+// High mesh number ratio for board (-)
+real rBoardHigh = getARGV("rBoardHigh", 1.0);
+// Mesh number ratio for electrode sides (-)
+real rElectrodeH = getARGV("rElectrodeH", 10.0);
+// Mesh number ratio for electrode widths (-)
+real rElectrodeW = getARGV("rElectrodeW", 2.0);
+// Mesh number ratio for ground plate (-)
+real rGroundPlate = getARGV("rGroundPlate", 0.6);
+// Mesh number ratio for material under test (-)
+real rMaterialStandard = getARGV("rMaterial", 0.7);
+// Mesh number ratio for material bottom under test (-)
+real rMaterialBottom = getARGV("rMaterial", 1.0);
+
+
+// Maximum time of simulation
+real Tmax = getARGV("Tmax", 1.0);
+// Number of discrete points in time domain
+int numTimePoints = getARGV("numTimePoints", 1000);
+// Interval at which to plot
+int plotInterval = getARGV("plotInterval", 100);
+// Derived time values
+// Number of time plots per electrode
+int numPlots = int(numTimePoints/plotInterval);
+// Time step
+real dt = Tmax/numTimePoints;
+
+// Operating frequency of the sensor. Default is 25 kHz.
+real frequency = getARGV("frequency", 25*1e3);

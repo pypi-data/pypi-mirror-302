@@ -1,0 +1,150 @@
+cout << "Running solver FD" << endl;
+// Initialise system
+Vh1<complex> uc, vc;
+Vh1 u, v;
+
+// Define the complex parameter
+Vh0<complex> gamma = permittivity - 1i*conductivity*(1.0/(frequency*2*pi));
+
+// Define system
+defineSystemVarf(gamma, uc, vc);
+matrix<complex> Asys = systemVarf(Vh1, Vh1); set(Asys, solver = "UMFPACK");
+
+// Electrode boundary conditions
+complex[int, int] B(Th.nv, NE); B = 0;
+defineElectrodeBoundaryConditions(B, electrodeLabels, uc, vc);
+matrix<complex> BCMatrix = B;
+
+// Allocate arrays for the solutions
+Vh1<complex>[int] uMatrices(NE);
+
+// Create BC picker matrix, an identity matrix which will
+// pick the correct column from BCMatrix.
+complex[int, int] U(NE, NE); U = 0.0; U.diag = 1.0;
+complex[int] rhs(Th.nv);
+
+// Solve for the electric potentials
+for (int i = 0; i < NE; i++)
+{
+    // Electrode RHS vector
+    // Pick the column of BCMatrix corresponding to electrode i being the transmit
+    rhs = BCMatrix * U(:, i);
+
+    // Solve system
+    uMatrices[i][] = Asys^-1*rhs;
+}
+
+if (BPlot)
+{
+    Vh1 ur, ui;
+    for (int i = 0; i < NE; i++)
+    {
+        string title = "Transmit Electrode " + string(i+1);
+        ur = real(uMatrices[i]);
+        ui = imag(uMatrices[i]);
+        plot(ur, fill=true, value = true, nbiso = 50, dim=2, cmm = title + ": Re{u}");
+        plot(ui, fill=true, value = true, nbiso = 50, dim=2, cmm = title + ": Im{u}");
+    }
+}
+
+//  Output system information
+string outfilename;
+/*
+    -------------------------------------------------------------------------------------
+    Extra calculation routines
+    -------------------------------------------------------------------------------------
+*/
+/*
+    Calculate capacitance matrix
+*/
+complex[int, int] Lmatrix(Th.nv, NE);
+matrix<complex> chargeMatrix;
+Vh1[int] phi(NE);
+
+if (BComputeCap)
+{
+    /*
+    Use the real part of the potential as the indicator function for the charge integrals.
+    */
+    for [i, electrode: electrodeLabels]
+    {
+        phi[i] = real(uMatrices[i]);
+        uMatrices[i] = conj(uMatrices[i]);
+    }
+
+    // Calculate charge integrals
+    cout << "Computing charge integrals" << endl;
+    buildChargeMeasurementForm(NChargeIntegration, gamma, electrodeLabels, phi, Lmatrix);
+    cout << "Done" << endl;
+    chargeMatrix = Lmatrix;
+
+    // Calculate capacitances between electrodes
+    complex[int, int] CapacitanceMatrix(NE, NE); CapacitanceMatrix = 0;
+    cout << "Calculating capacitance matrix" << endl;
+    calculateCapacitanceMatrix(uMatrices, chargeMatrix, CapacitanceMatrix);
+    cout << "Done" << endl;
+    // Save to file
+    outfilename = freefemDir + "/solver_artefacts/C.txt";
+    cout << "Saving capacitance matrix to file" << endl;
+    saveArraytoFile(CapacitanceMatrix, outfilename);
+    cout << "Done" << endl;
+}
+
+if (BComputeCapFull)
+{
+    /*
+    Use the real part of the potential as the indicator function for the charge integrals.
+    This is needed in the complex plane as we want phi to be real only.
+    */
+
+    if (BComputeCap == 0)
+    {
+        for [i, electrode: electrodeLabels]
+        {
+            phi[i] = real(uMatrices[i]);
+            uMatrices[i] = conj(uMatrices[i]);
+        }
+        // Calculate charge integrals
+        cout << "Computing charge integrals" << endl;
+        buildChargeMeasurementForm(NChargeIntegration, gamma, electrodeLabels, phi, Lmatrix);
+        cout << "Done" << endl;
+        chargeMatrix = Lmatrix;
+    }
+
+    // Initialise capacitance matrix
+    complex[int,int] CmatFull(NE, NE); CmatFull = 0.0;
+
+    // Compute measurements/capacitance matrix with diagonal as electrode to ground capacitances.
+    cout << "Computing capacitance matrix" << endl;
+    calculateCapacitanceMatrixFull(uMatrices, chargeMatrix, CmatFull);
+    cout << "Done" << endl;
+    // Save computed capacitance to file
+    outfilename = freefemDir + "/solver_artefacts/C_full.txt";
+    cout << "Saving capacitance matrix to file" << endl;
+    saveArraytoFile(CmatFull, outfilename);
+    cout << "Done" << endl;
+};
+
+if (BExportMesh)
+{
+    // Save mesh
+    cout << "Saving mesh to file" << endl;
+    outfilename = freefemDir + "/solver_artefacts/Th.vtk";
+    savevtk(outfilename, Th, bin=false);
+    cout << "Done" << endl;
+    // Save gamma array
+    cout << "Saving complex parameter array to file" << endl;
+    outfilename = freefemDir + "/solver_artefacts/eps.txt";
+    saveArraytoFile(gamma[], outfilename);
+    cout << "Done" << endl;
+    // // Save permittivity array
+    // outfilename = freefemDir + "/solver_artefacts/eps.txt";
+    // cout << "Saving permittivity array to file" << endl;
+    // saveArraytoFile(permittivity[], outfilename);
+    // cout << "Done" << endl;
+    // // Save conductivity array
+    // outfilename = freefemDir + "/solver_artefacts/sig.txt";
+    // cout << "Saving conductivity array to file" << endl;
+    // saveArraytoFile(conductivity[], outfilename);
+    // cout << "Done" << endl;
+}

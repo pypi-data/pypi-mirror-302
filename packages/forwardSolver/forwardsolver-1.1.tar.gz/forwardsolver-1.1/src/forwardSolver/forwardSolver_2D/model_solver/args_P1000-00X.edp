@@ -1,0 +1,22 @@
+/*
+    P1000-00X Parameters
+*/
+
+// Mesh size (mm)
+real h = getARGV("h", 0.05);
+
+// Electrode width (mm)
+real xElecW = getARGV("xElecW", 1.0);
+// Separation of electrodes from centre to centre (mm)
+real xElecSep = getARGV("xElecSep", 1e-2/0.3643);
+
+// Number of electrodes
+int NE = 2;
+
+real[int] regionEpsilons = [eBackground];
+real[int] regionSigmas = [sBackground];
+int[int] groundLabels;
+int[int] electrodeLabels = [1, 2];
+
+// Labels
+int labelDomain = 0;

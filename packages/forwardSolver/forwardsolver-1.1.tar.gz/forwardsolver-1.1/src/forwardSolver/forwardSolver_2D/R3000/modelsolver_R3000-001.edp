@@ -1,0 +1,152 @@
+verbosity = 0;
+include "geometry_P3000-001.edp";
+real EPSILON0 = 8.854;  // Permittivity of free space (fF/mm)
+
+// ADJUSTABLE PARAMETERS
+string freefemDir = getARGV("freefemDir", "./"); // string to specify where freefem files will be saved
+bool BComputeCap = getARGV("BComputeCap", 1); // specify whether or not to compute and export capacitance matrix
+bool BComputeTimeSim = getARGV("BComputeTimeSim", 1); // specify whether or not to compute and export voltage and charge matrices
+real risetime = getARGV("risetime", 120e-9); // Rise time of impulse function
+real maxvolt = getARGV("maxvolt", 2.0); // Maximum voltage of the impulse function
+
+real epsROI = getARGV("epsROI", 2.0); // relative permittivity in ROI
+real epsSubstrate = getARGV("epsSubstrate", 4.0); // relative permittivity in ROI
+real sigROI = getARGV("sigROI", 0.02*1e12); // conductivity in ROI (fF s / mm)
+
+Vh0 epsilon, sigma;
+
+// Define material parameters
+epsilon = 1.0 + (epsROI-1.0)*(region == ROIregion) 
+              + (epsSubstrate-1.0)*(region == substrateregion);
+epsilon = EPSILON0*epsilon;
+sigma = sigROI*(region == ROIregion);
+
+if(debug){
+    plot(epsilon, fill=1, cmm = "epsilon");
+    plot(sigma, fill=1, cmm = "sigma");
+}
+
+macro grad(u) [dx(u), dy(u)]//End of macro
+
+Vh1 uu, vv; // placeholder FEM functions
+
+varf a1(uu, vv) = int2d(Th)(epsilon*grad(uu)'*grad(vv));
+varf aBC(uu, vv) = on(1,2,3,4,5,6,7,8,9,10,11,12, uu = 1.0)
+                  + on(0, uu = 0.0);
+varf aSig(uu, vv) = int2d(Th)(sigma*grad(uu)'*grad(vv));
+
+macro B(i)
+    varf B#i(uu, vv) = on(i, uu = 1.0);
+    real[int] b#i = B#i(0, Vh1);
+// End of macro
+
+macro L(i, psi)
+    varf L#i(uu, vv) = int2d(Th)(epsilon*grad(psi[i-1])'*grad(vv));
+    real[int] l#i = L#i(0, Vh1);
+    l#i = -1*l#i;
+// End of macro
+
+B(1); B(2); B(3); B(4); B(5); B(6);
+B(7); B(8); B(9); B(10); B(11); B(12);
+
+matrix bMat = [[b1, b2, b3, b4, b5, b6, b7, b8, b9, b10, b11, b12]];
+real[int, int] Umat(Nelectrodes, Nelectrodes); Umat = 0.0;
+for(int i=0; i<Nelectrodes; i++){
+    Umat(i,i) = 1.0;
+}
+
+matrix A1 = a1(Vh1, Vh1);
+matrix ABC = aBC(Vh1, Vh1);
+matrix Asig = aSig(Vh1, Vh1);
+
+matrix A = A1 + ABC;
+set(A, solver = "UMFPACK");
+Vh1[int] uMatrix(Nelectrodes);
+
+for(int i=0; i<Nelectrodes; i++){
+    real[int] bb = bMat*Umat(:,i);
+    uMatrix[i][] = A^-1*bb;
+    if( debug ){
+        plot(uMatrix[i], fill=1, nbiso = 50, value = 1);
+    }
+}
+L(1, uMatrix); L(2, uMatrix); L(3, uMatrix);
+L(4, uMatrix); L(5, uMatrix); L(6, uMatrix);
+L(7, uMatrix); L(8, uMatrix); L(9, uMatrix);
+L(10, uMatrix); L(11, uMatrix); L(12, uMatrix);
+
+matrix lMat = [[l1, l2, l3, l4, l5, l6, l7, l8, l9, l10, l11, l12]];
+
+if( BComputeCap ){
+    real[int,int] Cmat(Nelectrodes, Nelectrodes); Cmat = 0.0;
+
+    for(int i=0; i<Nelectrodes; i++){
+        Cmat(i,:) = lMat'*uMatrix[i][];
+    }
+    if( debug ){
+        cout << Cmat << endl;
+    }
+}
+
+
+if( BComputeTimeSim ){
+    /*
+    Computes the capacitance matrix in time. 
+
+
+    */
+    // CONFIGURABLE PARAMETERS
+    real Tmax = getARGV("Tmax", 1e-6); // Maximum time of simulation
+    real NtimePoints = getARGV("NtimePoints",1e3); // Number of discrete points in time domain
+    
+    // DERIVED PARAMETERS
+    real dt = Tmax / NtimePoints; // Compute time step
+
+    // Set up solver of LHS
+    matrix A = A1 + dt*Asig + ABC;
+    set(A, solver = "UMFPACK");
+
+    // Compute constant charge calculation matrix    
+    Vh1[int] psiMat(Nelectrodes); Vh1 tmp;
+    for(int i=0; i<Nelectrodes; i++){
+    solve laplace(tmp, vv) = int2d(Th)(grad(tmp)'*grad(vv))
+                            + on(0,1,2,3,4,5,6,7,8,9,10,11,12, tmp = 0.0) 
+                            + on(i+1, tmp = 1.0);
+    psiMat[i][] = tmp[];
+    }
+    L(1, psiMat); L(2, psiMat); L(3, psiMat);
+    L(4, psiMat); L(5, psiMat); L(6, psiMat);
+    L(7, psiMat); L(8, psiMat); L(9, psiMat);
+    L(10, psiMat); L(11, psiMat); L(12, psiMat);
+
+    matrix lMat = [[l1, l2, l3, l4, l5, l6, l7, l8, l9, l10, l11, l12]];
+    
+    // Initial condition
+    real[int] bb(Vh1.ndof); bb = 0.0;
+
+    // Initialise measurement matrix
+    real[int,int] capTimeSeries(int(NtimePoints), Nelectrodes); capTimeSeries = 0.0;
+
+    func real BCfunc(real t, real risetime, real maxvolt){
+        if(t <= risetime){
+            return maxvolt/(1+exp(-t*risetime));
+        }
+        if(t > risetime){
+            return maxvolt;
+        }
+    }
+    // Time step solution
+    for(int i=0; i<int(NtimePoints)-1; i++){
+        bb = A1*uu[]; 
+        real[int] tmp = BCfunc(i*dt, risetime, maxvolt)*Umat(:,4);
+        bb += bMat*tmp;
+        uu[] = A^-1*bb;
+        capTimeSeries(i,:) = lMat'*uu[];
+        capTimeSeries(i,:) = capTimeSeries(i,:)/BCfunc(i*dt, risetime, maxvolt);
+        if( debug ){
+            plot(uu, fill = 1, value = 1, nbiso = 50, cmm = "time = " + i*dt);
+        }
+    }
+ofstream ff("./captest.txt");
+ff << capTimeSeries <<endl;
+}

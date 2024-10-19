@@ -1,0 +1,267 @@
+/*
+
+    P3000-005 geometry
+
+*/
+
+/*
+    Define rectangular border covering (xLeft, xRight) x (yBottom, yTop)
+    Will define for borders called <str>Left, <str>Right, <str>Top, <str>Bottom
+    e.g. if str = domain, domainLeft, domainRight, domainTop, domainBottom
+*/
+macro buildRectangle(str, xLeft, xRight, yBottom, yTop, labelLayer)
+    border str#Left(t=yTop, yBottom)
+    {
+        x = xLeft;
+        y = t;
+        label = labelLayer;
+    };
+    border str#Right(t = yBottom, yTop)
+    {
+        x = xRight;
+        y = t;
+        label = labelLayer;
+    };
+    border str#Bottom(t = xLeft, xRight)
+    {
+        x = t;
+        y = yBottom;
+        label = labelLayer;
+    };
+    border str#Top(t = xRight, xLeft)
+    {
+        x = t;
+        y = yTop;
+        label = labelLayer;
+    };
+// End of macro
+
+/*
+    Define Electrode domain including
+    - electrode
+    - gap between electrodes
+*/
+macro buildElectrodeDomain(i, xLeft, yBottom, labelGap)
+
+    buildRectangle(Elec#i#, xLeft, xLeft + xElecW, yBottom, yBottom + xElecH, i)
+
+    border Elec#i#Gap(t = xLeft + xElecW, xLeft + xElecW + xElecGap)
+    {
+        x = t;
+        y = yBottom;
+        label = labelGap;
+    };
+// End of macro
+
+/*
+----------------------------------------------------------------------
+Build computational domain
+----------------------------------------------------------------------
+*/
+// Build border of computational domain
+buildRectangle(
+    domain,
+    xOriginx, xOriginx + xDomainW, xOriginy, xOriginy + xDomainH,
+    labelDomain
+)
+
+// Build board
+buildRectangle(
+    board,
+    xSubstratex, xSubstratex + xSubstrateW, xSubstratey, xSubstratey + xSubstrateH,
+    labelBoard
+)
+
+// Build ground plate
+buildRectangle(
+    groundPlate,
+    xSubstratex, xSubstratex + xSubstrateW,
+    xSubstratey + xSubstrateH + 0.5*xElecH - xGroundPlateDepthBelowElec ,
+    xSubstratey + xSubstrateH + 0.5*xElecH - xGroundPlateDepthBelowElec + xBottomGroundPlateH,
+    labelGnd
+)
+
+// Build mylar layer above board
+buildRectangle(
+    mylar,
+    xSubstratex, xSubstratex + xSubstrateW,
+    xSubstratey + xSubstrateH + xMylarGap,
+    xSubstratey + xSubstrateH + xMylarGap + xMylarH,
+    labelMylar
+)
+
+// Build plastic layer above board
+buildRectangle(
+    plastic,
+    xSubstratex, xSubstratex + xSubstrateW,
+    xSubstratey + xSubstrateH + xMylarGap + xMylarH,
+    xSubstratey + xSubstrateH + xMylarGap + xMylarH + xPlasticH,
+    labelPlastic
+)
+
+/*
+----------------------------------------------------------------------
+Electrode domains
+----------------------------------------------------------------------
+*/
+buildElectrodeDomain(1, xElecLeft[0], yElecBottom, labelBoard)
+buildElectrodeDomain(2, xElecLeft[1], yElecBottom, labelBoard)
+buildElectrodeDomain(3, xElecLeft[2], yElecBottom, labelBoard)
+buildElectrodeDomain(4, xElecLeft[3], yElecBottom, labelBoard)
+buildElectrodeDomain(5, xElecLeft[4], yElecBottom, labelBoard)
+buildElectrodeDomain(6, xElecLeft[5], yElecBottom, labelBoard)
+buildElectrodeDomain(7, xElecLeft[6], yElecBottom, labelBoard)
+buildElectrodeDomain(8, xElecLeft[7], yElecBottom, labelBoard)
+buildElectrodeDomain(9, xElecLeft[8], yElecBottom, labelBoard)
+buildElectrodeDomain(10, xElecLeft[9], yElecBottom, labelBoard)
+buildElectrodeDomain(11, xElecLeft[10], yElecBottom, labelBoard)
+buildElectrodeDomain(12, xElecLeft[11], yElecBottom, labelBoard)
+buildElectrodeDomain(13, xElecLeft[12], yElecBottom, labelBoard)
+buildElectrodeDomain(14, xElecLeft[13], yElecBottom, labelBoard)
+buildElectrodeDomain(15, xElecLeft[14], yElecBottom, labelBoard)
+
+real xElec0Gap = xElecLeft[0] -  xSubstratex; 
+border Elec0Gap(t = xSubstratex, xSubstratex + xElec0Gap)
+{
+    x = t;
+    y = yElecBottom;
+    label = labelBoard;
+};
+
+real xElec16Gap = xSubstratex + xSubstrateW - (xElecLeft[14] + xElecW + xElecGap);
+border Elec16Gap(t = xElecLeft[14] + xElecW + xElecGap, xSubstratex + xSubstrateW)
+{
+    x = t;
+    y = yElecBottom;
+    label = labelBoard;
+};
+
+/*
+----------------------------------------------------------------------
+Generate the mesh
+----------------------------------------------------------------------
+*/
+
+real regionOffsetX = 0.0;
+real regionOffsetY = -xElecH; 
+
+include "pixel_region.edp"
+
+// Macro to generate the mesh.
+macro createMesh(h)
+  mesh Th = buildmesh(
+      domainLeft(ceil(xDomainH*rDomain/h))+domainRight(ceil(xDomainH*rDomain/h))
+      +domainBottom(ceil(xDomainW*rDomain/h))+domainTop(ceil(xDomainW*rDomain/h))
+
+      +boardLeft(ceil(xSubstrateH*rBoardHigh/h))+boardRight(ceil(xSubstrateH*rBoardHigh/h))
+      +boardBottom(ceil(xSubstrateW*rBoardHigh/h))
+
+      +Elec1Left(-ceil(xElecH*rElectrodeH/h))+Elec1Right(-ceil(xElecH*rElectrodeH/h))
+      +Elec1Bottom(-ceil(xElecW*rElectrodeW/h))+Elec1Top(-ceil(xElecW*rElectrodeW/h))
+      +Elec1Gap(ceil(xElecGap*rBoardHigh/h))
+
+      +Elec2Left(-ceil(xElecH*rElectrodeH/h))+Elec2Right(-ceil(xElecH*rElectrodeH/h))
+      +Elec2Bottom(-ceil(xElecW*rElectrodeW/h))+Elec2Top(-ceil(xElecW*rElectrodeW/h))
+      +Elec2Gap(ceil(xElecGap*rBoardHigh/h))
+
+      +Elec3Left(-ceil(xElecH*rElectrodeH/h))+Elec3Right(-ceil(xElecH*rElectrodeH/h))
+      +Elec3Bottom(-ceil(xElecW*rElectrodeW/h))+Elec3Top(-ceil(xElecW*rElectrodeW/h))
+      +Elec3Gap(ceil(xElecGap*rBoardHigh/h))
+
+      +Elec4Left(-ceil(xElecH*rElectrodeH/h))+Elec4Right(-ceil(xElecH*rElectrodeH/h))
+      +Elec4Bottom(-ceil(xElecW*rElectrodeW/h))+Elec4Top(-ceil(xElecW*rElectrodeW/h))
+      +Elec4Gap(ceil(xElecGap*rBoardHigh/h))
+
+      +Elec5Left(-ceil(xElecH*rElectrodeH/h))+Elec5Right(-ceil(xElecH*rElectrodeH/h))
+      +Elec5Bottom(-ceil(xElecW*rElectrodeW/h))+Elec5Top(-ceil(xElecW*rElectrodeW/h))
+      +Elec5Gap(ceil(xElecGap*rBoardHigh/h))
+
+      +Elec6Left(-ceil(xElecH*rElectrodeH/h))+Elec6Right(-ceil(xElecH*rElectrodeH/h))
+      +Elec6Bottom(-ceil(xElecW*rElectrodeW/h))+Elec6Top(-ceil(xElecW*rElectrodeW/h))
+      +Elec6Gap(ceil(xElecGap*rBoardHigh/h))
+
+      +Elec7Left(-ceil(xElecH*rElectrodeH/h))+Elec7Right(-ceil(xElecH*rElectrodeH/h))
+      +Elec7Bottom(-ceil(xElecW*rElectrodeW/h))+Elec7Top(-ceil(xElecW*rElectrodeW/h))
+      +Elec7Gap(ceil(xElecGap*rBoardHigh/h))
+
+      +Elec8Left(-ceil(xElecH*rElectrodeH/h))+Elec8Right(-ceil(xElecH*rElectrodeH/h))
+      +Elec8Bottom(-ceil(xElecW*rElectrodeW/h))+Elec8Top(-ceil(xElecW*rElectrodeW/h))
+      +Elec8Gap(ceil(xElecGap*rBoardHigh/h))
+
+      +Elec9Left(-ceil(xElecH*rElectrodeH/h))+Elec9Right(-ceil(xElecH*rElectrodeH/h))
+      +Elec9Bottom(-ceil(xElecW*rElectrodeW/h))+Elec9Top(-ceil(xElecW*rElectrodeW/h))
+      +Elec9Gap(ceil(xElecGap*rBoardHigh/h))
+
+      +Elec10Left(-ceil(xElecH*rElectrodeH/h))+Elec10Right(-ceil(xElecH*rElectrodeH/h))
+      +Elec10Bottom(-ceil(xElecW*rElectrodeW/h))+Elec10Top(-ceil(xElecW*rElectrodeW/h))
+      +Elec10Gap(ceil(xElecGap*rBoardHigh/h))
+
+      +Elec11Left(-ceil(xElecH*rElectrodeH/h))+Elec11Right(-ceil(xElecH*rElectrodeH/h))
+      +Elec11Bottom(-ceil(xElecW*rElectrodeW/h))+Elec11Top(-ceil(xElecW*rElectrodeW/h))
+      +Elec11Gap(ceil(xElecGap*rBoardHigh/h))
+
+      +Elec12Left(-ceil(xElecH*rElectrodeH/h))+Elec12Right(-ceil(xElecH*rElectrodeH/h))
+      +Elec12Bottom(-ceil(xElecW*rElectrodeW/h))+Elec12Top(-ceil(xElecW*rElectrodeW/h))
+      +Elec12Gap(ceil(xElecGap*rBoardHigh/h))
+
+      +Elec13Left(-ceil(xElecH*rElectrodeH/h))+Elec13Right(-ceil(xElecH*rElectrodeH/h))
+      +Elec13Bottom(-ceil(xElecW*rElectrodeW/h))+Elec13Top(-ceil(xElecW*rElectrodeW/h))
+      +Elec13Gap(ceil(xElecGap*rBoardHigh/h))
+
+      +Elec14Left(-ceil(xElecH*rElectrodeH/h))+Elec14Right(-ceil(xElecH*rElectrodeH/h))
+      +Elec14Bottom(-ceil(xElecW*rElectrodeW/h))+Elec14Top(-ceil(xElecW*rElectrodeW/h))
+      +Elec14Gap(ceil(xElecGap*rBoardHigh/h))
+
+      +Elec15Left(-ceil(xElecH*rElectrodeH/h))+Elec15Right(-ceil(xElecH*rElectrodeH/h))
+      +Elec15Bottom(-ceil(xElecW*rElectrodeW/h))+Elec15Top(-ceil(xElecW*rElectrodeW/h))
+      +Elec15Gap(ceil(xElecGap*rBoardHigh/h))
+
+      +Elec0Gap(ceil(xElec0Gap*rBoardHigh/h))+Elec16Gap(ceil(xElec16Gap*rBoardHigh/h))
+
+      +groundPlateLeft(-ceil(xBottomGroundPlateH*rGroundPlate/h))+groundPlateRight(-ceil(xBottomGroundPlateH*rGroundPlate/h))
+      +groundPlateBottom(-ceil(xSubstrateW*rGroundPlate/h))+groundPlateTop(-ceil(xSubstrateW*rGroundPlate/h))
+
+      +mylarLeft(ceil(xMylarH*rBoardHigh/h))+mylarRight(ceil(xMylarH*rBoardHigh/h))
+      +mylarBottom(ceil(xSubstrateW*rBoardHigh/h))+mylarTop(ceil(xSubstrateW*rBoardHigh/h))
+
+      +plasticLeft(ceil(xPlasticH*rBoardHigh/h))+plasticRight(ceil(xPlasticH*rBoardHigh/h))
+      +plasticTop(ceil(xSubstrateW*rBoardHigh/h))
+
+      +pixelRegion
+  );
+// End of macro
+
+// Generate mesh
+createMesh(h)
+
+if (BPlot) { plot(Th); };
+
+/*
+----------------------------------------------------------------------
+                    Define region labels
+----------------------------------------------------------------------
+*/
+
+// Find region corresponding to block and membrane
+int back = Th(0.0, xOriginy + 1e-3).region;
+int substrate = Th(0.0, xSubstratey + 1e-3).region;
+int mylar = Th(0.0, xSubstratey + xSubstrateH + xMylarGap + 1e-3).region;
+int plastic = Th(0.0, xSubstratey + xSubstrateH + xMylarGap + xMylarH + 1e-3).region;
+
+int[int] regionLabels = [back, substrate, mylar, plastic];
+string[string] regionNames;
+regionNames[0] = "background";
+regionNames[1] = "substrate";
+regionNames[2] = "mylar";
+regionNames[3] = "plastic";
+
+int[int] pixelRegions = FindPixelRegions(pixelCenterX, pixelCenterY, Th);
+
+// Initialise and build epsilon map
+real[int] pixelEpsilons(pixelRegions.n);
+// initialises pixels to the background.
+pixelEpsilons = eBackground;
+// Read and build epsilon map
+real[int] pixelSigmas(pixelRegions.n);
+// initialises pixels to background
+pixelSigmas = sBackground; 

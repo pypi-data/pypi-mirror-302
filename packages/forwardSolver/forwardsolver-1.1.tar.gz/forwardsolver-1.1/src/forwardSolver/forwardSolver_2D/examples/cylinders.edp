@@ -1,0 +1,91 @@
+/*
+Simple example with 2 or 3 cylinders in space
+*/
+verbosity = 0;
+include "getARGV.idp";
+
+// ADJUSTABLE PARAMETERS
+real Height = getARGV("Height", 20.0);
+real Width = getARGV("Width", 30.0);
+real Separation = getARGV("Separation", 4.0);
+real eBackground = getARGV("eBackground", 1.0006);
+real xOffsetVert = getARGV("xOffsetVert", 0.0);
+real rCylinder = getARGV("rCylinder", 1.0);
+int MM = getARGV("MM", 1);
+int NCylinders = getARGV("NCylinders", 3);
+
+real rMeshDomain = getARGV("rMeshDomain", 1.0);
+real rMeshCylinder = getARGV("rMeshCylinder", 10.0);
+
+// STATIC PARAMETERS
+real HalfWidth = Width/2;
+real HalfHeight = Height/2;
+real Circumference = 2.0*pi*rCylinder;
+real EPSILON0 = 8.8541878176;  // pF/m
+real CAPFORDEFAULTPARAMS = 13.47;  // https://www.emisoftware.com/calculator/wire-pair-capacitance/
+int labelLeft = 1;
+int labelMid = 2;
+int labelRight = 3;
+int labelDomain = 100;
+
+
+border Left(t=-HalfHeight, HalfHeight){x = -HalfWidth; y = -t; label = labelDomain;};
+border Right(t=HalfHeight, -HalfHeight){x = HalfWidth; y=-t; label = labelDomain;};
+border Top(t=HalfWidth, -HalfWidth){x = t; y=HalfHeight; label = labelDomain;};
+border Bottom(t=-HalfWidth, HalfWidth){x = t; y=-HalfHeight; label = labelDomain;};
+
+border CircleLeft(t=2*pi, 0){x = rCylinder*cos(t)-Separation; y = rCylinder*sin(t); label = labelLeft;};
+border CircleMid(t=2*pi, 0){x = rCylinder*cos(t); y = rCylinder*sin(t)+xOffsetVert; label = labelMid;};
+border CircleRight(t=2*pi, 0){x = rCylinder*cos(t)+Separation; y = rCylinder*sin(t); label = labelRight;};
+
+mesh Th;
+if(NCylinders == 3){
+    Th = buildmesh(
+        Left(ceil(MM*rMeshDomain*Height))
+        +Right(ceil(MM*rMeshDomain*Height))
+        +Top(ceil(MM*rMeshDomain*Width))
+        +Bottom(ceil(MM*rMeshDomain*Width))
+
+        +CircleMid(ceil(MM*rMeshCylinder*Circumference))
+        +CircleLeft(ceil(MM*rMeshCylinder*Circumference))
+        +CircleRight(ceil(MM*rMeshCylinder*Circumference)));
+}
+if(NCylinders == 2){
+    Th = buildmesh(
+        Left(ceil(MM*rMeshDomain*Height))
+        +Right(ceil(MM*rMeshDomain*Height))
+        +Top(ceil(MM*rMeshDomain*Width))
+        +Bottom(ceil(MM*rMeshDomain*Width))
+
+        +CircleLeft(ceil(MM*rMeshCylinder*Circumference))
+        +CircleRight(ceil(MM*rMeshCylinder*Circumference)));
+    cout << "Ideal 2-electrode capacitance with default parameters: " << CAPFORDEFAULTPARAMS << " picoFarads" << endl;
+}
+
+plot(Th, wait=false);
+
+fespace Vh1(Th, P1);  // Finite element space of 2-dimensional linear polynomials (Ax + By + C = f)
+Vh1 uu, uuIndicator, vv;  // Coefficients of expansion of the solution in the finite element space - these can be thought of as the degrees of freedom of the space (NB: intermediate variables tend to have two characters)
+
+macro grad(u) [dx(u), dy(u)]//
+
+macro indicatorFunction(bdrylabel)
+    solve lp(uuIndicator, vv) = int2d(Th)(grad(uuIndicator)'*grad(vv))
+        + on(labelLeft,labelMid,labelRight, uuIndicator = 0.0)
+        + on(labelDomain, uuIndicator = 0.0)
+        + on(bdrylabel, uuIndicator = 1.0);
+    // End of macro
+
+Vh1[int] psi(1);
+indicatorFunction(labelRight);
+psi[0][] = uuIndicator[];
+plot(uuIndicator);
+
+solve Laplace(uu, vv) = int2d(Th)(eBackground*grad(uu)'*grad(vv)) + on(1, uu = 1) + on(2,3, uu = 0);
+plot(uu, fill=true, nbiso=40, value=true);
+
+real C = -int2d(Th)(EPSILON0*eBackground*grad(uu)'*grad(psi[0]));
+cout << "2D Calculated Capacitance (Left to Right): " << C << " picoFarads" << endl;
+
+C = -int1d(Th, 3)(EPSILON0*eBackground*grad(uu)'*[N.x, N.y]);
+cout << "1D Calculated Capacitance (Left to Right): " << C << " picoFarads" << endl;

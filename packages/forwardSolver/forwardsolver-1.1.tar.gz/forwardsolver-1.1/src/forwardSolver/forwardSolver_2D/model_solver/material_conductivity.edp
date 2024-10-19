@@ -1,0 +1,26 @@
+/*
+    Define conductivity map
+*/
+
+if(BReadPixelSigma == 1){
+    // Reads pixel epsilon values from file
+    string pixelSigmaFile = getARGV("pixelSigmaFile", "pixelSigmas.txt");
+    readPixelFile(pixelSigmaFile, pixelSigmas)
+};
+
+// Base conductivity map for this geometry.
+Vh0 conductivityBase;
+buildMaterialParameterBase(conductivityBase, regionLabels, regionSigmas);
+
+Vh0 conductivityPixels = 0;
+for [i, pixel : pixelRegions]
+{
+    conductivityPixels = conductivityPixels + pixelSigmas[i] * (region == pixel);
+}
+
+// Finalise conductivity
+Vh0 conductivity = conductivityBase + conductivityPixels;
+
+if (BPlot){
+    plot(conductivity, fill=true, value=true, wait=false, dim=2, cmm="Conductivity Map");
+}

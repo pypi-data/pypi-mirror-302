@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: forwardSolver
+Version: 1.1
+Summary: Zedsen Forward Solver
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: ==3.10.6
+Description-Content-Type: text/markdown
+
+# ForwardSolver
+
+## Overview
+Packaged ForwardSolver code to simulate Z-Scanner and other board configurations
+
+## Setup
+
+### .env File
+To change the parameters, create a `.env` file in the root directory of the project. The file should look like this:
+
+```
+# Caching settings
+CACHE_DIR=default  # if not default enter full directory path
+CACHE_OUTPUT=False  # save output to cache
+CACHE_INPUT=False  # use cache as input
+CACHE_INPUT_VOLTAGE=True  # use cached voltages as input
+
+# Freefem settings
+CREATE_PARALLEL_SUBDIR=True  # Saves the freefem outputs and logs into their own subdirectories for each (unique) run
+DELETE_FREEFEM_FILES=True
+IS_CAP_CALCULATED=False
+IS_FULL_CAP_CALCULATED=False
+IS_VOLTAGE_MAT_CALCULATED=True
+IS_PYTHON_USED_AS_SOLVER=False
+PHYSICS_MODEL=0  # Options: 0 = time domain dielectric, 1 = frequency domain conductive dielectric
+EXPORT_MESH=False
+```
+
+Replace the placeholder values with your actual configuration. To read in the new constants, run forwardSolver.scripts.constants::load_custom_config
+
+## Running the Testing Script
+
+To run a simple simulation, run forwardSolver.scripts.testing. Expected behaviour is the plotting of simple capacitances. 
+
+## License
+This project is licensed under . See the LICENSE file for more details.

@@ -1,0 +1,91 @@
+/*
+    P3000-005 Parameters
+*/
+
+// Mesh size (mm)
+real h = getARGV("h", 0.4);
+// Domain width (mm)
+real xDomainW = getARGV("xDomainW", 280.0);
+// Domain height (mm)
+real xDomainH = getARGV("xDomainH", 150.0);
+
+// Electrode width (mm)
+real xElecW = getARGV("xElecW", 6.84);
+// Electrode height (mm)
+real xElecH = getARGV("xElecH", 0.035);
+// Separation of electrodes from centre to centre (mm)
+real xElecSep = getARGV("xElecSep", 8.24);
+
+// Length of material under test (mm)
+real xMaterialW = getARGV("xMaterialW", 61.0);
+// Height of material under test (mm)
+real xMaterialH = getARGV("xMaterialH", 30.0);
+// Gap between substrate and material under test (mm)
+real xMaterialGap = getARGV("xMaterialGap", 0.3);
+
+// Radius of curvature from surface of board (mm)
+real rCurvature = getARGV("rCurvature", 100000000.0);
+
+// Board/Membrane width (mm)
+real xSubstrateW = getARGV("xSubstrateW", 140.0);
+// Board/Membrane height (mm)
+real xSubstrateH = getARGV("xSubstrateH", 1.6);
+// Distance of the ground plate below the board
+real xGroundPlateDepthBelowElec = getARGV("xGroundPlateDepthBelowElec", 6.1);
+// Thickness of the ground plate below the board (mm)
+real xBottomGroundPlateH = getARGV("xBottomGroundPlateH", 0.2);
+// Thickness of the air gap between the board and mylar layer(mm)
+real xMylarGap = getARGV("xMylarGap", 0.125);
+// Thickness of the mylar layer(mm)
+real xMylarH = getARGV("xMylarH", 0.375);
+// Thickness of the plastic layer(mm)
+real xPlasticH = getARGV("xPlasticH", 1.0);
+
+// Permittivity of board substrate (-)
+real eSubstrate = getARGV("eSubstrate", 4.4);
+// Permittivity of board substrate (-)
+real sSubstrate = getARGV("sSubstrate", 0.0);
+// Permittivity of mylar layer (-)
+real eMylar = getARGV("eMylar", 3.0);
+// Permittivity of mylar layer (-)
+real sMylar = getARGV("sMylar", 0.0);
+// Permittivity of plastic layer (-)
+real ePlastic = getARGV("ePlastic", 2.81);
+// Permittivity of plastic layer (-)
+real sPlastic = getARGV("sPlastic", 0.0);
+
+
+// Labels
+int labelDomain = 0;
+int labelBoard = 200;
+int labelMylar = 301;
+int labelPlastic = 302;
+int labelGnd = 201;
+int numSensitivitySlice = getARGV("numSensitivitySlice", 300); //Number of points in vertical slices
+
+// Number of electrodes
+int NE = 15;
+
+real[int] regionEpsilons = [eBackground, eSubstrate, eMylar, ePlastic];
+real[int] regionSigmas = [sBackground, sSubstrate, sMylar, sPlastic];
+int[int] groundLabels = [labelGnd];
+int[int] electrodeLabels = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
+
+// Derived domain parameters
+real xOriginx = -0.5*xDomainW;
+real xOriginy = -0.5*xDomainH;
+// Derived board parameters
+real xSubstratex = -0.5*xSubstrateW;
+real xSubstratey = -(1.0/6.0)*xDomainH;
+// Derived electrode parameters
+real[int] xElecLeft(NE); xElecLeft = 0.0;
+for(int i=0; i<NE; i++){xElecLeft[i] = -(int(NE/2)*xElecSep)+(i*xElecSep)-0.5*xElecW;}
+real yElecBottom = xSubstratey+xSubstrateH;
+real xElecGap = xElecSep - xElecW;
+
+// Ground plate depth
+assert(xGroundPlateDepthBelowElec > xSubstrateH);
+real xGroundPlateDepth = xGroundPlateDepthBelowElec - xSubstrateH;
+
+// Derived curvature parameters
+real yCurvatureCentre = xSubstratey + xSubstrateH + rCurvature;
