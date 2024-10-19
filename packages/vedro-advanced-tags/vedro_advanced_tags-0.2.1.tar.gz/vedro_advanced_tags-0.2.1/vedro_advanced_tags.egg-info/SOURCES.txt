@@ -1,0 +1,16 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+tests/test_advanced_tags.py
+tests/test_grammar.py
+vedro_advanced_tags/__init__.py
+vedro_advanced_tags/_grammar.py
+vedro_advanced_tags/_tag_matcher.py
+vedro_advanced_tags/_vedro_advanced_tags.py
+vedro_advanced_tags/py.typed
+vedro_advanced_tags.egg-info/PKG-INFO
+vedro_advanced_tags.egg-info/SOURCES.txt
+vedro_advanced_tags.egg-info/dependency_links.txt
+vedro_advanced_tags.egg-info/requires.txt
+vedro_advanced_tags.egg-info/top_level.txt
