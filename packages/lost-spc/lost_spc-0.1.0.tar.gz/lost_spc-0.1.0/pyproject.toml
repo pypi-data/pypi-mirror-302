@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "lost-spc"
+version = "0.1.0"
+description = ""
+authors = ["Philip Trauth <philip.trauth@ost.ch>"]
+license = "GPL-3.0"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+numpy = "^2.1.2"
+scipy = "^1.14.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
