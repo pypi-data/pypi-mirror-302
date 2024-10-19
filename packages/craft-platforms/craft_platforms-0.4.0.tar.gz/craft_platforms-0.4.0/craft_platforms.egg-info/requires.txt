@@ -1,0 +1,15 @@
+annotated-types>=0.3.0
+distro>=1.6.0
+typing_extensions>=4.0.0
+
+[docs]
+canonical-sphinx[full]~=0.2
+sphinx-pydantic~=0.1.1
+sphinx-toolbox~=3.5
+sphinx-lint~=1.0.0
+
+[docs:python_version < "3.9"]
+sphinx-autobuild
+
+[docs:python_version >= "3.9"]
+sphinx-autobuild~=2024.2
