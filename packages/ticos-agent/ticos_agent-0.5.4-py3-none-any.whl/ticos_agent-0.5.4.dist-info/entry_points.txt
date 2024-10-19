@@ -1,0 +1,4 @@
+[console_scripts]
+ticos=ticos_agent.__main__:run_main
+ticos-with-config=ticos_agent.__main__:main--config
+
