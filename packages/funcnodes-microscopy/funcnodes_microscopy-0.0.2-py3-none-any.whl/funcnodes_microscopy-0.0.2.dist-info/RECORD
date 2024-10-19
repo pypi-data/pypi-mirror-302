@@ -1,0 +1,8 @@
+funcnodes_microscopy/SEM.py,sha256=nzV0_oiBL_AhjWCQCV6HeeZgwz1_ifMVrwRs2F_DkaQ,3191
+funcnodes_microscopy/__init__.py,sha256=ByqxgNr0pHCQ9Vzh1OjhXQDIsCPbVuyw0D1N5koSe7A,310
+funcnodes_microscopy/segmentation.py,sha256=n1q8CAgTN2EL9FHuHbvciw8X2g0rtcqm1F272UsbSdA,9449
+funcnodes_microscopy-0.0.2.dist-info/LICENSE,sha256=zlR_W6WybbZGru8SPylh3A4nuZ3P-BspleyxdDuVSpk,2127
+funcnodes_microscopy-0.0.2.dist-info/METADATA,sha256=5qSdfE-f17IO3-m2y9advaKwsuU2Xa1rjg4tunSLDzc,1880
+funcnodes_microscopy-0.0.2.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+funcnodes_microscopy-0.0.2.dist-info/entry_points.txt,sha256=9CrKYlW01vOwNRjJwSOJL_pGlYzLROVJ1H4h2W6yoZ4,86
+funcnodes_microscopy-0.0.2.dist-info/RECORD,,
