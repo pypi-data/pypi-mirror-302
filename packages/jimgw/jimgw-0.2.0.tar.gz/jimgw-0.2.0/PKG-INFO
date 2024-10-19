@@ -1,0 +1,104 @@
+Metadata-Version: 2.3
+Name: jimgw
+Version: 0.2.0
+Summary: Gravitatioanl wave data analysis tool in Jax
+Author-email: "Kaze W. K. Wong" <kazewong.physics@gmail.com>
+License: MIT License
+        
+        Copyright (c) 2021 Kaze Wong
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+License-File: LICENSE
+Requires-Python: <=3.11,>=3.10
+Requires-Dist: astropy>=6.1.4
+Requires-Dist: beartype>=0.19.0
+Requires-Dist: corner>=2.2.2
+Requires-Dist: flowmc>=0.3.4
+Requires-Dist: gwpy>=3.0.10
+Requires-Dist: jax<=0.4.31,>=0.4.24
+Requires-Dist: jaxtyping>=0.2.34
+Requires-Dist: pytest>=8.3.3
+Requires-Dist: ripplegw>=0.0.9
+Requires-Dist: typed-argument-parser>=1.10.1
+Provides-Extra: docs
+Requires-Dist: mkdocs; extra == 'docs'
+Requires-Dist: mkdocs-gen-files; extra == 'docs'
+Requires-Dist: mkdocs-jupyter; extra == 'docs'
+Requires-Dist: mkdocs-literate-nav; extra == 'docs'
+Requires-Dist: mkdocs-material; extra == 'docs'
+Requires-Dist: mkdocstrings[python]; extra == 'docs'
+Requires-Dist: pymdown-extensions; extra == 'docs'
+Description-Content-Type: text/markdown
+
+# Jim <img src="https://user-images.githubusercontent.com/4642979/218163532-1c8a58e5-6f36-42de-96d3-f245eee93cf8.png" alt="jim" width="35"/> - A JAX-based gravitational-wave inference toolkit
+
+<a href="https://jim.readthedocs.io/en/main/">
+<img src="https://badgen.net/badge/Read/the doc/blue" alt="doc"/>
+</a>
+
+Jim comprises a set of tools for estimating parameters of gravitational-wave sources thorugh Bayesian inference.
+At its core, Jim relies on the JAX-based sampler [flowMC](https://github.com/kazewong/flowMC),
+which leverages normalizing flows to enhance the convergence of a gradient-based MCMC sampler.
+
+Since its based on JAX, Jim can also leverage hardware acceleration to achieve significant speedups on GPUs. Jim also takes advantage of likelihood-heterodyining, ([Cornish 2010](https://arxiv.org/abs/1007.4820), [Cornish 2021](https://arxiv.org/abs/2109.02728)) to compute the gravitational-wave likelihood more efficiently.
+
+See the accompanying paper, [Wong, Isi, Edwards (2023)](https://github.com/kazewong/TurboPE/) for details.
+
+
+> [!WARNING]  
+> Jim is under heavy development, so API is constantly changing. Use at your own risk!
+> One way to mitigate this inconvience is to make your own fork over a version for now.
+> We expect to hit a stable version this year. Stay tuned.
+
+_[Documentatation and examples are a work in progress]_
+
+## Installation
+
+You may install the latest released version of Jim through pip by doing
+```
+pip install jimGW
+```
+
+You may install the bleeding edge version by cloning this repo, or doing
+```
+pip install git+https://github.com/kazewong/jim
+```
+
+If you would like to take advantage of CUDA, you will additionally need to install a specific version of JAX by doing
+```
+pip install --upgrade "jax[cuda12_pip]" -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html
+```
+
+_NOTE:_ Jim is only currently compatible with Python 3.10.
+
+## Performance
+
+The performance of Jim will vary depending on the hardware available. Under optimal conditions, the CUDA installation can achieve parameter estimation in ~1 min on an Nvidia A100 GPU for a binary neutron star (see [paper](https://github.com/kazewong/TurboPE/) for details). If a GPU is not available, JAX will fall back on CPUs, and you will see a message like this on execution:
+
+```
+No GPU/TPU found, falling back to CPU.
+```
+
+## Directory
+
+Parameter estimation examples are in `example/ParameterEstimation`.
+
+## Attribution
+
+Please cite the accompanying paper, [Wong, Isi, Edwards (2023)](https://github.com/kazewong/TurboPE/).
