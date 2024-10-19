@@ -1,0 +1,7 @@
+CONF_EMAIL = "email"
+CONF_PASSWORD = "password"
+CONF_USER_ID = "user_id"
+CONF_SECRET = "secret"
+CONF_DEVICE_NAME = "device_name"
+CONF_DEVICE_ID = "device_id"
+CONF_AUTO_ACKNOWLEDGE_EMERGENCY = "auto_ack"
