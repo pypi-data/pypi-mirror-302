@@ -1,0 +1,16 @@
+fastapi
+uvicorn
+xn-model
+
+[auth]
+xn-auth
+
+[dev]
+build
+twine
+
+[pwd]
+pwd-auth
+
+[tg]
+xtg-auth
