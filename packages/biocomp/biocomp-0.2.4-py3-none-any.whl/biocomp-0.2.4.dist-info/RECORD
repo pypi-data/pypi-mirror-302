@@ -1,0 +1,11 @@
+biocomp/__init__.py,sha256=5GHNqWiSc8ERnhM1KqbiNZCwxKmABGirrPMRcDckEWc,199
+biocomp/biocomp.py,sha256=SrRmTlTHmXePRzuYvUeVUEbVvB3wek_cYuK_3AP-TL0,5628
+biocomp/biograph.py,sha256=qi4if1WasMX3uMy6z6DBnFV5j2iHtf7tMkqPD1kH7Sk,5955
+biocomp/fungi.py,sha256=R8DJ_l7oDI9vxrGOwbw0l-wuOJz7phIJ735OjWBzyA4,4046
+biocomp/physarum.py,sha256=NszkBt0tPHnC-Dj0HehbqPC4bwyv4xSk_rnQCn93nxo,5727
+biocomp-0.2.4.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+biocomp-0.2.4.dist-info/METADATA,sha256=iwNSWCWuRJWNeTdUQ_XLbQg1LE2j-hUjx5Ww9ADpS9k,18096
+biocomp-0.2.4.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+biocomp-0.2.4.dist-info/entry_points.txt,sha256=84oLZM9idv8MiACU-n8s0KvrpA90CmNYj70EYhToOPw,49
+biocomp-0.2.4.dist-info/top_level.txt,sha256=18_3M_h6C6-l2QCgutM6x9RLhFGamWyrCvppPPvouOw,8
+biocomp-0.2.4.dist-info/RECORD,,
