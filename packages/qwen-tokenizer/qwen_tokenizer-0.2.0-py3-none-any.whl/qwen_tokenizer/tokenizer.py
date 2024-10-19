@@ -1,0 +1,43 @@
+from typing import List
+from pathlib import Path
+
+from .qwen_tokenizer import QwenTokenizer
+
+from .tokenizer_base import Tokenizer
+
+QWEN_SERIALS = ["qwen-7b-chat", "qwen-turbo", "qwen-plus", "qwen-max"]
+current_path = Path(__file__).resolve().parent
+root_path = current_path
+
+
+class UnsupportedModel(Exception):
+    pass
+
+
+def get_tokenizer(model: str) -> Tokenizer:
+    """Get a tokenizer based on model name.
+
+    Args:
+        model (str): The model name.
+
+    Raises:
+        UnsupportedModel: Not support model
+
+    Returns:
+        Tokenizer: The  `Tokenizer` of the model.
+    """
+    if model in QWEN_SERIALS:
+        return QwenTokenizer(root_path / "resources" / "qwen.tiktoken")
+    elif model.startswith("qwen"):
+        return QwenTokenizer(root_path / "resources" / "qwen.tiktoken")
+    else:
+        raise UnsupportedModel(f"Not support model: {model}, currently only support qwen models.")
+
+
+def list_tokenizers() -> List[str]:
+    """List support models
+
+    Returns:
+        List[str]: The model list.
+    """
+    return QWEN_SERIALS

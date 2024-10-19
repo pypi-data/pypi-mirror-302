@@ -1,0 +1,9 @@
+qwen_tokenizer-0.2.0.dist-info/METADATA,sha256=nlNW5vwl4ps1nh_AkzN2WpfLZM3YmhrWz4EXskBmevk,1220
+qwen_tokenizer-0.2.0.dist-info/WHEEL,sha256=pM0IBB6ZwH3nkEPhtcp50KvKNX-07jYtnb1g1m6Z4Co,90
+qwen_tokenizer-0.2.0.dist-info/entry_points.txt,sha256=6OYgBcLyFCUgeqLgnvMyOJxPCWzgy7se4rLPKtNonMs,34
+qwen_tokenizer/__init__.py,sha256=3VEvqvPJpxEdfRhKzTljaK1wdkm9k3s2Z289JgpUX8Q,153
+qwen_tokenizer/qwen_tokenizer.py,sha256=fb-QTkbWcyscZNSyw7pcMNx_atlyQ7MRpU8FHANtgao,3969
+qwen_tokenizer/resources/qwen.tiktoken,sha256=srG437XMXwJLr8NzEhxquj9m-aWgJp4kNHCh3hajMYY,2561218
+qwen_tokenizer/tokenizer.py,sha256=fzLurxvsnRj610rmlDalKsyQKjidk_ofJ77g49h2JAs,1052
+qwen_tokenizer/tokenizer_base.py,sha256=Fe3UsHelttsqZfoZrdl2otSbRaNeKbZXU_OBqLrHGsw,915
+qwen_tokenizer-0.2.0.dist-info/RECORD,,
