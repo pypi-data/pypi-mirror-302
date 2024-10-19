@@ -1,0 +1,53 @@
+[tool.poetry]
+name = "pfund-terminal"
+version = "0.0.1.dev1"
+description = "A free alternative to the Bloomberg Terminal."
+license = "Apache-2.0"
+authors = ["stephenyau <softwareentrepreneer+pfund-terminal@gmail.com>"]
+readme = "README.md"
+homepage = "https://pfund.ai"
+repository = "https://github.com/PFund-Software-Ltd/pfund-terminal"
+documentation = "https://pfund-terminal-docs.pfund.ai"
+keywords = ["terminal", "bloomberg", "financial", "data", "market", "data science", "finance", "investing", "trading"]
+classifiers = [
+    "Operating System :: OS Independent",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Financial and Insurance Industry",
+    "Intended Audience :: Information Technology",
+    "Topic :: Office/Business :: Financial :: Investment",
+    "Topic :: Scientific/Engineering :: Information Analysis",
+    "Topic :: Software Development :: Libraries",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pfund = {extras = ["all"], version = "^0.0.2"}
+pfeed = {extras = ["all"], version = "^0.0.2"}
+pfolio = {extras = ["all"], version = "^0.0.2"}
+pfund-plot = {extras = ["all"], version = "^0.0.1.dev2"}
+xonsh = {extras = ["full"], version = "^0.18.3"}
+rich = "^13.9.2"
+textual = "^0.83.0"
+notebook = "^7.2.2"
+marimo = "^0.9.10"
+
+[tool.poetry.scripts]
+pfund-terminal = "pfund_terminal.main:run_cli"
+
+[tool.poetry.group.dev]
+optional = true
+
+[tool.poetry.group.dev.dependencies]
+pfund = {extras = ["all"], path = "../pfund", develop = true}
+pfeed = {extras = ["all"], path = "../pfeed", develop = true}
+pfolio = {extras = ["all"], path = "../pfolio", develop = true}
+pfund-plot = {extras = ["all"], path = "../pfund-plot", develop = true}
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
