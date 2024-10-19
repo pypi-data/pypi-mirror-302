@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+ISDD.egg-info/PKG-INFO
+ISDD.egg-info/SOURCES.txt
+ISDD.egg-info/dependency_links.txt
+ISDD.egg-info/not-zip-safe
+ISDD.egg-info/requires.txt
+ISDD.egg-info/top_level.txt
+isdd/__init__.py
+isdd/callcode.py
+isdd/isddfile.py
+isdd/search.py
