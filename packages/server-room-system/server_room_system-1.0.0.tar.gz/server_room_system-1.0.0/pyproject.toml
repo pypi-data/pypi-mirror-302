@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "server_room_system"
+version = "1.0.0"
+requires-python = ">=3.12"
+
+authors = [
+    {name = "Boseong Park"}
+]
+maintainers = [
+    {name = "Boseong Park"}
+]
+description = "A simple Server Room System"
+license = {text = "Apache-2.0"}
+readme = 'README.md'
+
+[project.urls]
+
+Repository = "https://github.com/tdhdjv/server_room_system.repo.git"
+
+
