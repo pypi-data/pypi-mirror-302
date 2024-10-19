@@ -1,0 +1,6 @@
+galvani
+matplotlib
+numpy
+pandas
+pybind11
+scipy
