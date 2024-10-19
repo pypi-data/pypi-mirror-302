@@ -1,0 +1,4 @@
+include *.py
+include *.ipynb
+recursive-include example *.py
+recursive-include example *.ipynb

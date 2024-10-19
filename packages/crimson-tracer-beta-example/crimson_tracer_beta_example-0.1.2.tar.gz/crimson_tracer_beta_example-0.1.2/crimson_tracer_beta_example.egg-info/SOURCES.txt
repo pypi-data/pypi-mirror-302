@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+pyproject.toml
+crimson_tracer_beta_example.egg-info/PKG-INFO
+crimson_tracer_beta_example.egg-info/SOURCES.txt
+crimson_tracer_beta_example.egg-info/dependency_links.txt
+crimson_tracer_beta_example.egg-info/top_level.txt
+example/__init__.py
+example/node.ipynb
+example/script.py
+example/tracer.ipynb
