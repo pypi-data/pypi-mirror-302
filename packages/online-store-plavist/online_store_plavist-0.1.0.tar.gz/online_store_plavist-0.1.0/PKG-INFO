@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: online-store-plavist
+Version: 0.1.0
+Summary: Исполняемый пакет для управления пользователями и заказами в онлайн-магазине
+Author-email: Plavist <youremail@example.com>
+License: MIT
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
