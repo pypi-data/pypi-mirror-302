@@ -1,0 +1,82 @@
+[build-system]
+requires = [
+    "Cython >=3.0",
+    "numpy >=2.0,<3",  # packages built with NumPy 2.x work with both 1.x and 2.x
+    "pkgconfig",
+    "setuptools",
+    "wheel",
+]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["bbi*"]
+
+[project]
+name = "pybbi"
+description = "Python bindings to the UCSC source for Big Binary Indexed (bigWig/bigBed) files."
+requires-python = ">=3.7"
+license = {text = "MIT"}
+authors = [
+  {name = "Nezar Abdennur", email = "nabdennur@gmail.com"},
+]
+keywords = [
+    "genomics",
+    "bioinformatics",
+    "bigwig",
+    "bigbed",
+    "bigbinaryindexed",
+    "bbi",
+    "ucsc",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: POSIX",
+    "Operating System :: Unix",
+    "Operating System :: MacOS",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+]
+
+dependencies = [
+    "numpy",
+]
+
+dynamic = ["version", "readme"]
+
+[tool.setuptools.dynamic]
+version = {attr = "bbi.__version__"}
+readme = {file = ["README.md"], content-type = "text/markdown"}
+
+[project.optional-dependencies]
+test = [
+    'pytest',
+    'pandas'
+]
+
+[project.urls]
+homepage = "https://github.com/nvictus/pybbi"
+documentation = "https://github.com/nvictus/pybbi#README.md"
+repository = "https://github.com/nvictus/pybbi"
+
+
+[tool.cibuildwheel]
+build = ["cp39-*", "cp310-*", "cp311-*", "cp312-*", "cp313-*"]
+skip = "*-musllinux*"
+build-verbosity = 3
+
+[tool.cibuildwheel.linux]
+archs = ["x86_64", "aarch64"]
+before-all = "yum install -y gcc make zlib-devel openssl-devel libpng-devel"
+
+[tool.cibuildwheel.macos]
+archs = ["auto"]  # "arm64" needs M1 runner on GitHub Actions
+before-all = """
+brew install pkg-config openssl libpng  # -> /usr/local (x86_64)
+"""
