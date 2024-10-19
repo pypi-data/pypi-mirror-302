@@ -1,0 +1,13 @@
+HCGB
+biopython
+cutadapt
+future
+gitdir
+mirtop
+multiqc
+networkx
+numpy
+pandas
+pybedtools
+pysam
+termcolor
