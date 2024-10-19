@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: tableau-pdf
+Version: 0.0.1
+Summary: Lightweight, performant, algorithmic table extraction
+Author: conjuncts, conjunct
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Project-URL: Homepage, https://github.com/conjuncts/tableau
+
+tableau
+
