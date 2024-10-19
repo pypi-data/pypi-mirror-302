@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+custom_circle_plot/__init__.py
+custom_circle_plot/example.py
+streamlit_circle_plot_component.egg-info/PKG-INFO
+streamlit_circle_plot_component.egg-info/SOURCES.txt
+streamlit_circle_plot_component.egg-info/dependency_links.txt
+streamlit_circle_plot_component.egg-info/requires.txt
+streamlit_circle_plot_component.egg-info/top_level.txt
