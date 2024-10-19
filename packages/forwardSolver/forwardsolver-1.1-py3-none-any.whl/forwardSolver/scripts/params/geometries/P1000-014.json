@@ -1,0 +1,117 @@
+{
+  "board": "P1000_014",
+  "solver_dir": "model_solver",
+  "solver_file": "model_solver.edp",
+  "simulation": {
+    "t_step": 0.01,
+    "t_end": 10,
+    "compute_sensitivities": false
+  },
+  "signal": {
+    "t_rise": 2,
+    "t_dwell": 20,
+    "t_fall": 2,
+    "t_period": 250,
+    "v_max": 2.5,
+    "noise_power": 0,
+    "noise_random_seed": 42,
+    "frequency": 25000
+  },
+  "geometry": {
+    "mesh_length_scale": 0.05,
+    "domain_width": 150.0,
+    "domain_height": 75.0,
+    "electrode_width": 6.7482,
+    "electrode_height": 0.035,
+    "electrode_length": 60.154,
+    "electrode_separation": 1.4918,
+    "material_width": 109.83,
+    "material_height": 30.0,
+    "material_gap": 1.00,
+    "soldercoat_height": 0.017,
+    "board_left_width": 23.6866,
+    "board_right_width": 25.4847,
+    "board_height": 1.60,
+    "left_ground_plate_width": 13.5403,
+    "right_ground_plate_width": 23.8903,
+    "system_offset_y": 20.0,
+    "material_offset_x": 0.0,
+    "permittivity_background": 1.0006,
+    "conductivity_background": 0.0000,
+    "permittivity_board": 4.00,
+    "conductivity_board": 0.00,
+    "permittivity_soldercoat": 3.00,
+    "conductivity_soldercoat": 0.00
+  },
+  "sensor": {
+    "num_transmitter": 8,
+    "c_receive_multiplexer_off": {
+      "np.ndarray": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "r_pulldown_on_receive": {
+      "np.ndarray": [
+        0.47,
+        0.47,
+        0.47
+      ]
+    },
+    "c_probe": null,
+    "r_probe": null,
+    "c_transmit_multiplexer_off": {
+      "np.ndarray": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "r_series": {
+      "np.ndarray": [
+        0.01,
+        0.01,
+        0.01
+      ]
+    },
+    "c_parasitic_forward_first_order": {
+      "np.ndarray": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "c_parasitic_backward_first_order": {
+      "np.ndarray": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "noise_random_seed": 7,
+    "noise_power_pulldown_on_receive": 1e-7,
+    "noise_power_transmit": 0.00003,
+    "voltage_resolution_receive": 0.00001,
+    "voltage_resolution_transmit": 0.00024,
+    "frequency_oscillation_receive": 0,
+    "phase_oscillation_receive": 0,
+    "amplitude_oscillation_receive": 0,
+    "num_wings": 1
+  },
+  "pixels": {
+    "create_standalone": false,
+    "region_width": "xMaterialW",
+    "region_height": "xMaterialH",
+    "region_label": 300,
+    "num_pixel_rows": 1,
+    "num_pixel_columns": 1,
+    "permittivity_matrix": null,
+    "pixel_type": "curved_rectangle",
+    "circular_phantom_radius": null,
+    "circular_phantom_bore_radii": null,
+    "circular_phantom_bore_centre_distance": null,
+    "circular_phantom_angle": null,
+    "circular_phantom_thickness": null
+  }
+}

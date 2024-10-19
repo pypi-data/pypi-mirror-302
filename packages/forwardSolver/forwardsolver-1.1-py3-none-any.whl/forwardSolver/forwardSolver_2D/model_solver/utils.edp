@@ -1,0 +1,202 @@
+/*
+    Finite Element spaces on the constructed mesh Th
+    P0 - Piecewise constant discontinuous FE
+        - DOF are the element's barycentre value
+    P1 - Piecewise linear continuous FE
+        - DOF are the element's vertices values
+*/
+
+macro defineFESpaces(Th)
+    fespace Vh0(Th, P0);
+    fespace Vh1(Th, P1);
+// End of macro
+
+/*
+    Define variational form (VF) of Dirichlet boundary condition and compute RHS vector
+
+    u(x) = u0(x) for x in boundary => VF[u(unused), v] = int_boundary { u0(x) v(x) }
+
+    The result is stored in the provided rhsBoundary vector
+*/
+macro BCDirichlet(boundary, rhs, u, v)
+    varf vBC#boundary#(u, v) = on(boundary, u=1.0);
+    rhs = vBC#boundary#(0, Vh1);
+// End of macro
+
+/*
+    Define electrode boundary conditions as matrix
+*/
+macro defineElectrodeBoundaryConditions(B, boundaries, u, v)
+{
+    for [i, bdry: boundaries]
+    {
+        BCDirichlet(bdry, B(:, i), u, v);
+    }
+}
+// End of macro
+
+/*
+    Save boundary conditions system matrix to file
+*/
+macro saveBCLHStoFile(outfilename)
+{
+    varf bclhs(u, v) = on(electrodeLabels, u = 1)
+    + on(groundLabels, u = 0.0);
+    matrix BCLHS = bclhs(Vh1, Vh1);
+    saveCSRtoFile(BCLHS, outfilename);
+}
+// End of macro
+
+/*
+    Build background material parameter (epsilon, sigma) field
+    for all given regions and associated parameters
+*/
+macro buildMaterialParameterBase(baseDistribution, regionLabels, regionMaterialParameters)
+{
+    for [i, lbl: regionLabels]
+    {
+        baseDistribution = baseDistribution + regionMaterialParameters[i]*(region==lbl);
+    }
+}
+// End of macro
+
+/*
+    I/O utilities
+*/
+macro saveArraytoFile(A, filename){
+    ofstream file(filename);
+    file.scientific;
+    file << A << endl;
+}
+// End of macro
+
+macro saveCSRtoFile(A, filename){
+    A.CSR;
+    saveArraytoFile(A, filename);
+}
+// End of macro
+
+// Read pixel parameter from file
+macro readPixelFile(pixelParFile, pixelPars)
+    ifstream file (pixelParFile);
+    for (int i = 0; i < pixelPars.n; i++)
+    {
+        file >> pixelPars[i];
+        if (!file.good()) break;
+    }
+// End of Macro
+
+macro checkInputs(regionLabels, regionNames, pixelRegions)
+{
+    for [i, lbl: regionLabels]
+    {
+        Vh0 tmp = (region == lbl);
+        plot(tmp, fill=true, value=true, cmm=regionNames[i], dim=nDims);
+    }
+    if (BPlotCheckEachPixel == 1)
+    {
+        /*
+        Plot each pixel to ensure valid selection can be slow if there are many pixels
+        */
+        for [i, rg : pixelRegions]
+        {
+            string name = "pixel region (" + string(i) + ")";
+            Vh0 tmp = (region == rg);
+                plot(tmp, fill=true, value=true, cmm=name, dim=nDims);
+        }
+    }
+}
+// End of macro
+
+macro savePixelstoFile(pixelRegions, dir)
+{
+    for [i, pixel : pixelRegions]
+    {
+        string tmpstring = dir + "/pixel_"+i+".txt";
+            ofstream ff(tmpstring);
+        Vh0 tmp = (region == pixel);
+            ff << tmp[] << endl;
+    }
+}
+// End of macro
+
+/*
+    Generate charge measurement form from boundary integral
+    Multiply this by the potential vector to obtain a charge measurement
+
+    Optimised to store a vector for charge measurement for the cases where each
+    electrode is transmitting.
+*/
+macro buildChargeMeasurementForm(ndim, permittivity, electrodeLabels, phi, Lmatrix)
+{
+    Lmatrix = 0;
+    if (ndim == 1)
+    {
+        for [i, bdry: electrodeLabels]
+        {
+            chargeMeasureBoundary(permittivity, bdry, Lmatrix(:, i));
+        }
+    }
+    else if (ndim == 2)
+    {
+        for [i, bdry: electrodeLabels]
+        {
+            chargeMeasureIndicator(permittivity, phi[i], Lmatrix(:, i));
+        }
+    }
+}
+// End of macro
+
+/*
+    Extend existing ChargeMeasurementForm (L matrix) by the measurement
+    of the charge on the ground plates.
+*/
+macro extendChargeMeasurementForm(ndim, permittivity, groundLabels, psi, Lmatrix)
+{
+    Lmatrix = 0;
+    if (ndim == 1)
+    {
+        for [i, bdry: groundLabels]
+        {
+            chargeMeasureBoundary(permittivity, bdry, Lmatrix(:, i));
+        }
+    }
+    else if (ndim == 2)
+    {
+        for [i, bdry: groundLabels]
+        {
+            chargeMeasureIndicator(permittivity, psi[i], Lmatrix(:, i));
+        }
+    }
+}
+// End of macro
+
+
+/*
+    Calculate capacitance matrix
+    1. Calculate charge measurement form on the electrodes
+        [L]_i = int_surf - permittivity * grad(phi_i).n dS
+    2. Calculate charge on electrodes
+        Q_i = [L]_i * u_i
+    3. Since V = 1 for transmit and 0 for all others, C = Q (/ V=1)
+*/
+macro calculateCapacitanceMatrix(uMatrices, chargeMeasurement, capmat)
+    for(int i = 0; i < NE; i++){
+        capmat(:, i) = chargeMeasurement' * uMatrices[i][];
+        capmat(:, i) = -1*capmat(:, i);
+        capmat(i,i) = 0.0;
+    };
+// End of macro
+
+macro calculateCapacitanceMatrixFull(uMatrices, chargeMeasurement, capmatFull)
+    for(int i = 0; i < NE; i++){
+        capmatFull(:, i) = chargeMeasurement'*uMatrices[i][];
+        capmatFull(:, i) = -1*capmatFull(:, i);
+        capmatFull(i, i) = -capmatFull(i, i);
+        for(int j = 0; j < NE; j++){
+            if(j != i){
+                capmatFull(i, i) -= capmatFull(j, i);
+            }
+        }
+    };
+// End of macro

@@ -1,0 +1,312 @@
+include "getARGV.idp";
+load "iovtk";
+
+// Parameters 
+real epsilon0 = 8.854e-12; //
+real radiusInclusion = getARGV("radiusInclusion", 0.5);
+real widthRegion = getARGV("widthRegion", 2.0);
+real heightRegion = getARGV("heightRegion", 2.0);
+int numMeshPoints = getARGV("numMeshPoints", 100);
+real inclusionCenterXcoord = getARGV("inclusionCenterXcoord", -widthRegion/8.0);
+real inclusionCenterYcoord = getARGV("inclusionCenterYcoord", 0);
+
+real epsilonInclusion = getARGV("epsilonInclusion", 3.0);
+real epsilonBackground = getARGV("epsilonBackground", 3.0);
+real sigmaInclusion = getARGV("sigmaInclusion", 1e-1);
+real sigmaBackground = getARGV("sigmaBackground", 0.0);
+real frequency = getARGV("frequency", 25e3);
+
+bool saveToFile = getARGV("saveToFile", 0);
+
+// Geometry
+border inclusion(t=0, 2*pi) {x=radiusInclusion*cos(t) + inclusionCenterXcoord;
+            y = radiusInclusion*sin(t) + inclusionCenterYcoord; label=100;};
+
+border left(t=widthRegion/2, -widthRegion/2){x=-widthRegion/2; y=t; label=1;};
+border right(t=-widthRegion/2, widthRegion/2){x=widthRegion/2; y=t; label=2;};
+border top(t=widthRegion/2, -widthRegion/2){x=t; y=widthRegion/2; label=0;};
+border bottom(t=-widthRegion/2, widthRegion/2){x=t; y=-widthRegion/2; label=0;};
+
+// Macros
+macro gradient(uu) [dx(uu), dy(uu)]//
+macro gradientProduct(uu, vv) gradient(uu)'*gradient(vv)//
+
+// Standard solver
+bool useStdSolver = getARGV("useStdSolver", 1);
+if(useStdSolver)
+{
+    //Mesh
+    mesh Th = buildmesh(left(numMeshPoints) + right(numMeshPoints) +
+                top(numMeshPoints) + bottom(numMeshPoints) + inclusion(numMeshPoints));
+
+    // Finite element spaces
+    fespace Vh1(Th, P1);
+    fespace Vh0(Th, P0);
+
+    // Region labels
+    int labelInclusion = Th(inclusionCenterXcoord, inclusionCenterYcoord).region;
+    int labelBackground = Th(inclusionCenterXcoord
+                            + (1+1e-3)*radiusInclusion, inclusionCenterYcoord).region;
+
+    // Material property maps
+    Vh0 epsilonRegion = epsilon0*(epsilonBackground*(region==labelBackground)
+                        + epsilonInclusion*(region==labelInclusion));
+    Vh0 sigmaRegion = sigmaBackground*(region==labelBackground)
+                        + sigmaInclusion*(region==labelInclusion);
+    Vh0<complex> gammaRegion = epsilonRegion - 1i*sigmaRegion/(2*pi*frequency);
+
+    // Solve the system
+    // Variational formulation
+    Vh1<complex> u, v;
+    varf varfA(u, v) = int2d(Th)(conj(gammaRegion)*gradientProduct(u, v))
+                        + on(1, u=1.0) + on(2, u=0.0);
+    varf varfANBC(u, v) = int2d(Th)(conj(gammaRegion)*gradientProduct(u, v));
+    varf varfB(u, v) = on(1, u=1.0) + on(2, u=0.0);
+
+    // Finite element matrices
+    matrix<complex> Asys = varfA(Vh1, Vh1); 
+    matrix<complex> AsysNBC = varfANBC(Vh1, Vh1); 
+    Vh1<complex> Bsys = varfB(0, Vh1);
+
+    // Solution
+    u[] = Asys^-1*Bsys[];
+
+    // Residual
+    complex[int] residual = Asys*u[]; 
+    residual = residual - Bsys[];
+    complex[int] Ax = AsysNBC*u[]; 
+    residual = residual/Ax.l2;
+
+    // Auxiliary solutions
+    Vh1 uPhi, vPhi;
+    solve laplace2(uPhi, vPhi) = int2d(Th)(gradientProduct(uPhi, vPhi))
+                                    + on(1, uPhi = 1.0) + on(2, uPhi = 0.0);
+    Vh1 uReal = real(u);
+
+    // Capacitance calculation
+    // Formula
+    real capacitanceRealFormula = epsilon0*epsilonBackground*heightRegion/widthRegion;
+
+    // 1D integral
+    complex capacitance1D = int1d(Th, 1)(gammaRegion*gradient(u)'*[N.x, N.y]);
+
+    // 2D integral
+    complex capacitance2DUreal = int2d(Th)(gammaRegion*gradientProduct(u, uReal));
+    complex capacitance2DUcomplex = int2d(Th)(gammaRegion*gradientProduct(u, u));
+    complex capacitance2DPhi = int2d(Th)(gammaRegion*gradientProduct(u, uPhi));
+
+    // Extra term int(div(gamma*grad(u)*u)) which should be zero
+    Vh1<complex> w1 = gammaRegion*dx(u);
+    Vh1<complex> w2 = gammaRegion*dy(u);
+    complex extraTerm = int2d(Th)((dx(w1) + dy(w2))*u);
+
+    // Print output
+    bool debug = getARGV("debug", 1);
+    if(debug)
+    {
+        cout << "**********************************************************" << endl;
+        cout << "Extra term = " << extraTerm << endl;
+
+        cout << "**********************************************************" << endl;
+        cout << "Residual: " << residual.l2 << endl;
+
+        cout << "**********************************************************" << endl;
+        cout << "Capacitance Formula" << endl;
+        cout << "capacitanceRealFormula: " << capacitanceRealFormula << endl;
+
+        cout << "**********************************************************" << endl;
+        cout << "1D integral based computation" << endl;
+        cout << "capacitance1D : "  << capacitance1D << endl;
+
+        cout << "**********************************************************" << endl;
+        cout << "2D integral based computation" << endl;
+        cout << "capacitance2DUcomplex: "  << capacitance2DUcomplex << endl;
+        cout << "capacitance2DUreal: "  << capacitance2DUreal << endl;
+        cout << "capacitance2DPhi: "  << capacitance2DPhi << endl;
+
+        cout << "**********************************************************" << endl;
+    }
+
+    // Write capacitances to file
+    if(saveToFile)
+    {
+        string freefemDir = getARGV("freefemDir", "./");
+        string outputFileNameStd = getARGV("outputFileNameStd",
+                                    freefemDir + "results_standard_solver.txt");
+        ofstream outputFileStd(outputFileNameStd);
+        outputFileStd.scientific;
+        // Parameters
+        outputFileStd << Th.hmax << "\t" << Th.nv << endl;
+        outputFileStd << residual.l2 << "\t" << 0.0 << endl;
+        // Capacitance formula
+        outputFileStd << real(capacitanceRealFormula) << "\t"
+                        << imag(capacitanceRealFormula) << endl;
+        // 1D integral
+        outputFileStd << real(capacitance1D) << "\t"
+                        << imag(capacitance1D) << endl;
+        // 2D integral
+        outputFileStd << real(capacitance2DUreal) << "\t"
+                        << imag(capacitance2DUreal) << endl;
+        outputFileStd << real(capacitance2DUcomplex) << "\t"
+                        << imag(capacitance2DUcomplex) << endl;
+        outputFileStd << real(capacitance2DPhi) << "\t"
+                        << imag(capacitance2DPhi) << endl;
+    }
+}
+
+// High contrast solver
+bool useHCSolver = getARGV("useHCSolver", 1);
+if(useHCSolver)
+{
+    /*
+    The high contrast solver splits the background region and the conductive region
+    to improve the accuracy of the results.
+    The details can be seen in the following confluence pages:
+    https://zedsen.atlassian.net/wiki/spaces/ZED/pages/804388866/
+    https://zedsen.atlassian.net/wiki/spaces/ZED/pages/834043907/
+    */
+    //Mesh
+    mesh ThBackground = buildmesh(left(numMeshPoints) + right(numMeshPoints)
+                        + top(numMeshPoints) + bottom(numMeshPoints)
+                        + inclusion(-numMeshPoints));
+    mesh ThInclusion = buildmesh(inclusion(numMeshPoints));
+    mesh Th = ThBackground + ThInclusion;
+
+    // Finite element spaces
+    fespace Vh1(Th, P1);
+    fespace Vh1Inclusion(ThInclusion, P1);
+    fespace Vh0(Th, P0);
+    fespace Vh0Background(ThBackground, P0);
+    fespace Vh0Inclusion(ThInclusion, P0);
+
+    // Region labels
+    Vh0Background indicatorBackground = 1;
+    Vh0Inclusion indicatorInclusion = 1;
+
+    // Material property maps
+    Vh0 epsilonRegion = epsilon0*(epsilonBackground*indicatorBackground
+                        + epsilonInclusion*indicatorInclusion);
+    Vh0 sigmaRegion = sigmaInclusion*indicatorInclusion;
+    Vh0<complex> gammaRegion = epsilonRegion - 1i*sigmaRegion/(2*pi*frequency);
+
+    // Solve the system
+    // Variational formulation
+    Vh1<complex> u, v;
+    Vh1Inclusion<complex> p, q;
+    varf varfA1(u, v) = int2d(Th)(real(gammaRegion/epsilon0)*gradientProduct(u, v))
+                        + on(1, u=1.0) + on(2, u=0.0);
+    varf varfA1NBC(u, v) = int2d(Th)(real(gammaRegion/epsilon0)*gradientProduct(u, v));
+    varf varfA2(p, v) = int2d(ThInclusion)(gradientProduct(p, v));
+    varf varfA3(u, q) = int2d(ThInclusion)(gradientProduct(u, q));
+    varf varfA4(p, q) = int2d(ThInclusion)(-1i*epsilon0
+                        /imag(gammaRegion)*gradientProduct(p, q));
+    varf varfB(u, v) = on(1, u=1.0) + on(2, u=0.0);
+
+    // Finite element matrices
+    matrix<complex> A1 = varfA1(Vh1, Vh1); 
+    matrix<complex> A1NBC = varfA1NBC(Vh1, Vh1); 
+    matrix<complex> A2 = varfA2(Vh1Inclusion, Vh1); 
+    matrix<complex> A3 = varfA3(Vh1, Vh1Inclusion); 
+    matrix<complex> A4 = varfA4(Vh1Inclusion, Vh1Inclusion); 
+    matrix<complex> Asys = [[A1, A2], [A3, A4]];
+    set(Asys, solver="UMFPACK");
+    matrix<complex> AsysNBC = [[A1NBC, A2], [A3, A4]];
+    matrix<complex> AsysUpper = [[A1, A2]];
+    matrix<complex> AsysUpperNBC = [[A1NBC, A2]];
+
+    complex[int] B1 = varfB(0, Vh1);
+    complex[int] B2(Vh1Inclusion.ndof);
+    B2 = 0.0;
+    complex[int] Bsys = [B1, B2];
+
+    // Solution
+    complex[int] xSolution = Asys^-1*Bsys;
+    [u[], p[]] = xSolution;
+
+    // Residual
+    complex[int] residual = Asys*xSolution; 
+    residual = residual - Bsys;
+    complex[int] Ax = AsysNBC*xSolution; 
+    residual = residual/Ax.l2;
+
+    //Residual Upper part
+    complex[int] residualUpper = AsysUpper*xSolution; 
+    residualUpper = residualUpper - B1;
+    complex[int] AxUpper = AsysUpperNBC*xSolution; 
+    residualUpper = residualUpper/AxUpper.l2;
+
+
+    // Auxiliary solutions
+    Vh1 uPhi, vPhi;
+    solve laplace2(uPhi, vPhi) = int2d(Th)(gradientProduct(uPhi, vPhi))
+                                + on(1, uPhi = 1.0) + on(2, uPhi = 0.0);
+    Vh1 uReal = real(u);
+
+    // Capacitance calculation
+    // Formula
+    real capacitanceRealFormula = epsilon0*epsilonBackground*heightRegion/widthRegion;
+
+    // 1D integral
+    complex capacitance1D = int1d(Th, 1)(gammaRegion*gradient(u)'*[N.x, N.y]);
+
+    // 2D integral
+    complex capacitance2DUreal = int2d(Th)(gammaRegion*gradientProduct(u, uReal));
+    complex capacitance2DUcomplex = int2d(Th)(gammaRegion*gradientProduct(u, u));
+    complex capacitance2DPhi = int2d(Th)(gammaRegion*gradientProduct(u, uPhi));
+
+    // Extra term int2d(div(gamma*grad(u)*u)) which should be zero
+    Vh1<complex> w1 = gammaRegion*dx(u);
+    Vh1<complex> w2 = gammaRegion*dy(u);
+    complex extraTerm = int2d(Th)((dx(w1) + dy(w2))*u);
+
+    bool debug = getARGV("debug", 1);
+    if(debug)
+    {
+        cout << "**********************************************************" << endl;
+        cout << "Extra term = " << extraTerm << endl;
+
+        cout << "**********************************************************" << endl;
+        cout << "Residual: " << residual.l2 << " Residual upper: "
+                << residualUpper.l2 << endl;
+
+        cout << "**********************************************************" << endl;
+        cout << "Capacitance Formula" << endl;
+        cout << "capacitanceRealFormula: " << capacitanceRealFormula << endl;
+
+        cout << "**********************************************************" << endl;
+        cout << "1D integral based computation" << endl;
+        cout << "capacitance1D : "  << capacitance1D << endl;
+
+        cout << "**********************************************************" << endl;
+        cout << "2D integral based computation" << endl;
+        cout << "capacitance2DUreal: "  << capacitance2DUreal << endl;
+        cout << "capacitance2DUcomplex: "  << capacitance2DUcomplex << endl;
+        cout << "capacitance2DPhi: "  << capacitance2DPhi << endl;
+
+        cout << "**********************************************************" << endl;
+    }
+
+    // Write capacitances to file
+    if(saveToFile)
+    {
+        string freefemDir = getARGV("freefemDir", "./");
+        string outputFileNameHC = getARGV("outputFileNameHC",
+                                    freefemDir + "results_hc_solver.txt");
+        ofstream outputFileHC(outputFileNameHC);
+        outputFileHC.scientific;
+        // Parameters
+        outputFileHC << Th.hmax << "\t" << Th.nv << endl;
+        outputFileHC << residual.l2 << "\t" << residualUpper.l2 << endl;
+        // Capacitance formula
+        outputFileHC << real(capacitanceRealFormula) << "\t"
+                        << imag(capacitanceRealFormula) << endl;
+        // 1D integral
+        outputFileHC << real(capacitance1D) << "\t" << imag(capacitance1D) << endl;
+        // 2D integral
+        outputFileHC << real(capacitance2DUreal) << "\t"
+                        << imag(capacitance2DUreal) << endl;
+        outputFileHC << real(capacitance2DUcomplex) << "\t"
+                        << imag(capacitance2DUcomplex) << endl;
+        outputFileHC << real(capacitance2DPhi) << "\t" << imag(capacitance2DPhi) << endl;
+    }
+}

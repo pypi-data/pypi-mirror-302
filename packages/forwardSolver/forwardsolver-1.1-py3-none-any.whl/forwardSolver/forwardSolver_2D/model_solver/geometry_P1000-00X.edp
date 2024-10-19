@@ -1,0 +1,62 @@
+/*
+    P1000-00X geometry
+    Parallel plate capacitor - no fringing fields with bounding box
+    tightly enclosing system.
+*/
+
+/*
+----------------------------------------------------------------------
+                    Build computational domain
+----------------------------------------------------------------------
+*/
+
+// Electrode 1
+border Left(t=xElecW, 0){x = -xElecSep/2; y=-xElecW/2+t; label = 1;};
+// Electrode 2
+border Right(t=0, xElecW){x = xElecSep/2; y=-xElecW/2+t; label = 2;};
+// Domain borders
+border Top(t=0, xElecSep){x = -xElecSep/2+t; y=-xElecW/2; label = 0;};
+border Bottom(t=xElecSep, 0){x = -xElecSep/2+t; y=xElecW/2; label = 0;};
+
+/*
+----------------------------------------------------------------------
+                        Generate the mesh
+----------------------------------------------------------------------
+*/
+
+// No pixels in this geometry so no need to include pixel_region.edp
+// include "pixel_region.edp"
+
+macro createMesh(h)
+  mesh Th = buildmesh(
+    Left(ceil(xElecW/h)) + Right(ceil(xElecW/h))
+    + Top(ceil(xElecSep/h)) + Bottom(ceil(xElecSep/h))
+  );
+// End of macro
+
+// Generate mesh
+createMesh(h);
+
+if (BPlot) { plot(Th); };
+
+/*
+----------------------------------------------------------------------
+                    Define region labels
+----------------------------------------------------------------------
+*/
+
+int dielectric = Th(0.0, 0.0).region;
+
+int[int] regionLabels = [dielectric];
+string[string] regionNames;
+regionNames[0] = "dielectric";
+
+/*
+----------------------------------------------------------------------
+                    Build pixelation
+    (No pixelation for this geometry, but necessary variables)
+----------------------------------------------------------------------
+*/
+
+int[int] pixelRegions;
+real[int] pixelEpsilons, pixelSigmas;

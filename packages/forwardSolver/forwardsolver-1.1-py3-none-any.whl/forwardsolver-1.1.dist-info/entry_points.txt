@@ -1,0 +1,5 @@
+[console_scripts]
+testing = src.forwardSolver.scripts.testing:main
+
+[gui_scripts]
+

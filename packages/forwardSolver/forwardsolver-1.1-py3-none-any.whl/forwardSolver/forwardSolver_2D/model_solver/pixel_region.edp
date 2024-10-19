@@ -1,0 +1,31 @@
+real regionW = xMaterialW;
+real regionH = xMaterialH;
+int labelRegion = 300;
+
+
+border RegionMiddleV0s0(t=1*regionH/1, 0*regionH/1){x = (rCurvature + t - xMaterialGap - regionH - xElecH)*sin((-regionW/2 + 0*regionW/1 + regionOffsetX)/rCurvature); y = yCurvatureCentre - (rCurvature + t - xMaterialGap - regionH - xElecH)*cos((-regionW/2 + 0*regionW/1 + regionOffsetX)/rCurvature) + regionOffsetY; label = labelRegion;};
+border RegionMiddleV1s0(t=1*regionH/1, 0*regionH/1){x = (rCurvature + t - xMaterialGap - regionH - xElecH)*sin((-regionW/2 + 1*regionW/1 + regionOffsetX)/rCurvature); y = yCurvatureCentre - (rCurvature + t - xMaterialGap - regionH - xElecH)*cos((-regionW/2 + 1*regionW/1 + regionOffsetX)/rCurvature) + regionOffsetY; label = labelRegion;};
+border RegionMiddleH0s0(t=-regionW/2 + 1*regionW/1, -regionW/2 + 0*regionW/1){x = (rCurvature + 0*regionH/1 - xMaterialGap - regionH - xElecH)*sin((t + regionOffsetX)/rCurvature); y = yCurvatureCentre - (rCurvature + 0*regionH/1 - xMaterialGap - regionH - xElecH)*cos((t + regionOffsetX)/rCurvature) + regionOffsetY; label = labelRegion;};
+border RegionMiddleH1s0(t=-regionW/2 + 1*regionW/1, -regionW/2 + 0*regionW/1){x = (rCurvature + 1*regionH/1 - xMaterialGap - regionH - xElecH)*sin((t + regionOffsetX)/rCurvature); y = yCurvatureCentre - (rCurvature + 1*regionH/1 - xMaterialGap - regionH - xElecH)*cos((t + regionOffsetX)/rCurvature) + regionOffsetY; label = labelRegion;};
+
+
+func pixelRegion = 
+RegionMiddleV0s0(ceil(regionH*rMaterialStandard/(1*h)))
++RegionMiddleV1s0(ceil(regionH*rMaterialStandard/(1*h)))
++RegionMiddleH0s0(ceil(regionW*rMaterialStandard/(1*h)))
++RegionMiddleH1s0(ceil(regionW*rMaterialBottom/(1*h)))
+;
+
+
+if(BPlot){plot(pixelRegion, wait=false, cmm="Pixel Geometry");}
+
+
+// store the centers of each pixel
+real[int] pixelCenterX(1);
+real[int] pixelCenterY(1);
+for (int i = 0; i < 1; i++){
+	for (int j = 0; j < 1; j++){
+		pixelCenterX[i+1*j] = (rCurvature + (j+0.5)*regionH/1 - xMaterialGap - regionH - xElecH)*sin((-regionW/2 + (i+0.5)*regionW/1 + regionOffsetX)/rCurvature);
+		pixelCenterY[i+1*j] = yCurvatureCentre - (rCurvature + (j+0.5)*regionH/1 - xMaterialGap - regionH - xElecH)*cos((-regionW/2 + (i+0.5)*regionW/1 + regionOffsetX)/rCurvature) + regionOffsetY;
+	}
+}

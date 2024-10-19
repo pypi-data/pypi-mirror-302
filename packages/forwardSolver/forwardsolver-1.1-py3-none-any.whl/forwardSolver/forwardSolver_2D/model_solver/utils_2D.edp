@@ -1,0 +1,96 @@
+/*
+    Gradient of a field in 2D
+*/
+macro grad(u) [dx(u), dy(u)] // End of macro
+
+/*
+    Build function phi that obeys
+        nabla^2 phi = 0 on Omega
+        phi = 1 on boundarylabel, = 0 elsewhere
+    We start by building the variational form int(grad(phi_i) * grad(phi_j) dV)
+    and then add the Dirichlet BC terms to the diagonal of the resulting system matrix.
+
+    The vector resulting from the Dirichlet BC corresponding to the specific boundary
+    is extracted and used as the rhs to solve the system.
+
+    The solution is then stored in the given field phi.
+*/
+macro computeIndicatorFunction(boundarylabel, phi, u, v)
+{
+    solve indicator(u, v) = int2d(Th)(grad(u)'*grad(v))
+        + on(electrodeLabels, u = 0)
+        + on(groundLabels, u = 0)
+        + on(boundarylabel, u = 1);
+    phi[] = u[];
+}
+// End of macro
+
+// Define system stiffness variational form
+macro defineSystemVarf(parameter, u, v)
+    varf systemVarf(u, v) = int2d(Th)(parameter * grad(u)' * grad(v))
+        + on(electrodeLabels, u = 1)
+        + on(groundLabels, u = 0);
+// End of macro
+
+// Find the labels for the regions defined by each pixel
+func int[int] FindPixelRegions(real[int] &PixelCOMX, real[int] &PixelCOMY, mesh &Th)
+{
+    int[int] pixelRegions(PixelCOMX.n);
+    for(int i = 0; i < pixelRegions.n; i++){
+        pixelRegions[i] = Th(PixelCOMX[i], PixelCOMY[i]).region;
+    }
+    return pixelRegions;
+}
+
+/*
+    Build the stiffness and charge measurement matrices using an indicator functions
+    for each pixel.
+*/
+macro buildAndSavePixelsFEMatrices(
+    pixelRegions, electrodeLabels, uMatrices, Lmatrix, APixel, chargeMatrix, dir
+)
+{
+    Vh0 epsilon;
+    for [i, pixel : pixelRegions]
+    {
+        epsilon = (region == pixel);
+        varf vAPixel(u, v) = int2d(Th)(epsilon*grad(u)'*grad(v));
+        APixel = vAPixel(Vh1, Vh1);
+        buildChargeMeasurementForm(
+            NChargeIntegration, epsilon, electrodeLabels, uMatrices, Lmatrix
+        );
+        chargeMatrix = Lmatrix;
+
+        string tmpstring = dir + "/A_"+i+".txt";
+        string tmpstring2 = dir + "/K_"+i+".txt";
+        saveCSRtoFile(APixel, tmpstring);
+        saveCSRtoFile(chargeMatrix, tmpstring2);
+    }
+}
+// End of macro
+
+macro calculateBackgroundSystemMatrix(permittivity, A, u, v)
+{
+    varf backStiffness(u, v) = int2d(Th)(permittivity * grad(u)' * grad(v));
+    A = backStiffness(Vh1, Vh1);
+}
+// End of macro
+
+
+/*
+    Calculate charge measurement vector form on the electrodes
+    [L]_i = int_surf { - permittivity * grad(phi_i).n dS }
+*/
+macro chargeMeasureBoundary(permittivity, boundarylabel, charge)
+{
+    varf vCharge(u, v) = int1d(Th, boundarylabel)(permittivity * grad(v)' * [N.x, N.y]);
+    charge = vCharge(0, Vh1);
+}
+// End of macro
+
+macro chargeMeasureIndicator(permittivity, phi, charge)
+{
+    varf vCharge(u, v) = int2d(Th)(permittivity * grad(v)' * grad(phi));
+    charge = vCharge(0, Vh1);
+}
+// End of macro
