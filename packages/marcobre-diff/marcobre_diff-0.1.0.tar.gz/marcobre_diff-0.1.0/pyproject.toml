@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "marcobre-diff"
+version = "0.1.0"
+description = ""
+authors = ["glozanoac <glozanoac@gmail.com>"]
+readme = "README.md"
+packages = [
+  {include = "marcobre", from = "src"}
+]
+
+#[tool.poetry.include]
+#include = [
+#    { path = "static/*", format = "text" }
+#]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
