@@ -1,0 +1,37 @@
+[project]
+name = "pswd-auth"
+requires-python = ">=3.12"
+authors = [
+    {name = "Artemiev", email = "mixartemev@gmail.com"},
+]
+keywords = ["starlette", "fastapi", "auth"]
+description = "Auth adapter for password auth in X-Api framework"
+readme = "README.md"
+license = {text = "MIT"}
+dynamic = ["version"]
+
+dependencies = ["xn-auth"]
+
+[project.optional-dependencies]
+dev = [
+    "build",
+    "twine",
+]
+
+[project.urls]
+Homepage = "https://github.com/XyncNet/pwsd-auth"
+Repository = "https://github.com/XyncNet/pwsd-auth"
+
+[build-system]
+requires = ["setuptools>=64", "setuptools-scm[toml]>=8"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["pswd_auth"]
+
+[tool.setuptools_scm]
+version_scheme = "python-simplified-semver" # if "feature" in `branch_name` SEMVER_MINOR++ else SEMVER_PATCH++
+local_scheme = "no-local-version"
+
+[tool.ruff]
+line-length = 120

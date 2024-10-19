@@ -1,0 +1,14 @@
+.env.dist
+.gitignore
+.pre-commit-config.yaml
+README.md
+makefile
+pyproject.toml
+pswd_auth/__init__.py
+pswd_auth/models.py
+pswd_auth/pydantic.py
+pswd_auth.egg-info/PKG-INFO
+pswd_auth.egg-info/SOURCES.txt
+pswd_auth.egg-info/dependency_links.txt
+pswd_auth.egg-info/requires.txt
+pswd_auth.egg-info/top_level.txt

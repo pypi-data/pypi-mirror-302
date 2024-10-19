@@ -1,0 +1,5 @@
+xn-auth
+
+[dev]
+build
+twine
