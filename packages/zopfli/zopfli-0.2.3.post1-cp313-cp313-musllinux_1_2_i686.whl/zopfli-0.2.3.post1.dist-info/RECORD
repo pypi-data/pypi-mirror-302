@@ -1,0 +1,14 @@
+zopfli-0.2.3.post1.dist-info/top_level.txt,sha256=8YLCDfhyb5xGrhwj1iQPEqZp7N4B4bA2qj6u2hwTF5s,7
+zopfli-0.2.3.post1.dist-info/RECORD,,
+zopfli-0.2.3.post1.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+zopfli-0.2.3.post1.dist-info/METADATA,sha256=-x6W7ileXe0ESRlBm4sPyx2uEuZEpuhR3eeS1ATJJHI,2932
+zopfli-0.2.3.post1.dist-info/COPYING,sha256=AYscuH7996BML8wT1X7WP2IUkRP7IHsn6hNDDWTxNRM,11341
+zopfli-0.2.3.post1.dist-info/WHEEL,sha256=ooRZ3hBy9oqCIoQgYQzifBpC_7Q3Br7R6leXYtd15OU,110
+zopfli.libs/libstdc++-d2a021ba.so.6.0.32,sha256=1zr_iwGwEBe95gyKdgiw7C4Y1RR9ijV40j66rk4elzg,3537349
+zopfli.libs/libgcc_s-f3fb5a36.so.1,sha256=SrjjCCuY7RHj-T9JLrY9XFMgCCpYD9Qmezr4uoJGVEQ,168321
+zopfli/__init__.py,sha256=HryxuCPNRFxlbWMr1KRdGFdlNPCU7nyx-FTZdwKS65E,1147
+zopfli/gzip.py,sha256=9e6eodgaUA6hcGg7uoIcsGjuRJpJ7jJlVhspCir-mi4,311
+zopfli/png.py,sha256=DCZW8hv62LvZKcUD6oNlPTdUkNn3epBknEcfM3OZGsg,5175
+zopfli/_version.py,sha256=9YRPqBKyyZhfwjjHKx2UpW37cyAROjP8WDxIjunwcRE,417
+zopfli/zopfli.cpython-313-i386-linux-musl.so,sha256=BJz4Nj5L81b9Fd3J7KnXa_bguO2t_WLVx1TdmM7Yem4,2084137
+zopfli/zlib.py,sha256=cnUSaKL18fWcJ-gBTTN9sVy4U04OO3Ry5KFcNUHRwv4,297
