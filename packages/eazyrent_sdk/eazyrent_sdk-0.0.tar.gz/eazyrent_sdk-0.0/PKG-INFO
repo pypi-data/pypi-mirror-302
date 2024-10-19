@@ -1,0 +1,64 @@
+Metadata-Version: 2.1
+Name: eazyrent_sdk
+Version: 0.0
+Summary: Software development kit for Eazyrent
+Home-page: https://pypi.org/project/eazyrent_sdk
+License: MIT
+Author: Thibault GRANDJEAN
+Author-email: thibault@eazyrent.fr
+Requires-Python: >=3.10,<4.0
+Classifier: Development Status :: 1 - Planning
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: httpx
+Requires-Dist: levenshtein
+Requires-Dist: minilog
+Requires-Dist: pydantic[email] (>=2)
+Project-URL: Documentation, https://eazyrent_sdk.readthedocs.io
+Project-URL: Repository, https://gitlab.com/e3146/eazyrent/sdks/python-sdk
+Description-Content-Type: text/markdown
+
+# Overview
+
+Software development kit for Eazyrent
+
+[![PyPI License](https://img.shields.io/pypi/l/eazyrent_sdk.svg)](https://pypi.org/project/eazyrent_sdk)
+[![PyPI Version](https://img.shields.io/pypi/v/eazyrent_sdk.svg?label=version)](https://pypi.org/project/eazyrent_sdk)
+[![PyPI Downloads](https://img.shields.io/pypi/dm/eazyrent_sdk.svg?color=orange)](https://pypistats.org/packages/eazyrent_sdk)
+
+## Setup
+
+### Requirements
+
+* Python 3.10+
+
+### Installation
+
+Install it directly into an activated virtual environment:
+
+```text
+$ pip install eazyrent_sdk
+```
+
+or add it to your [Poetry](https://poetry.eustace.io/) project:
+
+```text
+$ poetry add eazyrent_sdk
+```
+
+## Usage
+
+After installation, the package can be imported:
+
+```text
+$ python
+>>> import eazyrent_sdk
+>>> eazyrent_sdk.__version__
+```
+
