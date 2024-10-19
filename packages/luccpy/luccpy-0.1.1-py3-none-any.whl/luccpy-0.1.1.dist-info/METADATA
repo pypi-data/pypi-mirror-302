@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: luccpy
+Version: 0.1.1
+Summary: LUCC & Climate Group for Personal Use
+Author-email: xfry <dhixuan@outlook.com>
+Project-URL: Homepage, https://github.com/lixuan-code/
+Keywords: climate
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: dask
+Requires-Dist: numpy ==1.26.4
+Requires-Dist: pandas ==2.2.2
+Requires-Dist: xarray ==2023.7.0
+Requires-Dist: rioxarray ==0.15.0
+Requires-Dist: scipy ==1.13.0
+Requires-Dist: pingouin ==0.5.4
+Requires-Dist: shap ==0.45.0
+Requires-Dist: salem ==0.3.10
+Requires-Dist: scikit-learn ==1.4.2
+Requires-Dist: pymannkendall ==1.4.3
+Requires-Dist: netcdf4 ==1.6.5
+Requires-Dist: geocube ==0.4.2
+Requires-Dist: geopandas ==0.14.4
+Requires-Dist: matplotlib ==3.8.4
+Requires-Dist: jupyter ==1.0.0
+Requires-Dist: ipykernel ==6.29.3
+Requires-Dist: ipython ==8.18.1
+Requires-Dist: anyio ==3.*
+
+# luccpy
