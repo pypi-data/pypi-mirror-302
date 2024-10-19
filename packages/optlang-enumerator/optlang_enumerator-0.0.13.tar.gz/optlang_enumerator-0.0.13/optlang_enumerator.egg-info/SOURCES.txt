@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+optlang_enumerator/__init__.py
+optlang_enumerator/cMCS_enumerator.py
+optlang_enumerator/cobra_cnapy.py
+optlang_enumerator/mcs_computation.py
+optlang_enumerator.egg-info/PKG-INFO
+optlang_enumerator.egg-info/SOURCES.txt
+optlang_enumerator.egg-info/dependency_links.txt
+optlang_enumerator.egg-info/not-zip-safe
+optlang_enumerator.egg-info/requires.txt
+optlang_enumerator.egg-info/top_level.txt
+tests/test_metatool_example.py
