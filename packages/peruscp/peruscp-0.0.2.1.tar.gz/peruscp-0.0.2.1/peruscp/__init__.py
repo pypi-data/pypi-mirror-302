@@ -1,0 +1,1 @@
+from peruscp.eldni import elDNI
