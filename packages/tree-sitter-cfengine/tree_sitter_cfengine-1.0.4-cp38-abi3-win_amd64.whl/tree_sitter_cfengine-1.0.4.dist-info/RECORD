@@ -1,0 +1,10 @@
+tree_sitter_cfengine/__init__.py,sha256=2NVttoL6cvzsrN7xhroZnAt_46t6LPMvBRFGOokkRBA,91
+tree_sitter_cfengine/__init__.pyi,sha256=8xf7bY1szgDY9HRJ7FJ326So4SFgMiSRfCB4LADkTpU,27
+tree_sitter_cfengine/_binding.pyd,sha256=ui-_fHUY1TzF-V99mrm4SxbFoa5D--8Q-RFjwNrHnDs,25600
+tree_sitter_cfengine/binding.c,sha256=FIKQYfR5ljI9xPGPfaJ8MYlQJ56u6fdPcO2YCAWcdP8,640
+tree_sitter_cfengine/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tree_sitter_cfengine-1.0.4.dist-info/LICENSE,sha256=26fmCsV37bO7qI3aMhC1hEXojgs5QvUE2KEjvfpVTOE,1086
+tree_sitter_cfengine-1.0.4.dist-info/METADATA,sha256=hf-VmN_NiGlmZw-_J9JqwmId2c_li_YRwImMRPuH5Sg,1933
+tree_sitter_cfengine-1.0.4.dist-info/WHEEL,sha256=HyrewbdGRFSiCNDH2b5_R6gC8PlUKJwC5UbQxS7ZzNk,100
+tree_sitter_cfengine-1.0.4.dist-info/top_level.txt,sha256=2No0sQKQ5F7mBdcwnC-J2_IHQQU7eE1KMUcHA2xcD10,30
+tree_sitter_cfengine-1.0.4.dist-info/RECORD,,
