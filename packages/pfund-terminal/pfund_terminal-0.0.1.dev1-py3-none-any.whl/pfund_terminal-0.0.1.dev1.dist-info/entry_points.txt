@@ -1,0 +1,3 @@
+[console_scripts]
+pfund-terminal=pfund_terminal.main:run_cli
+
