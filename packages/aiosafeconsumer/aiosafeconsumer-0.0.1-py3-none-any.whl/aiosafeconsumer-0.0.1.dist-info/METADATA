@@ -1,0 +1,58 @@
+Metadata-Version: 2.1
+Name: aiosafeconsumer
+Version: 0.0.1
+Summary: Safe consume and process data.
+Author-email: Kostiantyn Korikov <lostclus@gmail.com>
+Project-URL: Repository, http://github.com/lostclus/aiosafeconsumer
+Keywords: asyncio,consumer,microservices
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: No Input/Output (Daemon)
+Classifier: Framework :: AsyncIO
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.10
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+Requires-Dist: croniter
+Provides-Extra: kafka
+Requires-Dist: aiokafka ; extra == 'kafka'
+Provides-Extra: redis
+Requires-Dist: redis[hiredis] ; extra == 'redis'
+Provides-Extra: tests
+Requires-Dist: aiokafka ; extra == 'tests'
+Requires-Dist: pytest ; extra == 'tests'
+Requires-Dist: pytest-asyncio ; extra == 'tests'
+Requires-Dist: pytest-cov ; extra == 'tests'
+Requires-Dist: redis[hiredis] ; extra == 'tests'
+
+aiosafeconsumer
+===============
+
+aiosafeconsumer is a library that provides abstractions and some implementations
+to consume data somewhere and process it.
+
+Abstractions:
+
+* `DataSource` - waits for data and returns batch of records using Python generator
+* `DataProcessor` - accepts batch of records and precess it
+* `DataTransformer` - accepts batch of records and transform it and calls
+  another processor to precess it. Extends `DataProcessor`
+* `Worker` - abstract worker
+* `ConsumerWorker` - connects `DataSource` and `DataProcessor`
+* `DataWriter` - base abstraction to perform data synchronization
+
+Current implementations:
+
+* `KafkaSource` - read data from Kafka
+* `RedisWriter` - synchronize data in Redis
+* `WorkerPool` - controller to setup and run workers in parallel. Can handle worker failures and restarts workers when it fails or exits.
+
+Recommend producer library: https://github.com/lostclus/django-kafka-streamer
+
+Example application: https://github.com/lostclus/WeatherApp
