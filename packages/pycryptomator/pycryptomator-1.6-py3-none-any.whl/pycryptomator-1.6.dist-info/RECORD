@@ -1,0 +1,12 @@
+pycryptomator/4096words_en.txt,sha256=pmtzPlFiifvioPk4LUUJZe30yWV6WWA1000a6KAc4XU,29037
+pycryptomator/__init__.py,sha256=5CQF8bvNkKYcF2RilsyBhL2dfUDMnrSI0SPPrMtgn2Y,147
+pycryptomator/__main__.py,sha256=KCGZKvsk-Wi8m6cUe5Xvlpc4XPVhw6Ehdi4aqg-KaYk,3539
+pycryptomator/cmshell.py,sha256=Tp2nm2BX-BXr_rhMmJp4HbUu8zHZ0MUd45jSf9jLnpc,5463
+pycryptomator/cryptomator.py,sha256=9jynWNhItZiTiBcW3mJI_1ZbnAKKEKSR08TGWslQMqA,37122
+pycryptomator/wordscodec.py,sha256=F6KVsPexHBIhnwaB64docFQTwfSnq1lGH-M2W1nm8Qs,2434
+pycryptomator/w32lex/__init__.py,sha256=wogibCcAeSyfgH8SUbUAnKn71VpFqNsorx470hzbXGo,8900
+pycryptomator-1.6.dist-info/LICENSE,sha256=jkTmuanFLhHasTYc-QlWIf7QXZNRDBJD8EehnGU6eOw,1065
+pycryptomator-1.6.dist-info/METADATA,sha256=WwFr4nWnC45zNy_mdV5cJYCvqL7_R_DYuH2wm2vB7hA,4473
+pycryptomator-1.6.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+pycryptomator-1.6.dist-info/top_level.txt,sha256=UxGTHgRmFdbgHd3Tp9jgnZl5P_zVACJSVJWNSvOJ6sg,14
+pycryptomator-1.6.dist-info/RECORD,,
