@@ -1,0 +1,2 @@
+[console_scripts]
+urmom = urmom.ascii_art:print_urmom
