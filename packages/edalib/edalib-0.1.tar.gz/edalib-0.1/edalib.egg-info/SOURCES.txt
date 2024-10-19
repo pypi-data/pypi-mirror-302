@@ -1,0 +1,5 @@
+setup.py
+edalib.egg-info/PKG-INFO
+edalib.egg-info/SOURCES.txt
+edalib.egg-info/dependency_links.txt
+edalib.egg-info/top_level.txt
