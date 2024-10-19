@@ -1,0 +1,5 @@
+setup.py
+pymathcat.egg-info/PKG-INFO
+pymathcat.egg-info/SOURCES.txt
+pymathcat.egg-info/dependency_links.txt
+pymathcat.egg-info/top_level.txt
