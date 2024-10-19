@@ -1,0 +1,11 @@
+lmoments3/__init__.py,sha256=HSwGai7Eklu4OLdoDWOuiuh8UjSqPJhtbr6BUA111uI,7432
+lmoments3/distr.py,sha256=-IWdEfEMMgbj5QCcGyOKMoxskhWxzHQ2gAFg-pKbsu4,52968
+lmoments3/stats.py,sha256=A9AIv_3Foi0jc-h_0oBoK8gWVyz5ngueiBDMOxrj0tA,2189
+lmoments3/tests/__init__.py,sha256=SdFm8GIElg_u2bF4SxQli1nhcZ2W-wCQFMB0gxkInAw,3711
+lmoments3/tests/test_lmoments.py,sha256=CLTPdQZfrc4hNQ7qTHEc7KqmLRJkDKd4aupLpDMJEOw,7833
+lmoments3/tests/test_samlmu_speed.py,sha256=_HLormR4V4klq9_NGTfKFZFwHG1qRhNVRRp380cXzGE,1508
+lmoments3-1.0.8.dist-info/LICENSE,sha256=4cCtcomD2KVzNeUs8QZPGv_R1FQXPYzr0-2LSnK0hwQ,35121
+lmoments3-1.0.8.dist-info/METADATA,sha256=2szZZg9mA31X2ghvmatWeZdU6j2hCOmOkqJXeSsTfXE,46468
+lmoments3-1.0.8.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+lmoments3-1.0.8.dist-info/top_level.txt,sha256=L7h2UpCWPTDyAAdJ3joWL8wsdLlxaSdgRDMm-JJshkQ,10
+lmoments3-1.0.8.dist-info/RECORD,,
