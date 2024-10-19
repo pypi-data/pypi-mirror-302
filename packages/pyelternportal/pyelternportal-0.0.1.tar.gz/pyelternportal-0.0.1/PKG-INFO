@@ -1,0 +1,44 @@
+Metadata-Version: 2.3
+Name: pyelternportal
+Version: 0.0.1
+Summary: API to retrieve data from Eltern-Portal
+Project-URL: Homepage, https://github.com/michull/api-elternportal
+Project-URL: Issues, https://github.com/michull/api-elternportal/issues
+Author-email: michull <michull@github.com>
+License-File: LICENSE
+Keywords: elternportal
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.11
+Requires-Dist: beautifulsoup4>=4.12.2
+Requires-Dist: lxml>=4.9.4
+Requires-Dist: requests>=2.31.0
+Requires-Dist: tzdata>=2024.1
+Description-Content-Type: text/markdown
+
+# pyelternportal
+Python client library to retrieve data provided by eltern-portal.org
+
+## Install
+```
+pip install pyelternportal
+```
+
+## Usage by example
+Get values
+```
+import pyelternportal
+
+try:
+    api = ElternPortalAPI("")
+
+    print(api)
+except:
+    print("Something went wrong!")
+```
+
+Result
+```
+    print(f"school_name:\t\tAsam Gymnasium")
+```
