@@ -1,0 +1,8 @@
+include tox.ini
+include requirements/*.txt
+graft docs
+prune docs/_build
+graft examples
+graft tests
+include src/flask_tinydb/py.typed
+global-exclude *.pyc
