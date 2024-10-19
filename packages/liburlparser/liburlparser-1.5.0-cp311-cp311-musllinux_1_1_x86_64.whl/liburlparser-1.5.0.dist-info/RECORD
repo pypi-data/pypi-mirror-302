@@ -1,0 +1,11 @@
+liburlparser/_core.cpython-311-x86_64-linux-musl.so,sha256=KiF2BBi7ijbBl0SsKQOrtrHnrucJgc1EuoYCRpmRsF8,1367424
+liburlparser/public_suffix_list.dat,sha256=6apz09q0gWJkHE7QOjTlwmdzuN-cD_pbMnDpwsJzWsA,315909
+liburlparser/_about.cpython-311-x86_64-linux-musl.so,sha256=dJrvkY21Xuag6YTvwkzgYI9Ba6pTg8l3tXeUTObk8aY,293792
+liburlparser/__init__.py,sha256=ZobJSA62B2PTdm4ROlBVYPWVSvSxJHwoeSJGk_8jXCM,176
+liburlparser/core.py,sha256=pI-rYJgehR5GGvKdGID6Dm3AxOmCWF8zh22CPDnQr1k,1096
+liburlparser/__main__.py,sha256=O8qF4YuU0eLwlbyxYQ0Yk_O8tqby5wsdGyInmgb1L_I,1045
+liburlparser-1.5.0.dist-info/RECORD,,
+liburlparser-1.5.0.dist-info/entry_points.txt,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+liburlparser-1.5.0.dist-info/METADATA,sha256=f5ruD-M2x91SyRXDj80qqAhLXw6JOHgCWQSxBd8rXgE,11597
+liburlparser-1.5.0.dist-info/WHEEL,sha256=tidoMap7fJmiJJF1hTPUDCagfgdqxCmPZoWm1TscP-k,116
+liburlparser-1.5.0.dist-info/licenses/LICENSE,sha256=SBNiCMUPOkN74CrKaGEJk1CNXzPemZ76Qsm106kwI1E,2182
