@@ -1,0 +1,8 @@
+# pytest and plugins
+pytest
+pytest-icdiff
+pytest-socket
+
+# Coverage
+diff-cover
+pytest-cov
