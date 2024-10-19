@@ -1,0 +1,10 @@
+override_readline.py,sha256=VNdguWR2P0NzJgfs6RxB-EH09rHvwcvtl2YHsP2qd_U,5341
+readline.py,sha256=ucxZEo-R1fI7Qg6EVtsULTtGq1qeiQ_YZ2dPTGs5CPA,783
+gnureadline.cpython-310-aarch64-linux-gnu.so,sha256=IJ_xmPjx6V23n0axFGtStN86k1w7R34Fg0GVAs1NFc4,1523753
+gnureadline.libs/libncurses-5d0c08b3.so.5.9,sha256=KU3sGVt9OUiwI7JSWQCLhA0nKFgP4d5jokZRMi3zsGw,331553
+gnureadline.libs/libtinfo-658bae53.so.5.9,sha256=_SeFTBs73CRPJTO2q8uhgmiLs3LrcXypV0ZGS1pAgM0,266433
+gnureadline-8.2.13.dist-info/top_level.txt,sha256=15GsHpthYoDv0Ndqakd6ThdZBoe3piJmkOdGMutwLOE,39
+gnureadline-8.2.13.dist-info/RECORD,,
+gnureadline-8.2.13.dist-info/LICENSE,sha256=jOtLnuWt7d5Hsx6XXB2QxzrSe2sWWh3NgMfFRetluQM,35147
+gnureadline-8.2.13.dist-info/METADATA,sha256=88QYcIR8dQ_pB8zIBG5ofTxaEX-75z2eO16vdNaCZL0,12222
+gnureadline-8.2.13.dist-info/WHEEL,sha256=OFOQUjeulYq-_IKQmBMf-PfYjRoTXYmLY59PRumPh38,153
