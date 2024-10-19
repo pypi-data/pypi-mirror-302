@@ -1,0 +1,4 @@
+python-singleton-metaclasses
+
+[video-streams]
+streamlink
