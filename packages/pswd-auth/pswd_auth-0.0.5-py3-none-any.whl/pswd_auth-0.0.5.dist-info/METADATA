@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: pswd-auth
+Version: 0.0.5
+Summary: Auth adapter for password auth in X-Api framework
+Author-email: Artemiev <mixartemev@gmail.com>
+License: MIT
+Project-URL: Homepage, https://github.com/XyncNet/pwsd-auth
+Project-URL: Repository, https://github.com/XyncNet/pwsd-auth
+Keywords: starlette,fastapi,auth
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+Requires-Dist: xn-auth
+Provides-Extra: dev
+Requires-Dist: build ; extra == 'dev'
+Requires-Dist: twine ; extra == 'dev'
+
+# X-Auth
+###### Pswd-jwt authentication for x-api
+
+#### Requirements
+- Python >= 3.12
+
+### INSTALL
+```bash
+pip install pswd-auth
+```
+
+---
+Made with ❤ on top of the [X-Auth](https://github.com/XyncNet/x-auth) and [X-Model](https://github.com/XyncNet/x-model).
