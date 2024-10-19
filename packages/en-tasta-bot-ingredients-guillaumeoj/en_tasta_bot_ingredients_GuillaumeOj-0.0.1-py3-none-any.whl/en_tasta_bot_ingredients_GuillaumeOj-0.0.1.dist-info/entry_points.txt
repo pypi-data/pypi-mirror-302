@@ -1,0 +1,2 @@
+[spacy_models]
+en_tasta_bot_ingredients_GuillaumeOj = en_tasta_bot_ingredients_GuillaumeOj
