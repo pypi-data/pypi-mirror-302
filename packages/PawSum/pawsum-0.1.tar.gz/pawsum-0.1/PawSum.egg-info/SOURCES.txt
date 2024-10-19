@@ -1,0 +1,5 @@
+setup.py
+PawSum.egg-info/PKG-INFO
+PawSum.egg-info/SOURCES.txt
+PawSum.egg-info/dependency_links.txt
+PawSum.egg-info/top_level.txt
