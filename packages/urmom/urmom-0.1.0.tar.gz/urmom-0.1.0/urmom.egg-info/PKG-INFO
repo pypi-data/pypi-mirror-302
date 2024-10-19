@@ -1,0 +1,51 @@
+Metadata-Version: 2.1
+Name: urmom
+Version: 0.1.0
+Summary: A Python package that prints 'URMOM' in ASCII art.
+Home-page: https://github.com/danielmerja/urmom
+Author: Daniel Merja
+Author-email: your.email@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# URMOM
+
+`URMOM` is a simple, light-hearted Python package that prints "URMOM" in glorious ASCII art. Because sometimes, you just need to laugh at something absurd.
+
+## Features
+
+- Prints "URMOM" in ASCII art.
+- Perfect for adding a touch of humor to your Python scripts.
+- Minimal dependencies and easy to use.
+
+## Installation
+
+To install `URMOM`, you can use `pip`. It's available on PyPI, so you can easily install it like any other package.
+
+### Using pip (Preferred)
+
+Run the following command to install the package:
+
+```bash
+pip install urmom
+```
+
+## Usage
+
+To use `URMOM` in your Python script, simply import it and call the `print_urmom` function:
+
+```python
+from urmom import print_urmom
+
+print_urmom()
+```
+
+This will display the ASCII art of "URMOM" in your terminal.
+
+## License
+
+This project is licensed under the MIT License. See the `LICENSE` file for more details.

@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+urmom/__init__.py
+urmom/ascii_art.py
+urmom.egg-info/PKG-INFO
+urmom.egg-info/SOURCES.txt
+urmom.egg-info/dependency_links.txt
+urmom.egg-info/top_level.txt
