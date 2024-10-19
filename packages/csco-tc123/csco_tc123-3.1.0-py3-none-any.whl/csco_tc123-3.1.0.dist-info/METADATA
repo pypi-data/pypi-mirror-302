@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: csco-tc123
+Version: 3.1.0
+Summary: tc local package
+Home-page: https://github.com/tiacui/testrepo1
+Author: tc123
+Author-email: tc@tc123xyz.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# testrepo111111 
+
+
