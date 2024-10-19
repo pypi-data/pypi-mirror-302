@@ -1,0 +1,5 @@
+prune tests
+exclude .gitignore
+global-exclude .git
+global-exclude .git/*
+include schema/*.json
