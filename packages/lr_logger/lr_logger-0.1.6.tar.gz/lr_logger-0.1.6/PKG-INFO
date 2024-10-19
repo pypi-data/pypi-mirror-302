@@ -1,0 +1,77 @@
+Metadata-Version: 2.1
+Name: lr_logger
+Version: 0.1.6
+Summary: 
+Author: Çağdaş Öztürk
+Author-email: cagdas@littlerocket.nl
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: requests (>=2.32.3,<3.0.0)
+Description-Content-Type: text/markdown
+
+# How to use
+Generate a whl file by running the following command
+```bash
+poetry build
+```
+
+Upload the generated whl file in the dist folder to the environment in Microsoft Fabric
+
+Import the package in a notebook
+```python
+from logger import Logger
+```
+
+Create a logger object
+```python
+logger = Logger("{DATADOG_API_KEY}", "{CUSTOMER}", "{ENVIROMENT}", "{WORKSPACE_NAME}", "{LOG_LEVEL_TRESHOLD}")
+```
+
+Default logging. If given threshold is met it will be send towards datadog, 
+
+!IMPORTANT! The source is mandatory and should be used in every default log for tracking in DataDog
+
+```python
+logger.info("{SOURCE}", "This is a test message") 
+logger.warning("{SOURCE}", "This is a test message") 
+logger.critical("{SOURCE}", "This is a test message") 
+logger.debug("{SOURCE}", "This is a test message") 
+```
+
+Logging pipeline metrics DataDog
+```python
+logger.failed("{SOURCE}")
+logger.success("{SOURCE}")
+```
+
+# Development
+## Setup Environment
+Install poetry using the following command
+```bash
+pip install poetry
+```
+
+# Start Enviroment
+To start the environment, run the following command
+```bash
+poetry shell
+```
+
+## Install Dependencies
+```bash
+pip install -r requirements.txt
+```
+
+## Build Project
+```bash
+poetry build
+```
+
+## Run Tests
+```bash
+python -m unittest discover
+```
+

@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "lr_logger"
+version = "0.1.6"
+description = ""
+authors = ["Çağdaş Öztürk <cagdas@littlerocket.nl>", "Daan Gebraad <daan@littlerocket.nl>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+requests = "^2.32.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
