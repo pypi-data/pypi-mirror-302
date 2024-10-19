@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: rsstools
+Version: 0.2.0
+Summary: A simple CLI tool for creating and managing RSS feeds
+Author: sctech-tr
+Author-email: gamerselimiko@gmail.com
+License-File: LICENSE
+Requires-Dist: feedgen
