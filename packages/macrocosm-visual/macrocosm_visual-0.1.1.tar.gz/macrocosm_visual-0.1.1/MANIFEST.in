@@ -1,0 +1,2 @@
+include macrocosm_visual/*.yaml
+include requirements.txt

@@ -1,0 +1,14 @@
+LICENSE.md
+MANIFEST.in
+README.md
+pyproject.toml
+requirements.txt
+setup.py
+macrocosm_visual/__init__.py
+macrocosm_visual/visual_configs.yaml
+macrocosm_visual/viz_setup.py
+macrocosm_visual.egg-info/PKG-INFO
+macrocosm_visual.egg-info/SOURCES.txt
+macrocosm_visual.egg-info/dependency_links.txt
+macrocosm_visual.egg-info/requires.txt
+macrocosm_visual.egg-info/top_level.txt

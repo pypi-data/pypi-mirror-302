@@ -1,0 +1,98 @@
+#
+# Macrocosm visual configs file
+#
+
+# Matplotlib style sheet
+matplotlib:
+
+  axes.edgecolor: '#2D2D2D'
+  axes.labelcolor: '#2D2D2D'
+  axes.labelweight: bold
+  axes.prop_cycle_colors:
+    - '#2449FE' # blue
+    - '#ED3554' # red blue
+    - '#398C72' # dark green
+    - '#FFE052' # yellow
+    - '#C1ED5E' # green
+    - '#F47AFF' # F47AFF
+  axes.spines.right: false
+  axes.spines.top: false
+  axes.titlecolor: '#2D2D2D'
+  axes.titlesize: 16
+  axes.titleweight: bold
+
+  figure.dpi: 300
+  figure.figsize:
+  - 16
+  - 9
+  savefig.dpi: 300
+
+  font.family: monospace
+  font.size: 14
+  text.color: '#2D2D2D'
+
+  legend.edgecolor: none
+  legend.fontsize: 12
+
+  lines.linewidth: 2
+
+  xtick.color: '#2D2D2D'
+  xtick.labelcolor: '#2D2D2D'
+  ytick.color: '#2D2D2D'
+  ytick.labelcolor: '#2D2D2D'
+
+# Plotly style sheet
+plotly:
+
+  data:
+    scatter:
+    - line:
+        width: 3
+  layout:
+    colorway:
+    - '#2449FE' # blue
+    - '#ED3554' # red blue
+    - '#398C72' # dark green
+    - '#FFE052' # yellow
+    - '#C1ED5E' # green
+    - '#F47AFF' # F47AFF
+    font:
+      color: '#2D2D2D'
+      family: monospace
+      size: 14
+    title:
+      font:
+        color: '#2D2D2D'
+        size: 16
+    xaxis:
+      showgrid: true
+      showline: true
+      showticklabels: true
+      tickfont:
+        color: '#2D2D2D'
+      title:
+        font:
+          color: '#2D2D2D'
+      zeroline: false
+    yaxis:
+      showgrid: true
+      showline: true
+      showticklabels: true
+      tickfont:
+        color: '#2D2D2D'
+      title:
+        font:
+          color: '#2D2D2D'
+      zeroline: false
+
+
+# Macrocosm colors
+macrocosm_colors:
+  - "#153995"
+  - "#fa6060"
+  - "#199079"
+  - "#f4d35e"
+  - "#83bdcf"
+  - "#ffe8eb"
+  - "#83f0ca"
+  - "#f5f749"
