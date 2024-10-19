@@ -1,0 +1,5 @@
+atoti_gcp/__init__.py,sha256=4x1QzpLQhI9-bZWxNQffJYbg_4uvU6IjDDxoA8TlFW0,492
+atoti_gcp/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+atoti_client_gcp-0.9.1.dist-info/METADATA,sha256=HiUCfyjPtx3VOQO4rmtq5OJsVOr5fNqd8ER0vBxliEs,947
+atoti_client_gcp-0.9.1.dist-info/WHEEL,sha256=FMvqSimYX_P7y0a7UY-_Mc83r5zkBZsCYPm7Lr0Bsq4,88
+atoti_client_gcp-0.9.1.dist-info/RECORD,,
