@@ -1,0 +1,3 @@
+[console_scripts]
+auto-highlighter=highlighter:cli
+
