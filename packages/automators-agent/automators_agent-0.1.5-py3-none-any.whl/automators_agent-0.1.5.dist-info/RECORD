@@ -1,0 +1,17 @@
+agent/__init__.py,sha256=K6LDWMReSF9JxA_aK756TFAfruWKaZfVaeIO1Y3QlGM,271
+agent/__main__.py,sha256=M_ELFXf-iX-VWZ6TAaX7vpONvqd1L4DgkJBPt_0pbyI,55
+agent/completions.py,sha256=pi9LyfpCwrpdezg0JW-_emhf1sQGb8ZaUZKb5ek8450,6936
+agent/config.py,sha256=FN7hww24kVGrR2mf9QxiYG_RSYj6VqO7U2VFJBBJygc,333
+agent/logging.py,sha256=LguMrMsG4wvcDrGeE8kFKcPgEsABCB5K8MPAZPEWsXA,644
+agent/rich.py,sha256=giSn1mIUqy1c6uXe8lNHvv9NEn2C4NyxBntm1nGJfoc,619
+agent/tools.py,sha256=9qaTMCAa_sVnp0zuqftetNJyAIhWxG3ew4muPaXPaMk,5867
+agent/utils.py,sha256=4bCe4_lN70Ir-covkkCW6BdZ-QvTHVeTJS35NflkbF8,1592
+agent/cli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+agent/cli/init.py,sha256=Vb0_eLlA-zEA8G7sqMiF806YCbR6cPwcozkSzo0Qb_s,2328
+agent/cli/main.py,sha256=yLNYmuJv4X1Ick1venR57PoKos4sALLHisyK1AXSwMM,668
+agent/cli/start.py,sha256=ieyIe1NJj9obnMbGP8sR0VZezNANd24IpSJOL4C1juc,2694
+automators_agent-0.1.5.dist-info/METADATA,sha256=qoTWwN4L-EeVIEHoqhB2whJrTx4P2-WhAU8R0D3baKQ,1712
+automators_agent-0.1.5.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+automators_agent-0.1.5.dist-info/entry_points.txt,sha256=iMd2_M5EqKPCI_3KGwSWLYsKrSzBHB6YSiv75BiiBbU,45
+automators_agent-0.1.5.dist-info/licenses/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+automators_agent-0.1.5.dist-info/RECORD,,
