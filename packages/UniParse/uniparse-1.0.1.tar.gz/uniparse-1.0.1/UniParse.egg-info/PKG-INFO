@@ -1,0 +1,57 @@
+Metadata-Version: 2.1
+Name: UniParse
+Version: 1.0.1
+Summary: A library to parse PDF, DOCX, and TXT files
+Home-page: https://github.com/hridesh-net/praserlib.git
+Author: Hridesh
+Author-email: hridesh.khandal@gmail.com
+Keywords: parse parser pdf docx txt uniparse uniparser
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Text Processing :: Linguistic
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: PyMuPDF>=1.18.0
+Requires-Dist: python-docx>=0.8.10
+Requires-Dist: nltk>=3.5
+Requires-Dist: spacy>=3.0.0
+Requires-Dist: dateparser>=1.2.0
+
+# UniParse
+
+A Python library to parse PDF, DOCX, and TXT files, now with resume summarization capabilities.
+
+## Installation
+
+```bash
+pip install UniParse
+```
+
+## How to Use
+```python
+from UniParse import FileParser
+
+parser = FileParser('path/to/your/file.pdf')
+content = parser.parse()
+print(content)
+```
+
+## Features
+- Parse text from PDF files
+- Extract content from DOCX documents
+- Read text from TXT files
+
+### Parsing Resumes and Extracting Information
+
+```python
+from UniParse import ResumeParser
+
+parser = ResumeParser('path/to/resume.pdf')
+data = parser.get_extracted_data()
+
+print("Resume Data:")
+print(data)
