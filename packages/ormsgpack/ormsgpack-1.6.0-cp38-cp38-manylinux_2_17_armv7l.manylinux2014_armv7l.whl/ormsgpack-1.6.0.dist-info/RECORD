@@ -1,0 +1,9 @@
+ormsgpack-1.6.0.dist-info/METADATA,sha256=CrxmcD7RHEdEXsKoLw3qihZrpjyGRjvgA91rq2Ceup8,43965
+ormsgpack-1.6.0.dist-info/WHEEL,sha256=GR59-19-33iqFBtoJgHRJAc-ql5bkl8MFT4smiYjYMU,127
+ormsgpack-1.6.0.dist-info/licenses/LICENSE-APACHE,sha256=pg7qgXUUUxZo1-AHZXMUSf4U0FnTJJ4LyTs23kX3WfI,10847
+ormsgpack-1.6.0.dist-info/licenses/LICENSE-MIT,sha256=I_GOA9xJ35FiL-KnYXZJdATkbO2KcV2dK2enRGVxzKM,1023
+ormsgpack/__init__.py,sha256=y2swa-lI48X2c1GOtb17W8odG52evFRwiaRZOMM2Xsk,926
+ormsgpack/__init__.pyi,sha256=ofNiJ8ppBK3vCcLvw-vvk8BpbELhnn9ceHsOc8ptPOk,818
+ormsgpack/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ormsgpack/ormsgpack.cpython-38-arm-linux-gnueabihf.so,sha256=vOd_ouYAtjBsr9BS0nHACNmbn6Q92y1Dv9kieFF7YXI,584160
+ormsgpack-1.6.0.dist-info/RECORD,,
