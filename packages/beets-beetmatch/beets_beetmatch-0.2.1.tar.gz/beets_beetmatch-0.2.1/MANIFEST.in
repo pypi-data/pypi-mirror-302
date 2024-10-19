@@ -1,0 +1,9 @@
+# exclude general clutter
+global-exclude .DS_Store
+
+# exclude tests
+exclude tests
+
+# include documentation
+include LICENSE.txt
+include README.md

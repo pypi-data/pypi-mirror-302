@@ -1,0 +1,1 @@
+from .beets import BeetsExtension
