@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: peruscp
+Version: 0.0.2
+Summary: Es un paquete que realiza una solicitud a eldni.com extrayendo todos los datos a consultar, util para bots, APIS, Paginas WEB, son datos basicos de Reniec.
+Home-page: https://github.com/bapinzon/peruscp
+Author: bapinzon
+Author-email: bryanpinzon469@gmail.com
+License: MIT
