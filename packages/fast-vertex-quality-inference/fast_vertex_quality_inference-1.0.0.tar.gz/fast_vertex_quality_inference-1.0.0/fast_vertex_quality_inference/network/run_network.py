@@ -1,0 +1,175 @@
+import fast_vertex_quality_inference.tools.globals as myGlobals
+
+from fast_vertex_quality_inference.processing.data_manager import tuple_manager
+from fast_vertex_quality_inference.processing.network_manager import network_manager
+import numpy as np
+import fast_vertex_quality_inference.tools.display as display
+from pathlib import Path
+import os
+
+def remove_file(file):
+	if Path(file).is_file():
+		os.system(f'rm {file}')
+
+def run_network(rapidsim_tuple, fully_reco, nPositive_missing_particles, nNegative_missing_particles, true_PID_scheme, combined_particles, mother_particle_name, intermediate_particle_name, daughter_particle_names):
+
+	myGlobals.stopwatches.click('Networks - config')
+	with display.status_execution(status_message="[bold green]Initialising networks...", complete_message="[bold green]Networks initialised :white_check_mark:"):
+
+		with display.log_execution(f"Initialising smearing network"):
+			rapidsim_PV_smearing_network = network_manager(
+								network=f"{myGlobals.MODELS_PATH}smearing_decoder_model.onnx", 
+								config=f"{myGlobals.MODELS_PATH}smearing_configs.pkl", 
+								transformers=f"{myGlobals.MODELS_PATH}smearing_transfomers.pkl", 
+								)
+		if any(value in (11, -11) for value in true_PID_scheme.values()): # electrons present
+			with display.log_execution(f"Initialising electron smearing network"):
+				electron_smearing_network = network_manager(
+									network=f"{myGlobals.MODELS_PATH}E_smearing_generator_model.onnx", 
+									config=f"{myGlobals.MODELS_PATH}E_smearing_configs.pkl", 
+									transformers=f"{myGlobals.MODELS_PATH}E_smearing_transfomers.pkl", 
+									)
+		with display.log_execution(f"Initialising vertexing network"):
+			vertexing_network = network_manager(
+								network=f"{myGlobals.MODELS_PATH}vertexing_decoder_model.onnx", 
+								config=f"{myGlobals.MODELS_PATH}vertexing_configs.pkl", 
+								transformers=f"{myGlobals.MODELS_PATH}vertexing_transfomers.pkl", 
+								)
+
+	myGlobals.stopwatches.click('Networks - config')
+
+
+	myGlobals.stopwatches.click('Networks - processing')
+	with display.status_execution(status_message="[bold green]Staging RapidSim tuple...", complete_message="[bold green]RapidSim tuple staged :white_check_mark:"):
+
+		#### 
+		# LOAD RAPIDSIM TUPLE
+		###
+
+		with display.log_execution(f"Reading RapidSim tuple"):
+			data_tuple = tuple_manager(
+								tuple_location=rapidsim_tuple,
+								fully_reco=fully_reco,
+								nPositive_missing_particles=nPositive_missing_particles,
+								nNegative_missing_particles=nNegative_missing_particles,
+								mother_particle_name=mother_particle_name,
+								intermediate_particle_name=intermediate_particle_name,
+								daughter_particle_names=daughter_particle_names,
+								)
+	myGlobals.stopwatches.click('Networks - processing')
+
+	#### 
+	# SMEAR PV
+	###
+	with display.status_execution(status_message="[bold green]Smearing primary vertex...", complete_message="[bold green]Primary vertex smeared :white_check_mark:"):
+		
+		myGlobals.stopwatches.click('Networks - processing')
+		with display.log_execution(f"Computing conditional variables"):
+			smearing_conditions = data_tuple.get_branches(
+								rapidsim_PV_smearing_network.conditions, 
+								rapidsim_PV_smearing_network.Transformers, 
+								numpy=True,
+								)
+		myGlobals.stopwatches.click('Networks - processing')
+
+		myGlobals.stopwatches.click('Networks - generation')
+		with display.log_execution(f"Querying network"):
+			smeared_PV_output = rapidsim_PV_smearing_network.query_network(
+								['noise',smearing_conditions],
+								)
+		myGlobals.stopwatches.click('Networks - generation')
+
+		myGlobals.stopwatches.click('Networks - processing')
+		with display.log_execution(f"Applying smearing"):
+			data_tuple.smearPV(smeared_PV_output)
+		myGlobals.stopwatches.click('Networks - processing')
+
+	
+	#### 
+	# SMEAR ELECTRONS
+	###
+	for particle in true_PID_scheme:
+		if true_PID_scheme[particle] in (11,-11):
+			
+			with display.status_execution(status_message=f"[bold green]Manually smearing electron momenta ({particle})...", complete_message=f"[bold green]{particle} momenta smeared :white_check_mark:"):
+				
+				mapped_particle = data_tuple.map_branch_names_list([particle])[0]
+
+				new_conditions = list(electron_smearing_network.conditions)
+				new_conditions = [condition.replace('DAUGHTER3',mapped_particle) for condition in new_conditions]
+
+				myGlobals.stopwatches.click('Networks - processing')
+				with display.log_execution(f"Computing conditional variables"):
+					E_smearing_conditions = data_tuple.get_branches(
+										new_conditions, 
+										electron_smearing_network.Transformers, 
+										numpy=True,
+										)
+				myGlobals.stopwatches.click('Networks - processing')
+
+				myGlobals.stopwatches.click('Networks - generation')
+				with display.log_execution(f"Querying network"):
+					E_smearing_output = electron_smearing_network.query_network(
+										['noise',E_smearing_conditions],
+										)
+
+					new_columns = list(E_smearing_output.columns)
+					new_columns = [column.replace('DAUGHTER3',mapped_particle) for column in new_columns]
+					E_smearing_output.columns = new_columns
+
+				myGlobals.stopwatches.click('Networks - generation')
+
+				myGlobals.stopwatches.click('Networks - processing')
+				with display.log_execution(f"Applying smearing"):
+					data_tuple.smearelectronE(E_smearing_output, mapped_particle)
+			myGlobals.stopwatches.click('Networks - processing')
+
+	if any(value in (11, -11) for value in true_PID_scheme.values()): # electrons present
+		# re compute combined particles
+		mapped_combined_particles = {}
+		for key in combined_particles:
+			mapped_mother = data_tuple.map_branch_names_list([key])[0]
+			mapped_combined_particles[mapped_mother] = [data_tuple.map_branch_names_list([d])[0] for d in list(combined_particles[key])]
+		data_tuple.recompute_combined_particles(mapped_combined_particles)
+
+
+
+
+	#### 
+	# COMPUTE CONDITIONS AND RUN VERTEXING NETWORK
+	###
+	with display.status_execution(status_message="[bold green]Running vertexing...", complete_message="[bold green]Vertexing complete :white_check_mark:"):
+		
+		myGlobals.stopwatches.click('Networks - processing')
+		with display.log_execution(f"Computing conditional variables"):
+			data_tuple.append_conditional_information()
+			vertexing_conditions = data_tuple.get_branches(
+								vertexing_network.conditions, 
+								vertexing_network.Transformers, 
+								numpy=True,
+								)
+		myGlobals.stopwatches.click('Networks - processing')
+		
+		myGlobals.stopwatches.click('Networks - generation')
+		with display.log_execution(f"Querying network"):
+			vertexing_output = vertexing_network.query_network(
+								['noise',vertexing_conditions],
+								)
+		myGlobals.stopwatches.click('Networks - generation')
+
+		myGlobals.stopwatches.click('Networks - processing')
+		with display.log_execution(f"Appending new branches"):
+			data_tuple.add_branches(
+								vertexing_output
+								)
+		
+			#### 
+			# WRITE TUPLE
+			###
+
+			output_location = data_tuple.write(new_branches_to_keep=vertexing_network.targets)
+		myGlobals.stopwatches.click('Networks - processing')
+	
+	remove_file(rapidsim_tuple)
+
+	return output_location
