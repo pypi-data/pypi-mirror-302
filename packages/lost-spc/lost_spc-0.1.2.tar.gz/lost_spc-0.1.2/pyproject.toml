@@ -1,0 +1,32 @@
+[tool.poetry]
+name = "lost-spc"
+version = "0.1.2"
+description = ""
+authors = ["Philip Trauth <philip.trauth@ost.ch>"]
+license = "GPL-3.0"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+numpy = "^2.1.2"
+scipy = "^1.14.1"
+
+
+[tool.poetry.group.dev.dependencies]
+mkdocs = "^1.6.1"
+mkdocstrings-python = "^1.11.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.flake8]
+max-line-length = 100
+exclude = [".git", "__pycache__"]
+extend-ignore = ["E203"]
+
+[tool.black]
+line-length = 100
+
+[tool.ruff]
+line-length = 100

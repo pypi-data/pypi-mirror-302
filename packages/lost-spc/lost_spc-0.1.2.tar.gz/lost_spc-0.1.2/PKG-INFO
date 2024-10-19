@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: lost-spc
+Version: 0.1.2
+Summary: 
+License: GPL-3.0
+Author: Philip Trauth
+Author-email: philip.trauth@ost.ch
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: numpy (>=2.1.2,<3.0.0)
+Requires-Dist: scipy (>=1.14.1,<2.0.0)
+Description-Content-Type: text/markdown
+
+# (L)OST SPC
+
+Refer to the [full documentation](https://drazhar.github.io/lost_spc/) for more details.
+
+## Development
+
+### mkdocs
+
+To run mkdocs locally, you have to run the following command in the terminal:
+
+```bash
+mkdocs serve
+```
+
+### doctest
+
+To execute the tests for the examples in the documentation run:
+
+```bash
+python doctests.py
+```
+
