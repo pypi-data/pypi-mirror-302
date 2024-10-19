@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: TraceRecursio
+Version: 2.0.0
+Summary: This library provides a decorator that traces the execution of recursive functions, representing their behavior through a graph.
+Home-page: https://github.com/Cristianbergamo/TraceRecursio/tree/main
+License: MIT
+Author: Cristian Bergamo
+Author-email: bergamo.1908@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: networkx (>=2.5,<3.0)
+Requires-Dist: pyvis (>=0.3.2,<0.4.0)
+Project-URL: Repository, https://github.com/Cristianbergamo/TraceRecursio/tree/main
+Description-Content-Type: text/markdown
+
+# TraceRecursio
+This library provides a decorator that traces the execution of recursive functions, representing their behavior through a graph.
+
