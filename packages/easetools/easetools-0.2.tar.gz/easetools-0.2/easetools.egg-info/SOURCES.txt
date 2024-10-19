@@ -1,0 +1,8 @@
+README.md
+setup.py
+easetools/__init__.py
+easetools/module1.py
+easetools.egg-info/PKG-INFO
+easetools.egg-info/SOURCES.txt
+easetools.egg-info/dependency_links.txt
+easetools.egg-info/top_level.txt
