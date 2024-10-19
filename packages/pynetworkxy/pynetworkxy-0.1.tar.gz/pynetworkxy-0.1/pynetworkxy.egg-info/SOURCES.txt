@@ -1,0 +1,7 @@
+setup.py
+pynetworkxy/__init__.py
+pynetworkxy/main.py
+pynetworkxy.egg-info/PKG-INFO
+pynetworkxy.egg-info/SOURCES.txt
+pynetworkxy.egg-info/dependency_links.txt
+pynetworkxy.egg-info/top_level.txt
