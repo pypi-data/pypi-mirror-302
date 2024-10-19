@@ -1,0 +1,2 @@
+[console_scripts]
+hello = example_packaged_app:hello
