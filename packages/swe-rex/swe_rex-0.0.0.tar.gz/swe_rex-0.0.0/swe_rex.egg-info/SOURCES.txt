@@ -1,0 +1,5 @@
+pyproject.toml
+swe_rex.egg-info/PKG-INFO
+swe_rex.egg-info/SOURCES.txt
+swe_rex.egg-info/dependency_links.txt
+swe_rex.egg-info/top_level.txt
