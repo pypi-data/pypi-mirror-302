@@ -1,0 +1,9 @@
+feor/afk_spec/__init__.py,sha256=ISrdznLZPiyNuOk3EA6Q7lBFi_jh2rAEwiYj_Mk6N18,3936
+feor/afk_spec/app.py,sha256=0CHbijrhjX3UUFfsqkEfAXniM7Z_qSUN_VJP-iNEgyo,73
+feor/afk_spec/views.py,sha256=dUFIl2Efq3QvddBeY2L7aqDFAA1VHQCK8853lPT84iA,2233
+feor/afk_spec/templates/AFK.Script.Txt,sha256=ut2SnRly6r0F-aWc48rW6mMTwVIDKBqZY6b1YZiEFo4,763
+feor/afk_spec/templates/AFK.xml,sha256=UiAnY4I2OU9Yh1VDlefVcSKn-a1HO3ar4H_J60dNeKg,844
+pyplanet_afk_spec-0.7.1.dist-info/METADATA,sha256=__oHSxuqH0tIp9V8tkv2_bisFfg67KkHiwb3JpMdNSg,2556
+pyplanet_afk_spec-0.7.1.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+pyplanet_afk_spec-0.7.1.dist-info/licenses/LICENSE,sha256=HbHXR6w2309IWEB2G-l0_4089z7dFbsUzFjp2n03xv0,1082
+pyplanet_afk_spec-0.7.1.dist-info/RECORD,,
