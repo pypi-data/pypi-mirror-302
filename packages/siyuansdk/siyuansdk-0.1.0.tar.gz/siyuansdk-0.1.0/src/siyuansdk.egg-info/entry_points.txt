@@ -1,0 +1,2 @@
+[console_scripts]
+siyuancli = siyuansdk.cli:main
