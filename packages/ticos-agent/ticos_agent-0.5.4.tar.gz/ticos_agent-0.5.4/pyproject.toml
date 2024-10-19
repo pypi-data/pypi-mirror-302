@@ -1,0 +1,52 @@
+[tool.poetry]
+authors = ["Ticos Dev <hi@tiwater.com>"]
+description = "Ticos Agent - Bridges humanoid robots to Ticos"
+license = "MIT"
+name = "ticos-agent"
+packages = [
+  {include = "ticos_agent", from = "src"},
+]
+readme = "README.md"
+version = "0.5.4"
+
+[project.urls]
+Homepage = "https://github.com/tiwater/ticos-agent"
+Issues = "https://github.com/tiwater/ticos-agent/issues"
+
+[tool.poetry.dependencies]
+numpy = "^1.18.5"
+opencv-python = "^4.2.0"
+psutil = "^5.7.0"
+pyaudio = "^0.2.11"
+python = "^3.5"
+pyyaml = "^5.3"
+requests = "^2.25.0"
+sounddevice = "^0.4.0"
+websockets = "^7.0"
+
+[tool.poetry.extras]
+yan = ["YanAPI"]
+
+[tool.poetry.dev-dependencies]
+flake8 = "^3.9.2"
+pytest = "^6.1.2"
+
+[tool.poetry.scripts]
+ticos = "ticos_agent.__main__:run_main"
+ticos-with-config = "ticos_agent.__main__:main --config"
+
+[build-system]
+build-backend = "poetry.core.masonry.api"
+requires = ["poetry-core>=1.0.0"]
+
+[tool.flake8]
+exclude = [
+  ".git",
+  "__pycache__",
+  "docs/source/conf.py",
+  "old",
+  "build",
+  "dist",
+  ".venv",
+]
+max-line-length = 140
