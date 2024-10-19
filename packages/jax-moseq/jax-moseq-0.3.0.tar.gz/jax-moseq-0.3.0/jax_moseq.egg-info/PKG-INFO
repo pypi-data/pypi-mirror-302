@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: jax-moseq
+Version: 0.3.0
+Home-page: https://github.com/dattalab/jax-moseq/
+Author: Caleb Weinreb
+Author-email: calebsw@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Provides-Extra: cuda11
+Provides-Extra: cuda12
+License-File: LICENSE.md
