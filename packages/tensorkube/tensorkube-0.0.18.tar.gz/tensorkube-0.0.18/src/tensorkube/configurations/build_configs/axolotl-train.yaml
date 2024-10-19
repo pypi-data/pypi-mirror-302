@@ -1,0 +1,54 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: ${JOB_NAME}
+  namespace: ${NAMESPACE}
+spec:
+  backoffLimit: 0
+  template:
+    metadata:
+      annotations:
+        image_tag: ${IMAGE_TAG}
+    spec:
+      ttlSecondsAfterFinished: 100
+      restartPolicy: Never
+      containers:
+      - image: ${IMAGE_URL}
+        name: user-container
+        env:
+          - name: AWS_ACCESS_KEY_ID
+            valueFrom:
+              secretKeyRef:
+                name: aws-secret
+                key: AWS_ACCESS_KEY_ID
+          - name: AWS_SECRET_ACCESS_KEY
+            valueFrom:
+              secretKeyRef:
+                name: aws-secret
+                key: AWS_SECRET_ACCESS_KEY
+        resources:
+          requests:
+            nvidia.com/gpu: ${GPUS}
+          limits:
+            nvidia.com/gpu: ${GPUS}
+        volumeMounts:
+        - name: axolotl-config-name
+          mountPath: /etc/config  # Path where the config file will be mounted
+        imagePullPolicy: Always
+      volumes:
+      - name: axolotl-config-name
+        configMap:
+          name: axolotl-config
+          items:
+            - key: config
+              path: axolotl-config.yaml
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+              - matchExpressions:
+                  - key: karpenter.k8s.aws/instance-family
+                    operator: NotIn
+                    values:
+                      - r5
+
