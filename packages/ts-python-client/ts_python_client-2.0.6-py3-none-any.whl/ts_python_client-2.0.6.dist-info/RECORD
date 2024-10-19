@@ -1,0 +1,11 @@
+ts_python_client/__init__.py,sha256=FQhbuHP_FofHpwur-RAm8-Tdzqiwa2jcRXTqfe65VDQ,81
+ts_python_client/cli.py,sha256=17039wo_inJMi0_yIyjjmuou9CAcI-OvGcZMkIW3oyk,1356
+ts_python_client/client.py,sha256=oYgzCKiN0rH9Q5V3S81hIGfoaai7wfNAPl7Z7F96Exo,4228
+ts_python_client/commands/ScanCommand.py,sha256=IsRcrKZCwZjo-RpB8CZ2QtQc0hpYhBcuUXZUmM0reYk,1513
+ts_python_client/commands/UploadCommand.py,sha256=Wh_rE2XujIRsIoj1uRTseHFzySFQHp8VdOelD6zcAtY,2294
+ts_python_client/commands/__init__.py,sha256=opzYEm6koAdmRnc449OPEOXShqK5NeLSn2zYC1x9caY,410
+ts_python_client-2.0.6.dist-info/LICENSE,sha256=036xUnjb1gm3PfoHo45G0k6_lJRVHez3vuc2e9l3Rag,11346
+ts_python_client-2.0.6.dist-info/METADATA,sha256=b9ktIIMMiPxq3S_0mOUHjFHYxwPLxA70rhACcfETVns,462
+ts_python_client-2.0.6.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+ts_python_client-2.0.6.dist-info/top_level.txt,sha256=DlQU9cbxubB-aVlgkYTMM6N8y4ZKGCz-mmkx0xUd8xU,17
+ts_python_client-2.0.6.dist-info/RECORD,,
