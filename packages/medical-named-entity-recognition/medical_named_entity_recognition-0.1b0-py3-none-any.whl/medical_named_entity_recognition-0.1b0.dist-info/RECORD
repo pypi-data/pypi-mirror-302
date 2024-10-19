@@ -1,0 +1,9 @@
+medical_named_entity_recognition/__init__.py,sha256=LgfSxTeeJ2F7w-IYm52AAfLtqSpNqnAfEWpeuG3Ng8w,1329
+medical_named_entity_recognition/disease_finder.py,sha256=eWLDzPz8E_HitqougzdM-J_UpchYLVMnEBYH7ui7YHk,9950
+medical_named_entity_recognition/disease_ner_dictionary.pkl.bz2,sha256=1n9KiSL1B7DsulIO4kSn4y1KloNgWyKi2tKYdU1K-rc,584476
+medical_named_entity_recognition/util.py,sha256=3OmPQvHdW0-NdbDYSbjhSLywzliG_swZUbhS3eZAv1M,18592
+medical_named_entity_recognition-0.1b0.dist-info/LICENSE,sha256=vGUS02R7ryagjTyVSFA4RtSoF_PBJSMMfgFvNLeff4M,1220
+medical_named_entity_recognition-0.1b0.dist-info/METADATA,sha256=yrAIRwXy3epcEJsy2fOy6F2HJr4wRscO2eHs_X2F0Q4,14111
+medical_named_entity_recognition-0.1b0.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+medical_named_entity_recognition-0.1b0.dist-info/top_level.txt,sha256=i-fGQ7qQX3ylPH-uORwV9SMr8by8eEzb3Y5ozkuAOlc,33
+medical_named_entity_recognition-0.1b0.dist-info/RECORD,,
