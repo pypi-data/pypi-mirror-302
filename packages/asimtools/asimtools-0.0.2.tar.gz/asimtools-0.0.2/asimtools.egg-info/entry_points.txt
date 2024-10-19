@@ -1,0 +1,4 @@
+[console_scripts]
+asim-check = asimtools.scripts.asim_check:main
+asim-execute = asimtools.scripts.asim_execute:main
+asim-run = asimtools.scripts.asim_run:main
