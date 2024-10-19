@@ -1,0 +1,13 @@
+LICENSE
+setup.py
+app/slicerutil/__init__.py
+app/slicerutil.egg-info/PKG-INFO
+app/slicerutil.egg-info/SOURCES.txt
+app/slicerutil.egg-info/dependency_links.txt
+app/slicerutil.egg-info/requires.txt
+app/slicerutil.egg-info/top_level.txt
+app/slicerutil/src/Segment.py
+app/slicerutil/src/__init__.py
+app/slicerutil/src/image_volume.py
+app/slicerutil/src/segmentation_node.py
+app/slicerutil/src/utils.py
