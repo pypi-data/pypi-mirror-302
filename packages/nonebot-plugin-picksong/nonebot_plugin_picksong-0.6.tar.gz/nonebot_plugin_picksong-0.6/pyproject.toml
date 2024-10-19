@@ -1,0 +1,24 @@
+[project]
+name = "nonebot-plugin-picksong"
+version = "0.6"
+description = "nonebot2点歌插件"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {file = "LICENSE"}
+authors = [
+  {email = "1309946582@qq.com"},
+  {name = "QiYork"}
+]
+
+classifiers = [
+  "Programming Language :: Python"
+]
+
+dependencies = [
+  "nonebot>=2.2.0",
+  "nonebot_plugin_localstore>=0.7",
+  "httpx>=0.18",
+  "requests>=2.25",
+  "pydub>=0.25",
+  "graiax-silkcoder>=0.3"
+]
