@@ -1,0 +1,8 @@
+online_store/__init__.py,sha256=Cr9qhbZWsnWJNwCCNzhXRnK1f6vcuuzWxRu_GcEFUj0,128
+online_store/__main__.py,sha256=LtQr2cGn-btVkdYzd6r6cadFwd8dCGc7QLkmxjLWdvQ,3011
+online_store/order_management.py,sha256=X6Gm8Rgeyj4t66cfEm34R0PRtdmKATb055kLuUNn8iw,933
+online_store/user_management.py,sha256=Ht2eoOuMaXvx64d2U1exrYkd7pH_3NvXi-jMjpB1CD4,1150
+online_store_plavist-0.1.0.dist-info/METADATA,sha256=y3HcA04spNjHXRT4L4ers2eMg4JkDdwPWiaPb1jrwms,350
+online_store_plavist-0.1.0.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+online_store_plavist-0.1.0.dist-info/top_level.txt,sha256=1XsS3oaWSpPbCOX_l0AOuVOXb7AEfEg7FHAk22dLwyY,13
+online_store_plavist-0.1.0.dist-info/RECORD,,
