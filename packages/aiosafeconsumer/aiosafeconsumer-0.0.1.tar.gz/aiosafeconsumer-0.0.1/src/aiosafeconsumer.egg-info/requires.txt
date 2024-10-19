@@ -1,0 +1,14 @@
+croniter
+
+[kafka]
+aiokafka
+
+[redis]
+redis[hiredis]
+
+[tests]
+aiokafka
+pytest
+pytest-asyncio
+pytest-cov
+redis[hiredis]
