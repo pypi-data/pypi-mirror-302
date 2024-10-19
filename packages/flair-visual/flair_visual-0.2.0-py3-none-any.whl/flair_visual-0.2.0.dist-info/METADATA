@@ -1,0 +1,22 @@
+Metadata-Version: 2.3
+Name: flair-visual
+Version: 0.2.0
+Summary: Add your description here
+Author-email: "QuEra Computing Inc." <info@quera.com>
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.10
+Requires-Dist: numpy>=1.26.4
+Requires-Dist: scipy>=1.14.1
+Provides-Extra: vis
+Requires-Dist: ffmpeg>=1.4; extra == 'vis'
+Requires-Dist: matplotlib>=3.9.2; extra == 'vis'
+Requires-Dist: tqdm>=4.66.5; extra == 'vis'
+Description-Content-Type: text/markdown
+
+# flair-visual
