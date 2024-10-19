@@ -1,0 +1,9 @@
+_atoti_server_directquery_bigquery/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+_atoti_server_directquery_bigquery/__resources__/plugin.jar,sha256=l1TxFECaaN5ZWjEst9ukfeD-f84sOoN3wUt26_DNkIk,52603059
+_atoti_server_directquery_bigquery/_plugin.py,sha256=DdOYoQPegDpbpFcdzL2j0tSJcv2DJ2AR5QZXqXDEhq8,822
+_atoti_server_directquery_bigquery/_resources_directory.py,sha256=kOOsXoN0C2-JZbbg3vJcW18ypPwrF0p-ELc2H6Dlo6k,88
+_atoti_server_directquery_bigquery/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+atoti_server_directquery_bigquery-0.9.1.dist-info/METADATA,sha256=cw2U4Ga79eecMSA8k063A2SkDajnrQG9Dwm4sLzH83o,860
+atoti_server_directquery_bigquery-0.9.1.dist-info/WHEEL,sha256=FMvqSimYX_P7y0a7UY-_Mc83r5zkBZsCYPm7Lr0Bsq4,88
+atoti_server_directquery_bigquery-0.9.1.dist-info/entry_points.txt,sha256=SgYOhB9X8-OeZfrwxcza31z_QwF5I3GgBkak9HkeDn8,96
+atoti_server_directquery_bigquery-0.9.1.dist-info/RECORD,,
