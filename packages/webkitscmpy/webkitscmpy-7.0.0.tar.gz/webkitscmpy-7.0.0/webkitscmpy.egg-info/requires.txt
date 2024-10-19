@@ -1,0 +1,7 @@
+fasteners
+jinja2
+monotonic
+webkitcorepy
+webkitbugspy
+xmltodict
+rapidfuzz
