@@ -1,0 +1,157 @@
+Metadata-Version: 2.1
+Name: django-ckeditor-with-toc
+Version: 1.0.1
+Summary: Django admin CKEditor integration and added TOC .
+Home-page: https://github.com/alighazali13/django-ckeditor-with-toc
+Author: Shaun Sephton & Piotr Malinski , added TOC BY Ali Ghazalizadeh
+Author-email: alighazalizadeh13@gmail.com
+Project-URL: Documentation, https://django-ckeditor.readthedocs.io/en/latest/
+Project-URL: Source, https://github.com/alighazali13/django-ckeditor-with-toc
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 3.2
+Classifier: Framework :: Django :: 4.1
+Classifier: Framework :: Django :: 4.2
+Classifier: Framework :: Django :: 5.0
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Requires-Python: >=3.8
+License-File: LICENSE
+Requires-Dist: Django>=3.2
+Requires-Dist: django-js-asset>=2.0
+
+Deprecation notice
+==================
+
+I do not recommend using this package anymore since the open source version of CKEditor 4 has unfixed security issues. More on this in `my blog post <https://406.ch/writing/django-ckeditor/>`__. Alternatives are listed `here on Django Packages <https://djangopackages.org/grids/g/wysiwyg/>`__. I personally am using `django-prose-editor <https://406.ch/writing/django-prose-editor-prose-editing-component-for-the-django-admin/>`__. Thanks!
+
+
+Django CKEditor powerd by django-ckeditor
+=========================================
+
+.. image:: https://img.shields.io/pypi/v/django-ckeditor-with-toc.svg
+   :target: https://pypi.python.org/pypi/django-ckeditor-with-toc
+
+
+**Django CKEditor Configurations.**
+
+Here, I will only explain how to configure the Table of Contents (TOC) in django-ckeditor, but to view the full django-ckeditor documentation, `click here <https://pypi.org/project/django-ckeditor/>`_.
+
+
+Example ckeditor configuration
+------------------------------
+
+::
+
+    CKEDITOR_CONFIGS = {
+        'default': {
+            'skin': 'moono',
+            # 'skin': 'office2013',
+            'toolbar_Basic': [
+                ['Source', '-', 'Bold', 'Italic']
+            ],
+            'toolbar_YourCustomToolbarConfig': [
+                {'name': 'document', 'items': ['Source', '-', 'Save', 'NewPage', 'Preview', 'Print', '-', 'Templates']},
+                {'name': 'clipboard', 'items': ['Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord', '-', 'Undo', 'Redo']},
+                {'name': 'editing', 'items': ['Find', 'Replace', '-', 'SelectAll']},
+                {'name': 'forms',
+                 'items': ['Form', 'Checkbox', 'Radio', 'TextField', 'Textarea', 'Select', 'Button', 'ImageButton',
+                           'HiddenField']},
+                '/',
+                {'name': 'basicstyles',
+                 'items': ['Bold', 'Italic', 'Underline', 'Strike', 'Subscript', 'Superscript', '-', 'RemoveFormat']},
+                {'name': 'paragraph',
+                 'items': ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'Blockquote', 'CreateDiv', '-',
+                           'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock', '-', 'BidiLtr', 'BidiRtl',
+                           'Language']},
+                {'name': 'links', 'items': ['Link', 'Unlink', 'Anchor']},
+                {'name': 'insert',
+                 'items': ['Image', 'Flash', 'Table', 'HorizontalRule', 'Smiley', 'SpecialChar', 'PageBreak', 'Iframe']},
+                '/',
+                {'name': 'styles', 'items': ['Styles', 'Format', 'Font', 'FontSize']},
+                {'name': 'colors', 'items': ['TextColor', 'BGColor']},
+                {'name': 'tools', 'items': ['Maximize', 'ShowBlocks']},
+                {'name': 'about', 'items': ['About']},
+                '/',  # put this to force next toolbar on new line
+                {'name': 'yourcustomtools', 'items': [
+                    # put the name of your editor.ui.addButton here
+                    'Preview',
+                    'Maximize',
+
+                ]},
+            ],
+            'toolbar': 'YourCustomToolbarConfig',  # put selected toolbar config here
+            # 'toolbarGroups': [{ 'name': 'document', 'groups': [ 'mode', 'document', 'doctools' ] }],
+            # 'height': 291,
+            # 'width': '100%',
+            # 'filebrowserWindowHeight': 725,
+            # 'filebrowserWindowWidth': 940,
+            # 'toolbarCanCollapse': True,
+            # 'mathJaxLib': '//cdn.mathjax.org/mathjax/2.2-latest/MathJax.js?config=TeX-AMS_HTML',
+            'tabSpaces': 4,
+            'extraPlugins': ','.join([
+                'uploadimage', # the upload image feature
+                # your extra plugins here
+                'div',
+                'autolink',
+                'autoembed',
+                'embedsemantic',
+                'autogrow',
+                'toc',
+                # 'devtools',
+                'widget',
+                'lineutils',
+                'clipboard',
+                'dialog',
+                'dialogui',
+                'elementspath'
+            ]),
+        }
+    }
+
+AUTHORS
+=======
+
+
+Created By
+----------
+#. `shaunsephton <http://github.com/shaunsephton>`__
+
+
+Contributors
+------------
+#. `riklaunim <https://github.com/riklaunim>`__
+#. `3point2 <https://github.com/3point2>`__
+#. `buchuki <http://github.com/buchuki>`__
+#. `chr15m <http://github.com/chr15m>`__
+#. `hedleyroos <https://github.com/hedleyroos>`__
+#. `jeffh <https://github.com/jeffh>`__
+#. `lihan <https://github.com/lihan>`__
+#. `loop0 <http://github.com/loop0>`__
+#. `mwcz <https://github.com/mwcz>`__
+#. `tomwys <https://github.com/tomwys>`__
+#. `snbuback <https://github.com/snbuback>`__
+#. added toc `alighazali <https://github.com/alighazali13/>`__
+#. And others `<https://github.com/django-ckeditor/django-ckeditor/graphs/contributors>`__
+
+Changelog
+=========
+
+Unreleased
+----------
+
+1.0.1
+-----
+
+#. changed README
+1.0.0
+-----
+
+#. added TOC to django-ckeditor
