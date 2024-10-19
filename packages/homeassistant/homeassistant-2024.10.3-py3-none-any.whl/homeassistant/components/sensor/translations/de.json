@@ -1,0 +1,306 @@
+{
+    "device_automation": {
+        "condition_type": {
+            "is_apparent_power": "Aktuelle Scheinleistung von {entity_name}",
+            "is_aqi": "Aktueller Luftqualit\u00e4tsindex von {entity_name}",
+            "is_atmospheric_pressure": "Aktueller atmosph\u00e4rischer Druck von {entity_name}",
+            "is_battery_level": "Aktueller Batteriestand von {entity_name}",
+            "is_carbon_dioxide": "Aktuelle Kohlendioxid-Konzentration von {entity_name}",
+            "is_carbon_monoxide": "Aktuelle Kohlenmonoxid-Konzentration von {entity_name}",
+            "is_conductivity": "Aktuelle Leitf\u00e4higkeit von {entity_name}",
+            "is_current": "Aktueller Strom f\u00fcr {entity_name}",
+            "is_data_rate": "Aktuelle Datenrate von {entity_name}",
+            "is_data_size": "Aktuelle Datenmenge von {entity_name}",
+            "is_distance": "Aktuelle Strecke von {entity_name}",
+            "is_duration": "Aktuelle Dauer von {entity_name}",
+            "is_energy": "Aktuelle Energiemenge f\u00fcr {entity_name}",
+            "is_frequency": "Aktuelle Frequenz von {entity_name}",
+            "is_gas": "Aktuelle Gasmenge f\u00fcr {entity_name}",
+            "is_humidity": "Aktuelle Luftfeuchtigkeit von {entity_name}",
+            "is_illuminance": "Aktuelle Helligkeit von {entity_name}",
+            "is_irradiance": "Aktuelle Sonneneinstrahlung von {entity_name}",
+            "is_moisture": "Aktuelle N\u00e4sse von {entity_name}",
+            "is_monetary": "Aktueller Kontostand von {entity_name}",
+            "is_nitrogen_dioxide": "Aktuelle Stickstoffdioxid-Konzentration von {entity_name}",
+            "is_nitrogen_monoxide": "Aktuelle Stickstoffmonoxid-Konzentration von {entity_name}",
+            "is_nitrous_oxide": "Aktuelle Lachgaskonzentration von {entity_name}",
+            "is_ozone": "Aktuelle Ozonkonzentration von {entity_name}",
+            "is_ph": "Aktueller pH-Wert {entity_name}",
+            "is_pm1": "Aktuelle PM1-Konzentration von {entity_name}",
+            "is_pm10": "Aktuelle PM10-Konzentration von {entity_name}",
+            "is_pm25": "Aktuelle PM2.5-Konzentration von {entity_name}",
+            "is_power": "Aktuelle Leistung von {entity_name}",
+            "is_power_factor": "Aktueller Leistungsfaktor von {entity_name}",
+            "is_precipitation": "Aktuelle Niederschlagsmenge von {entity_name}",
+            "is_precipitation_intensity": "Aktuelle Niederschlagsintensit\u00e4t von {entity_name}",
+            "is_pressure": "Aktueller Druck von {entity_name}",
+            "is_reactive_power": "Aktuelle Blindleistung von {entity_name}",
+            "is_signal_strength": "Aktuelle Signalst\u00e4rke von {entity_name}",
+            "is_sound_pressure": "Aktueller Schalldruck von {entity_name}",
+            "is_speed": "Aktuelle Geschwindigkeit von {entity_name}",
+            "is_sulphur_dioxide": "Aktuelle Schwefeldioxid-Konzentration von {entity_name}",
+            "is_temperature": "Aktuelle Temperatur von {entity_name}",
+            "is_value": "Aktueller Wert f\u00fcr {entity_name}",
+            "is_volatile_organic_compounds": "Aktuelle VOC-Konzentration in {entity_name}",
+            "is_volatile_organic_compounds_parts": "Aktuelle VOC-Konzentration in {entity_name}",
+            "is_voltage": "Aktuelle Spannung von {entity_name}",
+            "is_volume": "Aktuelle Lautst\u00e4rke von {entity_name}",
+            "is_volume_flow_rate": "Aktueller Volumenstrom von {entity_name}",
+            "is_water": "Aktuelle Wassermenge f\u00fcr {entity_name}",
+            "is_weight": "Aktuelles Gewicht von {entity_name}",
+            "is_wind_speed": "Aktuelle Windgeschwindigkeit von {entity_name}"
+        },
+        "extra_fields": {
+            "above": "\u00dcber",
+            "below": "Unter",
+            "for": "Dauer"
+        },
+        "trigger_type": {
+            "apparent_power": "\u00c4nderung der Scheinleistung von {entity_name}",
+            "aqi": "\u00c4nderung des Luftqualit\u00e4tsindex von {entity_name}",
+            "atmospheric_pressure": "\u00c4nderung des atmosph\u00e4rischen Drucks von {entity_name}",
+            "battery_level": "\u00c4nderung des Batteriestands von {entity_name}",
+            "carbon_dioxide": "\u00c4nderung der Kohlendioxid-Konzentration von {entity_name}",
+            "carbon_monoxide": "\u00c4nderung der Kohlenmonoxid-Konzentration von {entity_name}",
+            "conductivity": "\u00c4nderung der Leitf\u00e4higkeit von {entity_name}",
+            "current": "\u00c4nderung des Stroms von {entity_name}",
+            "data_rate": "\u00c4nderung der Datenrate von {entity_name}",
+            "data_size": "\u00c4nderung der Datenmenge von {entity_name}",
+            "distance": "\u00c4nderung der Strecke von {entity_name}",
+            "duration": "\u00c4nderung der Dauer von {entity_name}",
+            "energy": "\u00c4nderung der Energiemenge von {entity_name}",
+            "frequency": "\u00c4nderung der Frequenz von {entity_name}",
+            "gas": "\u00c4nderung der Gasmenge von {entity_name}",
+            "humidity": "\u00c4nderung der Luftfeuchtigkeit von {entity_name}",
+            "illuminance": "\u00c4nderung der Helligkeit von {entity_name}",
+            "irradiance": "\u00c4nderung der Sonneneinstrahlung von {entity_name}",
+            "moisture": "\u00c4nderung der N\u00e4sse von {entity_name}",
+            "monetary": "\u00c4nderung des Kontostands von {entity_name}",
+            "nitrogen_dioxide": "\u00c4nderung der Stickstoffdioxid-Konzentration von {entity_name}",
+            "nitrogen_monoxide": "\u00c4nderung der Stickstoffmonoxid-Konzentration von {entity_name}",
+            "nitrous_oxide": "\u00c4nderung der Lachgas-Konzentration von {entity_name}",
+            "ozone": "\u00c4nderung der Ozon-Konzentration von {entity_name}",
+            "ph": "\u00c4nderung des pH-Werts von {entity_name}",
+            "pm1": "\u00c4nderung der PM1-Konzentration von {entity_name}",
+            "pm10": "\u00c4nderung der PM10-Konzentration von {entity_name}",
+            "pm25": "\u00c4nderung der PM2,5-Konzentration von {entity_name}",
+            "power": "\u00c4nderung der Leistung von {entity_name}",
+            "power_factor": "\u00c4nderung des Leistungsfaktors von {entity_name}",
+            "precipitation": "\u00c4nderung der Niederschlagsmenge von {entity_name}",
+            "precipitation_intensity": "\u00c4nderung der Niederschlagsintensit\u00e4t von {entity_name}",
+            "pressure": "\u00c4nderung des Drucks von {entity_name}",
+            "reactive_power": "\u00c4nderung der Blindleistung von {entity_name}",
+            "signal_strength": "\u00c4nderung der Signalst\u00e4rke von {entity_name}",
+            "sound_pressure": "\u00c4nderung des Schalldrucks von {entity_name}",
+            "speed": "\u00c4nderung der Geschwindigkeit von {entity_name}",
+            "sulphur_dioxide": "\u00c4nderung der Schwefeldioxid-Konzentration von {entity_name}",
+            "temperature": "\u00c4nderung der Temperatur von {entity_name}",
+            "value": "\u00c4nderung des Werts von {entity_name}",
+            "volatile_organic_compounds": "\u00c4nderung der VOC-Konzentration von {entity_name}",
+            "volatile_organic_compounds_parts": "\u00c4nderung der VOC-Konzentration von {entity_name}",
+            "voltage": "\u00c4nderung der Spannung von {entity_name}",
+            "volume": "\u00c4nderung der Lautst\u00e4rke von {entity_name}",
+            "volume_flow_rate": "\u00c4nderung des Volumenstroms von {entity_name}",
+            "water": "\u00c4nderung der Wassermenge von {entity_name}",
+            "weight": "\u00c4nderung des Gewichts von {entity_name}",
+            "wind_speed": "\u00c4nderung der Windgeschwindigkeit von {entity_name}"
+        }
+    },
+    "entity_component": {
+        "_": {
+            "name": "Sensor",
+            "state": {
+                "off": "Aus",
+                "on": "An"
+            },
+            "state_attributes": {
+                "last_reset": {
+                    "name": "Letzter Reset"
+                },
+                "options": {
+                    "name": "M\u00f6gliche Zust\u00e4nde"
+                },
+                "state_class": {
+                    "name": "Zustandsklasse",
+                    "state": {
+                        "measurement": "Messung",
+                        "total": "Gesamt",
+                        "total_increasing": "Insgesamt steigend"
+                    }
+                }
+            }
+        },
+        "apparent_power": {
+            "name": "Scheinleistung"
+        },
+        "aqi": {
+            "name": "Luftqualit\u00e4tsindex"
+        },
+        "atmospheric_pressure": {
+            "name": "Atmosph\u00e4rischer Druck"
+        },
+        "battery": {
+            "name": "Batterie"
+        },
+        "carbon_dioxide": {
+            "name": "Kohlendioxid"
+        },
+        "carbon_monoxide": {
+            "name": "Kohlenmonoxid"
+        },
+        "conductivity": {
+            "name": "Leitf\u00e4higkeit"
+        },
+        "current": {
+            "name": "Stromst\u00e4rke"
+        },
+        "data_rate": {
+            "name": "Datenrate"
+        },
+        "data_size": {
+            "name": "Datenmenge"
+        },
+        "date": {
+            "name": "Datum"
+        },
+        "distance": {
+            "name": "Strecke"
+        },
+        "duration": {
+            "name": "Dauer"
+        },
+        "energy": {
+            "name": "Energiemenge"
+        },
+        "energy_storage": {
+            "name": "Gespeicherte Energiemenge"
+        },
+        "enum": {
+            "name": "Sensor"
+        },
+        "frequency": {
+            "name": "Frequenz"
+        },
+        "gas": {
+            "name": "Gasmenge"
+        },
+        "humidity": {
+            "name": "Luftfeuchtigkeit"
+        },
+        "illuminance": {
+            "name": "Beleuchtungsst\u00e4rke"
+        },
+        "irradiance": {
+            "name": "Sonneneinstrahlung"
+        },
+        "moisture": {
+            "name": "N\u00e4sse"
+        },
+        "monetary": {
+            "name": "Kontostand"
+        },
+        "nitrogen_dioxide": {
+            "name": "Stickstoffdioxid"
+        },
+        "nitrogen_monoxide": {
+            "name": "Stickstoffmonoxid"
+        },
+        "nitrous_oxide": {
+            "name": "Lachgas"
+        },
+        "ozone": {
+            "name": "Ozon"
+        },
+        "ph": {
+            "name": "pH"
+        },
+        "pm1": {
+            "name": "PM1"
+        },
+        "pm10": {
+            "name": "PM10"
+        },
+        "pm25": {
+            "name": "PM2.5"
+        },
+        "power": {
+            "name": "Leistung"
+        },
+        "power_factor": {
+            "name": "Leistungsfaktor"
+        },
+        "precipitation": {
+            "name": "Niederschlagsmenge"
+        },
+        "precipitation_intensity": {
+            "name": "Niederschlagsintensit\u00e4t"
+        },
+        "pressure": {
+            "name": "Druck"
+        },
+        "reactive_power": {
+            "name": "Blindleistung"
+        },
+        "signal_strength": {
+            "name": "Signalst\u00e4rke"
+        },
+        "sound_pressure": {
+            "name": "Schalldruck"
+        },
+        "speed": {
+            "name": "Geschwindigkeit"
+        },
+        "sulphur_dioxide": {
+            "name": "Schwefeldioxid"
+        },
+        "temperature": {
+            "name": "Temperatur"
+        },
+        "timestamp": {
+            "name": "Zeitstempel"
+        },
+        "volatile_organic_compounds": {
+            "name": "VOCs"
+        },
+        "volatile_organic_compounds_parts": {
+            "name": "VOCs"
+        },
+        "voltage": {
+            "name": "Spannung"
+        },
+        "volume": {
+            "name": "Volumen"
+        },
+        "volume_flow_rate": {
+            "name": "Volumenstrom"
+        },
+        "volume_storage": {
+            "name": "Gespeichertes Volumen"
+        },
+        "water": {
+            "name": "Wassermenge"
+        },
+        "weight": {
+            "name": "Gewicht"
+        },
+        "wind_speed": {
+            "name": "Windgeschwindigkeit"
+        }
+    },
+    "issues": {
+        "platform_integration_no_support": {
+            "description": "Die {platform}-Plattform f\u00fcr die {domain}-Integration unterst\u00fctzt die Plattform-Einrichtung nicht. \n\nBitte entferne es aus deiner Konfiguration und starte Home Assistant neu, um dieses Problem zu beheben.",
+            "title": "Plattform-Unterst\u00fctzung nicht unterst\u00fctzt"
+        },
+        "state_class_removed": {
+            "title": "{statistic_id} Verf\u00fcgt nicht mehr \u00fcber eine Zustandsklasse"
+        },
+        "units_changed": {
+            "title": "Die Einheit von {statistic_id} hat sich ge\u00e4ndert"
+        },
+        "unsupported_state_class": {
+            "title": "Die Zustandsklasse von {statistic_id} wird nicht unterst\u00fctzt"
+        }
+    },
+    "title": "Sensor"
+}
