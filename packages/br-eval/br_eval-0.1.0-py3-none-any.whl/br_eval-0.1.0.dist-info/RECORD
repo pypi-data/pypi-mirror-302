@@ -1,0 +1,11 @@
+br_eval/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+br_eval/cpf.py,sha256=dD4PIuL7nyko3D0tLl-hMzI6HBeG7miPBxpS8xhGkcQ,2398
+br_eval/exceptions/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+br_eval/exceptions/cpf_exceptions.py,sha256=iGYFiaOw3YMy06rUjwZyKdy8zu8mn_SjCsYH2D6sAxU,1205
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_cpf.py,sha256=Vctjn1l_6xG4Y2Cb3zLnyTqOEOxMinK5sFKNsVtQNJo,2487
+br_eval-0.1.0.dist-info/LICENSE,sha256=AErlP0uNKBeA9MxYNeNLfyah3iuRwauirTz0jv1Ai4k,124
+br_eval-0.1.0.dist-info/METADATA,sha256=-Y-h_ffN5w1Usqt9eOPuU9en7KbWeWakGn6hOAe1N1o,423
+br_eval-0.1.0.dist-info/WHEEL,sha256=eOLhNAGa2EW3wWl_TU484h7q1UNgy0JXjjoqKoxAAQc,92
+br_eval-0.1.0.dist-info/top_level.txt,sha256=TEXtFR-2ksX3sEMtCMZ1MMneFx1QX4tSsXxFR54-vX8,14
+br_eval-0.1.0.dist-info/RECORD,,
