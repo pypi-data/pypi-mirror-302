@@ -1,0 +1,11 @@
+README.md
+setup.py
+transformers_modules/__init__.py
+transformers_modules/config_molmo.py
+transformers_modules/image_preprocessing_molmo.py
+transformers_modules/modeling_molmo.py
+transformers_modules/preprocessing_molmo.py
+transformers_modules.egg-info/PKG-INFO
+transformers_modules.egg-info/SOURCES.txt
+transformers_modules.egg-info/dependency_links.txt
+transformers_modules.egg-info/top_level.txt
