@@ -1,0 +1,4 @@
+[console_scripts]
+xclone = gitutils.gitclone:execute
+xgithub = gitutils.github:execute
+xsync = gitutils.gitsync:execute

@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: xgit-utils
+Version: 1.3.9
+Summary: Git repository management tool
+Author-email: seven <1162584980@qq.com>
+License: MIT License
+Classifier: Topic :: Utilities
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Environment :: Console :: Curses
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: PyGithub
+Requires-Dist: click
+Requires-Dist: tqdm
+Provides-Extra: dev
+Requires-Dist: build; extra == "dev"
+Requires-Dist: twine; extra == "dev"
+Provides-Extra: py2exe
+Requires-Dist: py2exe>=0.12; extra == "py2exe"
+Provides-Extra: pyinstaller
+Requires-Dist: pyinstaller>=6.10.0; extra == "pyinstaller"
+
+# Git Utils
+
+Git repository management tool
