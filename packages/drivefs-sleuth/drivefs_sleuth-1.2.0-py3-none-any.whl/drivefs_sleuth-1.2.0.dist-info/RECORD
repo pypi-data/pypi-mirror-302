@@ -1,0 +1,13 @@
+drivefs_sleuth/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+drivefs_sleuth/executor.py,sha256=7nQc-b8f1gVosi-mC5cIADMChILUGebjLbA6FLd6OZU,18808
+drivefs_sleuth/setup.py,sha256=PPqDmNfyTHOk_geYwPiBR0ZhrXkB3vkO_GyOL-RPm64,21539
+drivefs_sleuth/synced_files_tree.py,sha256=jtrECoIfEPwC_nMf26tPFjyJ6500Rr8eJZX4GWRsoaI,15178
+drivefs_sleuth/tasks.py,sha256=2mxCXzb8WfnG8qFoG_Maa58dtERRmvYH-x6texMhMfg,5335
+drivefs_sleuth/utils.py,sha256=wxFbm41sU3H8XLJTKC8Cbo1ez3rvvY_H_oOEDqgq3mQ,11553
+drivefs_sleuth/html_resources/report_template.html,sha256=pC73acSEe4KGrFyrjJWeQglqL6niBo1j0IOMsZWq61w,26356
+drivefs_sleuth-1.2.0.dist-info/LICENSE,sha256=jDSfgHZNBkjmRfQe8jdypwyZWgkktSNfc19KPQnfEnw,14197
+drivefs_sleuth-1.2.0.dist-info/METADATA,sha256=syZqppEXdLPtMMg2yUwYO9hdaeiqZMu1S8Ev8oK6Pqo,15885
+drivefs_sleuth-1.2.0.dist-info/WHEEL,sha256=OVMc5UfuAQiSplgO0_WdW7vXVGAt9Hdd6qtN4HotdyA,91
+drivefs_sleuth-1.2.0.dist-info/entry_points.txt,sha256=iCz4DYbFcrDwhNeCreENm72nFLXNJXGsKJw67z_2Pvc,67
+drivefs_sleuth-1.2.0.dist-info/top_level.txt,sha256=1H5I-DwI_DfhMBuo4f71jilwz_M79pdejP0cxN0ThWM,15
+drivefs_sleuth-1.2.0.dist-info/RECORD,,
