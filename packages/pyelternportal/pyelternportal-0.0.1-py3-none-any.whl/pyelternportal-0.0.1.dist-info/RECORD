@@ -1,0 +1,14 @@
+pyelternportal/__init__.py,sha256=iFpuLZZfwRfz7PKYOm-igWJBrh1ZvsiUE8Za-zX3n2k,26433
+pyelternportal/appointment.py,sha256=SYF0kd6VqMhLMDqhbnD9yFPthu7t5Zm8MuxMhKIcBMw,488
+pyelternportal/const.py,sha256=-83o5eBji3JpCz9aLIyyb0jTQSpjAxhhIH2pMQM98hk,1681
+pyelternportal/exception.py,sha256=fhLW023T17wP4REgfi_irIH_Ct8zKBOWTnKRHIYhyK0,394
+pyelternportal/lesson.py,sha256=92mGwYydPlp6MxGEM2oMnJZM8yBud2nf4MGI81FZsjw,297
+pyelternportal/letter.py,sha256=Wd3p5kM0zsXks-fSxf5vDzDVZ7B4UWZEIS-VuhNBkX8,618
+pyelternportal/poll.py,sha256=jptMUnWb8dJZlI8n5uPoikxgBgZxOiYcR2HYhpu_zrQ,468
+pyelternportal/pupil.py,sha256=R_GBGTMRjSdqHhRV56bjHOwAf3iGXRRMEbl9B8sXKx0,3784
+pyelternportal/register.py,sha256=4_pnIVXq6qELgxzEiTJNnTkEm4TiKh2JZfX8adSD_1U,684
+pyelternportal/sicknote.py,sha256=qf6dxBurSXpRRIvDGIndRVzrsnwO9L_hRcckZuDdmfc,294
+pyelternportal-0.0.1.dist-info/METADATA,sha256=TfhW2YjP-4lwJJfhsVJguICIwfJ8YXz_wy-hjg0FwVo,1023
+pyelternportal-0.0.1.dist-info/WHEEL,sha256=1yFddiXMmvYK7QYTqtRNtX66WJ0Mz8PYEiEUoOUUxRY,87
+pyelternportal-0.0.1.dist-info/licenses/LICENSE,sha256=Q2ptU2E48gOsMzhYz_kqVovmJ5d1KzrblLyqD2_-fvY,1235
+pyelternportal-0.0.1.dist-info/RECORD,,
