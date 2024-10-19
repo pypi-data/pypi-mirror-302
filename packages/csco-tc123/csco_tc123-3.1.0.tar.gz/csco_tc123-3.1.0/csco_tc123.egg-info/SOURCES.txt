@@ -1,0 +1,8 @@
+README.md
+setup.py
+csco_tc123/__init__.py
+csco_tc123/my_tc123.py
+csco_tc123.egg-info/PKG-INFO
+csco_tc123.egg-info/SOURCES.txt
+csco_tc123.egg-info/dependency_links.txt
+csco_tc123.egg-info/top_level.txt
