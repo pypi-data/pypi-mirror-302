@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+zakayz_transaction.egg-info/PKG-INFO
+zakayz_transaction.egg-info/SOURCES.txt
+zakayz_transaction.egg-info/dependency_links.txt
+zakayz_transaction.egg-info/entry_points.txt
+zakayz_transaction.egg-info/requires.txt
+zakayz_transaction.egg-info/top_level.txt
