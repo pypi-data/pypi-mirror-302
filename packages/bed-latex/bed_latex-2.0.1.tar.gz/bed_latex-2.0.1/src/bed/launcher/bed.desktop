@@ -1,0 +1,13 @@
+[Desktop Entry]
+Version=1.0
+Name=BEd
+GenericName=LaTeX Beamer Editor
+Comment=View and edit Latex Beamer files
+Exec=bed %U
+Icon=bed
+Type=Application
+Terminal=false
+Categories=Office;
+StartupNotify=false
+StartupWMClass=BEd
+MimeType=text/x-tex;

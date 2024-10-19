@@ -1,0 +1,419 @@
+% Copyright 2015-2024 Jean-Baptiste Delisle
+%
+% This file is part of BEd.
+%
+% BEd is free software: you can redistribute it and/or modify
+% it under the terms of the GNU General Public License as published by
+% the Free Software Foundation, either version 3 of the License, or
+% (at your option) any later version.
+%
+% BEd is distributed in the hope that it will be useful,
+% but WITHOUT ANY WARRANTY; without even the implied warranty of
+% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+% GNU General Public License for more details.
+%
+% You should have received a copy of the GNU General Public License
+% along with BEd.  If not, see <http://www.gnu.org/licenses/>.
+
+
+% This is BEd latex package
+% It defines /txt, /img, /tkp, and /arw commands
+% And writes in the log file necessary informations for BEd (at compile time)
+\ProvidesPackage{bed}[2022/02/11]
+
+% Load necessary packages
+\RequirePackage{graphicx}
+\RequirePackage[absolute,overlay]{textpos}
+\RequirePackage{tikz}
+\RequirePackage{calc}
+\RequirePackage{xstring}
+\RequirePackage{fp}
+\RequirePackage{etoolbox}
+
+\AtBeginDocument{%
+  % Remove the unit 'pt' in paper width/height
+  \StrGobbleRight{\the\paperwidth}{2}[\paperw]%
+  \StrGobbleRight{\the\paperheight}{2}[\paperh]%
+  % Paper ratio
+  \FPdiv\paperratio{\paperw}{\paperh}%
+  \typeout{BEd package - begin document}%
+  \typeout{\the\paperwidth}%
+  \typeout{\the\paperheight}%
+  \newcounter{trueframenumber}%
+}
+
+\BeforeBeginEnvironment{frame}{%
+  \typeout{BEd package - frame}%
+  \typeout{\thetrueframenumber}%
+  \stepcounter{trueframenumber}%
+  \typeout{\thepage}%
+}
+
+\AtEndDocument{%
+  \typeout{BEd package - end document}%
+  \typeout{\thepage}%
+}
+
+% TikZ option to be able to make arrows with textblock
+\tikzstyle{every picture}+=[remember picture]
+
+% Paper size
+\setlength{\TPHorizModule}{\paperwidth}
+\setlength{\TPVertModule}{\paperheight}
+
+% Text block
+\newlength{\txtminheight}
+\newcommand{\txt}[2]{%
+  % Analyse args
+  % Split mandatory/optionnal args
+  \StrCut{#1}{;}\mandatargs\optargs%
+  % Mandatory args
+  % Position
+  \StrBefore{\mandatargs}{,}[\txtx]%
+  \StrBetween[1,2]{\mandatargs}{,}{,}[\txty]%
+  % Width
+  \StrBehind[2]{\mandatargs}{,}[\txtw]%
+  % Initialize optionnal args
+  \edef\txtpages{1-}%
+  \edef\txtangle{0}%
+  \edef\txtgroup{0}%
+  \edef\txtheight{-1}%
+  \edef\txtalign{left}%
+  \edef\txtukoa{}%
+  % Read optionnal args
+  \txtreadargs{\optargs}%
+  %
+  % Text alignment
+  \IfStrEqCase{\txtalign}{%
+    {center}{\def\txtaligncmd{\centering}}%
+    {right}{\def\txtaligncmd{\raggedleft}}}%
+  [\def\txtaligncmd{}]%
+  % Compute minimum height of block
+  \settototalheight\txtminheight{\begin{minipage}{\txtw\paperwidth}\txtaligncmd \settowidth{\leftmargini}{\usebeamertemplate{itemize item}\hspace{\labelsep}} #2\end{minipage}}%
+  % Remove the unit 'pt'
+  \StrGobbleRight{\the\txtminheight}{2}[\txtminh]%
+  % Text height / paper height
+  \FPdiv\txtminh{\txtminh}{\paperh}%
+  % Adjust text height if set by option with a value > minimum height
+  \FPmax\txth{\txtminh}{\txtheight}%
+  % Find top-left corner (needed if angle != 0)
+  \FPmod\txtangle{\txtangle}{360}%
+  \FPifeq{\txtangle}{0}%
+  % Easy case (angle = 0)
+  \edef\txtleft{\txtx}%
+  \edef\txttop{\txty}%
+  \else%
+  % Angle != 0
+  \FPeval\txtanglerad{txtangle*pi/180}%
+  \FPeval\txtleft{txtx+min(0,min(%
+    txtw*cos(txtanglerad),min(%
+    txth/paperratio*sin(txtanglerad),%
+    txtw*cos(txtanglerad)+txth/paperratio*sin(txtanglerad))))}%
+  \FPeval\txttop{txty+min(0,min(%
+    0-txtw*paperratio*sin(txtanglerad),min(%
+    txth*cos(txtanglerad),%
+    0-txtw*paperratio*sin(txtanglerad)+txth*cos(txtanglerad))))}%
+  \fi%
+  %
+  % Put everything together to build the latex command
+  \only<\txtpages>{%
+    \begin{textblock}{0}(\txtleft,\txttop)%
+      \rotatebox{\txtangle}{\begin{minipage}[t][\txth\paperheight]{\txtw\paperwidth}\txtaligncmd \settowidth{\leftmargini}{\usebeamertemplate{itemize item}\hspace{\labelsep}} #2\end{minipage}}%
+    \end{textblock}}%
+  % Put info in log file
+  \typeout{BEd package - txt}%
+  \typeout{\thetrueframenumber}%
+  \typeout{\thepage}%
+  \typeout{\txtx}%
+  \typeout{\txty}%
+  \typeout{\txtw}%
+  \typeout{\txth}%
+  \typeout{\txtminh}%
+  \typeout{\txtangle}%
+  \typeout{\txtpages}%
+  \typeout{\txtgroup}%
+  \typeout{\txtalign}%
+}
+
+% Macros that deal with \txt opt args
+\newcommand{\txtreadargs}[1]{%
+  \StrCut{#1}{;}\arg\otherargs%
+  \StrCut{\arg}{=}\argkey\argval%
+  \IfStrEqCase{\argkey}{%
+    {pages}{\edef\txtpages{\argval}}%
+    {angle}{\edef\txtangle{\argval}}%
+    {group}{\edef\txtgroup{\argval}}%
+    {height}{\edef\txtheight{\argval}}%
+    {align}{\edef\txtalign{\argval}}}[%
+  \IfStrEq{\argval}{}{%
+    \edef\txtukoa{\txtukoa,\argkey}}{%
+    \edef\txtukoa{\txtukoa,\argkey=\argval}}]%
+  \IfStrEq{\otherargs}{}{}{\txtreadargs{\otherargs}}%
+}
+
+% Image
+\newlength{\imgorigwpt}
+\newlength{\imgorighpt}
+\newcommand{\img}[2]{%
+  % Analyse args
+  % Split mandatory/optionnal args
+  \StrCut{#1}{;}\mandatargs\optargs%
+  % Mandatory args
+  % Position
+  \StrBefore{\mandatargs}{,}[\imgx]%
+  \StrBetween[1,2]{\mandatargs}{,}{,}[\imgy]%
+  % Width
+  \StrBehind[2]{\mandatargs}{,}[\imgw]%
+  % Initialize optionnal args
+  \edef\imgpages{1-}%
+  \edef\imgangle{0}%
+  \edef\imggroup{0}%
+  \edef\imgheight{-1}%
+  \edef\imgtrim{0 0 0 0}%
+  \edef\imglink{}%
+  \edef\imgukoa{}%
+  % Read optionnal args
+  \imgreadargs{\optargs}%
+  %
+  % Get original size of image
+  \sbox0{\includegraphics{#2}}%
+  \setlength{\imgorigwpt}{\wd0}%
+  \setlength{\imgorighpt}{\ht0}%
+  % Remove the unit 'pt'
+  \StrGobbleRight{\the\imgorigwpt}{2}[\imgorigw]%
+  \StrGobbleRight{\the\imgorighpt}{2}[\imgorigh]%
+  % Image ratio
+  \FPdiv\imgratio{\imgorigw}{\imgorigh}%
+  % Image ratio/paper ratio
+  \FPdiv\imgpaperratio{\imgratio}{\paperratio}%
+  % Trim
+  \StrBefore{\imgtrim}{ }[\imgtriml]%
+  \StrBetween[1,2]{\imgtrim}{ }{ }[\imgtrimb]%
+  \StrBetween[2,3]{\imgtrim}{ }{ }[\imgtrimr]%
+  \StrBehind[3]{\imgtrim}{ }[\imgtrimt]%
+  \FPeval\imgtrimratio{(1-imgtrimr-imgtriml)/(1-imgtrimt-imgtrimb)}%
+  % Compute height if needed
+  \IfStrEq{\imgheight}{-1}{%
+    \FPeval\imgh{imgw*paperratio/imgratio/imgtrimratio}%
+  }{%
+    \edef\imgh{\imgheight}%
+  }%
+  % Find top-left corner (needed if angle != 0)
+  \FPmod\imgangle{\imgangle}{360}%
+  \FPifeq{\imgangle}{0}%
+  % Easy case (angle = 0)
+  \edef\imgleft{\imgx}%
+  \edef\imgtop{\imgy}%
+  \else%
+  % Angle != 0
+  \FPeval\imganglerad{imgangle*pi/180}%
+  \FPeval\imgleft{imgx+min(0,min(%
+    imgw*cos(imganglerad),min(%
+    imgh/paperratio*sin(imganglerad),%
+    imgw*cos(imganglerad)+imgh/paperratio*sin(imganglerad))))}%
+  \FPeval\imgtop{imgy+min(0,min(%
+    0-imgw*paperratio*sin(imganglerad),min(%
+    imgh*cos(imganglerad),%
+    0-imgw*paperratio*sin(imganglerad)+imgh*cos(imganglerad))))}%
+  \fi%
+  % Put everything together to build the latex command
+  \only<\imgpages>{%
+    \begin{textblock}{0}(\imgleft,\imgtop)%
+      \IfStrEq{\imglink}{}{}{\href{\imglink}}%
+      {\begingroup\edef\includegraphicsexpandargs{\endgroup\noexpand%
+      \includegraphics[width=\imgw\paperwidth,%
+      height=\imgh\paperheight,%
+      angle=\imgangle,%
+      trim={\imgtriml\imgorigwpt} {\imgtrimb\imgorighpt} {\imgtrimr\imgorigwpt} {\imgtrimt\imgorighpt}, clip=true%
+      \imgukoa]}\includegraphicsexpandargs%
+      {#2}}%
+    \end{textblock}}%
+  % Put info in log file
+  \typeout{BEd package - img}%
+  \typeout{\thetrueframenumber}%
+  \typeout{\thepage}%
+  \typeout{\imgx}%
+  \typeout{\imgy}%
+  \typeout{\imgw}%
+  \typeout{\imgh}%
+  \typeout{\imgangle}%
+  \typeout{\imgpages}%
+  \typeout{\imggroup}%
+  \typeout{\imgtrim}%
+  \typeout{\imglink}%
+  \typeout{\imgpaperratio}%
+  \typeout{\imgheight}%
+  \typeout{\imgukoa}%
+}
+
+% Macros that deal with \img opt args
+\newcommand{\imgreadargs}[1]{%
+  \StrCut{#1}{;}\arg\otherargs%
+  \StrCut{\arg}{=}\argkey\argval%
+  \IfStrEqCase{\argkey}{%
+    {pages}{\edef\imgpages{\argval}}%
+    {angle}{\edef\imgangle{\argval}}%
+    {group}{\edef\imggroup{\argval}}%
+    {height}{\edef\imgheight{\argval}}%
+    {trim}{\edef\imgtrim{\argval}}%
+    {link}{\edef\imglink{\argval}}}[%
+  \IfStrEq{\argval}{}{%
+    \edef\imgukoa{\imgukoa,\argkey}}{%
+    \edef\imgukoa{\imgukoa,\argkey=\argval}}]%
+  \IfStrEq{\otherargs}{}{}{\imgreadargs{\otherargs}}%
+}
+
+% Tikz Figure
+\newcommand{\tkp}[2]{%
+  % Analyse args
+  % Split mandatory/optionnal args
+  \StrCut{#1}{;}\mandatargs\optargs%
+  % Mandatory args
+  % Position
+  \StrBefore{\mandatargs}{,}[\tkpx]%
+  \StrBetween[1,2]{\mandatargs}{,}{,}[\tkpy]%
+  % Width
+  \StrBehind[2]{\mandatargs}{,}[\tkpw]%
+  % Initialize optionnal args
+  \edef\tkppages{1-}%
+  \edef\tkpangle{0}%
+  \edef\tkpgroup{0}%
+  \edef\tkpheight{-1}%
+  \edef\tkpukoa{}%
+  % Read optionnal args
+  \tkpreadargs{\optargs}%
+  %
+  % Get original size of image
+  \sbox0{\begin{tikzpicture}#2\end{tikzpicture}}%
+  % Remove the unit 'pt'
+  \StrGobbleRight{\the\wd0}{2}[\tkporigw]%
+  \StrGobbleRight{\the\ht0}{2}[\tkporigh]%
+  % Image ratio
+  \FPdiv\tkpratio{\tkporigw}{\tkporigh}%
+  % Image ratio/paper ratio
+  \FPdiv\tkppaperratio{\tkpratio}{\paperratio}%
+  % Compute height if needed
+  \IfStrEq{\tkpheight}{-1}{%
+    \FPeval\tkph{tkpw*paperratio/tkpratio}%
+  }{%
+    \edef\tkph{\tkpheight}%
+  }%
+  % Find top-left corner (needed if angle != 0)
+  \FPmod\tkpangle{\tkpangle}{360}%
+  \FPifeq{\tkpangle}{0}%
+  % Easy case (angle = 0)
+  \edef\tkpleft{\tkpx}%
+  \edef\tkptop{\tkpy}%
+  \else%
+  % Angle != 0
+  \FPeval\tkpanglerad{tkpangle*pi/180}%
+  \FPeval\tkpleft{tkpx+min(0,min(%
+    tkpw*cos(tkpanglerad),min(%
+    tkph/paperratio*sin(tkpanglerad),%
+    tkpw*cos(tkpanglerad)+tkph/paperratio*sin(tkpanglerad))))}%
+  \FPeval\tkptop{tkpy+min(0,min(%
+    0-tkpw*paperratio*sin(tkpanglerad),min(%
+    tkph*cos(tkpanglerad),%
+    0-tkpw*paperratio*sin(tkpanglerad)+tkph*cos(tkpanglerad))))}%
+  \fi%
+  % Put everything together to build the latex command
+  \only<\tkppages>{%
+    \begin{textblock}{0}(\tkpleft,\tkptop)%
+      \rotatebox{\tkpangle}{%
+      \resizebox{\tkpw\paperwidth}%
+      {\tkph\paperheight}{%
+      \begin{tikzpicture}#2\end{tikzpicture}}}%
+    \end{textblock}}%
+  % Put info in log file
+  \typeout{BEd package - tkp}%
+  \typeout{\thetrueframenumber}%
+  \typeout{\thepage}%
+  \typeout{\tkpx}%
+  \typeout{\tkpy}%
+  \typeout{\tkpw}%
+  \typeout{\tkph}%
+  \typeout{\tkpangle}%
+  \typeout{\tkppages}%
+  \typeout{\tkpgroup}%
+  \typeout{\tkppaperratio}%
+  \typeout{\tkpheight}%
+}
+
+% Macros that deal with \tkp opt args
+\newcommand{\tkpreadargs}[1]{%
+  \StrCut{#1}{;}\arg\otherargs%
+  \StrCut{\arg}{=}\argkey\argval%
+  \IfStrEqCase{\argkey}{%
+    {pages}{\edef\tkppages{\argval}}%
+    {angle}{\edef\tkpangle{\argval}}%
+    {group}{\edef\tkpgroup{\argval}}%
+    {height}{\edef\tkpheight{\argval}}}[%
+  \IfStrEq{\argval}{}{%
+    \edef\tkpukoa{\tkpukoa,\argkey}}{%
+    \edef\tkpukoa{\tkpukoa,\argkey=\argval}}]%
+  \IfStrEq{\otherargs}{}{}{\tkpreadargs{\otherargs}}%
+}
+
+% Arrow
+\newcommand{\arw}[1]{%
+  % Analyse args
+  % Split mandatory/optionnal args
+  \StrCut{#1}{;}\mandatargs\optargs%
+  % Mandatory args
+  % Position A
+  \StrBefore{\mandatargs}{,}[\arwxa]%
+  \StrBetween[1,2]{\mandatargs}{,}{,}[\arwya]%
+  % Position B
+  \StrBetween[2,3]{\mandatargs}{,}{,}[\arwxb]%
+  \StrBehind[3]{\mandatargs}{,}[\arwyb]%
+  % Initialize optionnal args
+  \edef\arwpages{1-}%
+  \edef\arwgroup{0}%
+  \edef\arwlw{1}%
+  \edef\arwukoa{}%
+  % Read optionnal args
+  \arwreadargs{\optargs}%
+  % construct opt args for tikz
+  \edef\arwoacmd{[line width=\arwlw pt \arwukoa]}
+  % Put everything together to build the latex command
+  \only<\arwpages>{%
+    \begin{textblock}{0}(\arwxa,\arwya)%
+      \tikz \node[coordinate] (arwstrt) {};%
+    \end{textblock}%
+    \begin{textblock}{0}(\arwxb,\arwyb)%
+      \tikz \node[coordinate] (arwend) {};%
+      \begin{tikzpicture}[overlay]%
+        \path\arwoacmd (arwstrt) edge (arwend);%
+      \end{tikzpicture}%
+    \end{textblock}}%
+  % Put info in log file
+  \typeout{BEd package - arw}%
+  \typeout{\thetrueframenumber}%
+  \typeout{\thepage}%
+  \typeout{\arwxa}%
+  \typeout{\arwya}%
+  \typeout{\arwxb}%
+  \typeout{\arwyb}%
+  \typeout{\arwpages}%
+  \typeout{\arwgroup}%
+  \typeout{\arwlw}%
+  \typeout{\arwukoa}%
+}
+
+% Macros that deal with \arw opt args
+\newcommand{\arwreadargs}[1]{%
+  \StrCut{#1}{;}\arg\otherargs%
+  \StrCut{\arg}{=}\argkey\argval%
+  \IfStrEqCase{\argkey}{%
+    {pages}{\edef\arwpages{\argval}}%
+    {group}{\edef\arwgroup{\argval}}%
+    {lw}{\edef\arwlw{\argval}}}[%
+  \IfStrEq{\argval}{}{%
+    \edef\arwukoa{\arwukoa,\argkey}}{%
+    \edef\arwukoa{\arwukoa,\argkey=\argval}}]%
+  \IfStrEq{\otherargs}{}{}{\arwreadargs{\otherargs}}%
+}
+
+% Maths function
+% Modulo
+\newcommand{\FPmod}[3]{\FPeval#1{#2-round(#2/#3,0)*#3}}

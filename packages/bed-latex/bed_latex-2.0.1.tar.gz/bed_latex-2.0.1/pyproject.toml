@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bed-latex"
+version = "2.0.1"
+authors = [
+  { name = "Jean-Baptiste Delisle", email = "jb.delisle@pi314.noho.st" },
+]
+description = "BEd: Beamer Editor, GUI for LaTeX Beamer presentations."
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+  "Operating System :: OS Independent",
+]
+dependencies = ["pyside6", "pymupdf"]
+
+[project.urls]
+Homepage = "https://framagit.org/delisle/bed"
+Issues = "https://framagit.org/delisle/bed/-/issues"
+
+[project.gui-scripts]
+bed = "bed:main"
+
+[tool.setuptools.package-data]
+"bed.icons" = ["*.svg"]
+"bed.translation" = ["*.qm"]
+"bed.latex" = ["bed.sty"]
+"bed.launcher" = ["bed.desktop"]
