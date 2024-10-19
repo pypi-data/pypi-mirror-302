@@ -1,0 +1,10 @@
+aiofiles
+termcolor
+textual
+
+[dev]
+build
+pyright
+ruff
+setuptools_scm
+twine

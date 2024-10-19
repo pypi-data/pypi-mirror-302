@@ -1,0 +1,29 @@
+[project]
+name = "telextron"
+dynamic = ["version"]
+dependencies = [
+    "aiofiles",
+    "termcolor",
+    "textual",
+]
+optional-dependencies.dev = [
+    "build",
+    "pyright",
+    "ruff",
+    "setuptools_scm",
+    "twine",
+]
+
+[build-system]
+requires = ["setuptools-scm"]
+
+[tool.setuptools_scm]
+
+[tool.ruff]
+lint.select = ["ALL"]
+lint.ignore = [
+    "D1", # undocumented code
+    "ANN1", # deprecated checks
+    "D203", "D213", # conflict with other checks
+]
+line-length = 120

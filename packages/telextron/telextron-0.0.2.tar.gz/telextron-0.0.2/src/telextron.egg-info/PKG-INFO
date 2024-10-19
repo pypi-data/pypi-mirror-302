@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: telextron
+Version: 0.0.2
+License-File: LICENSE
+Requires-Dist: aiofiles
+Requires-Dist: termcolor
+Requires-Dist: textual
+Provides-Extra: dev
+Requires-Dist: build; extra == "dev"
+Requires-Dist: pyright; extra == "dev"
+Requires-Dist: ruff; extra == "dev"
+Requires-Dist: setuptools_scm; extra == "dev"
+Requires-Dist: twine; extra == "dev"

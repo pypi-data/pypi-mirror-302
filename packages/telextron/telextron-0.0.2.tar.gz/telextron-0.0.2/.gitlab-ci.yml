@@ -1,0 +1,11 @@
+build:
+  image: docker.io/library/python:3.12
+  script:
+  - python -m pip install --constraint requirements-dev.txt --editable '.[dev]'
+  - ruff format --diff src/telextron/t42view.py
+  - ruff check src/telextron/t42view.py
+  - pyright src/telextron/t42view.py
+  - python -m build
+  artifacts:
+    paths:
+      - dist/

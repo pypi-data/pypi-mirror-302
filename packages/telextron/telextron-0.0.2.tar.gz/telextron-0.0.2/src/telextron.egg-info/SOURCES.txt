@@ -1,0 +1,16 @@
+.gitignore
+.gitlab-ci.yml
+LICENSE
+README.md
+pyproject.toml
+requirements-dev.txt
+requirements.txt
+src/telextron/__init__.py
+src/telextron/t42view.py
+src/telextron/ttiparse.py
+src/telextron/ttiview.py
+src/telextron.egg-info/PKG-INFO
+src/telextron.egg-info/SOURCES.txt
+src/telextron.egg-info/dependency_links.txt
+src/telextron.egg-info/requires.txt
+src/telextron.egg-info/top_level.txt
