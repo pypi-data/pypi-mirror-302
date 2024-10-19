@@ -1,0 +1,2 @@
+custom_circle_plot
+my_component
