@@ -1,0 +1,4 @@
+openai>=1.52.0
+gitpython>=3.1.40
+configparser>=6.0.0
+tiktoken>=0.8.0
