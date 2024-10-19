@@ -1,0 +1,12 @@
+transformers_modules/__init__.py,sha256=1NSg4yHgqJJKYBklxFwmel_5eSNX51umiqsyFgx4770,21
+transformers_modules/allenai/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+transformers_modules/allenai/Molmo-7B-D-0924/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+transformers_modules/allenai/Molmo-7B-D-0924/1721478b71306fb7dc671176d5c204dc7a4d27d7/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+transformers_modules/allenai/Molmo-7B-D-0924/1721478b71306fb7dc671176d5c204dc7a4d27d7/config_molmo.py,sha256=jnNynn-OHKqIEn4Em6hgKxRTVEtvLpA8s5xQ3KbOqP8,1975
+transformers_modules/allenai/Molmo-7B-D-0924/1721478b71306fb7dc671176d5c204dc7a4d27d7/image_preprocessing_molmo.py,sha256=XGjxsICpVBY7w3Yb4-9CcpyCeoKmVRdNpw07FwgH_2M,22182
+transformers_modules/allenai/Molmo-7B-D-0924/1721478b71306fb7dc671176d5c204dc7a4d27d7/modeling_molmo.py,sha256=D2u1wfGJL_FlwIHtWN5nvLl7-zdiABETja3_7Nj-an0,95384
+transformers_modules/allenai/Molmo-7B-D-0924/1721478b71306fb7dc671176d5c204dc7a4d27d7/preprocessing_molmo.py,sha256=_c_4oOuGNO0MaiCdrcY5mMHxwO0kzDYXbLckYakVqgk,6560
+transformers_modules-0.4.0.dist-info/METADATA,sha256=YfqboCKHS8Ui7gRFpopAHWA0QEQhmsFsjlv-yntRJxo,546
+transformers_modules-0.4.0.dist-info/WHEEL,sha256=R0nc6qTxuoLk7ShA2_Y-UWkN8ZdfDBG2B6Eqpz2WXbs,91
+transformers_modules-0.4.0.dist-info/top_level.txt,sha256=TM5kIjt34iO_fra8cHF2nsScxWzY7hR6NQaldqiUWhk,21
+transformers_modules-0.4.0.dist-info/RECORD,,
