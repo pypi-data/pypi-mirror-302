@@ -1,0 +1,10 @@
+tomtag.cp312-win32.pyd,sha256=MAzagz3tCNJqeOWvX_tU_0stqjzK5jUbYpmo6SgVsO8,13824
+tomtag/correlation.c,sha256=D8cfq0jTy9KZz9waM1E9iTOpwpYlnf1uV_ue2QK8KdM,7164
+tomtag/correlation.h,sha256=P1ZG6Ox2-FERleAnjTOujikCi_MKnnTvdvQ3jfGW4aY,1825
+tomtag/correlation_module.c,sha256=AeKm7mXZbcaEGXtxugpgjqH0-t6XpRD99gUjE_4iLqY,10600
+tomtag/correlation_module.pyi,sha256=qUFoQmqHC74MK3GTUJNu8J-LEdgcSeeu25Wfg0tzrbc,1028
+tomtag-0.13.dist-info/LICENSE,sha256=qOa_LRYU0yK5wBvLtr1KaTV_vTLvBCxsMmRrsEMWSQ8,1089
+tomtag-0.13.dist-info/METADATA,sha256=t8k-Am2-rzt0zlXr3p-xgykD15wr45vIS6Lei40K03I,2487
+tomtag-0.13.dist-info/WHEEL,sha256=WvkOSu_HO_oE3sQnGm0UPRliwo7WiDQj1dfKR15g8gQ,97
+tomtag-0.13.dist-info/top_level.txt,sha256=IjIxmwKdVhbwf_mt7mWQ7jYcRNCmB_LShbkSffCAwY0,7
+tomtag-0.13.dist-info/RECORD,,
