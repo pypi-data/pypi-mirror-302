@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: optlang_enumerator
+Version: 0.0.13
+Summary: Module for enumerating minimal cut sets
+Author-email: Axel von Kamp <vonkamp@mpi-magdeburg.mpg.de>
+Project-URL: Homepage, https://github.com/cnapy-org/optlang_enumerator
+Project-URL: Issues, https://github.com/cnapy-org/optlang_enumerator/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy ==1.23.*
+Requires-Dist: scipy
+Requires-Dist: cobra >=0.29
+Requires-Dist: optlang
+Requires-Dist: efmtool-link >=0.0.6
+Requires-Dist: sympy >=1.12
+Requires-Dist: swiglpk
+
+# optlang_enumerator
+Module for enumerating multiple solutions to a MILP problem using the optlang framework.
+Currently only the enumeration of constrained minimal cut sets is implemented.
+
+Installation:
+
+First you need to install the efmtool_link package (also available at https://github.com/cnapy-org).
+Clone the repository, go into the top optlang_enumerator directory and install into your current Python environment with:
+
+pip install .
+
+Tip: If you use the -e option during installation then updates from a 'git pull' are at once available in your Python envrionment without the need for a reinstallation.
+
+Example:
+
+The ECC2comp.ipynb Jupyter notebook in the examples directory shows how to perform a basic MCS calculation.
