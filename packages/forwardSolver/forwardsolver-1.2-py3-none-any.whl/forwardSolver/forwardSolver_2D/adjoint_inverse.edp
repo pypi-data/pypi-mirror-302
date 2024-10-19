@@ -1,0 +1,355 @@
+/* -----------------------------------------------------------------------
+DESCRIPTION: Cylindrical sensor with adjoint Laplacian approach for image reconstruction.
+----------------------------------------------------------------------- */
+include "getARGV.idp";
+verbosity = 0;
+
+/* -----------------------------------------------------------------------
+PARAMETERS
+----------------------------------------------------------------------- */
+// ADJUSTABLE
+bool BPlot = getARGV("BPlot", 1);  // Boolean to specify plots are shown (-)
+bool BReconstruct = getARGV("BReconstruct", 1);  // Boolean to allow skipping of reconstruction (-)
+
+int MM = getARGV("MM", 12);  // Number of elements along standard borders (-)
+real RDomain = getARGV("RDomain", 10.0);  // Scaling on mesh number on domain borders (-)
+real RTumour = getARGV("RTumour", 8.0);  // Scaling on mesh number on tumour borders (-)
+
+real eBackground = getARGV("eBackground", 1000.0);  // Permittivity of background material at STP (-)  // TODO: Understand why this must equal the fibre permittivity
+real eFat = getARGV("eFat", 1000.0);  // Permittivity of fat material (-)
+real eFibres = getARGV("eFibres", 5000.0);  // Permittivity of fibro-glandular material (-)
+real eTumour = getARGV("eTumour", 20000.0);  // Permittivity of tumour material (-)
+
+real rDomain = getARGV("rDomain", 1.5);  // Radius of the domain (nominal)
+real rSensingRegion = getARGV("rSensingRegion", 1.0);  // Radius of sensing region (nominal - scaling reference)
+real rElectrodes = getARGV("rElectrodes", 1.02);  // Radius at top of electrodes (nominal)
+real xElectrodeThickness = getARGV("xElectrodeThickness", 0.05);  // Electrode thickness (nominal)
+
+real rFibres = getARGV("rFibres", 0.65);  // Fibres Radius (nominal)
+real xFibres = getARGV("xFibres", 0.1);  // Fibres x-position (nominal)
+real yFibres = getARGV("yFibres", 0.0);  // Fibres y-position (nominal)
+
+real rTumour1 = getARGV("rTumour1", 0.25);  // Tumour Radius (nominal)
+real xTumour1 = getARGV("xTumour1", -0.2);  // Tumour x-position (nominal)
+real yTumour1 = getARGV("yTumour1", 0.2);  // Tumour y-position (nominal)
+
+real rTumour2 = getARGV("rTumour2", 0.15);  // Tumour Radius (nominal)
+real xTumour2 = getARGV("xTumour2", 0.2);  // Tumour x-position (nominal)
+real yTumour2 = getARGV("yTumour2", -0.3);  // Tumour y-position (nominal)
+
+bool BGenericMesh = getARGV("BGenericMesh", 1);  // Choose whether to reconstruct on a new, empty mesh
+int NIterations = getARGV("NIterations", 500);  // Number of iterations of the reconstruction algorithm
+real cRegularisation = getARGV("cRegularisation", 15.0);  // Regularisation parameter (-)
+real cGradientStep = getARGV("cGradientStep", 20.0);  // Gradient step parameter (-)
+
+int NElectrodes = getARGV("NElectrodes", 10);  // Number of electrodes (-) NB: Not fully parameterised
+real rElecWtoSep = getARGV("rElecWtoSep", 0.8);  // Electrode width to electrode gap ratio (-)
+
+// NON-ADJUSTABLE PARAMETERS
+real[int,int] Cmat(NElectrodes, NElectrodes); Cmat = 0.0; // Capacitance measurement placeholder
+int MMtb = ceil(MM*10/NElectrodes); // Number of mesh elements on top and bottom borders of electrodes
+
+/* -----------------------------------------------------------------------
+GEOMETRY SPECIFICATION
+----------------------------------------------------------------------- */
+border CircleOuter(t=0, 2*pi){x = rDomain*cos(t); y = rDomain*sin(t); label = 100;};  // Domain boundary
+border CircleInner(t=0, 2*pi){x = rSensingRegion*cos(t); y = rSensingRegion*sin(t); label = 101;}; // Internal boundary from where permittivity can change
+
+border Fibres(t=0, 2*pi){x = xFibres+rFibres*cos(t); y = yFibres+rFibres*sin(t); label = 200;};
+border Tumour1(t=0, 2*pi){x = xTumour1+rTumour1*cos(t); y = yTumour1+rTumour1*sin(t); label = 202;};
+border Tumour2(t=0, 2*pi){x = xTumour2+rTumour2*cos(t); y = yTumour2+rTumour2*sin(t); label = 201;};
+
+// Macro to construct an electrode (Border order: top, bottom, left, right)
+macro electrode(strElec, theta1, theta2, thickness, i)
+    border elecT#i(t=theta1, theta2){x = rElectrodes*cos(t); y = rElectrodes*sin(t); label = i;};
+    border elecB#i(t=theta2, theta1){x = (rElectrodes+thickness)*cos(t); y = (rElectrodes+thickness)*sin(t); label = i;};
+    border elecL#i(t=rElectrodes+thickness, rElectrodes){x = t*cos(theta1); y = t*sin(theta1); label = i;};
+    border elecR#i(t=rElectrodes, rElectrodes+thickness){x = t*cos(theta2); y = t*sin(theta2); label = i;};
+    func strElec = elecT#i(MMtb)+elecB#i(MMtb)+elecL#i(MM)+elecR#i(MM);
+    // End of Macro
+
+real aElecIncrement = 2*pi/NElectrodes;
+real aElecGap = (1-rElecWtoSep)*aElecIncrement;
+
+electrode(Elec1,    0*aElecIncrement,   1*aElecIncrement-aElecGap,      xElectrodeThickness, 1)
+electrode(Elec2,    1*aElecIncrement,   2*aElecIncrement-aElecGap,      xElectrodeThickness, 2)
+electrode(Elec3,    2*aElecIncrement,   3*aElecIncrement-aElecGap,      xElectrodeThickness, 3)
+electrode(Elec4,    3*aElecIncrement,   4*aElecIncrement-aElecGap,      xElectrodeThickness, 4)
+electrode(Elec5,    4*aElecIncrement,   5*aElecIncrement-aElecGap,      xElectrodeThickness, 5)
+electrode(Elec6,    5*aElecIncrement,   6*aElecIncrement-aElecGap,      xElectrodeThickness, 6)
+electrode(Elec7,    6*aElecIncrement,   7*aElecIncrement-aElecGap,      xElectrodeThickness, 7)
+electrode(Elec8,    7*aElecIncrement,   8*aElecIncrement-aElecGap,      xElectrodeThickness, 8)
+electrode(Elec9,    8*aElecIncrement,   9*aElecIncrement-aElecGap,      xElectrodeThickness, 9)
+electrode(Elec10,   9*aElecIncrement,   10*aElecIncrement-aElecGap,     xElectrodeThickness, 10)
+electrode(Elec11,   10*aElecIncrement,  11*aElecIncrement-aElecGap,     xElectrodeThickness, 11)
+electrode(Elec12,   11*aElecIncrement,  12*aElecIncrement-aElecGap,     xElectrodeThickness, 12)
+electrode(Elec13,   12*aElecIncrement,  13*aElecIncrement-aElecGap,     xElectrodeThickness, 13)
+electrode(Elec14,   13*aElecIncrement,  14*aElecIncrement-aElecGap,     xElectrodeThickness, 14)
+electrode(Elec15,   14*aElecIncrement,  15*aElecIncrement-aElecGap,     xElectrodeThickness, 15)
+electrode(Elec16,   15*aElecIncrement,  16*aElecIncrement-aElecGap,     xElectrodeThickness, 16)
+electrode(Elec17,   16*aElecIncrement,  17*aElecIncrement-aElecGap,     xElectrodeThickness, 17)
+electrode(Elec18,   17*aElecIncrement,  18*aElecIncrement-aElecGap,     xElectrodeThickness, 18)
+electrode(Elec19,   18*aElecIncrement,  19*aElecIncrement-aElecGap,     xElectrodeThickness, 19)
+electrode(Elec20,   19*aElecIncrement,  20*aElecIncrement-aElecGap,     xElectrodeThickness, 20)
+electrode(Elec21,   20*aElecIncrement,  21*aElecIncrement-aElecGap,     xElectrodeThickness, 21)
+electrode(Elec22,   21*aElecIncrement,  22*aElecIncrement-aElecGap,     xElectrodeThickness, 22)
+electrode(Elec23,   22*aElecIncrement,  23*aElecIncrement-aElecGap,     xElectrodeThickness, 23)
+electrode(Elec24,   23*aElecIncrement,  24*aElecIncrement-aElecGap,     xElectrodeThickness, 24)
+electrode(Elec25,   24*aElecIncrement,  25*aElecIncrement-aElecGap,     xElectrodeThickness, 25)
+electrode(Elec26,   25*aElecIncrement,  26*aElecIncrement-aElecGap,     xElectrodeThickness, 26)
+electrode(Elec27,   26*aElecIncrement,  27*aElecIncrement-aElecGap,     xElectrodeThickness, 27)
+electrode(Elec28,   27*aElecIncrement,  28*aElecIncrement-aElecGap,     xElectrodeThickness, 28)
+electrode(Elec29,   28*aElecIncrement,  29*aElecIncrement-aElecGap,     xElectrodeThickness, 29)
+electrode(Elec30,   29*aElecIncrement,   30*aElecIncrement-aElecGap,     xElectrodeThickness, 30)
+
+// Macro to calculate gradient of field
+macro grad(uu)
+    [dx(uu), dy(uu)]
+    // End of Macro
+
+func Borders = CircleOuter(RDomain*MM)+CircleInner(RDomain*MM);
+func BreastDetail = Fibres(RTumour*MM)+Tumour1(RTumour*MM)+Tumour2(RTumour*MM);
+
+/* -----------------------------------------------------------------------
+COMPUTE TRUE MEASUREMENTS
+------------------------------------------------------------------------*/
+{
+    // True mesh: tumours introduced
+    mesh ThTrue;
+    if (NElectrodes == 10) {
+        ThTrue = buildmesh(Borders+BreastDetail
+            +Elec1 +Elec2 +Elec3 +Elec4 +Elec5 +Elec6 +Elec7 +Elec8 +Elec9 +Elec10);
+    } else if (NElectrodes == 20) {
+        ThTrue = buildmesh(Borders+BreastDetail
+            +Elec1 +Elec2 +Elec3 +Elec4 +Elec5 +Elec6 +Elec7 +Elec8 +Elec9 +Elec10
+            +Elec11+Elec12+Elec13+Elec14+Elec15+Elec16+Elec17+Elec18+Elec19+Elec20);
+    } else if (NElectrodes == 30) {
+        ThTrue = buildmesh(Borders+BreastDetail
+            +Elec1 +Elec2 +Elec3 +Elec4 +Elec5 +Elec6 +Elec7 +Elec8 +Elec9 +Elec10
+            +Elec11+Elec12+Elec13+Elec14+Elec15+Elec16+Elec17+Elec18+Elec19+Elec20
+            +Elec21+Elec22+Elec23+Elec24+Elec25+Elec26+Elec27+Elec28+Elec29+Elec30);
+    } else {
+        cerr << "Electrode number must be 10, 20 or 30. You entered: " << NElectrodes << endl;
+        exit(1);
+    }
+
+    // Define function spaces
+    fespace Vh1(ThTrue, P1); Vh1 uu, vv;
+    Vh1 rd = sqrt(x*x + y*y); Vh1 th = atan2(y,x);  // Converting to radial coordinates
+    fespace Vh0(ThTrue, P0); Vh0 e;  // Note piecewise constants for the true permittivity -> sharp material boundaries
+
+    // True relative permittivity
+    e = eBackground
+        + (eFat-eBackground) * (rd<rSensingRegion)
+        + (eFibres-eFat) * (sqrt((x-xFibres)*(x-xFibres) + (y-yFibres)*(y-yFibres)) < rFibres)
+        + (eTumour-eFibres) * (sqrt((x-xTumour2)*(x-xTumour2) + (y-yTumour2)*(y-yTumour2)) < rTumour2)
+        + (eTumour-eFibres) * (sqrt((x-xTumour1)*(x-xTumour1) + (y-yTumour1)*(y-yTumour1)) < rTumour1);
+    if(BPlot == 1){
+        plot(e, wait=false, fill=true, value=true, nbiso=20, cmm="True Permittivity");
+    }
+    Vh1[int] psi(NElectrodes);
+    for(int i=0; i<NElectrodes; i++){
+        solve indicatorFunction(uu, vv) = int2d(ThTrue)(grad(uu)'*grad(vv))
+            + on(100,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30, uu = 0.0) + on(i+1, uu = 1.0);
+        psi[i][] = uu[];
+    }
+
+    // Compute the measurements
+    for(int i=0; i<NElectrodes; i++){
+        solve lap2(uu, vv) = int2d(ThTrue)(e*grad(uu)'*grad(vv))
+            + on(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30, uu = 0)
+            + on(i+1, uu = 1);
+        if(BPlot == 1){
+            plot(uu, wait=false, fill=true, value=true, nbiso=40, cmm="Electric Field: Transmitter " + (i+1));
+        }
+        for(int j=0; j<NElectrodes; j++){
+            Cmat(j,i) = int2d(ThTrue)(e*grad(uu)'*grad(psi[j]));
+        }
+    }
+    cout << Cmat << endl;
+}
+
+
+/* -----------------------------------------------------------------------
+RECONSTRUCT PERMITTIVITY
+------------------------------------------------------------------------*/
+{
+    if(BReconstruct == 1){
+        mesh ThRecon;
+        if(BGenericMesh == 1){
+            if (NElectrodes == 10) {
+                ThRecon = buildmesh(Borders
+                    +Elec1 +Elec2 +Elec3 +Elec4 +Elec5 +Elec6 +Elec7 +Elec8 +Elec9 +Elec10);
+            } else if (NElectrodes == 20) {
+                ThRecon = buildmesh(Borders
+                    +Elec1 +Elec2 +Elec3 +Elec4 +Elec5 +Elec6 +Elec7 +Elec8 +Elec9 +Elec10
+                    +Elec11+Elec12+Elec13+Elec14+Elec15+Elec16+Elec17+Elec18+Elec19+Elec20);
+            } else if (NElectrodes == 30) {
+                ThRecon = buildmesh(Borders
+                    +Elec1 +Elec2 +Elec3 +Elec4 +Elec5 +Elec6 +Elec7 +Elec8 +Elec9 +Elec10
+                    +Elec11+Elec12+Elec13+Elec14+Elec15+Elec16+Elec17+Elec18+Elec19+Elec20
+                    +Elec21+Elec22+Elec23+Elec24+Elec25+Elec26+Elec27+Elec28+Elec29+Elec30);
+            }
+        } else {
+            if (NElectrodes == 10) {
+                ThRecon = buildmesh(Borders+BreastDetail
+                    +Elec1 +Elec2 +Elec3 +Elec4 +Elec5 +Elec6 +Elec7 +Elec8 +Elec9 +Elec10);
+            } else if (NElectrodes == 20) {
+                ThRecon = buildmesh(Borders+BreastDetail
+                    +Elec1 +Elec2 +Elec3 +Elec4 +Elec5 +Elec6 +Elec7 +Elec8 +Elec9 +Elec10
+                    +Elec11+Elec12+Elec13+Elec14+Elec15+Elec16+Elec17+Elec18+Elec19+Elec20);
+            } else if (NElectrodes == 30) {
+                ThRecon = buildmesh(Borders+BreastDetail
+                    +Elec1 +Elec2 +Elec3 +Elec4 +Elec5 +Elec6 +Elec7 +Elec8 +Elec9 +Elec10
+                    +Elec11+Elec12+Elec13+Elec14+Elec15+Elec16+Elec17+Elec18+Elec19+Elec20
+                    +Elec21+Elec22+Elec23+Elec24+Elec25+Elec26+Elec27+Elec28+Elec29+Elec30);
+            }
+        }
+        fespace Vh1(ThRecon, P1); Vh1 uuback, p, vv, eEstimated;
+        fespace Vh0(ThRecon, P0);
+        Vh1 rd = sqrt(x*x+y*y); Vh1 thd = atan2(y, x);
+        eEstimated = eBackground  // Initial guess
+            + (eFat-eBackground) * (rd<rSensingRegion);
+        if(BPlot == 1){
+            plot(eEstimated, wait=false, fill=true, value=true, nbiso=20, cmm="Initial Permittivity Estimate");
+        }
+        Vh1 uu;
+
+        Vh1[int] psi(NElectrodes);
+        for(int i=0; i<NElectrodes; i++){
+            solve indicatorFunction(uu, vv) = int2d(ThRecon)(grad(uu)'*grad(vv))
+                + on(100,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30, uu = 0.0) + on(i+1, uu = 1.0);
+            psi[i][] = uu[];
+        }
+
+        macro BCform(i, ThRecon)
+            varf B#i(uu, vv) = on(i, uu = 1.0);
+            real[int] b#i = B#i(0, Vh1);
+            varf L#i(uu, vv) = int2d(ThRecon)(eEstimated*grad(vv)'*grad(psi[i-1]));
+            real[int] l#i = L#i(0, Vh1);
+        // End of Macro
+
+        for(int iter=1; iter<=NIterations; iter++){
+            // Compute the capacitance for the current guess of the permittivity
+            solve lapback(uuback, vv) = int2d(ThRecon)(eEstimated*grad(uuback)'*grad(vv))
+                + on(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30, uuback = 0) + on(iter%NElectrodes+1, uuback = 1); // Solve for the same measurement but for 'eEstimated'
+
+            real[int] Q1(NElectrodes);
+
+            for(int i=0; i<NElectrodes; i++){
+            // 1D estimation of the charge
+                Q1[i] = int2d(ThRecon)(eEstimated*grad(uuback)'*grad(psi[i]));
+            }
+
+            //Compute adjoint (now uses shunt boundary conditions)
+            varf Ashunt(uu, vv) = int2d(ThRecon)(eEstimated*grad(uu)'*grad(vv))
+                + on(100,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30, uu = 1.0);
+
+            matrix A = Ashunt(Vh1, Vh1);
+            matrix B, L;
+            if (NElectrodes == 10) {
+                BCform(1, ThRecon)
+                BCform(2, ThRecon)
+                BCform(3, ThRecon)
+                BCform(4, ThRecon)
+                BCform(5, ThRecon)
+                BCform(6, ThRecon)
+                BCform(7, ThRecon)
+                BCform(8, ThRecon)
+                BCform(9, ThRecon)
+                BCform(10, ThRecon)
+                B = [[b1,b2,b3,b4,b5,b6,b7,b8,b9,b10]];
+                L = [[l1,l2,l3,l4,l5,l6,l7,l8,l9,l10]];
+            } else if (NElectrodes == 20) {
+                BCform(1, ThRecon)
+                BCform(2, ThRecon)
+                BCform(3, ThRecon)
+                BCform(4, ThRecon)
+                BCform(5, ThRecon)
+                BCform(6, ThRecon)
+                BCform(7, ThRecon)
+                BCform(8, ThRecon)
+                BCform(9, ThRecon)
+                BCform(10, ThRecon)
+                BCform(11, ThRecon)
+                BCform(12, ThRecon)
+                BCform(13, ThRecon)
+                BCform(14, ThRecon)
+                BCform(15, ThRecon)
+                BCform(16, ThRecon)
+                BCform(17, ThRecon)
+                BCform(18, ThRecon)
+                BCform(19, ThRecon)
+                BCform(20, ThRecon)
+                B = [[b1,b2,b3,b4,b5,b6,b7,b8,b9,b10,b11,b12,b13,b14,b15,b16,b17,b18,b19,b20]];
+                L = [[l1,l2,l3,l4,l5,l6,l7,l8,l9,l10,l11,l12,l13,l14,l15,l16,l17,l18,l19,l20]];
+            } else if (NElectrodes == 30) {
+                BCform(1, ThRecon)
+                BCform(2, ThRecon)
+                BCform(3, ThRecon)
+                BCform(4, ThRecon)
+                BCform(5, ThRecon)
+                BCform(6, ThRecon)
+                BCform(7, ThRecon)
+                BCform(8, ThRecon)
+                BCform(9, ThRecon)
+                BCform(10, ThRecon)
+                BCform(11, ThRecon)
+                BCform(12, ThRecon)
+                BCform(13, ThRecon)
+                BCform(14, ThRecon)
+                BCform(15, ThRecon)
+                BCform(16, ThRecon)
+                BCform(17, ThRecon)
+                BCform(18, ThRecon)
+                BCform(19, ThRecon)
+                BCform(20, ThRecon)
+                BCform(21, ThRecon)
+                BCform(22, ThRecon)
+                BCform(23, ThRecon)
+                BCform(24, ThRecon)
+                BCform(25, ThRecon)
+                BCform(26, ThRecon)
+                BCform(27, ThRecon)
+                BCform(28, ThRecon)
+                BCform(29, ThRecon)
+                BCform(30, ThRecon)
+                B = [[b1,b2,b3,b4,b5,b6,b7,b8,b9,b10,b11,b12,b13,b14,b15,b16,b17,b18,b19,b20,b21,b22,b23,b24,b25,b26,b27,b28,b29,b30]];
+                L = [[l1,l2,l3,l4,l5,l6,l7,l8,l9,l10,l11,l12,l13,l14,l15,l16,l17,l18,l19,l20,l21,l22,l23,l24,l25,l26,l27,l28,l29,l30]];
+            }
+            matrix AA = [[A, B], [L', 0]];
+            set(AA, solver = UMFPACK);
+
+            real[int] bvec(Vh1.ndof); bvec = 0.0;
+            real[int] RHS = Cmat(iter%NElectrodes,:)-Q1;
+            real[int] bb = [bvec, RHS];
+            real[int] sol = AA^-1*bb;
+
+            Vh1 p; p = 0.0;
+            real[int] tmp(NElectrodes); tmp = 0.0;
+            [p[], tmp] = sol;
+
+            // Estimate gradient
+            Vh0 dg;
+            dg = grad(p)'*grad(uuback);
+
+            // Regularise the gradient step via smoothing
+            Vh1 dgS;
+            solve laplace(dgS, vv) = int2d(ThRecon)(grad(dgS)'*grad(vv)) + int2d(ThRecon)(cRegularisation*dgS*vv) - int2d(ThRecon)(dg*vv) + on(100,101,1,2,3,4,5,6,7,8,9,RDomain, dgS = 0.0);
+            // Gradient step: could add a line search here
+            eEstimated = eEstimated+cGradientStep*dgS*(rd<=rSensingRegion);
+
+            if(iter%NElectrodes == 0){
+                real[int] tmp2 = Cmat(iter%NElectrodes, :);
+                real t = tmp2.l2;
+                cout <<"Indicative mismatch %l2: " << 100*RHS.l2/t << endl;
+                if(BPlot == 1){
+                    plot(eEstimated, fill=true, nbiso=80, cmm="Iteration: " + iter + "  (cRegularisation: " + cRegularisation + ", cGradientStep: " + cGradientStep + ")");
+                }
+            }
+        }
+        if(BPlot == 1){
+            plot(eEstimated, fill=true, value=true, nbiso=40, cmm="Iteration: " + NIterations + "  (cRegularisation: " + cRegularisation + ", cGradientStep: " + cGradientStep + ")");
+        }
+    }
+}

@@ -1,0 +1,524 @@
+/*
+    P1000-001, 004, and 006 geometry
+
+    NE Co-planar capacitors encased in a rectangular box.
+    Resolves the fringing fields.
+
+    Electrode boundaries are labelled: electrode i = label i
+    for i=1,...,NE
+
+    Center of the electrodes on the line y = 0
+
+    Defines regions for the membrane, block support.
+*/
+
+/*
+----------------------------------------------------------------------
+                    Build computational domain
+----------------------------------------------------------------------
+*/
+
+/*
+    Define rectangular border covering (xLeft, xRight) x (yBottom, yTop)
+    Will define for borders called <str>Left, <str>Right, <str>Top, <str>Bottom
+    e.g. if str = domain, domainLeft, domainRight, domainTop, domainBottom
+*/
+macro buildRectangle(str, xLeft, xRight, yBottom, yTop, labelLayer)
+    border str#Left(t=yTop, yBottom)
+    {
+        x = xLeft;
+        y = t;
+
+       label = labelLayer
+    ;
+    };
+    border str#Right(t = yBottom, yTop)
+    {
+        x = xRight;
+        y = t;
+        label = labelLayer;
+    };
+    border str#Bottom(t = xLeft, xRight)
+    {
+        x = t;
+        y = yBottom;
+        label = labelLayer;
+    };
+    border str#Top(t = xRight, xLeft)
+    {
+        x = t;
+        y = yTop;
+        label = labelLayer;
+    };
+// End of macro
+
+
+/*
+    Build electrode domain including:
+        A: Left,
+        B: Right,
+        C: Bottom,
+        D: Top,
+        E: Gap,
+        F: solder coat top of electrode,
+        G: solder coat over gap,
+        H: solder coat left,
+        I: solder coat right
+    - electrode
+    - gap
+    - solder coat
+*/
+macro buildElectrodeDomain(i, yOffset, xOffset)
+    border E#i#a(t = 0, xElecH){
+        x = (rCurvature - t) * sin((xOffset - 0.5 * xElecW)/rCurvature);
+        y = yCurvatureCentre - (rCurvature - t) * cos((xOffset - 0.5 * xElecW)/rCurvature);
+        label = i;
+    }
+    border E#i#b(t = xElecH, 0){
+        x = (rCurvature - t) * sin((xOffset + 0.5 * xElecW)/rCurvature);
+        y = yCurvatureCentre - (rCurvature - t) * cos((xOffset + 0.5 * xElecW)/rCurvature);
+        label = i;
+    }
+    border E#i#c(t = - 0.5 * xElecW, 0.5 * xElecW){
+        x = (rCurvature - xElecH) * sin((xOffset + t)/rCurvature);
+        y = yCurvatureCentre - (rCurvature - xElecH) * cos((xOffset + t)/rCurvature);
+        label = i;
+    }
+    border E#i#d(t = 0.5 * xElecW, - 0.5 * xElecW){
+        x = rCurvature * sin((xOffset + t)/rCurvature);
+        y = yCurvatureCentre - rCurvature * cos((xOffset + t)/rCurvature);
+        label = i;
+    }
+    border E#i#gap(t = 0.5 * xElecW, 0.5 * xElecW + xElecGap){
+        x = rCurvature * sin((xOffset + t)/rCurvature);
+        y = yCurvatureCentre - rCurvature * cos((xOffset + t)/rCurvature);
+        label = labelBoard;
+    }
+    border E#i#solderE(t = - 0.5 * xElecW - xSolderH, 0.5 * xElecW + xSolderH){
+        x = (rCurvature - xElecH - xSolderH) * sin((xOffset + t)/rCurvature);
+        y = yCurvatureCentre - (rCurvature - xElecH - xSolderH) * cos((xOffset + t)/rCurvature);
+        label = labelBoard;
+    }
+    border E#i#solderG(t = 0.5 * xElecW + xSolderH, 0.5 * xElecW + xElecGap - xSolderH){
+        x = (rCurvature - xSolderH) * sin((xOffset + t)/rCurvature);
+        y = yCurvatureCentre - (rCurvature - xSolderH) * cos((xOffset + t)/rCurvature);
+        label = labelBoard;
+    }
+    border E#i#solderL(t = 0, xElecH){
+        x = (rCurvature - xSolderH - t) * sin((xOffset - 0.5 * xElecW - xSolderH)/rCurvature);
+        y = yCurvatureCentre - (rCurvature - xSolderH - t) * cos((xOffset - 0.5 * xElecW - xSolderH)/rCurvature);
+        label = labelBoard;
+    }
+    border E#i#solderR(t = xElecH, 0){
+        x = (rCurvature - xSolderH - t) * sin((xOffset + 0.5 * xElecW + xSolderH)/rCurvature);
+        y = yCurvatureCentre - (rCurvature - xSolderH - t) * cos((xOffset + 0.5 * xElecW + xSolderH)/rCurvature);
+        label = labelBoard;
+    }
+// End of macro
+
+
+// Board boundary
+macro buildBoardBoundary(str, x0)
+    border str#L(t=x0, 0){
+        x = -(rCurvature + t) * sin(0.5 * xSubstrateW / rCurvature);
+        y = yCurvatureCentre - (rCurvature + t) *cos(0.5 * xSubstrateW / rCurvature);
+        label = labelBoard;
+    };
+    border str#R(t=x0, 0){
+        x = (rCurvature + t) * sin(0.5 * xSubstrateW / rCurvature);
+        y = yCurvatureCentre - (rCurvature + t) *cos(0.5 * xSubstrateW / rCurvature);
+        label = labelBoard;
+    };
+// End of macro
+
+// Build border of computational domain
+buildRectangle(
+    domain,
+    xOriginx, xOriginx + xDomainW, xOriginy, xOriginy + xDomainH,
+    labelDomain
+)
+
+// Build board geometry
+buildBoardBoundary(Board, xSubstrateH);
+buildBoardBoundary(SolderGap, -xSolderH);
+
+// Build bottom of the board
+border BoardB(
+    t = -0.5 * xSubstrateW + xWingBGap + xWingW, 0.5 * xSubstrateW - xWingBGap - xWingW
+){
+    x = (rCurvature + xSubstrateH) * sin(t/rCurvature);
+    y = yCurvatureCentre - (rCurvature + xSubstrateH) * cos(t/rCurvature);
+    label = labelBoard;
+};
+
+buildElectrodeDomain(1, xElecCenterY, xElecCenterx[0]);
+buildElectrodeDomain(2, xElecCenterY, xElecCenterx[1]);
+buildElectrodeDomain(3, xElecCenterY, xElecCenterx[2]);
+buildElectrodeDomain(4, xElecCenterY, xElecCenterx[3]);
+buildElectrodeDomain(5, xElecCenterY, xElecCenterx[4]);
+buildElectrodeDomain(6, xElecCenterY, xElecCenterx[5]);
+buildElectrodeDomain(7, xElecCenterY, xElecCenterx[6]);
+buildElectrodeDomain(8, xElecCenterY, xElecCenterx[7]);
+buildElectrodeDomain(9, xElecCenterY, xElecCenterx[8]);
+buildElectrodeDomain(10, xElecCenterY, xElecCenterx[9]);
+buildElectrodeDomain(11, xElecCenterY, xElecCenterx[10]);
+
+
+// Gap to either side of the first and last electrode
+border E0gap(t = -0.5*xSubstrateW + xWingW + xWingBGap, xElecCenterx[0] - 0.5*xElecW){
+    x = rCurvature * sin(t/rCurvature);
+    y = yCurvatureCentre - rCurvature * cos(t/rCurvature);
+    label = labelBoard;
+}
+// NOTE: E11gap (with lowercase g) is defined automatically in buildElectrodeDomain
+//       This one (with capital G) is to be used in the mesh generation
+border E11Gap(t = xElecCenterx[NE - 1] + 0.5*xElecW, 0.5*xSubstrateW - (xWingW + xWingBGap)){
+    x = rCurvature * sin(t/rCurvature);
+    y = yCurvatureCentre - rCurvature * cos(t/rCurvature);
+    label = labelBoard;
+}
+border E0SolderGap(t = -0.5*xSubstrateW + xWingW + xWingBGap + xSolderH, xElecCenterx[0] - 0.5*xElecW - xSolderH){
+    x = (rCurvature - xSolderH) * sin(t/rCurvature);
+    y = yCurvatureCentre - (rCurvature - xSolderH) * cos(t/rCurvature);
+    label = labelBoard;
+}
+border E11SolderGap(t = xElecCenterx[NE - 1] + 0.5*xElecW + xSolderH, 0.5*xSubstrateW - (xWingW + xWingBGap) - xSolderH){
+    x = (rCurvature - xSolderH) * sin(t/rCurvature);
+    y = yCurvatureCentre - (rCurvature - xSolderH) * cos(t/rCurvature);
+    label = labelBoard;
+}
+
+// Gap between wings and board edge
+border G1gap(t = -0.5*xSubstrateW, -0.5*xSubstrateW + xWingBGap){
+    x = rCurvature * sin(t/rCurvature);
+    y = yCurvatureCentre - rCurvature * cos(t/rCurvature);
+    label = labelBoard;
+}
+border G2gap(t = 0.5*xSubstrateW, 0.5*xSubstrateW - xWingBGap){
+    x = rCurvature * sin(t/rCurvature);
+    y = yCurvatureCentre - rCurvature * cos(t/rCurvature);
+    label = labelBoard;
+}
+border G3gap(t = -0.5*xSubstrateW, -0.5*xSubstrateW + xWingBGap){
+    x = (rCurvature + xSubstrateH) * sin(t/rCurvature);
+    y = yCurvatureCentre - (rCurvature + xSubstrateH) * cos(t/rCurvature);
+    label = labelBoard;
+}
+border G4gap(t = 0.5*xSubstrateW, 0.5*xSubstrateW - xWingBGap){
+    x = (rCurvature + xSubstrateH) * sin(t/rCurvature);
+    y = yCurvatureCentre - (rCurvature + xSubstrateH) * cos(t/rCurvature);
+    label = labelBoard;
+}
+
+border G1SolderGap(t = -0.5*xSubstrateW, -0.5*xSubstrateW + xWingBGap - xSolderH){
+    x = (rCurvature - xSolderH) * sin(t/rCurvature);
+    y = yCurvatureCentre - (rCurvature - xSolderH) * cos(t/rCurvature);
+    label = labelBoard;
+}
+border G2SolderGap(t = 0.5*xSubstrateW, 0.5*xSubstrateW - xWingBGap + xSolderH){
+    x = (rCurvature - xSolderH) * sin(t/rCurvature);
+    y = yCurvatureCentre - (rCurvature - xSolderH) * cos(t/rCurvature);
+    label = labelBoard;
+}
+
+// Wings
+border WingTLLeft(t = 0, xElecH){
+    x = (rCurvature - t) * sin((-0.5*xSubstrateW + xWingBGap)/rCurvature);
+    y = yCurvatureCentre - (rCurvature - t) * cos((-0.5*xSubstrateW + xWingBGap)/rCurvature);
+    label = labelWingTL;
+};
+border WingTLRight(t = xElecH, 0){
+    x = (rCurvature - t) * sin((-0.5*xSubstrateW + xWingBGap + xWingW)/rCurvature);
+    y = yCurvatureCentre - (rCurvature - t) * cos((-0.5*xSubstrateW + xWingBGap + xWingW)/rCurvature);
+    label = labelWingTL;
+};
+border WingTLBottom(t = xWingW, 0){
+    x = rCurvature * sin((-0.5*xSubstrateW + xWingBGap + t)/rCurvature);
+    y = yCurvatureCentre - rCurvature * cos((-0.5*xSubstrateW + xWingBGap + t)/rCurvature);
+    label = labelWingTL;
+};
+border WingTLTop(t = 0, xWingW){
+    x = (rCurvature - xElecH) * sin((-0.5*xSubstrateW + xWingBGap + t)/rCurvature);
+    y = yCurvatureCentre - (rCurvature - xElecH) * cos((-0.5*xSubstrateW + xWingBGap + t)/rCurvature);
+    label = labelWingTL;
+};
+border WingTLSolderTop(t = 0, xWingW + 2 * xSolderH){
+    x = (rCurvature - xElecH - xSolderH) * sin((-0.5*xSubstrateW + xWingBGap - xSolderH + t)/rCurvature);
+    y = yCurvatureCentre - (rCurvature - xElecH - xSolderH) * cos((-0.5*xSubstrateW + xWingBGap - xSolderH + t)/rCurvature);
+    label = labelBoard;
+};
+border WingTLSolderRight(t = 0, xElecH){
+    x = (rCurvature - xSolderH - t) * sin((-0.5*xSubstrateW + xWingBGap + xWingW + xSolderH)/rCurvature);
+    y = yCurvatureCentre - (rCurvature - xSolderH - t) * cos((-0.5*xSubstrateW + xWingBGap + xWingW + xSolderH)/rCurvature);
+    label = labelBoard;
+};
+border WingTLSolderLeft(t = xElecH, 0){
+    x = (rCurvature - xSolderH - t) * sin((-0.5*xSubstrateW + xWingBGap - xSolderH)/rCurvature);
+    y = yCurvatureCentre - (rCurvature - xSolderH - t) * cos((-0.5*xSubstrateW + xWingBGap - xSolderH)/rCurvature);
+    label = labelBoard;
+};
+
+border WingTRLeft(t = 0, xElecH){
+    x = (rCurvature - t) * sin((0.5*xSubstrateW - xWingBGap - xWingW)/rCurvature);
+    y = yCurvatureCentre - (rCurvature - t) * cos((0.5*xSubstrateW - xWingBGap - xWingW)/rCurvature);
+    label = labelWingTR;
+};
+border WingTRRight(t = xElecH, 0){
+    x = (rCurvature - t) * sin((0.5*xSubstrateW - xWingBGap)/rCurvature);
+    y = yCurvatureCentre - (rCurvature - t) * cos((0.5*xSubstrateW - xWingBGap)/rCurvature);
+    label = labelWingTR;
+};
+border WingTRBottom(t = xWingW, 0){
+    x = rCurvature * sin((0.5*xSubstrateW - xWingBGap - xWingW + t)/rCurvature);
+    y = yCurvatureCentre - rCurvature * cos((0.5*xSubstrateW - xWingBGap - xWingW + t)/rCurvature);
+    label = labelWingTR;
+};
+border WingTRTop(t = 0, xWingW){
+    x = (rCurvature - xElecH) * sin((0.5*xSubstrateW - xWingBGap - xWingW + t)/rCurvature);
+    y = yCurvatureCentre - (rCurvature - xElecH) * cos((0.5*xSubstrateW - xWingBGap - xWingW + t)/rCurvature);
+    label = labelWingTR;
+};
+border WingTRSolderTop(t = 0, xWingW + 2 * xSolderH){
+    x = (rCurvature - xElecH - xSolderH) * sin((0.5*xSubstrateW - xWingBGap - xWingW - xSolderH + t)/rCurvature);
+    y = yCurvatureCentre - (rCurvature - xElecH - xSolderH) * cos((0.5*xSubstrateW - xWingBGap - xWingW - xSolderH + t)/rCurvature);
+    label = labelBoard;
+};
+border WingTRSolderRight(t = xElecH, 0){
+    x = (rCurvature - xSolderH - t) * sin((0.5*xSubstrateW - xWingBGap + xSolderH)/rCurvature);
+    y = yCurvatureCentre - (rCurvature - xSolderH - t) * cos((0.5*xSubstrateW - xWingBGap + xSolderH)/rCurvature);
+    label = labelBoard;
+};
+border WingTRSolderLeft(t = 0, xElecH){
+    x = (rCurvature - xSolderH - t) * sin((0.5*xSubstrateW - xWingBGap - xWingW - xSolderH)/rCurvature);
+    y = yCurvatureCentre - (rCurvature - xSolderH - t) * cos((0.5*xSubstrateW - xWingBGap - xWingW - xSolderH)/rCurvature);
+    label = labelBoard;
+};
+
+border WingBLLeft(t = - xSubstrateH - xElecH, - xSubstrateH){
+    x = (rCurvature - t) * sin((-0.5*xSubstrateW + xWingBGap)/rCurvature);
+    y = yCurvatureCentre - (rCurvature - t) * cos((-0.5*xSubstrateW + xWingBGap)/rCurvature);
+    label = labelWingBL;
+};
+border WingBLRight(t = - xSubstrateH, - xSubstrateH - xElecH){
+    x = (rCurvature - t) * sin((-0.5*xSubstrateW + xWingBGap + xWingW)/rCurvature);
+    y = yCurvatureCentre - (rCurvature - t) * cos((-0.5*xSubstrateW + xWingBGap + xWingW)/rCurvature);
+    label = labelWingBL;
+};
+border WingBLBottom(t = xWingW, 0){
+    x = (rCurvature + xSubstrateH + xElecH) * sin((-0.5*xSubstrateW + xWingBGap + t)/rCurvature);
+    y = yCurvatureCentre - (rCurvature + xSubstrateH + xElecH) * cos((-0.5*xSubstrateW + xWingBGap + t)/rCurvature);
+    label = labelWingBL;
+};
+border WingBLTop(t = 0, xWingW){
+    x = (rCurvature + xSubstrateH) * sin((-0.5*xSubstrateW + xWingBGap + t)/rCurvature);
+    y = yCurvatureCentre - (rCurvature + xSubstrateH) * cos((-0.5*xSubstrateW + xWingBGap + t)/rCurvature);
+    label = labelWingBL;
+};
+
+border WingBRLeft(t = - xSubstrateH - xElecH, - xSubstrateH){
+    x = (rCurvature - t) * sin((0.5*xSubstrateW - xWingBGap - xWingW)/rCurvature);
+    y = yCurvatureCentre - (rCurvature - t) * cos((0.5*xSubstrateW - xWingBGap - xWingW)/rCurvature);
+    label = labelWingBR;
+};
+border WingBRRight(t = - xSubstrateH, - xSubstrateH - xElecH){
+    x = (rCurvature - t) * sin((0.5*xSubstrateW - xWingBGap)/rCurvature);
+    y = yCurvatureCentre - (rCurvature - t) * cos((0.5*xSubstrateW - xWingBGap)/rCurvature);
+    label = labelWingBR;
+};
+border WingBRBottom(t = xWingW, 0){
+    x = (rCurvature + xSubstrateH + xElecH) * sin((0.5*xSubstrateW - xWingBGap - xWingW + t)/rCurvature);
+    y = yCurvatureCentre - (rCurvature + xSubstrateH + xElecH) * cos((0.5*xSubstrateW - xWingBGap - xWingW + t)/rCurvature);
+    label = labelWingBR;
+};
+border WingBRTop(t = 0, xWingW){
+    x = (rCurvature + xSubstrateH) * sin((0.5*xSubstrateW - xWingBGap - xWingW + t)/rCurvature);
+    y = yCurvatureCentre - (rCurvature + xSubstrateH) * cos((0.5*xSubstrateW - xWingBGap - xWingW + t)/rCurvature);
+    label = labelWingBR;
+};
+
+
+/*
+----------------------------------------------------------------------
+                        Generate the mesh
+----------------------------------------------------------------------
+*/
+
+real regionOffsetX = 0.0;
+real regionOffsetY = 0.0;
+
+include "pixel_region.edp"
+
+macro createMesh(h)
+    mesh Th = buildmesh(
+      domainLeft(ceil(xDomainH*rDomain/h))+domainRight(ceil(xDomainH*rDomain/h))
+      +domainTop(ceil(xDomainW*rDomain/h))+domainBottom(ceil(xDomainW*rDomain/h))
+
+      +BoardL(ceil(xSubstrateH*rBoard/h))
+      +BoardR(ceil(xSubstrateH*rBoard/h))
+      +BoardB(ceil(xSubstrateW*rBoard/h))
+      +SolderGapL(ceil(xSolderH*rBoard/h))
+      +SolderGapR(ceil(xSolderH*rBoard/h))
+
+      +WingTLLeft(ceil(xElecH*rElectrodeH/h))
+      +WingTLRight(ceil(xElecH*rElectrodeH/h))
+      +WingTLBottom(ceil(xWingW*rWingW/h))
+      +WingTLTop(ceil(xWingW*rWingW/h))
+      +G1gap(ceil(xWingBGap*rBoard/h))
+
+      +WingTLSolderTop(ceil((xWingW+2*xSolderH)*rWingW/h))
+      +WingTLSolderRight(ceil(xSolderH*rElectrodeH/h))
+      +WingTLSolderLeft(ceil(xSolderH*rElectrodeH/h))
+      +G1SolderGap(ceil(xWingBGap*rBoard/h))
+
+      +WingTRLeft(ceil(xElecH*rElectrodeH/h))
+      +WingTRRight(ceil(xElecH*rElectrodeH/h))
+      +WingTRBottom(ceil(xWingW*rWingW/h))
+      +WingTRTop(ceil(xWingW*rWingW/h))
+      +G2gap(ceil(xWingBGap*rBoard/h))
+
+      +WingTRSolderTop(ceil((xWingW+2*xSolderH)*rWingW/h))
+      +WingTRSolderRight(ceil(xSolderH*rElectrodeH/h))
+      +WingTRSolderLeft(ceil(xSolderH*rElectrodeH/h))
+      +G2SolderGap(ceil(xWingBGap*rBoard/h))
+
+      +WingBLLeft(ceil(xElecH*rElectrodeH/h))
+      +WingBLRight(ceil(xElecH*rElectrodeH/h))
+      +WingBLBottom(ceil(xWingW*rWingW/h))
+      +WingBLTop(ceil(xWingW*rWingW/h))
+      +G3gap(ceil(xWingBGap*rBoard/h))
+
+      +WingBRLeft(ceil(xElecH*rElectrodeH/h))
+      +WingBRRight(ceil(xElecH*rElectrodeH/h))
+      +WingBRBottom(ceil(xWingW*rWingW/h))
+      +WingBRTop(ceil(xWingW*rWingW/h))
+      +G4gap(ceil(xWingBGap*rBoard/h))
+
+      +E1a(ceil(xElecH*rElectrodeH/h))+E1b(ceil(xElecH*rElectrodeH/h))
+      +E1c(ceil(xElecW*rElectrodeW/h))+E1d(ceil(xElecW*rElectrodeW/h))
+      +E1solderE(ceil((xElecW+2*xSolderH)*rElectrodeW/h))
+      +E1solderL(ceil(xSolderH*rElectrodeH/h))
+      +E1solderR(ceil(xSolderH*rElectrodeH/h))
+
+      +E2a(ceil(xElecH*rElectrodeH/h))+E2b(ceil(xElecH*rElectrodeH/h))
+      +E2c(ceil(xElecW*rElectrodeW/h))+E2d(ceil(xElecW*rElectrodeW/h))
+      +E2solderE(ceil((xElecW+2*xSolderH)*rElectrodeW/h))
+      +E2solderL(ceil(xSolderH*rElectrodeH/h))
+      +E2solderR(ceil(xSolderH*rElectrodeH/h))
+
+      +E3a(ceil(xElecH*rElectrodeH/h))+E3b(ceil(xElecH*rElectrodeH/h))
+      +E3c(ceil(xElecW*rElectrodeW/h))+E3d(ceil(xElecW*rElectrodeW/h))
+      +E3solderE(ceil((xElecW+2*xSolderH)*rElectrodeW/h))
+      +E3solderL(ceil(xSolderH*rElectrodeH/h))
+      +E3solderR(ceil(xSolderH*rElectrodeH/h))
+
+      +E4a(ceil(xElecH*rElectrodeH/h))+E4b(ceil(xElecH*rElectrodeH/h))
+      +E4c(ceil(xElecW*rElectrodeW/h))+E4d(ceil(xElecW*rElectrodeW/h))
+      +E4solderE(ceil((xElecW+2*xSolderH)*rElectrodeW/h))
+      +E4solderL(ceil(xSolderH*rElectrodeH/h))
+      +E4solderR(ceil(xSolderH*rElectrodeH/h))
+
+      +E5a(ceil(xElecH*rElectrodeH/h))+E5b(ceil(xElecH*rElectrodeH/h))
+      +E5c(ceil(xElecW*rElectrodeW/h))+E5d(ceil(xElecW*rElectrodeW/h))
+      +E5solderE(ceil((xElecW+2*xSolderH)*rElectrodeW/h))
+      +E5solderL(ceil(xSolderH*rElectrodeH/h))
+      +E5solderR(ceil(xSolderH*rElectrodeH/h))
+
+      +E6a(ceil(xElecH*rElectrodeH/h))+E6b(ceil(xElecH*rElectrodeH/h))
+      +E6c(ceil(xElecW*rElectrodeW/h))+E6d(ceil(xElecW*rElectrodeW/h))
+      +E6solderE(ceil((xElecW+2*xSolderH)*rElectrodeW/h))
+      +E6solderL(ceil(xSolderH*rElectrodeH/h))
+      +E6solderR(ceil(xSolderH*rElectrodeH/h))
+
+      +E7a(ceil(xElecH*rElectrodeH/h))+E7b(ceil(xElecH*rElectrodeH/h))
+      +E7c(ceil(xElecW*rElectrodeW/h))+E7d(ceil(xElecW*rElectrodeW/h))
+      +E7solderE(ceil((xElecW+2*xSolderH)*rElectrodeW/h))
+      +E7solderL(ceil(xSolderH*rElectrodeH/h))
+      +E7solderR(ceil(xSolderH*rElectrodeH/h))
+
+      +E8a(ceil(xElecH*rElectrodeH/h))+E8b(ceil(xElecH*rElectrodeH/h))
+      +E8c(ceil(xElecW*rElectrodeW/h))+E8d(ceil(xElecW*rElectrodeW/h))
+      +E8solderE(ceil((xElecW+2*xSolderH)*rElectrodeW/h))
+      +E8solderL(ceil(xSolderH*rElectrodeH/h))
+      +E8solderR(ceil(xSolderH*rElectrodeH/h))
+
+      +E9a(ceil(xElecH*rElectrodeH/h))+E9b(ceil(xElecH*rElectrodeH/h))
+      +E9c(ceil(xElecW*rElectrodeW/h))+E9d(ceil(xElecW*rElectrodeW/h))
+      +E9solderE(ceil((xElecW+2*xSolderH)*rElectrodeW/h))
+      +E9solderL(ceil(xSolderH*rElectrodeH/h))
+      +E9solderR(ceil(xSolderH*rElectrodeH/h))
+
+      +E10a(ceil(xElecH*rElectrodeH/h))+E10b(ceil(xElecH*rElectrodeH/h))
+      +E10c(ceil(xElecW*rElectrodeW/h))+E10d(ceil(xElecW*rElectrodeW/h))
+      +E10solderE(ceil((xElecW+2*xSolderH)*rElectrodeW/h))
+      +E10solderL(ceil(xSolderH*rElectrodeH/h))
+      +E10solderR(ceil(xSolderH*rElectrodeH/h))
+
+      +E11a(ceil(xElecH*rElectrodeH/h))+E11b(ceil(xElecH*rElectrodeH/h))
+      +E11c(ceil(xElecW*rElectrodeW/h))+E11d(ceil(xElecW*rElectrodeW/h))
+      +E11solderE(ceil((xElecW+2*xSolderH)*rElectrodeW/h))
+      +E11solderL(ceil(xSolderH*rElectrodeH/h))
+      +E11solderR(ceil(xSolderH*rElectrodeH/h))
+
+      +E0gap(ceil(xWingGap*rBoardHigh/h))
+      +E0SolderGap(ceil((xWingGap-2*xSolderH)*rBoardHigh/h))
+      +E11Gap(ceil(xWingGap*rBoardHigh/h))
+      +E11SolderGap(ceil((xWingGap-2*xSolderH)*rBoardHigh/h))
+
+      +E1gap(ceil(xElecGap*rBoardHigh/h))
+      +E2gap(ceil(xElecGap*rBoardHigh/h))
+      +E3gap(ceil(xElecGap*rBoardHigh/h))
+      +E4gap(ceil(xElecGap*rBoardHigh/h))
+      +E5gap(ceil(xElecGap*rBoardHigh/h))
+      +E6gap(ceil(xElecGap*rBoardHigh/h))
+      +E7gap(ceil(xElecGap*rBoardHigh/h))
+      +E8gap(ceil(xElecGap*rBoardHigh/h))
+      +E9gap(ceil(xElecGap*rBoardHigh/h))
+      +E10gap(ceil(xElecGap*rBoardHigh/h))
+
+      +E1solderG(ceil(xElecGap*rBoardHigh/h))
+      +E2solderG(ceil(xElecGap*rBoardHigh/h))
+      +E3solderG(ceil(xElecGap*rBoardHigh/h))
+      +E4solderG(ceil(xElecGap*rBoardHigh/h))
+      +E5solderG(ceil(xElecGap*rBoardHigh/h))
+      +E6solderG(ceil(xElecGap*rBoardHigh/h))
+      +E7solderG(ceil(xElecGap*rBoardHigh/h))
+      +E8solderG(ceil(xElecGap*rBoardHigh/h))
+      +E9solderG(ceil(xElecGap*rBoardHigh/h))
+      +E10solderG(ceil(xElecGap*rBoardHigh/h))
+
+      + pixelRegion
+  );
+// End of macro
+
+// Generate mesh
+createMesh(h);
+
+if (BPlot) { plot(Th); };
+
+/*
+----------------------------------------------------------------------
+                    Define region labels
+----------------------------------------------------------------------
+*/
+
+// Find region corresponding to block and membrane
+int back = Th(0.0, xSubstratey - 1e-3).region;
+int substrate = Th(0.0, xSubstratey + 0.5*xSubstrateH).region;
+int soldercoat = Th(0.0, xSubstratey + xSubstrateH + xElecH + 0.5*xSolderH).region;
+
+int[int] regionLabels = [back, substrate, soldercoat];
+string[string] regionNames;
+regionNames[0] = "background";
+regionNames[1] = "substrate";
+regionNames[2] = "solder coat";
+
+int[int] pixelRegions = FindPixelRegions(pixelCenterX, pixelCenterY, Th);
+
+// Initialise and build epsilon map
+real[int] pixelEpsilons(pixelRegions.n);
+// initialises pixels to the background.
+pixelEpsilons = eBackground;
+// Read and build epsilon map
+real[int] pixelSigmas(pixelRegions.n);
+// initialises pixels to background
+pixelSigmas = sBackground;

@@ -1,0 +1,288 @@
+verbosity = 1;
+
+include "getARGV.idp";
+int debug = getARGV("debug", 0);
+real rOuter = 1.0;
+real rInner = 0.5;
+border OuterCircle(t = 0, 2*pi){x = rOuter*cos(t); y = rOuter*sin(t); label = 1;};
+border InnerCircle(t = 0, 2*pi){x = rInner*cos(t); y = rInner*sin(t); label = 0;};
+int NN = 300;
+int omega = 3;
+real eps0 = getARGV("eps0", 1e-12);
+
+mesh Th1 = buildmesh(OuterCircle(NN) + InnerCircle(-NN));
+mesh Th2 = buildmesh(InnerCircle(NN));
+mesh Th = Th2 + Th1;
+
+
+
+string OutputDirec = getARGV("OutputDirec", "./");
+string OutputFile = getARGV("OutputFile", "results.txt");
+int realsolution = getARGV("realsoln", 1);
+int complexsolution = getARGV("complexsoln", 0);
+
+ofstream ff(OutputDirec + OutputFile);
+
+ff.scientific;
+ff.precision(10);
+
+if( debug ){
+    cout << "Num v in Th: " << Th.nv << endl;
+    cout << "Num v in Th1: " << Th1.nv << endl;
+    cout << "Num v in Th2: " << Th2.nv << endl;
+
+    plot(Th1, Th2, wait=1, fill=1);
+}
+
+macro grad(u) [dx(u), dy(u)]//
+if( realsolution == 1){
+    fespace Vh(Th, P1); Vh uu, vv;
+    fespace Vh1(Th1, P1); Vh1 u1, v1;
+    fespace Vh2(Th2, P1); Vh2 u2, v2;
+    fespace Uh(Th, P0);
+
+    if( debug ){
+        cout << "Num degrees freedom in Vh: " << Vh.ndof << endl;
+        cout << "Num degrees freedom in Vh1: " << Vh1.ndof << endl;
+        cout << "Num degrees freedom in Vh2: " << Vh2.ndof << endl;
+    }
+
+    // Define polar coordinates for this geometry for convenience 
+    Vh th = atan2(y,x), rd = sqrt(x*x+y*y); 
+
+    // Trick to define electrodes without having to define borders. 
+    // i.e. omega is 'frequency' of electrodes around the border 
+
+    Uh fh =rd*((th>-pi/(2*omega))*(th<pi/(2*omega))+(th>3*pi/(2*omega))*(th<5*pi/(2*omega))+(th>-5*pi/(2*omega))*(th<-3*pi/(2*omega)));
+
+    Uh inclusionInd = (rd <= rInner);
+
+    if( debug ){
+        plot(inclusionInd, wait=1,fill=1, value = 1, cmm = "Inclusion Indicator");
+    }
+
+    /*
+
+    Constructing equation 7
+
+    */
+    varf term1(uu, vv) = int2d(Th)(grad(uu)'*grad(vv)) + on(1, uu = 1.0);
+    varf term2(u2, v2) = int2d(Th2)(grad(u2)'*grad(v2));
+    varf term3(uu, vv) = on(1, uu = fh);
+
+    matrix A = term1(Vh, Vh);
+    matrix B0 = term2(Vh2, Vh);
+    real[int] F = term3(0, Vh);
+
+    if( debug ){
+        cout << "size of A: " << A.n << ", " << A.m << endl;
+        cout << "size of B0: " << B0.n << ", " << B0.m << endl;
+        cout << "size of F: " << F.n << endl;
+    }
+
+    /*
+
+    Constructing equation 15
+
+    */
+
+    varf term4(uu, v2) = int2d(Th2)(grad(uu)'*grad(v2));
+    varf term5(u2, v2) = int2d(Th2)(-eps0*grad(u2)'*grad(v2));
+
+    matrix B1 = term4(Vh, Vh2);
+    matrix S = term5(Vh2, Vh2);
+
+    if( debug ){
+        cout << "size of B1: " << B1.n << ", " << B1.m << endl;
+        cout << "size of S: " << S.n << ", " << S.m << endl;
+    }
+
+    /*
+
+    Construct block system
+
+    */
+
+    matrix AA = [[A, B0], [B1, S]]; set(AA, solver = "UMFPACK");
+
+    if( debug ){
+        cout << "size of AA: " << AA.n << ", " << AA.m << endl;
+    }
+    /*
+
+    Augment RHS
+
+    */
+    real[int] zerovec(Vh2.ndof); zerovec = 0.0;
+    real[int] rhsvec = [F, zerovec];
+
+    if( debug ){
+        cout << "size of rhsvec: " << rhsvec.n << endl;
+    }
+
+    /*
+
+    Solve system
+
+    */
+
+    real[int] sol = AA^-1*rhsvec;
+    [uu[], u2[]] = sol;
+
+    if( debug ){
+        plot(uu, wait=1, fill=1,value=1,  cmm = "uu");
+        plot(u2, wait=1, fill=1,value=1,  cmm = "lambda");
+    }
+    /*
+
+    Check solution 
+
+    */
+    real[int] temp = AA*sol; temp -= rhsvec;
+    real error = sqrt(temp'*temp);
+    cout << "Residual error using new method: " << error << endl;
+    ff << error << ", ";
+    /*
+
+    Check equality constraint between uu and u2
+
+    */
+
+    if( debug ){
+        Vh2 restriction = uu;
+        Vh2 diffrestrict = restriction - eps0*u2;
+        plot(diffrestrict, wait=1, value = 1, fill=1, cmm = "uu - eps0*u2");
+        cout << "Min of restricted difference: " << diffrestrict[].min << endl;
+        cout << "Max of restricted difference: " << diffrestrict[].max << endl;
+    }
+
+    /*
+
+    Solve in the old way
+
+    */
+    Vh uu2;
+    Uh epsilon = 1.0 + (1.0/eps0)*inclusionInd;
+
+    varf laplace(uu2, vv) = int2d(Th)(epsilon*grad(uu2)'*grad(vv)) + on(1, uu2 = 1);
+    varf RHS(uu2, vv) = on(1, uu2 = fh);
+
+    matrix Alaplace = laplace(Vh, Vh); set(Alaplace, solver = "UMFPACK");
+    real[int] RHSvec = RHS(0, Vh);
+    uu2[] = Alaplace^-1*RHSvec;
+
+    if( debug ){
+        plot(uu2, wait=1, fill=1, cmm = "uu2");
+    }
+    real[int] tmp = Alaplace*uu2[]; tmp -= RHSvec;
+    error = sqrt(tmp'*tmp);
+    cout << "Residual error using old method: " << error << endl;
+    ff << error << ", ";
+
+
+    Vh diff; diff = abs(uu2 - uu);
+    if( debug ){
+        plot(diff,wait=1, fill=1);
+    }
+    cout << "L2 norm of diff: " << sqrt(diff[]'*diff[]) << endl;
+    ff << sqrt(diff[]'*diff[]) << ", ";
+
+    ff << uu[].l2 << ", " << uu2[].l2 <<endl;
+}
+
+if( complexsolution == 1){
+    fespace Vh(Th, P1); Vh<complex> uu, vv;
+    fespace Uh(Th, P0);
+
+
+    Vh th = atan2(y,x), rd = sqrt(x*x+y*y);
+    Uh<complex> fh = ((th>-pi/(2*omega))*(th<pi/(2*omega))+(th>3*pi/(2*omega))*(th<5*pi/(2*omega))+(th>-5*pi/(2*omega))*(th<-3*pi/(2*omega)));
+
+    Uh inclusionInd = (rd <= rInner);
+
+    /*
+
+    Solving using a system approach
+
+    */
+    {
+    fespace Vh2(Th2, P1); Vh2<complex> u2, v2;
+    varf term1(uu, vv) = int2d(Th)(grad(uu)'*grad(vv)) + on(1, uu = 1.0);
+    varf term2(u2, vv) = int2d(Th2)(1i*grad(u2)'*grad(vv)); //updated to reflect sesquilinear form
+    varf term3(uu, v2) = int2d(Th2)(grad(uu)'*grad(v2));
+    varf term4(u2, v2) = int2d(Th2)(-eps0*grad(u2)'*grad(v2));
+
+    varf RHS(uu, vv) = on(1, uu = fh);
+
+    matrix<complex> A1 = term1(Vh, Vh);
+    matrix<complex> A2 = term2(Vh2, Vh);
+    matrix<complex> A3 = term3(Vh, Vh2);
+    matrix<complex> A4 = term4(Vh2, Vh2);
+
+    matrix<complex> AA = [[A1, A2], [A3, A4]];
+
+    complex[int] BCvec = RHS(0, Vh);
+    complex[int] zerovec(Vh2.ndof); zerovec = 0.0;
+    complex[int] RHSvec = [BCvec, zerovec];
+
+    set(AA, solver = "UMFPACK");
+    Vh<complex> uu2;
+    complex[int] sol = AA^-1*RHSvec;
+    [uu2[], u2[]] = sol;
+
+    complex[int] tmp = AA*sol; tmp -= RHSvec;
+    complex error = sqrt(tmp'*tmp);
+    cout << "Residual error using separated: " << error << endl;
+    cout << "RHSvec l2: " << RHSvec.l2/tgv << endl;
+    ff << real(error) << ", ";
+
+    if( debug ){
+        Vh tmpfunc = real(uu2);
+        plot(tmpfunc, wait=1, fill=1, cmm = "real(uu) separated method ");
+        tmpfunc = imag(uu2);
+        plot(tmpfunc, wait=1, fill=1, cmm = "Imag(uu) separated method ");
+    }
+
+    Uh<complex> epsilon = 1.0 + (1i/eps0)*inclusionInd; // Correction to the sesquilinear form
+
+    varf laplace(uu, vv) = int2d(Th)(epsilon*grad(uu)'*grad(vv)) + on(1, uu = 1);
+
+    matrix<complex> Alaplace = laplace(Vh, Vh); set(Alaplace, solver = "UMFPACK");
+    complex[int] RHSvec2 = RHS(0, Vh);
+    uu[] = Alaplace^-1*RHSvec2;
+
+    if( debug ){
+        Vh tmpfunc = real(uu);
+        plot(tmpfunc, wait=1, fill=1, cmm = "real(uu2)");
+        tmpfunc = imag(uu);
+        plot(tmpfunc, wait=1, fill=1, cmm = "Imag(uu2)");
+
+    }
+    complex[int] tmp2 = Alaplace*uu[]; tmp2 -= RHSvec2;
+    error = sqrt(tmp2'*tmp2);
+    cout << "Residual error using old method: " << error << endl;
+    cout << "RHSvec l2: " << RHSvec2.l2/tgv << endl;
+
+    ff << real(error) << ", ";
+
+
+    Vh<complex> diff = uu - uu2;
+    if( debug ){
+        Vh tmpfunc = real(diff);
+        plot(tmpfunc, wait=1, fill=1, cmm = "real(diff) ");
+        tmpfunc = imag(diff);
+        plot(tmpfunc, wait=1, fill=1, cmm = "Imag(dff) ");
+    }
+    error = sqrt(diff[]'*diff[]);
+    cout << "L2 norm of diff: " << sqrt(diff[]'*diff[]) << endl;
+    ff << real(error) << ", ";
+
+    ff << uu[].l2 << ", " << uu2[].l2 <<endl;
+
+    }
+
+
+    
+
+
+}

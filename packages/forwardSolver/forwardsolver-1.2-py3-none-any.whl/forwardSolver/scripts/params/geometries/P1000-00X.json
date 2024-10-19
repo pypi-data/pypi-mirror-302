@@ -1,0 +1,59 @@
+{
+ "board": "P1000_00X",
+ "solver_dir": "model_solver",
+ "solver_file": "model_solver.edp",
+ "simulation": {
+  "t_step": 0.001,
+  "t_end": 10,
+  "compute_sensitivities": true
+ },
+ "signal": {
+  "t_rise": 0.05,
+  "t_dwell": 20,
+  "t_fall": 0.05,
+  "t_period": 250,
+  "v_max": 2.5,
+  "noise_power": 0,
+  "noise_random_seed": 42,
+  "frequency": 25e3
+ },
+ "geometry": {
+  "mesh_elements_on_border": 300,
+  "electrode_width": 1.0,
+  "electrode_length": 31.0,
+  "electrode_separation": 0.02744990392533626,
+  "permittivity_background": 1.0006
+ },
+ "sensor": {
+  "num_transmitter": 1,
+  "c_receive_multiplexer_off": {
+   "np.ndarray": [
+    0.0,
+    0.0
+   ]
+  },
+  "r_pulldown_on_receive": {
+   "np.ndarray": [
+    0.47,
+    0.47
+   ]
+  },
+  "c_probe": 5.1,
+  "r_probe": 10,
+  "c_transmit_multiplexer_off": null,
+  "r_series": null,
+  "c_parasitic_forward_first_order": {
+   "np.ndarray": [
+    0.0
+   ]
+  },
+  "c_parasitic_backward_first_order": {
+   "np.ndarray": [
+    0.0
+   ]
+  },
+  "c_sensor": 10,
+  "num_wings": 0
+ },
+ "pixels": {}
+}

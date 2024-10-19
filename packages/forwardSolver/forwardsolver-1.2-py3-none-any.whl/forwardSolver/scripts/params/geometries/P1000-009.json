@@ -1,0 +1,206 @@
+{
+    "board": "P1000_009",
+    "solver_dir": "model_solver",
+    "solver_file": "model_solver.edp",
+    "simulation": {
+        "t_step": 0.01,
+        "t_end": 10,
+        "compute_sensitivities": false
+    },
+    "signal": {
+        "t_rise": 0.05,
+        "t_dwell": 20,
+        "t_fall": 0.05,
+        "t_period": 250,
+        "v_max": 2.5,
+        "noise_power": 0,
+        "noise_random_seed": 42,
+        "frequency": 25e3
+    },
+    "geometry": {
+        "number_electrodes": 15,
+        "mesh_length_scale": 0.25,
+        "domain_width": 375.0,
+        "domain_height": 150.0,
+        "electrode_width": 6.0,
+        "electrode_length": 146.0,
+        "electrode_height": 0.069,
+        "electrode_separation": 10.0,
+        "material_width": 250.0,
+        "material_height": 30.0,
+        "material_gap": 1.0,
+        "curvature_radius": 71.0,
+        "board_centre_width": 156.0,
+        "board_left_width": 101.99,
+        "board_right_width": 27.12,
+        "board_height": 1.6,
+        "permittivity_board": 4.0,
+        "conductivity_board": 0.0,
+        "permittivity_frame": 3.0,
+        "conductivity_frame": 0.0,
+        "permittivity_background": 1.0006,
+        "conductivity_background": 0.0,
+        "permittivity_soldercoat": 3.0,
+        "conductivity_soldercoat": 0.0,
+        "soldercoat_height": 0.025,
+        "board_strip_width": 8.0,
+        "frame_height": 8.4,
+        "bottom_ground_plate_height": 0.35,
+        "left_ground_plate_width": 39.0,
+        "ground_wing_offset": 1.0,
+        "total_frame_height":48.39,
+        "chord_length":126.15,
+        "chord_angle": 1e-6,
+        "board_left_extra_width": 4.66,
+        "board_right_extra_width": 4.66
+    },
+    "sensor": {
+        "num_transmitter": 8,
+        "c_receive_multiplexer_off": {
+            "np.ndarray": [
+                0.5,
+                0.5,
+                0.5,
+                0.5,
+                0.5,
+                0.5,
+                0.5,
+                0.5,
+                0.5,
+                0.5,
+                0.5,
+                0.5,
+                0.5,
+                0.5,
+                0.5
+            ]
+        },
+        "r_pulldown_on_receive": {
+            "np.ndarray": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        "c_probe": null,
+        "r_probe": null,
+        "c_transmit_multiplexer_off": {
+            "np.ndarray": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0
+            ]
+        },
+        "r_series": {
+            "np.ndarray": [
+                0.01,
+                0.01,
+                0.01,
+                0.01,
+                0.01,
+                0.01,
+                0.01,
+                0.01,
+                0.01,
+                0.01,
+                0.01,
+                0.01,
+                0.01,
+                0.01,
+                0.01
+            ]
+        },
+        "c_parasitic_forward_first_order": {
+            "np.ndarray": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        "c_parasitic_backward_first_order": {
+            "np.ndarray": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        "noise_random_seed": 7,
+        "noise_power_pulldown_on_receive": 1e-07,
+        "noise_power_transmit": 3e-05,
+        "voltage_resolution_receive": 1e-05,
+        "voltage_resolution_transmit": 0.00024,
+        "frequency_oscillation_receive": 0,
+        "phase_oscillation_receive": 0,
+        "amplitude_oscillation_receive": 0,
+        "num_wings": 4
+    },
+    "pixels": {
+        "create_standalone": false,
+        "region_width": "xMaterialW",
+        "region_height": "xMaterialH",
+        "region_label": 300,
+        "num_pixel_rows": 1,
+        "num_pixel_columns": 1,
+        "permittivity_matrix": null,
+        "pixel_type": "curved_rectangle",
+        "circular_phantom_radius": 71.0,
+        "circular_phantom_bore_radii": {
+            "np.ndarray": [
+                20.0,
+                15.0,
+                10.0,
+                7.5,
+                5.0
+            ]
+        },
+        "circular_phantom_bore_centre_distance": 41.0,
+        "circular_phantom_angle": 0.0,
+        "circular_phantom_thickness": null
+    }
+}

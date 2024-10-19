@@ -1,0 +1,559 @@
+/*
+    P1000-014 geometry model 2
+    3 coplanar electrode array board with 2 ground plates
+*/
+
+/*
+----------------------------------------------------------------------
+                    Build computational domain
+----------------------------------------------------------------------
+*/
+
+/*
+    Define rectangular border covering (xLeft, xRight) x (yBottom, yTop)
+    Will define for borders called <str>Left, <str>Right, <str>Top, <str>Bottom
+    e.g. if str = domain, domainLeft, domainRight, domainTop, domainBottom
+*/
+macro buildRectangle(str, xLeft, xRight, yBottom, yTop, labelLayer)
+    border str#Left(t=yTop, yBottom)
+    {
+        x = xLeft;
+        y = t;
+
+       label = labelLayer
+    ;
+    };
+    border str#Right(t = yBottom, yTop)
+    {
+        x = xRight;
+        y = t;
+        label = labelLayer;
+    };
+    border str#Bottom(t = xLeft, xRight)
+    {
+        x = t;
+        y = yBottom;
+        label = labelLayer;
+    };
+    border str#Top(t = xRight, xLeft)
+    {
+        x = t;
+        y = yTop;
+        label = labelLayer;
+    };
+// End of macro
+
+
+macro buildLine(str, startX, startY, dX, dY, labelLine)
+    border str#(t=0, 1)
+    {
+        x = startX + t * (dX);
+        y = startY + t * (dY);
+        label = labelLine;
+    }
+// end of macro
+
+// Build border of computational domain
+buildRectangle(
+    domain,
+    0.0, xDomainWidth, 0.0, xDomainHeight,
+    labelDomain
+)
+
+/*
+    Board model 1:
+    _________           ________    ________    ________               __________
+   |  GND2   |         |   E1   |  |   E2   |  |   E3   |             |   GND3   |
+   |_________|--solder-|________|--|________|--|________|---solder----|__________|
+   ===============================================================================
+   ===================================BOARD=======================================
+   |  GND1   |-----solder---------------------------------------------|   GND4   |
+   |_________|                                                        |__________|
+
+*/
+
+
+// Board model 1
+macro buildBrokenRectangle(str, xStart, yStart, Width, Height1, Height2, labelLayer)
+
+    buildLine(str#LeftBottom,
+        (xStart),
+        (yStart),
+        0.0,
+        (Height1),
+        labelLayer
+    );
+    buildLine(str#LeftTop,
+        (xStart),
+        (yStart) + (Height1),
+        0.0,
+        (Height2),
+        labelLayer
+    );
+    buildLine(str#Top,
+        (xStart),
+        (yStart) + (Height1) + (Height2),
+        (Width),
+        0.0,
+        labelLayer
+    );
+    buildLine(str#RightTop,
+        (xStart) + (Width),
+        (yStart) + (Height1) + (Height2),
+        0.0,
+        -(Height2),
+        labelLayer
+    );
+    buildLine(str#RightBottom,
+        (xStart) + (Width),
+        (yStart) + (Height1),
+        0.0,
+        -(Height1),
+        labelLayer
+    );
+    buildLine(str#Bottom,
+        (xStart) + (Width),
+        (yStart),
+        -(Width),
+        0.0,
+        labelLayer
+    );
+
+// end of macro
+
+real xGNDPlateHeight = 2*xElectrodeHeight + xMembraneHeight;
+real xGNDPlateOffsetY = xOffsetY + xSolderHeight - xElectrodeHeight;
+// Ground plate 1
+buildRectangle(
+    gndL,
+    xOffsetX,
+    xOffsetX + xLeftGndPlateW,
+    xGNDPlateOffsetY,
+    xGNDPlateOffsetY + xGNDPlateHeight,
+    labelGND1
+)
+
+// Ground plate 2
+buildRectangle(
+    gndR,
+    xDomainWidth - xOffsetX - xRightGndPlateW,
+    xDomainWidth - xOffsetX,
+    xOffsetY + xSolderHeight - xElectrodeHeight,
+    xOffsetY + xSolderHeight - xElectrodeHeight + xGNDPlateHeight,
+    labelGND2
+)
+
+// Horizontal lines
+//  (1)
+buildLine(
+    solderTopLeft,
+    xOffsetX + xLeftGndPlateW,
+    xOffsetY + xBoardHeight,
+    xBoardLeftW,
+    0.0,
+    labelSolder
+)
+buildLine(
+    solderE12,
+    xOffsetX + xLeftGndPlateW + xBoardLeftW + xElectrodeWidth,
+    xOffsetY + xBoardHeight,
+    xElectrodeGap,
+    0.0,
+    labelSolder
+)
+buildLine(
+    solderE23,
+    xOffsetX + xLeftGndPlateW + xBoardLeftW + 2 * xElectrodeWidth + xElectrodeGap,
+    xOffsetY + xBoardHeight,
+    xElectrodeGap,
+    0.0,
+    labelSolder
+)
+buildLine(
+    solderTopRight,
+    xDomainWidth - xOffsetX - xRightGndPlateW - xBoardRightW,
+    xOffsetY + xBoardHeight,
+    xBoardRightW,
+    0.0,
+    labelSolder
+)
+//  (2)
+buildLine(
+    membraneTopLeft,
+    xOffsetX + xLeftGndPlateW,
+    xOffsetY + xBoardHeight - xSolderHeight,
+    xBoardLeftW,
+    0.0,
+    labelSolder
+)
+buildLine(
+    membraneE12,
+    xOffsetX + xLeftGndPlateW + xBoardLeftW + xElectrodeWidth,
+    xOffsetY + xBoardHeight - xSolderHeight,
+    xElectrodeGap,
+    0.0,
+    labelSolder
+)
+buildLine(
+    membraneE23,
+    xOffsetX + xLeftGndPlateW + xBoardLeftW + 2 * xElectrodeWidth + xElectrodeGap,
+    xOffsetY + xBoardHeight - xSolderHeight,
+    xElectrodeGap,
+    0.0,
+    labelSolder
+)
+buildLine(
+    membraneTopRight,
+    xDomainWidth - xOffsetX - xRightGndPlateW - xBoardRightW,
+    xOffsetY + xBoardHeight - xSolderHeight,
+    xBoardRightW,
+    0.0,
+    labelSolder
+)
+//  (3)
+buildLine(
+    membraneBottom,
+    xOffsetX + xLeftGndPlateW,
+    xOffsetY + xSolderHeight,
+    xMembraneWidth,
+    0.0,
+    labelBoard
+)
+//  (4)
+buildLine(
+    solderBottom,
+    xOffsetX + xLeftGndPlateW,
+    xOffsetY,
+    xMembraneWidth,
+    0.0,
+    labelSolder
+)
+// Vertical lines (along the sides of the ground plates)
+// Left
+buildLine(
+    gndLRight1,
+    xOffsetX + xLeftGndPlateW,
+    xGNDPlateOffsetY + xGNDPlateHeight,
+    0,
+    -(xElectrodeHeight - xSolderHeight),
+    labelGND1
+)
+buildLine(
+    gndLRight2,
+    xOffsetX + xLeftGndPlateW,
+    xGNDPlateOffsetY + xGNDPlateHeight -(xElectrodeHeight - xSolderHeight),
+    0,
+    -xSolderHeight,
+    labelGND1
+)
+buildLine(
+    gndLRight3,
+    xOffsetX + xLeftGndPlateW,
+    xGNDPlateOffsetY + xGNDPlateHeight -xElectrodeHeight,
+    0,
+    -xMembraneHeight,
+    labelGND1
+)
+buildLine(
+    gndLRight4,
+    xOffsetX + xLeftGndPlateW,
+    xGNDPlateOffsetY + xGNDPlateHeight - xElectrodeHeight - xMembraneHeight,
+    0,
+    -xSolderHeight,
+    labelGND1
+)
+buildLine(
+    gndLRight5,
+    xOffsetX + xLeftGndPlateW,
+    xGNDPlateOffsetY + xGNDPlateHeight - xElectrodeHeight - xMembraneHeight - xSolderHeight,
+    0,
+    - (xElectrodeHeight - xSolderHeight),
+    labelGND1
+)
+// Right
+buildLine(
+    gndRightL1,
+    xDomainWidth - xOffsetX - xRightGndPlateW,
+    xGNDPlateOffsetY + xGNDPlateHeight,
+    0,
+    -(xElectrodeHeight - xSolderHeight),
+    labelGND2
+)
+buildLine(
+    gndRightL2,
+    xDomainWidth - xOffsetX - xRightGndPlateW,
+    xGNDPlateOffsetY + xGNDPlateHeight -(xElectrodeHeight - xSolderHeight),
+    0,
+    -xSolderHeight,
+    labelGND2
+)
+buildLine(
+    gndRightL3,
+    xDomainWidth - xOffsetX - xRightGndPlateW,
+    xGNDPlateOffsetY + xGNDPlateHeight -xElectrodeHeight,
+    0,
+    -xMembraneHeight,
+    labelGND2
+)
+buildLine(
+    gndRightL4,
+    xDomainWidth - xOffsetX - xRightGndPlateW,
+    xGNDPlateOffsetY + xGNDPlateHeight - xElectrodeHeight - xMembraneHeight,
+    0,
+    -xSolderHeight,
+    labelGND2
+)
+buildLine(
+    gndRightL5,
+    xDomainWidth - xOffsetX - xRightGndPlateW,
+    xGNDPlateOffsetY + xGNDPlateHeight - xElectrodeHeight - xMembraneHeight - xSolderHeight,
+    0,
+    - (xElectrodeHeight - xSolderHeight),
+    labelGND2
+)
+/*
+    Board model 2:
+    _________           ________    ________    ________               __________
+   |         |         |   E1   |  |   E2   |  |   E3   |             |          |
+   |         |--solder-|________|--|________|--|________|---solder----|          |
+   |  GNDL   |========================================================|   GNDR   |
+   |         |========================BOARD===========================|          |
+   |         |-----solder---------------------------------------------|          |
+   |_________|                                                        |__________|
+
+   All lines defined in Clockwise direction (Bottom -> Top, Left -> Right)
+*/
+// Electrode Lines
+buildBrokenRectangle(
+    Electrode1,
+    xOffsetX + xLeftGndPlateW + xBoardLeftW,
+    xOffsetY + xBoardHeight - xSolderHeight,
+    xElectrodeWidth,
+    xSolderHeight,
+    xElectrodeHeight - xSolderHeight,
+    1
+);
+buildBrokenRectangle(
+    Electrode2,
+    xOffsetX + xLeftGndPlateW + xBoardLeftW + xElectrodeWidth + xElectrodeGap,
+    xOffsetY + xBoardHeight - xSolderHeight,
+    xElectrodeWidth,
+    xSolderHeight,
+    xElectrodeHeight - xSolderHeight,
+    2
+);
+buildBrokenRectangle(
+    Electrode3,
+    xDomainWidth - xOffsetX - xRightGndPlateW - xBoardRightW - xElectrodeWidth,
+    xOffsetY + xBoardHeight - xSolderHeight,
+    xElectrodeWidth,
+    xSolderHeight,
+    xElectrodeHeight - xSolderHeight,
+    3
+);
+
+macro addRectangle(str, Nx, Ny)
+   #str#Left(#Ny#) + #str#Right(#Ny#) + #str#Top(#Nx#) +#str#Bottom(#Nx#)
+//
+
+macro brokenRectangle(str, Nx, NyTop, NyBot)
+    #str#LeftBottom(NyBot) + #str#LeftTop(NyTop) + #str#Top(Nx) + #str#RightTop(NyTop)+ #str#RightBottom(NyBot) + #str#Bottom(Nx)
+//
+
+/*
+----------------------------------------------------------------------
+                        Generate the mesh
+----------------------------------------------------------------------
+*/
+include "pixel_region.edp"
+
+real NGap = ceil(xElectrodeGap / h);
+real NElecX = ceil(xElectrodeWidth * rElectrodeW / h);
+real electrodeHeightAboveSolder = xElectrodeHeight - xSolderHeight;
+
+// cout << "Mesh sizes"<< endl;
+// cout << "----------" << endl;
+// cout << "Domain: (" << ceil(xDomainWidth * rDomain/h) <<"," << ceil(xDomainHeight * rDomain/h) <<")" << endl;
+// cout << "Ground Plates Left: (" << ceil(xLeftGndPlateW * rGroundPlate/h) <<"," << ceil(xElectrodeHeight * rGroundPlate/h) <<")" << endl;
+// cout << "Ground Plates Right: (" << ceil(xRightGndPlateW * rGroundPlate/h) <<"," << ceil(xElectrodeHeight * rGroundPlate/h) <<")" << endl;
+// cout << "Electrodes: (" << ceil(xElectrodeWidth * rElectrodeW/h) <<"," << ceil(xElectrodeHeight * rElectrodeH/h) <<")" << endl;
+
+// cout << "Electrode Gap: " << ceil(xElectrodeGap * rBoard/h) << ", " << xElectrodeGap/ceil(xElectrodeGap * rBoard/h) << endl;
+
+// cout << "Board Top Left: " << ceil(xBoardLeftW * rBoard/h) << ", " << xBoardLeftW/ceil(xBoardLeftW * rBoard/h) << endl;
+// cout << "Board Top Right: " << ceil(xBoardRightW * rBoard/h) << ", " << xBoardRightW/ceil(xBoardRightW * rBoard/h) << endl;
+// cout << "Board Top Left (alt): " << ceil(NGap * xBoardLeftW / xElectrodeGap) << ", " << xBoardLeftW/ceil(NGap * xBoardLeftW / xElectrodeGap) << endl;
+// cout << "Board Top Right (alt): " << ceil(NGap * xBoardRightW / xElectrodeGap) << ", " << xBoardRightW/ceil(NGap * xBoardRightW / xElectrodeGap) << endl;
+
+// cout << "Board Bottom: " << ceil(xMembraneWidth * rBoard/h) << ", " << xMembraneWidth/ceil(xMembraneWidth * rBoard/h) << endl;
+// cout << "Board Bottom (alt.): " << ceil(NGap * xMembraneWidth/xElectrodeGap) << ", " << xMembraneWidth/ceil(NGap * xMembraneWidth/xElectrodeGap) << endl;
+
+// cout << "Board Height: " << ceil(xMembraneHeight * rBoard/h) << ", " << xMembraneHeight/ceil(xMembraneHeight * rBoard/h) << endl;
+
+plot(
+    gndLLeft(ceil(xGNDPlateHeight * rGroundPlate / h))
+    + gndLTop(ceil(xLeftGndPlateW * rGroundPlate / h))
+    + gndLBottom(ceil(xLeftGndPlateW * rGroundPlate / h))
+    + gndLRight1(-ceil((xElectrodeHeight-xSolderHeight) * rGroundPlate/h))
+    + gndLRight2(-ceil(xSolderHeight * rGroundPlate/h))
+    + gndLRight3(-ceil(xMembraneHeight * rGroundPlate/h))
+    + gndLRight4(-ceil(xSolderHeight * rGroundPlate/h))
+    + gndLRight5(-ceil((xElectrodeHeight-xSolderHeight) * rGroundPlate/h))
+
+    + gndRRight(ceil(xGNDPlateHeight * rGroundPlate / h))
+    + gndRTop(ceil(xLeftGndPlateW * rGroundPlate / h))
+    + gndRBottom(ceil(xLeftGndPlateW * rGroundPlate / h))
+    + gndRightL1(-ceil((xElectrodeHeight-xSolderHeight) * rGroundPlate/h))
+    + gndRightL2(-ceil(xSolderHeight * rGroundPlate/h))
+    + gndRightL3(-ceil(xMembraneHeight * rGroundPlate/h))
+    + gndRightL4(-ceil(xSolderHeight * rGroundPlate/h))
+    + gndRightL5(-ceil((xElectrodeHeight-xSolderHeight) * rGroundPlate/h))
+
+    + brokenRectangle(Electrode1, NElecX, ceil(electrodeHeightAboveSolder * rElectrodeH/h), ceil(xSolderHeight * rElectrodeH/h))
+    + brokenRectangle(Electrode2, NElecX, ceil(electrodeHeightAboveSolder * rElectrodeH/h), ceil(xSolderHeight * rElectrodeH/h))
+    + brokenRectangle(Electrode3, NElecX, ceil(electrodeHeightAboveSolder * rElectrodeH/h), ceil(xSolderHeight * rElectrodeH/h))
+
+
+    + solderE12(-ceil(NElecX * xElectrodeGap / xElectrodeWidth))
+    + solderE23(-ceil(NElecX * xElectrodeGap / xElectrodeWidth))
+    + membraneE12(-ceil(NElecX * xElectrodeGap / xElectrodeWidth))
+    + membraneE23(-ceil(NElecX * xElectrodeGap / xElectrodeWidth))
+
+    + solderTopLeft(-ceil(NGap * xBoardLeftW / xElectrodeGap))
+    + solderTopRight(-ceil(NGap * xBoardRightW / xElectrodeGap))
+    + membraneTopLeft(-ceil(NGap * xBoardLeftW / xElectrodeGap))
+    + membraneTopRight(-ceil(NGap * xBoardRightW / xElectrodeGap))
+
+    + membraneBottom(-ceil(NGap * xMembraneWidth / xElectrodeGap))
+    + solderBottom(-ceil(NGap * xMembraneWidth / xElectrodeGap))
+
+   + pixelRegion, dim=2
+);
+
+macro createMesh(h)
+  mesh Th = buildmesh(
+    domainLeft(ceil(xDomainHeight * rDomain/h)) + domainRight(ceil(xDomainHeight * rDomain/h))
+    + domainTop(ceil(xDomainWidth * rDomain/h)) + domainBottom(ceil(xDomainWidth * rDomain/h))
+
+    + gndLLeft(-ceil(xGNDPlateHeight * rGroundPlate / h))
+    + gndLTop(-ceil(xLeftGndPlateW * rGroundPlate / h))
+    + gndLBottom(-ceil(xLeftGndPlateW * rGroundPlate / h))
+    + gndLRight1(ceil((xElectrodeHeight-xSolderHeight) * rGroundPlate/h))
+    + gndLRight2(ceil(xSolderHeight * rGroundPlate/h))
+    + gndLRight3(ceil(xMembraneHeight * rGroundPlate/h))
+    + gndLRight4(ceil(xSolderHeight * rGroundPlate/h))
+    + gndLRight5(ceil((xElectrodeHeight-xSolderHeight) * rGroundPlate/h))
+
+    + gndRRight(-ceil(xGNDPlateHeight * rGroundPlate / h))
+    + gndRTop(-ceil(xLeftGndPlateW * rGroundPlate / h))
+    + gndRBottom(-ceil(xLeftGndPlateW * rGroundPlate / h))
+    + gndRightL1(-ceil((xElectrodeHeight-xSolderHeight) * rGroundPlate/h))
+    + gndRightL2(-ceil(xSolderHeight * rGroundPlate/h))
+    + gndRightL3(-ceil(xMembraneHeight * rGroundPlate/h))
+    + gndRightL4(-ceil(xSolderHeight * rGroundPlate/h))
+    + gndRightL5(-ceil((xElectrodeHeight-xSolderHeight) * rGroundPlate/h))
+
+    + brokenRectangle(Electrode1, NElecX, ceil(electrodeHeightAboveSolder * rElectrodeH/h), ceil(xSolderHeight * rElectrodeH/h))
+    + brokenRectangle(Electrode2, NElecX, ceil(electrodeHeightAboveSolder * rElectrodeH/h), ceil(xSolderHeight * rElectrodeH/h))
+    + brokenRectangle(Electrode3, NElecX, ceil(electrodeHeightAboveSolder * rElectrodeH/h), ceil(xSolderHeight * rElectrodeH/h))
+
+    + solderE12(-ceil(NElecX * xElectrodeGap / xElectrodeWidth))
+    + solderE23(-ceil(NElecX * xElectrodeGap / xElectrodeWidth))
+    + membraneE12(-ceil(NElecX * xElectrodeGap / xElectrodeWidth))
+    + membraneE23(-ceil(NElecX * xElectrodeGap / xElectrodeWidth))
+
+    + solderTopLeft(-ceil(NGap * xBoardLeftW / xElectrodeGap))
+    + solderTopRight(-ceil(NGap * xBoardRightW / xElectrodeGap))
+    + membraneTopLeft(-ceil(NGap * xBoardLeftW / xElectrodeGap))
+    + membraneTopRight(-ceil(NGap * xBoardRightW / xElectrodeGap))
+
+    + membraneBottom(-ceil(NGap * xMembraneWidth / xElectrodeGap))
+    + solderBottom(-ceil(NGap * xMembraneWidth / xElectrodeGap))
+
+    + pixelRegion
+  );
+// End of macro
+
+// Generate mesh
+createMesh(h);
+
+if (BPlot) { plot(Th); };
+if (BSaveMeshPlot) {
+    string plotname = "mesh_h=" + h + "_rDomain=" + rDomain + ".eps";
+    plot(Th, ps=plotname);
+}
+/*
+----------------------------------------------------------------------
+                    Define region labels
+----------------------------------------------------------------------
+*/
+
+int background = Th(0.01*xOffsetX, 0.1*xOffsetY).region;
+
+int solderTL = Th(
+    xOffsetX + xLeftGndPlateW + 1e-3,
+    xOffsetY + xBoardHeight - 1e-3
+).region;
+int solderE12region = Th(
+    xOffsetX + xLeftGndPlateW + xBoardLeftW + xElectrodeWidth + 1e-3,
+    xOffsetY + xBoardHeight - 1e-3
+).region;
+
+int solderE13region = Th(
+    xOffsetX + xLeftGndPlateW + xBoardLeftW + 2*xElectrodeWidth + xElectrodeGap + 1e-3,
+    xOffsetY + xBoardHeight - 1e-3
+).region;
+
+int solderTR = Th(
+    xDomainWidth - xOffsetX - xRightGndPlateW - 1e-3,
+    xOffsetY + xBoardHeight - 1e-3
+).region;
+
+int solderB = Th(
+    xOffsetX + xRightGndPlateW + 1e-3,
+    xOffsetY + 1e-3
+).region;
+
+int regionBoard = Th(
+    xOffsetX + 0.5 * xDomainWidth + 1e-3,
+    xOffsetY + xSolderHeight + 1e-3
+).region;
+
+regionEpsilons = [eBackground, eSolderCoat, eSolderCoat, eSolderCoat, eSolderCoat, eSolderCoat, eBoard];
+regionSigmas =  [sBackground, sSolderCoat, sSolderCoat, sSolderCoat, sSolderCoat, sSolderCoat, sBoard];
+
+int[int] regionLabels = [
+    background,
+    solderTL,
+    solderE12region,
+    solderE13region,
+    solderTR,
+    solderB,
+    regionBoard
+];
+string[string] regionNames;
+regionNames[0] = "background";
+regionNames[1] = "solderTL";
+regionNames[2] = "solderE12";
+regionNames[3] = "solderE13";
+regionNames[4] = "solderTR";
+regionNames[5] = "solderB";
+regionNames[6] = "board";
+
+/*
+----------------------------------------------------------------------
+                    Build pixelation
+    (No pixelation for this geometry, but necessary variables)
+----------------------------------------------------------------------
+*/
+
+int[int] pixelRegions = FindPixelRegions(pixelCenterX, pixelCenterY, Th);
+
+// Initialise and build epsilon map
+real[int] pixelEpsilons(pixelRegions.n);
+// initialises pixels to the background.
+pixelEpsilons = eBackground;
+// Read and build epsilon map
+real[int] pixelSigmas(pixelRegions.n);
+// initialises pixels to background
+pixelSigmas = sBackground;

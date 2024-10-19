@@ -1,0 +1,163 @@
+verbosity = 0;
+include "args.edp";
+load "iovtk";
+load "msh3";
+
+// ADJUSTABLE PARAMETERS
+// string to specify where freefem files will be saved
+string freefemDir = getARGV("freefemDir", "./");
+// whether to compute and export capacitance matrix
+bool BComputeCap = getARGV("BComputeCap", 1);
+// specify whether to compute and export extended capacitance matrix with diagonal entries
+bool BComputeCapFull = getARGV("BComputeCapFull", 1);
+// whether to compute and export voltage and charge matrices
+bool BComputeVolt = getARGV("BComputeVolt", 0);
+// whether or not to output matrices for Python to compute
+bool BComputePython = getARGV("BComputePython", 0);
+// whether the pixel epsilons are defined by a file.
+bool BReadPixelEpsilon = getARGV("BReadPixelEpsilon", 0);
+// whether the pixel sigmas are defined by a file.
+bool BReadPixelSigma = getARGV("BReadPixelSigma", 0);
+// whether to export the mesh
+bool BExportMesh = getARGV("BExportMesh", 0);
+// Which board geometry is being simulated
+string boardGeometry = getARGV("boardGeometry", "P1000-009");
+// Physics model. Options: -1- dry run, 0 - permittivity TD, 1 - conductivity FD
+int physicsModel = getARGV("physicsModel", 0);
+// Dimensionality of the problem
+int nDims = getARGV("nDims", 2);
+
+int P1000014NumGndPlates = getARGV("numGndPlates", 4);
+
+if (physicsModel != -1 && physicsModel != 0 && physicsModel != 1)
+{
+    cerr << "Unknown physics model option " + string(physicsModel) << endl;
+    exit(1);
+}
+
+if (nDims != 2 && nDims != 3)
+{
+    cerr << "Unknown problem dimensionality " + string(nDims) << endl;
+    exit(1);
+}
+
+macro runPhysicsModel(Th)
+{
+    defineFESpaces(Th);
+
+    if (physicsModel == -1)
+    {
+        cout << "Dry run with materials definition" << endl;
+        include "material_permittivity.edp";
+    }
+    else if (physicsModel == 0)
+    {
+        cout << "Using permittivity TD model" << endl;
+        include "material_permittivity.edp";
+        include "model_permittivity_TD.edp";
+    }
+    else if (physicsModel == 1)
+    {
+        /* Update epsilon0 to be the correct scale for the FD solver */
+        epsilon0 = 8.854e-12;
+        cout << "Using conductivity FD model" << endl;
+        include "material_permittivity.edp";
+        include "material_conductivity.edp";
+        include "model_conductivity_FD.edp";
+    }
+}
+// End of macro
+
+macro runSimulation(board)
+{
+    if (board == "P1000-009")
+    {
+        cout << "Using P1000-009 board geometry" << endl;
+        include "args_P1000-009.edp";
+        include "geometry_P1000-009.edp";
+
+        runPhysicsModel(Th);
+    }
+    else if (board == "P3000-005")
+    {
+        include "args_P3000-005.edp";
+        include "geometry_P3000-005.edp";
+
+        runPhysicsModel(Th);
+    }
+    else if (board == "P1000-001")
+    {
+        include "args_P1000-001.edp";
+        include "geometry_P1000-001.edp";
+
+        runPhysicsModel(Th);
+    }
+    else if (board == "P1000-004")
+    {
+        include "args_P1000-004.edp";
+        include "geometry_P1000-001.edp";
+
+        runPhysicsModel(Th);
+    }
+    else if (board == "P1000-006")
+    {
+        include "args_P1000-006.edp";
+        include "geometry_P1000-001.edp";
+
+        runPhysicsModel(Th);
+    }
+    else if (board == "P1000-014")
+    {
+        if (P1000014NumGndPlates == 4)
+        {
+            include "args_P1000-014.edp";
+            include "geometry_P1000-014_4gnds.edp";
+            runPhysicsModel(Th);
+        }
+        else if (P1000014NumGndPlates == 2)
+        {
+            include "args_P1000-014.edp";
+            include "geometry_P1000-014_2gnds.edp";
+            runPhysicsModel(Th);
+        }
+    }
+    else if (board == "P1000-00X")
+    {
+        include "args_P1000-00X.edp";
+        include "geometry_P1000-00X.edp";
+
+        runPhysicsModel(Th);
+    }
+    else if (board == "Imported")
+    {
+        include "geometry_imported.edp";
+
+        runPhysicsModel(Th);
+    }
+    else
+    {
+        cout << "<<< ERROR >>> Unknown board type " << board << endl;
+    }
+}
+// End of macro
+
+include "utils.edp";
+
+if (nDims == 2)
+{
+    include "utils_2D.edp";
+    runSimulation(boardGeometry);
+}
+else if (nDims == 3)
+{
+    include "utils_3D.edp";
+    if (boardGeometry == "Imported")
+    {
+        include "geometry_imported_3D.edp";
+        runPhysicsModel(Th);
+    }
+    else
+    {
+        cout << "<<< ERROR >>> Incomportable geometry for 3D " << endl;
+    }
+}

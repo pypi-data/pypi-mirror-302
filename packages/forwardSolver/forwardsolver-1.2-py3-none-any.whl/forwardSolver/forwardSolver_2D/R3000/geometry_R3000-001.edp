@@ -1,0 +1,163 @@
+/*
+Generic Circular geometry.
+
+Nelectrodes capacitors fixed on a circular sensor. 
+
+Notes: 
+- Boundary of computational domain is a ground plate. 
+
+- Electrode boundaries are labelled: electrode i = label i 
+for i=1,...,Nelectrodes
+
+- Center of the circular geometry is at (0,0)
+
+- Electrodes are equally spaced and are curved. 
+
+*/
+include "getARGV.idp";
+bool debug = getARGV("debug", 0);
+
+real xRdomain = getARGV("Rdomain", 100.0);
+real xRelectrodes = getARGV("Relectrodes", 70);
+real xRsensingregion = getARGV("xRsensingregion", 68);
+
+real Nelectrodes = getARGV("Nelectrodes", 12);
+
+real RatioElectrodeGap = getARGV("RatioElectrodeGap", 1.0); // xElectrodeW/xElectrodeGap
+real xElectrodeH = getARGV("xElectrodeH", 1.0); // Electrode thickness
+int NMeshElectrodes = getARGV("NMeshElements", 10); // Number of mesh elements on electrode faces
+int NMeshCompDomain = getARGV("NMeshCompDomain", 150); // Number of mesh elements on computation domain
+
+// Compute derived parameters
+real electrodeDiam = 2*pi*xRelectrodes; // this is all Nelectrode electrodea and Nelectrode gaps. eL*N+eG*N = D. Using reG = eL 
+real xElectrodeGapW = electrodeDiam/(Nelectrodes*RatioElectrodeGap+Nelectrodes); // Width of 
+real xElectrodeW = electrodeDiam/(Nelectrodes+Nelectrodes/RatioElectrodeGap); // Width of electrodes
+
+int NMeshElectrodeSides = ceil(NMeshElectrodes*xElectrodeH/xElectrodeW);
+
+real[int] thElectrodes(Nelectrodes);
+for(int i=0; i<Nelectrodes; i++){ 
+thElectrodes[i] = 2*pi*i/Nelectrodes; // angle of electrode to center
+};
+
+if( debug ){
+    cout <<"ElectrodeW: "<< xElectrodeW << endl;
+    cout <<"ElectrodeGapW: "<< xElectrodeGapW << endl;
+    cout <<"computed RatioElectrodeGap: "<<xElectrodeW/xElectrodeGapW << endl;
+    cout <<"defined RatioElectrodeGap: "<<RatioElectrodeGap << endl;
+    cout << thElectrodes << endl;
+}
+
+
+border ComputationalDomain(t=0, 2*pi){x = xRdomain*cos(t); y = xRdomain*sin(t); label = 0;};
+border ROI(t=0, 2*pi){x = xRsensingregion*cos(t); y = xRsensingregion*sin(t); label = 100;};
+
+/*
+Electrode centers are defined using polar coordinates. 
+*/
+macro DefineElectrode(i, L, H)
+
+    border ET#i(t=-0.5*L, 0.5*L){x = (xRelectrodes+0.5*H)*sin(thElectrodes[i-1])+t*cos(-thElectrodes[i-1]); 
+                                 y = (xRelectrodes+0.5*H)*cos(thElectrodes[i-1])+t*sin(-thElectrodes[i-1]);
+                                 label = i;};
+
+    border EB#i(t=0.5*L, -0.5*L){x = (xRelectrodes-0.5*H)*sin(thElectrodes[i-1])+t*cos(-thElectrodes[i-1]); 
+                                 y = (xRelectrodes-0.5*H)*cos(thElectrodes[i-1])+t*sin(-thElectrodes[i-1]);
+                                 label = i;};
+
+    border EL#i(t=0.5*H, -0.5*H){x = (xRelectrodes)*sin(thElectrodes[i-1])+0.5*L*cos(-thElectrodes[i-1])+t*cos(pi/2-thElectrodes[i-1]);
+                                 y = (xRelectrodes)*cos(thElectrodes[i-1])+0.5*L*sin(-thElectrodes[i-1])+t*sin(pi/2-thElectrodes[i-1]);
+                                 label = i;};
+
+    border ER#i(t=-0.5*H, 0.5*H){x = (xRelectrodes)*sin(thElectrodes[i-1])-0.5*L*cos(-thElectrodes[i-1])+t*cos(pi/2-thElectrodes[i-1]);
+                                 y = (xRelectrodes)*cos(thElectrodes[i-1])-0.5*L*sin(-thElectrodes[i-1])+t*sin(pi/2-thElectrodes[i-1]);
+                                 label = i;};
+
+//
+
+mesh Th;
+
+if (Nelectrodes == 5){
+    DefineElectrode(1, xElectrodeW, xElectrodeH)
+    DefineElectrode(2, xElectrodeW, xElectrodeH)
+    DefineElectrode(3, xElectrodeW, xElectrodeH)
+    DefineElectrode(4, xElectrodeW, xElectrodeH)
+    DefineElectrode(5, xElectrodeW, xElectrodeH)
+
+    Th = buildmesh(ComputationalDomain(NMeshCompDomain)
+    +ROI(NMeshCompDomain)
+    +ET1(NMeshElectrodes)+EB1(NMeshElectrodes)+EL1(NMeshElectrodeSides)+ER1(NMeshElectrodeSides)
+    +ET2(NMeshElectrodes)+EB2(NMeshElectrodes)+EL2(NMeshElectrodeSides)+ER2(NMeshElectrodeSides)
+    +ET3(NMeshElectrodes)+EB3(NMeshElectrodes)+EL3(NMeshElectrodeSides)+ER3(NMeshElectrodeSides)
+    +ET4(NMeshElectrodes)+EB4(NMeshElectrodes)+EL4(NMeshElectrodeSides)+ER4(NMeshElectrodeSides)
+    +ET5(NMeshElectrodes)+EB5(NMeshElectrodes)+EL5(NMeshElectrodeSides)+ER5(NMeshElectrodeSides)
+    );
+}
+
+if (Nelectrodes == 10){
+    DefineElectrode(1, xElectrodeW, xElectrodeH)
+    DefineElectrode(2, xElectrodeW, xElectrodeH)
+    DefineElectrode(3, xElectrodeW, xElectrodeH)
+    DefineElectrode(4, xElectrodeW, xElectrodeH)
+    DefineElectrode(5, xElectrodeW, xElectrodeH)
+    DefineElectrode(6, xElectrodeW, xElectrodeH)
+    DefineElectrode(7, xElectrodeW, xElectrodeH)
+    DefineElectrode(8, xElectrodeW, xElectrodeH)
+    DefineElectrode(9, xElectrodeW, xElectrodeH)
+    DefineElectrode(10, xElectrodeW, xElectrodeH)
+
+    Th = buildmesh(ComputationalDomain(NMeshCompDomain)
+    +ROI(NMeshCompDomain)
+    +ET1(NMeshElectrodes)+EB1(NMeshElectrodes)+EL1(NMeshElectrodeSides)+ER1(NMeshElectrodeSides)
+    +ET2(NMeshElectrodes)+EB2(NMeshElectrodes)+EL2(NMeshElectrodeSides)+ER2(NMeshElectrodeSides)
+    +ET3(NMeshElectrodes)+EB3(NMeshElectrodes)+EL3(NMeshElectrodeSides)+ER3(NMeshElectrodeSides)
+    +ET4(NMeshElectrodes)+EB4(NMeshElectrodes)+EL4(NMeshElectrodeSides)+ER4(NMeshElectrodeSides)
+    +ET5(NMeshElectrodes)+EB5(NMeshElectrodes)+EL5(NMeshElectrodeSides)+ER5(NMeshElectrodeSides)
+    +ET6(NMeshElectrodes)+EB6(NMeshElectrodes)+EL6(NMeshElectrodeSides)+ER6(NMeshElectrodeSides)
+    +ET7(NMeshElectrodes)+EB7(NMeshElectrodes)+EL7(NMeshElectrodeSides)+ER7(NMeshElectrodeSides)
+    +ET8(NMeshElectrodes)+EB8(NMeshElectrodes)+EL8(NMeshElectrodeSides)+ER8(NMeshElectrodeSides)
+    +ET9(NMeshElectrodes)+EB9(NMeshElectrodes)+EL9(NMeshElectrodeSides)+ER9(NMeshElectrodeSides)
+    +ET10(NMeshElectrodes)+EB10(NMeshElectrodes)+EL10(NMeshElectrodeSides)+ER10(NMeshElectrodeSides)
+    );
+}
+
+if (Nelectrodes == 12){
+    DefineElectrode(1, xElectrodeW, xElectrodeH)
+    DefineElectrode(2, xElectrodeW, xElectrodeH)
+    DefineElectrode(3, xElectrodeW, xElectrodeH)
+    DefineElectrode(4, xElectrodeW, xElectrodeH)
+    DefineElectrode(5, xElectrodeW, xElectrodeH)
+    DefineElectrode(6, xElectrodeW, xElectrodeH)
+    DefineElectrode(7, xElectrodeW, xElectrodeH)
+    DefineElectrode(8, xElectrodeW, xElectrodeH)
+    DefineElectrode(9, xElectrodeW, xElectrodeH)
+    DefineElectrode(10, xElectrodeW, xElectrodeH)
+    DefineElectrode(11, xElectrodeW, xElectrodeH)
+    DefineElectrode(12, xElectrodeW, xElectrodeH)
+
+    Th = buildmesh(ComputationalDomain(NMeshCompDomain)
+    +ROI(NMeshCompDomain)
+    +ET1(NMeshElectrodes)+EB1(NMeshElectrodes)+EL1(NMeshElectrodeSides)+ER1(NMeshElectrodeSides)
+    +ET2(NMeshElectrodes)+EB2(NMeshElectrodes)+EL2(NMeshElectrodeSides)+ER2(NMeshElectrodeSides)
+    +ET3(NMeshElectrodes)+EB3(NMeshElectrodes)+EL3(NMeshElectrodeSides)+ER3(NMeshElectrodeSides)
+    +ET4(NMeshElectrodes)+EB4(NMeshElectrodes)+EL4(NMeshElectrodeSides)+ER4(NMeshElectrodeSides)
+    +ET5(NMeshElectrodes)+EB5(NMeshElectrodes)+EL5(NMeshElectrodeSides)+ER5(NMeshElectrodeSides)
+    +ET6(NMeshElectrodes)+EB6(NMeshElectrodes)+EL6(NMeshElectrodeSides)+ER6(NMeshElectrodeSides)
+    +ET7(NMeshElectrodes)+EB7(NMeshElectrodes)+EL7(NMeshElectrodeSides)+ER7(NMeshElectrodeSides)
+    +ET8(NMeshElectrodes)+EB8(NMeshElectrodes)+EL8(NMeshElectrodeSides)+ER8(NMeshElectrodeSides)
+    +ET9(NMeshElectrodes)+EB9(NMeshElectrodes)+EL9(NMeshElectrodeSides)+ER9(NMeshElectrodeSides)
+    +ET10(NMeshElectrodes)+EB10(NMeshElectrodes)+EL10(NMeshElectrodeSides)+ER10(NMeshElectrodeSides)
+    +ET11(NMeshElectrodes)+EB11(NMeshElectrodes)+EL11(NMeshElectrodeSides)+ER11(NMeshElectrodeSides)
+    +ET12(NMeshElectrodes)+EB12(NMeshElectrodes)+EL12(NMeshElectrodeSides)+ER12(NMeshElectrodeSides)
+    );
+}
+fespace Vh0(Th, P0); 
+fespace Vh1(Th, P1); 
+fespace Vh2(Th, P2);
+
+int substrateregion = Th(0.0, xRelectrodes+3*xElectrodeH).region;
+int ROIregion = Th(0.0, 0.0).region;
+
+if( debug ){
+    plot(Th, wait=1);
+}

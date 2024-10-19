@@ -1,0 +1,88 @@
+/*
+Calling this FreeFem++ file calculates Lp norms between two functions, f1 and f2, defined on different
+meshes Th1 and Th2 respectively. 
+
+Due to an issue with iovtk where errors occur when two vtk mesh formats are not imported correctly, the code 
+converts the mesh formats to .msh using a FreeFem++ command savemesh and loadmesh. This routine is called by the flag
+ConvertMesh which by default is True. Only will be false if FreeFem++ patch this error. 
+
+Usage: FreeFem++ -ne FreeFemMetrics.edp Th1 "./Th1.vtk" f1 "./f1.txt" Th2 "./Th2.vtk" f2 "./f2.txt" ConvertMesh 1 > metrics.txt
+
+*/
+
+load "iovtk";
+include "getARGV.idp";
+verbosity = 0;
+
+
+string ThFile1 = getARGV("Th1", "Th1.msh");
+string ThFile2 = getARGV("Th2", "Th2.msh");
+string f1File = getARGV("f1", "f1.txt");
+string f2File = getARGV("f2", "f2.txt");
+real ycutoff = getARGV("ycutoff", -3.0);
+string tempdirec = getARGV("tempdirec", "./");
+bool ConvertMesh = getARGV("ConvertMesh", 1);
+
+if(ConvertMesh == 1){
+    // This is to fix bug in FreeFem++ when loading two vtk files simultaneously. 
+    // ConvertMesh should only be set to False, if this FreeFem++ error is patched. 
+    {mesh Th1 = vtkload(ThFile1); savemesh(Th1, tempdirec+"/Th1.msh"); ThFile1 = tempdirec+"/Th1.msh";}
+    {mesh Th2 = vtkload(ThFile2); savemesh(Th2, tempdirec+"/Th2.msh"); ThFile2 = tempdirec+"/Th2.msh";}
+}
+
+// Read mesh from .msh files. 
+mesh Th1, Th2;
+Th1 = readmesh(ThFile1);
+Th2 = readmesh(ThFile2);
+
+// Define function spaces and initialise P0 functions
+fespace Vh01(Th1, P0); Vh01 f1;
+fespace Vh02(Th2, P0); Vh02 f2;
+
+// Load functions from files into placeholder
+{ifstream ff(f1File); ff>>f1[];}
+{ifstream ff(f2File); ff>>f2[];}
+
+// Interpolate Th2 onto Th1. 
+Vh01 f2interp = f2;
+
+
+
+// Macros of metrics to compute
+macro L1norm(f, Th) int2d(Th)(abs(f)); // End of macro
+macro L2norm(f, Th) sqrt(int2d(Th)(abs(f*f))); // End of macro
+macro Linftynorm(f, Th) max(f[].max, -f[].max); // End of macro
+
+// Wrapper function to compute error metrics
+// Note: the validation ensures that the interpolation function f2 is always positive.
+// This should always be the case for a permittivity distribution
+macro errorCompute(f1, f2, Th, Vh, norm, normstr){
+    Vh diff = f1*(f2>0) + f1*(f2<0)-f2;
+    real error = norm(diff, Th);
+    real scale = norm(f1, Th);
+    cout << "metric_" << normstr << "_error: " << error << endl;
+    cout << "metric_" << normstr << "_percentage_error: " << 100*error/scale << endl;
+}
+// End of macro
+
+errorCompute(f1, f2interp, Th1, Vh01, L1norm, "L1");
+errorCompute(f1, f2interp, Th1, Vh01, L2norm, "L2");
+//errorCompute(f1, f2interp, Th1, Vh01, Linftynorm, "Linfty");
+
+// Count number of mesh elements ignored. 
+// Note it is faster to find positive and negative than search for zeros
+Vh01 tmp = (f2interp<=0)*(f2interp>=0);
+cout << "metric_num_ignored_mesh_elements: " << tmp[].sum << endl;
+
+// Check if any of the failed elements are above ycutoff. 
+for(int i=0; i<tmp[].n; i++){
+    if(tmp[][i] > 0.5){
+        real py1 = Th1[i][0].y;
+        real py2 = Th1[i][1].y;
+        real py3 = Th1[i][2].y;
+        if(py1>ycutoff | py2>ycutoff | py3>ycutoff){
+            cout << "status_msg: Failed element ("+i+") above the board." << endl;
+        }
+    }
+}
+
