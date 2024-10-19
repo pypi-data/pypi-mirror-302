@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: gptme-python
+Version: 0.19.1
+Summary: gptme-python is now gptme
+Classifier: Development Status :: 7 - Inactive
+Description-Content-Type: text/markdown
+Requires-Dist: gptme
+
+# gptme-python is now gptme
+
+This package has been renamed. Use `pip install gptme` instead.
+
+New package: https://pypi.org/project/gptme/
