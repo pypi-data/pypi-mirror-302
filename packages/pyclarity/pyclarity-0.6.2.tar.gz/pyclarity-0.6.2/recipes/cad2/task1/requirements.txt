@@ -1,0 +1,4 @@
+alt-eval
+huggingface-hub
+openai-whisper
+safetensors
