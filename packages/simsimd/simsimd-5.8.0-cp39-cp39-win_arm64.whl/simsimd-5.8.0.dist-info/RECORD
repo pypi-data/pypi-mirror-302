@@ -1,0 +1,8 @@
+simsimd.cp39-win_arm64.pyd,sha256=e3PpiAAJj66Y-LW-JmzyVX5I1rtiaw8lW6laLNJyC6I,75264
+simsimd/__init__.pyi,sha256=cS2A_s8vzT_ynd5FH5nC3NPJs8OaaCu0fDZUBvbp5Cg,8559
+simsimd/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+simsimd-5.8.0.dist-info/LICENSE,sha256=HrhfyXIkWY2tGFK11kg7vPCqhgh5DcxleloqdhrpyMY,11558
+simsimd-5.8.0.dist-info/METADATA,sha256=3TXVKdpDzI-vXrZ4qpMVdjNiiGctqKq5LPQ4dKtaxSM,53847
+simsimd-5.8.0.dist-info/WHEEL,sha256=PHGk8GgbM4N7yYPI-mRcP0CWSacfTiBW6JeSSZT-W0w,99
+simsimd-5.8.0.dist-info/top_level.txt,sha256=kA2CGlVhy5wNyCLTKLh20j75IM5fnuQ_-4bK53XLl8o,8
+simsimd-5.8.0.dist-info/RECORD,,
