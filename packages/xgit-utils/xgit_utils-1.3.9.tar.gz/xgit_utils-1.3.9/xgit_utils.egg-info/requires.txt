@@ -1,0 +1,13 @@
+PyGithub
+click
+tqdm
+
+[dev]
+build
+twine
+
+[py2exe]
+py2exe>=0.12
+
+[pyinstaller]
+pyinstaller>=6.10.0
