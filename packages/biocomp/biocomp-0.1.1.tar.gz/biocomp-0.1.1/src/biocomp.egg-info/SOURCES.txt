@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+src/biocomp.egg-info/PKG-INFO
+src/biocomp.egg-info/SOURCES.txt
+src/biocomp.egg-info/dependency_links.txt
+src/biocomp.egg-info/entry_points.txt
+src/biocomp.egg-info/top_level.txt
