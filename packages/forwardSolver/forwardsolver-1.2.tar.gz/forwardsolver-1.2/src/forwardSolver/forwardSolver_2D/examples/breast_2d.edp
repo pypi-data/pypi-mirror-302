@@ -1,0 +1,244 @@
+/*
+Code to explore effect of varying electrode number and curvature (distance units in mm)
+*/
+verbosity = 0;
+include "getARGV.idp";
+
+// ADJUSTABLE PARAMETERS
+real rElecWtoSep = getARGV("rElecWtoSep", 0.8); // Electrode width to electrode gap ratio (-)
+int NElectrodes = getARGV("NElectrodes", 2); // Number of electrodes - minimum of two (-)
+real aElectrodeEnd = getARGV("aElectrodeEnd", 0.01);  // Angle of electrodes relative to horizontal at either end (degs)
+real xElecSeparationMax = getARGV("xElecSeparationMax", 140.0);  // Selecting our breast to be 70mm radius
+bool BPlot = getARGV("BPlot", 1); // Boolean to specify plots are shown (-)
+string freefemDir = getARGV("freefemDir", "freefem/examples/solver_artefacts/");
+
+// CONSTANT PARAMETERS
+real xDomainHeight = getARGV("xDomainHeight", 200.0); // Domain height (mm)
+real xDomainWidth = getARGV("xDomainWidth", 400.0); // Domain width (mm)
+real xElecH = getARGV("xElecH", 0.017*2.0); // Electrode xDomainHeight (mm) - 17um copper & 17um ENIC
+real xPhantomGap = getARGV("xPhantomGap", 10.0); // Gap between phantom and domain edge (mm)
+real xPhantomGapElectrodes = getARGV("xPhantomGapElectrodes", 1.0); // Gap between phantom and electrodes (mm)
+real xPhantomPadding = getARGV("xPhantomPadding", 10.0); // Padding on the phantom beyond the end of the electrodes (mm)
+real xElecOffset = getARGV("xElecOffset", 10.0); // Distance between electrodes and domain bottom (mm)
+real rTumour = getARGV("rTumour", 8.5); // Tumour cylinder radius (mm)
+
+real xTumourOffset = getARGV("xTumourOffset", 0.0); // Tumour x-offset from board centre (mm)
+real yTumourOffset = getARGV("yTumourOffset", 36.5); // Tumour y-offset from board (mm)
+
+real xFibreOffset = getARGV("xFibreOffset", 0.0); // Fibre x-offset from board centre (mm)
+real yFibreOffset = getARGV("yFibreOffset", 59.0); // Fibre y-offset from board (mm)
+real ryFibre = getARGV("ryFibre", 43.0);
+real rxFibre = getARGV("rxFibre", 53.0);
+
+real eBackground = getARGV("eBackground", 80.0); // Permittivity of background material at STP (-)
+real eFat = getARGV("eFat", 1000.0); // Permittivity of mimicked fat (-)
+real eFibro = getARGV("eFibro", 5000.0); // Permittivity of mimicked fibroglandular tissue (-)
+real eTumour = getARGV("eTumour", 20000.0); // Permittivity of mimicked tumour (-)
+
+real MM = getARGV("MM", 1.0); // Mesh scaling (-)
+real rMeshPhantom = getARGV("rMeshPhantom", 1.0); // Mesh number ratio for phantom (-)
+real rMeshDomain = getARGV("rMeshDomain", 1.0); // Mesh number ratio for domain (-)
+real rMeshTumour = getARGV("rMeshTumour", 1.0); // Mesh number ratio for tumour (-)
+real rMeshDomainBottom = getARGV("rMeshDomainBottom", 5.0); // Mesh number ratio for domain bottom (-)
+real rMeshPhantomBottom = getARGV("rMeshPhantomBottom", 5.0); // Mesh number ratio for phantom bottom (-)
+real rMeshElec = getARGV("rMeshElec", 5.0); // Mesh number ratio for electrode top and bottom (-)
+real rMeshElecSides = getARGV("rMeshElecSides", 10.0); // Mesh number ratio for electrode sides (-)
+
+// STATIC PARAMETERS
+real HalfWidth = xDomainWidth/2;
+real EPSILON0 = 8.8541878176;  // fF/mm (x 10^15 / 10^3 = 10^12)
+real xElecSeparation = xElecSeparationMax / (NElectrodes - 1);
+real xElecW = rElecWtoSep * xElecSeparation;
+real xElecL = 10.0 * xElecW;
+real rCurvature = xElecSeparationMax/(aElectrodeEnd*pi/180*2);
+real yCurvatureCentre = xElecOffset + rCurvature;
+
+int labelDomain = 100;
+int labelGround = 200;
+int labelFat = 300;
+int labelFibro = 325;
+int labelTumour = 350;
+
+// Build electrode (A: Left, B: Right, C: Bottom, D: Top)
+macro BuildElecDomain(strElec, strA, strB, strC, strD, yOffset, xOffset, i)
+border strA(t = -xElecH/2, xElecH/2){x = (rCurvature-t)*sin((xOffset-0.5*xElecW)/rCurvature); y = yCurvatureCentre - (rCurvature-t)*cos((xOffset-0.5*xElecW)/rCurvature); label = i;}
+border strB(t = xElecH/2, -xElecH/2){x = (rCurvature-t)*sin((xOffset+0.5*xElecW)/rCurvature); y = yCurvatureCentre - (rCurvature-t)*cos((xOffset+0.5*xElecW)/rCurvature); label = i;}
+border strC(t = 0.5*xElecW, -0.5*xElecW){x = (rCurvature-0.5*xElecH)*sin((xOffset+t)/rCurvature); y = yCurvatureCentre - (rCurvature-0.5*xElecH)*cos((xOffset+t)/rCurvature); label = i;}
+border strD(t = -0.5*xElecW, 0.5*xElecW){x = (rCurvature+0.5*xElecH)*sin((xOffset+t)/rCurvature); y = yCurvatureCentre - (rCurvature+0.5*xElecH)*cos((xOffset+t)/rCurvature); label = i;}
+func strElec = strA(ceil(MM*rMeshElecSides*xElecH)) + strB(ceil(MM*rMeshElecSides*xElecH))
+    + strD(ceil(MM*rMeshElec*xElecW)) + strC(ceil(MM*rMeshElec*xElecW));
+// End of macro
+
+// BORDER GENERATION
+BuildElecDomain(Elec1, Elec1Left, Elec1Right, Elec1Bottom, Elec1Top, xElecOffset, -xElecSeparationMax/2+0*xElecSeparation, 1);
+BuildElecDomain(Elec2, Elec2Left, Elec2Right, Elec2Bottom, Elec2Top, xElecOffset, -xElecSeparationMax/2+1*xElecSeparation, 2);
+BuildElecDomain(Elec3, Elec3Left, Elec3Right, Elec3Bottom, Elec3Top, xElecOffset, -xElecSeparationMax/2+2*xElecSeparation, 3);
+BuildElecDomain(Elec4, Elec4Left, Elec4Right, Elec4Bottom, Elec4Top, xElecOffset, -xElecSeparationMax/2+3*xElecSeparation, 4);
+BuildElecDomain(Elec5, Elec5Left, Elec5Right, Elec5Bottom, Elec5Top, xElecOffset, -xElecSeparationMax/2+4*xElecSeparation, 5);
+BuildElecDomain(Elec6, Elec6Left, Elec6Right, Elec6Bottom, Elec6Top, xElecOffset, -xElecSeparationMax/2+5*xElecSeparation, 6);
+BuildElecDomain(Elec7, Elec7Left, Elec7Right, Elec7Bottom, Elec7Top, xElecOffset, -xElecSeparationMax/2+6*xElecSeparation, 7);
+BuildElecDomain(Elec8, Elec8Left, Elec8Right, Elec8Bottom, Elec8Top, xElecOffset, -xElecSeparationMax/2+7*xElecSeparation, 8);
+BuildElecDomain(Elec9, Elec9Left, Elec9Right, Elec9Bottom, Elec9Top, xElecOffset, -xElecSeparationMax/2+8*xElecSeparation, 9);
+BuildElecDomain(Elec10, Elec10Left, Elec10Right, Elec10Bottom, Elec10Top, xElecOffset, -xElecSeparationMax/2+9*xElecSeparation, 10);
+BuildElecDomain(Elec11, Elec11Left, Elec11Right, Elec11Bottom, Elec11Top, xElecOffset, -xElecSeparationMax/2+10*xElecSeparation, 11);
+BuildElecDomain(Elec12, Elec12Left, Elec12Right, Elec12Bottom, Elec12Top, xElecOffset, -xElecSeparationMax/2+11*xElecSeparation, 12);
+BuildElecDomain(Elec13, Elec13Left, Elec13Right, Elec13Bottom, Elec13Top, xElecOffset, -xElecSeparationMax/2+12*xElecSeparation, 13);
+BuildElecDomain(Elec14, Elec14Left, Elec14Right, Elec14Bottom, Elec14Top, xElecOffset, -xElecSeparationMax/2+13*xElecSeparation, 14);
+BuildElecDomain(Elec15, Elec15Left, Elec15Right, Elec15Bottom, Elec15Top, xElecOffset, -xElecSeparationMax/2+14*xElecSeparation, 15);
+
+border Top(t=HalfWidth, -HalfWidth){x = t; y=xDomainHeight; label = labelDomain;};
+border Bottom(t = -(xElecSeparationMax/2+xElecW/2+xPhantomGapElectrodes), xElecSeparationMax/2+xElecW/2+xPhantomGapElectrodes){
+    x = (rCurvature+xElecOffset)*sin(t/rCurvature);
+    y = yCurvatureCentre - yCurvatureCentre*cos(t/rCurvature);
+    label = labelGround;
+}
+real xPositionBottomCurveEnd = (rCurvature+xElecOffset)*sin((xElecSeparationMax/2+xElecW/2+xPhantomGapElectrodes)/rCurvature);
+real yPositionBottomCurveEnd = yCurvatureCentre - yCurvatureCentre*cos((xElecSeparationMax/2+xElecW/2+xPhantomGapElectrodes)/rCurvature);
+border Left(t=xDomainHeight, yPositionBottomCurveEnd){x = -HalfWidth; y =t; label = labelDomain;};
+border Right(t=yPositionBottomCurveEnd, xDomainHeight){x = HalfWidth; y=t; label = labelDomain;};
+border BottomLeft(t=-HalfWidth, -xPositionBottomCurveEnd){x=t; y=yPositionBottomCurveEnd; label=labelGround;};
+border BottomRight(t=xPositionBottomCurveEnd, HalfWidth){x=t; y=yPositionBottomCurveEnd; label=labelGround;};
+
+func Domain = Left(ceil(MM*rMeshDomain*(xDomainHeight-yPositionBottomCurveEnd)))
+    +Right(ceil(MM*rMeshDomain*(xDomainHeight-yPositionBottomCurveEnd)))
+    +Top(ceil(MM*rMeshDomain*xDomainWidth))
+    +BottomLeft(ceil(MM*rMeshDomain*(HalfWidth-xPositionBottomCurveEnd)))
+    +BottomRight(ceil(MM*rMeshDomain*(HalfWidth-xPositionBottomCurveEnd)))
+    +Bottom(ceil(MM*rMeshDomainBottom*(xElecSeparationMax+xElecW+2*xPhantomGapElectrodes)));
+
+border PhantomBottom(t = xElecSeparationMax/2+xElecW/2+xPhantomGapElectrodes+xPhantomPadding/2, -(xElecSeparationMax/2+xElecW/2+xPhantomGapElectrodes+xPhantomPadding/2)){
+    x = (rCurvature-0.5*xElecH-xPhantomGapElectrodes)*sin(t/rCurvature);
+    y = yCurvatureCentre - (rCurvature-0.5*xElecH-xPhantomGapElectrodes)*cos(t/rCurvature);
+    label = labelFat;
+};
+real xPositionCurveEnd = (rCurvature-0.5*xElecH-xPhantomGapElectrodes)*sin((xElecSeparationMax/2+xElecW/2+xPhantomGapElectrodes+xPhantomPadding/2)/rCurvature);
+real yPositionCurveEnd = yCurvatureCentre - (rCurvature-0.5*xElecH-xPhantomGapElectrodes)*cos((xElecSeparationMax/2+xElecW/2+xPhantomGapElectrodes+xPhantomPadding/2)/rCurvature);
+border PhantomBottomLeft(t = -(HalfWidth-xPhantomGap), -xPositionCurveEnd){x = t; y = yPositionCurveEnd; label = labelFat;};
+border PhantomBottomRight(t = (HalfWidth-xPhantomGap), xPositionCurveEnd){x = t; y = yPositionCurveEnd; label = labelFat;};
+border PhantomTop(t = -(HalfWidth-xPhantomGap), HalfWidth-xPhantomGap){x = t; y = xDomainHeight-xPhantomGap; label = labelFat;};
+border PhantomLeft(t = xDomainHeight-xPhantomGap, yPositionCurveEnd){x = -(HalfWidth-xPhantomGap); y = t; label = labelFat;};
+border PhantomRight(t = xDomainHeight-xPhantomGap, yPositionCurveEnd){x = HalfWidth-xPhantomGap; y = t; label = labelFat;};
+border TumourCirc(t=0, -2*pi){x = rTumour*sin(t)+xTumourOffset; y=rTumour*cos(t)+xElecOffset+yTumourOffset; label = labelTumour;};
+border FibroEllipse(t=0, -2*pi){x = rxFibre*sin(t)+xFibreOffset; y=ryFibre*cos(t)+xElecOffset+yFibreOffset; label = labelFibro;};
+
+func Phantom = PhantomBottom(ceil(MM*rMeshPhantomBottom*(xElecSeparationMax+xElecW+2*xPhantomGapElectrodes+xPhantomPadding)))
+    +PhantomBottomLeft(ceil(MM*rMeshPhantom*((HalfWidth-xPhantomGap)-xPositionCurveEnd)))
+    +PhantomBottomRight(ceil(MM*rMeshPhantom*((HalfWidth-xPhantomGap)-xPositionCurveEnd)))
+    +PhantomTop(ceil(MM*rMeshPhantom*(xDomainWidth - 2*xPhantomGap)))
+    +PhantomLeft(ceil(MM*rMeshPhantom*((xDomainHeight-xPhantomGap)- yPositionCurveEnd)))
+    +PhantomRight(ceil(MM*rMeshPhantom*((xDomainHeight-xPhantomGap)- yPositionCurveEnd)))
+    +TumourCirc(ceil(MM*rMeshTumour*2*pi*rTumour))
+    +FibroEllipse(ceil(MM*rMeshTumour*pi*(rxFibre+ryFibre)));
+
+mesh Th;
+if (NElectrodes == 2) {
+    Th = buildmesh(Domain+Phantom
+        +Elec1+Elec2);
+} else if (NElectrodes == 3) {
+    Th = buildmesh(Domain+Phantom
+        +Elec1+Elec2+Elec3);
+} else if (NElectrodes == 4) {
+    Th = buildmesh(Domain+Phantom
+        +Elec1+Elec2+Elec3+Elec4);
+} else if (NElectrodes == 5) {
+    Th = buildmesh(Domain+Phantom
+        +Elec1+Elec2+Elec3+Elec4+Elec5);
+} else if (NElectrodes == 6) {
+    Th = buildmesh(Domain+Phantom
+        +Elec1+Elec2+Elec3+Elec4+Elec5+Elec6);
+} else if (NElectrodes == 7) {
+    Th = buildmesh(Domain+Phantom
+        +Elec1+Elec2+Elec3+Elec4+Elec5+Elec6+Elec7);
+} else if (NElectrodes == 8) {
+    Th = buildmesh(Domain+Phantom
+        +Elec1+Elec2+Elec3+Elec4+Elec5+Elec6+Elec7+Elec8);
+} else if (NElectrodes == 9) {
+    Th = buildmesh(Domain+Phantom
+        +Elec1+Elec2+Elec3+Elec4+Elec5+Elec6+Elec7+Elec8+Elec9);
+} else if (NElectrodes == 10) {
+    Th = buildmesh(Domain+Phantom
+        +Elec1+Elec2+Elec3+Elec4+Elec5+Elec6+Elec7+Elec8+Elec9+Elec10);
+} else if (NElectrodes == 11) {
+    Th = buildmesh(Domain+Phantom
+        +Elec1+Elec2+Elec3+Elec4+Elec5+Elec6+Elec7+Elec8+Elec9+Elec10+Elec11);
+} else if (NElectrodes == 12) {
+    Th = buildmesh(Domain+Phantom
+        +Elec1+Elec2+Elec3+Elec4+Elec5+Elec6+Elec7+Elec8+Elec9+Elec10+Elec11+Elec12);
+} else if (NElectrodes == 13) {
+    Th = buildmesh(Domain+Phantom
+        +Elec1+Elec2+Elec3+Elec4+Elec5+Elec6+Elec7+Elec8+Elec9+Elec10+Elec11+Elec12+Elec13);
+} else if (NElectrodes == 14) {
+    Th = buildmesh(Domain+Phantom
+        +Elec1+Elec2+Elec3+Elec4+Elec5+Elec6+Elec7+Elec8+Elec9+Elec10+Elec11+Elec12+Elec13+Elec14);
+} else if (NElectrodes == 15) {
+    Th = buildmesh(Domain+Phantom
+        +Elec1+Elec2+Elec3+Elec4+Elec5+Elec6+Elec7+Elec8+Elec9+Elec10+Elec11+Elec12+Elec13+Elec14+Elec15);
+} else {
+    cerr << "Electrode number must be between 2 and 15. You entered: " << NElectrodes << endl;
+    exit(1);
+}
+if (BPlot) {plot(Th);}
+
+// PERMITTIVITY SPECIFICATION
+fespace Vh0(Th, P0);
+fespace Vh1(Th, P1);
+Vh0 reg=region;
+int back = reg(0.0, 1e-3);
+int phantom = reg(0.0, xDomainHeight-xPhantomGap-1e-3);
+int fibre = reg(xFibreOffset, xElecOffset+yFibreOffset-ryFibre+1e-3);
+int tumour = reg(xTumourOffset, xElecOffset+yTumourOffset);
+
+Vh0 tmpback = (region == back);
+if (BPlot) {plot(tmpback, fill=true, value=true);}
+Vh0 tmpphantom = (region == phantom);
+if (BPlot) {plot(tmpphantom, fill=true, value=true);}
+Vh0 tmpfibre = (region == fibre);
+if (BPlot) {plot(tmpfibre, fill=true, value=true);}
+Vh0 tmptumour = (region == tumour);
+if (BPlot) {plot(tmptumour, fill=true, value=true);}
+
+Vh0 epsilon = eBackground*(region==back) + eFat*(region==phantom) + eTumour*(region==tumour) + eFibro*(region==fibre);
+if (BPlot) {plot(epsilon, fill=true, value=true);}
+
+// CAPACITANCE ESTIMATION
+Vh1 uu, uuIndicator, vv;  // Coefficients of expansion of the solution in the finite element space - these can be thought of as the degrees of freedom of the space (NB: intermediate variables tend to have two characters)
+
+macro grad(u)
+    [dx(u), dy(u)]
+    // End of macro
+
+macro indicatorFunction(bdrylabel)
+    solve lp(uuIndicator, vv) = int2d(Th)(grad(uuIndicator)'*grad(vv))
+        + on(labelGround,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15, uuIndicator = 0.0)
+        + on(bdrylabel, uuIndicator = 1.0);
+    // End of macro
+
+Vh1[int] psi(NElectrodes);
+for(int i=0; i<NElectrodes; i++){
+    indicatorFunction(i+1);
+    psi[i][] = uuIndicator[];
+    if (BPlot) {plot(psi[i]);}
+};
+
+// 2D Capacitance measurement
+real[int,int] Cmat(NElectrodes,NElectrodes); Cmat = 0.0; // Capacitance measurement placeholder
+real C = 0.0;
+for(int i=0; i<NElectrodes; i++){
+    solve Laplace(uu, vv) = int2d(Th)(epsilon*grad(uu)'*grad(vv)) + on(labelGround,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15, uu = 0) + on(i+1, uu = 1);
+    for(int j=0; j<NElectrodes; j++){
+        if(i<=j){
+            C = -int2d(Th)(EPSILON0*epsilon*grad(uu)'*grad(psi[j]))*xElecL;
+            Cmat(j,i) = C;
+            Cmat(i,j) = C;
+        }
+    }
+}
+string tmpstring = freefemDir + "C.txt";
+ofstream fileC(tmpstring);
+fileC << Cmat;
+
+// SUMMARY OF RESULTS
+cout << "2D Calculated Capacitance (Left to Right): " << Cmat(0,NElectrodes-1) << "fF (xElecL=10*xElecW)" << endl;
+
+real lateralResolution = xElecSeparation;
+cout << "Estimated Lateral Resolution             : " << lateralResolution << "mm (Requirement: <=10mm)" << endl;

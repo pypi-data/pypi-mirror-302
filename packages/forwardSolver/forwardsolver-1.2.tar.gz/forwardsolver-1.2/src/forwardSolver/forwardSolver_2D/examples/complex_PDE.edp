@@ -1,0 +1,101 @@
+/*
+
+Toy problem of a parallel plate capacitor with either a circular or square inclusion in the centre. 
+Solves the PDE
+
+-div(gamma*nabla(u)) = 0
+
+with Dirichlet boundary conditions on {x = 0}, {x = 1} and zero Neumann on {y = 0} and {y = 1}.
+A unit voltage is imposed. 
+
+Gamma is the complex permittivity: gamma = eps_0 eps_r + i*sigma/(2*pi*f) with
+ - eps_r being the relative permittivity
+ - sigma being the conductivity (S/m)
+ - f being the operating frequency (Hz) of the system
+
+These parameters can be set by command line inputs. 
+
+Returns the real and complex capacitance values. These are outputed to file. 
+
+*/
+
+verbosity = 0;
+include "getARGV.idp";
+
+bool CircularInclusion = getARGV("CircularInclusion", 1);
+bool SquareInclusion = getARGV("SquareInclusion", 0);
+real r = getARGV("RadiusInclusion", 0.25);
+string OutputDirec = getARGV("OutputDirec", "./");
+
+border L(t = 1, 0){x = 0; y = t; label = 1;}
+border T(t = 1, 0){x = t; y = 1; label = 2;}
+border R(t = 0, 1){x = 1; y = t; label = 3;}
+border B(t = 0, 1){x = t; y = 0; label = 4;}
+
+mesh Th;
+
+if( CircularInclusion ){
+    border circle(t = 0, 2*pi){x = r*cos(t) + 0.5; y = r*sin(t) + 0.5; label = 0;};
+    Th = buildmesh(L(40) + T(40) + R(40) + B(40) + circle(60));
+}
+if( SquareInclusion ){
+    real l = sqrt(pi*r*r);
+    border Lin(t=l, 0){x = 0 + 0.5 - l/2; y = t + 0.5 - l/2; label = 0;}
+    border Tin(t=l, 0){x = t + 0.5 - l/2; y = l + 0.5 - l/2; label = 0;}
+    border Rin(t=0, l){x = l + 0.5 - l/2; y = t + 0.5 - l/2; label = 0;}
+    border Bin(t=0, l){x = t + 0.5 - l/2; y = 0 + 0.5 - l/2; label = 0;}
+    Th = buildmesh(L(40) + T(40) + R(40) + B(40) 
+                    + Lin(40) + Tin(40) + Rin(40) + Bin(40));
+}
+
+
+fespace Vh1(Th, P1); Vh1 uu, vv;
+Vh1<complex> u, v; 
+Vh1 ur, ui; 
+
+
+fespace Vh0(Th, P0);
+Vh0<complex> gamma, gammaBG, gammaInc; 
+
+real EPS0 = 8.85418782e-12; // Permittivity of free space
+real epsBackground = getARGV("BackgroundPermittivity", 3.0);
+real epsInclusion = getARGV("InclusionPermittivity", 80.0);
+real sigma = getARGV("InclusionConductivity", 1.45); // S/m
+real freq = getARGV("Frequency", 1e6); // Hz
+int inclusionID = Th(0.5, 0.5).region;
+int backgroundID = Th(0.01, 0.01).region;
+
+// Build gamma distribution. 
+gammaBG = EPS0 * epsBackground * (region == backgroundID);
+gammaInc = (EPS0 * epsInclusion - 1i * (sigma/(2*pi*freq))) * (region == inclusionID);
+gamma = gammaBG + gammaInc;
+
+macro grad(u) [dx(u), dy(u)]//
+
+// Solve static PDE
+solve laplace(u, v) = int2d(Th)(gamma*(grad(u)'*grad(v))) 
+                        + on(1, u = 1)
+                        + on(3, u = 0);
+
+Vh0<complex> EfieldMag = grad(u)'*grad(u);
+Vh0 Emag = real(EfieldMag);
+Vh0 Emag1 = imag(EfieldMag);
+
+ur = real(u);
+ui = imag(u); 
+
+solve indicator(uu, vv) = int2d(Th)(grad(uu)'*grad(vv)) 
+                            + on(1,2,3,4, uu = 0) 
+                            + on(1, uu = 1.0);
+
+complex C = int2d(Th)(gamma*(dx(u)*dx(uu) + dy(u)*dy(uu)));
+
+string OutputFile = getARGV("OutputFile", "output.txt");
+ofstream ff(OutputDirec + OutputFile);
+ff.scientific;
+ff.precision(10);
+ff << real(C) << ", " << imag(C) << endl;
+
+
+
+

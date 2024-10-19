@@ -1,0 +1,657 @@
+/*
+
+    P1000-009 geometry
+
+*/
+
+func real ArcX(real arcDist, real radialHeight)
+{
+    /*
+        returns the x coordinate of a point along an arc,
+        given the arc length and the radial height from the top of the board
+    */
+    return xCurvatureCentre + (rCurvature-radialHeight)*sin(arcDist/rCurvature);
+}
+func real ArcY(real arcDist, real radialHeight)
+{
+    /*
+        returns the y coordinate of a point along an arc,
+        given the arc length and the radial height from the top of the board
+    */
+    return yCurvatureCentre - (rCurvature-radialHeight)*cos(arcDist/rCurvature);
+}
+func real VecTangentX(real arcDist, real radialHeight)
+{
+    /*
+        returns the x coordinate of the unit tangent vector at a point on the arc
+    */
+    real xArcX = ArcX(arcDist, radialHeight);
+    real xArcY = ArcY(arcDist, radialHeight);
+    real radius = sqrt((xArcX-xCurvatureCentre)^2+(xArcY-yCurvatureCentre)^2);
+    return -(xArcY-yCurvatureCentre)/radius;
+}
+func real VecTangentY(real arcDist, real radialHeight)
+{
+    /*
+        returns the y coordinate of the unit tangent vector at a point on the arc
+    */
+    real xArcX = ArcX(arcDist, radialHeight);
+    real xArcY = ArcY(arcDist, radialHeight);
+    real radius = sqrt((xArcX-xCurvatureCentre)^2+(xArcY-yCurvatureCentre)^2);
+    return (xArcX-xCurvatureCentre)/radius;
+}
+func real PointTangentX(real arcDist, real radialHeight, real tangentialLength)
+{
+    /*
+        returns the x coordinate of the point at a given length on the tangent line
+    */
+    real xArcX = ArcX(arcDist, radialHeight);
+    real xTangentX = VecTangentX(arcDist, radialHeight);
+    return xArcX + tangentialLength*xTangentX;
+}
+func real PointTangentY(real arcDist, real radialHeight, real tangentialLength)
+{
+    /*
+        returns the y coordinate of the point at a given length on the tangent line
+    */
+    real xArcY = ArcY(arcDist, radialHeight);
+    real xTangentY = VecTangentY(arcDist, radialHeight);
+    return xArcY + tangentialLength*xTangentY;
+}
+
+// x coordinate corresponding to the edge of the curved part of the board
+real xBoardCentreEdgeX = ArcX(
+    (xElecCentreX[NE-1] + 0.5 * xBoardStripW + 2 * (xElecSep - xBoardStripW)), 0.0
+);
+// y coordinate of the edge of the curved part of the board
+real xBoardCentreEdgeY =
+    yCurvatureCentre - rCurvature*cos(asin(xBoardCentreEdgeX/rCurvature))
+;
+
+func real ArcLengthFixY(real radialHeight)
+{
+    /*
+        compute length of the arc on the central part of the board given the y coordinate
+    */
+     real yFix = xBoardCentreEdgeY+radialHeight;
+     real theta = acos((yCurvatureCentre-yFix)/(rCurvature-radialHeight));
+     return (rCurvature-radialHeight)*theta;
+}
+
+macro drawLineJoiningPoints(strName, pointX1, pointY1, pointX2, pointY2, labelBoundary)
+    border strName(t=0, 1){
+        x = pointX1 + t * (pointX2 - pointX1);
+        y = pointY1 + t * (pointY2-pointY2);
+        label = labelBoundary;
+    }
+// End of macro
+
+
+/*
+    Define Electrode domain geometry, including
+    - electrode
+    - board strip beneath electrode
+    - solder coating
+*/
+macro buildElectrodeDomain(i, arcDist, labelBoundary)
+    cout << "Building electrode " << i << endl;
+    border Elec#i#T(t=-0.5*xElecW, 0.5*xElecW){
+        x = ArcX(arcDist, xElecH) + t * VecTangentX(arcDist, xElecH);
+        y = ArcY(arcDist, xElecH) + t * VecTangentY(arcDist, xElecH);
+        label = labelBoundary;
+    };
+    border Elec#i#B(t=0.5*xElecW, -0.5*xElecW){
+        x = ArcX(arcDist, 0.0) + t * VecTangentX(arcDist, 0.0);
+        y = ArcY(arcDist, 0.0) + t * VecTangentY(arcDist, 0.0);
+        label = labelBoundary;
+    };
+    border Elec#i#L(t=0, 1){
+        real uvx = PointTangentX(arcDist, xElecH, -0.5*xElecW)
+                   - PointTangentX(arcDist, 0.0, -0.5*xElecW);
+        real uvy = PointTangentY(arcDist, xElecH, -0.5*xElecW)
+                   - PointTangentY(arcDist, 0.0, -0.5*xElecW);
+
+        x = PointTangentX(arcDist, 0.0, -0.5*xElecW) + t * uvx;
+        y = PointTangentY(arcDist, 0.0, -0.5*xElecW) + t * uvy;
+        label = labelBoundary;
+    };
+    border Elec#i#R(t=0, 1){
+        real uvx = PointTangentX(arcDist, 0.0, 0.5*xElecW)
+                   - PointTangentX(arcDist, xElecH, 0.5*xElecW);
+        real uvy = PointTangentY(arcDist, 0.0, 0.5*xElecW)
+                   - PointTangentY(arcDist, xElecH, 0.5*xElecW);
+
+        x = PointTangentX(arcDist, xElecH, 0.5*xElecW) + t * uvx;
+        y = PointTangentY(arcDist, xElecH, 0.5*xElecW) + t * uvy;
+        label = labelBoundary;
+    };
+
+    border Strip#i#B(t=-0.5*xBoardStripW,0.5*xBoardStripW){
+        x = ArcX(arcDist, -xBoardH) + t * VecTangentX(arcDist, -xBoardH);
+        y = ArcY(arcDist, -xBoardH) + t * VecTangentY(arcDist, -xBoardH);
+        label = labelBoard;
+    };
+    border Strip#i#L(t=0, 1){
+        real uvx = PointTangentX(arcDist, -xBoardH, -0.5*xBoardStripW)
+                   - PointTangentX(arcDist, 0.0, -0.5*xBoardStripW);
+        real uvy = PointTangentY(arcDist, -xBoardH, -0.5*xBoardStripW)
+                   - PointTangentY(arcDist, 0.0, -0.5*xBoardStripW);
+
+        x = PointTangentX(arcDist, 0.0, -0.5*xBoardStripW) + t * uvx;
+        y = PointTangentY(arcDist, 0.0, -0.5*xBoardStripW) + t * uvy;
+        label = labelBoard;
+    };
+    border Strip#i#R(t=1,0){
+        real uvx = PointTangentX(arcDist, 0.0, 0.5*xBoardStripW)
+                   - PointTangentX(arcDist, -xBoardH, 0.5*xBoardStripW);
+        real uvy = PointTangentY(arcDist, 0.0, 0.5*xBoardStripW)
+                   - PointTangentY(arcDist, -xBoardH, 0.5*xBoardStripW);
+
+        x = PointTangentX(arcDist, -xBoardH, 0.5*xBoardStripW) + t * uvx;
+        y = PointTangentY(arcDist, -xBoardH, 0.5*xBoardStripW) + t * uvy;
+        label = labelBoard;
+    };
+
+    border Strip#i#TL(t=-0.5*xElecW, -0.5*xBoardStripW){
+        x = ArcX(arcDist, 0.0) + t * VecTangentX(arcDist, 0.0);
+        y = ArcY(arcDist, 0.0) + t * VecTangentY(arcDist, 0.0);
+        label = labelBoard;
+    };
+    border Strip#i#TR(t=0.5*xBoardStripW, 0.5*xElecW){
+        x = ArcX(arcDist, 0.0) + t * VecTangentX(arcDist, 0.0);
+        y = ArcY(arcDist, 0.0) + t * VecTangentY(arcDist, 0.0);
+        label = labelBoard;
+    };
+
+    border SolderElec#i#L(t=0, 1){
+        real uvx = PointTangentX(arcDist, xElecH, -0.5*xElecW)
+                   - PointTangentX(arcDist, xElecH + xSolderH, -0.5*xElecW);
+        real uvy = PointTangentY(arcDist, xElecH, -0.5*xElecW)
+                   - PointTangentY(arcDist, xElecH + xSolderH, -0.5*xElecW);
+
+        x = PointTangentX(arcDist, xElecH+xSolderH, -0.5*xElecW) + t * uvx;
+        y = PointTangentY(arcDist, xElecH+xSolderH, -0.5*xElecW) + t * uvy;
+        label = labelBoard;
+    };
+
+    border SolderElec#i#R(t=0, 1){
+        real uvx = PointTangentX(arcDist, xElecH+xSolderH, 0.5*xElecW)
+                   - PointTangentX(arcDist, xElecH, 0.5*xElecW);
+        real uvy = PointTangentY(arcDist, xElecH+xSolderH, 0.5*xElecW)
+                   - PointTangentY(arcDist, xElecH, 0.5*xElecW);
+
+        x = PointTangentX(arcDist, xElecH, 0.5*xElecW) + t * uvx;
+        y = PointTangentY(arcDist, xElecH, 0.5*xElecW) + t * uvy;
+        label = labelBoard;
+    };
+
+    border SolderElec#i#T(t=-0.5*xElecW,0.5*xElecW) {
+        x = ArcX(arcDist, xElecH+xSolderH) + t * VecTangentX(arcDist, xElecH+xSolderH);
+        y = ArcY(arcDist, xElecH+xSolderH) + t * VecTangentY(arcDist, xElecH+xSolderH);
+        label = labelBoard;
+    };
+// End of macro
+
+/*
+    Build frame ridge between electrodes
+*/
+macro buildFrameRidge(i, arcDist1, arcDist2, labelBoundary)
+    cout << "Building frame ridge " << i << endl;
+    border FrameRidge#i#T(t=0, 1){
+        x = (ArcX(arcDist2, 0.0) - 0.5 * xBoardStripW * VecTangentX(arcDist2, 0.0))
+            + t * (
+                (ArcX(arcDist1, 0.0) + 0.5 * xBoardStripW * VecTangentX(arcDist2, 0.0))
+              - (ArcX(arcDist2, 0.0) - 0.5 * xBoardStripW * VecTangentX(arcDist1, 0.0))
+            );
+        y = (ArcY(arcDist2, 0.0) - 0.5 * xBoardStripW*VecTangentY(arcDist2, 0.0))
+            + t * (
+                (ArcY(arcDist1, 0.0) + 0.5 * xBoardStripW * VecTangentY(arcDist1, 0.0))
+              - (ArcY(arcDist2, 0.0) - 0.5 * xBoardStripW * VecTangentY(arcDist2, 0.0))
+            );
+        label = labelBoundary;
+    }
+// End of macro
+
+/*
+----------------------------------------------------------------------
+Build border of computational domain
+----------------------------------------------------------------------
+*/
+border DomainL(t=xDomainH, 0){
+    x = xOriginx;
+    y = xOriginy + t;
+    label = labelDomain;
+};
+border DomainR(t=0, xDomainH){
+    x = xOriginx + xDomainW;
+    y = xOriginy + t;
+    label = labelDomain;
+};
+border DomainT(t=xDomainW, 0){
+    x = xOriginx + t;
+    y = xOriginy + xDomainH;
+    label = labelDomain;
+};
+border DomainB(t=0, xDomainW){
+    x = xOriginx + t;
+    y = xOriginy;
+    label = labelDomain;
+};
+
+/*
+----------------------------------------------------------------------
+the left part of the board
+----------------------------------------------------------------------
+*/
+border BoardLeftT1(t=0, xBoardLeftW - xMarginW - xLeftGndPlateW){
+    x = -xBoardCentreEdgeX - xBoardLeftW + xMarginW + xLeftGndPlateW + t;
+    y = xBoardCentreEdgeY;
+    label = labelBoard;
+};
+border BoardLeftT2(t=0, xMarginW){
+    x = -xBoardCentreEdgeX - xBoardLeftW + t;
+    y = xBoardCentreEdgeY;
+    label = labelBoard;
+};
+border BoardLeftB(t=0, xBoardLeftW){
+    x = -xBoardCentreEdgeX - xBoardLeftW + t;
+    y = xBoardCentreEdgeY - xBoardH;
+    label = labelBoard;
+};
+border BoardLeftL(t=0, xBoardH){
+    x = -xBoardCentreEdgeX - xBoardLeftW;
+    y = xBoardCentreEdgeY - t;
+    label = labelBoard;
+}
+border BoardLeftR(t=0, xBoardH){
+    x = -xBoardCentreEdgeX;
+    y = xBoardCentreEdgeY - xBoardH + t;
+    label = labelBoard;
+}
+
+/*
+----------------------------------------------------------------------
+the right part of the board
+----------------------------------------------------------------------
+*/
+border BoardRightT(t=0, xBoardRightW){
+    x = xBoardCentreEdgeX + t;
+    y = xBoardCentreEdgeY;
+    label = labelBoard;
+};
+border BoardRightB(t=0, xBoardRightW){
+    x = xBoardCentreEdgeX + t;
+    y = xBoardCentreEdgeY - xBoardH;
+    label = labelBoard;
+};
+border BoardRightR(t=0, xBoardH){
+    x = xBoardCentreEdgeX + xBoardRightW;
+    y = xBoardCentreEdgeY - xBoardH + t;
+    label = labelBoard;
+}
+border BoardRightL(t=0, xBoardH){
+    x = xBoardCentreEdgeX;
+    y = xBoardCentreEdgeY - t;
+    label = labelBoard;
+}
+
+/*
+----------------------------------------------------------------------
+the left part of the frame
+----------------------------------------------------------------------
+*/
+real xBoardFrameH = xBoardH + xFrameH;
+real xBoardFrameGndPlateH = xBoardFrameH + xBottomGndPlateH;
+real auxR1 = rCurvature + xBoardFrameH;
+real auxR2 = rCurvature + xBoardFrameGndPlateH;
+
+drawLineJoiningPoints(
+    FrameLeftB,
+    (-xBoardCentreEdgeX - xBoardLeftW),
+    (xBoardCentreEdgeY - xBoardFrameH),
+    (xCurvatureCentre + auxR1 * sin(-ArcLengthFixY(-xBoardFrameH)/auxR1)),
+    (xBoardCentreEdgeY - xBoardFrameH),
+    labelFrame
+)
+border FrameLeftL(t=0, xFrameH){
+    x = -xBoardCentreEdgeX - xBoardLeftW;
+    y = xBoardCentreEdgeY - xBoardH - t;
+    label = labelFrame;
+};
+
+/*
+----------------------------------------------------------------------
+the right part of the frame
+----------------------------------------------------------------------
+*/
+drawLineJoiningPoints(
+    FrameRightB,
+    (xCurvatureCentre + auxR1 * sin(ArcLengthFixY(-xBoardFrameH)/auxR1)),
+    (xBoardCentreEdgeY - xBoardFrameH),
+    (xBoardCentreEdgeX + xBoardRightW),
+    (xBoardCentreEdgeY - xBoardFrameH),
+    labelFrame
+)
+border FrameRightR(t=0, xFrameH){
+    x = (xBoardCentreEdgeX+xBoardRightW);
+    y = xBoardCentreEdgeY- xBoardFrameH+t;
+    label = labelFrame;
+};
+
+/*
+----------------------------------------------------------------------
+the bottom ground plate
+----------------------------------------------------------------------
+*/
+border BottomGndPlateT(
+    t=-ArcLengthFixY(-xBoardFrameH), ArcLengthFixY(-xBoardFrameH)
+){
+    x = xCurvatureCentre + auxR1*sin(t/auxR1);
+    y = yCurvatureCentre - auxR1*cos(t/auxR1);
+    label = labelBottomGndPlate;
+}
+border BottomGndPlateB(
+    t=ArcLengthFixY(-xBoardFrameGndPlateH), -ArcLengthFixY(-xBoardFrameGndPlateH)
+){
+    x = xCurvatureCentre + auxR2*sin(t/auxR2);
+    y = yCurvatureCentre - auxR2*cos(t/auxR2);
+    label = labelBottomGndPlate;
+}
+
+real pointGndRX1 = xCurvatureCentre + auxR1 * sin(ArcLengthFixY(-xBoardFrameH)/auxR1);
+real pointGndRY1 = yCurvatureCentre - auxR1 * cos(ArcLengthFixY(-xBoardFrameH)/auxR1);
+real pointGndRX2 = xCurvatureCentre + auxR2 * sin(ArcLengthFixY(-xBoardFrameGndPlateH)/auxR2);
+real pointGndRY2 = yCurvatureCentre - auxR2 * cos(ArcLengthFixY(-xBoardFrameGndPlateH)/auxR2);
+
+border BottomGndPlateR(t=0, 1){
+    x = pointGndRX1 + t * (pointGndRX2 - pointGndRX1);
+    y = pointGndRY1 + t * (pointGndRY2 - pointGndRY1);
+    label = labelBottomGndPlate;
+}
+border BottomGndPlateL(t=0, 1){
+    x = -pointGndRX2 + t * (pointGndRX2 - pointGndRX1);
+    y = pointGndRY2 + t * (pointGndRY1 - pointGndRY2);
+    label = labelBottomGndPlate;
+}
+
+/*
+----------------------------------------------------------------------
+the left ground plate
+----------------------------------------------------------------------
+*/
+border LeftGndPlateT(t=0, xLeftGndPlateW){
+    x = -xBoardCentreEdgeX - xBoardLeftW + xMarginW + t;
+    y = xBoardCentreEdgeY+xElecH;
+    label = labelLeftGndPlate;
+}
+border LeftGndPlateB(t=xLeftGndPlateW, 0){
+    x = -xBoardCentreEdgeX - xBoardLeftW + xMarginW + t;
+    y = xBoardCentreEdgeY;
+    label = labelLeftGndPlate;
+}
+border LeftGndPlateL(t=0,xElecH){
+    x = -xBoardCentreEdgeX - xBoardLeftW + xMarginW;
+    y = xBoardCentreEdgeY + t;
+    label = labelLeftGndPlate;
+}
+border LeftGndPlateR(t=0,xElecH){
+    x = -xBoardCentreEdgeX - xBoardLeftW + xMarginW + xLeftGndPlateW;
+    y = xBoardCentreEdgeY + xElecH - t;
+    label = labelLeftGndPlate;
+}
+
+/*
+----------------------------------------------------------------------
+Electrode domains
+----------------------------------------------------------------------
+*/
+buildElectrodeDomain(0, xElecCentreX[0], 1)
+buildElectrodeDomain(1, xElecCentreX[1], 2)
+buildElectrodeDomain(2, xElecCentreX[2], 3)
+buildElectrodeDomain(3, xElecCentreX[3], 4)
+buildElectrodeDomain(4, xElecCentreX[4], 5)
+buildElectrodeDomain(5, xElecCentreX[5], 6)
+buildElectrodeDomain(6, xElecCentreX[6], 7)
+buildElectrodeDomain(7, xElecCentreX[7], 8)
+buildElectrodeDomain(8, xElecCentreX[8], 9)
+buildElectrodeDomain(9, xElecCentreX[9], 10)
+buildElectrodeDomain(10, xElecCentreX[10], 11)
+buildElectrodeDomain(11, xElecCentreX[11], 12)
+buildElectrodeDomain(12, xElecCentreX[12], 13)
+buildElectrodeDomain(13, xElecCentreX[13], 14)
+buildElectrodeDomain(14, xElecCentreX[14], 15)
+
+/*
+----------------------------------------------------------------------
+the frame ridges in the gap between the strips
+----------------------------------------------------------------------
+*/
+
+border FrameRidge0T(t=0, 1){
+    real ystart = ArcY(xElecCentreX[0], 0.0)
+                - 0.5 * xBoardStripW * VecTangentY(xElecCentreX[0], 0.0);
+    real xstart = ArcX(xElecCentreX[0], 0.0)
+                - 0.5 * xBoardStripW * VecTangentX(xElecCentreX[0], 0.0);
+    x = xstart + t * (-xBoardCentreEdgeX - xstart);
+    y = ystart + t * (xBoardCentreEdgeY - ystart);
+    label = labelFrame;
+}
+
+buildFrameRidge(1, xElecCentreX[0], xElecCentreX[1], labelFrame)
+buildFrameRidge(2, xElecCentreX[1], xElecCentreX[2], labelFrame)
+buildFrameRidge(3, xElecCentreX[2], xElecCentreX[3], labelFrame)
+buildFrameRidge(4, xElecCentreX[3], xElecCentreX[4], labelFrame)
+buildFrameRidge(5, xElecCentreX[4], xElecCentreX[5], labelFrame)
+buildFrameRidge(6, xElecCentreX[5], xElecCentreX[6], labelFrame)
+buildFrameRidge(7, xElecCentreX[6], xElecCentreX[7], labelFrame)
+buildFrameRidge(8, xElecCentreX[7], xElecCentreX[8], labelFrame)
+buildFrameRidge(9, xElecCentreX[8], xElecCentreX[9], labelFrame)
+buildFrameRidge(10, xElecCentreX[9], xElecCentreX[10], labelFrame)
+buildFrameRidge(11, xElecCentreX[10], xElecCentreX[11], labelFrame)
+buildFrameRidge(12, xElecCentreX[11], xElecCentreX[12], labelFrame)
+buildFrameRidge(13, xElecCentreX[12], xElecCentreX[13], labelFrame)
+buildFrameRidge(14, xElecCentreX[13], xElecCentreX[14], labelFrame)
+
+border FrameRidge15T(t=0, 1){
+    real xstart = ArcX(xElecCentreX[14], 0.0)
+                + 0.5 * xElecW * VecTangentX(xElecCentreX[14], 0.0);
+    real ystart = ArcY(xElecCentreX[14], 0.0)
+                + 0.5 * xElecW * VecTangentY(xElecCentreX[14], 0.0);
+    x = xstart + t * (xBoardCentreEdgeX - xstart);
+    y = ystart + t * (xBoardCentreEdgeY - ystart);
+    label = labelFrame;
+}
+
+/*
+----------------------------------------------------------------------
+Generate the mesh
+----------------------------------------------------------------------
+*/
+
+real regionOffsetX = 0.0;
+real regionOffsetY = 0.0;
+
+include "pixel_region.edp"
+
+// Macro to generate the mesh.
+macro createMesh(h)
+    int numDomainH = ceil(xDomainH*rDomain/h);
+    int numDomainW = ceil(xDomainW*rDomain/h);
+    int numElecW = ceil(xElecW*rElectrodeW/h);
+    int numElecH = ceil(xElecH*rElectrodeH/h);
+    cout << "Building mesh with h = " << h << endl;
+    mesh Th = buildmesh(
+        DomainL(numDomainH) + DomainR(numDomainH) + DomainT(numDomainW) + DomainB(numDomainW)
+
+        + FrameLeftB(ceil(xBoardLeftW*rBoard/h)) + FrameLeftL(ceil(xFrameH*rBoard/h))
+        + FrameRightB((ceil(xBoardRightW*rBoard/h))) + FrameRightR(ceil(xFrameH*rBoard/h))
+
+        + BoardLeftT1(ceil((xBoardLeftW-xMarginW-xLeftGndPlateW)*rBoard/h)) + BoardLeftT2(ceil(xMarginW*rBoard/h))
+        + BoardLeftB(ceil(xBoardLeftW*rBoard/h)) + BoardLeftL(ceil(xBoardH*rBoard/h)) + BoardLeftR(ceil(xBoardH*rBoard/h))
+        + BoardRightT(ceil(xBoardRightW*rBoard/h)) + BoardRightB(ceil(xBoardRightW*rBoard/h))
+        + BoardRightR(ceil(xBoardH*rBoard/h)) + BoardRightL(ceil(xBoardH*rBoard/h))
+        + BottomGndPlateT(ceil(xBoardCentreW*rGroundPlate/h)) + BottomGndPlateB(ceil(xBoardCentreW*rGroundPlate)/h)
+        + BottomGndPlateL(ceil(xBottomGndPlateH*rGroundPlate/h)) + BottomGndPlateR(ceil(xBottomGndPlateH*rGroundPlate/h))
+
+        + LeftGndPlateT(ceil(xLeftGndPlateW*rGroundPlate/h)) + LeftGndPlateB(ceil(xLeftGndPlateW*rGroundPlate/h))
+        + LeftGndPlateL(ceil(xElecH*rGroundPlate/h)) + LeftGndPlateR(ceil(xElecH*rGroundPlate/h))
+
+        + Elec0B(numElecW) + Elec0T(numElecW) + Elec0L(numElecH) + Elec0R(numElecH)
+        + Elec1B(numElecW) + Elec1T(numElecW) + Elec1L(numElecH) + Elec1R(numElecH)
+        + Elec2B(numElecW) + Elec2T(numElecW) + Elec2L(numElecH) + Elec2R(numElecH)
+        + Elec3B(numElecW) + Elec3T(numElecW) + Elec3L(numElecH) + Elec3R(numElecH)
+        + Elec4B(numElecW) + Elec4T(numElecW) + Elec4L(numElecH) + Elec4R(numElecH)
+        + Elec5B(numElecW) + Elec5T(numElecW) + Elec5L(numElecH) + Elec5R(numElecH)
+        + Elec6B(numElecW) + Elec6T(numElecW) + Elec6L(numElecH) + Elec6R(numElecH)
+        + Elec7B(numElecW) + Elec7T(numElecW) + Elec7L(numElecH) + Elec7R(numElecH)
+        + Elec8B(numElecW) + Elec8T(numElecW) + Elec8L(numElecH) + Elec8R(numElecH)
+        + Elec9B(numElecW) + Elec9T(numElecW) + Elec9L(numElecH) + Elec9R(numElecH)
+        + Elec10B(numElecW) + Elec10T(numElecW) + Elec10L(numElecH) + Elec10R(numElecH)
+        + Elec11B(numElecW) + Elec11T(numElecW) + Elec11L(numElecH) + Elec11R(numElecH)
+        + Elec12B(numElecW) + Elec12T(numElecW) + Elec12L(numElecH) + Elec12R(numElecH)
+        + Elec13B(numElecW) + Elec13T(numElecW) + Elec13L(numElecH) + Elec13R(numElecH)
+        + Elec14B(numElecW) + Elec14T(numElecW) + Elec14L(numElecH) + Elec14R(numElecH)
+
+        + Strip0TL(ceil(xBoardStripW-xElecW)*rBoardHigh/h) + Strip0TR(ceil((xBoardStripW-xElecW)*rBoardHigh/h))
+        + Strip0B(ceil(xBoardStripW*rBoardHigh/h)) + Strip0L(ceil(xBoardH*rBoardHigh/h)) + Strip0R(ceil(xBoardH*rBoardHigh/h))
+        + Strip1TL(ceil(xBoardStripW-xElecW)*rBoardHigh/h) + Strip1TR(ceil((xBoardStripW-xElecW)*rBoardHigh/h))
+        + Strip1B(ceil(xBoardStripW*rBoardHigh/h)) + Strip1L(ceil(xBoardH*rBoardHigh/h)) + Strip1R(ceil(xBoardH*rBoardHigh/h))
+        + Strip2TL(ceil(xBoardStripW-xElecW)*rBoardHigh/h) + Strip2TR(ceil((xBoardStripW-xElecW)*rBoardHigh/h))
+        + Strip2B(ceil(xBoardStripW*rBoardHigh/h)) + Strip2L(ceil(xBoardH*rBoardHigh/h)) + Strip2R(ceil(xBoardH*rBoardHigh/h))
+        + Strip3TL(ceil(xBoardStripW-xElecW)*rBoardHigh/h) + Strip3TR(ceil((xBoardStripW-xElecW)*rBoardHigh/h))
+        + Strip3B(ceil(xBoardStripW*rBoardHigh/h)) + Strip3L(ceil(xBoardH*rBoardHigh/h)) + Strip3R(ceil(xBoardH*rBoardHigh/h))
+        + Strip4TL(ceil(xBoardStripW-xElecW)*rBoardHigh/h) + Strip4TR(ceil((xBoardStripW-xElecW)*rBoardHigh/h))
+        + Strip4B(ceil(xBoardStripW*rBoardHigh/h)) + Strip4L(ceil(xBoardH*rBoardHigh/h)) + Strip4R(ceil(xBoardH*rBoardHigh/h))
+        + Strip5TL(ceil(xBoardStripW-xElecW)*rBoardHigh/h) + Strip5TR(ceil((xBoardStripW-xElecW)*rBoardHigh/h))
+        + Strip5B(ceil(xBoardStripW*rBoardHigh/h)) + Strip5L(ceil(xBoardH*rBoardHigh/h)) + Strip5R(ceil(xBoardH*rBoardHigh/h))
+        + Strip6TL(ceil(xBoardStripW-xElecW)*rBoardHigh/h) + Strip6TR(ceil((xBoardStripW-xElecW)*rBoardHigh/h))
+        + Strip6B(ceil(xBoardStripW*rBoardHigh/h)) + Strip6L(ceil(xBoardH*rBoardHigh/h)) + Strip6R(ceil(xBoardH*rBoardHigh/h))
+        + Strip7TL(ceil(xBoardStripW-xElecW)*rBoardHigh/h) + Strip7TR(ceil((xBoardStripW-xElecW)*rBoardHigh/h))
+        + Strip7B(ceil(xBoardStripW*rBoardHigh/h)) + Strip7L(ceil(xBoardH*rBoardHigh/h)) + Strip7R(ceil(xBoardH*rBoardHigh/h))
+        + Strip8TL(ceil(xBoardStripW-xElecW)*rBoardHigh/h) + Strip8TR(ceil((xBoardStripW-xElecW)*rBoardHigh/h))
+        + Strip8B(ceil(xBoardStripW*rBoardHigh/h)) + Strip8L(ceil(xBoardH*rBoardHigh/h)) + Strip8R(ceil(xBoardH*rBoardHigh/h))
+        + Strip9TL(ceil(xBoardStripW-xElecW)*rBoardHigh/h) + Strip9TR(ceil((xBoardStripW-xElecW)*rBoardHigh/h))
+        + Strip9B(ceil(xBoardStripW*rBoardHigh/h)) + Strip9L(ceil(xBoardH*rBoardHigh/h)) + Strip9R(ceil(xBoardH*rBoardHigh/h))
+        + Strip10TL(ceil(xBoardStripW-xElecW)*rBoardHigh/h) + Strip10TR(ceil((xBoardStripW-xElecW)*rBoardHigh/h))
+        + Strip10B(ceil(xBoardStripW*rBoardHigh/h)) + Strip10L(ceil(xBoardH*rBoardHigh/h)) + Strip10R(ceil(xBoardH*rBoardHigh/h))
+        + Strip11TL(ceil(xBoardStripW-xElecW)*rBoardHigh/h) + Strip11TR(ceil((xBoardStripW-xElecW)*rBoardHigh/h))
+        + Strip11B(ceil(xBoardStripW*rBoardHigh/h)) + Strip11L(ceil(xBoardH*rBoardHigh/h)) + Strip11R(ceil(xBoardH*rBoardHigh/h))
+        + Strip12TL(ceil(xBoardStripW-xElecW)*rBoardHigh/h) + Strip12TR(ceil((xBoardStripW-xElecW)*rBoardHigh/h))
+        + Strip12B(ceil(xBoardStripW*rBoardHigh/h)) + Strip12L(ceil(xBoardH*rBoardHigh/h)) + Strip12R(ceil(xBoardH*rBoardHigh/h))
+        + Strip13TL(ceil(xBoardStripW-xElecW)*rBoardHigh/h) + Strip13TR(ceil((xBoardStripW-xElecW)*rBoardHigh/h))
+        + Strip13B(ceil(xBoardStripW*rBoardHigh/h)) + Strip13L(ceil(xBoardH*rBoardHigh/h)) + Strip13R(ceil(xBoardH*rBoardHigh/h))
+        + Strip14TL(ceil(xBoardStripW-xElecW)*rBoardHigh/h) + Strip14TR(ceil((xBoardStripW-xElecW)*rBoardHigh/h))
+        + Strip14B(ceil(xBoardStripW*rBoardHigh/h)) + Strip14L(ceil(xBoardH*rBoardHigh/h)) + Strip14R(ceil(xBoardH*rBoardHigh/h))
+
+        + SolderElec0L(ceil(xSolderH*rSolderH/h)) + SolderElec0R(ceil(xSolderH*rSolderH/h)) + SolderElec0T(ceil(xElecW*rSolderH/h))
+        + SolderElec1L(ceil(xSolderH*rSolderH/h)) + SolderElec1R(ceil(xSolderH*rSolderH/h)) + SolderElec1T(ceil(xElecW*rSolderH/h))
+        + SolderElec2L(ceil(xSolderH*rSolderH/h)) + SolderElec2R(ceil(xSolderH*rSolderH/h)) + SolderElec2T(ceil(xElecW*rSolderH/h))
+        + SolderElec3L(ceil(xSolderH*rSolderH/h)) + SolderElec3R(ceil(xSolderH*rSolderH/h)) + SolderElec3T(ceil(xElecW*rSolderH/h))
+        + SolderElec4L(ceil(xSolderH*rSolderH/h)) + SolderElec4R(ceil(xSolderH*rSolderH/h)) + SolderElec4T(ceil(xElecW*rSolderH/h))
+        + SolderElec5L(ceil(xSolderH*rSolderH/h)) + SolderElec5R(ceil(xSolderH*rSolderH/h)) + SolderElec5T(ceil(xElecW*rSolderH/h))
+        + SolderElec6L(ceil(xSolderH*rSolderH/h)) + SolderElec6R(ceil(xSolderH*rSolderH/h)) + SolderElec6T(ceil(xElecW*rSolderH/h))
+        + SolderElec7L(ceil(xSolderH*rSolderH/h)) + SolderElec7R(ceil(xSolderH*rSolderH/h)) + SolderElec7T(ceil(xElecW*rSolderH/h))
+        + SolderElec8L(ceil(xSolderH*rSolderH/h)) + SolderElec8R(ceil(xSolderH*rSolderH/h)) + SolderElec8T(ceil(xElecW*rSolderH/h))
+        + SolderElec9L(ceil(xSolderH*rSolderH/h)) + SolderElec9R(ceil(xSolderH*rSolderH/h)) + SolderElec9T(ceil(xElecW*rSolderH/h))
+        + SolderElec10L(ceil(xSolderH*rSolderH/h)) + SolderElec10R(ceil(xSolderH*rSolderH/h)) + SolderElec10T(ceil(xElecW*rSolderH/h))
+        + SolderElec11L(ceil(xSolderH*rSolderH/h)) + SolderElec11R(ceil(xSolderH*rSolderH/h)) + SolderElec11T(ceil(xElecW*rSolderH/h))
+        + SolderElec12L(ceil(xSolderH*rSolderH/h)) + SolderElec12R(ceil(xSolderH*rSolderH/h)) + SolderElec12T(ceil(xElecW*rSolderH/h))
+        + SolderElec13L(ceil(xSolderH*rSolderH/h)) + SolderElec13R(ceil(xSolderH*rSolderH/h)) + SolderElec13T(ceil(xElecW*rSolderH/h))
+        + SolderElec14L(ceil(xSolderH*rSolderH/h)) + SolderElec14R(ceil(xSolderH*rSolderH/h)) + SolderElec14T(ceil(xElecW*rSolderH/h))
+
+        + FrameRidge0T(ceil(2*(xElecSep-xBoardStripW))*rBoardHigh/h)
+        + FrameRidge1T(ceil(xElecSep-xBoardStripW)*rBoardHigh/h)
+        + FrameRidge2T(ceil(xElecSep-xBoardStripW)*rBoardHigh/h)
+        + FrameRidge3T(ceil(xElecSep-xBoardStripW)*rBoardHigh/h)
+        + FrameRidge4T(ceil(xElecSep-xBoardStripW)*rBoardHigh/h)
+        + FrameRidge5T(ceil(xElecSep-xBoardStripW)*rBoardHigh/h)
+        + FrameRidge6T(ceil(xElecSep-xBoardStripW)*rBoardHigh/h)
+        + FrameRidge7T(ceil(xElecSep-xBoardStripW)*rBoardHigh/h)
+        + FrameRidge8T(ceil(xElecSep-xBoardStripW)*rBoardHigh/h)
+        + FrameRidge9T(ceil(xElecSep-xBoardStripW)*rBoardHigh/h)
+        + FrameRidge10T(ceil(xElecSep-xBoardStripW)*rBoardHigh/h)
+        + FrameRidge11T(ceil(xElecSep-xBoardStripW)*rBoardHigh/h)
+        + FrameRidge12T(ceil(xElecSep-xBoardStripW)*rBoardHigh/h)
+        + FrameRidge13T(ceil(xElecSep-xBoardStripW)*rBoardHigh/h)
+        + FrameRidge14T(ceil(xElecSep-xBoardStripW)*rBoardHigh/h)
+        + FrameRidge15T(ceil(2*(xElecSep-xBoardStripW))*rBoardHigh/h)
+
+        + pixelRegion
+    );
+// End of macro
+
+// Generate mesh
+cout << "Generating mesh" << endl;
+createMesh(h)
+cout << "Mesh generated" << endl;
+
+if (BPlot) { plot(Th); };
+
+/*
+----------------------------------------------------------------------
+                    Define region labels
+----------------------------------------------------------------------
+*/
+
+// Find region corresponding to block and membrane
+int back = Th(0.0, xOriginy + xDomainH - 1e-3).region;
+int frame = Th(0.0, xBoardy - 1e-3).region;
+
+int boardLeft = Th(
+    rCurvature*sin(-0.5*xBoardCentreW/rCurvature) - 0.5 * xBoardLeftW,
+    yCurvatureCentre - rCurvature*cos(-0.5*xBoardCentreW/rCurvature) - 1e-3
+).region;
+
+int boardRight = Th(
+    rCurvature*sin(0.5*xBoardCentreW/rCurvature) + 0.5 * xBoardRightW,
+    yCurvatureCentre - rCurvature*cos(0.5*xBoardCentreW/rCurvature) - 1e-3
+).region;
+
+regionEpsilons = [regionEpsilons, eBoard, eBoard];
+regionSigmas = [regionSigmas, sBoard, sBoard];
+
+int[int] regionLabels = [back, frame, boardLeft, boardRight];
+string[string] regionNames;
+regionNames[0] = "background";
+regionNames[1] = "frame";
+regionNames[2] = "boardLeft";
+regionNames[3] = "boardRight";
+
+int[int] boardStrips(NE);
+int[int] solderCoat(NE);
+
+for(int iloop=0; iloop<NE; iloop++)
+{
+    boardStrips[iloop] = Th(
+        rCurvature*sin(xElecCentreX[iloop]/rCurvature),
+        yCurvatureCentre-(rCurvature)*cos(xElecCentreX[iloop]/rCurvature)-1e-3
+    ).region;
+
+    solderCoat[iloop] = Th(
+        PointTangentX(xElecCentreX[iloop], xElecH+xSolderH/2, 0.0),
+        PointTangentY(xElecCentreX[iloop], xElecH+xSolderH/2, 0.0)
+    ).region;
+
+    regionLabels = [regionLabels, boardStrips[iloop], solderCoat[iloop]];
+
+    // Append board strip and solder coat strip names
+    regionNames[4+2*iloop] = "boardStrip"+string(iloop);
+    regionNames[4+2*iloop+1] = "solderCoatStrip"+string(iloop);
+
+    // Append board strip and solder coat strip permittivities
+    regionEpsilons = [regionEpsilons, eBoard, eSolderCoat];
+    regionSigmas = [regionSigmas, sBoard, sSolderCoat];
+}
+
+int[int] pixelRegions = FindPixelRegions(pixelCenterX, pixelCenterY, Th);
+
+// Initialise and build epsilon map
+real[int] pixelEpsilons(pixelRegions.n);
+// initialises pixels to the background.
+pixelEpsilons = eBackground;
+// Read and build epsilon map
+real[int] pixelSigmas(pixelRegions.n);
+// initialises pixels to background
+pixelSigmas = sBackground;
+
+cout << "End of geometry definition" << endl;

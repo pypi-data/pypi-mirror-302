@@ -1,0 +1,106 @@
+/*
+    P1000-009 Parameters
+*/
+
+// Mesh size (mm)
+real h = getARGV("h", 0.25);
+// Domain width (mm)
+real xDomainW = getARGV("xDomainW", 375.0);
+// Domain height (mm)
+real xDomainH = getARGV("xDomainH", 150.0);
+
+// Electrode width (mm)
+real xElecW = getARGV("xElecW", 6.0);
+// Electrode height (mm)
+real xElecH = getARGV("xElecH", 0.069);
+// Separation of electrodes from centre to centre (mm)
+real xElecSep = getARGV("xElecSep", 10.0);
+
+// Length of material under test (mm)
+real xMaterialW = getARGV("xMaterialW", 146.0);
+// Height of material under test (mm)
+real xMaterialH = getARGV("xMaterialH", 30.0);
+// Gap between substrate and material under test (mm)
+real xMaterialGap = getARGV("xMaterialGap", 1.0);
+
+// Radius of curvature from surface of board (mm)
+real rCurvature = getARGV("rCurvature", 71.0);
+
+// Width of the part of the board that holds the electrodes and can be curved (mm)
+real xBoardCentreW = getARGV("xBoardCentreW", 146.0+10.0);
+// Width of the left part of the board
+real xBoardLeftW = getARGV("xBoardLeftW", 101.99);
+// Width of the right part of the board
+real xBoardRightW = getARGV("xBoardRightW", 27.12);
+// Board/Membrane height (mm)
+real xBoardH = getARGV("xBoardH", 1.6);
+// Width of the board strips underneath the electrodes
+real xBoardStripW = getARGV("xBoardStripW", 8.0);
+// Height of the supporting frame
+real xFrameH = getARGV("xFrameH", 8.4);
+// Height of the ground plate below the frame
+real xBottomGndPlateH = getARGV("xBottomGndPlateH", 0.35);
+// Width of the ground plate on the left of the board
+real xLeftGndPlateW = getARGV("xLeftGndPlateW", 39.0);
+// Offset of the ground wing from the left margin of the board
+real xMarginW = getARGV("xMarginW", 1.0);
+// Height of the solder coat (mm)
+real xSolderH = getARGV("xSolderH", 0.025);
+
+// Permittivity of board substrate (-)
+real eBoard = getARGV("eBoard", 4.0);
+// Conductivity of board substrate (-)
+real sBoard = getARGV("sBoard", 0.0);
+// Permittivity of the frame
+real eFrame= getARGV("eFrame", 3.0);
+// Conductivity of the frame
+real sFrame= getARGV("sFrame", 0.0);
+// Permittivity of solder coat
+real eSolderCoat= getARGV("eSolderCoat", 3.0);
+// Conductivity of solder coat
+real sSolderCoat= getARGV("sSolderCoat", 0.0);
+
+// Mesh number ratio for solder sides (-)
+real rSolderH = getARGV("rSolderH", 1.0);
+// Mesh number ratio for solder width(-)
+real rSolderW = getARGV("rSolderW", 1.0);
+
+// Operating frequency of the sensor. Default is 25 kHz.
+real frequency = getARGV("frequency", 25*1e3);
+
+// Labels
+int labelDomain = 0;
+int labelBoard = 200;
+int labelFrame = 201;
+int labelLeftGndPlate = 101;
+int labelBottomGndPlate = 102;
+
+// Number of electrodes
+int NE = 15;
+
+real[int] regionEpsilons = [eBackground, eFrame]; // eBoard and eSolderCoat will be added later
+real[int] regionSigmas = [sBackground, sFrame]; // eBoard and eSolderCoat will be added later
+int[int] groundLabels = [labelBottomGndPlate, labelLeftGndPlate];
+int[int] electrodeLabels = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
+
+// Derived domain parameters
+// The minimum clearance width between the domain boundaries and the board
+real xClearanceW = 0.5 * (xDomainW - xBoardLeftW - xBoardRightW - xBoardCentreW);
+real xOriginx = - 0.5 * xBoardCentreW - xBoardLeftW - xClearanceW;
+real xOriginy = - 0.5 * xDomainH;
+// Derived board parameters
+real xBoardy = - 0.5 * xBoardH - (1.0/6.0) * xDomainH;
+
+// Derived electrode parameters
+real[int] xElecCentreX(NE); xElecCentreX = 0.0;
+for(int iloop=0; iloop<NE; iloop++)
+{
+    xElecCentreX[iloop] = - (int(NE/2) * xElecSep) + (iloop * xElecSep);
+}
+real xElecCentreY = xBoardy+xBoardH;
+real xElecGap = xElecSep - xElecW;
+
+// Derived curvature parameters
+real yCurvatureCentre = xBoardy + xBoardH + rCurvature;
+real xCurvatureCentre = 0.0;
+

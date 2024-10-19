@@ -1,0 +1,29 @@
+  271 :         Vh tmpfunc = real(diff);
+  272 :         plot(tmpfunc, wait=1, fill=1, cmm = "real(diff) ");
+  273 :         tmpfunc = imag(diff);
+  274 :         plot(tmpfunc, wait=1, fill=1, cmm = "Imag(dff) ");
+  275 :     }
+  276 :     error = sqrt(diff[]'*diff[]);
+  277 :     cout << "L2 norm of diff: " << sqrt(diff[]'*diff[]) << endl;
+  278 :     ff << real(error) << ", ";
+  279 :
+  280 :     ff << uu[].l2 << ", " << uu2[].l2 <<endl;
+  281 :
+  282 :     }
+  283 :
+  284 :
+  285 :
+  286 :
+  287 :
+  288 : } sizestack + 1024 =13192  ( 12168 )
+ 
+  --  mesh:  Nb of Triangles =  20498, Nb of Vertices 10549
+  --  mesh:  Nb of Triangles =  15752, Nb of Vertices 8027
+Residual error using new method: 9.69156e-13
+Residual error using old method: 0.0180116
+L2 norm of diff: 0.392001
+times: compile 0.74s, execution 0.643s,  mpirank:0
+ ######## We forget of deleting   915 Nb pointer,   0Bytes  ,  mpirank 0, memory leak =0
+ CodeAlloc : nb ptr  5596,  size :583936 mpirank: 0
+Ok: Normal End
+ try getConsole C:\repositories\zedsim\freefem\examples\high_contrast_problem.edp

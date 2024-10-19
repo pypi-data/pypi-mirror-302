@@ -1,0 +1,85 @@
+string meshFile = getARGV("meshFile", "P3000-005_board_mesh_3d.mesh");
+string permittivityFile = getARGV("permittivityFile", "P3000-005_board_mesh_3d_permittivity_mapping.txt");
+
+// Load mesh from file
+mesh3 Th = readmesh3(meshFile);
+
+// Read material permittivities
+ifstream file(permittivityFile);
+string domainType;
+
+// Read domain
+file >> domainType; // domain
+file >> domainType; // 1
+int backgroundLabel;
+file >> backgroundLabel;
+file >> eBackground;
+
+// Read fixedRegions
+file >> domainType; // fixedRegions
+int nregions;
+file >> nregions;
+// Initialise variables
+int[int] regionLabels(nregions+1);
+real[int] regionEpsilons(nregions+1), regionSigmas(nregions+1);
+string[string] regionNames;
+// Read in values
+regionLabels[0] = backgroundLabel;
+regionEpsilons[0] = eBackground;
+regionNames[0] = "background";
+for (int k = 0; k < nregions; k++)
+{
+    file >> regionLabels[1+k];
+    file >> regionEpsilons[1+k];
+    regionNames[1+k] = regionLabels[1+k];
+}
+
+// TODO: update this with conductivity values
+regionSigmas = 0;
+
+// Read pixels
+file >> domainType; // pixels
+int npixels;
+file >> npixels;
+// Initialise variables
+int[int] pixelRegions(npixels);
+real[int] pixelEpsilons(npixels), pixelSigmas(npixels);
+for (int k = 0; k < npixels; k++)
+{
+    file >> pixelRegions[k];
+    file >> pixelEpsilons[k];
+    regionNames[regionLabels.n + k] = "pixel " + string(pixelRegions[k]);
+}
+pixelSigmas = 0;
+
+// Read domain labels
+file >> domainType;
+int ndomain;
+file >> ndomain;
+int[int] domainLabels(ndomain);
+for (int k = 0; k < ndomain; k++)
+{
+    file >> domainLabels[k];
+}
+
+// Read electrode labels
+file >> domainType; // electrodes
+int NE;
+file >> NE;
+int[int] electrodeLabels(NE);
+for (int k = 0; k < NE; k++)
+{
+    file >> electrodeLabels[k];
+}
+
+// Read in ground plate labels
+file >> domainType; // grounds
+int ngrounds;
+file >> ngrounds;
+int[int] groundLabels(ngrounds);
+for (int k = 0; k < ngrounds; k++)
+{
+    file >> groundLabels[k];
+}
+
+if (BPlot == 1 ) { plot(Th, dim=nDims); }

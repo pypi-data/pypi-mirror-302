@@ -1,0 +1,118 @@
+
+bool BSaveMeshPlot = getARGV("BSaveMeshPlot", 0);
+
+// Mesh size (mm)
+real h = getARGV("h", 0.05);
+
+// domain dimensions
+real xDomainWidth = getARGV("xDomainW", 150.0);
+real xDomainHeight = getARGV("xDomainH", 75.0);
+
+// electrode dimensions
+real xElectrodeWidth = getARGV("xElecW", 6.7482);
+real xElectrodeHeight = getARGV("xElecH", 0.035);
+real xElectrodeGap = getARGV("xElecSep", 1.4918);
+
+// Pixelation dimensions
+// pixelation width default = default full board width
+real xMaterialW = getARGV("xMaterialW", 109.8300);
+real xMaterialH = getARGV("xMaterialH", 30.0000);
+// pixelation distance from the board
+real xMaterialGap = getARGV("xMaterialGap", 1.000);
+
+// Board dimensions
+// left ground plate width
+real xLeftGndPlateW = getARGV("xLeftGndPlateW", 13.5403);
+// right ground plate width
+real xRightGndPlateW = getARGV("xRightGndPlateW", 23.8903);
+// left board width
+real xBoardLeftW = getARGV("xBoardLeftW", 23.6866);
+// right board width
+real xBoardRightW = getARGV("xBoardRightW", 25.4847);
+
+// height of board (exc. electrodes)
+real xBoardHeight = getARGV("xBoardH", 1.6000);
+// solder mask height
+real xSolderHeight = getARGV("xSolderH", 0.0170);
+
+// Permittivity of board substrate (-)
+real eBoard = getARGV("eBoard", 4.0);
+// Conductivity of board substrate (-)
+real sBoard = getARGV("sBoard", 0.0);
+// Permittivity of solder substrate (-)
+real eSolderCoat = getARGV("eSolderCoat", 3.0);
+// Conductivity of solder substrate (-)
+real sSolderCoat = getARGV("sSolderCoat", 0.0);
+
+// system offsets
+real xOffsetY = getARGV("xOffsetY", 20.0000);
+// pixelation X offset from board
+real xMaterialOffsetX = getARGV("xMaterialOffsetX", 0.0000);
+
+// overwrite default electrode height mesh ratio
+rElectrodeH = getARGV("rElectrodeH", 1.0);
+rDomain = getARGV("rDomain", 0.025);
+// Mesh number ratio for material under test (-)
+real rMaterialStandard = getARGV("rMaterialStandard", 0.05);
+// Mesh number ratio for material bottom under test (-)
+real rMaterialBottom = getARGV("rMaterial", 1.0);
+
+
+// Number of electrodes
+int NE = 3;
+
+// Labels
+int labelDomain = 0;
+int labelBoard = 200;
+int labelSolder = 201;
+
+int[int] electrodeLabels = [1, 2, 3];
+real[int] regionEpsilons;
+real[int] regionSigmas;
+
+
+/*  Board design 1  */
+int labelGND1 = 101;
+int labelGND2 = 102;
+int labelGND3 = 103;
+int labelGND4 = 104;
+
+int[int] groundLabels = [labelGND1, labelGND2, labelGND3, labelGND4];
+
+real xMembraneHeight = xBoardHeight - 2*xSolderHeight;
+real xMembraneWidth = xBoardLeftW + xBoardRightW
+                    + 3 * xElectrodeWidth + 2 * xElectrodeGap;
+real xBoardWidth = xMembraneWidth + xLeftGndPlateW + xRightGndPlateW;
+
+if (xMembraneHeight <= h)
+{
+    cout << "ERROR: BoardHeight and SolderHeight are incompatible." << endl;
+    cout << "BoardHeight - 2 * SolderHeight (" << xMembraneHeight << ") should be larger than h (" << h << ")" << endl;
+    exit(1);
+}
+
+real xOffsetX = 0.5*(xDomainWidth - xBoardWidth);
+if (xOffsetX <= h)
+{
+    cout << "ERROR: DomainWidth (" << xDomainWidth << ") too narrow for BoardWidth (" << xBoardWidth << ")" << endl;
+    exit(1);
+}
+
+real xDomainHeightAboveBoard = xDomainHeight - xOffsetY - xBoardHeight;
+
+if (xDomainHeightAboveBoard <= xMaterialH)
+{
+    cout << "ERROR: DomainHeight (" << xDomainHeight << ") too short for material height (" << xMaterialH << ")" << endl;
+    exit(1);
+}
+
+cout << xDomainWidth << " " << xDomainHeight << endl;
+
+real regionOffsetX = xOffsetX + xMaterialOffsetX + 0.5*xMaterialW;
+real regionOffsetY = xOffsetY + xBoardHeight - xSolderHeight;
+
+
+// Necessary parameters for pixel_region.edp
+real rCurvature = 10000000000.0;
+real xElecH = xElectrodeHeight;
+real yCurvatureCentre = rCurvature;

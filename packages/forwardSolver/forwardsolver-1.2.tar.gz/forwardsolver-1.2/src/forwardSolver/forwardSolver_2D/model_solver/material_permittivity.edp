@@ -1,0 +1,32 @@
+/*
+    Define material parameters necessary for the physics model
+    Needed:
+        - permittivityBase: permittivity map for everything except the pixelation
+        - permittivity: permittivity map including the pixelation
+*/
+// Check to see that the regions have been selected correctly
+if (BPlot && BCheckInputs){ checkInputs(regionLabels, regionNames, pixelRegions); }
+
+if(BReadPixelEpsilon == 1){
+    // Reads pixel epsilon values from file
+    string pixelEpsilonFile = getARGV("pixelEpsilonFile", "pixelEpsilons.txt");
+    readPixelFile(pixelEpsilonFile, pixelEpsilons)
+};
+
+Vh0 permittivityBase;
+// Base permittivity map for this geometry. Pixels will be added later.
+buildMaterialParameterBase(permittivityBase, regionLabels, regionEpsilons);
+permittivityBase = epsilon0 * permittivityBase;
+
+Vh0 permittivityPixels = 0;
+for [i, pixel : pixelRegions]
+{
+    permittivityPixels = permittivityPixels + pixelEpsilons[i] * (region == pixel);
+}
+// Finalise permittivity
+Vh0 permittivity = permittivityBase + epsilon0 * permittivityPixels;
+
+if (BPlot){
+    Vh0 tmp = permittivity/epsilon0;
+    plot(tmp, fill=true, value=true, wait=false, dim=2, cmm="Relative Permittivity Map");
+}

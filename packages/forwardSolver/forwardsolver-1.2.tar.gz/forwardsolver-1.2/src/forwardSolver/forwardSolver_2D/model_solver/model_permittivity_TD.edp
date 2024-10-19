@@ -1,0 +1,223 @@
+// Initialise system
+Vh1 u, v;
+
+// Define permittivity stiffness variational form
+defineSystemVarf(permittivity, u, v);
+// Create system matrix
+matrix Asys = systemVarf(Vh1, Vh1); set(Asys, solver="UMFPACK");
+
+// Electrode boundary conditions
+real[int,int] B(Th.nv, NE); B = 0.0;
+defineElectrodeBoundaryConditions(B, electrodeLabels, u, v);
+matrix BCMatrix = B;
+
+/*
+    -------------------------------------------------------------------------------------
+     Main calculation of electric potential
+    -------------------------------------------------------------------------------------
+    We simulate a case where a transmit pulse is sent to one electrode and calculate
+    the resulting electric potential in the vicinity of the sensor.
+    A series of calculations will be carried out where each electrode is set to transmit,
+    one at a time. The calculations are carried out in one go for efficiency.
+*/
+
+// Allocate arrays for the solutions
+Vh1[int] uMatrices(NE);
+
+// Create BC picker matrix, an identity matrix which will
+// pick the correct column from BCMatrix.
+real[int, int] U(NE, NE); U = 0.0; U.diag = 1.0;
+
+real[int] rhs(Th.nv);
+// Solve for the electric potentials
+for (int i = 0; i < NE; i++)
+{
+    // Electrode RHS vector
+    // Pick the column of BCMatrix corresponding to electrode i being the transmit
+    rhs = BCMatrix * U(:, i);
+    // Solve system
+    uMatrices[i][] = Asys^-1*rhs;
+}
+if (BPlot)
+{
+    for (int i = 0; i < NE; i++)
+    {
+        string title = "Transmit Electrode " + string(i+1);
+        plot(uMatrices[i], fill=true, value = true, cmm = title, dim=nDims);
+    }
+}
+
+//  Output system information
+string outfilename;
+/*
+    -------------------------------------------------------------------------------------
+    Extra calculation routines
+    -------------------------------------------------------------------------------------
+*/
+/*
+    Calculate capacitance matrix
+*/
+
+matrix chargeMatrix;
+real[int, int] Lmatrix(Th.nv, NE);
+if (BComputeCap)
+{
+    buildChargeMeasurementForm(
+        NChargeIntegration, permittivity, electrodeLabels, uMatrices, Lmatrix
+    );
+    chargeMatrix = Lmatrix;
+
+    // Calculate capacitances between electrodes
+    real[int, int] CapacitanceMatrix(NE, NE); CapacitanceMatrix = 0;
+    calculateCapacitanceMatrix(uMatrices, chargeMatrix, CapacitanceMatrix);
+
+    // Save to file
+    outfilename = freefemDir + "/solver_artefacts/C.txt";
+    saveArraytoFile(CapacitanceMatrix, outfilename);
+}
+
+if (BComputeCapFull)
+{
+    // Calculate charge integrals
+    if (BComputeCap == 0)
+    {
+        buildChargeMeasurementForm(
+            NChargeIntegration, permittivity, electrodeLabels, uMatrices, Lmatrix
+        );
+        chargeMatrix = Lmatrix;
+    }
+
+    // Initialise capacitance matrix
+    real[int,int] CmatFull(NE, NE); CmatFull = 0.0;
+    // Compute measurements/capacitance matrix with diagonal as electrode to ground capacitances.
+    calculateCapacitanceMatrixFull(uMatrices, chargeMatrix, CmatFull);
+
+    // Save computed capacitance to file
+    outfilename = freefemDir + "/solver_artefacts/C_full.txt";
+    saveArraytoFile(CmatFull, outfilename);
+};
+
+if (BExportMesh)
+{
+    // Save mesh
+    outfilename = freefemDir + "/solver_artefacts/Th.vtk";
+    savevtk(outfilename, Th, bin=false);
+    // Save permittivity array
+    outfilename = freefemDir + "/solver_artefacts/eps.txt";
+    saveArraytoFile(permittivity[], outfilename);
+}
+
+
+/*
+    Calculate and export matrices used to calculate voltage signals and charges
+    on receive electrodes
+
+    The measurement matrix L needs to be extended to include the ground plates because
+    their capacitances also influence the voltages measured on the electrodes.
+*/
+if (BComputeVolt)
+{
+    // Extend potentials array to include ground plates indicator functions
+    Vh1[int] psi(groundLabels.n);
+
+    /*
+        Add potential fields where the ground plates are excited
+        This is to create the charge measurement form on ground plates
+        to enable the calculation of their capacitances.
+        The potential field in each case is taken by solving
+            laplacian (u) = 0, u = 1 on plate, = 0 elsewhere
+        this is the "IndicatorFunction".
+    */
+    for [i, lbl: groundLabels]
+    {
+        computeIndicatorFunction(lbl, psi[i], u, v);
+    }
+
+    if (BPlot)
+    {
+        for [i, lbl: groundLabels]
+        {
+            string title = "Indicator function " + string(lbl);
+            plot(psi[i], fill=true, value = true, cmm = title, dim=nDims);
+        }
+    }
+    // if BComputeCap is true, the chargeMatrix has been calculated for all electrodes
+    // and only needs to be extended for the ground labels
+
+    if (BComputeCap == 0)
+    {
+        // Lmatrix has not yet been calculated
+        buildChargeMeasurementForm(
+            NChargeIntegration, permittivity, electrodeLabels, uMatrices, Lmatrix
+        );
+        chargeMatrix = Lmatrix;
+    }
+
+    // Extend charge measurement form
+    real[int, int] LmatrixExtension(Th.nv, groundLabels.n);
+    extendChargeMeasurementForm(
+        NChargeIntegration, permittivity, groundLabels, psi, LmatrixExtension
+    );
+    matrix chargeMatrixExtension = LmatrixExtension;
+
+    chargeMatrix = [[chargeMatrix, chargeMatrixExtension]];
+
+    // Save sytem matrix to file
+    outfilename = freefemDir + "/solver_artefacts/Amatrix.txt";
+    saveCSRtoFile(Asys, outfilename);
+
+    // Save boundary conditions to file
+    outfilename = freefemDir + "/solver_artefacts/Bmatrix.txt";
+    saveCSRtoFile(BCMatrix, outfilename);
+
+    // Save charge measurement to file
+    outfilename = freefemDir + "/solver_artefacts/Lmatrix.txt";
+    saveCSRtoFile(chargeMatrix, outfilename);
+}
+
+if (BComputePython == 1)
+{
+    if (boardGeometry != "P1000-00X")
+    {
+        string pixelsDir = freefemDir + "/solver_artefacts/pixels";
+        // Save pixels to file
+        savePixelstoFile(pixelRegions, pixelsDir);
+        matrix APixel; APixel.resize(Th.nv, Th.nv);
+        // Save FE matrices for the pixels to file
+        buildAndSavePixelsFEMatrices(
+            pixelRegions, electrodeLabels, uMatrices, Lmatrix, APixel,
+            chargeMatrix, pixelsDir
+        );
+    }
+
+    {
+        // Build and save background system matrix
+        matrix Aback;
+        calculateBackgroundSystemMatrix(permittivityBase, Aback, u, v);
+
+        outfilename = freefemDir + "/solver_artefacts/A_back.txt";
+        saveCSRtoFile(Aback, outfilename);
+    }
+
+    {
+        // Compute Lmatrix from scratch with the background permittivity only
+        buildChargeMeasurementForm(
+            NChargeIntegration, permittivityBase, electrodeLabels, uMatrices, Lmatrix
+        );
+        chargeMatrix = Lmatrix;
+        // Save to file
+        outfilename = freefemDir + "/solver_artefacts/K_back.txt";
+        saveCSRtoFile(chargeMatrix, outfilename);
+    }
+
+    // Save LHS BC matrix to file
+    outfilename = freefemDir + "/solver_artefacts/BCLHS.txt";
+    saveBCLHStoFile(outfilename);
+
+    // Save RHS BC matrix to file (if not yet done)
+    if (BComputeVolt == 0)
+    {
+        outfilename = freefemDir + "/solver_artefacts/Bmatrix.txt";
+        saveArraytoFile(BCMatrix, outfilename);
+    }
+}
